@@ -14,9 +14,9 @@
   "license": "https://data.vlaanderen.be/id/licentie/modellicentie-gratis-hergebruik/v1.0",
   "namespace": null,
   "navigation": {
-    "prev": "/doc/vocabularium/wegenenverkeer/abstracten/ontwerpdocument/2.0.0-RC3"
+    "prev": "/doc/vocabularium/wegenenverkeer/abstracten/ontwerpdocument/2.1.0-RC3"
   },
-  "publication-date": "2021-09-25",
+  "publication-date": "2021-12-10",
   "publication-state": "https://data.vlaanderen.be/doc/concept/StandaardStatus/KandidaatStandaard",
   "title": "Abstracten",
   "dcterms:license": "https://data.vlaanderen.be/id/licentie/modellicentie-gratis-hergebruik/v1.0",
@@ -628,6 +628,20 @@
       },
       "parents": [
         "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMNaamObject"
+      ],
+      "usage": {}
+    },
+    {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#Hoppinzuil",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
+      "description": {
+        "nl": "Abstracte om de gemeenschappelijke eigenschappen van de verschillende hoppinzuilen onder 1 noemer te plaatsen."
+      },
+      "name": {
+        "nl": "Hoppinzuil"
+      },
+      "parents": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMObject"
       ],
       "usage": {}
     },
@@ -1783,6 +1797,46 @@
         "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcAdres"
       ],
       "usage": {}
+    },
+    {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#Behuizing.risicoanalyse",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "description": {
+        "nl": "Een bestandsbijlage met de risicoanalyse voor werken in en rond een behuizing."
+      },
+      "domain": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#Behuizing"
+      ],
+      "generalization": [],
+      "name": {
+        "nl": "risicoanalyse"
+      },
+      "range": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcDocument"
+      ],
+      "usage": {
+        "nl": "De risicoanalyse heeft in eerste instantie betrekking op werken in en rond een behuziing met elektrische installaties. Voor behuizingen met installaties van de distributienetbeheerder wordt de risicoanalyse bestemd voor die beheerder, bewaard in het gelijknamig attribuut van het onderdeel van die beheerder, bv. EnergiemeterDNB."
+      }
+    },
+    {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#Behuizing.tabelUitwendigeInvloeden",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "description": {
+        "nl": "Een bestandsbijlage met de ingevulde en actuele tabel uitwendige invloeden zoals vereist door het AREI voor bepaalde elektrische installaties."
+      },
+      "domain": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#Behuizing"
+      ],
+      "generalization": [],
+      "name": {
+        "nl": "tabel uitwendige invloeden"
+      },
+      "range": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcDocument"
+      ],
+      "usage": {
+        "nl": "De tabel is in eerste instantie enkel vereist voor behuizingen die elektrische installaties bevatten die onder het AREI vallen. "
+      }
     },
     {
       "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#Bestrating.kleur",
@@ -3375,6 +3429,60 @@
       },
       "range": [
         "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInGigabyte"
+      ],
+      "usage": {}
+    },
+    {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#Hoppinzuil.weergegevenVervoersmodiOpKaart",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "description": {
+        "nl": "De verschillende beschikbare vervoersmodi die op de bijhorende kaart worden weergegeven."
+      },
+      "domain": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#Hoppinzuil"
+      ],
+      "generalization": [],
+      "name": {
+        "nl": "weergegeven vervoersmodi op kaart"
+      },
+      "range": [
+        "http://www.w3.org/2004/02/skos/core#Concept"
+      ],
+      "usage": {}
+    },
+    {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#Hoppinzuil.zuilnaam",
+      "@type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
+      "description": {
+        "nl": "Naam van het hoppinpunt die verwijst naar een duidelijke en herkenbare plaatsnaam."
+      },
+      "domain": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#Hoppinzuil"
+      ],
+      "generalization": [],
+      "name": {
+        "nl": "zuilnaam"
+      },
+      "range": [
+        "http://www.w3.org/2001/XMLSchema#string"
+      ],
+      "usage": {}
+    },
+    {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#Hoppinzuil.zuilnummer",
+      "@type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
+      "description": {
+        "nl": "Uniek identificatienummer dat elke zuil krijgt en dat wordt opgenomen in de hoppinpuntendatabank."
+      },
+      "domain": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#Hoppinzuil"
+      ],
+      "generalization": [],
+      "name": {
+        "nl": "zuilnummer"
+      },
+      "range": [
+        "http://www.w3.org/2001/XMLSchema#string"
       ],
       "usage": {}
     },
@@ -5433,14 +5541,14 @@
       "@id": "http://www.w3.org/2004/02/skos/core#Concept",
       "@type": "rdfs:Class",
       "name": {
-        "nl": "Draagconstructie bijzonder transport"
+        "nl": "EM-draagconstructie elektrische beveiliging"
       }
     },
     {
       "@id": "http://www.w3.org/2004/02/skos/core#Concept",
       "@type": "rdfs:Class",
       "name": {
-        "nl": "EM-draagconstructie elektrische beveiliging"
+        "nl": "Draagconstructie bijzonder transport"
       }
     },
     {
@@ -5552,27 +5660,6 @@
       "@id": "http://www.w3.org/2004/02/skos/core#Concept",
       "@type": "rdfs:Class",
       "name": {
-        "nl": "VRI detector typeweggebruiker"
-      }
-    },
-    {
-      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
-      "@type": "rdfs:Class",
-      "name": {
-        "nl": "seinlantaarn modelnaam"
-      }
-    },
-    {
-      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
-      "@type": "rdfs:Class",
-      "name": {
-        "nl": "Lantaarn vormgeving"
-      }
-    },
-    {
-      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
-      "@type": "rdfs:Class",
-      "name": {
         "nl": "VR-module met firmware modelnaam"
       }
     },
@@ -5609,6 +5696,27 @@
       "@type": "rdfs:Class",
       "name": {
         "nl": "Verlichtingstoestel merk"
+      }
+    },
+    {
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
+      "@type": "rdfs:Class",
+      "name": {
+        "nl": "VRI detector typeweggebruiker"
+      }
+    },
+    {
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
+      "@type": "rdfs:Class",
+      "name": {
+        "nl": "seinlantaarn modelnaam"
+      }
+    },
+    {
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
+      "@type": "rdfs:Class",
+      "name": {
+        "nl": "Lantaarn vormgeving"
       }
     },
     {

@@ -14,9 +14,9 @@
   "license": "https://data.vlaanderen.be/id/licentie/modellicentie-gratis-hergebruik/v1.0",
   "namespace": null,
   "navigation": {
-    "prev": "/doc/vocabularium/wegenenverkeer/onderdeel/ontwerpdocument/2.0.0-RC3"
+    "prev": "/doc/vocabularium/wegenenverkeer/onderdeel/ontwerpdocument/2.1.0-RC3"
   },
-  "publication-date": "2021-09-25",
+  "publication-date": "2021-12-10",
   "publication-state": "https://data.vlaanderen.be/doc/concept/StandaardStatus/KandidaatStandaard",
   "title": "Onderdeel",
   "dcterms:license": "https://data.vlaanderen.be/id/licentie/modellicentie-gratis-hergebruik/v1.0",
@@ -149,6 +149,20 @@
       },
       "parents": [
         "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMNaamObject"
+      ],
+      "usage": {}
+    },
+    {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#AnalogeHoppinzuil",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
+      "description": {
+        "nl": "Een hoppinzuil is een informatiezuil, die als doel heeft de reizigers te informeren omtrent de vervoersmogelijkheden en diensten die op de locatie van de zuil voorhanden zijn."
+      },
+      "name": {
+        "nl": "Analoge hoppingzuil"
+      },
+      "parents": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#Hoppinzuil"
       ],
       "usage": {}
     },
@@ -3024,7 +3038,7 @@
       "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Montagekast",
       "@type": "http://www.w3.org/2002/07/owl#Class",
       "description": {
-        "nl": "Een kleine kast voor binnen of buiten die net omwille van zijn beperkte omvang doorgaans aan een paal, muur of andere objecten bevestigd wordt."
+        "nl": "Een kleine kast voor binnen of buiten die net omwille van zijn beperkte omvang doorgaans aan een paal,muur of andere objecten bevestigd wordt."
       },
       "name": {
         "nl": "Montagekast"
@@ -5412,7 +5426,7 @@
         "nl": "Een draagconstructie voor het ophangen van openbare wegverlichting op plaatsen waar er geen ruimte is voor verlichtingsmasten in de grond. Typisch wordt in dergelijke gevallen de draagconstructie met het verlichtingstoestel op hoogte bevestigd aan een gebouw of een andere constructie naast de weg."
       },
       "name": {
-        "nl": "Wegverlichtingsconsole"
+        "nl": "WV console"
       },
       "parents": [
         "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMNaamObject"
@@ -6177,6 +6191,60 @@
       },
       "domain": [
         "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Afsluiter"
+      ],
+      "generalization": [],
+      "name": {
+        "nl": "type"
+      },
+      "range": [
+        "http://www.w3.org/2004/02/skos/core#Concept"
+      ],
+      "usage": {}
+    },
+    {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#AnalogeHoppinzuil.macrokaart",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "description": {
+        "nl": "Cartografische weergave van het hoppinpunt en de omliggende hoppinpunten met daarop aangeduid de attractiepolen in de omgeving."
+      },
+      "domain": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#AnalogeHoppinzuil"
+      ],
+      "generalization": [],
+      "name": {
+        "nl": "macrokaart"
+      },
+      "range": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcDocument"
+      ],
+      "usage": {}
+    },
+    {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#AnalogeHoppinzuil.microkaart",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "description": {
+        "nl": "Cartografische weergave van het hoppinpunt en de omliggende straten met daarop de hoppinzuil, de verschillende beschikbare vervoersmodi en diensten aangeduid."
+      },
+      "domain": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#AnalogeHoppinzuil"
+      ],
+      "generalization": [],
+      "name": {
+        "nl": "microkaart"
+      },
+      "range": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcDocument"
+      ],
+      "usage": {}
+    },
+    {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#AnalogeHoppinzuil.type",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "description": {
+        "nl": "De mogelijke types van een analoge hoppinzuil."
+      },
+      "domain": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#AnalogeHoppinzuil"
       ],
       "generalization": [],
       "name": {
@@ -15368,6 +15436,24 @@
       }
     },
     {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Montagekast.opstelhoogte",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "description": {
+        "nl": "De afstand tussen het maaiveld en de bovenrand van de montagekast in meter."
+      },
+      "domain": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Montagekast"
+      ],
+      "generalization": [],
+      "name": {
+        "nl": "opstelhoogte"
+      },
+      "range": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMeter"
+      ],
+      "usage": {}
+    },
+    {
       "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Motorvangplank.lengte",
       "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "description": {
@@ -22184,6 +22270,24 @@
       "usage": {}
     },
     {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#VerlichtingstoestelTL.lichtpuntHoogte",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "description": {
+        "nl": "Hoogte van het lichtpunt ten opzichte van de rijweg."
+      },
+      "domain": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#VerlichtingstoestelTL"
+      ],
+      "generalization": [],
+      "name": {
+        "nl": "lichtpunt hoogte"
+      },
+      "range": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMeter"
+      ],
+      "usage": {}
+    },
+    {
       "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#VerruigdGrasland.huidigNatuurbeeld",
       "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "description": {
@@ -23223,6 +23327,13 @@
       "@id": "http://www.w3.org/2004/02/skos/core#Concept",
       "@type": "rdfs:Class",
       "name": {
+        "nl": "Betrokkenheid rol"
+      }
+    },
+    {
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
+      "@type": "rdfs:Class",
+      "name": {
         "nl": "Rijrichting"
       }
     },
@@ -23245,13 +23356,6 @@
       "@type": "rdfs:Class",
       "name": {
         "nl": "Ingress Protection Codering"
-      }
-    },
-    {
-      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
-      "@type": "rdfs:Class",
-      "name": {
-        "nl": "Betrokkenheid rol"
       }
     },
     {
@@ -23328,6 +23432,27 @@
       "@id": "http://www.w3.org/2004/02/skos/core#Concept",
       "@type": "rdfs:Class",
       "name": {
+        "nl": "Vorm schermelement"
+      }
+    },
+    {
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
+      "@type": "rdfs:Class",
+      "name": {
+        "nl": "Test type"
+      }
+    },
+    {
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
+      "@type": "rdfs:Class",
+      "name": {
+        "nl": "Trottoirband watergreppel type"
+      }
+    },
+    {
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
+      "@type": "rdfs:Class",
+      "name": {
         "nl": "Werkingsbreedte"
       }
     },
@@ -23350,27 +23475,6 @@
       "@type": "rdfs:Class",
       "name": {
         "nl": "Norm"
-      }
-    },
-    {
-      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
-      "@type": "rdfs:Class",
-      "name": {
-        "nl": "Vorm schermelement"
-      }
-    },
-    {
-      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
-      "@type": "rdfs:Class",
-      "name": {
-        "nl": "Test type"
-      }
-    },
-    {
-      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
-      "@type": "rdfs:Class",
-      "name": {
-        "nl": "Trottoirband watergreppel type"
       }
     },
     {
@@ -23433,6 +23537,34 @@
       "@id": "http://www.w3.org/2004/02/skos/core#Concept",
       "@type": "rdfs:Class",
       "name": {
+        "nl": "Geluidskarakteristiek"
+      }
+    },
+    {
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
+      "@type": "rdfs:Class",
+      "name": {
+        "nl": "Meet methode"
+      }
+    },
+    {
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
+      "@type": "rdfs:Class",
+      "name": {
+        "nl": "Watergreppel type"
+      }
+    },
+    {
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
+      "@type": "rdfs:Class",
+      "name": {
+        "nl": "Materiaal"
+      }
+    },
+    {
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
+      "@type": "rdfs:Class",
+      "name": {
         "nl": "Obstakelbeveiliger type"
       }
     },
@@ -23469,34 +23601,6 @@
       "@type": "rdfs:Class",
       "name": {
         "nl": "Vlak geluidsschermelementtype"
-      }
-    },
-    {
-      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
-      "@type": "rdfs:Class",
-      "name": {
-        "nl": "Geluidskarakteristiek"
-      }
-    },
-    {
-      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
-      "@type": "rdfs:Class",
-      "name": {
-        "nl": "Meet methode"
-      }
-    },
-    {
-      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
-      "@type": "rdfs:Class",
-      "name": {
-        "nl": "Watergreppel type"
-      }
-    },
-    {
-      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
-      "@type": "rdfs:Class",
-      "name": {
-        "nl": "Materiaal"
       }
     },
     {
@@ -23587,6 +23691,20 @@
       "@id": "http://www.w3.org/2004/02/skos/core#Concept",
       "@type": "rdfs:Class",
       "name": {
+        "nl": "Draineerbuis materiaal"
+      }
+    },
+    {
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
+      "@type": "rdfs:Class",
+      "name": {
+        "nl": "Type beschoeiing"
+      }
+    },
+    {
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
+      "@type": "rdfs:Class",
+      "name": {
         "nl": "Rioleringsbuis functie"
       }
     },
@@ -23616,20 +23734,6 @@
       "@type": "rdfs:Class",
       "name": {
         "nl": "Sterktereeks"
-      }
-    },
-    {
-      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
-      "@type": "rdfs:Class",
-      "name": {
-        "nl": "Draineerbuis materiaal"
-      }
-    },
-    {
-      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
-      "@type": "rdfs:Class",
-      "name": {
-        "nl": "Type beschoeiing"
       }
     },
     {
@@ -23678,34 +23782,6 @@
       "@id": "http://www.w3.org/2004/02/skos/core#Concept",
       "@type": "rdfs:Class",
       "name": {
-        "nl": "Bekleding plaats"
-      }
-    },
-    {
-      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
-      "@type": "rdfs:Class",
-      "name": {
-        "nl": "Bouwput type."
-      }
-    },
-    {
-      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
-      "@type": "rdfs:Class",
-      "name": {
-        "nl": "Riolering vorm"
-      }
-    },
-    {
-      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
-      "@type": "rdfs:Class",
-      "name": {
-        "nl": "Straatkolk bak type"
-      }
-    },
-    {
-      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
-      "@type": "rdfs:Class",
-      "name": {
         "nl": "Persleiding materiaal"
       }
     },
@@ -23748,6 +23824,34 @@
       "@id": "http://www.w3.org/2004/02/skos/core#Concept",
       "@type": "rdfs:Class",
       "name": {
+        "nl": "Bekleding plaats"
+      }
+    },
+    {
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
+      "@type": "rdfs:Class",
+      "name": {
+        "nl": "Bouwput type."
+      }
+    },
+    {
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
+      "@type": "rdfs:Class",
+      "name": {
+        "nl": "Riolering vorm"
+      }
+    },
+    {
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
+      "@type": "rdfs:Class",
+      "name": {
+        "nl": "Straatkolk bak type"
+      }
+    },
+    {
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
+      "@type": "rdfs:Class",
+      "name": {
         "nl": "Vorm terugslagklep"
       }
     },
@@ -23763,41 +23867,6 @@
       "@type": "rdfs:Class",
       "name": {
         "nl": "Afsluiter type"
-      }
-    },
-    {
-      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
-      "@type": "rdfs:Class",
-      "name": {
-        "nl": "Riolering stelsel"
-      }
-    },
-    {
-      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
-      "@type": "rdfs:Class",
-      "name": {
-        "nl": "Kamer klasse"
-      }
-    },
-    {
-      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
-      "@type": "rdfs:Class",
-      "name": {
-        "nl": "Put type"
-      }
-    },
-    {
-      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
-      "@type": "rdfs:Class",
-      "name": {
-        "nl": "Kopmuur materiaal"
-      }
-    },
-    {
-      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
-      "@type": "rdfs:Class",
-      "name": {
-        "nl": "Hulpstuk type"
       }
     },
     {
@@ -23839,6 +23908,41 @@
       "@id": "http://www.w3.org/2004/02/skos/core#Concept",
       "@type": "rdfs:Class",
       "name": {
+        "nl": "Riolering stelsel"
+      }
+    },
+    {
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
+      "@type": "rdfs:Class",
+      "name": {
+        "nl": "Kamer klasse"
+      }
+    },
+    {
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
+      "@type": "rdfs:Class",
+      "name": {
+        "nl": "Put type"
+      }
+    },
+    {
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
+      "@type": "rdfs:Class",
+      "name": {
+        "nl": "Kopmuur materiaal"
+      }
+    },
+    {
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
+      "@type": "rdfs:Class",
+      "name": {
+        "nl": "Hulpstuk type"
+      }
+    },
+    {
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
+      "@type": "rdfs:Class",
+      "name": {
         "nl": "Pomp soort"
       }
     },
@@ -23854,6 +23958,34 @@
       "@type": "rdfs:Class",
       "name": {
         "nl": "Dekselklasse"
+      }
+    },
+    {
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
+      "@type": "rdfs:Class",
+      "name": {
+        "nl": "Verkeersspiegel vorm"
+      }
+    },
+    {
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
+      "@type": "rdfs:Class",
+      "name": {
+        "nl": "VerkeerstekenWettelijkeStatus"
+      }
+    },
+    {
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
+      "@type": "rdfs:Class",
+      "name": {
+        "nl": "Figuratie soort"
+      }
+    },
+    {
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
+      "@type": "rdfs:Class",
+      "name": {
+        "nl": "Plaatsingswijze"
       }
     },
     {
@@ -23896,34 +24028,6 @@
       "@type": "rdfs:Class",
       "name": {
         "nl": "Figuratie type"
-      }
-    },
-    {
-      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
-      "@type": "rdfs:Class",
-      "name": {
-        "nl": "Verkeersspiegel vorm"
-      }
-    },
-    {
-      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
-      "@type": "rdfs:Class",
-      "name": {
-        "nl": "VerkeerstekenWettelijkeStatus"
-      }
-    },
-    {
-      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
-      "@type": "rdfs:Class",
-      "name": {
-        "nl": "Figuratie soort"
-      }
-    },
-    {
-      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
-      "@type": "rdfs:Class",
-      "name": {
-        "nl": "Plaatsingswijze"
       }
     },
     {
@@ -24266,7 +24370,14 @@
       "@id": "http://www.w3.org/2004/02/skos/core#Concept",
       "@type": "rdfs:Class",
       "name": {
-        "nl": "Boomspiegel"
+        "nl": "Plantmaat houtige vegetatie"
+      }
+    },
+    {
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
+      "@type": "rdfs:Class",
+      "name": {
+        "nl": "Type houtige vegetatie"
       }
     },
     {
@@ -24294,6 +24405,13 @@
       "@id": "http://www.w3.org/2004/02/skos/core#Concept",
       "@type": "rdfs:Class",
       "name": {
+        "nl": "Boomspiegel"
+      }
+    },
+    {
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
+      "@type": "rdfs:Class",
+      "name": {
         "nl": "Vegetatieelement hoogte"
       }
     },
@@ -24302,34 +24420,6 @@
       "@type": "rdfs:Class",
       "name": {
         "nl": "aanplantingswijze sierbeplanting"
-      }
-    },
-    {
-      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
-      "@type": "rdfs:Class",
-      "name": {
-        "nl": "Plantmaat houtige vegetatie"
-      }
-    },
-    {
-      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
-      "@type": "rdfs:Class",
-      "name": {
-        "nl": "Type houtige vegetatie"
-      }
-    },
-    {
-      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
-      "@type": "rdfs:Class",
-      "name": {
-        "nl": "Grazige vegetatie aanleg"
-      }
-    },
-    {
-      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
-      "@type": "rdfs:Class",
-      "name": {
-        "nl": "Boom gebreken"
       }
     },
     {
@@ -24371,6 +24461,20 @@
       "@id": "http://www.w3.org/2004/02/skos/core#Concept",
       "@type": "rdfs:Class",
       "name": {
+        "nl": "Grazige vegetatie aanleg"
+      }
+    },
+    {
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
+      "@type": "rdfs:Class",
+      "name": {
+        "nl": "Boom gebreken"
+      }
+    },
+    {
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
+      "@type": "rdfs:Class",
+      "name": {
         "nl": "Vegetatie wortel"
       }
     },
@@ -24379,27 +24483,6 @@
       "@type": "rdfs:Class",
       "name": {
         "nl": "Klasse plantjaar"
-      }
-    },
-    {
-      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
-      "@type": "rdfs:Class",
-      "name": {
-        "nl": "Boom conditiebeoordeling"
-      }
-    },
-    {
-      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
-      "@type": "rdfs:Class",
-      "name": {
-        "nl": "Sierbeplanting container"
-      }
-    },
-    {
-      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
-      "@type": "rdfs:Class",
-      "name": {
-        "nl": "Sierbeplanting type"
       }
     },
     {
@@ -24435,6 +24518,27 @@
       "@type": "rdfs:Class",
       "name": {
         "nl": "Boom plantwijzewaarde"
+      }
+    },
+    {
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
+      "@type": "rdfs:Class",
+      "name": {
+        "nl": "Boom conditiebeoordeling"
+      }
+    },
+    {
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
+      "@type": "rdfs:Class",
+      "name": {
+        "nl": "Sierbeplanting container"
+      }
+    },
+    {
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
+      "@type": "rdfs:Class",
+      "name": {
+        "nl": "Sierbeplanting type"
       }
     },
     {
@@ -24742,13 +24846,6 @@
       "@id": "http://www.w3.org/2004/02/skos/core#Concept",
       "@type": "rdfs:Class",
       "name": {
-        "nl": "Talud waarde"
-      }
-    },
-    {
-      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
-      "@type": "rdfs:Class",
-      "name": {
         "nl": "Helling"
       }
     },
@@ -24763,6 +24860,13 @@
       "@id": "http://www.w3.org/2004/02/skos/core#Concept",
       "@type": "rdfs:Class",
       "name": {
+        "nl": "Talud waarde"
+      }
+    },
+    {
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
+      "@type": "rdfs:Class",
+      "name": {
         "nl": "Profielhoogtemaat"
       }
     },
@@ -24771,6 +24875,13 @@
       "@type": "rdfs:Class",
       "name": {
         "nl": "Profielsoort"
+      }
+    },
+    {
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
+      "@type": "rdfs:Class",
+      "name": {
+        "nl": "Contactpunt type"
       }
     },
     {
@@ -24806,13 +24917,6 @@
       "@type": "rdfs:Class",
       "name": {
         "nl": "Draagconstructie beschermlaag"
-      }
-    },
-    {
-      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
-      "@type": "rdfs:Class",
-      "name": {
-        "nl": "Contactpunt type"
       }
     },
     {
@@ -24938,41 +25042,6 @@
       "@id": "http://www.w3.org/2004/02/skos/core#Concept",
       "@type": "rdfs:Class",
       "name": {
-        "nl": "Meetcel nauwkeurigheidsvermogen"
-      }
-    },
-    {
-      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
-      "@type": "rdfs:Class",
-      "name": {
-        "nl": "Energiemeter DNB meteropname frequentie"
-      }
-    },
-    {
-      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
-      "@type": "rdfs:Class",
-      "name": {
-        "nl": "Elektrisch aansluitvermogen"
-      }
-    },
-    {
-      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
-      "@type": "rdfs:Class",
-      "name": {
-        "nl": "HS-beveiligingscel overstroombeveiliging vermogenschakelaar"
-      }
-    },
-    {
-      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
-      "@type": "rdfs:Class",
-      "name": {
-        "nl": "UPS modelnaam"
-      }
-    },
-    {
-      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
-      "@type": "rdfs:Class",
-      "name": {
         "nl": "HS-beveiligingscel modelnaam"
       }
     },
@@ -25043,6 +25112,20 @@
       "@id": "http://www.w3.org/2004/02/skos/core#Concept",
       "@type": "rdfs:Class",
       "name": {
+        "nl": "Weergegeven vervoersmodi op kaart"
+      }
+    },
+    {
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
+      "@type": "rdfs:Class",
+      "name": {
+        "nl": "Hoppinzuil type"
+      }
+    },
+    {
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
+      "@type": "rdfs:Class",
+      "name": {
         "nl": "PCI-kaart modelnaam"
       }
     },
@@ -25050,35 +25133,35 @@
       "@id": "http://www.w3.org/2004/02/skos/core#Concept",
       "@type": "rdfs:Class",
       "name": {
-        "nl": "GPU modelnaam"
+        "nl": "Meetcel nauwkeurigheidsvermogen"
       }
     },
     {
       "@id": "http://www.w3.org/2004/02/skos/core#Concept",
       "@type": "rdfs:Class",
       "name": {
-        "nl": "Hardware modelnaam"
+        "nl": "Energiemeter DNB meteropname frequentie"
       }
     },
     {
       "@id": "http://www.w3.org/2004/02/skos/core#Concept",
       "@type": "rdfs:Class",
       "name": {
-        "nl": "IO-kaart modelnaam"
+        "nl": "Elektrisch aansluitvermogen"
       }
     },
     {
       "@id": "http://www.w3.org/2004/02/skos/core#Concept",
       "@type": "rdfs:Class",
       "name": {
-        "nl": "IO richting"
+        "nl": "HS-beveiligingscel overstroombeveiliging vermogenschakelaar"
       }
     },
     {
       "@id": "http://www.w3.org/2004/02/skos/core#Concept",
       "@type": "rdfs:Class",
       "name": {
-        "nl": "IO bit snelheid"
+        "nl": "UPS modelnaam"
       }
     },
     {
@@ -25086,41 +25169,6 @@
       "@type": "rdfs:Class",
       "name": {
         "nl": "PCI-kaart merk"
-      }
-    },
-    {
-      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
-      "@type": "rdfs:Class",
-      "name": {
-        "nl": "IO-kaart signaaltype"
-      }
-    },
-    {
-      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
-      "@type": "rdfs:Class",
-      "name": {
-        "nl": "PLC merk"
-      }
-    },
-    {
-      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
-      "@type": "rdfs:Class",
-      "name": {
-        "nl": "Hardware vormfactor"
-      }
-    },
-    {
-      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
-      "@type": "rdfs:Class",
-      "name": {
-        "nl": "Software licentie"
-      }
-    },
-    {
-      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
-      "@type": "rdfs:Class",
-      "name": {
-        "nl": "Poortconfiguratie richting"
       }
     },
     {
@@ -25176,6 +25224,41 @@
       "@id": "http://www.w3.org/2004/02/skos/core#Concept",
       "@type": "rdfs:Class",
       "name": {
+        "nl": "IO-kaart signaaltype"
+      }
+    },
+    {
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
+      "@type": "rdfs:Class",
+      "name": {
+        "nl": "PLC merk"
+      }
+    },
+    {
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
+      "@type": "rdfs:Class",
+      "name": {
+        "nl": "Hardware vormfactor"
+      }
+    },
+    {
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
+      "@type": "rdfs:Class",
+      "name": {
+        "nl": "Software licentie"
+      }
+    },
+    {
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
+      "@type": "rdfs:Class",
+      "name": {
+        "nl": "Poortconfiguratie richting"
+      }
+    },
+    {
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
+      "@type": "rdfs:Class",
+      "name": {
         "nl": "Cabine standaardtype"
       }
     },
@@ -25197,14 +25280,35 @@
       "@id": "http://www.w3.org/2004/02/skos/core#Concept",
       "@type": "rdfs:Class",
       "name": {
-        "nl": "Toegangscontrole sleuteltype"
+        "nl": "GPU modelnaam"
       }
     },
     {
       "@id": "http://www.w3.org/2004/02/skos/core#Concept",
       "@type": "rdfs:Class",
       "name": {
-        "nl": "Handbediening type"
+        "nl": "Hardware modelnaam"
+      }
+    },
+    {
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
+      "@type": "rdfs:Class",
+      "name": {
+        "nl": "IO-kaart modelnaam"
+      }
+    },
+    {
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
+      "@type": "rdfs:Class",
+      "name": {
+        "nl": "IO richting"
+      }
+    },
+    {
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
+      "@type": "rdfs:Class",
+      "name": {
+        "nl": "IO bit snelheid"
       }
     },
     {
@@ -25219,34 +25323,6 @@
       "@type": "rdfs:Class",
       "name": {
         "nl": "Cabine lokaal klasse"
-      }
-    },
-    {
-      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
-      "@type": "rdfs:Class",
-      "name": {
-        "nl": "Netwerkelement gebruik"
-      }
-    },
-    {
-      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
-      "@type": "rdfs:Class",
-      "name": {
-        "nl": "Netwerkkaart modelnaam"
-      }
-    },
-    {
-      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
-      "@type": "rdfs:Class",
-      "name": {
-        "nl": "Netwerkpoort type"
-      }
-    },
-    {
-      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
-      "@type": "rdfs:Class",
-      "name": {
-        "nl": "rack type"
       }
     },
     {
@@ -25275,6 +25351,48 @@
       "@type": "rdfs:Class",
       "name": {
         "nl": "Cabine modelnaam"
+      }
+    },
+    {
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
+      "@type": "rdfs:Class",
+      "name": {
+        "nl": "Netwerkelement gebruik"
+      }
+    },
+    {
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
+      "@type": "rdfs:Class",
+      "name": {
+        "nl": "Netwerkkaart modelnaam"
+      }
+    },
+    {
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
+      "@type": "rdfs:Class",
+      "name": {
+        "nl": "Netwerkpoort type"
+      }
+    },
+    {
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
+      "@type": "rdfs:Class",
+      "name": {
+        "nl": "Toegangscontrole sleuteltype"
+      }
+    },
+    {
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
+      "@type": "rdfs:Class",
+      "name": {
+        "nl": "Handbediening type"
+      }
+    },
+    {
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
+      "@type": "rdfs:Class",
+      "name": {
+        "nl": "rack type"
       }
     },
     {
@@ -25652,20 +25770,6 @@
       "@id": "http://www.w3.org/2004/02/skos/core#Concept",
       "@type": "rdfs:Class",
       "name": {
-        "nl": "Weegsensor type"
-      }
-    },
-    {
-      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
-      "@type": "rdfs:Class",
-      "name": {
-        "nl": "Z30 modelnaam"
-      }
-    },
-    {
-      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
-      "@type": "rdfs:Class",
-      "name": {
         "nl": "Dyn bord PK modelnaam"
       }
     },
@@ -25688,6 +25792,20 @@
       "@type": "rdfs:Class",
       "name": {
         "nl": "Z30 merk"
+      }
+    },
+    {
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
+      "@type": "rdfs:Class",
+      "name": {
+        "nl": "Weegsensor type"
+      }
+    },
+    {
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
+      "@type": "rdfs:Class",
+      "name": {
+        "nl": "Z30 modelnaam"
       }
     },
     {
@@ -25743,21 +25861,14 @@
       "@id": "http://www.w3.org/2004/02/skos/core#Concept",
       "@type": "rdfs:Class",
       "name": {
-        "nl": "Afmetingsensor merk"
+        "nl": "Neerslagsensor modelnaam"
       }
     },
     {
       "@id": "http://www.w3.org/2004/02/skos/core#Concept",
       "@type": "rdfs:Class",
       "name": {
-        "nl": "MIV-lus zichtbaarheid"
-      }
-    },
-    {
-      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
-      "@type": "rdfs:Class",
-      "name": {
-        "nl": "Afmetingsensor modelnaam"
+        "nl": "Power over ethernet injector merk"
       }
     },
     {
@@ -25785,28 +25896,21 @@
       "@id": "http://www.w3.org/2004/02/skos/core#Concept",
       "@type": "rdfs:Class",
       "name": {
-        "nl": "Dyn bord VMS merk"
+        "nl": "Afmetingsensor merk"
       }
     },
     {
       "@id": "http://www.w3.org/2004/02/skos/core#Concept",
       "@type": "rdfs:Class",
       "name": {
-        "nl": "Dyn bord RSS merk"
+        "nl": "MIV-lus zichtbaarheid"
       }
     },
     {
       "@id": "http://www.w3.org/2004/02/skos/core#Concept",
       "@type": "rdfs:Class",
       "name": {
-        "nl": "Dyn bord RSS modelnaam"
-      }
-    },
-    {
-      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
-      "@type": "rdfs:Class",
-      "name": {
-        "nl": "Hoogtedetectie merk"
+        "nl": "Afmetingsensor modelnaam"
       }
     },
     {
@@ -25841,21 +25945,28 @@
       "@id": "http://www.w3.org/2004/02/skos/core#Concept",
       "@type": "rdfs:Class",
       "name": {
-        "nl": "Neerslagsensor modelnaam"
+        "nl": "Dyn bord VMS merk"
       }
     },
     {
       "@id": "http://www.w3.org/2004/02/skos/core#Concept",
       "@type": "rdfs:Class",
       "name": {
-        "nl": "Power over ethernet injector merk"
+        "nl": "Dyn bord RSS merk"
       }
     },
     {
       "@id": "http://www.w3.org/2004/02/skos/core#Concept",
       "@type": "rdfs:Class",
       "name": {
-        "nl": "IP powerswitch type"
+        "nl": "Dyn bord RSS modelnaam"
+      }
+    },
+    {
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
+      "@type": "rdfs:Class",
+      "name": {
+        "nl": "Hoogtedetectie merk"
       }
     },
     {
@@ -25905,6 +26016,13 @@
       "@type": "rdfs:Class",
       "name": {
         "nl": "Seinbrug rijrichting"
+      }
+    },
+    {
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
+      "@type": "rdfs:Class",
+      "name": {
+        "nl": "IP powerswitch type"
       }
     },
     {
@@ -26002,34 +26120,6 @@
       "@id": "http://www.w3.org/2004/02/skos/core#Concept",
       "@type": "rdfs:Class",
       "name": {
-        "nl": "ontvanger modelnaam"
-      }
-    },
-    {
-      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
-      "@type": "rdfs:Class",
-      "name": {
-        "nl": "ontvanger merk"
-      }
-    },
-    {
-      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
-      "@type": "rdfs:Class",
-      "name": {
-        "nl": "Antenne frequentierange"
-      }
-    },
-    {
-      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
-      "@type": "rdfs:Class",
-      "name": {
-        "nl": "VRI bewaking"
-      }
-    },
-    {
-      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
-      "@type": "rdfs:Class",
-      "name": {
         "nl": "iVRIMerkRIS"
       }
     },
@@ -26080,6 +26170,34 @@
       "@type": "rdfs:Class",
       "name": {
         "nl": "PT-regelaar protocol"
+      }
+    },
+    {
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
+      "@type": "rdfs:Class",
+      "name": {
+        "nl": "ontvanger modelnaam"
+      }
+    },
+    {
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
+      "@type": "rdfs:Class",
+      "name": {
+        "nl": "ontvanger merk"
+      }
+    },
+    {
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
+      "@type": "rdfs:Class",
+      "name": {
+        "nl": "Antenne frequentierange"
+      }
+    },
+    {
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
+      "@type": "rdfs:Class",
+      "name": {
+        "nl": "VRI bewaking"
       }
     },
     {

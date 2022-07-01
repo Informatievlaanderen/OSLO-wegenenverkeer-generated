@@ -20,10 +20,10 @@
     <https://data.vlaanderen.be/shacl/luidspreker-intercom#KlAlgProvincieShape>,
     <https://data.vlaanderen.be/shacl/luidspreker-intercom#KlAlgGemeenteShape>,
     <https://data.vlaanderen.be/shacl/luidspreker-intercom#KlAIMToestandShape>,
-    <https://data.vlaanderen.be/shacl/luidspreker-intercom#KlAudioTransportTypeShape>,
     <https://data.vlaanderen.be/shacl/luidspreker-intercom#KlLuidsprekerMerkShape>,
     <https://data.vlaanderen.be/shacl/luidspreker-intercom#KlLuidsprekerModelnaamShape>,
     <https://data.vlaanderen.be/shacl/luidspreker-intercom#KLLuidsprekerVormgevingShape>,
+    <https://data.vlaanderen.be/shacl/luidspreker-intercom#KlAudioTransportTypeShape>,
     <https://data.vlaanderen.be/shacl/luidspreker-intercom#KlOmvormerTypeShape>,
     <https://data.vlaanderen.be/shacl/luidspreker-intercom#KlOmvormerMerkShape>,
     <https://data.vlaanderen.be/shacl/luidspreker-intercom#KlOmvormerModelnaamShape>,
@@ -36,8 +36,8 @@
     <https://data.vlaanderen.be/shacl/luidspreker-intercom#KlMeetmicrofoonModelnaamShape>,
     <https://data.vlaanderen.be/shacl/luidspreker-intercom#KlIntercomServerMerkShape>,
     <https://data.vlaanderen.be/shacl/luidspreker-intercom#KlIntercomServerModelnaamShape>,
-    <https://data.vlaanderen.be/shacl/luidspreker-intercom#KlIntercomMerkShape>,
     <https://data.vlaanderen.be/shacl/luidspreker-intercom#KlIntercomModelnaamShape>,
+    <https://data.vlaanderen.be/shacl/luidspreker-intercom#KlIntercomMerkShape>,
     <https://data.vlaanderen.be/shacl/luidspreker-intercom#BehuizingShape>,
     <https://data.vlaanderen.be/shacl/luidspreker-intercom#BekledingComponentShape>,
     <https://data.vlaanderen.be/shacl/luidspreker-intercom#BuitenkastShape>,
@@ -73,6 +73,7 @@
     <https://data.vlaanderen.be/shacl/luidspreker-intercom#StroomkringShape>,
     <https://data.vlaanderen.be/shacl/luidspreker-intercom#SturingShape>,
     <https://data.vlaanderen.be/shacl/luidspreker-intercom#VoedtShape>,
+    <https://data.vlaanderen.be/shacl/luidspreker-intercom#VoedtAangestuurdShape>,
     <https://data.vlaanderen.be/shacl/luidspreker-intercom#WegkantkastShape> .
 
 <https://data.vlaanderen.be/shacl/luidspreker-intercom#AIMDBStatusShape> a shacl:NodeShape;
@@ -175,7 +176,7 @@
     shacl:name "Bevestiging";
     shacl:path <https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/luidspreker-intercom/#Bevestiging>
   ], [
-    shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Meetmicrofoon>;
+    shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Luidspreker>;
     shacl:description "Deze relatie geeft aan of er een of andere vorm van dataverkeer is tussen 2 onderdelen. Een wegverlichtingstoestel dat aan staat wordt ook als sturing beschouwd, in dit geval is het een lang ononderbroken elektrisch aan-signaal. Deze relatie heeft geen richting.";
     shacl:name "Sturing";
     shacl:path <https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/luidspreker-intercom/#Sturing>
@@ -190,7 +191,7 @@
     shacl:name "Sturing";
     shacl:path <https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/luidspreker-intercom/#Sturing>
   ], [
-    shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Luidspreker>;
+    shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Meetmicrofoon>;
     shacl:description "Deze relatie geeft aan of er een of andere vorm van dataverkeer is tussen 2 onderdelen. Een wegverlichtingstoestel dat aan staat wordt ook als sturing beschouwd, in dit geval is het een lang ononderbroken elektrisch aan-signaal. Deze relatie heeft geen richting.";
     shacl:name "Sturing";
     shacl:path <https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/luidspreker-intercom/#Sturing>
@@ -266,17 +267,17 @@
     shacl:name "Bevestiging";
     shacl:path <https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/luidspreker-intercom/#Bevestiging>
   ], [
+    shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Luidspreker>;
+    shacl:description "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Deze relatie heeft geen richting.";
+    shacl:name "Bevestiging";
+    shacl:path <https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/luidspreker-intercom/#Bevestiging>
+  ], [
     shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Meetmicrofoon>;
     shacl:description "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Deze relatie heeft geen richting.";
     shacl:name "Bevestiging";
     shacl:path <https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/luidspreker-intercom/#Bevestiging>
   ], [
     shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#ConstructieElement>;
-    shacl:description "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Deze relatie heeft geen richting.";
-    shacl:name "Bevestiging";
-    shacl:path <https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/luidspreker-intercom/#Bevestiging>
-  ], [
-    shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Luidspreker>;
     shacl:description "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Deze relatie heeft geen richting.";
     shacl:name "Bevestiging";
     shacl:path <https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/luidspreker-intercom/#Bevestiging>
@@ -320,12 +321,12 @@
 <https://data.vlaanderen.be/shacl/luidspreker-intercom#ConstructieElementShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:property [
-    shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#BekledingComponent>;
+    shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#IntercomToestel>;
     shacl:description "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Deze relatie heeft geen richting.";
     shacl:name "Bevestiging";
     shacl:path <https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/luidspreker-intercom/#Bevestiging>
   ], [
-    shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#IntercomToestel>;
+    shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#BekledingComponent>;
     shacl:description "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Deze relatie heeft geen richting.";
     shacl:name "Bevestiging";
     shacl:path <https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/luidspreker-intercom/#Bevestiging>
@@ -506,7 +507,7 @@
     shacl:name "Bevestiging";
     shacl:path <https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/luidspreker-intercom/#Bevestiging>
   ], [
-    shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#SoftwareToegang>;
+    shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Meetmicrofoon>;
     shacl:description "Deze relatie geeft aan of er een of andere vorm van dataverkeer is tussen 2 onderdelen. Een wegverlichtingstoestel dat aan staat wordt ook als sturing beschouwd, in dit geval is het een lang ononderbroken elektrisch aan-signaal. Deze relatie heeft geen richting.";
     shacl:name "Sturing";
     shacl:path <https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/luidspreker-intercom/#Sturing>
@@ -516,12 +517,12 @@
     shacl:name "Sturing";
     shacl:path <https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/luidspreker-intercom/#Sturing>
   ], [
-    shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Meetmicrofoon>;
+    shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#IntercomToestel>;
     shacl:description "Deze relatie geeft aan of er een of andere vorm van dataverkeer is tussen 2 onderdelen. Een wegverlichtingstoestel dat aan staat wordt ook als sturing beschouwd, in dit geval is het een lang ononderbroken elektrisch aan-signaal. Deze relatie heeft geen richting.";
     shacl:name "Sturing";
     shacl:path <https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/luidspreker-intercom/#Sturing>
   ], [
-    shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#IntercomToestel>;
+    shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#SoftwareToegang>;
     shacl:description "Deze relatie geeft aan of er een of andere vorm van dataverkeer is tussen 2 onderdelen. Een wegverlichtingstoestel dat aan staat wordt ook als sturing beschouwd, in dit geval is het een lang ononderbroken elektrisch aan-signaal. Deze relatie heeft geen richting.";
     shacl:name "Sturing";
     shacl:path <https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/luidspreker-intercom/#Sturing>
@@ -573,22 +574,12 @@
 <https://data.vlaanderen.be/shacl/luidspreker-intercom#IntercomToestelShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:property [
-    shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#BekledingComponent>;
-    shacl:description "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Deze relatie heeft geen richting.";
-    shacl:name "Bevestiging";
-    shacl:path <https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/luidspreker-intercom/#Bevestiging>
-  ], [
-    shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Meetmicrofoon>;
-    shacl:description "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Deze relatie heeft geen richting.";
-    shacl:name "Bevestiging";
-    shacl:path <https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/luidspreker-intercom/#Bevestiging>
-  ], [
     shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#ConstructieElement>;
     shacl:description "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Deze relatie heeft geen richting.";
     shacl:name "Bevestiging";
     shacl:path <https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/luidspreker-intercom/#Bevestiging>
   ], [
-    shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Montagekast>;
+    shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#BekledingComponent>;
     shacl:description "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Deze relatie heeft geen richting.";
     shacl:name "Bevestiging";
     shacl:path <https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/luidspreker-intercom/#Bevestiging>
@@ -598,12 +589,22 @@
     shacl:name "Bevestiging";
     shacl:path <https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/luidspreker-intercom/#Bevestiging>
   ], [
-    shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Omvormer>;
+    shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Meetmicrofoon>;
+    shacl:description "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Deze relatie heeft geen richting.";
+    shacl:name "Bevestiging";
+    shacl:path <https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/luidspreker-intercom/#Bevestiging>
+  ], [
+    shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Montagekast>;
+    shacl:description "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Deze relatie heeft geen richting.";
+    shacl:name "Bevestiging";
+    shacl:path <https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/luidspreker-intercom/#Bevestiging>
+  ], [
+    shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#IntercomServer>;
     shacl:description "Deze relatie geeft aan of er een of andere vorm van dataverkeer is tussen 2 onderdelen. Een wegverlichtingstoestel dat aan staat wordt ook als sturing beschouwd, in dit geval is het een lang ononderbroken elektrisch aan-signaal. Deze relatie heeft geen richting.";
     shacl:name "Sturing";
     shacl:path <https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/luidspreker-intercom/#Sturing>
   ], [
-    shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#IntercomServer>;
+    shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Omvormer>;
     shacl:description "Deze relatie geeft aan of er een of andere vorm van dataverkeer is tussen 2 onderdelen. Een wegverlichtingstoestel dat aan staat wordt ook als sturing beschouwd, in dit geval is het een lang ononderbroken elektrisch aan-signaal. Deze relatie heeft geen richting.";
     shacl:name "Sturing";
     shacl:path <https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/luidspreker-intercom/#Sturing>
@@ -986,12 +987,12 @@
     shacl:name "Bevestiging";
     shacl:path <https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/luidspreker-intercom/#Bevestiging>
   ], [
-    shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Audioversterker>;
+    shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#IntercomServer>;
     shacl:description "Deze relatie geeft aan of er een of andere vorm van dataverkeer is tussen 2 onderdelen. Een wegverlichtingstoestel dat aan staat wordt ook als sturing beschouwd, in dit geval is het een lang ononderbroken elektrisch aan-signaal. Deze relatie heeft geen richting.";
     shacl:name "Sturing";
     shacl:path <https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/luidspreker-intercom/#Sturing>
   ], [
-    shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#IntercomServer>;
+    shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Audioversterker>;
     shacl:description "Deze relatie geeft aan of er een of andere vorm van dataverkeer is tussen 2 onderdelen. Een wegverlichtingstoestel dat aan staat wordt ook als sturing beschouwd, in dit geval is het een lang ononderbroken elektrisch aan-signaal. Deze relatie heeft geen richting.";
     shacl:name "Sturing";
     shacl:path <https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/luidspreker-intercom/#Sturing>
@@ -1057,12 +1058,12 @@
 <https://data.vlaanderen.be/shacl/luidspreker-intercom#OmvormerShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:property [
-    shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#Kast>;
+    shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Rack>;
     shacl:description "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Deze relatie heeft geen richting.";
     shacl:name "Bevestiging";
     shacl:path <https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/luidspreker-intercom/#Bevestiging>
   ], [
-    shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Rack>;
+    shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#Kast>;
     shacl:description "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Deze relatie heeft geen richting.";
     shacl:name "Bevestiging";
     shacl:path <https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/luidspreker-intercom/#Bevestiging>
@@ -1072,7 +1073,7 @@
     shacl:name "Bevestiging";
     shacl:path <https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/luidspreker-intercom/#Bevestiging>
   ], [
-    shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#SoftwareToegang>;
+    shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#IntercomServer>;
     shacl:description "Deze relatie geeft aan of er een of andere vorm van dataverkeer is tussen 2 onderdelen. Een wegverlichtingstoestel dat aan staat wordt ook als sturing beschouwd, in dit geval is het een lang ononderbroken elektrisch aan-signaal. Deze relatie heeft geen richting.";
     shacl:name "Sturing";
     shacl:path <https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/luidspreker-intercom/#Sturing>
@@ -1082,12 +1083,12 @@
     shacl:name "Sturing";
     shacl:path <https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/luidspreker-intercom/#Sturing>
   ], [
-    shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#IntercomToestel>;
+    shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#SoftwareToegang>;
     shacl:description "Deze relatie geeft aan of er een of andere vorm van dataverkeer is tussen 2 onderdelen. Een wegverlichtingstoestel dat aan staat wordt ook als sturing beschouwd, in dit geval is het een lang ononderbroken elektrisch aan-signaal. Deze relatie heeft geen richting.";
     shacl:name "Sturing";
     shacl:path <https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/luidspreker-intercom/#Sturing>
   ], [
-    shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#IntercomServer>;
+    shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#IntercomToestel>;
     shacl:description "Deze relatie geeft aan of er een of andere vorm van dataverkeer is tussen 2 onderdelen. Een wegverlichtingstoestel dat aan staat wordt ook als sturing beschouwd, in dit geval is het een lang ononderbroken elektrisch aan-signaal. Deze relatie heeft geen richting.";
     shacl:name "Sturing";
     shacl:path <https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/luidspreker-intercom/#Sturing>
@@ -1139,17 +1140,17 @@
 <https://data.vlaanderen.be/shacl/luidspreker-intercom#RackShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:property [
-    shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#IntercomServer>;
-    shacl:description "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Deze relatie heeft geen richting.";
-    shacl:name "Bevestiging";
-    shacl:path <https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/luidspreker-intercom/#Bevestiging>
-  ], [
     shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Omvormer>;
     shacl:description "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Deze relatie heeft geen richting.";
     shacl:name "Bevestiging";
     shacl:path <https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/luidspreker-intercom/#Bevestiging>
   ], [
     shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Audioversterker>;
+    shacl:description "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Deze relatie heeft geen richting.";
+    shacl:name "Bevestiging";
+    shacl:path <https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/luidspreker-intercom/#Bevestiging>
+  ], [
+    shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#IntercomServer>;
     shacl:description "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Deze relatie heeft geen richting.";
     shacl:name "Bevestiging";
     shacl:path <https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/luidspreker-intercom/#Bevestiging>
@@ -1216,12 +1217,12 @@
     shacl:name "Sturing";
     shacl:path <https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/luidspreker-intercom/#Sturing>
   ], [
-    shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#IntercomServer>;
+    shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Audioversterker>;
     shacl:description "Deze relatie geeft aan of er een of andere vorm van dataverkeer is tussen 2 onderdelen. Een wegverlichtingstoestel dat aan staat wordt ook als sturing beschouwd, in dit geval is het een lang ononderbroken elektrisch aan-signaal. Deze relatie heeft geen richting.";
     shacl:name "Sturing";
     shacl:path <https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/luidspreker-intercom/#Sturing>
   ], [
-    shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Audioversterker>;
+    shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#IntercomServer>;
     shacl:description "Deze relatie geeft aan of er een of andere vorm van dataverkeer is tussen 2 onderdelen. Een wegverlichtingstoestel dat aan staat wordt ook als sturing beschouwd, in dit geval is het een lang ononderbroken elektrisch aan-signaal. Deze relatie heeft geen richting.";
     shacl:name "Sturing";
     shacl:path <https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/luidspreker-intercom/#Sturing>
@@ -1235,6 +1236,11 @@
 <https://data.vlaanderen.be/shacl/luidspreker-intercom#StroomkringShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:property [
+    shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Omvormer>;
+    shacl:description "Deze relatie wordt enkel gelegd naar onderdelen die permanent onder spanning staan in normaal bedrijf. Aan deze relatie wordt steeds een richting toegekend van de voedinggever naar de ontvanger.";
+    shacl:name "Voedt";
+    shacl:path <https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/luidspreker-intercom/#Voedt>
+  ], [
     shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#IntercomToestel>;
     shacl:description "Deze relatie wordt enkel gelegd naar onderdelen die permanent onder spanning staan in normaal bedrijf. Aan deze relatie wordt steeds een richting toegekend van de voedinggever naar de ontvanger.";
     shacl:name "Voedt";
@@ -1246,11 +1252,6 @@
     shacl:path <https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/luidspreker-intercom/#Voedt>
   ], [
     shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Meetmicrofoon>;
-    shacl:description "Deze relatie wordt enkel gelegd naar onderdelen die permanent onder spanning staan in normaal bedrijf. Aan deze relatie wordt steeds een richting toegekend van de voedinggever naar de ontvanger.";
-    shacl:name "Voedt";
-    shacl:path <https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/luidspreker-intercom/#Voedt>
-  ], [
-    shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Omvormer>;
     shacl:description "Deze relatie wordt enkel gelegd naar onderdelen die permanent onder spanning staan in normaal bedrijf. Aan deze relatie wordt steeds een richting toegekend van de voedinggever naar de ontvanger.";
     shacl:name "Voedt";
     shacl:path <https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/luidspreker-intercom/#Voedt>
@@ -1267,6 +1268,10 @@
 <https://data.vlaanderen.be/shacl/luidspreker-intercom#SturingShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:targetClass <https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/luidspreker-intercom/#Sturing> .
+
+<https://data.vlaanderen.be/shacl/luidspreker-intercom#VoedtAangestuurdShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#VoedtAangestuurd> .
 
 <https://data.vlaanderen.be/shacl/luidspreker-intercom#VoedtShape> a shacl:NodeShape;
   shacl:closed false;

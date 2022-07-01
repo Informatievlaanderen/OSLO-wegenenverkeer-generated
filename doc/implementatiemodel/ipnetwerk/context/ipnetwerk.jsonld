@@ -182,7 +182,7 @@
     "Netwerkelement.HoortBij": {
       "@container": "@set",
       "@id": "https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/ip-netwerk/#Hoort bij",
-      "@type": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#L2AccessStructuur"
+      "@type": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#IPBackbone"
     },
     "Netwerkelement.Sturing": {
       "@container": "@set",
@@ -219,12 +219,12 @@
     "Netwerkpoort.HoortBij": {
       "@container": "@set",
       "@id": "https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/ip-netwerk/#Hoort bij",
-      "@type": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#VLAN"
+      "@type": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Link"
     },
     "Netwerkpoort.Sturing": {
       "@container": "@set",
       "@id": "https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/ip-netwerk/#Sturing",
-      "@type": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#UPS"
+      "@type": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Netwerkpoort"
     },
     "Netwerkpoort.beschrijvingFabrikant": {
       "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Netwerkpoort.beschrijvingFabrikant",
@@ -248,7 +248,7 @@
     "Rack.Voedt": {
       "@container": "@set",
       "@id": "https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/ip-netwerk/#Voedt",
-      "@type": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Netwerkelement"
+      "@type": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#UPS"
     },
     "Rack.merk": {
       "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Rack.merk",
@@ -346,6 +346,10 @@
       "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMObject.datumOprichtingObject",
       "@type": "http://www.w3.org/2001/XMLSchema#date"
     },
+    "defaultGateway": {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#VLAN.defaultGateway",
+      "@type": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DteIPv4Adres"
+    },
     "diepte": {
       "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Rack.diepte",
       "@type": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInCentimeter"
@@ -408,6 +412,14 @@
     },
     "ipGateway": {
       "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Netwerkelement.ipGateway",
+      "@type": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DteIPv4Adres"
+    },
+    "ipMask": {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#VLAN.ipMask",
+      "@type": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DteIPv4Adres"
+    },
+    "ipSubnet": {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#VLAN.ipSubnet",
       "@type": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DteIPv4Adres"
     },
     "isActief": {
@@ -526,6 +538,10 @@
     "uri": {
       "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcDocument.uri",
       "@type": "http://www.w3.org/2001/XMLSchema#anyURI"
+    },
+    "vlanId": {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#VLAN.vlanId",
+      "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
     }
   }
 }

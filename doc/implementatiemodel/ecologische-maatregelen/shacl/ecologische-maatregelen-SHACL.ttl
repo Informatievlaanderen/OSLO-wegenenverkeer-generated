@@ -98,6 +98,7 @@
     <https://data.vlaanderen.be/shacl/ecologische-maatregelen#GeleidingswandShape>,
     <https://data.vlaanderen.be/shacl/ecologische-maatregelen#HoortBijShape>,
     <https://data.vlaanderen.be/shacl/ecologische-maatregelen#LigtOpShape>,
+    <https://data.vlaanderen.be/shacl/ecologische-maatregelen#OmhultShape>,
     <https://data.vlaanderen.be/shacl/ecologische-maatregelen#OpgaandeBoomShape>,
     <https://data.vlaanderen.be/shacl/ecologische-maatregelen#RioleringsbuisShape>,
     <https://data.vlaanderen.be/shacl/ecologische-maatregelen#SeinbrugShape>,
@@ -334,8 +335,7 @@
     shacl:path <https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Boom.takvrijeStamlengte>
   ], [
     shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInCentimeter>;
-    shacl:description """De straal van de cirkelvormige ruimte rond de boom waar maatregelen genomen worden om de boom te beschermen tijdens projecten of manifestaties uitgedrukt in centimeters.
-""";
+    shacl:description "De straal van de cirkelvormige ruimte rond de boom waar maatregelen genomen worden om de boom te beschermen tijdens projecten of manifestaties uitgedrukt in centimeters.";
     shacl:maxCount 1;
     shacl:minCount 1;
     shacl:name "totaleBoombeschermingszone";
@@ -353,12 +353,12 @@
 <https://data.vlaanderen.be/shacl/ecologische-maatregelen#BoombrugShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:property [
-    shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Seinbrug>;
+    shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Boom>;
     shacl:description "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Deze relatie heeft geen richting.";
     shacl:name "Bevestiging";
     shacl:path <https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/ecologische-maatregelen/#Bevestiging>
   ], [
-    shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Boom>;
+    shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Seinbrug>;
     shacl:description "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Deze relatie heeft geen richting.";
     shacl:name "Bevestiging";
     shacl:path <https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/ecologische-maatregelen/#Bevestiging>
@@ -528,11 +528,11 @@
     shacl:name "Bevestiging";
     shacl:path <https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/ecologische-maatregelen/#Bevestiging>
   ], [
-    shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Ecotunnel>;
+    shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Ecoduct>;
     shacl:description "De relatie geeft aan dat een onderdeel of collectie behoort bij, deel van of lid van een (andere) groep of collectie is.";
     shacl:name "HoortBij"
   ], [
-    shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Ecoduct>;
+    shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Ecotunnel>;
     shacl:description "De relatie geeft aan dat een onderdeel of collectie behoort bij, deel van of lid van een (andere) groep of collectie is.";
     shacl:name "HoortBij"
   ], [
@@ -962,7 +962,7 @@
     shacl:name "HoortBij"
   ], [
     shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMeter>;
-    shacl:description "De basis breedte van de gronddam in meter.";
+    shacl:description "De breedte van de basis van de gronddam in meter.";
     shacl:maxCount 1;
     shacl:minCount 1;
     shacl:name "basisbreedte";
@@ -1327,10 +1327,6 @@
 <https://data.vlaanderen.be/shacl/ecologische-maatregelen#LaagShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:property [
-    shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Ecoduct>;
-    shacl:description "De relatie geeft aan dat een onderdeel of collectie behoort bij, deel van of lid van een (andere) groep of collectie is.";
-    shacl:name "HoortBij"
-  ], [
     shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Gronddam>;
     shacl:description "De relatie geeft aan dat een onderdeel of collectie behoort bij, deel van of lid van een (andere) groep of collectie is.";
     shacl:name "HoortBij"
@@ -1339,11 +1335,15 @@
     shacl:description "De relatie geeft aan dat een onderdeel of collectie behoort bij, deel van of lid van een (andere) groep of collectie is.";
     shacl:name "HoortBij"
   ], [
-    shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#Laag>;
+    shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Ecoduct>;
+    shacl:description "De relatie geeft aan dat een onderdeel of collectie behoort bij, deel van of lid van een (andere) groep of collectie is.";
+    shacl:name "HoortBij"
+  ], [
+    shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#ConstructieElement>;
     shacl:description "Deze relatie geeft aan dat 2 onderdelen direct fysiek op elkaar liggen. Deze relatie heeft een richting en gaat van het bovenste naar het onderste onderdeel.";
     shacl:name "LigtOp"
   ], [
-    shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#ConstructieElement>;
+    shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#Laag>;
     shacl:description "Deze relatie geeft aan dat 2 onderdelen direct fysiek op elkaar liggen. Deze relatie heeft een richting en gaat van het bovenste naar het onderste onderdeel.";
     shacl:name "LigtOp"
   ], [
@@ -1387,6 +1387,10 @@
 <https://data.vlaanderen.be/shacl/ecologische-maatregelen#NonNegativeIntegerShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:targetClass xsd:nonNegativeInteger .
+
+<https://data.vlaanderen.be/shacl/ecologische-maatregelen#OmhultShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Omhult> .
 
 <https://data.vlaanderen.be/shacl/ecologische-maatregelen#OpgaandeBoomShape> a shacl:NodeShape;
   shacl:closed false;
@@ -1476,8 +1480,7 @@
     shacl:path <https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#OpgaandeBoom.takvrijeStamlengte>
   ], [
     shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInCentimeter>;
-    shacl:description """De straal van de cirkelvormige ruimte rond de boom waar maatregelen genomen worden om de boom te beschermen tijdens projecten of manifestaties uitgedrukt in centimeters.
-""";
+    shacl:description "De straal van de cirkelvormige ruimte rond de boom waar maatregelen genomen worden om de boom te beschermen tijdens projecten of manifestaties uitgedrukt in centimeters.";
     shacl:maxCount 1;
     shacl:minCount 1;
     shacl:name "totaleBoombeschermingszone";

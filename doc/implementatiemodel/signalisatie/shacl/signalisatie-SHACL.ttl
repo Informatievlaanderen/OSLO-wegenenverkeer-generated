@@ -41,8 +41,8 @@
     <https://data.vlaanderen.be/shacl/signalisatie#KlGekleurdWVSoortShape>,
     <https://data.vlaanderen.be/shacl/signalisatie#KlDwarseMarkeringCodeShape>,
     <https://data.vlaanderen.be/shacl/signalisatie#KlDwarseMarkeringSoortShape>,
-    <https://data.vlaanderen.be/shacl/signalisatie#KlLEMarkeringSoortShape>,
     <https://data.vlaanderen.be/shacl/signalisatie#KlLEMarkeringCodeShape>,
+    <https://data.vlaanderen.be/shacl/signalisatie#KlLEMarkeringSoortShape>,
     <https://data.vlaanderen.be/shacl/signalisatie#KlFiguratieCodeShape>,
     <https://data.vlaanderen.be/shacl/signalisatie#KlFiguratieTypeShape>,
     <https://data.vlaanderen.be/shacl/signalisatie#KlFiguratieSoortShape>,
@@ -525,7 +525,12 @@
 <https://data.vlaanderen.be/shacl/signalisatie#BevestigingsbeugelShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:property [
-    shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Pictogram>;
+    shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#Verkeersbord>;
+    shacl:description "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Deze relatie heeft geen richting.";
+    shacl:name "Bevestiging";
+    shacl:path <https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/signalisatie/#Bevestiging>
+  ], [
+    shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#OmegaElement>;
     shacl:description "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Deze relatie heeft geen richting.";
     shacl:name "Bevestiging";
     shacl:path <https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/signalisatie/#Bevestiging>
@@ -535,12 +540,7 @@
     shacl:name "Bevestiging";
     shacl:path <https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/signalisatie/#Bevestiging>
   ], [
-    shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#Verkeersbord>;
-    shacl:description "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Deze relatie heeft geen richting.";
-    shacl:name "Bevestiging";
-    shacl:path <https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/signalisatie/#Bevestiging>
-  ], [
-    shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#OmegaElement>;
+    shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Pictogram>;
     shacl:description "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Deze relatie heeft geen richting.";
     shacl:name "Bevestiging";
     shacl:path <https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/signalisatie/#Bevestiging>
@@ -593,12 +593,12 @@
 <https://data.vlaanderen.be/shacl/signalisatie#BitumineuzeLaagShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:property [
-    shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Wegreflector>;
+    shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Divergentiepuntbebakeningselement>;
     shacl:description "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Deze relatie heeft geen richting.";
     shacl:name "Bevestiging";
     shacl:path <https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/signalisatie/#Bevestiging>
   ], [
-    shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Divergentiepuntbebakeningselement>;
+    shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Wegreflector>;
     shacl:description "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Deze relatie heeft geen richting.";
     shacl:name "Bevestiging";
     shacl:path <https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/signalisatie/#Bevestiging>
@@ -698,9 +698,7 @@
     shacl:path <https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Cementbetonverharding.laagtype>
   ], [
     shacl:class skos:Concept;
-    shacl:description """Behandeling die wordt toegepast op het oppervlak van een laag, met of zonder toevoeging van 
-materialen, en bestemd is om de eigenschappen van de laag te verbeteren, hetzij bij de uitvoering, 
-hetzij achteraf. """;
+    shacl:description "Behandeling die wordt toegepast op het oppervlak van een laag, met of zonder toevoeging van materialen, en bestemd is om de eigenschappen van de laag te verbeteren, hetzij bij de uitvoering, hetzij achteraf.";
     shacl:maxCount 1;
     shacl:minCount 1;
     shacl:name "oppervlakbehandeling";
@@ -737,17 +735,17 @@ hetzij achteraf. """;
 <https://data.vlaanderen.be/shacl/signalisatie#DivergentiepuntbebakeningselementShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:property [
-    shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Cementbetonverharding>;
-    shacl:description "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Deze relatie heeft geen richting.";
-    shacl:name "Bevestiging";
-    shacl:path <https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/signalisatie/#Bevestiging>
-  ], [
     shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#BitumineuzeLaag>;
     shacl:description "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Deze relatie heeft geen richting.";
     shacl:name "Bevestiging";
     shacl:path <https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/signalisatie/#Bevestiging>
   ], [
     shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#RetroreflecterendeFolie>;
+    shacl:description "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Deze relatie heeft geen richting.";
+    shacl:name "Bevestiging";
+    shacl:path <https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/signalisatie/#Bevestiging>
+  ], [
+    shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Cementbetonverharding>;
     shacl:description "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Deze relatie heeft geen richting.";
     shacl:name "Bevestiging";
     shacl:path <https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/signalisatie/#Bevestiging>
@@ -771,17 +769,17 @@ hetzij achteraf. """;
 <https://data.vlaanderen.be/shacl/signalisatie#DraagconstructieShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:property [
+    shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Baanlichaam>;
+    shacl:description "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Deze relatie heeft geen richting.";
+    shacl:name "Bevestiging";
+    shacl:path <https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/signalisatie/#Bevestiging>
+  ], [
     shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Verkeersspiegel>;
     shacl:description "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Deze relatie heeft geen richting.";
     shacl:name "Bevestiging";
     shacl:path <https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/signalisatie/#Bevestiging>
   ], [
     shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Bevestigingsbeugel>;
-    shacl:description "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Deze relatie heeft geen richting.";
-    shacl:name "Bevestiging";
-    shacl:path <https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/signalisatie/#Bevestiging>
-  ], [
-    shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Baanlichaam>;
     shacl:description "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Deze relatie heeft geen richting.";
     shacl:name "Bevestiging";
     shacl:path <https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/signalisatie/#Bevestiging>
@@ -1400,11 +1398,11 @@ hetzij achteraf. """;
 <https://data.vlaanderen.be/shacl/signalisatie#FiguratieMarkeringToegangShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:property [
-    shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#GroepDwarseMarkeringEnFiguratie>;
+    shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#GroepMarkering>;
     shacl:description "De relatie geeft aan dat een onderdeel of collectie behoort bij, deel van of lid van een (andere) groep of collectie is.";
     shacl:name "HoortBij"
   ], [
-    shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#GroepMarkering>;
+    shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#GroepDwarseMarkeringEnFiguratie>;
     shacl:description "De relatie geeft aan dat een onderdeel of collectie behoort bij, deel van of lid van een (andere) groep of collectie is.";
     shacl:name "HoortBij"
   ];
@@ -2273,12 +2271,12 @@ hetzij achteraf. """;
 <https://data.vlaanderen.be/shacl/signalisatie#LaagShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:property [
-    shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#Straatmeubilair>;
+    shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#Markering>;
     shacl:description "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Deze relatie heeft geen richting.";
     shacl:name "Bevestiging";
     shacl:path <https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/signalisatie/#Bevestiging>
   ], [
-    shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#Markering>;
+    shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#Straatmeubilair>;
     shacl:description "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Deze relatie heeft geen richting.";
     shacl:name "Bevestiging";
     shacl:path <https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/signalisatie/#Bevestiging>
@@ -2464,9 +2462,7 @@ hetzij achteraf. """;
     shacl:path <https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/signalisatie/#Bevestiging>
   ], [
     shacl:datatype xsd:boolean;
-    shacl:description """Boolean om te bepalen of de markering machinaal of handmatig is aangebracht
-
-.""";
+    shacl:description "Boolean om te bepalen of de markering machinaal of handmatig is aangebracht.";
     shacl:maxCount 1;
     shacl:minCount 1;
     shacl:name "isHandwerk";
@@ -2516,12 +2512,12 @@ hetzij achteraf. """;
 <https://data.vlaanderen.be/shacl/signalisatie#OmegaElementShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:property [
-    shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Verankeringsmassief>;
+    shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Bevestigingsbeugel>;
     shacl:description "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Deze relatie heeft geen richting.";
     shacl:name "Bevestiging";
     shacl:path <https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/signalisatie/#Bevestiging>
   ], [
-    shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Bevestigingsbeugel>;
+    shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Verankeringsmassief>;
     shacl:description "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Deze relatie heeft geen richting.";
     shacl:name "Bevestiging";
     shacl:path <https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/signalisatie/#Bevestiging>
@@ -2647,12 +2643,12 @@ hetzij achteraf. """;
 <https://data.vlaanderen.be/shacl/signalisatie#ReferentiepuntShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:property [
-    shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#WegbebakeningAfschermendeConstructies>;
+    shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#AfschermendeConstructie>;
     shacl:description "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Deze relatie heeft geen richting.";
     shacl:name "Bevestiging";
     shacl:path <https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/signalisatie/#Bevestiging>
   ], [
-    shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#AfschermendeConstructie>;
+    shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#WegbebakeningAfschermendeConstructies>;
     shacl:description "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Deze relatie heeft geen richting.";
     shacl:name "Bevestiging";
     shacl:path <https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/signalisatie/#Bevestiging>
@@ -2696,12 +2692,12 @@ hetzij achteraf. """;
 <https://data.vlaanderen.be/shacl/signalisatie#RetroReflecterendeKokerShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:property [
-    shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Verkeersbordsteun>;
+    shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#RetroreflecterendeFolie>;
     shacl:description "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Deze relatie heeft geen richting.";
     shacl:name "Bevestiging";
     shacl:path <https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/signalisatie/#Bevestiging>
   ], [
-    shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#RetroreflecterendeFolie>;
+    shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Verkeersbordsteun>;
     shacl:description "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Deze relatie heeft geen richting.";
     shacl:name "Bevestiging";
     shacl:path <https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/signalisatie/#Bevestiging>
@@ -2761,12 +2757,12 @@ hetzij achteraf. """;
 <https://data.vlaanderen.be/shacl/signalisatie#RetroreflecterendeFolieShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:property [
-    shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#RetroreflecterendVerkeersbord>;
+    shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#RetroReflecterendeKoker>;
     shacl:description "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Deze relatie heeft geen richting.";
     shacl:name "Bevestiging";
     shacl:path <https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/signalisatie/#Bevestiging>
   ], [
-    shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#RetroReflecterendeKoker>;
+    shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#RetroreflecterendVerkeersbord>;
     shacl:description "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Deze relatie heeft geen richting.";
     shacl:name "Bevestiging";
     shacl:path <https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/signalisatie/#Bevestiging>
@@ -2890,11 +2886,11 @@ hetzij achteraf. """;
     shacl:name "Bevestiging";
     shacl:path <https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/signalisatie/#Bevestiging>
   ], [
-    shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Verkeersbordopstelling>;
+    shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#VerkeersbordVerkeersteken>;
     shacl:description "De relatie geeft aan dat een onderdeel of collectie behoort bij, deel van of lid van een (andere) groep of collectie is.";
     shacl:name "HoortBij"
   ], [
-    shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#VerkeersbordVerkeersteken>;
+    shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Verkeersbordopstelling>;
     shacl:description "De relatie geeft aan dat een onderdeel of collectie behoort bij, deel van of lid van een (andere) groep of collectie is.";
     shacl:name "HoortBij"
   ], [
@@ -3004,12 +3000,12 @@ hetzij achteraf. """;
 <https://data.vlaanderen.be/shacl/signalisatie#VerkeersbordsteunShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:property [
-    shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#RetroReflecterendeKoker>;
+    shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Funderingsmassief>;
     shacl:description "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Deze relatie heeft geen richting.";
     shacl:name "Bevestiging";
     shacl:path <https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/signalisatie/#Bevestiging>
   ], [
-    shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Funderingsmassief>;
+    shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#RetroReflecterendeKoker>;
     shacl:description "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Deze relatie heeft geen richting.";
     shacl:name "Bevestiging";
     shacl:path <https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/signalisatie/#Bevestiging>
@@ -3164,12 +3160,12 @@ hetzij achteraf. """;
 <https://data.vlaanderen.be/shacl/signalisatie#WegbebakeningAfschermendeConstructiesShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:property [
-    shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Referentiepunt>;
+    shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#AfschermendeConstructie>;
     shacl:description "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Deze relatie heeft geen richting.";
     shacl:name "Bevestiging";
     shacl:path <https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/signalisatie/#Bevestiging>
   ], [
-    shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#AfschermendeConstructie>;
+    shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Referentiepunt>;
     shacl:description "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Deze relatie heeft geen richting.";
     shacl:name "Bevestiging";
     shacl:path <https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/signalisatie/#Bevestiging>

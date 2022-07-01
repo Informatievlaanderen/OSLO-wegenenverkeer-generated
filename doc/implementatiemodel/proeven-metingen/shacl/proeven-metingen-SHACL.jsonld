@@ -802,6 +802,12 @@
       "sh:property": [
         {
           "sh:class": "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#Buis",
+          "sh:description": "Deze relatie geeft aan dat het ene onderdeel het andere omhult. Dit vereist geen gesloten omhulling: de omhulling kan een open zijde hebben of bestaan uit open ruimtes. Deze relatie heeft een richting en gaat van het omhullende onderdeel naar het onderdeel dat omhuld wordt.",
+          "sh:name": "Omhult",
+          "sh:path": "https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/proeven-metingen/#Omhult"
+        },
+        {
+          "sh:class": "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#Buis",
           "sh:description": "Deze relatie geeft aan hoe 2 onderdelen in horizontale zin elkaar opvolgen. Dit wordt gebruikt om een topologisch netwerk op te bouwen. Enkel in gebruik bij afschermende constructies en riolering/waterlopen. Deze relatie heeft steeds een richting van het opwaartse naar het afwaartse onderdeel.",
           "sh:name": "SluitAanOp",
           "sh:path": "https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/proeven-metingen/#Sluit aan op"
@@ -1092,7 +1098,7 @@
       "sh:property": [
         {
           "sh:datatype": "http://www.w3.org/2001/XMLSchema#boolean",
-          "sh:description": "Boolean om te bepalen of de markering machinaal of handmatig is aangebracht\n\n.",
+          "sh:description": "Boolean om te bepalen of de markering machinaal of handmatig is aangebracht.",
           "sh:maxCount": "1",
           "sh:minCount": "1",
           "sh:name": "isHandwerk",
@@ -2225,7 +2231,7 @@
         },
         {
           "sh:class": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInCentimeter",
-          "sh:description": "De straal van de cirkelvormige ruimte rond de boom waar maatregelen genomen worden om de boom te beschermen tijdens projecten of manifestaties uitgedrukt in centimeters.\n",
+          "sh:description": "De straal van de cirkelvormige ruimte rond de boom waar maatregelen genomen worden om de boom te beschermen tijdens projecten of manifestaties uitgedrukt in centimeters.",
           "sh:maxCount": "1",
           "sh:minCount": "1",
           "sh:name": "totaleBoombeschermingszone",
@@ -2281,7 +2287,7 @@
         },
         {
           "sh:class": "http://www.w3.org/2004/02/skos/core#Concept",
-          "sh:description": "Behandeling die wordt toegepast op het oppervlak van een laag, met of zonder toevoeging van \nmaterialen, en bestemd is om de eigenschappen van de laag te verbeteren, hetzij bij de uitvoering, \nhetzij achteraf. ",
+          "sh:description": "Behandeling die wordt toegepast op het oppervlak van een laag, met of zonder toevoeging van materialen, en bestemd is om de eigenschappen van de laag te verbeteren, hetzij bij de uitvoering, hetzij achteraf.",
           "sh:maxCount": "1",
           "sh:minCount": "1",
           "sh:name": "oppervlakbehandeling",
@@ -2449,7 +2455,7 @@
         },
         {
           "sh:class": "http://www.w3.org/2004/02/skos/core#Concept",
-          "sh:description": "De mogelijke wijzen van randafwerking van de verharding.",
+          "sh:description": "De wijze waarop de rand van de bestrating is afgewerkt.",
           "sh:maxCount": "1",
           "sh:minCount": "1",
           "sh:name": "randafwerking",
@@ -2901,6 +2907,13 @@
       "sh:targetClass": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#LigtOp"
     },
     {
+      "@id": "https://data.vlaanderen.be/shacl/proeven-metingen#OmhultShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [],
+      "sh:targetClass": "https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/proeven-metingen/#Omhult"
+    },
+    {
       "@id": "https://data.vlaanderen.be/shacl/proeven-metingen#OnderbouwShape",
       "@type": "sh:NodeShape",
       "sh:closed": false,
@@ -3043,7 +3056,7 @@
         },
         {
           "sh:class": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInCentimeter",
-          "sh:description": "De straal van de cirkelvormige ruimte rond de boom waar maatregelen genomen worden om de boom te beschermen tijdens projecten of manifestaties uitgedrukt in centimeters.\n",
+          "sh:description": "De straal van de cirkelvormige ruimte rond de boom waar maatregelen genomen worden om de boom te beschermen tijdens projecten of manifestaties uitgedrukt in centimeters.",
           "sh:maxCount": "1",
           "sh:minCount": "1",
           "sh:name": "totaleBoombeschermingszone",
@@ -3471,7 +3484,7 @@
           "sh:path": "https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/proeven-metingen/#Is inspectie van"
         },
         {
-          "sh:class": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Onderbouw",
+          "sh:class": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Dolomietverharding",
           "sh:description": "De relatie geeft aan dat er een inspectie, proef of meting gedaan kan worden op een onderdeel of installatie. De bron van de relatie is de inspectie, het doel het onderdeel of de installatie waarbij de inspectie hoort.",
           "sh:name": "IsInspectieVan",
           "sh:path": "https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/proeven-metingen/#Is inspectie van"
@@ -3483,7 +3496,7 @@
           "sh:path": "https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/proeven-metingen/#Is inspectie van"
         },
         {
-          "sh:class": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Dolomietverharding",
+          "sh:class": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Onderbouw",
           "sh:description": "De relatie geeft aan dat er een inspectie, proef of meting gedaan kan worden op een onderdeel of installatie. De bron van de relatie is de inspectie, het doel het onderdeel of de installatie waarbij de inspectie hoort.",
           "sh:name": "IsInspectieVan",
           "sh:path": "https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/proeven-metingen/#Is inspectie van"
@@ -3661,13 +3674,7 @@
       "sh:closed": false,
       "sh:property": [
         {
-          "sh:class": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Ternairmengselverharding",
-          "sh:description": "De relatie geeft aan dat er een inspectie, proef of meting gedaan kan worden op een onderdeel of installatie. De bron van de relatie is de inspectie, het doel het onderdeel of de installatie waarbij de inspectie hoort.",
-          "sh:name": "IsInspectieVan",
-          "sh:path": "https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/proeven-metingen/#Is inspectie van"
-        },
-        {
-          "sh:class": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#BitumineuzeLaag",
+          "sh:class": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Onderbouw",
           "sh:description": "De relatie geeft aan dat er een inspectie, proef of meting gedaan kan worden op een onderdeel of installatie. De bron van de relatie is de inspectie, het doel het onderdeel of de installatie waarbij de inspectie hoort.",
           "sh:name": "IsInspectieVan",
           "sh:path": "https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/proeven-metingen/#Is inspectie van"
@@ -3691,13 +3698,19 @@
           "sh:path": "https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/proeven-metingen/#Is inspectie van"
         },
         {
-          "sh:class": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Steenslagverharding",
+          "sh:class": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Ternairmengselverharding",
           "sh:description": "De relatie geeft aan dat er een inspectie, proef of meting gedaan kan worden op een onderdeel of installatie. De bron van de relatie is de inspectie, het doel het onderdeel of de installatie waarbij de inspectie hoort.",
           "sh:name": "IsInspectieVan",
           "sh:path": "https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/proeven-metingen/#Is inspectie van"
         },
         {
-          "sh:class": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Onderbouw",
+          "sh:class": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#BitumineuzeLaag",
+          "sh:description": "De relatie geeft aan dat er een inspectie, proef of meting gedaan kan worden op een onderdeel of installatie. De bron van de relatie is de inspectie, het doel het onderdeel of de installatie waarbij de inspectie hoort.",
+          "sh:name": "IsInspectieVan",
+          "sh:path": "https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/proeven-metingen/#Is inspectie van"
+        },
+        {
+          "sh:class": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Steenslagverharding",
           "sh:description": "De relatie geeft aan dat er een inspectie, proef of meting gedaan kan worden op een onderdeel of installatie. De bron van de relatie is de inspectie, het doel het onderdeel of de installatie waarbij de inspectie hoort.",
           "sh:name": "IsInspectieVan",
           "sh:path": "https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/proeven-metingen/#Is inspectie van"
@@ -3779,13 +3792,13 @@
       "sh:closed": false,
       "sh:property": [
         {
-          "sh:class": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#BitumineuzeLaag",
+          "sh:class": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#DunneOverlaging",
           "sh:description": "De relatie geeft aan dat er een inspectie, proef of meting gedaan kan worden op een onderdeel of installatie. De bron van de relatie is de inspectie, het doel het onderdeel of de installatie waarbij de inspectie hoort.",
           "sh:name": "IsInspectieVan",
           "sh:path": "https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/proeven-metingen/#Is inspectie van"
         },
         {
-          "sh:class": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#DunneOverlaging",
+          "sh:class": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#BitumineuzeLaag",
           "sh:description": "De relatie geeft aan dat er een inspectie, proef of meting gedaan kan worden op een onderdeel of installatie. De bron van de relatie is de inspectie, het doel het onderdeel of de installatie waarbij de inspectie hoort.",
           "sh:name": "IsInspectieVan",
           "sh:path": "https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/proeven-metingen/#Is inspectie van"
@@ -4046,13 +4059,13 @@
       "sh:closed": false,
       "sh:property": [
         {
-          "sh:class": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Cementbetonverharding",
+          "sh:class": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#BitumineuzeLaag",
           "sh:description": "De relatie geeft aan dat er een inspectie, proef of meting gedaan kan worden op een onderdeel of installatie. De bron van de relatie is de inspectie, het doel het onderdeel of de installatie waarbij de inspectie hoort.",
           "sh:name": "IsInspectieVan",
           "sh:path": "https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/proeven-metingen/#Is inspectie van"
         },
         {
-          "sh:class": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#BitumineuzeLaag",
+          "sh:class": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Cementbetonverharding",
           "sh:description": "De relatie geeft aan dat er een inspectie, proef of meting gedaan kan worden op een onderdeel of installatie. De bron van de relatie is de inspectie, het doel het onderdeel of de installatie waarbij de inspectie hoort.",
           "sh:name": "IsInspectieVan",
           "sh:path": "https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/proeven-metingen/#Is inspectie van"
@@ -4075,7 +4088,7 @@
       "sh:property": [
         {
           "sh:class": "http://www.w3.org/2004/02/skos/core#Concept",
-          "sh:description": " De parameter die \nweergeeft hoe groot de kans op ernstige letsels is van de inzittenden bij een\naanrijding.",
+          "sh:description": "De parameter die weergeeft hoe groot de kans op ernstige letsels is van de inzittenden bij een aanrijding.",
           "sh:maxCount": "1",
           "sh:minCount": "1",
           "sh:name": "schokindex",
@@ -4091,7 +4104,7 @@
       "sh:property": [
         {
           "sh:class": "http://www.w3.org/2004/02/skos/core#Concept",
-          "sh:description": " head injury criterium (HIC) van een motorvangplank.\n",
+          "sh:description": "Head Injury Criterium (HIC) van een motorvangplank.",
           "sh:maxCount": "1",
           "sh:minCount": "1",
           "sh:name": "schokindexMvp",
@@ -4128,13 +4141,7 @@
       "sh:closed": false,
       "sh:property": [
         {
-          "sh:class": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#DunneOverlaging",
-          "sh:description": "De relatie geeft aan dat er een inspectie, proef of meting gedaan kan worden op een onderdeel of installatie. De bron van de relatie is de inspectie, het doel het onderdeel of de installatie waarbij de inspectie hoort.",
-          "sh:name": "IsInspectieVan",
-          "sh:path": "https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/proeven-metingen/#Is inspectie van"
-        },
-        {
-          "sh:class": "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#Markering",
+          "sh:class": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Slemlaag",
           "sh:description": "De relatie geeft aan dat er een inspectie, proef of meting gedaan kan worden op een onderdeel of installatie. De bron van de relatie is de inspectie, het doel het onderdeel of de installatie waarbij de inspectie hoort.",
           "sh:name": "IsInspectieVan",
           "sh:path": "https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/proeven-metingen/#Is inspectie van"
@@ -4152,7 +4159,13 @@
           "sh:path": "https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/proeven-metingen/#Is inspectie van"
         },
         {
-          "sh:class": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Slemlaag",
+          "sh:class": "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#Markering",
+          "sh:description": "De relatie geeft aan dat er een inspectie, proef of meting gedaan kan worden op een onderdeel of installatie. De bron van de relatie is de inspectie, het doel het onderdeel of de installatie waarbij de inspectie hoort.",
+          "sh:name": "IsInspectieVan",
+          "sh:path": "https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/proeven-metingen/#Is inspectie van"
+        },
+        {
+          "sh:class": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#DunneOverlaging",
           "sh:description": "De relatie geeft aan dat er een inspectie, proef of meting gedaan kan worden op een onderdeel of installatie. De bron van de relatie is de inspectie, het doel het onderdeel of de installatie waarbij de inspectie hoort.",
           "sh:name": "IsInspectieVan",
           "sh:path": "https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/proeven-metingen/#Is inspectie van"
@@ -4174,13 +4187,13 @@
       "sh:closed": false,
       "sh:property": [
         {
-          "sh:class": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#DunneOverlaging",
+          "sh:class": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#BitumineuzeLaag",
           "sh:description": "De relatie geeft aan dat er een inspectie, proef of meting gedaan kan worden op een onderdeel of installatie. De bron van de relatie is de inspectie, het doel het onderdeel of de installatie waarbij de inspectie hoort.",
           "sh:name": "IsInspectieVan",
           "sh:path": "https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/proeven-metingen/#Is inspectie van"
         },
         {
-          "sh:class": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#BitumineuzeLaag",
+          "sh:class": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#DunneOverlaging",
           "sh:description": "De relatie geeft aan dat er een inspectie, proef of meting gedaan kan worden op een onderdeel of installatie. De bron van de relatie is de inspectie, het doel het onderdeel of de installatie waarbij de inspectie hoort.",
           "sh:name": "IsInspectieVan",
           "sh:path": "https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/proeven-metingen/#Is inspectie van"
@@ -4202,13 +4215,13 @@
       "sh:closed": false,
       "sh:property": [
         {
-          "sh:class": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#BitumineuzeLaag",
+          "sh:class": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Cementbetonverharding",
           "sh:description": "De relatie geeft aan dat er een inspectie, proef of meting gedaan kan worden op een onderdeel of installatie. De bron van de relatie is de inspectie, het doel het onderdeel of de installatie waarbij de inspectie hoort.",
           "sh:name": "IsInspectieVan",
           "sh:path": "https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/proeven-metingen/#Is inspectie van"
         },
         {
-          "sh:class": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Cementbetonverharding",
+          "sh:class": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#BitumineuzeLaag",
           "sh:description": "De relatie geeft aan dat er een inspectie, proef of meting gedaan kan worden op een onderdeel of installatie. De bron van de relatie is de inspectie, het doel het onderdeel of de installatie waarbij de inspectie hoort.",
           "sh:name": "IsInspectieVan",
           "sh:path": "https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/proeven-metingen/#Is inspectie van"
@@ -4259,7 +4272,7 @@
         },
         {
           "sh:class": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcDocument",
-          "sh:description": "Een trekproef is een niet-destructieve methode om de stabiliteit (gevoeligheid voor windworp) van\nbomen te testen door een kunstmatige belasting op de stam te relateren met het kantelen van de\nstamvoet.",
+          "sh:description": "Een trekproef is een niet-destructieve methode om de stabiliteit (gevoeligheid voor windworp) van bomen te testen door een kunstmatige belasting op de stam te relateren met het kantelen van de stamvoet.",
           "sh:minCount": "1",
           "sh:name": "verderOnderzoekTrekproef",
           "sh:path": "https://wegenenverkeer-test.data.vlaanderen.be/ns/proefenmeting#ProefVerderOnderzoekTrekproef.verderOnderzoekTrekproef"
@@ -4279,13 +4292,13 @@
           "sh:path": "https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/proeven-metingen/#Is inspectie van"
         },
         {
-          "sh:class": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Bestrijking",
+          "sh:class": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Slemlaag",
           "sh:description": "De relatie geeft aan dat er een inspectie, proef of meting gedaan kan worden op een onderdeel of installatie. De bron van de relatie is de inspectie, het doel het onderdeel of de installatie waarbij de inspectie hoort.",
           "sh:name": "IsInspectieVan",
           "sh:path": "https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/proeven-metingen/#Is inspectie van"
         },
         {
-          "sh:class": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Slemlaag",
+          "sh:class": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Bestrijking",
           "sh:description": "De relatie geeft aan dat er een inspectie, proef of meting gedaan kan worden op een onderdeel of installatie. De bron van de relatie is de inspectie, het doel het onderdeel of de installatie waarbij de inspectie hoort.",
           "sh:name": "IsInspectieVan",
           "sh:path": "https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/proeven-metingen/#Is inspectie van"
@@ -4307,18 +4320,6 @@
       "sh:closed": false,
       "sh:property": [
         {
-          "sh:class": "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#Bestrating",
-          "sh:description": "De relatie geeft aan dat er een inspectie, proef of meting gedaan kan worden op een onderdeel of installatie. De bron van de relatie is de inspectie, het doel het onderdeel of de installatie waarbij de inspectie hoort.",
-          "sh:name": "IsInspectieVan",
-          "sh:path": "https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/proeven-metingen/#Is inspectie van"
-        },
-        {
-          "sh:class": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Onderbouw",
-          "sh:description": "De relatie geeft aan dat er een inspectie, proef of meting gedaan kan worden op een onderdeel of installatie. De bron van de relatie is de inspectie, het doel het onderdeel of de installatie waarbij de inspectie hoort.",
-          "sh:name": "IsInspectieVan",
-          "sh:path": "https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/proeven-metingen/#Is inspectie van"
-        },
-        {
           "sh:class": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Cementbetonverharding",
           "sh:description": "De relatie geeft aan dat er een inspectie, proef of meting gedaan kan worden op een onderdeel of installatie. De bron van de relatie is de inspectie, het doel het onderdeel of de installatie waarbij de inspectie hoort.",
           "sh:name": "IsInspectieVan",
@@ -4331,7 +4332,7 @@
           "sh:path": "https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/proeven-metingen/#Is inspectie van"
         },
         {
-          "sh:class": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Walsbetonverharding",
+          "sh:class": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#BitumineuzeLaag",
           "sh:description": "De relatie geeft aan dat er een inspectie, proef of meting gedaan kan worden op een onderdeel of installatie. De bron van de relatie is de inspectie, het doel het onderdeel of de installatie waarbij de inspectie hoort.",
           "sh:name": "IsInspectieVan",
           "sh:path": "https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/proeven-metingen/#Is inspectie van"
@@ -4343,7 +4344,19 @@
           "sh:path": "https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/proeven-metingen/#Is inspectie van"
         },
         {
-          "sh:class": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#BitumineuzeLaag",
+          "sh:class": "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#Bestrating",
+          "sh:description": "De relatie geeft aan dat er een inspectie, proef of meting gedaan kan worden op een onderdeel of installatie. De bron van de relatie is de inspectie, het doel het onderdeel of de installatie waarbij de inspectie hoort.",
+          "sh:name": "IsInspectieVan",
+          "sh:path": "https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/proeven-metingen/#Is inspectie van"
+        },
+        {
+          "sh:class": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Walsbetonverharding",
+          "sh:description": "De relatie geeft aan dat er een inspectie, proef of meting gedaan kan worden op een onderdeel of installatie. De bron van de relatie is de inspectie, het doel het onderdeel of de installatie waarbij de inspectie hoort.",
+          "sh:name": "IsInspectieVan",
+          "sh:path": "https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/proeven-metingen/#Is inspectie van"
+        },
+        {
+          "sh:class": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Ternairmengselverharding",
           "sh:description": "De relatie geeft aan dat er een inspectie, proef of meting gedaan kan worden op een onderdeel of installatie. De bron van de relatie is de inspectie, het doel het onderdeel of de installatie waarbij de inspectie hoort.",
           "sh:name": "IsInspectieVan",
           "sh:path": "https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/proeven-metingen/#Is inspectie van"
@@ -4355,7 +4368,7 @@
           "sh:path": "https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/proeven-metingen/#Is inspectie van"
         },
         {
-          "sh:class": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Ternairmengselverharding",
+          "sh:class": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Onderbouw",
           "sh:description": "De relatie geeft aan dat er een inspectie, proef of meting gedaan kan worden op een onderdeel of installatie. De bron van de relatie is de inspectie, het doel het onderdeel of de installatie waarbij de inspectie hoort.",
           "sh:name": "IsInspectieVan",
           "sh:path": "https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/proeven-metingen/#Is inspectie van"
@@ -4443,13 +4456,13 @@
       "sh:closed": false,
       "sh:property": [
         {
-          "sh:class": "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#Kantopsluiting",
+          "sh:class": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Cementbetonverharding",
           "sh:description": "De relatie geeft aan dat er een inspectie, proef of meting gedaan kan worden op een onderdeel of installatie. De bron van de relatie is de inspectie, het doel het onderdeel of de installatie waarbij de inspectie hoort.",
           "sh:name": "IsInspectieVan",
           "sh:path": "https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/proeven-metingen/#Is inspectie van"
         },
         {
-          "sh:class": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Cementbetonverharding",
+          "sh:class": "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#Kantopsluiting",
           "sh:description": "De relatie geeft aan dat er een inspectie, proef of meting gedaan kan worden op een onderdeel of installatie. De bron van de relatie is de inspectie, het doel het onderdeel of de installatie waarbij de inspectie hoort.",
           "sh:name": "IsInspectieVan",
           "sh:path": "https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/proeven-metingen/#Is inspectie van"

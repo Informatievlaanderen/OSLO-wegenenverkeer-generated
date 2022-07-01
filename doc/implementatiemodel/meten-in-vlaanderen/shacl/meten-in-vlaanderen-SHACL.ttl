@@ -24,14 +24,16 @@
     <https://data.vlaanderen.be/shacl/meten-in-vlaanderen#KlWegkantkastTypeShape>,
     <https://data.vlaanderen.be/shacl/meten-in-vlaanderen#KlAlgIngressProtectionCodeShape>,
     <https://data.vlaanderen.be/shacl/meten-in-vlaanderen#KlBuitenkastVerfraaidShape>,
-    <https://data.vlaanderen.be/shacl/meten-in-vlaanderen#KlNetwerkelemModelnaamShape>,
     <https://data.vlaanderen.be/shacl/meten-in-vlaanderen#KlNetwerkMerkShape>,
     <https://data.vlaanderen.be/shacl/meten-in-vlaanderen#KlNetwerkelemGebruikShape>,
+    <https://data.vlaanderen.be/shacl/meten-in-vlaanderen#KlNetwerkelemModelnaamShape>,
     <https://data.vlaanderen.be/shacl/meten-in-vlaanderen#KlNetwerkpoortConfigShape>,
     <https://data.vlaanderen.be/shacl/meten-in-vlaanderen#KlNetwerkpoortTypeShape>,
     <https://data.vlaanderen.be/shacl/meten-in-vlaanderen#KlNetwerkTechnologieShape>,
     <https://data.vlaanderen.be/shacl/meten-in-vlaanderen#KlNetwerkpoortGolflengteShape>,
     <https://data.vlaanderen.be/shacl/meten-in-vlaanderen#KlKabelmofTypeShape>,
+    <https://data.vlaanderen.be/shacl/meten-in-vlaanderen#KlNetwerkTypeShape>,
+    <https://data.vlaanderen.be/shacl/meten-in-vlaanderen#KlKabelmofVerbindingShape>,
     <https://data.vlaanderen.be/shacl/meten-in-vlaanderen#KlMIVLusZichtbaarheidShape>,
     <https://data.vlaanderen.be/shacl/meten-in-vlaanderen#KlMIVLusUitslijprichtingShape>,
     <https://data.vlaanderen.be/shacl/meten-in-vlaanderen#KlUPSMerkShape>,
@@ -430,11 +432,25 @@
     shacl:path <https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/meten-in-vlaanderen/#Sturing>
   ], [
     shacl:class skos:Concept;
+    shacl:description "Geeft aan bij welk type nutsvoorzieningennet de kabelmof hoort volgens de types uit IMKL en Inspire.";
+    shacl:maxCount 1;
+    shacl:minCount 1;
+    shacl:name "netwerktype";
+    shacl:path <https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Kabelmof.netwerktype>
+  ], [
+    shacl:class skos:Concept;
     shacl:description "Soort mof volgens een lijst van types.";
     shacl:maxCount 1;
     shacl:minCount 1;
     shacl:name "type";
     shacl:path <https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Kabelmof.type>
+  ], [
+    shacl:class skos:Concept;
+    shacl:description "Geeft het type aansluiting in de mof aan.";
+    shacl:maxCount 1;
+    shacl:minCount 1;
+    shacl:name "verbindingstype";
+    shacl:path <https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Kabelmof.verbindingstype>
   ];
   shacl:targetClass <https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Kabelmof> .
 
@@ -513,6 +529,10 @@
   shacl:closed false;
   shacl:targetClass skos:Concept .
 
+<https://data.vlaanderen.be/shacl/meten-in-vlaanderen#KlKabelmofVerbindingShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass skos:Concept .
+
 <https://data.vlaanderen.be/shacl/meten-in-vlaanderen#KlLaagRolShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:targetClass skos:Concept .
@@ -530,6 +550,10 @@
   shacl:targetClass skos:Concept .
 
 <https://data.vlaanderen.be/shacl/meten-in-vlaanderen#KlNetwerkTechnologieShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass skos:Concept .
+
+<https://data.vlaanderen.be/shacl/meten-in-vlaanderen#KlNetwerkTypeShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:targetClass skos:Concept .
 
@@ -808,17 +832,17 @@
 <https://data.vlaanderen.be/shacl/meten-in-vlaanderen#LaagspanningsbordShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:property [
-    shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#Behuizing>;
-    shacl:description "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Deze relatie heeft geen richting.";
-    shacl:name "Bevestiging";
-    shacl:path <https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/meten-in-vlaanderen/#Bevestiging>
-  ], [
     shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Stroomkring>;
     shacl:description "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Deze relatie heeft geen richting.";
     shacl:name "Bevestiging";
     shacl:path <https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/meten-in-vlaanderen/#Bevestiging>
   ], [
     shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Wegkantkast>;
+    shacl:description "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Deze relatie heeft geen richting.";
+    shacl:name "Bevestiging";
+    shacl:path <https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/meten-in-vlaanderen/#Bevestiging>
+  ], [
+    shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#Behuizing>;
     shacl:description "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Deze relatie heeft geen richting.";
     shacl:name "Bevestiging";
     shacl:path <https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/meten-in-vlaanderen/#Bevestiging>
@@ -855,12 +879,12 @@
     shacl:name "Bevestiging";
     shacl:path <https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/meten-in-vlaanderen/#Bevestiging>
   ], [
-    shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Kabelmof>;
+    shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#MIVLuskaart>;
     shacl:description "Deze relatie geeft aan of er een of andere vorm van dataverkeer is tussen 2 onderdelen. Een wegverlichtingstoestel dat aan staat wordt ook als sturing beschouwd, in dit geval is het een lang ononderbroken elektrisch aan-signaal. Deze relatie heeft geen richting.";
     shacl:name "Sturing";
     shacl:path <https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/meten-in-vlaanderen/#Sturing>
   ], [
-    shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#MIVLuskaart>;
+    shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Kabelmof>;
     shacl:description "Deze relatie geeft aan of er een of andere vorm van dataverkeer is tussen 2 onderdelen. Een wegverlichtingstoestel dat aan staat wordt ook als sturing beschouwd, in dit geval is het een lang ononderbroken elektrisch aan-signaal. Deze relatie heeft geen richting.";
     shacl:name "Sturing";
     shacl:path <https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/meten-in-vlaanderen/#Sturing>
@@ -884,11 +908,6 @@
     shacl:description "De relatie geeft aan dat een onderdeel of collectie behoort bij, deel van of lid van een (andere) groep of collectie is.";
     shacl:name "HoortBij"
   ], [
-    shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#MIVLuskaart>;
-    shacl:description "Deze relatie geeft aan of er een of andere vorm van dataverkeer is tussen 2 onderdelen. Een wegverlichtingstoestel dat aan staat wordt ook als sturing beschouwd, in dit geval is het een lang ononderbroken elektrisch aan-signaal. Deze relatie heeft geen richting.";
-    shacl:name "Sturing";
-    shacl:path <https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/meten-in-vlaanderen/#Sturing>
-  ], [
     shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#MIVProcessorkaart>;
     shacl:description "Deze relatie geeft aan of er een of andere vorm van dataverkeer is tussen 2 onderdelen. Een wegverlichtingstoestel dat aan staat wordt ook als sturing beschouwd, in dit geval is het een lang ononderbroken elektrisch aan-signaal. Deze relatie heeft geen richting.";
     shacl:name "Sturing";
@@ -900,6 +919,11 @@
     shacl:path <https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/meten-in-vlaanderen/#Sturing>
   ], [
     shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#MIVCommunicatiekaart>;
+    shacl:description "Deze relatie geeft aan of er een of andere vorm van dataverkeer is tussen 2 onderdelen. Een wegverlichtingstoestel dat aan staat wordt ook als sturing beschouwd, in dit geval is het een lang ononderbroken elektrisch aan-signaal. Deze relatie heeft geen richting.";
+    shacl:name "Sturing";
+    shacl:path <https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/meten-in-vlaanderen/#Sturing>
+  ], [
+    shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#MIVLuskaart>;
     shacl:description "Deze relatie geeft aan of er een of andere vorm van dataverkeer is tussen 2 onderdelen. Een wegverlichtingstoestel dat aan staat wordt ook als sturing beschouwd, in dit geval is het een lang ononderbroken elektrisch aan-signaal. Deze relatie heeft geen richting.";
     shacl:name "Sturing";
     shacl:path <https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/meten-in-vlaanderen/#Sturing>
@@ -933,12 +957,12 @@
     shacl:name "Bevestiging";
     shacl:path <https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/meten-in-vlaanderen/#Bevestiging>
   ], [
-    shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#LoopTerminationAndProtection>;
+    shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Kabelmof>;
     shacl:description "Deze relatie geeft aan of er een of andere vorm van dataverkeer is tussen 2 onderdelen. Een wegverlichtingstoestel dat aan staat wordt ook als sturing beschouwd, in dit geval is het een lang ononderbroken elektrisch aan-signaal. Deze relatie heeft geen richting.";
     shacl:name "Sturing";
     shacl:path <https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/meten-in-vlaanderen/#Sturing>
   ], [
-    shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Kabelmof>;
+    shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#LoopTerminationAndProtection>;
     shacl:description "Deze relatie geeft aan of er een of andere vorm van dataverkeer is tussen 2 onderdelen. Een wegverlichtingstoestel dat aan staat wordt ook als sturing beschouwd, in dit geval is het een lang ononderbroken elektrisch aan-signaal. Deze relatie heeft geen richting.";
     shacl:name "Sturing";
     shacl:path <https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/meten-in-vlaanderen/#Sturing>
@@ -978,12 +1002,12 @@
     shacl:description "De relatie geeft aan dat een onderdeel of collectie behoort bij, deel van of lid van een (andere) groep of collectie is.";
     shacl:name "HoortBij"
   ], [
-    shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#MIVCommunicatiekaart>;
+    shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#LoopTerminationAndProtection>;
     shacl:description "Deze relatie geeft aan of er een of andere vorm van dataverkeer is tussen 2 onderdelen. Een wegverlichtingstoestel dat aan staat wordt ook als sturing beschouwd, in dit geval is het een lang ononderbroken elektrisch aan-signaal. Deze relatie heeft geen richting.";
     shacl:name "Sturing";
     shacl:path <https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/meten-in-vlaanderen/#Sturing>
   ], [
-    shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#LoopTerminationAndProtection>;
+    shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#MIVCommunicatiekaart>;
     shacl:description "Deze relatie geeft aan of er een of andere vorm van dataverkeer is tussen 2 onderdelen. Een wegverlichtingstoestel dat aan staat wordt ook als sturing beschouwd, in dit geval is het een lang ononderbroken elektrisch aan-signaal. Deze relatie heeft geen richting.";
     shacl:name "Sturing";
     shacl:path <https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/meten-in-vlaanderen/#Sturing>
@@ -1009,12 +1033,12 @@
     shacl:description "De relatie geeft aan dat een onderdeel of collectie behoort bij, deel van of lid van een (andere) groep of collectie is.";
     shacl:name "HoortBij"
   ], [
-    shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Netwerkpoort>;
+    shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#MIVCommunicatiekaart>;
     shacl:description "Deze relatie geeft aan of er een of andere vorm van dataverkeer is tussen 2 onderdelen. Een wegverlichtingstoestel dat aan staat wordt ook als sturing beschouwd, in dit geval is het een lang ononderbroken elektrisch aan-signaal. Deze relatie heeft geen richting.";
     shacl:name "Sturing";
     shacl:path <https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/meten-in-vlaanderen/#Sturing>
   ], [
-    shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#MIVCommunicatiekaart>;
+    shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Netwerkpoort>;
     shacl:description "Deze relatie geeft aan of er een of andere vorm van dataverkeer is tussen 2 onderdelen. Een wegverlichtingstoestel dat aan staat wordt ook als sturing beschouwd, in dit geval is het een lang ononderbroken elektrisch aan-signaal. Deze relatie heeft geen richting.";
     shacl:name "Sturing";
     shacl:path <https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/meten-in-vlaanderen/#Sturing>
@@ -1080,6 +1104,16 @@
     shacl:description "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Deze relatie heeft geen richting.";
     shacl:name "Bevestiging";
     shacl:path <https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/meten-in-vlaanderen/#Bevestiging>
+  ], [
+    shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Netwerkelement>;
+    shacl:description "Deze relatie geeft aan of er een of andere vorm van dataverkeer is tussen 2 onderdelen. Een wegverlichtingstoestel dat aan staat wordt ook als sturing beschouwd, in dit geval is het een lang ononderbroken elektrisch aan-signaal. Deze relatie heeft geen richting.";
+    shacl:name "Sturing";
+    shacl:path <https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/meten-in-vlaanderen/#Sturing>
+  ], [
+    shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Netwerkelement>;
+    shacl:description "Deze relatie geeft aan of er een of andere vorm van dataverkeer is tussen 2 onderdelen. Een wegverlichtingstoestel dat aan staat wordt ook als sturing beschouwd, in dit geval is het een lang ononderbroken elektrisch aan-signaal. Deze relatie heeft geen richting.";
+    shacl:name "Sturing";
+    shacl:path <https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/meten-in-vlaanderen/#Sturing>
   ], [
     shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#SoftwareToegang>;
     shacl:description "Deze relatie geeft aan of er een of andere vorm van dataverkeer is tussen 2 onderdelen. Een wegverlichtingstoestel dat aan staat wordt ook als sturing beschouwd, in dit geval is het een lang ononderbroken elektrisch aan-signaal. Deze relatie heeft geen richting.";
@@ -1166,12 +1200,12 @@
     shacl:name "Bevestiging";
     shacl:path <https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/meten-in-vlaanderen/#Bevestiging>
   ], [
-    shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#SoftwareToegang>;
+    shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#MIVProcessorkaart>;
     shacl:description "Deze relatie geeft aan of er een of andere vorm van dataverkeer is tussen 2 onderdelen. Een wegverlichtingstoestel dat aan staat wordt ook als sturing beschouwd, in dit geval is het een lang ononderbroken elektrisch aan-signaal. Deze relatie heeft geen richting.";
     shacl:name "Sturing";
     shacl:path <https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/meten-in-vlaanderen/#Sturing>
   ], [
-    shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#MIVProcessorkaart>;
+    shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#SoftwareToegang>;
     shacl:description "Deze relatie geeft aan of er een of andere vorm van dataverkeer is tussen 2 onderdelen. Een wegverlichtingstoestel dat aan staat wordt ook als sturing beschouwd, in dit geval is het een lang ononderbroken elektrisch aan-signaal. Deze relatie heeft geen richting.";
     shacl:name "Sturing";
     shacl:path <https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/meten-in-vlaanderen/#Sturing>
@@ -1253,7 +1287,7 @@
     shacl:name "Bevestiging";
     shacl:path <https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/meten-in-vlaanderen/#Bevestiging>
   ], [
-    shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#MIVLuskaart>;
+    shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#MIVProcessorkaart>;
     shacl:description "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Deze relatie heeft geen richting.";
     shacl:name "Bevestiging";
     shacl:path <https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/meten-in-vlaanderen/#Bevestiging>
@@ -1263,12 +1297,12 @@
     shacl:name "Bevestiging";
     shacl:path <https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/meten-in-vlaanderen/#Bevestiging>
   ], [
-    shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#MIVProcessorkaart>;
+    shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#Kast>;
     shacl:description "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Deze relatie heeft geen richting.";
     shacl:name "Bevestiging";
     shacl:path <https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/meten-in-vlaanderen/#Bevestiging>
   ], [
-    shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#Kast>;
+    shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#MIVLuskaart>;
     shacl:description "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Deze relatie heeft geen richting.";
     shacl:name "Bevestiging";
     shacl:path <https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/meten-in-vlaanderen/#Bevestiging>
@@ -1379,6 +1413,13 @@
     shacl:description "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Deze relatie heeft geen richting.";
     shacl:name "Bevestiging";
     shacl:path <https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/meten-in-vlaanderen/#Bevestiging>
+  ], [
+    shacl:class skos:Concept;
+    shacl:description "Het materiaal waaruit de technische put opgebouwd is.";
+    shacl:maxCount 1;
+    shacl:minCount 1;
+    shacl:name "materiaal";
+    shacl:path <https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#TechnischePut.materiaal>
   ];
   shacl:targetClass <https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#TechnischePut> .
 

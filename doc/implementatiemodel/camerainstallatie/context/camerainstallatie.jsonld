@@ -9,7 +9,11 @@
     "AIDModule.Sturing": {
       "@container": "@set",
       "@id": "https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/camerainstallatie/#Sturing",
-      "@type": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Netwerkpoort"
+      "@type": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#MACQPUFrontend"
+    },
+    "AIDModule.configBestand": {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#AIDModule.configBestand",
+      "@type": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcDocument"
     },
     "AIDModule.dnsNaam": {
       "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#AIDModule.dnsNaam",
@@ -39,7 +43,7 @@
     "Bevestigingsbeugel.Bevestiging": {
       "@container": "@set",
       "@id": "https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/camerainstallatie/#Bevestiging",
-      "@type": "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#Draagconstructie"
+      "@type": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Camera"
     },
     "Bevestigingsbeugel.type": {
       "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Bevestigingsbeugel.type",
@@ -51,12 +55,12 @@
     "Camera.Bevestiging": {
       "@container": "@set",
       "@id": "https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/camerainstallatie/#Bevestiging",
-      "@type": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#FieldOfView"
+      "@type": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Bevestigingsbeugel"
     },
     "Camera.Sturing": {
       "@container": "@set",
       "@id": "https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/camerainstallatie/#Sturing",
-      "@type": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#AIDModule"
+      "@type": "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#SoftwareToegang"
     },
     "Camera.dnsNaam": {
       "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Camera.dnsNaam",
@@ -88,10 +92,15 @@
     "Draagconstructie.Bevestiging": {
       "@container": "@set",
       "@id": "https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/camerainstallatie/#Bevestiging",
-      "@type": "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#Kast"
+      "@type": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Camera"
     },
     "DtcAdres": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcAdres",
     "DtcAfmetingBxlxhInMm": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcAfmetingBxlxhInMm",
+    "DtcCameraBeeldverwerking": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcCameraBeeldverwerking",
+    "DtcCameraBeeldverwerking.configBestand": {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcCameraBeeldverwerking.configBestand",
+      "@type": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcDocument"
+    },
     "DtcDocument": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcDocument",
     "DtcIdentificator": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcIdentificator",
     "DteIPv4Adres": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DteIPv4Adres",
@@ -111,7 +120,11 @@
       "@type": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Camera"
     },
     "Integer": "http://www.w3.org/2001/XMLSchema#integer",
-    "IsNetwerkECC": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#IsNetwerkECC",
+    "IsNetwerkECC": {
+      "@container": "@set",
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/camerainstallatie/#Is netwerk ECC",
+      "@type": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Netwerkelement"
+    },
     "Kast": "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#Kast",
     "Kast.Bevestiging": {
       "@container": "@set",
@@ -127,6 +140,7 @@
     "KlAlgProvincie": "http://www.w3.org/2004/02/skos/core#Concept",
     "KlBevestigingsbeugelType": "http://www.w3.org/2004/02/skos/core#Concept",
     "KlBuitenkastVerfraaid": "http://www.w3.org/2004/02/skos/core#Concept",
+    "KlCameraBeeldverwerkingstype": "http://www.w3.org/2004/02/skos/core#Concept",
     "KlCameraMerk": "http://www.w3.org/2004/02/skos/core#Concept",
     "KlCameraModelnaam": "http://www.w3.org/2004/02/skos/core#Concept",
     "KlNetwerkMerk": "http://www.w3.org/2004/02/skos/core#Concept",
@@ -141,6 +155,7 @@
     "KlOmvormerType": "http://www.w3.org/2004/02/skos/core#Concept",
     "KlPoEInjectorMerk": "http://www.w3.org/2004/02/skos/core#Concept",
     "KlPoEInjectorModelnaam": "http://www.w3.org/2004/02/skos/core#Concept",
+    "KlServicePrioriteit": "http://www.w3.org/2004/02/skos/core#Concept",
     "KlWegkantkastType": "http://www.w3.org/2004/02/skos/core#Concept",
     "KwantWrdInJaar": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInJaar",
     "KwantWrdInJaar.standaardEenheid": {
@@ -192,7 +207,7 @@
     "MACQPUFrontend.Sturing": {
       "@container": "@set",
       "@id": "https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/camerainstallatie/#Sturing",
-      "@type": "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#SoftwareToegang"
+      "@type": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#AIDModule"
     },
     "Montagekast": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Montagekast",
     "Montagekast.opstelhoogte": {
@@ -204,6 +219,11 @@
       "@container": "@set",
       "@id": "https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/camerainstallatie/#Bevestiging",
       "@type": "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#Kast"
+    },
+    "Netwerkelement.Sturing": {
+      "@container": "@set",
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/camerainstallatie/#Sturing",
+      "@type": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Netwerkelement"
     },
     "Netwerkelement.Voedt": {
       "@container": "@set",
@@ -235,7 +255,7 @@
     "Netwerkpoort.Sturing": {
       "@container": "@set",
       "@id": "https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/camerainstallatie/#Sturing",
-      "@type": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#AIDModule"
+      "@type": "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#SoftwareToegang"
     },
     "Netwerkpoort.Voedt": {
       "@container": "@set",
@@ -268,7 +288,7 @@
     "Omvormer.Sturing": {
       "@container": "@set",
       "@id": "https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/camerainstallatie/#Sturing",
-      "@type": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Omvormer"
+      "@type": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Netwerkpoort"
     },
     "Omvormer.dnsNaam": {
       "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Omvormer.dnsNaam",
@@ -329,10 +349,11 @@
     "Stroomkring.Voedt": {
       "@container": "@set",
       "@id": "https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/camerainstallatie/#Voedt",
-      "@type": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Omvormer"
+      "@type": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Camera"
     },
     "Sturing": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Sturing",
     "Voedt": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Voedt",
+    "VoedtAangestuurd": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#VoedtAangestuurd",
     "Wegkantkast": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Wegkantkast",
     "Wegkantkast.Bevestiging": {
       "@container": "@set",
@@ -363,6 +384,11 @@
       "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMObject.assetId",
       "@type": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcIdentificator"
     },
+    "beeldverwerkingsinstelling": {
+      "@container": "@set",
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Camera.beeldverwerkingsinstelling",
+      "@type": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcCameraBeeldverwerking"
+    },
     "berekeningsnota": {
       "@container": "@set",
       "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Bevestigingsbeugel.berekeningsnota",
@@ -392,10 +418,6 @@
     "config": {
       "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Netwerkpoort.config",
       "@type": "http://www.w3.org/2004/02/skos/core#Concept"
-    },
-    "configBestand": {
-      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#AIDModule.configBestand",
-      "@type": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcDocument"
     },
     "configBestandAid": {
       "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Camera.configBestandAid",
@@ -543,6 +565,10 @@
       "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#Behuizing.risicoanalyse",
       "@type": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcDocument"
     },
+    "servicePrioriteit": {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Camera.servicePrioriteit",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
     "softwareVersie": {
       "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Netwerkelement.softwareVersie",
       "@type": "http://www.w3.org/2001/XMLSchema#string"
@@ -578,6 +604,10 @@
     },
     "toestand": {
       "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMToestand.toestand",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "typeBeeldverwerking": {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcCameraBeeldverwerking.typeBeeldverwerking",
       "@type": "http://www.w3.org/2004/02/skos/core#Concept"
     },
     "typeURI": {

@@ -12,10 +12,16 @@
     <https://data.vlaanderen.be/shacl/optisch-transport-netwerk#IntegerShape>,
     <https://data.vlaanderen.be/shacl/optisch-transport-netwerk#NonNegativeIntegerShape>,
     <https://data.vlaanderen.be/shacl/optisch-transport-netwerk#StringShape>,
+    <https://data.vlaanderen.be/shacl/optisch-transport-netwerk#KlAlgMateriaalShape>,
+    <https://data.vlaanderen.be/shacl/optisch-transport-netwerk#KlAlgMimeTypeShape>,
+    <https://data.vlaanderen.be/shacl/optisch-transport-netwerk#KlAlgProvincieShape>,
+    <https://data.vlaanderen.be/shacl/optisch-transport-netwerk#KlAlgGemeenteShape>,
     <https://data.vlaanderen.be/shacl/optisch-transport-netwerk#KlAIMToestandShape>,
+    <https://data.vlaanderen.be/shacl/optisch-transport-netwerk#KlCabineModelnaamShape>,
+    <https://data.vlaanderen.be/shacl/optisch-transport-netwerk#KlCabineMerkShape>,
+    <https://data.vlaanderen.be/shacl/optisch-transport-netwerk#KlKabelnettoegangNetwerksoortShape>,
     <https://data.vlaanderen.be/shacl/optisch-transport-netwerk#KlNetwerklinkMediumtypeShape>,
     <https://data.vlaanderen.be/shacl/optisch-transport-netwerk#KlPadNetwerkprotectieShape>,
-    <https://data.vlaanderen.be/shacl/optisch-transport-netwerk#KlAlgMimeTypeShape>,
     <https://data.vlaanderen.be/shacl/optisch-transport-netwerk#KlNetwerkpoortConfigShape>,
     <https://data.vlaanderen.be/shacl/optisch-transport-netwerk#KlNetwerkMerkShape>,
     <https://data.vlaanderen.be/shacl/optisch-transport-netwerk#KlNetwerkpoortTypeShape>,
@@ -23,19 +29,13 @@
     <https://data.vlaanderen.be/shacl/optisch-transport-netwerk#KlNetwerkpoortGolflengteShape>,
     <https://data.vlaanderen.be/shacl/optisch-transport-netwerk#KlZpadTypeShape>,
     <https://data.vlaanderen.be/shacl/optisch-transport-netwerk#KlNetwerkkaartModelnaamShape>,
-    <https://data.vlaanderen.be/shacl/optisch-transport-netwerk#KlNetwerkelemModelnaamShape>,
     <https://data.vlaanderen.be/shacl/optisch-transport-netwerk#KlNetwerkelemGebruikShape>,
+    <https://data.vlaanderen.be/shacl/optisch-transport-netwerk#KlNetwerkelemModelnaamShape>,
     <https://data.vlaanderen.be/shacl/optisch-transport-netwerk#KlRackModelnaamShape>,
     <https://data.vlaanderen.be/shacl/optisch-transport-netwerk#KlRackMerkShape>,
     <https://data.vlaanderen.be/shacl/optisch-transport-netwerk#KlRackTypeShape>,
     <https://data.vlaanderen.be/shacl/optisch-transport-netwerk#KlUPSMerkShape>,
     <https://data.vlaanderen.be/shacl/optisch-transport-netwerk#KlUPSModelnaamShape>,
-    <https://data.vlaanderen.be/shacl/optisch-transport-netwerk#KlAlgMateriaalShape>,
-    <https://data.vlaanderen.be/shacl/optisch-transport-netwerk#KlAlgProvincieShape>,
-    <https://data.vlaanderen.be/shacl/optisch-transport-netwerk#KlAlgGemeenteShape>,
-    <https://data.vlaanderen.be/shacl/optisch-transport-netwerk#KlCabineModelnaamShape>,
-    <https://data.vlaanderen.be/shacl/optisch-transport-netwerk#KlCabineMerkShape>,
-    <https://data.vlaanderen.be/shacl/optisch-transport-netwerk#KlKabelnettoegangNetwerksoortShape>,
     <https://data.vlaanderen.be/shacl/optisch-transport-netwerk#BehuizingShape>,
     <https://data.vlaanderen.be/shacl/optisch-transport-netwerk#InloopbehuizingShape>,
     <https://data.vlaanderen.be/shacl/optisch-transport-netwerk#KastShape>,
@@ -539,12 +539,26 @@
 <https://data.vlaanderen.be/shacl/optisch-transport-netwerk#KabelnetToegangShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:property [
+    shacl:class xsd:nonNegativeInteger;
+    shacl:description "Het aantal gebruikte rack units dat voor de betrokken toegang in gebruik is op basis van een berekening in Kabelnet.";
+    shacl:maxCount 1;
+    shacl:minCount 1;
+    shacl:name "geschatRUGebruik";
+    shacl:path <https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#KabelnetToegang.geschatRUGebruik>
+  ], [
     shacl:datatype xsd:integer;
     shacl:description "Uniek nummer uit de Kabelnet toepassing dat deze toegang identificeert.";
     shacl:maxCount 1;
     shacl:minCount 1;
     shacl:name "kabelnetToegangId";
     shacl:path <https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#KabelnetToegang.kabelnetToegangId>
+  ], [
+    shacl:class xsd:anyURI;
+    shacl:description "Knooppunt van Kabelnet dat toegang geeft tot de informatie die in Kabelnet bewaard wordt.";
+    shacl:maxCount 1;
+    shacl:minCount 1;
+    shacl:name "kabelnetURL";
+    shacl:path <https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#KabelnetToegang.kabelnetURL>
   ], [
     shacl:class skos:Concept;
     shacl:description "Type netwerk dat bereikbaar is via het toegangspunt.";
@@ -879,12 +893,12 @@
     shacl:name "Bevestiging";
     shacl:path <https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/optisch-transport-netwerk/#Bevestiging>
   ], [
-    shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Netwerkpoort>;
+    shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Netwerkkaart>;
     shacl:description "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Deze relatie heeft geen richting.";
     shacl:name "Bevestiging";
     shacl:path <https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/optisch-transport-netwerk/#Bevestiging>
   ], [
-    shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Netwerkkaart>;
+    shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Netwerkpoort>;
     shacl:description "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Deze relatie heeft geen richting.";
     shacl:name "Bevestiging";
     shacl:path <https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/optisch-transport-netwerk/#Bevestiging>
@@ -978,12 +992,12 @@
 <https://data.vlaanderen.be/shacl/optisch-transport-netwerk#NetwerkkaartShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:property [
-    shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Netwerkpoort>;
+    shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Netwerkelement>;
     shacl:description "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Deze relatie heeft geen richting.";
     shacl:name "Bevestiging";
     shacl:path <https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/optisch-transport-netwerk/#Bevestiging>
   ], [
-    shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Netwerkelement>;
+    shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Netwerkpoort>;
     shacl:description "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Deze relatie heeft geen richting.";
     shacl:name "Bevestiging";
     shacl:path <https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/optisch-transport-netwerk/#Bevestiging>
@@ -1035,19 +1049,15 @@
 <https://data.vlaanderen.be/shacl/optisch-transport-netwerk#NetwerkpoortShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:property [
-    shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Netwerkkaart>;
-    shacl:description "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Deze relatie heeft geen richting.";
-    shacl:name "Bevestiging";
-    shacl:path <https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/optisch-transport-netwerk/#Bevestiging>
-  ], [
     shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Netwerkelement>;
     shacl:description "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Deze relatie heeft geen richting.";
     shacl:name "Bevestiging";
     shacl:path <https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/optisch-transport-netwerk/#Bevestiging>
   ], [
-    shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Link>;
-    shacl:description "De relatie geeft aan dat een onderdeel of collectie behoort bij, deel van of lid van een (andere) groep of collectie is.";
-    shacl:name "HoortBij"
+    shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Netwerkkaart>;
+    shacl:description "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Deze relatie heeft geen richting.";
+    shacl:name "Bevestiging";
+    shacl:path <https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/optisch-transport-netwerk/#Bevestiging>
   ], [
     shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Pad>;
     shacl:description "De relatie geeft aan dat een onderdeel of collectie behoort bij, deel van of lid van een (andere) groep of collectie is.";
@@ -1057,17 +1067,21 @@
     shacl:description "De relatie geeft aan dat een onderdeel of collectie behoort bij, deel van of lid van een (andere) groep of collectie is.";
     shacl:name "HoortBij"
   ], [
-    shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Netwerkpoort>;
-    shacl:description "Deze relatie geeft aan of er een of andere vorm van dataverkeer is tussen 2 onderdelen. Een wegverlichtingstoestel dat aan staat wordt ook als sturing beschouwd, in dit geval is het een lang ononderbroken elektrisch aan-signaal. Deze relatie heeft geen richting.";
-    shacl:name "Sturing";
-    shacl:path <https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/optisch-transport-netwerk/#Sturing>
-  ], [
-    shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Netwerkpoort>;
-    shacl:description "Deze relatie geeft aan of er een of andere vorm van dataverkeer is tussen 2 onderdelen. Een wegverlichtingstoestel dat aan staat wordt ook als sturing beschouwd, in dit geval is het een lang ononderbroken elektrisch aan-signaal. Deze relatie heeft geen richting.";
-    shacl:name "Sturing";
-    shacl:path <https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/optisch-transport-netwerk/#Sturing>
+    shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Link>;
+    shacl:description "De relatie geeft aan dat een onderdeel of collectie behoort bij, deel van of lid van een (andere) groep of collectie is.";
+    shacl:name "HoortBij"
   ], [
     shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#UPS>;
+    shacl:description "Deze relatie geeft aan of er een of andere vorm van dataverkeer is tussen 2 onderdelen. Een wegverlichtingstoestel dat aan staat wordt ook als sturing beschouwd, in dit geval is het een lang ononderbroken elektrisch aan-signaal. Deze relatie heeft geen richting.";
+    shacl:name "Sturing";
+    shacl:path <https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/optisch-transport-netwerk/#Sturing>
+  ], [
+    shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Netwerkpoort>;
+    shacl:description "Deze relatie geeft aan of er een of andere vorm van dataverkeer is tussen 2 onderdelen. Een wegverlichtingstoestel dat aan staat wordt ook als sturing beschouwd, in dit geval is het een lang ononderbroken elektrisch aan-signaal. Deze relatie heeft geen richting.";
+    shacl:name "Sturing";
+    shacl:path <https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/optisch-transport-netwerk/#Sturing>
+  ], [
+    shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Netwerkpoort>;
     shacl:description "Deze relatie geeft aan of er een of andere vorm van dataverkeer is tussen 2 onderdelen. Een wegverlichtingstoestel dat aan staat wordt ook als sturing beschouwd, in dit geval is het een lang ononderbroken elektrisch aan-signaal. Deze relatie heeft geen richting.";
     shacl:name "Sturing";
     shacl:path <https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/optisch-transport-netwerk/#Sturing>
@@ -1152,11 +1166,11 @@
     shacl:description "Deze relatie geeft aan wat de redundante paden/linken zijn van elkaar, dit is enkel in gebruik binnen het netwerk domein. Deze relatie heeft geen richting.";
     shacl:name "HeeftNetwerkProtectie"
   ], [
-    shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Pad>;
+    shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Zpad>;
     shacl:description "De relatie geeft aan dat een onderdeel of collectie behoort bij, deel van of lid van een (andere) groep of collectie is.";
     shacl:name "HoortBij"
   ], [
-    shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Zpad>;
+    shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Pad>;
     shacl:description "De relatie geeft aan dat een onderdeel of collectie behoort bij, deel van of lid van een (andere) groep of collectie is.";
     shacl:name "HoortBij"
   ], [
@@ -1171,11 +1185,6 @@
 <https://data.vlaanderen.be/shacl/optisch-transport-netwerk#RackShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:property [
-    shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#Kast>;
-    shacl:description "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Deze relatie heeft geen richting.";
-    shacl:name "Bevestiging";
-    shacl:path <https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/optisch-transport-netwerk/#Bevestiging>
-  ], [
     shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Netwerkelement>;
     shacl:description "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Deze relatie heeft geen richting.";
     shacl:name "Bevestiging";
@@ -1186,12 +1195,17 @@
     shacl:name "Bevestiging";
     shacl:path <https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/optisch-transport-netwerk/#Bevestiging>
   ], [
-    shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#UPS>;
+    shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#Kast>;
+    shacl:description "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Deze relatie heeft geen richting.";
+    shacl:name "Bevestiging";
+    shacl:path <https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/optisch-transport-netwerk/#Bevestiging>
+  ], [
+    shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Netwerkelement>;
     shacl:description "Deze relatie wordt enkel gelegd naar onderdelen die permanent onder spanning staan in normaal bedrijf. Aan deze relatie wordt steeds een richting toegekend van de voedinggever naar de ontvanger.";
     shacl:name "Voedt";
     shacl:path <https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/optisch-transport-netwerk/#Voedt>
   ], [
-    shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Netwerkelement>;
+    shacl:class <https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#UPS>;
     shacl:description "Deze relatie wordt enkel gelegd naar onderdelen die permanent onder spanning staan in normaal bedrijf. Aan deze relatie wordt steeds een richting toegekend van de voedinggever naar de ontvanger.";
     shacl:name "Voedt";
     shacl:path <https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/optisch-transport-netwerk/#Voedt>

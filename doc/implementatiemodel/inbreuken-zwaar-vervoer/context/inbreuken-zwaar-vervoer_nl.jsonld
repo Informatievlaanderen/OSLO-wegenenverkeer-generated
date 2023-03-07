@@ -1,5 +1,6 @@
 {
   "@context": {
+    "AardingsinstallatieAardingsnet": "http://www.w3.org/2004/02/skos/core#Concept",
     "Adres": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcAdres",
     "Adres.bus": {
       "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcAdres.bus",
@@ -37,6 +38,19 @@
     "AfmetingBxlxhInMillimeter.lengte": {
       "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcAfmetingBxlxhInMm.lengte",
       "@type": "@id"
+    },
+    "AfmetingNetwerkelement": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#DtcAfmetingNetwerkelement",
+    "AfmetingNetwerkelement.breedte": {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#DtcAfmetingNetwerkelement.breedte",
+      "@type": "@id"
+    },
+    "AfmetingNetwerkelement.diepte": {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#DtcAfmetingNetwerkelement.diepte",
+      "@type": "@id"
+    },
+    "AfmetingNetwerkelement.hoogteInRu": {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#DtcAfmetingNetwerkelement.hoogteInRU",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
     },
     "Afmetingsensor": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Afmetingsensor",
     "Afmetingsensor.merk": {
@@ -281,6 +295,7 @@
       "@type": "@id"
     },
     "Camera.technischeFiche": {
+      "@container": "@set",
       "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Camera.technischeFiche",
       "@type": "@id"
     },
@@ -407,6 +422,15 @@
       "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInCentimeter.waarde",
       "@type": "@id"
     },
+    "KwantitatieveWaardeInKiloAmpère": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInKiloAmpere",
+    "KwantitatieveWaardeInKiloAmpère.standaardEenheid": {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInKiloAmpere.standaardEenheid",
+      "@type": "http://www.w3.org/2000/01/rdf-schema#Literal"
+    },
+    "KwantitatieveWaardeInKiloAmpère.waarde": {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInKiloAmpere.waarde",
+      "@type": "@id"
+    },
     "KwantitatieveWaardeInMaand": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMaand",
     "KwantitatieveWaardeInMaand.standaardEenheid": {
       "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMaand.standaardEenheid",
@@ -444,6 +468,10 @@
       "@type": "@id"
     },
     "Laagspanningsbord": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Laagspanningsbord",
+    "Laagspanningsbord.aardingsnet": {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Laagspanningsbord.aardingsnet",
+      "@type": "@id"
+    },
     "Laagspanningsbord.bevestiging": {
       "@container": "@set",
       "@id": "https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/inbreuken-zwaar-vervoer/#Bevestiging",
@@ -451,6 +479,14 @@
     },
     "Laagspanningsbord.elektrischSchema": {
       "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Laagspanningsbord.elektrischSchema",
+      "@type": "@id"
+    },
+    "Laagspanningsbord.kortsluitvermogen": {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Laagspanningsbord.kortsluitVermogen",
+      "@type": "@id"
+    },
+    "Laagspanningsbord.nominaleStroom": {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Laagspanningsbord.nominaleStroom",
       "@type": "@id"
     },
     "Laagspanningsbord.vermogen": {
@@ -491,6 +527,11 @@
       "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#MIVLuskaart.lussenMeetrapport",
       "@type": "@id"
     },
+    "MivLuskaart.typeMivLuskaart": {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#MIVLuskaart.type",
+      "@type": "@id"
+    },
+    "MivLuskaartType": "http://www.w3.org/2004/02/skos/core#Concept",
     "NatuurlijkGetal": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
     "Neerslagsensor": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Neerslagsensor",
     "Neerslagsensor.dnsNaam": {
@@ -519,6 +560,10 @@
     "NetwerkTechnologie": "http://www.w3.org/2004/02/skos/core#Concept",
     "NetwerkType": "http://www.w3.org/2004/02/skos/core#Concept",
     "Netwerkelement": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Netwerkelement",
+    "Netwerkelement.afmeting": {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Netwerkelement.afmeting",
+      "@type": "@id"
+    },
     "Netwerkelement.beschrijvingFabrikant": {
       "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Netwerkelement.beschrijvingFabrikant",
       "@type": "http://www.w3.org/2001/XMLSchema#string"
@@ -578,6 +623,11 @@
       "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Netwerkelement.telefoonnummer",
       "@type": "http://www.w3.org/2001/XMLSchema#string"
     },
+    "Netwerkelement.voedt": {
+      "@container": "@set",
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/inbreuken-zwaar-vervoer/#Voedt",
+      "@type": "@id"
+    },
     "NetwerkelementGebruik": "http://www.w3.org/2004/02/skos/core#Concept",
     "NetwerkelementMerk": "http://www.w3.org/2004/02/skos/core#Concept",
     "NetwerkelementModelnaam": "http://www.w3.org/2004/02/skos/core#Concept",
@@ -623,6 +673,11 @@
       "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Netwerkpoort.technologie",
       "@type": "@id"
     },
+    "Netwerkpoort.voedt": {
+      "@container": "@set",
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/inbreuken-zwaar-vervoer/#Voedt",
+      "@type": "@id"
+    },
     "NetwerkpoortConfiguratie": "http://www.w3.org/2004/02/skos/core#Concept",
     "NetwerkpoortGolflengte": "http://www.w3.org/2004/02/skos/core#Concept",
     "NetwerkpoortType": "http://www.w3.org/2004/02/skos/core#Concept",
@@ -658,6 +713,11 @@
       "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Rack.rackType",
       "@type": "@id"
     },
+    "Rack.voedt": {
+      "@container": "@set",
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/inbreuken-zwaar-vervoer/#Voedt",
+      "@type": "@id"
+    },
     "RackMerk": "http://www.w3.org/2004/02/skos/core#Concept",
     "RackModelnaam": "http://www.w3.org/2004/02/skos/core#Concept",
     "RackType": "http://www.w3.org/2004/02/skos/core#Concept",
@@ -686,6 +746,11 @@
     "Sensoropstelling.opstelwijze": {
       "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#Sensoropstelling.opstelwijze",
       "@type": "@id"
+    },
+    "Serienummerobject": "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#SerienummerObject",
+    "Serienummerobject.serienummer": {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#SerienummerObject.serienummer",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
     },
     "Serviceprioriteit": "http://www.w3.org/2004/02/skos/core#Concept",
     "Signalisatie": "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#Signalisatie",

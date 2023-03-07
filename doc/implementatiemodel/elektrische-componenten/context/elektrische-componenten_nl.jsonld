@@ -1,5 +1,6 @@
 {
   "@context": {
+    "AardingsinstallatieAardingsnet": "http://www.w3.org/2004/02/skos/core#Concept",
     "Adres": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcAdres",
     "Adres.bus": {
       "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcAdres.bus",
@@ -206,10 +207,6 @@
       "@type": "@id"
     },
     "Cabine": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Cabine",
-    "Cabine.aardingsstelsel": {
-      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Cabine.aardingsstelsel",
-      "@type": "@id"
-    },
     "Cabine.bevestiging": {
       "@container": "@set",
       "@id": "https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/elektrische-componenten/#Bevestiging",
@@ -223,7 +220,6 @@
       "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Cabine.standaardtype",
       "@type": "@id"
     },
-    "CabineAardingsstelsel": "http://www.w3.org/2004/02/skos/core#Concept",
     "CabineMerk": "http://www.w3.org/2004/02/skos/core#Concept",
     "CabineModelnaam": "http://www.w3.org/2004/02/skos/core#Concept",
     "CabineStandaardtype": "http://www.w3.org/2004/02/skos/core#Concept",
@@ -419,6 +415,10 @@
       "@type": "@id"
     },
     "HsBeveiligingscel": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#HSBeveiligingscel",
+    "HsBeveiligingscel.aardingsschakelaar": {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#HSBeveiligingscel.heeftAardingsschakelaar",
+      "@type": "http://www.w3.org/2001/XMLSchema#boolean"
+    },
     "HsBeveiligingscel.elektrischSchema": {
       "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#HSBeveiligingscel.elektrischSchema",
       "@type": "@id"
@@ -433,6 +433,14 @@
     },
     "HsBeveiligingscel.keuringsfrequentie": {
       "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#HSBeveiligingscel.keuringsfrequentie",
+      "@type": "@id"
+    },
+    "HsBeveiligingscel.kortsluitstroom": {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#HSBeveiligingscel.kortsluitStroom",
+      "@type": "@id"
+    },
+    "HsBeveiligingscel.kortsluitvermogen": {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#HSBeveiligingscel.kortsluitVermogen",
       "@type": "@id"
     },
     "HsBeveiligingscel.merk": {
@@ -602,6 +610,15 @@
       "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInCentimeter.waarde",
       "@type": "@id"
     },
+    "KwantitatieveWaardeInHerz": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInHerz",
+    "KwantitatieveWaardeInHerz.standaardEenheid": {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInHerz.standaardEenheid",
+      "@type": "http://www.w3.org/2000/01/rdf-schema#Literal"
+    },
+    "KwantitatieveWaardeInHerz.waarde": {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInHerz.waarde",
+      "@type": "@id"
+    },
     "KwantitatieveWaardeInKVaRh": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInkVARh",
     "KwantitatieveWaardeInKVaRh.standaardEenheid": {
       "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInkVARh.standaardEenheid",
@@ -618,6 +635,15 @@
     },
     "KwantitatieveWaardeInKWh.waarde": {
       "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInkWh.waarde",
+      "@type": "@id"
+    },
+    "KwantitatieveWaardeInKiloAmpère": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInKiloAmpere",
+    "KwantitatieveWaardeInKiloAmpère.standaardEenheid": {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInKiloAmpere.standaardEenheid",
+      "@type": "http://www.w3.org/2000/01/rdf-schema#Literal"
+    },
+    "KwantitatieveWaardeInKiloAmpère.waarde": {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInKiloAmpere.waarde",
       "@type": "@id"
     },
     "KwantitatieveWaardeInKilovolt": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInKiloVolt",
@@ -702,6 +728,10 @@
       "@type": "@id"
     },
     "Laagspanningsbord": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Laagspanningsbord",
+    "Laagspanningsbord.aardingsnet": {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Laagspanningsbord.aardingsnet",
+      "@type": "@id"
+    },
     "Laagspanningsbord.bevestiging": {
       "@container": "@set",
       "@id": "https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/elektrische-componenten/#Bevestiging",
@@ -709,6 +739,14 @@
     },
     "Laagspanningsbord.elektrischSchema": {
       "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Laagspanningsbord.elektrischSchema",
+      "@type": "@id"
+    },
+    "Laagspanningsbord.kortsluitvermogen": {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Laagspanningsbord.kortsluitVermogen",
+      "@type": "@id"
+    },
+    "Laagspanningsbord.nominaleStroom": {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Laagspanningsbord.nominaleStroom",
       "@type": "@id"
     },
     "Laagspanningsbord.vermogen": {
@@ -904,6 +942,10 @@
       "@type": "http://www.w3.org/2001/XMLSchema#string"
     },
     "Transformator": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Transformator",
+    "Transformator.isGalvanischGescheiden": {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Transformator.isGalvanischGescheiden",
+      "@type": "http://www.w3.org/2001/XMLSchema#boolean"
+    },
     "Transformator.isolatiemedium": {
       "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Transformator.isolatiemedium",
       "@type": "@id"
@@ -932,6 +974,10 @@
       "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Transformator.typeBeveiliging",
       "@type": "@id"
     },
+    "Transformator.typeVerliezen": {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Transformator.typeVerliezen",
+      "@type": "@id"
+    },
     "Transformator.voedt": {
       "@container": "@set",
       "@id": "https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/elektrische-componenten/#Voedt",
@@ -939,6 +985,7 @@
     },
     "TransformatorIsolatiemedium": "http://www.w3.org/2004/02/skos/core#Concept",
     "TransformatorTrafobeveiliging": "http://www.w3.org/2004/02/skos/core#Concept",
+    "TypeVerliezen": "http://www.w3.org/2004/02/skos/core#Concept",
     "Ups": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#UPS",
     "Ups.autonomie": {
       "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#UPS.autonomie",
@@ -963,6 +1010,14 @@
     "Ups.serienummer": {
       "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#UPS.serienummer",
       "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "Ups.uitgangsfrequentie": {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#UPS.uitgangsfrequentie",
+      "@type": "@id"
+    },
+    "Ups.uitgangsstroom": {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#UPS.uitgangsstroom",
+      "@type": "@id"
     },
     "Ups.voedt": {
       "@container": "@set",

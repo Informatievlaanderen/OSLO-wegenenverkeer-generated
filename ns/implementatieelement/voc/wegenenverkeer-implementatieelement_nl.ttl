@@ -20,13 +20,13 @@ skos:Concept a rdfs:Class;
     "Datakabel materiaal"@nl,
     "Telecommunications subthema"@nl,
     "Betonomgevingsklasse"@nl,
-    "Betonsterkteklasse"@nl,
-    "Mimetype"@nl,
-    "Gebruiksdomein"@nl,
     "Schoorhoek"@nl,
     "Duurzaamheidsklasse van hout"@nl,
     "Walsmethode"@nl,
     "Constructiestaalsoort"@nl,
+    "Betonsterkteklasse"@nl,
+    "Mimetype"@nl,
+    "Gebruiksdomein"@nl,
     "Toeslagmiddel beton"@nl,
     "Provincie"@nl,
     "Gemeente"@nl,
@@ -811,6 +811,19 @@ schemas:OpeningHoursSpecification a rdfs:Class;
   rdfs:isDefinedBy <https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement>;
   rdfs:range xsd:decimal .
 
+<https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInHerz.standaardEenheid> a owl:DatatypeProperty;
+  <http://purl.org/vocab/vann/usageNote> "\"s\"^^cdt:ucumunit"@nl;
+  rdfs:comment "De standaard eenheid bij dit datatype is uitgedrukt in seconde."@nl;
+  rdfs:domain <https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInHerz>;
+  rdfs:isDefinedBy <https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement>;
+  rdfs:range rdfs:Literal .
+
+<https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInHerz.waarde> a owl:ObjectProperty;
+  rdfs:comment "Bevat een getal die bij het datatype hoort."@nl;
+  rdfs:domain <https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInHerz>;
+  rdfs:isDefinedBy <https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement>;
+  rdfs:range xsd:nonNegativeInteger .
+
 <https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInInch.standaardEenheid> a owl:DatatypeProperty;
   <http://purl.org/vocab/vann/usageNote> "\"[in_i]\"^^cdt:ucumunit"@nl;
   rdfs:comment "De standaard eenheid bij dit datatype is uitgedrukt in inch als internationale eenheid (eengemaakte Britse en Amerikaanse systeem)."@nl;
@@ -847,6 +860,18 @@ schemas:OpeningHoursSpecification a rdfs:Class;
 <https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInKelvin.waarde> a owl:ObjectProperty;
   rdfs:comment "Bevat een getal die bij het datatype hoort."@nl;
   rdfs:domain <https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInKelvin>;
+  rdfs:isDefinedBy <https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement>;
+  rdfs:range xsd:decimal .
+
+<https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInKiloAmpere.standaardEenheid> a owl:DatatypeProperty;
+  rdfs:comment "De standaard eenheid bij dit datatype is uitgedrukt in kiloampère."@nl;
+  rdfs:domain <https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInKiloAmpere>;
+  rdfs:isDefinedBy <https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement>;
+  rdfs:range rdfs:Literal .
+
+<https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInKiloAmpere.waarde> a owl:ObjectProperty;
+  rdfs:comment "Bevat een getal die bij het datatype hoort."@nl;
+  rdfs:domain <https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInKiloAmpere>;
   rdfs:isDefinedBy <https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement>;
   rdfs:range xsd:decimal .
 
@@ -1512,6 +1537,10 @@ schemas:opens a rdf:Property;
   rdfs:comment "Een kwantitatieve waarde die een getal in gigabyte uitdrukt."@nl;
   rdfs:isDefinedBy <https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement> .
 
+<https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInHerz> a owl:Class;
+  rdfs:comment "Een kwantitatieve waarde die een getal in herz uitdrukt."@nl;
+  rdfs:isDefinedBy <https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement> .
+
 <https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInInch> a owl:Class;
   rdfs:comment "Een kwantitatieve waarde die een getal in inches uitdrukt."@nl;
   rdfs:isDefinedBy <https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement> .
@@ -1522,6 +1551,10 @@ schemas:opens a rdf:Property;
 
 <https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInKelvin> a owl:Class;
   rdfs:comment "Een kwantitatieve waarde die een getal in Kelvin uitdrukt."@nl;
+  rdfs:isDefinedBy <https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement> .
+
+<https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInKiloAmpere> a owl:Class;
+  rdfs:comment "Een kwantitatieve waarde die een getal in kiloampère uitdrukt. "@nl;
   rdfs:isDefinedBy <https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement> .
 
 <https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInKiloNewton> a owl:Class;

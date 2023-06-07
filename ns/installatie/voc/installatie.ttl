@@ -8,17 +8,22 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 skos:Concept a rdfs:Class;
-  rdfs:label "Wegberm type"@nl,
+  rdfs:label "Langsgracht doorsnede"@nl,
+    "Wegberm type"@nl,
+    "Langsgracht type"@nl,
+    "Wegberm BIO"@nl,
     "Type wand"@nl,
     "Zijden type"@nl,
     "Type balk"@nl,
-    "Type horizontale plaat"@nl,
-    "Type aanvaarbescherming"@nl,
-    "Type externe naspanning"@nl,
-    "Wegberm BIO"@nl,
     "Type vakwerk-element"@nl,
     "Type brugligger"@nl,
     "Type windverband"@nl,
+    "Type horizontale plaat"@nl,
+    "Type aanvaarbescherming"@nl,
+    "Primaire vorm combiwand"@nl,
+    "Secundaire combiwand"@nl,
+    "Type externe naspanning"@nl,
+    "Materiaal tussenschot Berlinerwand"@nl,
     "Graad van statische bepaaldheid"@nl,
     "Type brugdeel"@nl,
     "Type trekker"@nl,
@@ -32,6 +37,9 @@ skos:Concept a rdfs:Class;
     "Lokaal terreintype"@nl,
     "Z-pad type"@nl,
     "Pad netwerkprotectie"@nl,
+    "Pompgroep merk"@nl,
+    "Pompgroep modelnaam"@nl,
+    "Kamer functie"@nl,
     "Radioheruitzendinstallatie modelnaam"@nl,
     "Radioheruitzendinstallatie merk"@nl,
     "MIV eenheid type"@nl,
@@ -142,6 +150,18 @@ skos:Concept a rdfs:Class;
   rdfs:comment "Een aaneengesloten reeks van links die samen een traject realiseren over het netwerk, gebruik makende van eenzelfde technologie (vb SDH, OTN...)."@nl;
   rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
   rdfs:subClassOf <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMObject> .
+
+<https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Berlinerwand.totaleLengteWand> a owl:ObjectProperty;
+  rdfs:comment "De totale horizontale lengte van de gehele berlinerwand in lopende meter."@nl;
+  rdfs:domain <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Berlinerwand>;
+  rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
+  rdfs:range <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMeter> .
+
+<https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Berlinerwand.tussenafstandProfielen> a owl:ObjectProperty;
+  rdfs:comment "Afstand tussen verschillende profielen in meter."@nl;
+  rdfs:domain <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Berlinerwand>;
+  rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
+  rdfs:range <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMeter> .
 
 <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#BiFlashInstallatie> a owl:Class;
   rdfs:comment "Het geheel van twee bi-flashsteunen, seinlantaarns, retroreflecterende verkeersborden en hun aansluiting, beveiligingsapparatuur en sturing op een bepaalde locatie."@nl;
@@ -301,6 +321,120 @@ skos:Concept a rdfs:Class;
   rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
   rdfs:range skos:Concept .
 
+<https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Combiwand.primaireVorm> a owl:ObjectProperty;
+  rdfs:comment "Keuzelijst dat de primaire vorm van de combiwand aangeeft."@nl;
+  rdfs:domain <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Combiwand>;
+  rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
+  rdfs:range skos:Concept .
+
+<https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Combiwand.rekennotaCombiwand> a owl:ObjectProperty;
+  rdfs:comment "De rekennota van de combiwand, met o.a. de vermelding van UGT's en GGT's."@nl;
+  rdfs:domain <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Combiwand>;
+  rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
+  rdfs:range <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcDocument> .
+
+<https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Combiwand.secundaireVorm> a owl:ObjectProperty;
+  rdfs:comment "Keuzelijst dat de secundaire vorm van de combiwand aangeeft."@nl;
+  rdfs:domain <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Combiwand>;
+  rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
+  rdfs:range skos:Concept .
+
+<https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Combiwand.technischeFicheCombiwand> a owl:ObjectProperty;
+  rdfs:comment "Document dat de technische details van de combiwand bijhoudt."@nl;
+  rdfs:domain <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Combiwand>;
+  rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
+  rdfs:range <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcDocument> .
+
+<https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Combiwand.totaleLengteCombiwand> a owl:ObjectProperty;
+  rdfs:comment "De totale horizontale lengte van de gehele combiwand in lopende meter."@nl;
+  rdfs:domain <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Combiwand>;
+  rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
+  rdfs:range <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMeter> .
+
+<https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Damwand.aansluitingBestaandeConstructie> a owl:ObjectProperty;
+  rdfs:comment "Hoe de aansluiting van de hele damwand op een bestaande constructie tot stand komt."@nl;
+  rdfs:domain <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Damwand>;
+  rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
+  rdfs:range skos:Concept .
+
+<https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Damwand.isWaterdicht> a owl:DatatypeProperty;
+  rdfs:comment "Geeft aan of de damwand al dan niet waterdicht is."@nl;
+  rdfs:domain <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Damwand>;
+  rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
+  rdfs:range xsd:boolean .
+
+<https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Damwand.materiaal> a owl:ObjectProperty;
+  rdfs:comment "Het materiaal waaruit de damwand bestaat."@nl;
+  rdfs:domain <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Damwand>;
+  rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
+  rdfs:range skos:Concept .
+
+<https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Damwand.ontwerpMaaiveldAchterDeKering> a owl:ObjectProperty;
+  rdfs:comment "De overschrijdingsfrequentie van de waterstand die de damwand moet kunnen keren."@nl;
+  rdfs:domain <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Damwand>;
+  rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
+  rdfs:range <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMeterTAW> .
+
+<https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Damwand.ontwerpMaaiveldVoorDeKering> a owl:ObjectProperty;
+  rdfs:comment "De overschrijdingsfrequentie van het maaiveld die de damwand moet kunnen keren."@nl;
+  rdfs:domain <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Damwand>;
+  rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
+  rdfs:range <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMeterTAW> .
+
+<https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Damwand.ontwerpwaterpeilAchterDeKering> a owl:ObjectProperty;
+  rdfs:comment "De overschrijdingsfrequentie van het waterpeil die de damwand moet kunnen keren."@nl;
+  rdfs:domain <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Damwand>;
+  rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
+  rdfs:range <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMeterTAW> .
+
+<https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Damwand.ontwerpwaterpeilVoorDeKering> a owl:ObjectProperty;
+  rdfs:comment "De overschrijdingsfrequentie van het waterpeil die de damwand moet kunnen keren."@nl;
+  rdfs:domain <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Damwand>;
+  rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
+  rdfs:range <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMeterTAW> .
+
+<https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Damwand.oppervlakte> a owl:ObjectProperty;
+  rdfs:comment "De totale oppervlakte van de damwandconstructie in vierkante meter."@nl;
+  rdfs:domain <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Damwand>;
+  rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
+  rdfs:range <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInVierkanteMeter> .
+
+<https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Damwand.planzicht> a owl:ObjectProperty;
+  rdfs:comment "Het overzicht, in een plan, van de gehele damwand."@nl;
+  rdfs:domain <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Damwand>;
+  rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
+  rdfs:range <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcDocument> .
+
+<https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Damwand.profiellengte> a owl:ObjectProperty;
+  rdfs:comment "De lengte van één damwandprofiel."@nl;
+  rdfs:domain <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Damwand>;
+  rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
+  rdfs:range <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMeter> .
+
+<https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Damwand.slotvulling> a owl:ObjectProperty;
+  rdfs:comment "De vulling van het slot van de damwand."@nl;
+  rdfs:domain <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Damwand>;
+  rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
+  rdfs:range skos:Concept .
+
+<https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Damwand.totaleHorizontaleLengteDamwand> a owl:ObjectProperty;
+  rdfs:comment "De totale horizontale lengte van de damwand in lopende meter."@nl;
+  rdfs:domain <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Damwand>;
+  rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
+  rdfs:range <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMeter> .
+
+<https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Damwand.totaleLengte> a owl:ObjectProperty;
+  rdfs:comment "De totale lengte van de damwandconstructie in lopende meter."@nl;
+  rdfs:domain <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Damwand>;
+  rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
+  rdfs:range <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMeter> .
+
+<https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#DrogePompkelder.isOndergronds> a owl:DatatypeProperty;
+  rdfs:comment "Geeft aan of de droge pompkelder zich boven- of ondergronds bevindt."@nl;
+  rdfs:domain <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#DrogePompkelder>;
+  rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
+  rdfs:range xsd:boolean .
+
 <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#DtcAardingsstelsel.attestDNB> a owl:ObjectProperty;
   <http://purl.org/vocab/vann/usageNote> "Voor een globaal aardingsstelsel moet een attest voorzien worden zoniet moet er van uitgegaan worden dat het om een gescheiden stelsel gaat "@nl;
   rdfs:comment "Een bestandsbijlage met het attest volgens het aardingsstelsel voorzien door de distributienetbeheerder ."@nl;
@@ -389,6 +523,12 @@ skos:Concept a rdfs:Class;
   rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
   rdfs:range <https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#DtcExterneReferentie> .
 
+<https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Funderingswand.totaleLengteFunderingswand> a owl:ObjectProperty;
+  rdfs:comment "De totale horizontale lengte van de gehele funderingswand in lopende meter."@nl;
+  rdfs:domain <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Funderingswand>;
+  rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
+  rdfs:range <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMeter> .
+
 <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Gebouw.grondplan> a owl:ObjectProperty;
   rdfs:comment "Plattegrond van het gebouw met aanduidingen van de verschillende aanwezige elementen zoals kelder, kasten met kastnummers, toegangscontrole en meer."@nl;
   rdfs:domain <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Gebouw>;
@@ -442,6 +582,48 @@ skos:Concept a rdfs:Class;
   rdfs:domain <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#GeluidwerendeConstructie>;
   rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
   rdfs:range <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInVierkanteMeter> .
+
+<https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#GewapendeGrond.aanzetpeil> a owl:ObjectProperty;
+  rdfs:comment "Het aanzetpeil van de gewapende grond in mTaw."@nl;
+  rdfs:domain <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#GewapendeGrond>;
+  rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
+  rdfs:range <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMeterTAW> .
+
+<https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#GewapendeGrond.detailplan> a owl:ObjectProperty;
+  rdfs:comment "Plan met details van de opbouw van de gewapende grond."@nl;
+  rdfs:domain <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#GewapendeGrond>;
+  rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
+  rdfs:range <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcDocument> .
+
+<https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#GewapendeGrond.grondkerendeHoogte> a owl:ObjectProperty;
+  rdfs:comment "De hoogte van de teen tot de kop van de grondkering van het maaiveld."@nl;
+  rdfs:domain <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#GewapendeGrond>;
+  rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
+  rdfs:range <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMeter> .
+
+<https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#GewapendeGrond.maximaalUitgravingspeil> a owl:ObjectProperty;
+  rdfs:comment "Het maximale uitgravingspeil."@nl;
+  rdfs:domain <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#GewapendeGrond>;
+  rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
+  rdfs:range <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMeterTAW> .
+
+<https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#GewapendeGrond.rekennota> a owl:ObjectProperty;
+  rdfs:comment "De bijhorende rekennota met berekeningen."@nl;
+  rdfs:domain <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#GewapendeGrond>;
+  rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
+  rdfs:range <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcDocument> .
+
+<https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Gewichtsmuur.isUitgevoerdAlsBlokkenmuur> a owl:DatatypeProperty;
+  rdfs:comment "Geeft aan of de gewichtsmuur uitgevoerd is als blokkenmuur of niet."@nl;
+  rdfs:domain <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Gewichtsmuur>;
+  rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
+  rdfs:range xsd:boolean .
+
+<https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Gewichtsmuur.technischeFicheGewichtsmuur> a owl:ObjectProperty;
+  rdfs:comment "Technische fiche dat technische details bijhoudt van de gewichtsmuur."@nl;
+  rdfs:domain <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Gewichtsmuur>;
+  rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
+  rdfs:range <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcDocument> .
 
 <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#GroepDwarseMarkeringEnFiguratie.totaleOppervlakte> a owl:ObjectProperty;
   rdfs:comment "De oppervlakte van de groep dwarse en/of figuratie markering."@nl;
@@ -566,6 +748,11 @@ skos:Concept a rdfs:Class;
   rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
   rdfs:range skos:Concept .
 
+<https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Koppeling> a owl:Class;
+  rdfs:comment "Een koppeling is een machineonderdeel dat wordt gebruikt om vermogen (rotatie en koppel) over te brengen van een aandrijvende as naar een aangedreven as."@nl;
+  rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
+  rdfs:subClassOf <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMNaamObject> .
+
 <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#L2AccessStructuur> a owl:Class;
   rdfs:comment "Opstelling die het mogelijk maakt om een techniek direct te koppelen met het IP telematica netwerk. Een L2 access structuur bestaat uit meerdere L2 Switches die met elkaar verbonden zijn."@nl;
   rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
@@ -578,7 +765,7 @@ skos:Concept a rdfs:Class;
   rdfs:range xsd:nonNegativeInteger .
 
 <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#LEDRotondeafbakening.lengte> a owl:ObjectProperty;
-  rdfs:comment "De afstand tussen de eerste en de laatste actieve reflector in de verzameling gevoed door dezelfde stroomkring. "@nl;
+  rdfs:comment "De afstand tussen de eerste en de laatste actieve reflector in de verzameling gevoed door dezelfde stroomkring."@nl;
   rdfs:domain <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#LEDRotondeafbakening>;
   rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
   rdfs:range <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMeter> .
@@ -626,7 +813,7 @@ skos:Concept a rdfs:Class;
   rdfs:range skos:Concept .
 
 <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#LEDWegdekreflectorBebakening.lengte> a owl:ObjectProperty;
-  rdfs:comment "De afstand tussen de eerste en de laatste actieve reflector in de verzameling gevoed door dezelfde stroomkring. "@nl;
+  rdfs:comment "De afstand tussen de eerste en de laatste actieve reflector in de verzameling gevoed door dezelfde stroomkring."@nl;
   rdfs:domain <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#LEDWegdekreflectorBebakening>;
   rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
   rdfs:range <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMeter> .
@@ -652,6 +839,48 @@ skos:Concept a rdfs:Class;
 <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Landhoofd.typeLandhoofd> a owl:ObjectProperty;
   rdfs:comment "Het soort landhoofd."@nl;
   rdfs:domain <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Landhoofd>;
+  rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
+  rdfs:range skos:Concept .
+
+<https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Langsgracht.bevatVuilvracht> a owl:DatatypeProperty;
+  rdfs:comment "Geeft aan dat de langsgracht verontreinigde stoffen of afvalwater (van bijv. een rioleringsstelsel) bevat."@nl;
+  rdfs:domain <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Langsgracht>;
+  rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
+  rdfs:range xsd:boolean .
+
+<https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Langsgracht.doorsnede> a owl:ObjectProperty;
+  rdfs:comment "De doorsnede van de langsgracht."@nl;
+  rdfs:domain <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Langsgracht>;
+  rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
+  rdfs:range skos:Concept .
+
+<https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Langsgracht.isBekleed> a owl:DatatypeProperty;
+  rdfs:comment "Een langsgracht is bekleed wanneer de natuurlijke bodem en/of talud bedekt worden door bepaalde materialen, zoals bijvoorbeeld geotextiel, schanskorven, betuiningen, etc."@nl;
+  rdfs:domain <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Langsgracht>;
+  rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
+  rdfs:range xsd:boolean .
+
+<https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Langsgracht.isMachinaalBereikbaar> a owl:DatatypeProperty;
+  rdfs:comment "Een gracht is machinaal bereikbaar wanneer er ten minste één wielspoorlijn van de uitvoerende machine opstelbaar is op een verhard weggedeelte en er geen obstakels de machinale toegang verhinderen."@nl;
+  rdfs:domain <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Langsgracht>;
+  rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
+  rdfs:range xsd:boolean .
+
+<https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Langsgracht.isOnderhoudsgevoelig> a owl:DatatypeProperty;
+  rdfs:comment "Een langsgracht wordt onderhoudsgevoelig geacht wanneer ervaring leert dat deze extra onderhoud vereist om bijvoorbeeld dichtslibbing of verstopping te vermijden."@nl;
+  rdfs:domain <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Langsgracht>;
+  rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
+  rdfs:range xsd:boolean .
+
+<https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Langsgracht.lengte> a owl:ObjectProperty;
+  rdfs:comment "De lengte van de langsgracht, uitgedrukt in meter."@nl;
+  rdfs:domain <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Langsgracht>;
+  rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
+  rdfs:range <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMeter> .
+
+<https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Langsgracht.type> a owl:ObjectProperty;
+  rdfs:comment "Geeft aan of de langsgracht open of ingebuisd is."@nl;
+  rdfs:domain <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Langsgracht>;
   rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
   rdfs:range skos:Concept .
 
@@ -761,6 +990,18 @@ skos:Concept a rdfs:Class;
   rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
   rdfs:range skos:Concept .
 
+<https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#MVPaal.technischeFicheMVPaal> a owl:ObjectProperty;
+  rdfs:comment "De technische gegevens van de MV-paal (detail afmetingen, dikte, hoogte, groutspecificaties,...)"@nl;
+  rdfs:domain <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#MVPaal>;
+  rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
+  rdfs:range <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcDocument> .
+
+<https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#MVPaal.volumeCementgrout> a owl:ObjectProperty;
+  rdfs:comment "Volume van het cement per uur in kubieke meter."@nl;
+  rdfs:domain <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#MVPaal>;
+  rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
+  rdfs:range <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInKubiekeMeterPerUur> .
+
 <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Meetstation.beoordelingLokaleTerrein> a owl:ObjectProperty;
   rdfs:comment "Het soort terrein waarin het meetstation staat met betrekking tot het reliëf en de vegetatie."@nl;
   rdfs:domain <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Meetstation>;
@@ -814,6 +1055,11 @@ skos:Concept a rdfs:Class;
   rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
   rdfs:range xsd:nonNegativeInteger .
 
+<https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Overbrenging> a owl:Class;
+  rdfs:comment "Een overbrenging of transmissie brengt een vermogen (bv. van een motor) over op een bewegingsmechanisme. Daarbij kan de snelheid, de kracht en het koppel aangepast worden aan de noden van het bewegingsmechanisme (bv. door gebruik te maken van een tandwielkast)."@nl;
+  rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
+  rdfs:subClassOf <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMNaamObject> .
+
 <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Pad.netwerkprotectie> a owl:ObjectProperty;
   rdfs:comment "Referentie van het pad dat redundantie levert aan dit pad."@nl;
   rdfs:domain <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Pad>;
@@ -831,6 +1077,96 @@ skos:Concept a rdfs:Class;
   rdfs:domain <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Pijler>;
   rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
   rdfs:range xsd:boolean .
+
+<https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#PompGroep.heeftIdentificatieplaat> a owl:DatatypeProperty;
+  rdfs:comment "Geeft aan of er ter plekke een identificatieplaat aanwezig is die het object identificeert en beschrijft."@nl;
+  rdfs:domain <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#PompGroep>;
+  rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
+  rdfs:range xsd:boolean .
+
+<https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#PompGroep.kanTurbineren> a owl:DatatypeProperty;
+  rdfs:comment "Geeft aan of de pompgroep ook gebruikt kan worden als turbine."@nl;
+  rdfs:domain <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#PompGroep>;
+  rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
+  rdfs:range xsd:boolean .
+
+<https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#PompGroep.merk> a owl:ObjectProperty;
+  rdfs:comment "Het merk van de pompgroep."@nl;
+  rdfs:domain <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#PompGroep>;
+  rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
+  rdfs:range skos:Concept .
+
+<https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#PompGroep.modelnaam> a owl:ObjectProperty;
+  rdfs:comment "De modelnaam van de pompgroep."@nl;
+  rdfs:domain <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#PompGroep>;
+  rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
+  rdfs:range skos:Concept .
+
+<https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#PompGroep.soort> a owl:ObjectProperty;
+  rdfs:comment "Bepaalt de aard van de pomp volgens haar werkingsprincipe."@nl;
+  rdfs:domain <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#PompGroep>;
+  rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
+  rdfs:range skos:Concept .
+
+<https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Pompkamer.breedte> a owl:ObjectProperty;
+  rdfs:comment "De breedte van de pompkamer in millimeter, zoals uitgedrukt op het grondplan (eerst vermelde afmeting)."@nl;
+  rdfs:domain <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Pompkamer>;
+  rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
+  rdfs:range <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMillimeter> .
+
+<https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Pompkamer.diepte> a owl:ObjectProperty;
+  rdfs:comment "De diepte van de pompkamer in meter, zoals uitgedrukt op het grondplan."@nl;
+  rdfs:domain <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Pompkamer>;
+  rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
+  rdfs:range <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMillimeter> .
+
+<https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Pompkamer.functie> a owl:ObjectProperty;
+  rdfs:comment "De specifieke functie die een pompkamer kan vervullen."@nl;
+  rdfs:domain <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Pompkamer>;
+  rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
+  rdfs:range skos:Concept .
+
+<https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Pompkamer.isExplosieveilig> a owl:DatatypeProperty;
+  rdfs:comment "Geeft aan of de natte pompkelder voldoet aan de ATEX richtlijn."@nl;
+  rdfs:domain <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Pompkamer>;
+  rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
+  rdfs:range xsd:boolean .
+
+<https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Pompkamer.isLuchtdichtAfgesloten> a owl:DatatypeProperty;
+  rdfs:comment "Geeft aan of de natte pompkelder hermetisch afgesloten is van de omgeving."@nl;
+  rdfs:domain <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Pompkamer>;
+  rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
+  rdfs:range xsd:boolean .
+
+<https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Pompkamer.lengte> a owl:ObjectProperty;
+  rdfs:comment "De lengte van de pompkamer in millimeter, zoals uitgedrukt op het grondplan (tweede vermelde afmeting) ."@nl;
+  rdfs:domain <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Pompkamer>;
+  rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
+  rdfs:range <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMillimeter> .
+
+<https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Pompkamer.reinigingsInterval> a owl:ObjectProperty;
+  rdfs:comment "Termijn uitgedrukt in maanden waarbinnen de reiniging van de pompkamer uitgevoerd dient te worden."@nl;
+  rdfs:domain <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Pompkamer>;
+  rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
+  rdfs:range <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMaand> .
+
+<https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Pompkamer.technischeFiche> a owl:ObjectProperty;
+  <http://purl.org/vocab/vann/usageNote> "Bestanden van het type xlsx, dwg of pdf."@nl;
+  rdfs:comment "De technische fiche van de pompkamer."@nl;
+  rdfs:domain <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Pompkamer>;
+  rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
+  rdfs:range <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcDocument> .
+
+<https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Pompkamer.volume> a owl:ObjectProperty;
+  rdfs:comment "De (maximale) inhoud van de pompkamer."@nl;
+  rdfs:domain <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Pompkamer>;
+  rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
+  rdfs:range <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInKubiekeMeter> .
+
+<https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Pompstation> a owl:Class;
+  rdfs:comment "Inrichting voor het oppompen van grond- of oppervlaktewater."@nl;
+  rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
+  rdfs:subClassOf <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMNaamObject> .
 
 <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Pyloon> a owl:Class;
   rdfs:comment "Een pyloon is een taps toelopende hoge constructie, als drager van kabels e.d. (bv. een hoogspanningmast of een mast van een brug)."@nl;
@@ -898,12 +1234,71 @@ skos:Concept a rdfs:Class;
   rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
   rdfs:range skos:Concept .
 
+<https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#SecansTangenspalenwand.hOhAfstandPalen> a owl:ObjectProperty;
+  rdfs:comment "Hart op hart afstand tussen palen in de wand."@nl;
+  rdfs:domain <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#SecansTangenspalenwand>;
+  rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
+  rdfs:range <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInCentimeter> .
+
+<https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#SecansTangenspalenwand.heeftInsnijdendePalen> a owl:DatatypeProperty;
+  rdfs:comment "Bepaling of er insnijdende palen aanwezig zijn."@nl;
+  rdfs:domain <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#SecansTangenspalenwand>;
+  rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
+  rdfs:range xsd:boolean .
+
+<https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#SecansTangenspalenwand.rekennota> a owl:ObjectProperty;
+  rdfs:comment "De bijhorende rekennota met berekeningen."@nl;
+  rdfs:domain <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#SecansTangenspalenwand>;
+  rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
+  rdfs:range <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcDocument> .
+
 <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Slagboom.isManueel> a owl:DatatypeProperty;
   <http://purl.org/vocab/vann/usageNote> "Voor een manuele slagboom zijn geen instanties van de onderliggende onderdelen Slagboomkolom en Slagboomarm vereist."@nl;
   rdfs:comment "Geeft aan of de slagboom (uitsluitend) manueel bediend wordt of door een aangestuurde motor in de slagboomkolom."@nl;
   rdfs:domain <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Slagboom>;
   rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
   rdfs:range xsd:boolean .
+
+<https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Soilmixwand> a owl:Class;
+  rdfs:comment "Een cutter soilmixwand (CSM-wand) is een aansluitende kerende wand bestaande uit elkaar overlappende moten in de grond gevormd. Deze heeft een grond- en waterkerende functie."@nl;
+  rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
+  rdfs:subClassOf <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMNaamObject>,
+    <https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#Grondkeringen> .
+
+<https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#StalenCaisson> a owl:Class;
+  rdfs:comment "Dit is een samengesteld element bestaande uit twee of meerdere warmgewalste stalen damplanken met Z- of U-vorm."@nl;
+  rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
+  rdfs:subClassOf <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMNaamObject> .
+
+<https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#StalenFunderingsprofiel.aanzetpeilSlot> a owl:ObjectProperty;
+  rdfs:comment "Aanzetpeil van het slot."@nl;
+  rdfs:domain <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#StalenFunderingsprofiel>;
+  rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
+  rdfs:range <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMeterTAW> .
+
+<https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#StalenFunderingsprofiel.inbrengmethode> a owl:ObjectProperty;
+  rdfs:comment "Keuzelijst om de inbrengmethode toe te lichten."@nl;
+  rdfs:domain <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#StalenFunderingsprofiel>;
+  rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
+  rdfs:range skos:Concept .
+
+<https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#StalenFunderingsprofiel.isSlotAanwezig> a owl:DatatypeProperty;
+  rdfs:comment "Geeft aan of er al dan niet een slot aanwezig is."@nl;
+  rdfs:domain <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#StalenFunderingsprofiel>;
+  rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
+  rdfs:range xsd:boolean .
+
+<https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#TijdelijkeBerlinerwandTussenschot.aanzetpeil> a owl:ObjectProperty;
+  rdfs:comment "Aanzetpeil van het element in mTaw."@nl;
+  rdfs:domain <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#TijdelijkeBerlinerwandTussenschot>;
+  rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
+  rdfs:range <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMeterTAW> .
+
+<https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#TijdelijkeBerlinerwandTussenschot.materiaal> a owl:ObjectProperty;
+  rdfs:comment "Het materiaal voor het tijdelijke tussenschot."@nl;
+  rdfs:domain <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#TijdelijkeBerlinerwandTussenschot>;
+  rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
+  rdfs:range skos:Concept .
 
 <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Trajectcontrole.attest> a owl:ObjectProperty;
   <http://purl.org/vocab/vann/usageNote> "Bestanden van het type pdf."@nl;
@@ -1050,6 +1445,30 @@ skos:Concept a rdfs:Class;
   rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
   rdfs:range <https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#DtcExterneReferentie> .
 
+<https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#VernageldeWand.detailplan> a owl:ObjectProperty;
+  rdfs:comment "Plan met details van de opbouw van de vernagelde wand."@nl;
+  rdfs:domain <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#VernageldeWand>;
+  rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
+  rdfs:range <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcDocument> .
+
+<https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#VernageldeWand.hOhAfstandGrondankers> a owl:ObjectProperty;
+  rdfs:comment "Hart op hart afstand tussen grondankers in de wand."@nl;
+  rdfs:domain <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#VernageldeWand>;
+  rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
+  rdfs:range <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInCentimeter> .
+
+<https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#VernageldeWand.hellingshoek> a owl:ObjectProperty;
+  rdfs:comment "Hoek van de vernagelde wand t.o.v. de grond in decimale graden."@nl;
+  rdfs:domain <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#VernageldeWand>;
+  rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
+  rdfs:range <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInDecimaleGraden> .
+
+<https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#VernageldeWand.rekennota> a owl:ObjectProperty;
+  rdfs:comment "De bijhorende rekennota met berekeningen."@nl;
+  rdfs:domain <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#VernageldeWand>;
+  rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
+  rdfs:range <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcDocument> .
+
 <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#VoorzieningNegatieveReactie> a owl:Class;
   rdfs:comment "Voorziening om opwaartse reacties ter hoogte van de steunpunten tegen te gaan, bv. stalen staven. Dit element maakt de verbinding tussen brugdeel en landhoofd/pijler en bevindt zich in de onmiddellijke omgeving van de opleggingen. De oplegging (dit is een andere klasse) kan zowel druk als trek opnemen en kan ook gebruikt worden als een voorziening tegen negatieve reactie."@nl;
   rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
@@ -1086,9 +1505,9 @@ skos:Concept a rdfs:Class;
   rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
   rdfs:range skos:Concept .
 
-<https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Wilddetectiesysteem.afmetingOnderhoudszone> a owl:ObjectProperty;
-  rdfs:comment "De onderhoudszone van een wilddetectiesysteem betreft de nabije zone rond de detectiesystemen (zoals een bewegingssensor), die zich in de detectiezones bevinden. Deze zone vereist extra onderhoud, om valse detecties te voorkomen."@nl;
-  rdfs:domain <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Wilddetectiesysteem>;
+<https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Wilddetectiezone.afmeting> a owl:ObjectProperty;
+  rdfs:comment "De afmetingen van de wilddetectiezone."@nl;
+  rdfs:domain <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Wilddetectiezone>;
   rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
   rdfs:range <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcAfmetingBxlInM> .
 
@@ -1139,6 +1558,12 @@ skos:Concept a rdfs:Class;
   rdfs:subClassOf <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMObject>,
     <https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#Put> .
 
+<https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#DrogePompkelder> a owl:Class;
+  <http://purl.org/vocab/vann/usageNote> "Gebruik PompKamer voor het waterbouwkundig systeem van het pompstation."@nl;
+  rdfs:comment "Een droge pompkelder is dat gedeelte van een gebouw/kunstwerk dat (meestal) onder het maaiveld is gelegen,veelal om beheersvoorzieningen te herbergen en/of als een technische ruimte dat deel uitmaakt van een pompstation."@nl;
+  rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
+  rdfs:subClassOf <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMNaamObject> .
+
 <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Ecoduct> a owl:Class;
   rdfs:comment "Ecoducten of natuurbruggen zorgen ervoor dat dieren veilig de weg kunnen oversteken."@nl;
   rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
@@ -1163,6 +1588,15 @@ skos:Concept a rdfs:Class;
   rdfs:comment "Buiteninstallatie waarin een flitscamera geplaatst kan worden."@nl;
   rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
   rdfs:subClassOf <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMNaamObject> .
+
+<https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Funderingswand> a owl:Class;
+  rdfs:comment "Wand die dient om de belastingen van constructies/elementen op te vangen/over te brengen naar draagkrachtige lagen. Kan ook een grondkerende/waterkerende functie hebben."@nl;
+  rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
+  rdfs:subClassOf <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMNaamObject>,
+    <https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#Grondkeringen>,
+    <https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#AxiaalDraagvermogenWand>,
+    <https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#AxiaalDraagvermogen>,
+    <https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#WaterremmendeFunctie> .
 
 <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Gebouw> a owl:Class;
   rdfs:comment "Elk bouwwerk,dat een voor mensen toegankelijke overdekte,geheel of gedeeltelijk met wanden omsloten ruimte vormt."@nl;
@@ -1214,8 +1648,8 @@ skos:Concept a rdfs:Class;
   rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
   rdfs:subClassOf <https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#ConstructiefObject> .
 
-<https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Wilddetectiesysteem> a owl:Class;
-  rdfs:comment "Dit systeem registreert de beweging van dieren in de omgeving van de weg. Vervolgens kan het chauffeurs waarschuwen, zodat ze op tijd hun snelheid kunnen aanpassen."@nl;
+<https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Wilddetectiezone> a owl:Class;
+  rdfs:comment "De wilddetectiezone van een wilddetectiesysteem betreft de nabije zone rond de detectiesystemen (zoals een bewegingssensor). Deze zone vereist extra onderhoud, om valse detecties te voorkomen."@nl;
   rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
   rdfs:subClassOf <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMNaamObject> .
 
@@ -1239,6 +1673,12 @@ skos:Concept a rdfs:Class;
   rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
   rdfs:subClassOf <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMNaamObject> .
 
+<https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Berlinerwand> a owl:Class;
+  rdfs:comment "Een damwandconstructie, opgebouwd uit stalen H-profielen en (stalen)planken. De berlinerwand wordt vooral toegepast als grondkering bij bouwputten."@nl;
+  rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
+  rdfs:subClassOf <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMNaamObject>,
+    <https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#Grondkeringen> .
+
 <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Bochtafbakeningsinstallatie> a owl:Class;
   rdfs:comment "De verzameling van alle bochtafbakeningsborden in dezelfde bocht en rijrichting."@nl;
   rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
@@ -1254,13 +1694,18 @@ skos:Concept a rdfs:Class;
   rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
   rdfs:subClassOf <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMNaamObject> .
 
+<https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Gewichtsmuur> a owl:Class;
+  rdfs:comment "Kerende constructie die stabiliteit ontleent aan zijn eigen gewicht. Onder stabiliteit dient verstaan te worden: glijden, omkantelen en verticaal draagvermogen. De muur is (meestal) onderaan breder dan bovenaan."@nl;
+  rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
+  rdfs:subClassOf <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMNaamObject> .
+
 <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#GroepDwarseMarkeringEnFiguratie> a owl:Class;
   rdfs:comment "Groepering van de dwarse- en figuratiemarkering."@nl;
   rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
   rdfs:subClassOf <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMObject> .
 
 <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#InspectieputRiolering> a owl:Class;
-  rdfs:comment "Dient om de aanwezige riolering te kunnen inspecteren, reinigen of onderhouden. "@nl;
+  rdfs:comment "Dient om de aanwezige riolering te kunnen inspecteren, reinigen of onderhouden."@nl;
   rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
   rdfs:subClassOf <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMObject>,
     <https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#Put> .
@@ -1280,6 +1725,11 @@ skos:Concept a rdfs:Class;
   rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
   rdfs:subClassOf <https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#ConstructiefObject> .
 
+<https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#MVPaal> a owl:Class;
+  rdfs:comment "Grondverdringende stalen paal met een inwendige en/of uitwendige injectie met grout-specie. Ze wordt vervaardigd door het heien van een stalen profiel/buis in de bodem onder gelijktijdig injecteren van een groutmengsel."@nl;
+  rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
+  rdfs:subClassOf <https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Funderingspaal> .
+
 <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Pijler> a owl:Class;
   rdfs:comment "Een pijler is een steunpilaar die fungeert als vrijstaande drager en een steunpunt vormt tussen landhoofden voor de liggers of gewelven van een kunstwerk."@nl;
   rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
@@ -1289,6 +1739,11 @@ skos:Concept a rdfs:Class;
   rdfs:comment "De groepering van de objecten die behoren tot de riolering."@nl;
   rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
   rdfs:subClassOf <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMObject> .
+
+<https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#TijdelijkeBerlinerwandTussenschot> a owl:Class;
+  rdfs:comment "Het tussenschot (plaat of plank tussen profielen) voor een tijdelijke berlinerwand. Om een berlinerwand te definiëren die permanent in de grond blijft, moeten de specifieke (materiaal)onderdelen gebruikt worden."@nl;
+  rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
+  rdfs:subClassOf <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMNaamObject> .
 
 <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#VerkeersbordVerkeersteken> a owl:Class;
   rdfs:comment "De voorstelling door middel van een verkeersbord van een aanwijzing ten behoeve van de weggebruikers die verbonden wordt aan het aankondigen of opleggen van een bepaalde verkeersmaatregel zoals bepaald in de wegcode."@nl;
@@ -1326,6 +1781,18 @@ skos:Concept a rdfs:Class;
   rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
   rdfs:subClassOf <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#NaampadObject> .
 
+<https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#SecansTangenspalenwand> a owl:Class;
+  rdfs:comment "Een secans- of tangenspalenwand bestaat uit betonnen boorpalen. Bij de secanspalenwand zijn dit primaire en secundaire, in elkaar oversneden palen. Bij de tangenspalenwand snijden de boorpalen niet in elkaar in (geen overlap). De wand heeft tot doel een bouwputbeschoeiing te realiseren. De stabiliteit van de grondkering wordt verzekerd door verankeringen en/of schoringen."@nl;
+  rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
+  rdfs:subClassOf <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMNaamObject>,
+    <https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#Grondkeringen>,
+    <https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#WaterremmendeFunctie> .
+
+<https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#StalenFunderingsprofiel> a owl:Class;
+  rdfs:comment "Stalen profiel, bijvoorbeeld een H-profiel, dat wordt gebruikt als fundering of wapening van een fundering. Dit is geen profiel voor een damplank: hiervoor moet 'Stalen damplank' worden gebruikt."@nl;
+  rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
+  rdfs:subClassOf <https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Funderingspaal> .
+
 <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Wand> a owl:Class;
   rdfs:comment "Een verticaal constructiedeel, vrijstaand of omsluitend die een afscheiding vormt, bv. tussen 2 ruimtes."@nl;
   rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
@@ -1355,15 +1822,41 @@ skos:Concept a rdfs:Class;
   rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
   rdfs:subClassOf <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#NaampadObject> .
 
+<https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#VernageldeWand> a owl:Class;
+  rdfs:comment "Versteviging van de grond door een rooster van ankers (nagels), waarbij de oppervlakte tussen de ankers gestabiliseerd wordt door middel van gewapend spuitbeton."@nl;
+  rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
+  rdfs:subClassOf <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMNaamObject>,
+    <https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#Grondkeringen> .
+
 <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Zpad> a owl:Class;
   rdfs:comment "End-to-end gebruikersverbinding over het transport netwerk."@nl;
   rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
   rdfs:subClassOf <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#NaampadObject> .
 
+<https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Combiwand> a owl:Class;
+  rdfs:comment "Een gecombineerde wand bestaande uit verschillende damplanken en buispalen of H-profielen."@nl;
+  rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
+  rdfs:subClassOf <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMObject>,
+    <https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#Grondkeringen>,
+    <https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#AxiaalDraagvermogenWand>,
+    <https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#AxiaalDraagvermogen>,
+    <https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#WaterremmendeFunctie> .
+
+<https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#GewapendeGrond> a owl:Class;
+  rdfs:comment "Grondkering waarbij constructieve elementen van staal of geotextiel/geogrid samenwerken met de grond en daaruit stabiliteit ontwikkelen. Een variant van gewapende grond is de 'terre armée'."@nl;
+  rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
+  rdfs:subClassOf <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMNaamObject> .
+
 <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#LEDRotondeafbakening> a owl:Class;
   rdfs:comment "De verzameling van actieve lichtgevende modules ter hoogte van één toerit die ingeslepen worden in, of geplaatst worden op, de boordsteen van een rotonde en als doel hebben om de rand van de rotonde duidelijk zichtbaar te maken."@nl;
   rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
   rdfs:subClassOf <https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#EMAfbakening> .
+
+<https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#PompGroep> a owl:Class;
+  <http://purl.org/vocab/vann/usageNote> "Gebruik PompGroep voor een modulair systeem."@nl;
+  rdfs:comment "Een systeem dat instaat voor het omzetten van elektrische energie in een verplaatsing of drukverhoging van water. In dit geval spreekt men van een pomp. In de omgekeerde situatie spreekt men van een turbine."@nl;
+  rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
+  rdfs:subClassOf <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMNaamObject> .
 
 <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Verkeersbordopstelling> a owl:Class;
   rdfs:comment "Het geheel van verticale verkeerssignalisatie die bevestigd is aan één of meerdere draagconstructies op éénzelfde geolocatie."@nl;
@@ -1379,7 +1872,7 @@ skos:Concept a rdfs:Class;
 <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Gronddam> a owl:Class;
   rdfs:comment "Gronddammen zijn trapeziumvormige constructies bestaande uit zand, grond of steenachtige materialen. De onderkant van de gronddam wordt direct op het bestaand maaiveld aangebracht of op een vooraf aangebrachte grondverbetering. Een gronddam kan volgende functies vervullen: geluidswering, geleiding van dieren, veiligheid en lichtwering."@nl;
   rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
-  rdfs:subClassOf <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMObject> .
+  rdfs:subClassOf <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMNaamObject> .
 
 <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#LEDWegdekreflectorBebakening> a owl:Class;
   rdfs:comment "De verzameling van op de rijbaan verankerde actieve lichtmodules. De modules hebben als doel de randen van de rijbaan of de grenzen tussen rijstroken te markeren of gevaarlijke plaatsen te signaleren. De verzameling bundelt de actieve reflectoren die hetzelfde obstakel of risico aanduiden."@nl;
@@ -1394,10 +1887,15 @@ skos:Concept a rdfs:Class;
 <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#GeluidwerendeConstructie> a owl:Class;
   rdfs:comment "Een geluidswerende wandvormige constructie bestaande uit een desgevallend geluidsisolerend materiaal en/of geluidsabsorberend materiaal en voorzien van de nodige structuren om de bouwkundige stabiliteit te verzekeren."@nl;
   rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
-  rdfs:subClassOf <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMObject> .
+  rdfs:subClassOf <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMNaamObject> .
+
+<https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Langsgracht> a owl:Class;
+  rdfs:comment "Een langsgracht of een baangracht is een gracht die (meestal) parallel loopt met een weg en dient om hemelwater en water van de aangrenzende percelen op te vangen."@nl;
+  rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
+  rdfs:subClassOf <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMNaamObject> .
 
 <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Meetstation> a owl:Class;
-  rdfs:comment "De plaats waar verschillende sensoren samen 1 meetstation vormen. "@nl;
+  rdfs:comment "De plaats waar verschillende sensoren samen 1 meetstation vormen."@nl;
   rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
   rdfs:subClassOf <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMNaamObject> .
 
@@ -1411,10 +1909,22 @@ skos:Concept a rdfs:Class;
   rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
   rdfs:subClassOf <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMNaamObject> .
 
+<https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Pompkamer> a owl:Class;
+  rdfs:comment "Elk volume,inclusief de bouwkundige elementen die dit volume bepalen,dat deel uitmaakt van het waterbouwkundig systeem van het pompstation en als zodanig onder water kan staan."@nl;
+  rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
+  rdfs:subClassOf <https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#PutRelatie> .
+
 <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Brugdeel> a owl:Class;
   rdfs:comment "Het deel dat je kan wegnemen van een brug in zijn geheel. Dit kan ook meerdere overspanningen hebben."@nl;
   rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
   rdfs:subClassOf <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMNaamObject> .
+
+<https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Damwand> a owl:Class;
+  rdfs:comment "Een grond- en/of waterkerende constructie, die bestaat uit een verticaal in de grond geplaatste wand."@nl;
+  rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
+  rdfs:subClassOf <https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#ConstructieElement>,
+    <https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#Grondkeringen>,
+    <https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#WaterremmendeFunctie> .
 
 <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie> a owl:Ontology;
   rdfs:label "installatie"@en,

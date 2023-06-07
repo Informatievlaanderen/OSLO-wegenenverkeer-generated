@@ -13,12 +13,15 @@ dc:Agent a rdfs:Class;
 
 skos:Concept a rdfs:Class;
   rdfs:label "AIM toestand"@nl,
+    "Type badge"@nl,
+    "Type sleutel"@nl,
     "Electricity appurtenance type"@nl,
     "Telecommunications appurtenance type"@nl,
     "Electricity subthema"@nl,
     "Pipe container type"@nl,
     "Datakabel materiaal"@nl,
     "Telecommunications subthema"@nl,
+    "Toegangsprocedure toegangstijden"@nl,
     "Betonomgevingsklasse"@nl,
     "Schoorhoek"@nl,
     "Duurzaamheidsklasse van hout"@nl,
@@ -32,7 +35,9 @@ skos:Concept a rdfs:Class;
     "Gemeente"@nl,
     "Kwaliteitsklasse van hout"@nl,
     "Sterkteklasse van hout"@nl,
-    "Betonmilieuklasse"@nl .
+    "Betonmilieuklasse"@nl,
+    "Bijlagetype toegangsprocedure"@nl,
+    "Toegangsprocedure aandachtspunt"@nl .
 
 schemas:ContactPoint a rdfs:Class;
   rdfs:label "Contactinfo"@nl .
@@ -86,7 +91,7 @@ schemas:OpeningHoursSpecification a rdfs:Class;
   rdfs:range xsd:string .
 
 <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMObject.theoretischeLevensduur> a owl:ObjectProperty;
-  rdfs:comment " De levensduur in aantal maanden die theoretisch mag verwacht worden voor een object."@nl;
+  rdfs:comment "De levensduur in aantal maanden die theoretisch mag verwacht worden voor een object."@nl;
   rdfs:domain <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMObject>;
   rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement>;
   rdfs:range <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMaand> .
@@ -240,6 +245,18 @@ schemas:OpeningHoursSpecification a rdfs:Class;
   rdfs:domain <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcAfmetingBxlInM>;
   rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement>;
   rdfs:range <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMeter> .
+
+<https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcAfmetingBxlInMm.breedte> a owl:ObjectProperty;
+  rdfs:comment "De breedte in millimeter."@nl;
+  rdfs:domain <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcAfmetingBxlInMm>;
+  rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement>;
+  rdfs:range <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMillimeter> .
+
+<https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcAfmetingBxlInMm.lengte> a owl:ObjectProperty;
+  rdfs:comment "De lengte in millimeter."@nl;
+  rdfs:domain <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcAfmetingBxlInMm>;
+  rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement>;
+  rdfs:range <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMillimeter> .
 
 <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcAfmetingBxlxhInCm.breedte> a owl:ObjectProperty;
   rdfs:comment "De breedte in centimeter."@nl;
@@ -501,6 +518,30 @@ schemas:OpeningHoursSpecification a rdfs:Class;
   rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement>;
   rdfs:range xsd:string .
 
+<https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcKunststofspecificaties.elasticiteitsmodulus> a owl:ObjectProperty;
+  rdfs:comment "Materiaaleigenschap die een maat is voor de stijfheid of starheid van het materiaal, uitgedrukt in N/m² of Pa."@nl;
+  rdfs:domain <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcKunststofspecificaties>;
+  rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement>;
+  rdfs:range <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMegaPascal> .
+
+<https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcKunststofspecificaties.naam> a owl:DatatypeProperty;
+  rdfs:comment "Naam of chemische formule van het kunststof of de samengestelde elementen."@nl;
+  rdfs:domain <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcKunststofspecificaties>;
+  rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement>;
+  rdfs:range xsd:string .
+
+<https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcKunststofspecificaties.norm> a owl:ObjectProperty;
+  rdfs:comment "Toegepaste norm op het kunststof voor kwaliteit te testen."@nl;
+  rdfs:domain <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcKunststofspecificaties>;
+  rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement>;
+  rdfs:range skos:Concept .
+
+<https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcKunststofspecificaties.treksterkte> a owl:ObjectProperty;
+  rdfs:comment "Treksterkte van het kunststof door de volgens de norm uitgevoerde trekproef, uitgedrukt in N/m²."@nl;
+  rdfs:domain <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcKunststofspecificaties>;
+  rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement>;
+  rdfs:range <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMegaPascal> .
+
 <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcKwaliteitscertifcaat.datumOndertekening> a owl:DatatypeProperty;
   rdfs:comment "De datum waarop het kwalitetiscertificaat ondertekend is door de administrateur-generaal."@nl;
   rdfs:domain <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcKwaliteitscertifcaat>;
@@ -632,6 +673,36 @@ schemas:OpeningHoursSpecification a rdfs:Class;
   rdfs:domain <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcTijdsduur>;
   rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement>;
   rdfs:range <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInUur> .
+
+<https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcToegangsprocedureBijlage.document> a owl:ObjectProperty;
+  rdfs:comment "Document dat bij de toegangsprocedure als bijlage toegevoed kan worden."@nl;
+  rdfs:domain <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcToegangsprocedureBijlage>;
+  rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement>;
+  rdfs:range <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcDocument> .
+
+<https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcToegangsprocedureBijlage.nota> a owl:ObjectProperty;
+  rdfs:comment "Vrije nota die als bijlage bij de toegangsprocedure gevoegd kan worden."@nl;
+  rdfs:domain <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcToegangsprocedureBijlage>;
+  rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement>;
+  rdfs:range <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DteTekstblok> .
+
+<https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcToegangsprocedureBijlage.type> a owl:ObjectProperty;
+  rdfs:comment "Het type bijlage gevoegd bij de toegangsprocedure."@nl;
+  rdfs:domain <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcToegangsprocedureBijlage>;
+  rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement>;
+  rdfs:range skos:Concept .
+
+<https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcToegangsprocedureToegangstijden.opmerking> a owl:ObjectProperty;
+  rdfs:comment "Opmerking bij de toegangstijden van een object (bijv. kantooruren tussen 9 en 17u.)"@nl;
+  rdfs:domain <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcToegangsprocedureToegangstijden>;
+  rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement>;
+  rdfs:range <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DteTekstblok> .
+
+<https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcToegangsprocedureToegangstijden.toegangstijden> a owl:ObjectProperty;
+  rdfs:comment "Het moment waarop het object toegankelijk is."@nl;
+  rdfs:domain <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcToegangsprocedureToegangstijden>;
+  rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement>;
+  rdfs:range skos:Concept .
 
 <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DteIPv4Adres.waarde> a owl:DatatypeProperty;
   <http://purl.org/vocab/vann/usageNote> "Het formaat is een decimale notatie bv. 91.198.174.232"@nl;
@@ -979,6 +1050,19 @@ schemas:OpeningHoursSpecification a rdfs:Class;
   rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement>;
   rdfs:range xsd:decimal .
 
+<https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInKubiekeCentimeter.standaardEenheid> a owl:DatatypeProperty;
+  <http://purl.org/vocab/vann/usageNote> "\"cm3\"^^cdt:ucumunit"@nl;
+  rdfs:comment "De standaard eenheid bij dit datatype is uitgedrukt in kubieke centimeter."@nl;
+  rdfs:domain <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInKubiekeCentimeter>;
+  rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement>;
+  rdfs:range rdfs:Literal .
+
+<https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInKubiekeCentimeter.waarde> a owl:ObjectProperty;
+  rdfs:comment "Bevat een getal die bij het datatype hoort."@nl;
+  rdfs:domain <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInKubiekeCentimeter>;
+  rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement>;
+  rdfs:range xsd:decimal .
+
 <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInKubiekeCentimeterPerMeter.standaardEenheid> a owl:DatatypeProperty;
   <http://purl.org/vocab/vann/usageNote> "\"cm3/m\"^^cdt:ucumunit"@nl;
   rdfs:comment "De standaard eenheid bij dit datatype is uitgedrukt in kubieke centimeter per meter."@nl;
@@ -1015,6 +1099,45 @@ schemas:OpeningHoursSpecification a rdfs:Class;
 <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInKubiekeMeterPerSeconde.waarde> a owl:ObjectProperty;
   rdfs:comment "Bevat een getal die bij het datatype hoort."@nl;
   rdfs:domain <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInKubiekeMeterPerSeconde>;
+  rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement>;
+  rdfs:range xsd:decimal .
+
+<https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInKubiekeMeterPerUur.standaardEenheid> a owl:DatatypeProperty;
+  <http://purl.org/vocab/vann/usageNote> "\"m3\"^^cdt:ucumunit"@nl;
+  rdfs:comment "De standaard eenheid bij dit datatype is uitgedrukt in kubieke meter."@nl;
+  rdfs:domain <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInKubiekeMeterPerUur>;
+  rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement>;
+  rdfs:range rdfs:Literal .
+
+<https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInKubiekeMeterPerUur.waarde> a owl:ObjectProperty;
+  rdfs:comment "Bevat een getal die bij het datatype hoort."@nl;
+  rdfs:domain <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInKubiekeMeterPerUur>;
+  rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement>;
+  rdfs:range xsd:decimal .
+
+<https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInLiter.standaardEenheid> a owl:DatatypeProperty;
+  <http://purl.org/vocab/vann/usageNote> "\"A\"^^cdt:ucumunit"@nl;
+  rdfs:comment "De standaard eenheid bij dit datatype is uitgedrukt in ampere."@nl;
+  rdfs:domain <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInLiter>;
+  rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement>;
+  rdfs:range rdfs:Literal .
+
+<https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInLiter.waarde> a owl:ObjectProperty;
+  rdfs:comment "Bevat een getal die bij het datatype hoort."@nl;
+  rdfs:domain <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInLiter>;
+  rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement>;
+  rdfs:range xsd:decimal .
+
+<https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInLiterPerMinuut.standaardEenheid> a owl:DatatypeProperty;
+  <http://purl.org/vocab/vann/usageNote> "\"l/min\"^^cdt:ucumunit"@nl;
+  rdfs:comment "De staandaard eenheid bij dit datatype is uitgedrukt in liter per minuut."@nl;
+  rdfs:domain <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInLiterPerMinuut>;
+  rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement>;
+  rdfs:range rdfs:Literal .
+
+<https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInLiterPerMinuut.waarde> a owl:ObjectProperty;
+  rdfs:comment "Bevat een getal die bij het datatype hoort."@nl;
+  rdfs:domain <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInLiterPerMinuut>;
   rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement>;
   rdfs:range xsd:decimal .
 
@@ -1388,6 +1511,60 @@ schemas:OpeningHoursSpecification a rdfs:Class;
   rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement>;
   rdfs:range skos:Concept .
 
+<https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#Toegangsprocedure.aandachtspunt> a owl:ObjectProperty;
+  rdfs:comment "Aandachtspunten waar men rekening mee moet houden wanneer men toegang tot een object wil verkrijgen."@nl;
+  rdfs:domain <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#Toegangsprocedure>;
+  rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement>;
+  rdfs:range skos:Concept .
+
+<https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#Toegangsprocedure.assetId> a owl:ObjectProperty;
+  rdfs:comment "De unieke identificator van de toegangsprocedure."@nl;
+  rdfs:domain <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#Toegangsprocedure>;
+  rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement>;
+  rdfs:range <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcIdentificator> .
+
+<https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#Toegangsprocedure.bijlage> a owl:ObjectProperty;
+  rdfs:comment "Bijlages, onder de vorm van een beschrijving en/of een document en/of een URL, die aanvullende informatie bevatten over de toegangsprocedure."@nl;
+  rdfs:domain <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#Toegangsprocedure>;
+  rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement>;
+  rdfs:range <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcToegangsprocedureBijlage> .
+
+<https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#Toegangsprocedure.naam> a owl:DatatypeProperty;
+  rdfs:comment "De naam van de toegangsprocedure."@nl;
+  rdfs:domain <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#Toegangsprocedure>;
+  rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement>;
+  rdfs:range xsd:string .
+
+<https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#Toegangsprocedure.omschrijving> a owl:DatatypeProperty;
+  rdfs:comment "Een uitgebreide toelichting die beschrijft hoe de toegangsprocedure gebruikt kan worden."@nl;
+  rdfs:domain <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#Toegangsprocedure>;
+  rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement>;
+  rdfs:range xsd:string .
+
+<https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#Toegangsprocedure.toegangstijden> a owl:ObjectProperty;
+  rdfs:comment "De dagen/uren van de dag waarop de procedure geldt."@nl;
+  rdfs:domain <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#Toegangsprocedure>;
+  rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement>;
+  rdfs:range <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcToegangsprocedureToegangstijden> .
+
+<https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#Toegangsprocedure.typeBadge> a owl:ObjectProperty;
+  rdfs:comment "De soort badge dat wordt gebruikt om toegang te verkijgen."@nl;
+  rdfs:domain <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#Toegangsprocedure>;
+  rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement>;
+  rdfs:range skos:Concept .
+
+<https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#Toegangsprocedure.typeSleutel> a owl:ObjectProperty;
+  rdfs:comment "De soort sleutel dat wordt gebruikt om toegang te verkrijgen."@nl;
+  rdfs:domain <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#Toegangsprocedure>;
+  rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement>;
+  rdfs:range skos:Concept .
+
+<https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#Toegangsprocedure.typeURI> a owl:ObjectProperty;
+  rdfs:comment "De URI van het object volgens https://www.w3.org/2001/XMLSchema#anyURI ."@nl;
+  rdfs:domain <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#Toegangsprocedure>;
+  rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement>;
+  rdfs:range xsd:anyURI .
+
 dc:Agent\.agentId a rdf:Property;
   rdfs:label "agent identificatie"@nl .
 
@@ -1416,7 +1593,8 @@ foaf:name a rdf:Property;
   rdfs:label "contactnaam"@nl .
 
 foaf:page a rdf:Property;
-  rdfs:label "website"@nl .
+  rdfs:label "website URL"@nl,
+    "website"@nl .
 
 schemas:ContactPoint\.opmerkingen a rdf:Property;
   rdfs:label "opmerkingen"@nl .
@@ -1479,6 +1657,10 @@ schemas:opens a rdf:Property;
   rdfs:comment "Complex datatype voor de afmeting van de breedte en de lengte in meter."@nl;
   rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement> .
 
+<https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcAfmetingBxlInMm> a owl:Class;
+  rdfs:comment "Complex datatype voor de afmeting van de breedte en de lengte in millimeter."@nl;
+  rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement> .
+
 <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcAfmetingDiameterInMm> a owl:Class;
   rdfs:comment "Complex datatype voor de afmeting van een diameter in millimeter."@nl;
   rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement> .
@@ -1493,10 +1675,6 @@ schemas:opens a rdf:Property;
 
 <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcConstructiestaalspecificaties> a owl:Class;
   rdfs:comment "Complex datatype om de eigenschappen van constructiestaal te bundelen."@nl;
-  rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement> .
-
-<https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DteTekstblok> a owl:Class;
-  rdfs:comment "Een tekst welke uit meerdere zinnen bestaat, en ook regeleindes kan bevatten. Een tekstblok bevat maximaal 65.000 karakters."@nl;
   rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement> .
 
 <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtuDwarsafmetingen> a owl:Class;
@@ -1554,7 +1732,7 @@ schemas:opens a rdf:Property;
   rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement> .
 
 <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInKiloAmpere> a owl:Class;
-  rdfs:comment "Een kwantitatieve waarde die een getal in kiloampère uitdrukt. "@nl;
+  rdfs:comment "Een kwantitatieve waarde die een getal in kiloampère uitdrukt."@nl;
   rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement> .
 
 <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInKiloNewton> a owl:Class;
@@ -1585,6 +1763,10 @@ schemas:opens a rdf:Property;
   rdfs:comment "Een kwantitatieve waarde die een getal in kilogram per kubieke meter uitdrukt."@nl;
   rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement> .
 
+<https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInKubiekeCentimeter> a owl:Class;
+  rdfs:comment "Een kwantitatieve waarde die een getal in kubieke centimeter uitdrukt."@nl;
+  rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement> .
+
 <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInKubiekeCentimeterPerMeter> a owl:Class;
   rdfs:comment "Een kwantitatieve waarde die een getal in kubieke centimeter per meter uitdrukt."@nl;
   rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement> .
@@ -1597,8 +1779,16 @@ schemas:opens a rdf:Property;
   rdfs:comment "Een kwantitatieve waarde die een getal in kubieke meter per seconde uitdrukt."@nl;
   rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement> .
 
-<https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMegaPascal> a owl:Class;
-  rdfs:comment "Een kwantitatieve waarde die een getal in megapascal uitdrukt."@nl;
+<https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInKubiekeMeterPerUur> a owl:Class;
+  rdfs:comment "Een kwantitatieve waarde die een getal in kubieke meter per uur uitdrukt."@nl;
+  rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement> .
+
+<https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInLiter> a owl:Class;
+  rdfs:comment "Een kwantitatieve waarde die een getal in ampere uitdrukt."@nl;
+  rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement> .
+
+<https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInLiterPerMinuut> a owl:Class;
+  rdfs:comment "Een kwantitatieve waarde die een getal in liter per minuut uitdrukt."@nl;
   rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement> .
 
 <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMeterTAW> a owl:Class;
@@ -1672,10 +1862,6 @@ schemas:opens a rdf:Property;
   rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement>;
   rdfs:subClassOf <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMObject> .
 
-<https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMToestand> a owl:Class;
-  rdfs:comment "Voegt een attribuut toe aan de subklasse dat de huidige stand in de levenscyclus van het object aangeeft."@nl;
-  rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement> .
-
 <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#Appurtenance> a owl:Class;
   <http://purl.org/vocab/vann/usageNote> "Gebruik dit type enkel voor aanlevering voor AKELA indien geen specifieke types aanwezig zijn in OTL."@nl;
   rdfs:comment "Appurtenance-objecten zijn toebehoren of accessoires, dus allerlei apparaten, toestellen en dergelijke,kortom diverse soorten leidingelementen."@nl;
@@ -1696,6 +1882,10 @@ schemas:opens a rdf:Property;
 
 <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcTijdsduur> a owl:Class;
   rdfs:comment "Complex datatype voor de instelling van een tijdsbepaling."@nl;
+  rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement> .
+
+<https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcToegangsprocedureToegangstijden> a owl:Class;
+  rdfs:comment "Complex datatype om de toegangstijden bij een toegangsprocedure te specifieren."@nl;
   rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement> .
 
 <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#ElectricityCable> a owl:Class;
@@ -1731,12 +1921,16 @@ schemas:opens a rdf:Property;
   rdfs:subClassOf <https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#OmhullendeInrichting>,
     <https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#Leiding> .
 
-<https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMDBStatus> a owl:Class;
-  rdfs:comment "Voegt een attribuut toe aan de subklasse dat aangeeft of de asset zichtbaar is in de databank of (zacht) verwijderd is."@nl;
+<https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMToestand> a owl:Class;
+  rdfs:comment "Voegt een attribuut toe aan de subklasse dat de huidige stand in de levenscyclus van het object aangeeft."@nl;
   rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement> .
 
 <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcAfmetingBxlxhInMm> a owl:Class;
   rdfs:comment "Complex datatype voor de afmeting van de breedte,de lengte en hoogte in millimeter."@nl;
+  rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement> .
+
+<https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcKunststofspecificaties> a owl:Class;
+  rdfs:comment "Complex datatype dat specifieke eigenschappen van de kunststof bevat."@nl;
   rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement> .
 
 <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcProductidentificatiecode> a owl:Class;
@@ -1747,12 +1941,28 @@ schemas:opens a rdf:Property;
   rdfs:comment "Complex datatype voor een rechtspersoon."@nl;
   rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement> .
 
+<https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcToegangsprocedureBijlage> a owl:Class;
+  rdfs:comment "Complex datatype dat informatie omtrent een bijlage voor een toegangsprocedure specifieert."@nl;
+  rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement> .
+
+<https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DteTekstblok> a owl:Class;
+  rdfs:comment "Een tekst welke uit meerdere zinnen bestaat, en ook regeleindes kan bevatten. Een tekstblok bevat maximaal 65.000 karakters."@nl;
+  rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement> .
+
 <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInKilogram> a owl:Class;
   rdfs:comment "Een kwantitatieve waarde die een getal in kilogram uitdrukt."@nl;
   rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement> .
 
+<https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMegaPascal> a owl:Class;
+  rdfs:comment "Een kwantitatieve waarde die een getal in megapascal uitdrukt."@nl;
+  rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement> .
+
 <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInVolt> a owl:Class;
   rdfs:comment "Een kwantitatieve waarde die een getal in volt uitdrukt."@nl;
+  rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement> .
+
+<https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMDBStatus> a owl:Class;
+  rdfs:comment "Voegt een attribuut toe aan de subklasse dat aangeeft of de asset zichtbaar is in de databank of (zacht) verwijderd is."@nl;
   rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement> .
 
 <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcHoutspecificaties> a owl:Class;
@@ -1771,12 +1981,12 @@ schemas:opens a rdf:Property;
   rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement>;
   rdfs:subClassOf <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMDBStatus> .
 
-<https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcIdentificator> a owl:Class;
-  rdfs:comment "Complex datatype voor de identificator van een AIM object volgens de bron van de identificator."@nl;
-  rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement> .
-
 <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcAdres> a owl:Class;
   rdfs:comment "Complex datatype voor de aanduiding van een bepaalde locatie, doorgaans van een huis, woning, gebouw of faciliteit, op de aarde."@nl;
+  rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement> .
+
+<https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcIdentificator> a owl:Class;
+  rdfs:comment "Complex datatype voor de identificator van een AIM object volgens de bron van de identificator."@nl;
   rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement> .
 
 <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcNatuurlijkPersoon> a owl:Class;
@@ -1789,6 +1999,13 @@ schemas:opens a rdf:Property;
 
 <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMObject> a owl:Class;
   rdfs:comment "Abstracte als de basisklasse voor alle uniek geïdentificeerde OTL objecten met de basiseigenschappen die elk OTL object minstens heeft."@nl;
+  rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement>;
+  rdfs:subClassOf <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMToestand>,
+    <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMDBStatus> .
+
+<https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#Toegangsprocedure> a owl:Class;
+  <http://purl.org/vocab/vann/usageNote> "Om een toegangspunt tot het object te verduidelijken, kan er een punt geometrie aangeleverd worden om het toegangspunt aan te geven."@nl;
+  rdfs:comment "De procedure die gevolgd moet worden om toegang te verkrijgen tot een object."@nl;
   rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement>;
   rdfs:subClassOf <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMToestand>,
     <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMDBStatus> .

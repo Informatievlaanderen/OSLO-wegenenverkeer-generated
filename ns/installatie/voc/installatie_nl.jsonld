@@ -1689,7 +1689,7 @@
   "license": "https://data.vlaanderen.be/id/licentie/modellicentie-gratis-hergebruik/v1.0",
   "issued": "TODO",
   "navigation": {
-    "prev": "/doc/vocabularium/wegenenverkeer/installatie/ontwerpdocument/2.6.0-RC2"
+    "prev": "/doc/vocabularium/wegenenverkeer/installatie/ontwerpdocument/2.7.0-RC1"
   },
   "publication-state": "https://data.vlaanderen.be/doc/concept/StandaardStatus/KandidaatStandaard",
   "publication-date": "9-3-2023",
@@ -1762,6 +1762,17 @@
       },
       "parents": [
         "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMObject"
+      ]
+    },
+    {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Berlinerwand",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
+      "definition": {
+        "nl": "Een damwandconstructie, opgebouwd uit stalen H-profielen en (stalen)planken. De berlinerwand wordt vooral toegepast als grondkering bij bouwputten."
+      },
+      "parents": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMNaamObject",
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#Grondkeringen"
       ]
     },
     {
@@ -1853,6 +1864,45 @@
       },
       "parents": [
         "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#ConstructiefObject"
+      ]
+    },
+    {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Combiwand",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
+      "definition": {
+        "nl": "Een gecombineerde wand bestaande uit verschillende damplanken en buispalen of H-profielen."
+      },
+      "parents": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMObject",
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#Grondkeringen",
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#AxiaalDraagvermogenWand",
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#AxiaalDraagvermogen",
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#WaterremmendeFunctie"
+      ]
+    },
+    {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Damwand",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
+      "definition": {
+        "nl": "Een grond- en/of waterkerende constructie, die bestaat uit een verticaal in de grond geplaatste wand."
+      },
+      "parents": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#ConstructieElement",
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#Grondkeringen",
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#WaterremmendeFunctie"
+      ]
+    },
+    {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#DrogePompkelder",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
+      "definition": {
+        "nl": "Een droge pompkelder is dat gedeelte van een gebouw/kunstwerk dat (meestal) onder het maaiveld is gelegen,veelal om beheersvoorzieningen te herbergen en/of als een technische ruimte dat deel uitmaakt van een pompstation."
+      },
+      "usage": {
+        "nl": "Gebruik PompKamer voor het waterbouwkundig systeem van het pompstation."
+      },
+      "parents": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMNaamObject"
       ]
     },
     {
@@ -1965,6 +2015,20 @@
       ]
     },
     {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Funderingswand",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
+      "definition": {
+        "nl": "Wand die dient om de belastingen van constructies/elementen op te vangen/over te brengen naar draagkrachtige lagen. Kan ook een grondkerende/waterkerende functie hebben."
+      },
+      "parents": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMNaamObject",
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#Grondkeringen",
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#AxiaalDraagvermogenWand",
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#AxiaalDraagvermogen",
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#WaterremmendeFunctie"
+      ]
+    },
+    {
       "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Gebouw",
       "@type": "http://www.w3.org/2002/07/owl#Class",
       "definition": {
@@ -1991,7 +2055,27 @@
         "nl": "Een geluidswerende wandvormige constructie bestaande uit een desgevallend geluidsisolerend materiaal en/of geluidsabsorberend materiaal en voorzien van de nodige structuren om de bouwkundige stabiliteit te verzekeren."
       },
       "parents": [
-        "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMObject"
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMNaamObject"
+      ]
+    },
+    {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#GewapendeGrond",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
+      "definition": {
+        "nl": "Grondkering waarbij constructieve elementen van staal of geotextiel/geogrid samenwerken met de grond en daaruit stabiliteit ontwikkelen. Een variant van gewapende grond is de 'terre armée'."
+      },
+      "parents": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMNaamObject"
+      ]
+    },
+    {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Gewichtsmuur",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
+      "definition": {
+        "nl": "Kerende constructie die stabiliteit ontleent aan zijn eigen gewicht. Onder stabiliteit dient verstaan te worden: glijden, omkantelen en verticaal draagvermogen. De muur is (meestal) onderaan breder dan bovenaan."
+      },
+      "parents": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMNaamObject"
       ]
     },
     {
@@ -2021,7 +2105,7 @@
         "nl": "Gronddammen zijn trapeziumvormige constructies bestaande uit zand, grond of steenachtige materialen. De onderkant van de gronddam wordt direct op het bestaand maaiveld aangebracht of op een vooraf aangebrachte grondverbetering. Een gronddam kan volgende functies vervullen: geluidswering, geleiding van dieren, veiligheid en lichtwering."
       },
       "parents": [
-        "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMObject"
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMNaamObject"
       ]
     },
     {
@@ -2058,7 +2142,7 @@
       "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#InspectieputRiolering",
       "@type": "http://www.w3.org/2002/07/owl#Class",
       "definition": {
-        "nl": "Dient om de aanwezige riolering te kunnen inspecteren, reinigen of onderhouden. "
+        "nl": "Dient om de aanwezige riolering te kunnen inspecteren, reinigen of onderhouden."
       },
       "parents": [
         "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMObject",
@@ -2106,6 +2190,16 @@
       ]
     },
     {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Koppeling",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
+      "definition": {
+        "nl": "Een koppeling is een machineonderdeel dat wordt gebruikt om vermogen (rotatie en koppel) over te brengen van een aandrijvende as naar een aangedreven as."
+      },
+      "parents": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMNaamObject"
+      ]
+    },
+    {
       "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#L2AccessStructuur",
       "@type": "http://www.w3.org/2002/07/owl#Class",
       "definition": {
@@ -2140,6 +2234,16 @@
       "@type": "http://www.w3.org/2002/07/owl#Class",
       "definition": {
         "nl": "Eindsteunpunt van een brug die de overgang vormt naar het achterliggend grondlichaam én als hoofdfunctie heeft de brug te ondersteunen."
+      },
+      "parents": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMNaamObject"
+      ]
+    },
+    {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Langsgracht",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
+      "definition": {
+        "nl": "Een langsgracht of een baangracht is een gracht die (meestal) parallel loopt met een weg en dient om hemelwater en water van de aangrenzende percelen op te vangen."
       },
       "parents": [
         "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMNaamObject"
@@ -2196,10 +2300,20 @@
       ]
     },
     {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#MVPaal",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
+      "definition": {
+        "nl": "Grondverdringende stalen paal met een inwendige en/of uitwendige injectie met grout-specie. Ze wordt vervaardigd door het heien van een stalen profiel/buis in de bodem onder gelijktijdig injecteren van een groutmengsel."
+      },
+      "parents": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Funderingspaal"
+      ]
+    },
+    {
       "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Meetstation",
       "@type": "http://www.w3.org/2002/07/owl#Class",
       "definition": {
-        "nl": "De plaats waar verschillende sensoren samen 1 meetstation vormen. "
+        "nl": "De plaats waar verschillende sensoren samen 1 meetstation vormen."
       },
       "parents": [
         "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMNaamObject"
@@ -2226,6 +2340,16 @@
       ]
     },
     {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Overbrenging",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
+      "definition": {
+        "nl": "Een overbrenging of transmissie brengt een vermogen (bv. van een motor) over op een bewegingsmechanisme. Daarbij kan de snelheid, de kracht en het koppel aangepast worden aan de noden van het bewegingsmechanisme (bv. door gebruik te maken van een tandwielkast)."
+      },
+      "parents": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMNaamObject"
+      ]
+    },
+    {
       "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Pad",
       "@type": "http://www.w3.org/2002/07/owl#Class",
       "definition": {
@@ -2240,6 +2364,39 @@
       "@type": "http://www.w3.org/2002/07/owl#Class",
       "definition": {
         "nl": "Een pijler is een steunpilaar die fungeert als vrijstaande drager en een steunpunt vormt tussen landhoofden voor de liggers of gewelven van een kunstwerk."
+      },
+      "parents": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMNaamObject"
+      ]
+    },
+    {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#PompGroep",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
+      "definition": {
+        "nl": "Een systeem dat instaat voor het omzetten van elektrische energie in een verplaatsing of drukverhoging van water. In dit geval spreekt men van een pomp. In de omgekeerde situatie spreekt men van een turbine."
+      },
+      "usage": {
+        "nl": "Gebruik PompGroep voor een modulair systeem."
+      },
+      "parents": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMNaamObject"
+      ]
+    },
+    {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Pompkamer",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
+      "definition": {
+        "nl": "Elk volume,inclusief de bouwkundige elementen die dit volume bepalen,dat deel uitmaakt van het waterbouwkundig systeem van het pompstation en als zodanig onder water kan staan."
+      },
+      "parents": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#PutRelatie"
+      ]
+    },
+    {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Pompstation",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
+      "definition": {
+        "nl": "Inrichting voor het oppompen van grond- of oppervlaktewater."
       },
       "parents": [
         "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMNaamObject"
@@ -2286,6 +2443,18 @@
       ]
     },
     {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#SecansTangenspalenwand",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
+      "definition": {
+        "nl": "Een secans- of tangenspalenwand bestaat uit betonnen boorpalen. Bij de secanspalenwand zijn dit primaire en secundaire, in elkaar oversneden palen. Bij de tangenspalenwand snijden de boorpalen niet in elkaar in (geen overlap). De wand heeft tot doel een bouwputbeschoeiing te realiseren. De stabiliteit van de grondkering wordt verzekerd door verankeringen en/of schoringen."
+      },
+      "parents": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMNaamObject",
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#Grondkeringen",
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#WaterremmendeFunctie"
+      ]
+    },
+    {
       "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Slagboom",
       "@type": "http://www.w3.org/2002/07/owl#Class",
       "definition": {
@@ -2293,6 +2462,47 @@
       },
       "parents": [
         "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#NaampadObject"
+      ]
+    },
+    {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Soilmixwand",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
+      "definition": {
+        "nl": "Een cutter soilmixwand (CSM-wand) is een aansluitende kerende wand bestaande uit elkaar overlappende moten in de grond gevormd. Deze heeft een grond- en waterkerende functie."
+      },
+      "parents": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMNaamObject",
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#Grondkeringen"
+      ]
+    },
+    {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#StalenCaisson",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
+      "definition": {
+        "nl": "Dit is een samengesteld element bestaande uit twee of meerdere warmgewalste stalen damplanken met Z- of U-vorm."
+      },
+      "parents": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMNaamObject"
+      ]
+    },
+    {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#StalenFunderingsprofiel",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
+      "definition": {
+        "nl": "Stalen profiel, bijvoorbeeld een H-profiel, dat wordt gebruikt als fundering of wapening van een fundering. Dit is geen profiel voor een damplank: hiervoor moet 'Stalen damplank' worden gebruikt."
+      },
+      "parents": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Funderingspaal"
+      ]
+    },
+    {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#TijdelijkeBerlinerwandTussenschot",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
+      "definition": {
+        "nl": "Het tussenschot (plaat of plank tussen profielen) voor een tijdelijke berlinerwand. Om een berlinerwand te definiëren die permanent in de grond blijft, moeten de specifieke (materiaal)onderdelen gebruikt worden."
+      },
+      "parents": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMNaamObject"
       ]
     },
     {
@@ -2367,6 +2577,17 @@
       ]
     },
     {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#VernageldeWand",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
+      "definition": {
+        "nl": "Versteviging van de grond door een rooster van ankers (nagels), waarbij de oppervlakte tussen de ankers gestabiliseerd wordt door middel van gewapend spuitbeton."
+      },
+      "parents": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMNaamObject",
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#Grondkeringen"
+      ]
+    },
+    {
       "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#VoorzieningNegatieveReactie",
       "@type": "http://www.w3.org/2002/07/owl#Class",
       "definition": {
@@ -2399,10 +2620,10 @@
       ]
     },
     {
-      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Wilddetectiesysteem",
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Wilddetectiezone",
       "@type": "http://www.w3.org/2002/07/owl#Class",
       "definition": {
-        "nl": "Dit systeem registreert de beweging van dieren in de omgeving van de weg. Vervolgens kan het chauffeurs waarschuwen, zodat ze op tijd hun snelheid kunnen aanpassen."
+        "nl": "De wilddetectiezone van een wilddetectiesysteem betreft de nabije zone rond de detectiesystemen (zoals een bewegingssensor). Deze zone vereist extra onderhoud, om valse detecties te voorkomen."
       },
       "parents": [
         "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMNaamObject"
@@ -2442,7 +2663,28 @@
   "externals": [
     {
       "name": {
+        "nl": "Langsgracht doorsnede"
+      },
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
+      "@type": "rdfs:Class"
+    },
+    {
+      "name": {
         "nl": "Wegberm type"
+      },
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
+      "@type": "rdfs:Class"
+    },
+    {
+      "name": {
+        "nl": "Langsgracht type"
+      },
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
+      "@type": "rdfs:Class"
+    },
+    {
+      "name": {
+        "nl": "Wegberm BIO"
       },
       "@id": "http://www.w3.org/2004/02/skos/core#Concept",
       "@type": "rdfs:Class"
@@ -2470,34 +2712,6 @@
     },
     {
       "name": {
-        "nl": "Type horizontale plaat"
-      },
-      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
-      "@type": "rdfs:Class"
-    },
-    {
-      "name": {
-        "nl": "Type aanvaarbescherming"
-      },
-      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
-      "@type": "rdfs:Class"
-    },
-    {
-      "name": {
-        "nl": "Type externe naspanning"
-      },
-      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
-      "@type": "rdfs:Class"
-    },
-    {
-      "name": {
-        "nl": "Wegberm BIO"
-      },
-      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
-      "@type": "rdfs:Class"
-    },
-    {
-      "name": {
         "nl": "Type vakwerk-element"
       },
       "@id": "http://www.w3.org/2004/02/skos/core#Concept",
@@ -2513,6 +2727,48 @@
     {
       "name": {
         "nl": "Type windverband"
+      },
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
+      "@type": "rdfs:Class"
+    },
+    {
+      "name": {
+        "nl": "Type horizontale plaat"
+      },
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
+      "@type": "rdfs:Class"
+    },
+    {
+      "name": {
+        "nl": "Type aanvaarbescherming"
+      },
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
+      "@type": "rdfs:Class"
+    },
+    {
+      "name": {
+        "nl": "Primaire vorm combiwand"
+      },
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
+      "@type": "rdfs:Class"
+    },
+    {
+      "name": {
+        "nl": "Secundaire combiwand"
+      },
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
+      "@type": "rdfs:Class"
+    },
+    {
+      "name": {
+        "nl": "Type externe naspanning"
+      },
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
+      "@type": "rdfs:Class"
+    },
+    {
+      "name": {
+        "nl": "Materiaal tussenschot Berlinerwand"
       },
       "@id": "http://www.w3.org/2004/02/skos/core#Concept",
       "@type": "rdfs:Class"
@@ -2604,6 +2860,27 @@
     {
       "name": {
         "nl": "Pad netwerkprotectie"
+      },
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
+      "@type": "rdfs:Class"
+    },
+    {
+      "name": {
+        "nl": "Pompgroep merk"
+      },
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
+      "@type": "rdfs:Class"
+    },
+    {
+      "name": {
+        "nl": "Pompgroep modelnaam"
+      },
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
+      "@type": "rdfs:Class"
+    },
+    {
+      "name": {
+        "nl": "Kamer functie"
       },
       "@id": "http://www.w3.org/2004/02/skos/core#Concept",
       "@type": "rdfs:Class"
@@ -2737,13 +3014,13 @@
       "generalization": []
     },
     {
-      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Wilddetectiesysteem.afmetingOnderhoudszone",
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Wilddetectiezone.afmeting",
       "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "definition": {
-        "nl": "De onderhoudszone van een wilddetectiesysteem betreft de nabije zone rond de detectiesystemen (zoals een bewegingssensor), die zich in de detectiezones bevinden. Deze zone vereist extra onderhoud, om valse detecties te voorkomen."
+        "nl": "De afmetingen van de wilddetectiezone."
       },
       "domain": [
-        "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Wilddetectiesysteem"
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Wilddetectiezone"
       ],
       "range": [
         "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcAfmetingBxlInM"
@@ -2817,6 +3094,62 @@
       ],
       "range": [
         "http://www.w3.org/2001/XMLSchema#boolean"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#VernageldeWand.rekennota",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "definition": {
+        "nl": "De bijhorende rekennota met berekeningen."
+      },
+      "domain": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#VernageldeWand"
+      ],
+      "range": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcDocument"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#VernageldeWand.hellingshoek",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "definition": {
+        "nl": "Hoek van de vernagelde wand t.o.v. de grond in decimale graden."
+      },
+      "domain": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#VernageldeWand"
+      ],
+      "range": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInDecimaleGraden"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#VernageldeWand.hOhAfstandGrondankers",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "definition": {
+        "nl": "Hart op hart afstand tussen grondankers in de wand."
+      },
+      "domain": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#VernageldeWand"
+      ],
+      "range": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInCentimeter"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#VernageldeWand.detailplan",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "definition": {
+        "nl": "Plan met details van de opbouw van de vernagelde wand."
+      },
+      "domain": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#VernageldeWand"
+      ],
+      "range": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcDocument"
       ],
       "generalization": []
     },
@@ -3164,6 +3497,76 @@
       "generalization": []
     },
     {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#TijdelijkeBerlinerwandTussenschot.materiaal",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "definition": {
+        "nl": "Het materiaal voor het tijdelijke tussenschot."
+      },
+      "domain": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#TijdelijkeBerlinerwandTussenschot"
+      ],
+      "range": [
+        "http://www.w3.org/2004/02/skos/core#Concept"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#TijdelijkeBerlinerwandTussenschot.aanzetpeil",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "definition": {
+        "nl": "Aanzetpeil van het element in mTaw."
+      },
+      "domain": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#TijdelijkeBerlinerwandTussenschot"
+      ],
+      "range": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMeterTAW"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#StalenFunderingsprofiel.isSlotAanwezig",
+      "@type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
+      "definition": {
+        "nl": "Geeft aan of er al dan niet een slot aanwezig is."
+      },
+      "domain": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#StalenFunderingsprofiel"
+      ],
+      "range": [
+        "http://www.w3.org/2001/XMLSchema#boolean"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#StalenFunderingsprofiel.inbrengmethode",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "definition": {
+        "nl": "Keuzelijst om de inbrengmethode toe te lichten."
+      },
+      "domain": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#StalenFunderingsprofiel"
+      ],
+      "range": [
+        "http://www.w3.org/2004/02/skos/core#Concept"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#StalenFunderingsprofiel.aanzetpeilSlot",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "definition": {
+        "nl": "Aanzetpeil van het slot."
+      },
+      "domain": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#StalenFunderingsprofiel"
+      ],
+      "range": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMeterTAW"
+      ],
+      "generalization": []
+    },
+    {
       "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Slagboom.isManueel",
       "@type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
       "definition": {
@@ -3177,6 +3580,48 @@
       ],
       "range": [
         "http://www.w3.org/2001/XMLSchema#boolean"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#SecansTangenspalenwand.rekennota",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "definition": {
+        "nl": "De bijhorende rekennota met berekeningen."
+      },
+      "domain": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#SecansTangenspalenwand"
+      ],
+      "range": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcDocument"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#SecansTangenspalenwand.heeftInsnijdendePalen",
+      "@type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
+      "definition": {
+        "nl": "Bepaling of er insnijdende palen aanwezig zijn."
+      },
+      "domain": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#SecansTangenspalenwand"
+      ],
+      "range": [
+        "http://www.w3.org/2001/XMLSchema#boolean"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#SecansTangenspalenwand.hOhAfstandPalen",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "definition": {
+        "nl": "Hart op hart afstand tussen palen in de wand."
+      },
+      "domain": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#SecansTangenspalenwand"
+      ],
+      "range": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInCentimeter"
       ],
       "generalization": []
     },
@@ -3317,6 +3762,205 @@
       },
       "domain": [
         "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#RadioheruitzendInstallatie"
+      ],
+      "range": [
+        "http://www.w3.org/2001/XMLSchema#boolean"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Pompkamer.volume",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "definition": {
+        "nl": "De (maximale) inhoud van de pompkamer."
+      },
+      "domain": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Pompkamer"
+      ],
+      "range": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInKubiekeMeter"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Pompkamer.technischeFiche",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "definition": {
+        "nl": "De technische fiche van de pompkamer."
+      },
+      "usage": {
+        "nl": "Bestanden van het type xlsx, dwg of pdf."
+      },
+      "domain": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Pompkamer"
+      ],
+      "range": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcDocument"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Pompkamer.reinigingsInterval",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "definition": {
+        "nl": "Termijn uitgedrukt in maanden waarbinnen de reiniging van de pompkamer uitgevoerd dient te worden."
+      },
+      "domain": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Pompkamer"
+      ],
+      "range": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMaand"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Pompkamer.lengte",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "definition": {
+        "nl": "De lengte van de pompkamer in millimeter, zoals uitgedrukt op het grondplan (tweede vermelde afmeting) ."
+      },
+      "domain": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Pompkamer"
+      ],
+      "range": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMillimeter"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Pompkamer.isLuchtdichtAfgesloten",
+      "@type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
+      "definition": {
+        "nl": "Geeft aan of de natte pompkelder hermetisch afgesloten is van de omgeving."
+      },
+      "domain": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Pompkamer"
+      ],
+      "range": [
+        "http://www.w3.org/2001/XMLSchema#boolean"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Pompkamer.isExplosieveilig",
+      "@type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
+      "definition": {
+        "nl": "Geeft aan of de natte pompkelder voldoet aan de ATEX richtlijn."
+      },
+      "domain": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Pompkamer"
+      ],
+      "range": [
+        "http://www.w3.org/2001/XMLSchema#boolean"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Pompkamer.functie",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "definition": {
+        "nl": "De specifieke functie die een pompkamer kan vervullen."
+      },
+      "domain": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Pompkamer"
+      ],
+      "range": [
+        "http://www.w3.org/2004/02/skos/core#Concept"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Pompkamer.diepte",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "definition": {
+        "nl": "De diepte van de pompkamer in meter, zoals uitgedrukt op het grondplan."
+      },
+      "domain": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Pompkamer"
+      ],
+      "range": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMillimeter"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Pompkamer.breedte",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "definition": {
+        "nl": "De breedte van de pompkamer in millimeter, zoals uitgedrukt op het grondplan (eerst vermelde afmeting)."
+      },
+      "domain": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Pompkamer"
+      ],
+      "range": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMillimeter"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#PompGroep.soort",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "definition": {
+        "nl": "Bepaalt de aard van de pomp volgens haar werkingsprincipe."
+      },
+      "domain": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#PompGroep"
+      ],
+      "range": [
+        "http://www.w3.org/2004/02/skos/core#Concept"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#PompGroep.modelnaam",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "definition": {
+        "nl": "De modelnaam van de pompgroep."
+      },
+      "domain": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#PompGroep"
+      ],
+      "range": [
+        "http://www.w3.org/2004/02/skos/core#Concept"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#PompGroep.merk",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "definition": {
+        "nl": "Het merk van de pompgroep."
+      },
+      "domain": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#PompGroep"
+      ],
+      "range": [
+        "http://www.w3.org/2004/02/skos/core#Concept"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#PompGroep.kanTurbineren",
+      "@type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
+      "definition": {
+        "nl": "Geeft aan of de pompgroep ook gebruikt kan worden als turbine."
+      },
+      "domain": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#PompGroep"
+      ],
+      "range": [
+        "http://www.w3.org/2001/XMLSchema#boolean"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#PompGroep.heeftIdentificatieplaat",
+      "@type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
+      "definition": {
+        "nl": "Geeft aan of er ter plekke een identificatieplaat aanwezig is die het object identificeert en beschrijft."
+      },
+      "domain": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#PompGroep"
       ],
       "range": [
         "http://www.w3.org/2001/XMLSchema#boolean"
@@ -3474,6 +4118,34 @@
       ],
       "range": [
         "http://www.w3.org/2004/02/skos/core#Concept"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#MVPaal.volumeCementgrout",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "definition": {
+        "nl": "Volume van het cement per uur in kubieke meter."
+      },
+      "domain": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#MVPaal"
+      ],
+      "range": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInKubiekeMeterPerUur"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#MVPaal.technischeFicheMVPaal",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "definition": {
+        "nl": "De technische gegevens van de MV-paal (detail afmetingen, dikte, hoogte, groutspecificaties,...)"
+      },
+      "domain": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#MVPaal"
+      ],
+      "range": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcDocument"
       ],
       "generalization": []
     },
@@ -3717,6 +4389,104 @@
       "generalization": []
     },
     {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Langsgracht.type",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "definition": {
+        "nl": "Geeft aan of de langsgracht open of ingebuisd is."
+      },
+      "domain": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Langsgracht"
+      ],
+      "range": [
+        "http://www.w3.org/2004/02/skos/core#Concept"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Langsgracht.lengte",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "definition": {
+        "nl": "De lengte van de langsgracht, uitgedrukt in meter."
+      },
+      "domain": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Langsgracht"
+      ],
+      "range": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMeter"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Langsgracht.isOnderhoudsgevoelig",
+      "@type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
+      "definition": {
+        "nl": "Een langsgracht wordt onderhoudsgevoelig geacht wanneer ervaring leert dat deze extra onderhoud vereist om bijvoorbeeld dichtslibbing of verstopping te vermijden."
+      },
+      "domain": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Langsgracht"
+      ],
+      "range": [
+        "http://www.w3.org/2001/XMLSchema#boolean"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Langsgracht.isMachinaalBereikbaar",
+      "@type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
+      "definition": {
+        "nl": "Een gracht is machinaal bereikbaar wanneer er ten minste één wielspoorlijn van de uitvoerende machine opstelbaar is op een verhard weggedeelte en er geen obstakels de machinale toegang verhinderen."
+      },
+      "domain": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Langsgracht"
+      ],
+      "range": [
+        "http://www.w3.org/2001/XMLSchema#boolean"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Langsgracht.isBekleed",
+      "@type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
+      "definition": {
+        "nl": "Een langsgracht is bekleed wanneer de natuurlijke bodem en/of talud bedekt worden door bepaalde materialen, zoals bijvoorbeeld geotextiel, schanskorven, betuiningen, etc."
+      },
+      "domain": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Langsgracht"
+      ],
+      "range": [
+        "http://www.w3.org/2001/XMLSchema#boolean"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Langsgracht.doorsnede",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "definition": {
+        "nl": "De doorsnede van de langsgracht."
+      },
+      "domain": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Langsgracht"
+      ],
+      "range": [
+        "http://www.w3.org/2004/02/skos/core#Concept"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Langsgracht.bevatVuilvracht",
+      "@type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
+      "definition": {
+        "nl": "Geeft aan dat de langsgracht verontreinigde stoffen of afvalwater (van bijv. een rioleringsstelsel) bevat."
+      },
+      "domain": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Langsgracht"
+      ],
+      "range": [
+        "http://www.w3.org/2001/XMLSchema#boolean"
+      ],
+      "generalization": []
+    },
+    {
       "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Landhoofd.typeLandhoofd",
       "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "definition": {
@@ -3776,7 +4546,7 @@
       "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#LEDWegdekreflectorBebakening.lengte",
       "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "definition": {
-        "nl": "De afstand tussen de eerste en de laatste actieve reflector in de verzameling gevoed door dezelfde stroomkring. "
+        "nl": "De afstand tussen de eerste en de laatste actieve reflector in de verzameling gevoed door dezelfde stroomkring."
       },
       "domain": [
         "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#LEDWegdekreflectorBebakening"
@@ -3888,7 +4658,7 @@
       "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#LEDRotondeafbakening.lengte",
       "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "definition": {
-        "nl": "De afstand tussen de eerste en de laatste actieve reflector in de verzameling gevoed door dezelfde stroomkring. "
+        "nl": "De afstand tussen de eerste en de laatste actieve reflector in de verzameling gevoed door dezelfde stroomkring."
       },
       "domain": [
         "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#LEDRotondeafbakening"
@@ -4165,6 +4935,104 @@
       "generalization": []
     },
     {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Gewichtsmuur.technischeFicheGewichtsmuur",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "definition": {
+        "nl": "Technische fiche dat technische details bijhoudt van de gewichtsmuur."
+      },
+      "domain": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Gewichtsmuur"
+      ],
+      "range": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcDocument"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Gewichtsmuur.isUitgevoerdAlsBlokkenmuur",
+      "@type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
+      "definition": {
+        "nl": "Geeft aan of de gewichtsmuur uitgevoerd is als blokkenmuur of niet."
+      },
+      "domain": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Gewichtsmuur"
+      ],
+      "range": [
+        "http://www.w3.org/2001/XMLSchema#boolean"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#GewapendeGrond.rekennota",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "definition": {
+        "nl": "De bijhorende rekennota met berekeningen."
+      },
+      "domain": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#GewapendeGrond"
+      ],
+      "range": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcDocument"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#GewapendeGrond.maximaalUitgravingspeil",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "definition": {
+        "nl": "Het maximale uitgravingspeil."
+      },
+      "domain": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#GewapendeGrond"
+      ],
+      "range": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMeterTAW"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#GewapendeGrond.grondkerendeHoogte",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "definition": {
+        "nl": "De hoogte van de teen tot de kop van de grondkering van het maaiveld."
+      },
+      "domain": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#GewapendeGrond"
+      ],
+      "range": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMeter"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#GewapendeGrond.detailplan",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "definition": {
+        "nl": "Plan met details van de opbouw van de gewapende grond."
+      },
+      "domain": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#GewapendeGrond"
+      ],
+      "range": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcDocument"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#GewapendeGrond.aanzetpeil",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "definition": {
+        "nl": "Het aanzetpeil van de gewapende grond in mTaw."
+      },
+      "domain": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#GewapendeGrond"
+      ],
+      "range": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMeterTAW"
+      ],
+      "generalization": []
+    },
+    {
       "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#GeluidwerendeConstructie.totaleOppervlakte",
       "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "definition": {
@@ -4276,6 +5144,20 @@
       ],
       "range": [
         "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcDocument"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Funderingswand.totaleLengteFunderingswand",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "definition": {
+        "nl": "De totale horizontale lengte van de gehele funderingswand in lopende meter."
+      },
+      "domain": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Funderingswand"
+      ],
+      "range": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMeter"
       ],
       "generalization": []
     },
@@ -4447,6 +5329,272 @@
       ],
       "range": [
         "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcDocument"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#DrogePompkelder.isOndergronds",
+      "@type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
+      "definition": {
+        "nl": "Geeft aan of de droge pompkelder zich boven- of ondergronds bevindt."
+      },
+      "domain": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#DrogePompkelder"
+      ],
+      "range": [
+        "http://www.w3.org/2001/XMLSchema#boolean"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Damwand.totaleLengte",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "definition": {
+        "nl": "De totale lengte van de damwandconstructie in lopende meter."
+      },
+      "domain": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Damwand"
+      ],
+      "range": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMeter"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Damwand.totaleHorizontaleLengteDamwand",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "definition": {
+        "nl": "De totale horizontale lengte van de damwand in lopende meter."
+      },
+      "domain": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Damwand"
+      ],
+      "range": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMeter"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Damwand.slotvulling",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "definition": {
+        "nl": "De vulling van het slot van de damwand."
+      },
+      "domain": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Damwand"
+      ],
+      "range": [
+        "http://www.w3.org/2004/02/skos/core#Concept"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Damwand.profiellengte",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "definition": {
+        "nl": "De lengte van één damwandprofiel."
+      },
+      "domain": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Damwand"
+      ],
+      "range": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMeter"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Damwand.planzicht",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "definition": {
+        "nl": "Het overzicht, in een plan, van de gehele damwand."
+      },
+      "domain": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Damwand"
+      ],
+      "range": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcDocument"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Damwand.oppervlakte",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "definition": {
+        "nl": "De totale oppervlakte van de damwandconstructie in vierkante meter."
+      },
+      "domain": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Damwand"
+      ],
+      "range": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInVierkanteMeter"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Damwand.ontwerpwaterpeilVoorDeKering",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "definition": {
+        "nl": "De overschrijdingsfrequentie van het waterpeil die de damwand moet kunnen keren."
+      },
+      "domain": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Damwand"
+      ],
+      "range": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMeterTAW"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Damwand.ontwerpwaterpeilAchterDeKering",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "definition": {
+        "nl": "De overschrijdingsfrequentie van het waterpeil die de damwand moet kunnen keren."
+      },
+      "domain": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Damwand"
+      ],
+      "range": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMeterTAW"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Damwand.ontwerpMaaiveldVoorDeKering",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "definition": {
+        "nl": "De overschrijdingsfrequentie van het maaiveld die de damwand moet kunnen keren."
+      },
+      "domain": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Damwand"
+      ],
+      "range": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMeterTAW"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Damwand.ontwerpMaaiveldAchterDeKering",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "definition": {
+        "nl": "De overschrijdingsfrequentie van de waterstand die de damwand moet kunnen keren."
+      },
+      "domain": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Damwand"
+      ],
+      "range": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMeterTAW"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Damwand.materiaal",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "definition": {
+        "nl": "Het materiaal waaruit de damwand bestaat."
+      },
+      "domain": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Damwand"
+      ],
+      "range": [
+        "http://www.w3.org/2004/02/skos/core#Concept"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Damwand.isWaterdicht",
+      "@type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
+      "definition": {
+        "nl": "Geeft aan of de damwand al dan niet waterdicht is."
+      },
+      "domain": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Damwand"
+      ],
+      "range": [
+        "http://www.w3.org/2001/XMLSchema#boolean"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Damwand.aansluitingBestaandeConstructie",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "definition": {
+        "nl": "Hoe de aansluiting van de hele damwand op een bestaande constructie tot stand komt."
+      },
+      "domain": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Damwand"
+      ],
+      "range": [
+        "http://www.w3.org/2004/02/skos/core#Concept"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Combiwand.totaleLengteCombiwand",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "definition": {
+        "nl": "De totale horizontale lengte van de gehele combiwand in lopende meter."
+      },
+      "domain": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Combiwand"
+      ],
+      "range": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMeter"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Combiwand.technischeFicheCombiwand",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "definition": {
+        "nl": "Document dat de technische details van de combiwand bijhoudt."
+      },
+      "domain": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Combiwand"
+      ],
+      "range": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcDocument"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Combiwand.secundaireVorm",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "definition": {
+        "nl": "Keuzelijst dat de secundaire vorm van de combiwand aangeeft."
+      },
+      "domain": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Combiwand"
+      ],
+      "range": [
+        "http://www.w3.org/2004/02/skos/core#Concept"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Combiwand.rekennotaCombiwand",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "definition": {
+        "nl": "De rekennota van de combiwand, met o.a. de vermelding van UGT's en GGT's."
+      },
+      "domain": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Combiwand"
+      ],
+      "range": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcDocument"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Combiwand.primaireVorm",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "definition": {
+        "nl": "Keuzelijst dat de primaire vorm van de combiwand aangeeft."
+      },
+      "domain": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Combiwand"
+      ],
+      "range": [
+        "http://www.w3.org/2004/02/skos/core#Concept"
       ],
       "generalization": []
     },
@@ -4769,6 +5917,34 @@
       ],
       "range": [
         "http://www.w3.org/2004/02/skos/core#Concept"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Berlinerwand.tussenafstandProfielen",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "definition": {
+        "nl": "Afstand tussen verschillende profielen in meter."
+      },
+      "domain": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Berlinerwand"
+      ],
+      "range": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMeter"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Berlinerwand.totaleLengteWand",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "definition": {
+        "nl": "De totale horizontale lengte van de gehele berlinerwand in lopende meter."
+      },
+      "domain": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Berlinerwand"
+      ],
+      "range": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMeter"
       ],
       "generalization": []
     },

@@ -83,6 +83,10 @@
       "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/onderdeel#Afsluiter.hoogte",
       "@type": "@id"
     },
+    "Afsluiter.isContinuRegelbaar": {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/onderdeel#Afsluiter.isContinuRegelbaar",
+      "@type": "http://www.w3.org/2001/XMLSchema#boolean"
+    },
     "Afsluiter.materiaal": {
       "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/onderdeel#Afsluiter.materiaal",
       "@type": "@id"
@@ -100,6 +104,11 @@
     "AimDatabankStatus.isActief": {
       "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#AIMDBStatus.isActief",
       "@type": "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "AimNaamObject": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#AIMNaamObject",
+    "AimNaamObject.naam": {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#AIMNaamObject.naam",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
     },
     "AimObject": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#AIMObject",
     "AimObject.assetId": {
@@ -133,11 +142,54 @@
       "@type": "@id"
     },
     "AimToestand": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#AIMToestand",
-    "AimToestand.toestand": {
+    "AimToestand.aimToestand": {
       "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#AIMToestand.toestand",
       "@type": "@id"
     },
     "BekledingPlaats": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Beschermbuis": "https://wegenenverkeer.data.vlaanderen.be/ns/onderdeel#Beschermbuis",
+    "Beschermbuis.bevestiging(source)": {
+      "@container": "@set",
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/doc/implementatiemodel/riolering/#Bevestiging",
+      "@type": "@id"
+    },
+    "Beschermbuis.bevestiging(target)": {
+      "@container": "@set",
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/doc/implementatiemodel/riolering/#Bevestiging",
+      "@type": "@id"
+    },
+    "Beschermbuis.indicatieveDiepte": {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/onderdeel#Beschermbuis.indicatieveDiepte",
+      "@type": "@id"
+    },
+    "Beschermbuis.isFlexibel": {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/onderdeel#Beschermbuis.isFlexibel",
+      "@type": "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "Beschermbuis.kleur": {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/onderdeel#Beschermbuis.kleur",
+      "@type": "@id"
+    },
+    "Beschermbuis.materiaal": {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/onderdeel#Beschermbuis.materiaal",
+      "@type": "@id"
+    },
+    "Beschermbuis.omhult": {
+      "@container": "@set",
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/doc/implementatiemodel/riolering/#Omhult",
+      "@type": "@id"
+    },
+    "Beschermbuis.typeBescherming": {
+      "@container": "@set",
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/onderdeel#Beschermbuis.typeBescherming",
+      "@type": "@id"
+    },
+    "Beschermbuis.voorzorgsmaatregel": {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/onderdeel#Beschermbuis.voorzorgsmaatregel",
+      "@type": "@id"
+    },
+    "BeschermbuisMateriaal": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Beschermbuiskleur": "http://www.w3.org/2004/02/skos/core#Concept",
     "Bestandsbijlage": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#DtcDocument",
     "Bestandsbijlage.bestandsnaam": {
       "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#DtcDocument.bestandsnaam",
@@ -359,17 +411,7 @@
       "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/abstracten#ContainerBuis.kleur",
       "@type": "http://www.w3.org/2001/XMLSchema#string"
     },
-    "ContainerBuis.omhult": {
-      "@container": "@set",
-      "@id": "https://wegenenverkeer.data.vlaanderen.be/doc/implementatiemodel/riolering/#Omhult",
-      "@type": "@id"
-    },
     "Damwand": "https://wegenenverkeer.data.vlaanderen.be/ns/onderdeel#Damwand",
-    "Damwand.bevestiging": {
-      "@container": "@set",
-      "@id": "https://wegenenverkeer.data.vlaanderen.be/doc/implementatiemodel/riolering/#Bevestiging",
-      "@type": "@id"
-    },
     "Damwand.damwandMateriaal": {
       "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/onderdeel#Damwand.materiaal",
       "@type": "@id"
@@ -479,6 +521,8 @@
       "@type": "@id"
     },
     "IsInspectieVan": "https://wegenenverkeer.data.vlaanderen.be/ns/onderdeel#IsInspectieVan",
+    "KabelgeleidingEnLeidingBevestiging": "https://wegenenverkeer.data.vlaanderen.be/ns/abstracten#KabelgeleidingEnLeidingBevestiging",
+    "KabelsEnLeidingenBescherming": "http://www.w3.org/2004/02/skos/core#Concept",
     "Kamer": "https://wegenenverkeer.data.vlaanderen.be/ns/onderdeel#Kamer",
     "Kamer.bevestiging": {
       "@container": "@set",
@@ -652,6 +696,15 @@
       "@type": "@id"
     },
     "LaagRol": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Leiding": "https://wegenenverkeer.data.vlaanderen.be/ns/abstracten#Leiding",
+    "Leiding.buitendiameter": {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/abstracten#Leiding.buitendiameter",
+      "@type": "@id"
+    },
+    "Leiding.isRisicovol": {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/abstracten#Leiding.isRisicovol",
+      "@type": "http://www.w3.org/2001/XMLSchema#boolean"
+    },
     "LigtOp": "https://wegenenverkeer.data.vlaanderen.be/ns/onderdeel#LigtOp",
     "LinkendElement": "https://wegenenverkeer.data.vlaanderen.be/ns/abstracten#LinkendElement",
     "LinkendElement.hoortBij": {

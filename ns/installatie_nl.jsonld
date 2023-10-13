@@ -1689,10 +1689,10 @@
   "license": "https://data.vlaanderen.be/id/licentie/modellicentie-gratis-hergebruik/v1.0",
   "issued": "TODO",
   "navigation": {
-    "prev": "/doc/vocabularium/wegenenverkeer/installatie/ontwerpdocument/2.7.0-RC1"
+    "prev": "/doc/vocabularium/wegenenverkeer/installatie/ontwerpdocument/2.8.0-RC1"
   },
   "publication-state": "https://data.vlaanderen.be/doc/concept/StandaardStatus/KandidaatStandaard",
-  "publication-date": "7-6-2023",
+  "publication-date": "13-10-2023",
   "classes": [
     {
       "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#ASTRIDInstallatie",
@@ -1752,6 +1752,16 @@
       },
       "parents": [
         "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#ConstructiefObject"
+      ]
+    },
+    {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#BasisverlichtingTunnel",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
+      "definition": {
+        "nl": "Het geheel van verlichtingstoestellen dat over de hele lengte van de koker loopt en met verschillende regimes het verlichtingsniveau voor de koker kan bepalen."
+      },
+      "parents": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMNaamObject"
       ]
     },
     {
@@ -1874,9 +1884,9 @@
       },
       "parents": [
         "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMObject",
-        "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#Grondkeringen",
         "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#AxiaalDraagvermogenWand",
         "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#AxiaalDraagvermogen",
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#Grondkeringen",
         "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#WaterremmendeFunctie"
       ]
     },
@@ -1902,7 +1912,8 @@
         "nl": "Gebruik PompKamer voor het waterbouwkundig systeem van het pompstation."
       },
       "parents": [
-        "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMNaamObject"
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMNaamObject",
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#Kokerruimte"
       ]
     },
     {
@@ -2022,9 +2033,9 @@
       },
       "parents": [
         "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMNaamObject",
-        "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#Grondkeringen",
         "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#AxiaalDraagvermogenWand",
         "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#AxiaalDraagvermogen",
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#Grondkeringen",
         "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#WaterremmendeFunctie"
       ]
     },
@@ -2062,10 +2073,11 @@
       "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#GewapendeGrond",
       "@type": "http://www.w3.org/2002/07/owl#Class",
       "definition": {
-        "nl": "Grondkering waarbij constructieve elementen van staal of geotextiel/geogrid samenwerken met de grond en daaruit stabiliteit ontwikkelen. Een variant van gewapende grond is de 'terre armée'."
+        "nl": "Grondkering waarbij constructieve elementen van staal of geotextiel/geogrid samenwerken met de grond en daaruit stabiliteit ontwikkelen. Gewapende grond is ook wel gekend als 'terre armée'."
       },
       "parents": [
-        "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMNaamObject"
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMNaamObject",
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#Grondkeringen"
       ]
     },
     {
@@ -2075,7 +2087,8 @@
         "nl": "Kerende constructie die stabiliteit ontleent aan zijn eigen gewicht. Onder stabiliteit dient verstaan te worden: glijden, omkantelen en verticaal draagvermogen. De muur is (meestal) onderaan breder dan bovenaan."
       },
       "parents": [
-        "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMNaamObject"
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMNaamObject",
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#Grondkeringen"
       ]
     },
     {
@@ -2180,6 +2193,56 @@
       ]
     },
     {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Koker",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
+      "definition": {
+        "nl": "Een kokercel is een opdeling van het kokercomplex in de lengte richting, het heeft een doorvoerende functie met een in- en uitgang en eventuele zijgangen, die met een gesloten doorsnede verbonden zijn."
+      },
+      "parents": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMObject"
+      ]
+    },
+    {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Kokerafsluiting",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
+      "definition": {
+        "nl": "Het geheel van o.a. slagbomen, verkeerslichten en detectielussen in functie van de afsluiting van een koker."
+      },
+      "parents": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMNaamObject"
+      ]
+    },
+    {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Kokercomplex",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
+      "definition": {
+        "nl": "Een constructie met een gesloten doorsnede dat over de hele lengte doorloopt, continu ondersteund, bestaande uit 1 of meerdere kokercellen die 2 of meer locaties verbindt, met 1 of meerdere in- en uitgangen, ongeacht de toepassing."
+      },
+      "parents": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMNaamObject"
+      ]
+    },
+    {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Kokersectie",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
+      "definition": {
+        "nl": "Een kokersectie is een deel van een serie elementen waaruit een kokercomplex is opgebouwd."
+      },
+      "parents": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMObject"
+      ]
+    },
+    {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Kokerventilatie",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
+      "definition": {
+        "nl": "Het geheel van ventilatoren, luchtkanalen, sensoren en regelapparatuur om de luchtsnelheid, luchtdruk en luchtsamenstelling in een koker te bewaken en aan te passen aan veranderende omstandigheden, zoals verkeerscongestie of noodsituaties zoals brand."
+      },
+      "parents": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMNaamObject"
+      ]
+    },
+    {
       "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Kolom",
       "@type": "http://www.w3.org/2002/07/owl#Class",
       "definition": {
@@ -2240,13 +2303,14 @@
       ]
     },
     {
-      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Langsgracht",
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Leuning",
       "@type": "http://www.w3.org/2002/07/owl#Class",
       "definition": {
-        "nl": "Een langsgracht of een baangracht is een gracht die (meestal) parallel loopt met een weg en dient om hemelwater en water van de aangrenzende percelen op te vangen."
+        "nl": "Een leuning is een constructie waaraan men met een hand steun of stabiliteit kan vinden om niet in de diepte te vallen. Ze kan bestaan uit een stevige balk, strip of touw maar ook uit een boven- en onderregel en stijlen."
       },
       "parents": [
-        "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMNaamObject"
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMNaamObject",
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#AanhorigheidKoker"
       ]
     },
     {
@@ -2260,13 +2324,25 @@
       ]
     },
     {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Lmuur",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
+      "definition": {
+        "nl": "Grond- en/of waterkerend betonnen element bedoeld om een niveauverschil in het maaiveld op te vangen met een teen of voet aan de basis waaraan het zijn stabiliteit ontleent."
+      },
+      "parents": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMNaamObject",
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#Grondkeringen"
+      ]
+    },
+    {
       "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Lokaal",
       "@type": "http://www.w3.org/2002/07/owl#Class",
       "definition": {
         "nl": "Een ruimte binnen een gebouw."
       },
       "parents": [
-        "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#Behuizing"
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#Behuizing",
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#Kokerruimte"
       ]
     },
     {
@@ -2307,6 +2383,16 @@
       },
       "parents": [
         "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Funderingspaal"
+      ]
+    },
+    {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Matrixbord",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
+      "definition": {
+        "nl": "De elektronische displays die in de wanden van een tunnel zijn ingebouwd en die belangrijke informatie aan weggebruikers tonen."
+      },
+      "parents": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMNaamObject"
       ]
     },
     {
@@ -2389,7 +2475,8 @@
         "nl": "Elk volume,inclusief de bouwkundige elementen die dit volume bepalen,dat deel uitmaakt van het waterbouwkundig systeem van het pompstation en als zodanig onder water kan staan."
       },
       "parents": [
-        "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#PutRelatie"
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#PutRelatie",
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#Kokerruimte"
       ]
     },
     {
@@ -2436,7 +2523,7 @@
       "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Rioleringsstelsel",
       "@type": "http://www.w3.org/2002/07/owl#Class",
       "definition": {
-        "nl": "De groepering van de objecten die behoren tot de riolering."
+        "nl": "De groepering van de objecten die behoren tot het riolering, aanvoer- of afvoerstelsel."
       },
       "parents": [
         "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMObject"
@@ -2489,7 +2576,7 @@
       "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#StalenFunderingsprofiel",
       "@type": "http://www.w3.org/2002/07/owl#Class",
       "definition": {
-        "nl": "Stalen profiel, bijvoorbeeld een H-profiel, dat wordt gebruikt als fundering of wapening van een fundering. Dit is geen profiel voor een damplank: hiervoor moet 'Stalen damplank' worden gebruikt."
+        "nl": "Stalen profiel, bijvoorbeeld een H-profiel, dat wordt gebruikt als fundering of wapening van een fundering. Dit is geen profiel voor een damwand: hiervoor moet 'Stalen damplank' worden gebruikt."
       },
       "parents": [
         "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Funderingspaal"
@@ -2506,6 +2593,16 @@
       ]
     },
     {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#TijdelijkeOpslagplaats",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
+      "definition": {
+        "nl": "Permanent terrein voor tijdelijke opslag van materialen, grond, maaisel etc. gedurende de uitvoering van werken. Het opgeslagen materiaal wordt na de uitvoering van de werken van het terrein verwijderd."
+      },
+      "parents": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMNaamObject"
+      ]
+    },
+    {
       "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Trajectcontrole",
       "@type": "http://www.w3.org/2002/07/owl#Class",
       "definition": {
@@ -2516,10 +2613,31 @@
       ]
     },
     {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Trappentoren",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
+      "definition": {
+        "nl": "Een trappentoren is een geïntegreerde constructie van trappen die kan dienen om 1 of meerdere niveaus te beklimmen."
+      },
+      "parents": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMNaamObject",
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#AanhorigheidKoker"
+      ]
+    },
+    {
       "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Trekker",
       "@type": "http://www.w3.org/2002/07/owl#Class",
       "definition": {
         "nl": "Een langwerpig (lijnvormig) element dat op trek wordt belast. Dit maakt de verbinding tussen het brugdek en de hoofddraagstructuur van het brugdeel (vb.: tussen boog en brugdek, tussen pyloon en brugdek, tussen draagkabel en brugdek, tussen windverband onder de brug en brugdek)."
+      },
+      "parents": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMNaamObject"
+      ]
+    },
+    {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Tunnelverlichting",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
+      "definition": {
+        "nl": "Het systeem van verlichtingselementen en armaturen, typisch ontworpen en geïnstalleerd  in een tunnel, om aangepaste lichtniveaus volgens verschillende regimes te bieden voor veilig verkeer en zichtbaarheid binnenin een koker."
       },
       "parents": [
         "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMNaamObject"
@@ -2543,6 +2661,16 @@
       },
       "parents": [
         "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#ConstructiefObject"
+      ]
+    },
+    {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Ventilatiecluster",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
+      "definition": {
+        "nl": "Een systeem van ventilatoren die samenwerken om de luchtstroom en luchtkwaliteit in een deel van de koker of een specifieke ruimte te reguleren en te verbeteren."
+      },
+      "parents": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMNaamObject"
       ]
     },
     {
@@ -2588,6 +2716,36 @@
       ]
     },
     {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#VersterkingsverlichtingTunnel",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
+      "definition": {
+        "nl": "Een aanvullend verlichtingssysteem aan de in -en uitgang van de koker met verschillende regimes."
+      },
+      "parents": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMNaamObject"
+      ]
+    },
+    {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Vluchtdeurindicatie",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
+      "definition": {
+        "nl": "De componenten die visuele of audiovisuele aanwijzingen bieden over de plaats in een koker waar een vluchtdeur of vluchtopening te vinden is, zodat mensen snel en effectief kunnen worden geleid naar veilige uitgangen tijdens een noodsituatie."
+      },
+      "parents": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMObject"
+      ]
+    },
+    {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Vluchtganginrichting",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
+      "definition": {
+        "nl": "Het geheel van componenten die ontworpen zijn om snel en effectief de evacuatie van mensen te faciliteren in een koker die dienst doet als vluchtgang in geval van een calamiteit."
+      },
+      "parents": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMNaamObject"
+      ]
+    },
+    {
       "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#VoorzieningNegatieveReactie",
       "@type": "http://www.w3.org/2002/07/owl#Class",
       "definition": {
@@ -2602,10 +2760,30 @@
       "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Wand",
       "@type": "http://www.w3.org/2002/07/owl#Class",
       "definition": {
-        "nl": "Een verticaal constructiedeel, vrijstaand of omsluitend die een afscheiding vormt, bv. tussen 2 ruimtes."
+        "nl": "Een verticaal constructiedeel,vrijstaand of omsluitend die een afscheiding vormt,bv. tussen 2 ruimtes."
       },
       "parents": [
         "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#ConstructiefObject"
+      ]
+    },
+    {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#WaterdoorvoerendeDuiker",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
+      "definition": {
+        "nl": "Een kokervormige constructie, die is bedoeld om wateren met elkaar te verbinden. Bij een duiker wordt in principe de bodem van de watergang onderbroken, dit in tegenstelling tot een brug."
+      },
+      "parents": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMNaamObject"
+      ]
+    },
+    {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Waterweg",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
+      "definition": {
+        "nl": "Een waterweg is, volgens het juridisch statuut, een bevaarbaar waterlichaam dat zorgt voor het transporteren van de horizontale afvloeiing van neerslag- en bronwater en zich typisch leent tot scheepvaart."
+      },
+      "parents": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#WaterloopRelatie"
       ]
     },
     {
@@ -2663,13 +2841,6 @@
   "externals": [
     {
       "name": {
-        "nl": "Langsgracht doorsnede"
-      },
-      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
-      "@type": "rdfs:Class"
-    },
-    {
-      "name": {
         "nl": "Wegberm type"
       },
       "@id": "http://www.w3.org/2004/02/skos/core#Concept",
@@ -2677,7 +2848,7 @@
     },
     {
       "name": {
-        "nl": "Langsgracht type"
+        "nl": "Functie van rioleringsstelsel"
       },
       "@id": "http://www.w3.org/2004/02/skos/core#Concept",
       "@type": "rdfs:Class"
@@ -2685,6 +2856,13 @@
     {
       "name": {
         "nl": "Wegberm BIO"
+      },
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
+      "@type": "rdfs:Class"
+    },
+    {
+      "name": {
+        "nl": "Waterloop categorieën"
       },
       "@id": "http://www.w3.org/2004/02/skos/core#Concept",
       "@type": "rdfs:Class"
@@ -2775,6 +2953,62 @@
     },
     {
       "name": {
+        "nl": "Vorm leuning"
+      },
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
+      "@type": "rdfs:Class"
+    },
+    {
+      "name": {
+        "nl": "Type brandwerendheid"
+      },
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
+      "@type": "rdfs:Class"
+    },
+    {
+      "name": {
+        "nl": "Kokercel type fundering"
+      },
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
+      "@type": "rdfs:Class"
+    },
+    {
+      "name": {
+        "nl": "Afwerkingstype leuning"
+      },
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
+      "@type": "rdfs:Class"
+    },
+    {
+      "name": {
+        "nl": "type bouwmethode"
+      },
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
+      "@type": "rdfs:Class"
+    },
+    {
+      "name": {
+        "nl": "Type ondergrond"
+      },
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
+      "@type": "rdfs:Class"
+    },
+    {
+      "name": {
+        "nl": "Koker element gebruikers type"
+      },
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
+      "@type": "rdfs:Class"
+    },
+    {
+      "name": {
+        "nl": "Type materiaal"
+      },
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
+      "@type": "rdfs:Class"
+    },
+    {
+      "name": {
         "nl": "Graad van statische bepaaldheid"
       },
       "@id": "http://www.w3.org/2004/02/skos/core#Concept",
@@ -2824,6 +3058,13 @@
     },
     {
       "name": {
+        "nl": "Lokaal terreintype"
+      },
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
+      "@type": "rdfs:Class"
+    },
+    {
+      "name": {
         "nl": "Type van aardingsinstallatie"
       },
       "@id": "http://www.w3.org/2004/02/skos/core#Concept",
@@ -2839,13 +3080,6 @@
     {
       "name": {
         "nl": "Aardingsinstallatie aardingsstelsel"
-      },
-      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
-      "@type": "rdfs:Class"
-    },
-    {
-      "name": {
-        "nl": "Lokaal terreintype"
       },
       "@id": "http://www.w3.org/2004/02/skos/core#Concept",
       "@type": "rdfs:Class"
@@ -3657,6 +3891,20 @@
       "generalization": []
     },
     {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Rioleringsstelsel.functie",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "definition": {
+        "nl": "Geeft aan welke functie het rioleringsstelsel vervult,"
+      },
+      "domain": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Rioleringsstelsel"
+      ],
+      "range": [
+        "http://www.w3.org/2004/02/skos/core#Concept"
+      ],
+      "generalization": []
+    },
+    {
       "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Randprofiel.lopendeMeter",
       "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "definition": {
@@ -4347,6 +4595,34 @@
       "generalization": []
     },
     {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Lmuur.totaleBreedteVoet",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "definition": {
+        "nl": "De totale breedte van de voet uitgedrukt in centimeter."
+      },
+      "domain": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Lmuur"
+      ],
+      "range": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInCentimeter"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Lmuur.technischeFicheLmuur",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "definition": {
+        "nl": "De technische fiche waarin alle specificaties zijn opgenomen van de L-muur."
+      },
+      "domain": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Lmuur"
+      ],
+      "range": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcDocument"
+      ],
+      "generalization": []
+    },
+    {
       "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Link.ring",
       "@type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
       "definition": {
@@ -4389,13 +4665,13 @@
       "generalization": []
     },
     {
-      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Langsgracht.type",
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Leuning.vorm",
       "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "definition": {
-        "nl": "Geeft aan of de langsgracht open of ingebuisd is."
+        "nl": "De vorm van de leuning"
       },
       "domain": [
-        "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Langsgracht"
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Leuning"
       ],
       "range": [
         "http://www.w3.org/2004/02/skos/core#Concept"
@@ -4403,13 +4679,41 @@
       "generalization": []
     },
     {
-      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Langsgracht.lengte",
-      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Leuning.professioneelGebruik",
+      "@type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
       "definition": {
-        "nl": "De lengte van de langsgracht, uitgedrukt in meter."
+        "nl": "Geeft aan of het gebruik enkel voor professionelen is of ook publiekeliGeeft aan of het gebruik enkel voor professionelen is of ook publiekelijk gebruikt wordt."
       },
       "domain": [
-        "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Langsgracht"
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Leuning"
+      ],
+      "range": [
+        "http://www.w3.org/2001/XMLSchema#boolean"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Leuning.materiaal",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "definition": {
+        "nl": "Het materiaal waaruit de leuning is vervaardigd."
+      },
+      "domain": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Leuning"
+      ],
+      "range": [
+        "http://www.w3.org/2004/02/skos/core#Concept"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Leuning.lengte",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "definition": {
+        "nl": "De lengte van de leuning."
+      },
+      "domain": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Leuning"
       ],
       "range": [
         "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMeter"
@@ -4417,72 +4721,30 @@
       "generalization": []
     },
     {
-      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Langsgracht.isOnderhoudsgevoelig",
-      "@type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
-      "definition": {
-        "nl": "Een langsgracht wordt onderhoudsgevoelig geacht wanneer ervaring leert dat deze extra onderhoud vereist om bijvoorbeeld dichtslibbing of verstopping te vermijden."
-      },
-      "domain": [
-        "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Langsgracht"
-      ],
-      "range": [
-        "http://www.w3.org/2001/XMLSchema#boolean"
-      ],
-      "generalization": []
-    },
-    {
-      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Langsgracht.isMachinaalBereikbaar",
-      "@type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
-      "definition": {
-        "nl": "Een gracht is machinaal bereikbaar wanneer er ten minste één wielspoorlijn van de uitvoerende machine opstelbaar is op een verhard weggedeelte en er geen obstakels de machinale toegang verhinderen."
-      },
-      "domain": [
-        "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Langsgracht"
-      ],
-      "range": [
-        "http://www.w3.org/2001/XMLSchema#boolean"
-      ],
-      "generalization": []
-    },
-    {
-      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Langsgracht.isBekleed",
-      "@type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
-      "definition": {
-        "nl": "Een langsgracht is bekleed wanneer de natuurlijke bodem en/of talud bedekt worden door bepaalde materialen, zoals bijvoorbeeld geotextiel, schanskorven, betuiningen, etc."
-      },
-      "domain": [
-        "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Langsgracht"
-      ],
-      "range": [
-        "http://www.w3.org/2001/XMLSchema#boolean"
-      ],
-      "generalization": []
-    },
-    {
-      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Langsgracht.doorsnede",
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Leuning.hoogte",
       "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "definition": {
-        "nl": "De doorsnede van de langsgracht."
+        "nl": "De hoogte van de leuning."
       },
       "domain": [
-        "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Langsgracht"
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Leuning"
+      ],
+      "range": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMeter"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Leuning.afwerkingstype",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "definition": {
+        "nl": "Het type afwerking van de leuning."
+      },
+      "domain": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Leuning"
       ],
       "range": [
         "http://www.w3.org/2004/02/skos/core#Concept"
-      ],
-      "generalization": []
-    },
-    {
-      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Langsgracht.bevatVuilvracht",
-      "@type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
-      "definition": {
-        "nl": "Geeft aan dat de langsgracht verontreinigde stoffen of afvalwater (van bijv. een rioleringsstelsel) bevat."
-      },
-      "domain": [
-        "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Langsgracht"
-      ],
-      "range": [
-        "http://www.w3.org/2001/XMLSchema#boolean"
       ],
       "generalization": []
     },
@@ -4707,6 +4969,146 @@
       ],
       "range": [
         "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInDecimaleGraden"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Kokersectie.typeOndergrond",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "definition": {
+        "nl": "Geeft aan welke ondergrond er de desbetreffende sectie zit."
+      },
+      "domain": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Kokersectie"
+      ],
+      "range": [
+        "http://www.w3.org/2004/02/skos/core#Concept"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Kokersectie.gebruikersOpSectie",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "definition": {
+        "nl": "Geeft een keuzelijst van gebruikers dat kunnen voorkomen op de desbetreffende sectie."
+      },
+      "domain": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Kokersectie"
+      ],
+      "range": [
+        "http://www.w3.org/2004/02/skos/core#Concept"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Kokersectie.gebruikersOnderSectie",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "definition": {
+        "nl": "Geeft aan welk hoofdzakelijk type gebruikers er zich onder de sectie begeven."
+      },
+      "domain": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Kokersectie"
+      ],
+      "range": [
+        "http://www.w3.org/2004/02/skos/core#Concept"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Kokersectie.bouwmethode",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "definition": {
+        "nl": "Geeft een keuzelijst dat aangeeft hoe het koker element gebouwd en op zijn plek gezet is."
+      },
+      "domain": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Kokersectie"
+      ],
+      "range": [
+        "http://www.w3.org/2004/02/skos/core#Concept"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Kokercomplex.ligtFunderingsaanzetOnderBodem",
+      "@type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
+      "definition": {
+        "nl": "Geeft aan of de funderingsaanzet al dan niet onder de bodem ligt."
+      },
+      "domain": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Kokercomplex"
+      ],
+      "range": [
+        "http://www.w3.org/2001/XMLSchema#boolean"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Kokercomplex.ligtFunderingInOpRandWaterweg",
+      "@type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
+      "definition": {
+        "nl": "Geeft aan of de fundering van het landhoofd in of op de rand van de waterweg ligt."
+      },
+      "domain": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Kokercomplex"
+      ],
+      "range": [
+        "http://www.w3.org/2001/XMLSchema#boolean"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Koker.typeFundering",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "definition": {
+        "nl": "Het type fundering dat gebruikt wordt voor de kokercel"
+      },
+      "domain": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Koker"
+      ],
+      "range": [
+        "http://www.w3.org/2004/02/skos/core#Concept"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Koker.ontwerpbelasting",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "definition": {
+        "nl": "De ontwerpbelasting is de maximale belasting die een constructie kan opnemen zonder te bezwijken."
+      },
+      "domain": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Koker"
+      ],
+      "range": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcDocument"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Koker.maximaleVrijeHoogte",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "definition": {
+        "nl": "Hoogte die door gebruikers kan gehanteerd worden voor vervoer, rekening houdend met voorwerpen die aan de koker bevestigd zijn."
+      },
+      "domain": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Koker"
+      ],
+      "range": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInCentimeter"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Koker.brandwerendeMaatregelen",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "definition": {
+        "nl": "Keuzelijst voor aan te geven welk type brandwerendheid nodig is."
+      },
+      "domain": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Koker"
+      ],
+      "range": [
+        "http://www.w3.org/2004/02/skos/core#Concept"
       ],
       "generalization": []
     },

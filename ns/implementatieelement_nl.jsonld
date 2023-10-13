@@ -1689,10 +1689,10 @@
   "license": "https://data.vlaanderen.be/id/licentie/modellicentie-gratis-hergebruik/v1.0",
   "issued": "TODO",
   "navigation": {
-    "prev": "/doc/vocabularium/wegenenverkeer/implementatieelement/ontwerpdocument/2.7.0-RC1"
+    "prev": "/doc/vocabularium/wegenenverkeer/implementatieelement/ontwerpdocument/2.8.0-RC1"
   },
   "publication-state": "https://data.vlaanderen.be/doc/concept/StandaardStatus/KandidaatStandaard",
-  "publication-date": "7-6-2023",
+  "publication-date": "13-10-2023",
   "classes": [
     {
       "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMDBStatus",
@@ -1918,6 +1918,14 @@
       "parents": []
     },
     {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcFrequentierange",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
+      "definition": {
+        "nl": "Complex datatype voor de frequentierange van een toestel."
+      },
+      "parents": []
+    },
+    {
       "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcHoutspecificaties",
       "@type": "http://www.w3.org/2002/07/owl#Class",
       "definition": {
@@ -1930,6 +1938,14 @@
       "@type": "http://www.w3.org/2002/07/owl#Class",
       "definition": {
         "nl": "Complex datatype voor de identificator van een AIM object volgens de bron van de identificator."
+      },
+      "parents": []
+    },
+    {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcKrimpvoegvulling",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
+      "definition": {
+        "nl": "Complex datatype om de vulling voor de krimpvoeg aan te duiden met zijn technische fiche."
       },
       "parents": []
     },
@@ -2629,6 +2645,13 @@
     },
     {
       "name": {
+        "nl": "Krimpvoegvulling"
+      },
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
+      "@type": "rdfs:Class"
+    },
+    {
+      "name": {
         "nl": "Toegangsprocedure toegangstijden"
       },
       "@id": "http://www.w3.org/2004/02/skos/core#Concept",
@@ -2657,6 +2680,20 @@
     },
     {
       "name": {
+        "nl": "Mimetype"
+      },
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
+      "@type": "rdfs:Class"
+    },
+    {
+      "name": {
+        "nl": "Gebruiksdomein"
+      },
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
+      "@type": "rdfs:Class"
+    },
+    {
+      "name": {
         "nl": "Walsmethode"
       },
       "@id": "http://www.w3.org/2004/02/skos/core#Concept",
@@ -2672,20 +2709,6 @@
     {
       "name": {
         "nl": "Betonsterkteklasse"
-      },
-      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
-      "@type": "rdfs:Class"
-    },
-    {
-      "name": {
-        "nl": "Mimetype"
-      },
-      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
-      "@type": "rdfs:Class"
-    },
-    {
-      "name": {
-        "nl": "Gebruiksdomein"
       },
       "@id": "http://www.w3.org/2004/02/skos/core#Concept",
       "@type": "rdfs:Class"
@@ -2714,6 +2737,13 @@
     {
       "name": {
         "nl": "Kwaliteitsklasse van hout"
+      },
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
+      "@type": "rdfs:Class"
+    },
+    {
+      "name": {
+        "nl": "Algemeen faalmodus type"
       },
       "@id": "http://www.w3.org/2004/02/skos/core#Concept",
       "@type": "rdfs:Class"
@@ -2787,7 +2817,7 @@
       "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#Toegangsprocedure.typeSleutel",
       "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "definition": {
-        "nl": "De soort sleutel dat wordt gebruikt om toegang te verkrijgen."
+        "nl": "Het soort sleutel dat wordt gebruikt om toegang te verkrijgen."
       },
       "domain": [
         "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#Toegangsprocedure"
@@ -2801,7 +2831,7 @@
       "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#Toegangsprocedure.typeBadge",
       "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "definition": {
-        "nl": "De soort badge dat wordt gebruikt om toegang te verkijgen."
+        "nl": "Het soort badge dat wordt gebruikt om toegang te verkijgen."
       },
       "domain": [
         "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#Toegangsprocedure"
@@ -2885,7 +2915,7 @@
       "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#Toegangsprocedure.aandachtspunt",
       "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "definition": {
-        "nl": "Aandachtspunten waar men rekening mee moet houden wanneer men toegang tot een object wil verkrijgen."
+        "nl": "Aandachtspunten waar men rekening mee moet houden, die een impact hebben op de toegankelijkheid van een object."
       },
       "domain": [
         "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#Toegangsprocedure"
@@ -5236,6 +5266,34 @@
       "generalization": []
     },
     {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcKrimpvoegvulling.technischeFiche",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "definition": {
+        "nl": "De technische fiche van het product  waarmee de krimpvoeg is gevuld."
+      },
+      "domain": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcKrimpvoegvulling"
+      ],
+      "range": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcDocument"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcKrimpvoegvulling.krimpvoegvulling",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "definition": {
+        "nl": "De gebruikte vulling van de krimpvoeg."
+      },
+      "domain": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcKrimpvoegvulling"
+      ],
+      "range": [
+        "http://www.w3.org/2004/02/skos/core#Concept"
+      ],
+      "generalization": []
+    },
+    {
       "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcIdentificator.toegekendDoor",
       "@type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
       "definition": {
@@ -5330,6 +5388,34 @@
       ],
       "range": [
         "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcDocument"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcFrequentierange.ondergrens",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "definition": {
+        "nl": "De ondergrens van de frequentierange van het toestel."
+      },
+      "domain": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcFrequentierange"
+      ],
+      "range": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInHerz"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcFrequentierange.bovengrens",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "definition": {
+        "nl": "De bovengrens van de frequentierange van het toestel."
+      },
+      "domain": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcFrequentierange"
+      ],
+      "range": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInHerz"
       ],
       "generalization": []
     },

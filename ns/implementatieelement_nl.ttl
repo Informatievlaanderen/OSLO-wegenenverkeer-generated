@@ -21,19 +21,21 @@ skos:Concept a rdfs:Class;
     "Pipe container type"@nl,
     "Datakabel materiaal"@nl,
     "Telecommunications subthema"@nl,
+    "Krimpvoegvulling"@nl,
     "Toegangsprocedure toegangstijden"@nl,
     "Betonomgevingsklasse"@nl,
     "Schoorhoek"@nl,
     "Duurzaamheidsklasse van hout"@nl,
+    "Mimetype"@nl,
+    "Gebruiksdomein"@nl,
     "Walsmethode"@nl,
     "Constructiestaalsoort"@nl,
     "Betonsterkteklasse"@nl,
-    "Mimetype"@nl,
-    "Gebruiksdomein"@nl,
     "Toeslagmiddel beton"@nl,
     "Provincie"@nl,
     "Gemeente"@nl,
     "Kwaliteitsklasse van hout"@nl,
+    "Algemeen faalmodus type"@nl,
     "Sterkteklasse van hout"@nl,
     "Betonmilieuklasse"@nl,
     "Bijlagetype toegangsprocedure"@nl,
@@ -476,6 +478,18 @@ schemas:OpeningHoursSpecification a rdfs:Class;
   rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement>;
   rdfs:range xsd:anyURI .
 
+<https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcFrequentierange.bovengrens> a owl:ObjectProperty;
+  rdfs:comment "De bovengrens van de frequentierange van het toestel."@nl;
+  rdfs:domain <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcFrequentierange>;
+  rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement>;
+  rdfs:range <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInHerz> .
+
+<https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcFrequentierange.ondergrens> a owl:ObjectProperty;
+  rdfs:comment "De ondergrens van de frequentierange van het toestel."@nl;
+  rdfs:domain <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcFrequentierange>;
+  rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement>;
+  rdfs:range <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInHerz> .
+
 <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcHoutspecificaties.fscCertificaat> a owl:ObjectProperty;
   rdfs:comment "Een attest of een bewijs dat voor elke boom die gebruikt wordt er een andere in de plaats is geplant."@nl;
   rdfs:domain <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcHoutspecificaties>;
@@ -517,6 +531,18 @@ schemas:OpeningHoursSpecification a rdfs:Class;
   rdfs:domain <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcIdentificator>;
   rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement>;
   rdfs:range xsd:string .
+
+<https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcKrimpvoegvulling.krimpvoegvulling> a owl:ObjectProperty;
+  rdfs:comment "De gebruikte vulling van de krimpvoeg."@nl;
+  rdfs:domain <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcKrimpvoegvulling>;
+  rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement>;
+  rdfs:range skos:Concept .
+
+<https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcKrimpvoegvulling.technischeFiche> a owl:ObjectProperty;
+  rdfs:comment "De technische fiche van het product  waarmee de krimpvoeg is gevuld."@nl;
+  rdfs:domain <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcKrimpvoegvulling>;
+  rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement>;
+  rdfs:range <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcDocument> .
 
 <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcKunststofspecificaties.elasticiteitsmodulus> a owl:ObjectProperty;
   rdfs:comment "Materiaaleigenschap die een maat is voor de stijfheid of starheid van het materiaal, uitgedrukt in N/m² of Pa."@nl;
@@ -1512,7 +1538,7 @@ schemas:OpeningHoursSpecification a rdfs:Class;
   rdfs:range skos:Concept .
 
 <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#Toegangsprocedure.aandachtspunt> a owl:ObjectProperty;
-  rdfs:comment "Aandachtspunten waar men rekening mee moet houden wanneer men toegang tot een object wil verkrijgen."@nl;
+  rdfs:comment "Aandachtspunten waar men rekening mee moet houden, die een impact hebben op de toegankelijkheid van een object."@nl;
   rdfs:domain <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#Toegangsprocedure>;
   rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement>;
   rdfs:range skos:Concept .
@@ -1548,13 +1574,13 @@ schemas:OpeningHoursSpecification a rdfs:Class;
   rdfs:range <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcToegangsprocedureToegangstijden> .
 
 <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#Toegangsprocedure.typeBadge> a owl:ObjectProperty;
-  rdfs:comment "De soort badge dat wordt gebruikt om toegang te verkijgen."@nl;
+  rdfs:comment "Het soort badge dat wordt gebruikt om toegang te verkijgen."@nl;
   rdfs:domain <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#Toegangsprocedure>;
   rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement>;
   rdfs:range skos:Concept .
 
 <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#Toegangsprocedure.typeSleutel> a owl:ObjectProperty;
-  rdfs:comment "De soort sleutel dat wordt gebruikt om toegang te verkrijgen."@nl;
+  rdfs:comment "Het soort sleutel dat wordt gebruikt om toegang te verkrijgen."@nl;
   rdfs:domain <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#Toegangsprocedure>;
   rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement>;
   rdfs:range skos:Concept .
@@ -1677,6 +1703,14 @@ schemas:opens a rdf:Property;
   rdfs:comment "Complex datatype om de eigenschappen van constructiestaal te bundelen."@nl;
   rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement> .
 
+<https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcFrequentierange> a owl:Class;
+  rdfs:comment "Complex datatype voor de frequentierange van een toestel."@nl;
+  rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement> .
+
+<https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcKrimpvoegvulling> a owl:Class;
+  rdfs:comment "Complex datatype om de vulling voor de krimpvoeg aan te duiden met zijn technische fiche."@nl;
+  rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement> .
+
 <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtuDwarsafmetingen> a owl:Class;
   rdfs:comment "Union datatype voor de dwarsafmetingen van een object volgens zijn vorm."@nl;
   rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement> .
@@ -1713,10 +1747,6 @@ schemas:opens a rdf:Property;
 
 <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInGigabyte> a owl:Class;
   rdfs:comment "Een kwantitatieve waarde die een getal in gigabyte uitdrukt."@nl;
-  rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement> .
-
-<https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInHerz> a owl:Class;
-  rdfs:comment "Een kwantitatieve waarde die een getal in herz uitdrukt."@nl;
   rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement> .
 
 <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInInch> a owl:Class;
@@ -1947,6 +1977,10 @@ schemas:opens a rdf:Property;
 
 <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DteTekstblok> a owl:Class;
   rdfs:comment "Een tekst welke uit meerdere zinnen bestaat, en ook regeleindes kan bevatten. Een tekstblok bevat maximaal 65.000 karakters."@nl;
+  rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement> .
+
+<https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInHerz> a owl:Class;
+  rdfs:comment "Een kwantitatieve waarde die een getal in herz uitdrukt."@nl;
   rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement> .
 
 <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInKilogram> a owl:Class;

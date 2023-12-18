@@ -1689,10 +1689,10 @@
   "license": "https://data.vlaanderen.be/id/licentie/modellicentie-gratis-hergebruik/v1.0",
   "issued": "TODO",
   "navigation": {
-    "prev": "/doc/vocabularium/wegenenverkeer/installatie/ontwerpdocument/2.8.0-RC1"
+    "prev": "/doc/vocabularium/wegenenverkeer/installatie/ontwerpdocument/2.9.0-RC3"
   },
   "publication-state": "https://data.vlaanderen.be/doc/concept/StandaardStatus/KandidaatStandaard",
-  "publication-date": "13-10-2023",
+  "publication-date": "15-12-2023",
   "classes": [
     {
       "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#ASTRIDInstallatie",
@@ -1886,8 +1886,8 @@
         "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMObject",
         "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#AxiaalDraagvermogenWand",
         "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#AxiaalDraagvermogen",
-        "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#Grondkeringen",
-        "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#WaterremmendeFunctie"
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#WaterremmendeFunctie",
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#Grondkeringen"
       ]
     },
     {
@@ -1898,8 +1898,8 @@
       },
       "parents": [
         "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#ConstructieElement",
-        "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#Grondkeringen",
-        "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#WaterremmendeFunctie"
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#WaterremmendeFunctie",
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#Grondkeringen"
       ]
     },
     {
@@ -2035,8 +2035,8 @@
         "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMNaamObject",
         "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#AxiaalDraagvermogenWand",
         "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#AxiaalDraagvermogen",
-        "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#Grondkeringen",
-        "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#WaterremmendeFunctie"
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#WaterremmendeFunctie",
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#Grondkeringen"
       ]
     },
     {
@@ -2135,7 +2135,7 @@
       "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Hulppost",
       "@type": "http://www.w3.org/2002/07/owl#Class",
       "definition": {
-        "nl": "De verzameling van hulpgerelateerde technieken en objecten op een bepaalde plaats, bv.een nis in een tunnel."
+        "nl": "De verzameling van hulpgerelateerde technieken en objecten op een bepaalde plaats,bv.een nis in een tunnel."
       },
       "parents": [
         "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#NaampadObject"
@@ -2196,7 +2196,7 @@
       "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Koker",
       "@type": "http://www.w3.org/2002/07/owl#Class",
       "definition": {
-        "nl": "Een kokercel is een opdeling van het kokercomplex in de lengte richting, het heeft een doorvoerende functie met een in- en uitgang en eventuele zijgangen, die met een gesloten doorsnede verbonden zijn."
+        "nl": "Een kokercel is een opdeling van het kokercomplex in de lengte richting, het heeft een doorvoerende functie met een in- en uitgang en eventuele zijgangen, die met een gesloten doorsnede verbonden zijn. "
       },
       "parents": [
         "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMObject"
@@ -2359,7 +2359,10 @@
       "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#MIVInstallatie",
       "@type": "http://www.w3.org/2002/07/owl#Class",
       "definition": {
-        "nl": "De volledige opstelling voor meten in Vlaanderen op een bepaalde locatie."
+        "nl": "Een MIV eenheid die instaat voor de verwerking van gegevens van lussen op een bepaalde locatie, hetzij als satelliet-eenheid hetzij als centrale eenheid voor de combinatie van verschillende eenheden."
+      },
+      "usage": {
+        "nl": "Klasse uit gebruik sinds versie 2.9.0-RC4"
       },
       "parents": [
         "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#NaampadObject"
@@ -2370,6 +2373,19 @@
       "@type": "http://www.w3.org/2002/07/owl#Class",
       "definition": {
         "nl": "Een meetpunt van Meten-In-Vlaanderen als plaats waar beide meetlussen bij benadering in de weg ingeslepen zijn."
+      },
+      "parents": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMNaamObject"
+      ]
+    },
+    {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#MIVModule",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
+      "definition": {
+        "nl": "Een verwerkingseenheid die instaat voor de verwerking van gegevens van lussen op een bepaalde locatie, hetzij als satelliet-eenheid hetzij als centrale eenheid voor de combinatie en doorsturen van verschillende eenheden. Het kan gaan om een alles-in-een toestel of om een opstelling met aparte componenten."
+      },
+      "usage": {
+        "nl": "Vervangt MIVInstallatie om duidelijk te maken dat het om de aparte eenheden gaat (Sat's en LVE) en niet over het geheel van gekoppelde eenheden."
       },
       "parents": [
         "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMNaamObject"
@@ -2475,8 +2491,8 @@
         "nl": "Elk volume,inclusief de bouwkundige elementen die dit volume bepalen,dat deel uitmaakt van het waterbouwkundig systeem van het pompstation en als zodanig onder water kan staan."
       },
       "parents": [
-        "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#PutRelatie",
-        "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#Kokerruimte"
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#Kokerruimte",
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#PutRelatie"
       ]
     },
     {
@@ -2537,8 +2553,8 @@
       },
       "parents": [
         "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMNaamObject",
-        "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#Grondkeringen",
-        "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#WaterremmendeFunctie"
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#WaterremmendeFunctie",
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#Grondkeringen"
       ]
     },
     {
@@ -2637,7 +2653,7 @@
       "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Tunnelverlichting",
       "@type": "http://www.w3.org/2002/07/owl#Class",
       "definition": {
-        "nl": "Het systeem van verlichtingselementen en armaturen, typisch ontworpen en geïnstalleerd  in een tunnel, om aangepaste lichtniveaus volgens verschillende regimes te bieden voor veilig verkeer en zichtbaarheid binnenin een koker."
+        "nl": "Het systeem van verlichtingselementen en armaturen, typisch ontworpen en geïnstalleerd in een tunnel, om aangepaste lichtniveaus volgens verschillende regimes te bieden voor veilig verkeer en zichtbaarheid binnenin een koker."
       },
       "parents": [
         "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMNaamObject"
@@ -2671,6 +2687,16 @@
       },
       "parents": [
         "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMNaamObject"
+      ]
+    },
+    {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Ventilatiekanaal",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
+      "definition": {
+        "nl": "Een buis die paarsgewijs zorgt voor passieve verluchting van een afgesloten ruimte door langs de ene buis lucht naar binnen en door de andere naar buiten te laten stromen op basis van de hoogte ten opzichte van elkaar."
+      },
+      "parents": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMObject"
       ]
     },
     {
@@ -2740,6 +2766,16 @@
       "@type": "http://www.w3.org/2002/07/owl#Class",
       "definition": {
         "nl": "Het geheel van componenten die ontworpen zijn om snel en effectief de evacuatie van mensen te faciliteren in een koker die dienst doet als vluchtgang in geval van een calamiteit."
+      },
+      "parents": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMNaamObject"
+      ]
+    },
+    {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Vluchtgeleiding",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
+      "definition": {
+        "nl": "Het geheel van componenten die ontworpen zijn om snel en effectief de evacuatie van mensen te faciliteren vanuit de voertuigkoker/rijwegkoker tot een veilige ruimte"
       },
       "parents": [
         "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMNaamObject"
@@ -2841,14 +2877,14 @@
   "externals": [
     {
       "name": {
-        "nl": "Wegberm type"
+        "nl": "Functie van rioleringsstelsel"
       },
       "@id": "http://www.w3.org/2004/02/skos/core#Concept",
       "@type": "rdfs:Class"
     },
     {
       "name": {
-        "nl": "Functie van rioleringsstelsel"
+        "nl": "Wegberm type"
       },
       "@id": "http://www.w3.org/2004/02/skos/core#Concept",
       "@type": "rdfs:Class"
@@ -3058,13 +3094,6 @@
     },
     {
       "name": {
-        "nl": "Lokaal terreintype"
-      },
-      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
-      "@type": "rdfs:Class"
-    },
-    {
-      "name": {
         "nl": "Type van aardingsinstallatie"
       },
       "@id": "http://www.w3.org/2004/02/skos/core#Concept",
@@ -3080,6 +3109,13 @@
     {
       "name": {
         "nl": "Aardingsinstallatie aardingsstelsel"
+      },
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
+      "@type": "rdfs:Class"
+    },
+    {
+      "name": {
+        "nl": "Lokaal terreintype"
       },
       "@id": "http://www.w3.org/2004/02/skos/core#Concept",
       "@type": "rdfs:Class"
@@ -3108,6 +3144,13 @@
     {
       "name": {
         "nl": "Pompgroep modelnaam"
+      },
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
+      "@type": "rdfs:Class"
+    },
+    {
+      "name": {
+        "nl": "Materiaal ventilatiekanaal"
       },
       "@id": "http://www.w3.org/2004/02/skos/core#Concept",
       "@type": "rdfs:Class"
@@ -3584,6 +3627,34 @@
       ],
       "range": [
         "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcDocument"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Ventilatiekanaal.oppervlakte",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "definition": {
+        "nl": "De oppervlakte van het ventilatiekanaal is de totale doorsnede van het kanaal en vertegenwoordigt het gebied dat beschikbaar is voor de luchtstroom binnenin."
+      },
+      "domain": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Ventilatiekanaal"
+      ],
+      "range": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInVierkanteMeter"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Ventilatiekanaal.materiaal",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "definition": {
+        "nl": "Het materiaal van een ventilatiekanaal verwijst naar de substantie waaruit het kanaal is vervaardigd."
+      },
+      "domain": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Ventilatiekanaal"
+      ],
+      "range": [
+        "http://www.w3.org/2004/02/skos/core#Concept"
       ],
       "generalization": []
     },
@@ -4398,6 +4469,54 @@
       "generalization": []
     },
     {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#MIVModule.type",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "definition": {
+        "nl": "Het type volgens de gebruikte technologie en inzet in een groter geheel."
+      },
+      "domain": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#MIVModule"
+      ],
+      "range": [
+        "http://www.w3.org/2004/02/skos/core#Concept"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#MIVModule.technischeDocumentatie",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "definition": {
+        "nl": "Documentatie van de onderdelen: LVE / luskaart / communicatiekaart, configurator, ..."
+      },
+      "usage": {
+        "nl": "Bestanden van het type pdf."
+      },
+      "domain": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#MIVModule"
+      ],
+      "range": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcDocument"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#MIVModule.lusConfig",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "definition": {
+        "nl": "Een definierende tabel die relatie legt tussen meetpuntnummer lusvolgorde nummer en de GPS locatie."
+      },
+      "usage": {
+        "nl": "Bestanden van het type xlsx."
+      },
+      "domain": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#MIVModule"
+      ],
+      "range": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcDocument"
+      ],
+      "generalization": []
+    },
+    {
       "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#MIVMeetpunt.uitslijprichting",
       "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "definition": {
@@ -4538,6 +4657,9 @@
       "definition": {
         "nl": "Het type volgens de gebruikte technologie en inzet in een groter geheel."
       },
+      "usage": {
+        "nl": "Klasse uit gebruik sinds versie 2.9.0-RC4"
+      },
       "domain": [
         "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#MIVInstallatie"
       ],
@@ -4553,7 +4675,7 @@
         "nl": "Documentatie van de onderdelen: LVE / luskaart / communicatiekaart, configurator, ..."
       },
       "usage": {
-        "nl": "Bestanden van het type pdf."
+        "nl": "Klasse uit gebruik sinds versie 2.9.0-RC4 .Bestanden van het type pdf."
       },
       "domain": [
         "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#MIVInstallatie"
@@ -4570,7 +4692,7 @@
         "nl": "Een definierende tabel die relatie legt tussen meetpuntnummer lusvolgorde nummer en de GPS locatie."
       },
       "usage": {
-        "nl": "Bestanden van het type xlsx."
+        "nl": "Klasse uit gebruik sinds versie 2.9.0-RC4 .Bestanden van het type xlsx."
       },
       "domain": [
         "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#MIVInstallatie"

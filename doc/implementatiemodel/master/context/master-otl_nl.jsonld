@@ -250,6 +250,10 @@
       "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#AbstracteAanvullendeGeometrie.naam",
       "@type": "http://www.w3.org/2001/XMLSchema#string"
     },
+    "AbstracteAanvullendeGeometrie.notitie": {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#AbstracteAanvullendeGeometrie.notitie",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
     "AbstracteAanvullendeGeometrie.typeUri": {
       "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#AbstracteAanvullendeGeometrie.typeURI",
       "@type": "@id"
@@ -1666,6 +1670,10 @@
       "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcDocument.omschrijving",
       "@type": "@id"
     },
+    "Bestandsbijlage.opmaakdatum": {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcDocument.opmaakdatum",
+      "@type": "http://www.w3.org/2001/XMLSchema#date"
+    },
     "Bestandsbijlage.uri": {
       "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcDocument.uri",
       "@type": "@id"
@@ -2181,6 +2189,7 @@
       "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#BitumineuzeLaag.mengseltype",
       "@type": "@id"
     },
+    "Bliksemafleider": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Bliksemafleider",
     "BlindePut": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#BlindePut",
     "BlindePut.materiaal": {
       "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#BlindePut.materiaal",
@@ -4166,6 +4175,10 @@
       "@id": "https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/master/#Bevestiging",
       "@type": "@id"
     },
+    "DynamischZone30Bord.langsGenummerdeWeg": {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#DynBordZ30.naastGenummerdeWeg",
+      "@type": "http://www.w3.org/2001/XMLSchema#boolean"
+    },
     "DynamischZone30Bord.merk": {
       "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#DynBordZ30.merk",
       "@type": "@id"
@@ -4383,6 +4396,11 @@
     "ElektromotorModelnaam": "http://www.w3.org/2004/02/skos/core#Concept",
     "ElektromotorRol": "http://www.w3.org/2004/02/skos/core#Concept",
     "EmDraagconstructie": "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#EMDraagconstructie",
+    "EmDraagconstructie.bevestiging": {
+      "@container": "@set",
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/master/#Bevestiging",
+      "@type": "@id"
+    },
     "EmDraagconstructie.elektrischeBeveiliging": {
       "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#EMDraagconstructie.elektrischeBeveiliging",
       "@type": "@id"
@@ -4916,6 +4934,11 @@
     },
     "GeleidingMateriaal": "http://www.w3.org/2004/02/skos/core#Concept",
     "Geleidingsverlichting": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Geleidingsverlichting",
+    "Geleidingsverlichting.hoortBij": {
+      "@container": "@set",
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/master/#Hoort bij",
+      "@type": "@id"
+    },
     "Geleidingswand": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Geleidingswand",
     "Geleidingswand.hoogte": {
       "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Geleidingswand.hoogte",
@@ -6111,6 +6134,7 @@
       "@type": "@id"
     },
     "Hulpstuk.inwendigeDiameter": {
+      "@container": "@set",
       "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Hulpstuk.inwendigeDiameter",
       "@type": "@id"
     },
@@ -6123,6 +6147,7 @@
       "@type": "@id"
     },
     "Hulpstuk.uitwendigeDiameter": {
+      "@container": "@set",
       "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Hulpstuk.uitwendigeDiameter",
       "@type": "@id"
     },
@@ -6657,6 +6682,14 @@
       "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Kamer.diepte",
       "@type": "@id"
     },
+    "Kamer.heeftOlieafscheidendeKamer": {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Kamer.heeftOlieAfscheidendeKamer",
+      "@type": "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "Kamer.heeftZandvang": {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Kamer.heeftZandvang",
+      "@type": "http://www.w3.org/2001/XMLSchema#boolean"
+    },
     "Kamer.hoogte": {
       "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Kamer.hoogte",
       "@type": "@id"
@@ -6805,12 +6838,14 @@
       "@type": "@id"
     },
     "KeuzelijstAfwerkingsgraadRetroreflecterendVerkeersbord": "http://www.w3.org/2004/02/skos/core#Concept",
+    "KeuzelijstMateriaalStraatkap": "http://www.w3.org/2004/02/skos/core#Concept",
     "KeuzelijstMaterialenTrap": "http://www.w3.org/2004/02/skos/core#Concept",
     "KeuzelijstMerknamenVoorDynamischeBordenOpMaat": "http://www.w3.org/2004/02/skos/core#Concept",
     "KeuzelijstMetMerknamenVanExternePUs": "http://www.w3.org/2004/02/skos/core#Concept",
     "KeuzelijstMetModellenVanExternePu": "http://www.w3.org/2004/02/skos/core#Concept",
     "KeuzelijstModelnamenVoorDynamischeBordenOpMaat": "http://www.w3.org/2004/02/skos/core#Concept",
     "KeuzelijstOperationeleStatus": "http://www.w3.org/2004/02/skos/core#Concept",
+    "KeuzelijstTypeNutsvoorziening": "http://www.w3.org/2004/02/skos/core#Concept",
     "KlassePlantjaar": "http://www.w3.org/2004/02/skos/core#Concept",
     "KlassiekeFundering": "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#KlassiekeFundering",
     "KlassiekeFundering.funderingshoogte": {
@@ -6891,6 +6926,7 @@
       "@type": "@id"
     },
     "KokerElementGebruikersType": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Kokerafsluiting": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Kokerafsluiting",
     "KokercelTypeFundering": "http://www.w3.org/2004/02/skos/core#Concept",
     "Kokercomplex": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Kokercomplex",
     "Kokercomplex.ligtFunderingInOfOpDeRandVanDeWaterweg": {
@@ -8184,6 +8220,11 @@
       "@id": "https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/master/#Sturing",
       "@type": "@id"
     },
+    "LuchtkwaliteitControleUnit.voedt": {
+      "@container": "@set",
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/master/#Voedt",
+      "@type": "@id"
+    },
     "LuchtkwaliteitZenderOntvanger": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#LuchtkwaliteitZenderOntvanger",
     "LuchtkwaliteitZenderOntvanger.hoortBij": {
       "@container": "@set",
@@ -8228,6 +8269,17 @@
     "Luchtkwaliteitsensor.hoortBij": {
       "@container": "@set",
       "@id": "https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/master/#Hoort bij",
+      "@type": "@id"
+    },
+    "LuchtkwaliteitsensorDoorverbinddoos": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#LKSensorDoorverbinddoos",
+    "LuchtkwaliteitsensorDoorverbinddoos.sturing": {
+      "@container": "@set",
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/master/#Sturing",
+      "@type": "@id"
+    },
+    "LuchtkwaliteitsensorDoorverbinddoos.voedt": {
+      "@container": "@set",
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/master/#Voedt",
       "@type": "@id"
     },
     "LuchtkwaliteitsopstellingMerk": "http://www.w3.org/2004/02/skos/core#Concept",
@@ -8409,6 +8461,7 @@
     "MateriaalSoorten": "http://www.w3.org/2004/02/skos/core#Concept",
     "MateriaalStenen": "http://www.w3.org/2004/02/skos/core#Concept",
     "MateriaalTussenschotBerlinerwand": "http://www.w3.org/2004/02/skos/core#Concept",
+    "MateriaalVentilatiekanaal": "http://www.w3.org/2004/02/skos/core#Concept",
     "Matrixbord": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Matrixbord",
     "MeetMethode": "http://www.w3.org/2004/02/skos/core#Concept",
     "Meetcel": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Meetcel",
@@ -8746,12 +8799,40 @@
       "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#MIVMeetpunt.servicePrioriteit",
       "@type": "@id"
     },
+    "MivMeetpunt.sturing": {
+      "@container": "@set",
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/master/#Sturing",
+      "@type": "@id"
+    },
     "MivMeetpunt.uitslijprichting": {
       "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#MIVMeetpunt.uitslijprichting",
       "@type": "@id"
     },
     "MivMeetpuntAfmetingen": "http://www.w3.org/2004/02/skos/core#Concept",
     "MivMeetpuntgebied": "http://www.w3.org/2004/02/skos/core#Concept",
+    "MivModule": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#MIVModule",
+    "MivModule.lusConfig": {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#MIVModule.lusConfig",
+      "@type": "@id"
+    },
+    "MivModule.sturing(source)": {
+      "@container": "@set",
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/master/#Sturing",
+      "@type": "@id"
+    },
+    "MivModule.sturing(target)": {
+      "@container": "@set",
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/master/#Sturing",
+      "@type": "@id"
+    },
+    "MivModule.technischeDocumentatie": {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#MIVModule.technischeDocumentatie",
+      "@type": "@id"
+    },
+    "MivModule.typeMivInstallatie": {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#MIVModule.type",
+      "@type": "@id"
+    },
     "MivProcessorkaart": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#MIVProcessorkaart",
     "MivProcessorkaart.bevestiging": {
       "@container": "@set",
@@ -9497,6 +9578,7 @@
       "@type": "@id"
     },
     "Onderdoorboring.vergunning": {
+      "@container": "@set",
       "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Onderdoorboring.vergunning",
       "@type": "@id"
     },
@@ -12406,6 +12488,16 @@
       "@id": "https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/master/#Bevestiging",
       "@type": "@id"
     },
+    "Sokkel.bevestiging(source)": {
+      "@container": "@set",
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/master/#Bevestiging",
+      "@type": "@id"
+    },
+    "Sokkel.bevestiging(target)": {
+      "@container": "@set",
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/master/#Bevestiging",
+      "@type": "@id"
+    },
     "Sokkel.heeftMaaibescherming": {
       "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Sokkel.heeftMaaibescherming",
       "@type": "http://www.w3.org/2001/XMLSchema#boolean"
@@ -12834,6 +12926,15 @@
     },
     "StortsteenKaliber": "http://www.w3.org/2004/02/skos/core#Concept",
     "StortsteenType": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Straatkap": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Straatkap",
+    "Straatkap.materiaalStraatkap": {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Straatkap.materiaalstraatkap",
+      "@type": "@id"
+    },
+    "Straatkap.typeNutsvoorziening": {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Straatkap.typenutsvoorziening",
+      "@type": "@id"
+    },
     "Straatkolk": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Straatkolk",
     "Straatkolk.bakAfmetingen": {
       "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Straatkolk.bakAfmetingen",
@@ -13624,7 +13725,6 @@
       "@type": "@id"
     },
     "TrottoirbandWatergreppelType": "http://www.w3.org/2004/02/skos/core#Concept",
-    "Tunnelafsluiting": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Kokerafsluiting",
     "Tunnelverlichting": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Tunnelverlichting",
     "TypeAanvaarbescherming": "http://www.w3.org/2004/02/skos/core#Concept",
     "TypeBadge": "http://www.w3.org/2004/02/skos/core#Concept",
@@ -13891,6 +13991,20 @@
     "Ventilatiecluster.hoortBij": {
       "@container": "@set",
       "@id": "https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/master/#Hoort bij",
+      "@type": "@id"
+    },
+    "Ventilatiekanaal": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Ventilatiekanaal",
+    "Ventilatiekanaal.bevestiging": {
+      "@container": "@set",
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/master/#Bevestiging",
+      "@type": "@id"
+    },
+    "Ventilatiekanaal.materiaalVentilatiekanaal": {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Ventilatiekanaal.materiaal",
+      "@type": "@id"
+    },
+    "Ventilatiekanaal.oppervlakteVentilatiekanaal": {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Ventilatiekanaal.oppervlakte",
       "@type": "@id"
     },
     "Ventilatierooster": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Ventilatierooster",
@@ -14660,6 +14774,7 @@
     },
     "Vluchtdeurindicatie": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Vluchtdeurindicatie",
     "Vluchtganginrichting": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Vluchtganginrichting",
+    "Vluchtgeleiding": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Vluchtgeleiding",
     "Vluchtopening": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Vluchtopening",
     "Vluchtopening.hoortBij": {
       "@container": "@set",
@@ -14714,6 +14829,7 @@
     "VoedingskabelAdersSpecificaties": "http://www.w3.org/2004/02/skos/core#Concept",
     "VoedingskabelTypeSpecificatie": "http://www.w3.org/2004/02/skos/core#Concept",
     "VoedingskabelTypes": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Voedingskeuzeschakelaar": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Voedingskeuzeschakelaar",
     "Voedingspunt": "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#Voedingspunt",
     "Voedingspunt.bevestiging": {
       "@container": "@set",

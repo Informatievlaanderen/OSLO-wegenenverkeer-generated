@@ -2199,26 +2199,26 @@
             <rdfs:label xml:lang="nl">Kabelmantel kleur</rdfs:label>
             <rdfs:label xml:lang="nl">Sensor opstelwijze</rdfs:label>
             <rdfs:label xml:lang="nl">Smering type</rdfs:label>
-            <rdfs:label xml:lang="nl">Luchtkwaliteitsopstelling merk</rdfs:label>
-            <rdfs:label xml:lang="nl">Luchtkwaliteitsopstelling modelnaam</rdfs:label>
             <rdfs:label xml:lang="nl">Deur fabrikant</rdfs:label>
             <rdfs:label xml:lang="nl">Deur handgreeptype</rdfs:label>
             <rdfs:label xml:lang="nl">Seinlantaarn diameter</rdfs:label>
+            <rdfs:label xml:lang="nl">Luchtkwaliteitsopstelling merk</rdfs:label>
+            <rdfs:label xml:lang="nl">Luchtkwaliteitsopstelling modelnaam</rdfs:label>
             <rdfs:label xml:lang="nl">iVRIBaseline</rdfs:label>
             <rdfs:label xml:lang="nl">Lantaarn lamptype</rdfs:label>
             <rdfs:label xml:lang="nl">verkeerslicht modelnaam</rdfs:label>
             <rdfs:label xml:lang="nl">Verkeerslicht masker</rdfs:label>
             <rdfs:label xml:lang="nl">PT regelaarmodule merk</rdfs:label>
+            <rdfs:label xml:lang="nl">verkeerslicht merk</rdfs:label>
+            <rdfs:label xml:lang="nl">VRI detector typeweggebruiker</rdfs:label>
+            <rdfs:label xml:lang="nl">seinlantaarn modelnaam</rdfs:label>
+            <rdfs:label xml:lang="nl">Lantaarn vormgeving</rdfs:label>
             <rdfs:label xml:lang="nl">VR-module met firmware modelnaam</rdfs:label>
             <rdfs:label xml:lang="nl">VR-module met firmware merk</rdfs:label>
             <rdfs:label xml:lang="nl">seinlantaarn merk</rdfs:label>
             <rdfs:label xml:lang="nl">PT regelaarmodule modelnaam</rdfs:label>
             <rdfs:label xml:lang="nl">Verlichtingstoestel modelnaam</rdfs:label>
             <rdfs:label xml:lang="nl">Verlichtingstoestel merk</rdfs:label>
-            <rdfs:label xml:lang="nl">verkeerslicht merk</rdfs:label>
-            <rdfs:label xml:lang="nl">VRI detector typeweggebruiker</rdfs:label>
-            <rdfs:label xml:lang="nl">seinlantaarn modelnaam</rdfs:label>
-            <rdfs:label xml:lang="nl">Lantaarn vormgeving</rdfs:label>
             <rdfs:label xml:lang="nl">WV-besturingsconnector</rdfs:label>
             <rdfs:label xml:lang="nl">Verlichtingstoestel verlicht gebied.</rdfs:label>
             <rdfs:label xml:lang="nl">Verfraaiing buitenkast</rdfs:label>
@@ -2300,6 +2300,12 @@
     <rdfs:domain rdf:resource="https://wegenenverkeer.data.vlaanderen.be/ns/abstracten#AbstracteAanvullendeGeometrie"/>
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
   </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="https://wegenenverkeer.data.vlaanderen.be/ns/abstracten#AbstracteAanvullendeGeometrie.notitie">
+    <rdfs:isDefinedBy rdf:resource="https://wegenenverkeer.data.vlaanderen.be/ns/abstracten"/>
+    <rdfs:comment xml:lang="nl">Extra notitie voor het object.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://wegenenverkeer.data.vlaanderen.be/ns/abstracten#AbstracteAanvullendeGeometrie"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
   <owl:ObjectProperty rdf:about="https://wegenenverkeer.data.vlaanderen.be/ns/abstracten#AbstracteAanvullendeGeometrie.typeURI">
     <rdfs:isDefinedBy rdf:resource="https://wegenenverkeer.data.vlaanderen.be/ns/abstracten"/>
     <rdfs:comment xml:lang="nl">De URI van het object volgens https://www.w3.org/2001/XMLSchema#anyURI .</rdfs:comment>
@@ -2333,7 +2339,7 @@
               <owl:Class rdf:about="https://wegenenverkeer.data.vlaanderen.be/ns/abstracten#ConstructieElement">
                 <rdfs:isDefinedBy rdf:resource="https://wegenenverkeer.data.vlaanderen.be/ns/abstracten"/>
                 <rdfs:comment xml:lang="nl">Abstracte voor de verschillende constructie elementen.</rdfs:comment>
-                <rdfs:subClassOf rdf:resource="https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#AIMObject"/>
+                <rdfs:subClassOf rdf:resource="https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#AIMNaamObject"/>
               </owl:Class>
             </rdfs:subClassOf>
           </owl:Class>
@@ -4123,7 +4129,7 @@
   <owl:Class rdf:about="https://wegenenverkeer.data.vlaanderen.be/ns/abstracten#Proef">
     <rdfs:isDefinedBy rdf:resource="https://wegenenverkeer.data.vlaanderen.be/ns/abstracten"/>
     <rdfs:comment xml:lang="nl">Abstracte voor de gemeenschappelijke eigenschappen en relaties alle proeven.</rdfs:comment>
-    <rdfs:subClassOf rdf:resource="https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#AIMObject"/>
+    <rdfs:subClassOf rdf:resource="https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#AIMNaamObject"/>
   </owl:Class>
   <owl:ObjectProperty rdf:about="https://wegenenverkeer.data.vlaanderen.be/ns/abstracten#Put.adres">
     <rdfs:isDefinedBy rdf:resource="https://wegenenverkeer.data.vlaanderen.be/ns/abstracten"/>
@@ -4514,8 +4520,8 @@
   </owl:Class>
   <owl:ObjectProperty rdf:about="https://wegenenverkeer.data.vlaanderen.be/ns/abstracten#Verkeersbord.aanzicht">
     <rdfs:isDefinedBy rdf:resource="https://wegenenverkeer.data.vlaanderen.be/ns/abstracten"/>
-    <rdfs:comment xml:lang="nl">De hoek waarin het fysiek bord gepositioneerd is ten opzichte van een vooropgestelde as (het ware noorden). De hoek wordt gemeten in radialen of graden ten opzichte van het noorden in wijzerzin.</rdfs:comment>
-    <ns0:usageNote xml:lang="nl">In radialen of graden ten opzichte van het noorden in wijzerzin.</ns0:usageNote>
+    <rdfs:comment xml:lang="nl">De hoek waarin het fysiek bord gepositioneerd is ten opzichte van een vooropgestelde as (het ware noorden). De hoek wordt gemeten in graden ten opzichte van het noorden in wijzerzin.</rdfs:comment>
+    <ns0:usageNote xml:lang="nl">In graden ten opzichte van het noorden in wijzerzin.</ns0:usageNote>
     <rdfs:domain rdf:resource="https://wegenenverkeer.data.vlaanderen.be/ns/abstracten#Verkeersbord"/>
     <rdfs:range rdf:resource="https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInDecimaleGraden"/>
   </owl:ObjectProperty>

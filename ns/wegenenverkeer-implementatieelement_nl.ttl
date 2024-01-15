@@ -14,23 +14,23 @@ dc:Agent a rdfs:Class;
 skos:Concept a rdfs:Class;
   rdfs:label "AIM toestand"@nl,
     "Type badge"@nl,
-    "Type sleutel"@nl,
     "Electricity appurtenance type"@nl,
     "Telecommunications appurtenance type"@nl,
     "Electricity subthema"@nl,
+    "Type sleutel"@nl,
     "Pipe container type"@nl,
     "Datakabel materiaal"@nl,
     "Telecommunications subthema"@nl,
+    "Schoorhoek"@nl,
+    "Duurzaamheidsklasse van hout"@nl,
     "Krimpvoegvulling"@nl,
     "Toegangsprocedure toegangstijden"@nl,
     "Betonomgevingsklasse"@nl,
-    "Schoorhoek"@nl,
-    "Duurzaamheidsklasse van hout"@nl,
-    "Mimetype"@nl,
-    "Gebruiksdomein"@nl,
     "Walsmethode"@nl,
     "Constructiestaalsoort"@nl,
     "Betonsterkteklasse"@nl,
+    "Mimetype"@nl,
+    "Gebruiksdomein"@nl,
     "Toeslagmiddel beton"@nl,
     "Provincie"@nl,
     "Gemeente"@nl,
@@ -69,7 +69,6 @@ schemas:OpeningHoursSpecification a rdfs:Class;
   rdfs:range <https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#DtcIdentificator> .
 
 <https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#AIMObject.bestekPostNummer> a owl:DatatypeProperty;
-  <http://purl.org/vocab/vann/usageNote> "Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek."@nl;
   rdfs:comment "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt."@nl;
   rdfs:domain <https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#AIMObject>;
   rdfs:isDefinedBy <https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement>;
@@ -473,12 +472,6 @@ schemas:OpeningHoursSpecification a rdfs:Class;
   rdfs:isDefinedBy <https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement>;
   rdfs:range <https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#DteTekstblok> .
 
-<https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#DtcDocument.opmaakdatum> a owl:DatatypeProperty;
-  rdfs:comment "De datum waarop het document is opgemaakt."@nl;
-  rdfs:domain <https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#DtcDocument>;
-  rdfs:isDefinedBy <https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement>;
-  rdfs:range xsd:date .
-
 <https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#DtcDocument.uri> a owl:ObjectProperty;
   rdfs:comment "De verwijzing naar de bestandslocatie via een link. Bij lokale bestanden kan dit eventueel ook een pad zijn."@nl;
   rdfs:domain <https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#DtcDocument>;
@@ -546,7 +539,7 @@ schemas:OpeningHoursSpecification a rdfs:Class;
   rdfs:range skos:Concept .
 
 <https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#DtcKrimpvoegvulling.technischeFiche> a owl:ObjectProperty;
-  rdfs:comment "De technische fiche van het product waarmee de krimpvoeg is gevuld."@nl;
+  rdfs:comment "De technische fiche van het product  waarmee de krimpvoeg is gevuld."@nl;
   rdfs:domain <https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#DtcKrimpvoegvulling>;
   rdfs:isDefinedBy <https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement>;
   rdfs:range <https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#DtcDocument> .
@@ -2055,16 +2048,16 @@ schemas:opens a rdf:Property;
   rdfs:comment "Een kwantitatieve waarde die een getal in meter uitdrukt."@nl;
   rdfs:isDefinedBy <https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement> .
 
+<https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#DtcDocument> a owl:Class;
+  rdfs:comment "Complex datatype voor alle bestandsbijlages."@nl;
+  rdfs:isDefinedBy <https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement> .
+
 <https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMillimeter> a owl:Class;
   rdfs:comment "Een kwantitatieve waarde die een getal in millimeter uitdrukt."@nl;
   rdfs:isDefinedBy <https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement> .
 
 <https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#DtcBetonspecificaties> a owl:Class;
   rdfs:comment "Complex datatype om de eigenschappen van beton te bundelen. Deze omvat onder andere de verschillende betonklassen,hoe het beton gebruikt wordt,eigenschappen van het cement,een technische fiche van het beton,..."@nl;
-  rdfs:isDefinedBy <https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement> .
-
-<https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#DtcDocument> a owl:Class;
-  rdfs:comment "Complex datatype voor alle bestandsbijlages."@nl;
   rdfs:isDefinedBy <https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement> .
 
 <https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement> a owl:Ontology;

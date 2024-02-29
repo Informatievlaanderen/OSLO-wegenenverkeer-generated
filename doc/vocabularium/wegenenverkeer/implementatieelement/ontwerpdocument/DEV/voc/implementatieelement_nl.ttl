@@ -14,11 +14,11 @@ dc:Agent a rdfs:Class;
 skos:Concept a rdfs:Class;
   rdfs:label "AIM toestand"@nl,
     "Type badge"@nl,
+    "Electricity subthema"@nl,
+    "Pipe container type"@nl,
     "Type sleutel"@nl,
     "Electricity appurtenance type"@nl,
     "Telecommunications appurtenance type"@nl,
-    "Electricity subthema"@nl,
-    "Pipe container type"@nl,
     "Datakabel materiaal"@nl,
     "Telecommunications subthema"@nl,
     "Krimpvoegvulling"@nl,
@@ -1213,6 +1213,19 @@ schemas:OpeningHoursSpecification a rdfs:Class;
   rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement>;
   rdfs:range xsd:decimal .
 
+<https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInMeterPerSeconde.standaardEenheid> a owl:DatatypeProperty;
+  <http://purl.org/vocab/vann/usageNote> "\"kg/m3\"^^cdt:ucumunit"@nl;
+  rdfs:comment "De standaard eenheid bij dit datatype is uitgedrukt in in kg per kubieke meter"@nl;
+  rdfs:domain <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInMeterPerSeconde>;
+  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement>;
+  rdfs:range rdfs:Literal .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInMeterPerSeconde.waarde> a owl:ObjectProperty;
+  rdfs:comment "Bevat een getal die bij het datatype hoort."@nl;
+  rdfs:domain <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInMeterPerSeconde>;
+  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement>;
+  rdfs:range xsd:decimal .
+
 <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInMeterTAW.standaardEenheid> a owl:DatatypeProperty;
   <http://purl.org/vocab/vann/usageNote> "\"m\"^^cdt:ucumunit"@nl;
   rdfs:comment "De standaard eenheid bij dit datatype is uitgedrukt in meter."@nl;
@@ -1826,6 +1839,10 @@ schemas:opens a rdf:Property;
 
 <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInLiterPerMinuut> a owl:Class;
   rdfs:comment "Een kwantitatieve waarde die een getal in liter per minuut uitdrukt."@nl;
+  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement> .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInMeterPerSeconde> a owl:Class;
+  rdfs:comment "Een kwantitatieve waarde die een getal in kg per kubieke meter uitdrukt."@nl;
   rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement> .
 
 <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInMeterTAW> a owl:Class;

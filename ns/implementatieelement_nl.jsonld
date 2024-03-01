@@ -2328,6 +2328,14 @@
       "parents": []
     },
     {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInMeterPerSeconde",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
+      "definition": {
+        "nl": "Een kwantitatieve waarde die een getal in kg per kubieke meter uitdrukt."
+      },
+      "parents": []
+    },
+    {
       "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInMeterTAW",
       "@type": "http://www.w3.org/2002/07/owl#Class",
       "definition": {
@@ -2596,6 +2604,20 @@
     },
     {
       "name": {
+        "nl": "Electricity subthema"
+      },
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
+      "@type": "rdfs:Class"
+    },
+    {
+      "name": {
+        "nl": "Pipe container type"
+      },
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
+      "@type": "rdfs:Class"
+    },
+    {
+      "name": {
         "nl": "Type sleutel"
       },
       "@id": "http://www.w3.org/2004/02/skos/core#Concept",
@@ -2611,20 +2633,6 @@
     {
       "name": {
         "nl": "Telecommunications appurtenance type"
-      },
-      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
-      "@type": "rdfs:Class"
-    },
-    {
-      "name": {
-        "nl": "Electricity subthema"
-      },
-      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
-      "@type": "rdfs:Class"
-    },
-    {
-      "name": {
-        "nl": "Pipe container type"
       },
       "@id": "http://www.w3.org/2004/02/skos/core#Concept",
       "@type": "rdfs:Class"
@@ -3693,6 +3701,37 @@
       },
       "domain": [
         "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInMeterTAW"
+      ],
+      "range": [
+        "http://www.w3.org/2000/01/rdf-schema#Literal"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInMeterPerSeconde.waarde",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "definition": {
+        "nl": "Bevat een getal die bij het datatype hoort."
+      },
+      "domain": [
+        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInMeterPerSeconde"
+      ],
+      "range": [
+        "http://www.w3.org/2001/XMLSchema#decimal"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInMeterPerSeconde.standaardEenheid",
+      "@type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
+      "definition": {
+        "nl": "De standaard eenheid bij dit datatype is uitgedrukt in in kg per kubieke meter"
+      },
+      "usage": {
+        "nl": "\"kg/m3\"^^cdt:ucumunit"
+      },
+      "domain": [
+        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInMeterPerSeconde"
       ],
       "range": [
         "http://www.w3.org/2000/01/rdf-schema#Literal"

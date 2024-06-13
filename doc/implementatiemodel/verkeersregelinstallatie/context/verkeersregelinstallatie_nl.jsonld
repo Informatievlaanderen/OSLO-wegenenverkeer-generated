@@ -1,5 +1,6 @@
 {
   "@context": {
+    "AanhorighedenBrug": "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#AanhorighedenBrug",
     "AanhorighedenKoker": "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#AanhorigheidKoker",
     "Adres": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcAdres",
     "Adres.bus": {
@@ -169,6 +170,15 @@
       "@id": "https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/verkeersregelinstallatie/#Bevestiging",
       "@type": "@id"
     },
+    "BeschermendeLaag": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcBeschermendeLaag",
+    "BeschermendeLaag.beschermlaag": {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcBeschermendeLaag.beschermlaag",
+      "@type": "@id"
+    },
+    "BeschermendeLaag.corrosieklasse": {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcBeschermendeLaag.corrosieklasse",
+      "@type": "@id"
+    },
     "Bestandsbijlage": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcDocument",
     "Bestandsbijlage.bestandsnaam": {
       "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcDocument.bestandsnaam",
@@ -290,6 +300,7 @@
       "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#Controller.serienummer",
       "@type": "http://www.w3.org/2001/XMLSchema#string"
     },
+    "Corrosiebelastingscategorie": "http://www.w3.org/2004/02/skos/core#Concept",
     "Datum": "http://www.w3.org/2001/XMLSchema#date",
     "DecimaalGetal": "http://www.w3.org/2001/XMLSchema#decimal",
     "Detectie": "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#Detectie",
@@ -1118,6 +1129,10 @@
       "@type": "@id"
     },
     "SteunStandaard": "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#SteunStandaard",
+    "SteunStandaard.beschermendeLaag": {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#SteunStandaard.beschermendeLaag",
+      "@type": "@id"
+    },
     "SteunStandaard.beschermlaag": {
       "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#SteunStandaard.beschermlaag",
       "@type": "@id"
@@ -1274,14 +1289,34 @@
       "@id": "https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/verkeersregelinstallatie/#Bevestiging",
       "@type": "@id"
     },
+    "Verkeersregelaar.communicatieprotocol": {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Verkeersregelaar.communicatieprotocol",
+      "@type": "@id"
+    },
     "Verkeersregelaar.coördinatiewijze": {
       "@container": "@set",
       "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Verkeersregelaar.coordinatiewijze",
       "@type": "@id"
     },
+    "Verkeersregelaar.dnsNaam": {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Verkeersregelaar.dnsNaam",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
     "Verkeersregelaar.externeReferentie": {
       "@container": "@set",
       "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Verkeersregelaar.externeReferentie",
+      "@type": "@id"
+    },
+    "Verkeersregelaar.heeftHandbediening": {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Verkeersregelaar.heeftHandbediening",
+      "@type": "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "Verkeersregelaar.heeftSdKaart": {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Verkeersregelaar.heeftSDKaart",
+      "@type": "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "Verkeersregelaar.ipv4Adres": {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Verkeersregelaar.ipAdres",
       "@type": "@id"
     },
     "Verkeersregelaar.kabelaansluitschema": {
@@ -1304,6 +1339,10 @@
       "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Verkeersregelaar.regelaartype",
       "@type": "@id"
     },
+    "Verkeersregelaar.simkaartnummer": {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Verkeersregelaar.simkaartnummer",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
     "Verkeersregelaar.sturing": {
       "@container": "@set",
       "@id": "https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/verkeersregelinstallatie/#Sturing",
@@ -1311,6 +1350,10 @@
     },
     "Verkeersregelaar.technischeDocumentatie": {
       "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Verkeersregelaar.technischeDocumentatie",
+      "@type": "@id"
+    },
+    "Verkeersregelaar.typeDisplay": {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Verkeersregelaar.typeDisplay",
       "@type": "@id"
     },
     "Verkeersregelaar.voltageLampen": {
@@ -1326,6 +1369,7 @@
       "@type": "http://www.w3.org/2001/XMLSchema#string"
     },
     "VerkeersregelaarCoordinatiewijze": "http://www.w3.org/2004/02/skos/core#Concept",
+    "VerkeersregelaarDisplayType": "http://www.w3.org/2004/02/skos/core#Concept",
     "VerkeersregelaarMerk": "http://www.w3.org/2004/02/skos/core#Concept",
     "VerkeersregelaarModelnaam": "http://www.w3.org/2004/02/skos/core#Concept",
     "VerkeersregelaarModules": "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#VerkeersregelaarModule",

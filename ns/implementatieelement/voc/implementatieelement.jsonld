@@ -1689,10 +1689,10 @@
   "license": "https://data.vlaanderen.be/id/licentie/modellicentie-gratis-hergebruik/v1.0",
   "issued": "TODO",
   "navigation": {
-    "prev": "/doc/vocabularium/wegenenverkeer/implementatieelement/ontwerpdocument/2.10.0-RC1"
+    "prev": "/doc/vocabularium/wegenenverkeer/implementatieelement/ontwerpdocument/2.11.0-RC1"
   },
   "publication-state": "https://data.vlaanderen.be/doc/concept/StandaardStatus/KandidaatStandaard",
-  "publication-date": "15-03-2024",
+  "publication-date": "15-06-2024",
   "classes": [
     {
       "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMDBStatus",
@@ -1755,6 +1755,16 @@
       },
       "parents": [
         "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMObject"
+      ]
+    },
+    {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#Bijlage",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
+      "definition": {
+        "nl": "Een bestand (document, afbeelding, ...) dat behoort tot 1 of meerdere assets."
+      },
+      "parents": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#AbstracteAanvullendeGeometrie"
       ]
     },
     {
@@ -1882,6 +1892,14 @@
       "@type": "http://www.w3.org/2002/07/owl#Class",
       "definition": {
         "nl": "Complex datatype om een bereik uit te drukken met een minimium en maximum in kilogram."
+      },
+      "parents": []
+    },
+    {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcBeschermendeLaag",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
+      "definition": {
+        "nl": "Complex datatype voor de inventarisatie van het type beschermlaag en de corrosiebelastingscategorie."
       },
       "parents": []
     },
@@ -2328,6 +2346,14 @@
       "parents": []
     },
     {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMeterPerSeconde",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
+      "definition": {
+        "nl": "Een kwantitatieve waarde die een getal in kg per kubieke meter uitdrukt."
+      },
+      "parents": []
+    },
+    {
       "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMeterTAW",
       "@type": "http://www.w3.org/2002/07/owl#Class",
       "definition": {
@@ -2603,6 +2629,13 @@
     },
     {
       "name": {
+        "nl": "Bijlage type"
+      },
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
+      "@type": "rdfs:Class"
+    },
+    {
+      "name": {
         "nl": "Electricity appurtenance type"
       },
       "@id": "http://www.w3.org/2004/02/skos/core#Concept",
@@ -2645,6 +2678,13 @@
     },
     {
       "name": {
+        "nl": "Corrosiebelastingscategorie"
+      },
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
+      "@type": "rdfs:Class"
+    },
+    {
+      "name": {
         "nl": "Krimpvoegvulling"
       },
       "@id": "http://www.w3.org/2004/02/skos/core#Concept",
@@ -2666,20 +2706,6 @@
     },
     {
       "name": {
-        "nl": "Schoorhoek"
-      },
-      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
-      "@type": "rdfs:Class"
-    },
-    {
-      "name": {
-        "nl": "Duurzaamheidsklasse van hout"
-      },
-      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
-      "@type": "rdfs:Class"
-    },
-    {
-      "name": {
         "nl": "Walsmethode"
       },
       "@id": "http://www.w3.org/2004/02/skos/core#Concept",
@@ -2695,6 +2721,27 @@
     {
       "name": {
         "nl": "Betonsterkteklasse"
+      },
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
+      "@type": "rdfs:Class"
+    },
+    {
+      "name": {
+        "nl": "Schoorhoek"
+      },
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
+      "@type": "rdfs:Class"
+    },
+    {
+      "name": {
+        "nl": "Duurzaamheidsklasse van hout"
+      },
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
+      "@type": "rdfs:Class"
+    },
+    {
+      "name": {
+        "nl": "Toegankelijkheid"
       },
       "@id": "http://www.w3.org/2004/02/skos/core#Concept",
       "@type": "rdfs:Class"
@@ -3693,6 +3740,37 @@
       },
       "domain": [
         "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMeterTAW"
+      ],
+      "range": [
+        "http://www.w3.org/2000/01/rdf-schema#Literal"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMeterPerSeconde.waarde",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "definition": {
+        "nl": "Bevat een getal die bij het datatype hoort."
+      },
+      "domain": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMeterPerSeconde"
+      ],
+      "range": [
+        "http://www.w3.org/2001/XMLSchema#decimal"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMeterPerSeconde.standaardEenheid",
+      "@type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
+      "definition": {
+        "nl": "De standaard eenheid bij dit datatype is uitgedrukt in in kg per kubieke meter"
+      },
+      "usage": {
+        "nl": "\"kg/m3\"^^cdt:ucumunit"
+      },
+      "domain": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMeterPerSeconde"
       ],
       "range": [
         "http://www.w3.org/2000/01/rdf-schema#Literal"
@@ -5748,6 +5826,34 @@
       "generalization": []
     },
     {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcBeschermendeLaag.corrosieklasse",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "definition": {
+        "nl": "Een code om de mate van corrosieve belasting in een bepaalde omgeving te beschrijven, volgens ISO-12944-2."
+      },
+      "domain": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcBeschermendeLaag"
+      ],
+      "range": [
+        "http://www.w3.org/2004/02/skos/core#Concept"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcBeschermendeLaag.beschermlaag",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "definition": {
+        "nl": "Type bescherming van de constructie of steun, bv. geschilderd of gegalvaniseerd."
+      },
+      "domain": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcBeschermendeLaag"
+      ],
+      "range": [
+        "http://www.w3.org/2004/02/skos/core#Concept"
+      ],
+      "generalization": []
+    },
+    {
       "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcBereikInKg.minimium",
       "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "definition": {
@@ -6255,6 +6361,20 @@
       "generalization": []
     },
     {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#Bijlage.type",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "definition": {
+        "nl": "De typering of categorie van de bijlage."
+      },
+      "domain": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#Bijlage"
+      ],
+      "range": [
+        "http://www.w3.org/2004/02/skos/core#Concept"
+      ],
+      "generalization": []
+    },
+    {
       "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#Appurtenance.opstelhoogte",
       "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "definition": {
@@ -6520,7 +6640,7 @@
     },
     {
       "name": {
-        "nl": "Contactinfo"
+        "nl": "contactinfo"
       },
       "@id": "http://purl.org/dc/terms/Agent.contactinfo",
       "@type": "rdf:Property"

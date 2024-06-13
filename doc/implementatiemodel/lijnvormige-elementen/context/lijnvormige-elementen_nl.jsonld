@@ -1,5 +1,6 @@
 {
   "@context": {
+    "AanhorigheidSluisEnStuw": "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#AanhorigheidSluisStuw",
     "AansluitendeConstructie": "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#AansluitendeConstructie",
     "AansluitendeConstructie.bevestiging": {
       "@container": "@set",
@@ -427,6 +428,10 @@
       "@container": "@set",
       "@id": "https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/lijnvormige-elementen/#Hoort bij",
       "@type": "@id"
+    },
+    "Deur.isWaterdicht": {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Deur.isWaterdicht",
+      "@type": "http://www.w3.org/2001/XMLSchema#boolean"
     },
     "Deur.isZelfsluitend": {
       "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#Deur.isZelfsluitend",
@@ -1008,6 +1013,11 @@
       "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#Laag.oppervlakte",
       "@type": "@id"
     },
+    "LaagProductidentificatiecode": "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#LaagProductidentificatiecode",
+    "LaagProductidentificatiecode.productidentificatiecode": {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#LaagProductidentificatiecode.productidentificatiecode",
+      "@type": "@id"
+    },
     "LaagRol": "http://www.w3.org/2004/02/skos/core#Concept",
     "LigtOp": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#LigtOp",
     "LijnvormigElement": "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#LijnvormigElement",
@@ -1145,21 +1155,21 @@
     },
     "PictogramSymbool": "http://www.w3.org/2004/02/skos/core#Concept",
     "PlaatsingswijzePlint": "http://www.w3.org/2004/02/skos/core#Concept",
-    "PlintGeluidswerendeConstructie": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#PlintGC",
-    "PlintGeluidswerendeConstructie.afmetingen": {
+    "PlintGeluidwerendeConstructie": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#PlintGC",
+    "PlintGeluidwerendeConstructie.afmetingen": {
       "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#PlintGC.afmetingen",
       "@type": "@id"
     },
-    "PlintGeluidswerendeConstructie.bevestiging": {
+    "PlintGeluidwerendeConstructie.bevestiging": {
       "@container": "@set",
       "@id": "https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/lijnvormige-elementen/#Bevestiging",
       "@type": "@id"
     },
-    "PlintGeluidswerendeConstructie.plaatsingswijze": {
+    "PlintGeluidwerendeConstructie.plaatsingswijze": {
       "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#PlintGC.plaatsingswijze",
       "@type": "@id"
     },
-    "PlintGeluidswerendeConstructie.technischeFiche": {
+    "PlintGeluidwerendeConstructie.technischeFiche": {
       "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#PlintGC.technischeFiche",
       "@type": "@id"
     },
@@ -1220,6 +1230,11 @@
     "SchokindexVoertuigkering.schokindex": {
       "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#SchokindexVoertuigkering.schokindex",
       "@type": "@id"
+    },
+    "Serienummerobject": "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#SerienummerObject",
+    "Serienummerobject.serienummer": {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#SerienummerObject.serienummer",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
     },
     "Signalisatie": "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#Signalisatie",
     "SignalisatieReferentiepuntType": "http://www.w3.org/2004/02/skos/core#Concept",
@@ -1300,7 +1315,7 @@
     "UitzetttingswaardeDilatatie": "http://www.w3.org/2004/02/skos/core#Concept",
     "Uri": "http://www.w3.org/2001/XMLSchema#anyURI",
     "VegetatieElement": "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#VegetatieElement",
-    "VegetatieElement.hoogte": {
+    "VegetatieElement.hoogteklasse": {
       "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#VegetatieElement.hoogte",
       "@type": "@id"
     },
@@ -1317,6 +1332,10 @@
       "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#VegetatieElement.soortnaam",
       "@type": "@id"
     },
+    "VegetatieElement.standplaats": {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#VegetatieElement.standplaats",
+      "@type": "@id"
+    },
     "VegetatieSoortnaam": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#DtcVegetatieSoortnaam",
     "VegetatieSoortnaam.code": {
       "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#DtcVegetatieSoortnaam.code",
@@ -1330,7 +1349,12 @@
       "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#DtcVegetatieSoortnaam.soortnaamWetenschappelijk",
       "@type": "http://www.w3.org/2001/XMLSchema#string"
     },
+    "VegetatieSoortnaam.wetenschappelijkeSoortnaam": {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#DtcVegetatieSoortnaam.wetenschappelijkeSoortnaam",
+      "@type": "@id"
+    },
     "VegetatieelementHoogte": "http://www.w3.org/2004/02/skos/core#Concept",
+    "VegetatieelementStandplaats": "http://www.w3.org/2004/02/skos/core#Concept",
     "Verlichtingstoestel": "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#Verlichtingstoestel",
     "Verlichtingstoestel.heeftAansluitkastGeïntegreerd": {
       "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#Verlichtingstoestel.heeftAansluitkastGeintegreerd",
@@ -1415,6 +1439,10 @@
       "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#VerlichtingstoestelLED.protector",
       "@type": "@id"
     },
+    "VerlichtingstoestelLed.technischeFiche": {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#VerlichtingstoestelLED.technischeFiche",
+      "@type": "@id"
+    },
     "VerlichtingstoestelLed.tussenAfstand": {
       "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#VerlichtingstoestelLED.tussenAfstand",
       "@type": "@id"
@@ -1492,6 +1520,7 @@
     "WegbermBio": "http://www.w3.org/2004/02/skos/core#Concept",
     "WegbermType": "http://www.w3.org/2004/02/skos/core#Concept",
     "Werkingsbreedte": "http://www.w3.org/2004/02/skos/core#Concept",
+    "WetenschappelijkeSoortnaam": "http://www.w3.org/2004/02/skos/core#Concept",
     "WvBesturingsconnector": "http://www.w3.org/2004/02/skos/core#Concept",
     "WvLedAantalTeVerlichtenRijstroken": "http://www.w3.org/2004/02/skos/core#Concept",
     "WvLedKleurtemperatuur": "http://www.w3.org/2004/02/skos/core#Concept",

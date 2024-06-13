@@ -15,20 +15,23 @@ skos:Concept a rdfs:Class;
   rdfs:label "AIM toestand"@nl,
     "Type badge"@nl,
     "Type sleutel"@nl,
+    "Bijlage type"@nl,
     "Electricity appurtenance type"@nl,
     "Telecommunications appurtenance type"@nl,
     "Electricity subthema"@nl,
     "Pipe container type"@nl,
     "Datakabel materiaal"@nl,
     "Telecommunications subthema"@nl,
+    "Corrosiebelastingscategorie"@nl,
     "Krimpvoegvulling"@nl,
     "Toegangsprocedure toegangstijden"@nl,
     "Betonomgevingsklasse"@nl,
-    "Schoorhoek"@nl,
-    "Duurzaamheidsklasse van hout"@nl,
     "Walsmethode"@nl,
     "Constructiestaalsoort"@nl,
     "Betonsterkteklasse"@nl,
+    "Schoorhoek"@nl,
+    "Duurzaamheidsklasse van hout"@nl,
+    "Toegankelijkheid"@nl,
     "Mimetype"@nl,
     "Gebruiksdomein"@nl,
     "Toeslagmiddel beton"@nl,
@@ -122,6 +125,12 @@ schemas:OpeningHoursSpecification a rdfs:Class;
   rdfs:domain <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#Appurtenance>;
   rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement>;
   rdfs:range <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMeter> .
+
+<https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#Bijlage.type> a owl:ObjectProperty;
+  rdfs:comment "De typering of categorie van de bijlage."@nl;
+  rdfs:domain <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#Bijlage>;
+  rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement>;
+  rdfs:range skos:Concept .
 
 <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#Derdenobject.assetId> a owl:ObjectProperty;
   rdfs:comment "Unieke identificatie van de asset zoals toegekend door de assetbeheerder of n.a.v. eerste aanlevering door de leverancier."@nl;
@@ -344,6 +353,18 @@ schemas:OpeningHoursSpecification a rdfs:Class;
   rdfs:domain <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcBereikInKg>;
   rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement>;
   rdfs:range <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInKilogram> .
+
+<https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcBeschermendeLaag.beschermlaag> a owl:ObjectProperty;
+  rdfs:comment "Type bescherming van de constructie of steun, bv. geschilderd of gegalvaniseerd."@nl;
+  rdfs:domain <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcBeschermendeLaag>;
+  rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement>;
+  rdfs:range skos:Concept .
+
+<https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcBeschermendeLaag.corrosieklasse> a owl:ObjectProperty;
+  rdfs:comment "Een code om de mate van corrosieve belasting in een bepaalde omgeving te beschrijven, volgens ISO-12944-2."@nl;
+  rdfs:domain <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcBeschermendeLaag>;
+  rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement>;
+  rdfs:range skos:Concept .
 
 <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcBetonspecificaties.betondekking> a owl:ObjectProperty;
   rdfs:comment "De afstand in millimeter tussen de buitenkant van het beton (het oppervlak van het beton) tot het dichtstbijzijnde wapeningsstaal."@nl;
@@ -1213,6 +1234,19 @@ schemas:OpeningHoursSpecification a rdfs:Class;
   rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement>;
   rdfs:range xsd:decimal .
 
+<https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMeterPerSeconde.standaardEenheid> a owl:DatatypeProperty;
+  <http://purl.org/vocab/vann/usageNote> "\"kg/m3\"^^cdt:ucumunit"@nl;
+  rdfs:comment "De standaard eenheid bij dit datatype is uitgedrukt in in kg per kubieke meter"@nl;
+  rdfs:domain <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMeterPerSeconde>;
+  rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement>;
+  rdfs:range rdfs:Literal .
+
+<https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMeterPerSeconde.waarde> a owl:ObjectProperty;
+  rdfs:comment "Bevat een getal die bij het datatype hoort."@nl;
+  rdfs:domain <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMeterPerSeconde>;
+  rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement>;
+  rdfs:range xsd:decimal .
+
 <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMeterTAW.standaardEenheid> a owl:DatatypeProperty;
   <http://purl.org/vocab/vann/usageNote> "\"m\"^^cdt:ucumunit"@nl;
   rdfs:comment "De standaard eenheid bij dit datatype is uitgedrukt in meter."@nl;
@@ -1602,7 +1636,7 @@ dc:Agent\.agentId a rdf:Property;
   rdfs:label "agent identificatie"@nl .
 
 dc:Agent\.contactinfo a rdf:Property;
-  rdfs:label "Contactinfo"@nl .
+  rdfs:label "contactinfo"@nl .
 
 dc:Agent\.naam a rdf:Property;
   rdfs:label "naam"@nl .
@@ -1646,6 +1680,11 @@ schemas:opens a rdf:Property;
   rdfs:comment "Het gehele gebied dat door dezelfde exploitant op dezelfde locatie of op verschillende geografische locaties wordt beheerd,inclusief alle infrastructuur,apparatuur en materialen."@nl;
   rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement>;
   rdfs:subClassOf <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMNaamObject> .
+
+<https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#Bijlage> a owl:Class;
+  rdfs:comment "Een bestand (document, afbeelding, ...) dat behoort tot 1 of meerdere assets."@nl;
+  rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement>;
+  rdfs:subClassOf <https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#AbstracteAanvullendeGeometrie> .
 
 <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcAfmetingDiameterInCm> a owl:Class;
   rdfs:comment "Complex datatype voor de afmeting van een diameter in centimeter."@nl;
@@ -1700,6 +1739,10 @@ schemas:opens a rdf:Property;
 
 <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcBereikInKg> a owl:Class;
   rdfs:comment "Complex datatype om een bereik uit te drukken met een minimium en maximum in kilogram."@nl;
+  rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement> .
+
+<https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcBeschermendeLaag> a owl:Class;
+  rdfs:comment "Complex datatype voor de inventarisatie van het type beschermlaag en de corrosiebelastingscategorie."@nl;
   rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement> .
 
 <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcCameraBeeldverwerking> a owl:Class;
@@ -1826,6 +1869,10 @@ schemas:opens a rdf:Property;
 
 <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInLiterPerMinuut> a owl:Class;
   rdfs:comment "Een kwantitatieve waarde die een getal in liter per minuut uitdrukt."@nl;
+  rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement> .
+
+<https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMeterPerSeconde> a owl:Class;
+  rdfs:comment "Een kwantitatieve waarde die een getal in kg per kubieke meter uitdrukt."@nl;
   rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement> .
 
 <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMeterTAW> a owl:Class;

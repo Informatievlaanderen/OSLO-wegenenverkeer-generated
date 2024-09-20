@@ -2,6 +2,50 @@
   "@context": {
     "AanhorighedenBrug": "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#AanhorighedenBrug",
     "AanhorighedenKoker": "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#AanhorigheidKoker",
+    "Adres": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcAdres",
+    "Adres.bus": {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcAdres.bus",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "Adres.gemeente": {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcAdres.gemeente",
+      "@type": "@id"
+    },
+    "Adres.huisnummer": {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcAdres.huisnummer",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "Adres.postcode": {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcAdres.postcode",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "Adres.provincie": {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcAdres.provincie",
+      "@type": "@id"
+    },
+    "Adres.straatnaam": {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcAdres.straatnaam",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "Agent": "http://purl.org/dc/terms/Agent",
+    "Agent.agentIdentificatie": {
+      "@id": "http://purl.org/dc/terms/Agent.agentId",
+      "@type": "@id"
+    },
+    "Agent.contactinfo": {
+      "@container": "@set",
+      "@id": "http://purl.org/dc/terms/Agent.contactinfo",
+      "@type": "@id"
+    },
+    "Agent.heeftBetrokkene": {
+      "@container": "@set",
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/ventilatie/#heeft betrokkene",
+      "@type": "@id"
+    },
+    "Agent.naam": {
+      "@id": "http://purl.org/dc/terms/Agent.naam",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
     "AimDatabankStatus": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMDBStatus",
     "AimDatabankStatus.isActief": {
       "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMDBStatus.isActief",
@@ -75,6 +119,7 @@
       "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcDocument.uri",
       "@type": "@id"
     },
+    "BetrokkenheidRol": "http://www.w3.org/2004/02/skos/core#Concept",
     "Bevestiging": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Bevestiging",
     "BevestigingGeluidswerendeConstructie": "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#BevestigingGC",
     "Bevestigingsbeugel": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Bevestigingsbeugel",
@@ -112,6 +157,40 @@
       "@container": "@set",
       "@id": "https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/ventilatie/#Bevestiging",
       "@type": "@id"
+    },
+    "Contactinfo": "https://schema.org/ContactPoint",
+    "Contactinfo.adres": {
+      "@id": "http://www.w3.org/ns/locn#address",
+      "@type": "@id"
+    },
+    "Contactinfo.beschikbaarheid": {
+      "@container": "@set",
+      "@id": "http://schema.org/hoursAvailable",
+      "@type": "@id"
+    },
+    "Contactinfo.contactnaam": {
+      "@id": "http://xmlns.com/foaf/0.1/name",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "Contactinfo.email": {
+      "@id": "http://schema.org/email",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "Contactinfo.fax": {
+      "@id": "http://schema.org/faxNumber",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "Contactinfo.opmerkingen": {
+      "@id": "https://schema.org/ContactPoint.opmerkingen",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "Contactinfo.telefoon": {
+      "@id": "http://schema.org/telephone",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "Contactinfo.website": {
+      "@id": "http://xmlns.com/foaf/0.1/page",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
     },
     "Contactor": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Contactor",
     "Contactor.merk": {
@@ -173,6 +252,25 @@
       "@type": "http://www.w3.org/2001/XMLSchema#string"
     },
     "GebruikstypesVentilator": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Gemeente": "http://www.w3.org/2004/02/skos/core#Concept",
+    "HeeftBetrokkene": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#HeeftBetrokkene",
+    "HeeftBetrokkene.datumAanvang": {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#HeeftBetrokkene.datumAanvang",
+      "@type": "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "HeeftBetrokkene.datumEinde": {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#HeeftBetrokkene.datumEinde",
+      "@type": "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "HeeftBetrokkene.rol": {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#HeeftBetrokkene.rol",
+      "@type": "@id"
+    },
+    "HeeftBetrokkene.specifiekeContactinfo": {
+      "@container": "@set",
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#HeeftBetrokkene.specifiekeContactinfo",
+      "@type": "@id"
+    },
     "HoortBij": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#HoortBij",
     "IPv4Adres": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DteIPv4Adres",
     "IPv4Adres.waarde": {
@@ -307,6 +405,19 @@
       "@type": "http://www.w3.org/2001/XMLSchema#string"
     },
     "NatuurlijkGetal": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "Openingsurenspecificatie": "https://schema.org/OpeningHoursSpecification",
+    "Openingsurenspecificatie.openingstijd": {
+      "@id": "https://schema.org/opens",
+      "@type": "http://www.w3.org/2001/XMLSchema#time"
+    },
+    "Openingsurenspecificatie.sluitingstijd": {
+      "@id": "https://schema.org/closes",
+      "@type": "http://www.w3.org/2001/XMLSchema#time"
+    },
+    "Openingsurenspecificatie.weekdag": {
+      "@id": "https://schema.org/dayOfWeek",
+      "@type": "@id"
+    },
     "Overdrukventilator": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Overdrukventilator",
     "Plc": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#PLC",
     "Plc.bevestiging": {
@@ -338,6 +449,7 @@
     },
     "PlcMerk": "http://www.w3.org/2004/02/skos/core#Concept",
     "PlcModel": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Provincie": "http://www.w3.org/2004/02/skos/core#Concept",
     "Serienummerobject": "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#SerienummerObject",
     "Serienummerobject.serienummer": {
       "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#SerienummerObject.serienummer",
@@ -376,6 +488,7 @@
     },
     "TemperatuursensorMerk": "http://www.w3.org/2004/02/skos/core#Concept",
     "TemperatuursensorModelnaam": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Tijd": "http://www.w3.org/2001/XMLSchema#time",
     "Uri": "http://www.w3.org/2001/XMLSchema#anyURI",
     "Ventilatie": "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#Ventilatie",
     "Ventilatie.binnendiameter": {
@@ -471,6 +584,7 @@
       "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Voedt.aansluitvermogen",
       "@type": "@id"
     },
-    "VoedtAangestuurd": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#VoedtAangestuurd"
+    "VoedtAangestuurd": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#VoedtAangestuurd",
+    "Weekdagen": "https://schema.org/DayOfWeek"
   }
 }

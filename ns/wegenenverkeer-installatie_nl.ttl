@@ -23,6 +23,7 @@ skos:Concept a rdfs:Class;
     "Secundaire combiwand"@nl,
     "Type externe naspanning"@nl,
     "Materiaal tussenschot Berlinerwand"@nl,
+    "Vorm leuning"@nl,
     "Type brandwerendheid"@nl,
     "Koker type fundering"@nl,
     "Afwerkingstype leuning"@nl,
@@ -30,7 +31,6 @@ skos:Concept a rdfs:Class;
     "Type ondergrond"@nl,
     "Koker element gebruikers type"@nl,
     "Type materiaal"@nl,
-    "Vorm leuning"@nl,
     "Graad van statische bepaaldheid"@nl,
     "Type brugdeel"@nl,
     "Type trekker"@nl,
@@ -56,25 +56,25 @@ skos:Concept a rdfs:Class;
     "Type tijdelijke waterkerende constructie"@nl,
     "Keuzelijst droogzetbaarheid omloopriool"@nl,
     "Wijze geleiding"@nl,
-    "Type van aardingsinstallatie"@nl,
     "Aardingsinstallatie aardingsnet"@nl,
     "Aardingsinstallatie aardingsstelsel"@nl,
     "Meteo foto beschrijving"@nl,
-    "Lokaal terreintype"@nl,
+    "Type van aardingsinstallatie"@nl,
     "Z-pad type"@nl,
     "Pad netwerkprotectie"@nl,
     "Pompgroep merk"@nl,
+    "Lokaal terreintype"@nl,
+    "MIV eenheid type"@nl,
     "Pompgroep modelnaam"@nl,
     "Materiaal ventilatiekanaal"@nl,
     "Kamer functie"@nl,
     "Radioheruitzendinstallatie modelnaam"@nl,
     "Radioheruitzendinstallatie merk"@nl,
-    "MIV eenheid type"@nl,
     "MIV meetpuntgebied"@nl,
     "MIV meetpunt afmetingen"@nl,
     "Algemeen rijstrookcode"@nl,
-    "Wegberm BIO"@nl,
-    "Wegberm type"@nl .
+    "Wegberm type"@nl,
+    "Wegberm BIO"@nl .
 
 <https://wegenenverkeer.data.vlaanderen.be/ns/installatie#ASTRIDInstallatie.certificaat> a owl:ObjectProperty;
   rdfs:comment "Documenten van interne of externe organisaties, die de installatie goedkeuren of opmerkingen geven."@nl;
@@ -197,9 +197,10 @@ skos:Concept a rdfs:Class;
   rdfs:subClassOf <https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#AIMNaamObject> .
 
 <https://wegenenverkeer.data.vlaanderen.be/ns/installatie#Been> a owl:Class;
-  rdfs:comment "Een aaneengesloten reeks van links die samen een traject realiseren over het netwerk, gebruik makende van eenzelfde technologie (vb SDH, OTN...)."@nl;
+  <http://purl.org/vocab/vann/usageNote> "De asset hoeft geometrisch niet gelokaliseerd te worden."@nl;
+  rdfs:comment "Een aaneengesloten reeks van links die samen een traject realiseren over het netwerk,gebruik makende van eenzelfde technologie (vb SDH,OTN...)."@nl;
   rdfs:isDefinedBy <https://wegenenverkeer.data.vlaanderen.be/ns/installatie>;
-  rdfs:subClassOf <https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#AIMObject> .
+  rdfs:subClassOf <https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#AIMNaamObject> .
 
 <https://wegenenverkeer.data.vlaanderen.be/ns/installatie#Berlinerwand.totaleLengteWand> a owl:ObjectProperty;
   rdfs:comment "De totale horizontale lengte van de gehele berlinerwand in lopende meter."@nl;
@@ -987,7 +988,7 @@ skos:Concept a rdfs:Class;
   rdfs:range <https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMeter> .
 
 <https://wegenenverkeer.data.vlaanderen.be/ns/installatie#Hameipoort.toegankelijkheid> a owl:ObjectProperty;
-  rdfs:comment "Duidt de toegankelijkheid van de hameipoort  aan."@nl;
+  rdfs:comment "Duidt de toegankelijkheid van de hameipoort aan."@nl;
   rdfs:domain <https://wegenenverkeer.data.vlaanderen.be/ns/installatie#Hameipoort>;
   rdfs:isDefinedBy <https://wegenenverkeer.data.vlaanderen.be/ns/installatie>;
   rdfs:range skos:Concept .
@@ -1040,6 +1041,7 @@ skos:Concept a rdfs:Class;
   rdfs:subClassOf <https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#NaampadObject> .
 
 <https://wegenenverkeer.data.vlaanderen.be/ns/installatie#IPBackbone> a owl:Class;
+  <http://purl.org/vocab/vann/usageNote> "De asset hoeft geometrisch niet gelokaliseerd te worden."@nl;
   rdfs:comment "Netwerk dat bestaat uit meerdere L3 switches. Zij verbinden de verschillende L2 access structuren met de datacentres"@nl;
   rdfs:isDefinedBy <https://wegenenverkeer.data.vlaanderen.be/ns/installatie>;
   rdfs:subClassOf <https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#NaampadObject> .
@@ -1230,6 +1232,7 @@ skos:Concept a rdfs:Class;
   rdfs:subClassOf <https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#AIMNaamObject> .
 
 <https://wegenenverkeer.data.vlaanderen.be/ns/installatie#L2AccessStructuur> a owl:Class;
+  <http://purl.org/vocab/vann/usageNote> "De asset hoeft geometrisch niet gelokaliseerd te worden."@nl;
   rdfs:comment "Opstelling die het mogelijk maakt om een techniek direct te koppelen met het IP telematica netwerk. Een L2 access structuur bestaat uit meerdere L2 Switches die met elkaar verbonden zijn."@nl;
   rdfs:isDefinedBy <https://wegenenverkeer.data.vlaanderen.be/ns/installatie>;
   rdfs:subClassOf <https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#NaampadObject> .
@@ -1422,6 +1425,13 @@ skos:Concept a rdfs:Class;
   rdfs:isDefinedBy <https://wegenenverkeer.data.vlaanderen.be/ns/installatie>;
   rdfs:range skos:Concept .
 
+<https://wegenenverkeer.data.vlaanderen.be/ns/installatie#MIVMeetpunt.aansluiting> a owl:ObjectProperty;
+  <http://purl.org/vocab/vann/usageNote> "Deze eigenschap is tijdelijk toegevoegd in het kader van het verweven van Legacy data en OTL data. De informatie in deze eigenschap zal op termijn moeten worden bijgehouden  in het type Datakabel"@nl;
+  rdfs:comment "LEGACY-ATTRIBUUT zie usageNote! De aansluiting van de meetlussen op het verwerkingssysteem."@nl;
+  rdfs:domain <https://wegenenverkeer.data.vlaanderen.be/ns/installatie#MIVMeetpunt>;
+  rdfs:isDefinedBy <https://wegenenverkeer.data.vlaanderen.be/ns/installatie>;
+  rdfs:range skos:Concept .
+
 <https://wegenenverkeer.data.vlaanderen.be/ns/installatie#MIVMeetpunt.afmetingen> a owl:ObjectProperty;
   <http://purl.org/vocab/vann/usageNote> "De lengte van een lus wordt gemeten parallel aan de rijweg. De breedte dwars op de rijweg. Beide lussen van een MIV meetpunt moeten altijd dezelfde afmetingen hebben."@nl;
   rdfs:comment "De afmetingen van de lussen als lengte en breedte volgens een lijst van vaste afmetingen"@nl;
@@ -1473,8 +1483,22 @@ skos:Concept a rdfs:Class;
   rdfs:isDefinedBy <https://wegenenverkeer.data.vlaanderen.be/ns/installatie>;
   rdfs:range skos:Concept .
 
+<https://wegenenverkeer.data.vlaanderen.be/ns/installatie#MIVMeetpunt.trekput> a owl:DatatypeProperty;
+  <http://purl.org/vocab/vann/usageNote> "Deze eigenschap is tijdelijk toegevoegd in het kader van het verweven van Legacy data en OTL data. De informatie in deze eigenschap zal op termijn moeten worden bijgehouden  in het type Technische put."@nl;
+  rdfs:comment "LEGACY-ATTRIBUUT zie usageNote! Een trekput is een ondergrondse put waarin kabels van meetlussen op snelwegen samenkomen voor verbinding en onderhoud, zonder het wegdek open te breken."@nl;
+  rdfs:domain <https://wegenenverkeer.data.vlaanderen.be/ns/installatie#MIVMeetpunt>;
+  rdfs:isDefinedBy <https://wegenenverkeer.data.vlaanderen.be/ns/installatie>;
+  rdfs:range xsd:boolean .
+
 <https://wegenenverkeer.data.vlaanderen.be/ns/installatie#MIVMeetpunt.uitslijprichting> a owl:ObjectProperty;
   rdfs:comment "De uitlopers van de lus gaan naar links of naar rechts bekeken ten opzichte van de rijrichting."@nl;
+  rdfs:domain <https://wegenenverkeer.data.vlaanderen.be/ns/installatie#MIVMeetpunt>;
+  rdfs:isDefinedBy <https://wegenenverkeer.data.vlaanderen.be/ns/installatie>;
+  rdfs:range skos:Concept .
+
+<https://wegenenverkeer.data.vlaanderen.be/ns/installatie#MIVMeetpunt.wegdek> a owl:ObjectProperty;
+  <http://purl.org/vocab/vann/usageNote> "Deze eigenschap is tijdelijk toegevoegd in het kader van het verweven van Legacy data en OTL data. De informatie in deze eigenschap zal op termijn moeten worden bijgehouden  in het type Laag."@nl;
+  rdfs:comment "LEGACY-ATTRIBUUT zie usageNote! Het type wegdek waarin de meetlussen zijn verwerkt."@nl;
   rdfs:domain <https://wegenenverkeer.data.vlaanderen.be/ns/installatie#MIVMeetpunt>;
   rdfs:isDefinedBy <https://wegenenverkeer.data.vlaanderen.be/ns/installatie>;
   rdfs:range skos:Concept .
@@ -1871,7 +1895,7 @@ skos:Concept a rdfs:Class;
   rdfs:range <https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInTon> .
 
 <https://wegenenverkeer.data.vlaanderen.be/ns/installatie#Sluis.vrijeHoogte> a owl:ObjectProperty;
-  rdfs:comment "De verticale vrije ruimte tussen het wateroppervlak en  het laagste punt van de bovenliggende constructie, zoals bruggen, balken of andere obstakels."@nl;
+  rdfs:comment "De verticale vrije ruimte tussen het wateroppervlak en het laagste punt van de bovenliggende constructie, zoals bruggen, balken of andere obstakels."@nl;
   rdfs:domain <https://wegenenverkeer.data.vlaanderen.be/ns/installatie#Sluis>;
   rdfs:isDefinedBy <https://wegenenverkeer.data.vlaanderen.be/ns/installatie>;
   rdfs:range <https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMeter> .
@@ -2050,7 +2074,7 @@ skos:Concept a rdfs:Class;
   rdfs:range skos:Concept .
 
 <https://wegenenverkeer.data.vlaanderen.be/ns/installatie#Trappentoren> a owl:Class;
-  <http://purl.org/vocab/vann/usageNote> "Klasse uit gebruik sinds versie 2.12.0"@nl;
+  <http://purl.org/vocab/vann/usageNote> "Klasse uit gebruik sinds versie 2.12.0 "@nl;
   rdfs:comment "Een trappentoren is een geïntegreerde constructie van trappen die kan dienen om 1 of meerdere niveaus te beklimmen."@nl;
   rdfs:isDefinedBy <https://wegenenverkeer.data.vlaanderen.be/ns/installatie>;
   rdfs:subClassOf <https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#AIMNaamObject>,
@@ -2508,6 +2532,7 @@ skos:Concept a rdfs:Class;
   rdfs:subClassOf <https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#AIMNaamObject> .
 
 <https://wegenenverkeer.data.vlaanderen.be/ns/installatie#Pad> a owl:Class;
+  <http://purl.org/vocab/vann/usageNote> "De asset hoeft geometrisch niet gelokaliseerd te worden."@nl;
   rdfs:comment "Een aaneengesloten reeks van benen die samen een verbinding realiseren over het netwerk, gebruik makende van eenzelfde technologie (vb SDH, OTN...). De verschillende benen binnen een pad volgen bij voorkeur een gescheiden geografisch traject binnen het netwerk."@nl;
   rdfs:isDefinedBy <https://wegenenverkeer.data.vlaanderen.be/ns/installatie>;
   rdfs:subClassOf <https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#NaampadObject> .
@@ -2567,14 +2592,14 @@ skos:Concept a rdfs:Class;
     <https://wegenenverkeer.data.vlaanderen.be/ns/abstracten#ConstructiefObject> .
 
 <https://wegenenverkeer.data.vlaanderen.be/ns/installatie#Zoutbijlaadplaats> a owl:Class;
-  rdfs:comment "Site in het beheer van een district, waar strooiwagens zout of pekel kunnen bijladen, wanneer ze tijdens de winterdienst hun strooiroute afleggen. De leverancier kan toegang krijgen (batch of codeklavier) om de tanks of de silos terug te vullen."@nl;
+  rdfs:comment "Site in het beheer van een district,waar strooiwagens zout of pekel kunnen bijladen,wanneer ze tijdens de winterdienst hun strooiroute afleggen. De leverancier kan toegang krijgen (badge of codeklavier) om de tanks of de silos terug te vullen."@nl;
   rdfs:isDefinedBy <https://wegenenverkeer.data.vlaanderen.be/ns/installatie>;
-  rdfs:subClassOf <https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#AIMNaamObject> .
+  rdfs:subClassOf <https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#NaampadObject> .
 
 <https://wegenenverkeer.data.vlaanderen.be/ns/installatie#ASTRIDInstallatie> a owl:Class;
   rdfs:comment "Een (radio)heruitzendingsinstallatie van radiosignalen (over TETRA in een hogere frequentieband van 380 tot 400 MHz) ondersteund door ASTRID als communicatiesysteem voor de hulpdiensten. Door de ontvangst- en zendfrequenties verschillend te maken ontstaat tweerichtingscommunicatie over grote afstanden en op plaatsen, waar radiogolven normaal niet geraken."@nl;
   rdfs:isDefinedBy <https://wegenenverkeer.data.vlaanderen.be/ns/installatie>;
-  rdfs:subClassOf <https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#AIMNaamObject> .
+  rdfs:subClassOf <https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#NaampadObject> .
 
 <https://wegenenverkeer.data.vlaanderen.be/ns/installatie#Aanvaarbescherming> a owl:Class;
   rdfs:comment "Constructie om te verhinderen dat schepen ergens tegenaan botsen."@nl;
@@ -2620,8 +2645,7 @@ skos:Concept a rdfs:Class;
   rdfs:subClassOf <https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#AIMObject> .
 
 <https://wegenenverkeer.data.vlaanderen.be/ns/installatie#Hefportiek> a owl:Class;
-  rdfs:comment """Een hefportiek is een vrijstaand, stijf hoofdconstructieonderdeel. Het bestaat uit minstens twee steunbenen die onderling verbonden zijn en rusten op de onderbouw. Deze steunbenen staan (mede) in voor het verticale steunen en begeleiden van een beweegbaar constructieonderdeel wanneer dit niet rust op zijn vaste steunpunten. Het tilt meestal een brugdeel of beweegbare waterkerende constructie op. Meestal herbergt een hefportiek een mechaniek met ook een tegengewicht en steekt het samen met een tweede, gelijkaardig exemplaar aan de overzijde, hoog boven de rest van het kunstwerk uit.
-"""@nl;
+  rdfs:comment "Een hefportiek is een vrijstaand, stijf hoofdconstructieonderdeel. Het bestaat uit minstens twee steunbenen die onderling verbonden zijn en rusten op de onderbouw. Deze steunbenen staan (mede) in voor het verticale steunen en begeleiden van een beweegbaar constructieonderdeel wanneer dit niet rust op zijn vaste steunpunten. Het tilt meestal een brugdeel of beweegbare waterkerende constructie op. Meestal herbergt een hefportiek een mechaniek met ook een tegengewicht en steekt het samen met een tweede, gelijkaardig exemplaar aan de overzijde, hoog boven de rest van het kunstwerk uit. "@nl;
   rdfs:isDefinedBy <https://wegenenverkeer.data.vlaanderen.be/ns/installatie>;
   rdfs:subClassOf <https://wegenenverkeer.data.vlaanderen.be/ns/abstracten#ConstructiefObject> .
 
@@ -2691,6 +2715,7 @@ skos:Concept a rdfs:Class;
   rdfs:subClassOf <https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#AIMObject> .
 
 <https://wegenenverkeer.data.vlaanderen.be/ns/installatie#VerkeersbordVerkeersteken> a owl:Class;
+  <http://purl.org/vocab/vann/usageNote> "De asset hoeft geometrisch niet gelokaliseerd te worden."@nl;
   rdfs:comment "De voorstelling door middel van een verkeersbord van een aanwijzing ten behoeve van de weggebruikers die verbonden wordt aan het aankondigen of opleggen van een bepaalde verkeersmaatregel zoals bepaald in de wegcode."@nl;
   rdfs:isDefinedBy <https://wegenenverkeer.data.vlaanderen.be/ns/installatie>;
   rdfs:subClassOf <https://wegenenverkeer.data.vlaanderen.be/ns/abstracten#Verkeersteken> .
@@ -2738,6 +2763,7 @@ skos:Concept a rdfs:Class;
   rdfs:subClassOf <https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#AIMNaamObject> .
 
 <https://wegenenverkeer.data.vlaanderen.be/ns/installatie#Link> a owl:Class;
+  <http://purl.org/vocab/vann/usageNote> "De asset hoeft geometrisch niet gelokaliseerd te worden."@nl;
   rdfs:comment "Het (glasvezel) traject tussen twee toestellen (NetwerkElementen) die rechtstreeks met mekaar communiceren."@nl;
   rdfs:isDefinedBy <https://wegenenverkeer.data.vlaanderen.be/ns/installatie>;
   rdfs:subClassOf <https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#NaampadObject> .
@@ -2752,7 +2778,8 @@ skos:Concept a rdfs:Class;
   <http://purl.org/vocab/vann/usageNote> "Vervangt MIVInstallatie om duidelijk te maken dat het om de aparte eenheden gaat (Sat's en LVE) en niet over het geheel van gekoppelde eenheden."@nl;
   rdfs:comment "Een verwerkingseenheid die instaat voor de verwerking van gegevens van lussen op een bepaalde locatie, hetzij als satelliet-eenheid hetzij als centrale eenheid voor de combinatie en doorsturen van verschillende eenheden. Het kan gaan om een alles-in-een toestel of om een opstelling met aparte componenten."@nl;
   rdfs:isDefinedBy <https://wegenenverkeer.data.vlaanderen.be/ns/installatie>;
-  rdfs:subClassOf <https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#AIMNaamObject> .
+  rdfs:subClassOf <https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#NaampadObject>,
+    <https://wegenenverkeer.data.vlaanderen.be/ns/abstracten#IpAdresObject> .
 
 <https://wegenenverkeer.data.vlaanderen.be/ns/installatie#Rioleringsstelsel> a owl:Class;
   rdfs:comment "De groepering van de objecten die behoren tot het riolering, aanvoer- of afvoerstelsel."@nl;
@@ -2834,6 +2861,7 @@ skos:Concept a rdfs:Class;
   rdfs:subClassOf <https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#NaampadObject> .
 
 <https://wegenenverkeer.data.vlaanderen.be/ns/installatie#VLAN> a owl:Class;
+  <http://purl.org/vocab/vann/usageNote> "De asset hoeft geometrisch niet gelokaliseerd te worden."@nl;
   rdfs:comment "Binnen de L2 access structuur vormt de VLAN een specifieke virtuele LAN. De toepassingen zijn verbonden met een specifieke VLAN. Rechtstreekse communicatie tussen toepassingen is enkel mogelijk indien deze zijn verbonden met dezelfde VLAN."@nl;
   rdfs:isDefinedBy <https://wegenenverkeer.data.vlaanderen.be/ns/installatie>;
   rdfs:subClassOf <https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#NaampadObject> .
@@ -2845,6 +2873,7 @@ skos:Concept a rdfs:Class;
     <https://wegenenverkeer.data.vlaanderen.be/ns/abstracten#Grondkeringen> .
 
 <https://wegenenverkeer.data.vlaanderen.be/ns/installatie#Zpad> a owl:Class;
+  <http://purl.org/vocab/vann/usageNote> "De asset hoeft geometrisch niet gelokaliseerd te worden."@nl;
   rdfs:comment "End-to-end gebruikersverbinding over het transport netwerk."@nl;
   rdfs:isDefinedBy <https://wegenenverkeer.data.vlaanderen.be/ns/installatie>;
   rdfs:subClassOf <https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#NaampadObject> .
@@ -2905,6 +2934,7 @@ skos:Concept a rdfs:Class;
   rdfs:subClassOf <https://wegenenverkeer.data.vlaanderen.be/ns/abstracten#EMAfbakening> .
 
 <https://wegenenverkeer.data.vlaanderen.be/ns/installatie#VerkeersbordConcept> a owl:Class;
+  <http://purl.org/vocab/vann/usageNote> "De asset hoeft geometrisch niet gelokaliseerd te worden."@nl;
   rdfs:comment "Inhoudelijke definitie van de betekenis van een verkeersbord zoals opgenomen in de wegcode."@nl;
   rdfs:isDefinedBy <https://wegenenverkeer.data.vlaanderen.be/ns/installatie>;
   rdfs:subClassOf <https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#AIMNaamObject> .
@@ -2925,17 +2955,12 @@ skos:Concept a rdfs:Class;
 <https://wegenenverkeer.data.vlaanderen.be/ns/installatie#RadioheruitzendInstallatie> a owl:Class;
   rdfs:comment "Het geheel van ontvangstantenne, infrastructuur en straalkabel of zendantenne om de radiosignalen van radiozenders over FM (88 tot 108 MHz) of DAB (174 tot 230 MHz) uit te zenden op plaatsen, die afgesloten zijn van de buitenwereld, zoals tunnels en ondergrondse parkings."@nl;
   rdfs:isDefinedBy <https://wegenenverkeer.data.vlaanderen.be/ns/installatie>;
-  rdfs:subClassOf <https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#AIMNaamObject> .
+  rdfs:subClassOf <https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#NaampadObject> .
 
 <https://wegenenverkeer.data.vlaanderen.be/ns/installatie#Meetstation> a owl:Class;
   rdfs:comment "De plaats waar verschillende sensoren samen 1 meetstation vormen."@nl;
   rdfs:isDefinedBy <https://wegenenverkeer.data.vlaanderen.be/ns/installatie>;
-  rdfs:subClassOf <https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#AIMNaamObject> .
-
-<https://wegenenverkeer.data.vlaanderen.be/ns/installatie#MIVMeetpunt> a owl:Class;
-  rdfs:comment "Een meetpunt van Meten-In-Vlaanderen als plaats waar beide meetlussen bij benadering in de weg ingeslepen zijn."@nl;
-  rdfs:isDefinedBy <https://wegenenverkeer.data.vlaanderen.be/ns/installatie>;
-  rdfs:subClassOf <https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#AIMNaamObject> .
+  rdfs:subClassOf <https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#NaampadObject> .
 
 <https://wegenenverkeer.data.vlaanderen.be/ns/installatie#Pompkamer> a owl:Class;
   rdfs:comment "Elk volume,inclusief de bouwkundige elementen die dit volume bepalen,dat deel uitmaakt van het waterbouwkundig systeem van het pompstation en als zodanig onder water kan staan."@nl;
@@ -2952,6 +2977,11 @@ skos:Concept a rdfs:Class;
   rdfs:comment "Het deel dat je kan wegnemen van een brug in zijn geheel. Dit kan ook meerdere overspanningen hebben. In het geval van beweegbare bruggen worden de onderdelen die de beweging mogelijk maken zoals balansarmen, tegengewicht, hameipoort,..etc ook gevat in het object brugdeel."@nl;
   rdfs:isDefinedBy <https://wegenenverkeer.data.vlaanderen.be/ns/installatie>;
   rdfs:subClassOf <https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#AIMNaamObject> .
+
+<https://wegenenverkeer.data.vlaanderen.be/ns/installatie#MIVMeetpunt> a owl:Class;
+  rdfs:comment "Een meetpunt van Meten-In-Vlaanderen als plaats waar beide meetlussen bij benadering in de weg ingeslepen zijn."@nl;
+  rdfs:isDefinedBy <https://wegenenverkeer.data.vlaanderen.be/ns/installatie>;
+  rdfs:subClassOf <https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#NaampadObject> .
 
 <https://wegenenverkeer.data.vlaanderen.be/ns/installatie#Sluis> a owl:Class;
   rdfs:comment "Waterbouwkundige constructie tussen twee waterlichamen met een verschillend waterpeil. Sluizen hebben als doel het beheersen van het waterpeil en het gecontroleerde doorlaten van schepen."@nl;

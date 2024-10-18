@@ -1689,10 +1689,10 @@
   "license": "https://data.vlaanderen.be/id/licentie/modellicentie-gratis-hergebruik/v1.0",
   "issued": "TODO",
   "navigation": {
-    "prev": "/doc/vocabularium/wegenenverkeer/abstracten/ontwerpdocument/2.11.0"
+    "prev": "/doc/vocabularium/wegenenverkeer/abstracten/ontwerpdocument/2.12.0"
   },
   "publication-state": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard",
-  "publication-date": "15-7-2024",
+  "publication-date": "21-10-2024",
   "classes": [
     {
       "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/abstracten#AOWSType",
@@ -1714,7 +1714,7 @@
       "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/abstracten#AanhorigheidKoker",
       "@type": "http://www.w3.org/2002/07/owl#Class",
       "definition": {
-        "nl": "Een abstracte klasse die de aanhorigheden bundelt die in een koker kunnen voorkomen zodat de overerving van de bevestigings relatie kan plaatsvinden."
+        "nl": "Een abstracte klasse die de aanhorigheden bundelt die in een koker kunnen voorkomen zodat de overerving van de bevestigingsrelatie kan plaatsvinden."
       },
       "parents": []
     },
@@ -1740,7 +1740,7 @@
       "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/abstracten#AanvaarbeschermingGeleidewerk",
       "@type": "http://www.w3.org/2002/07/owl#Class",
       "definition": {
-        "nl": "Een abstracte om de relaties van aanvaarbescherming en geleidewerk te bundelen.\n"
+        "nl": "Een abstracte om de relaties van aanvaarbescherming en geleidewerk te bundelen."
       },
       "parents": []
     },
@@ -2350,6 +2350,14 @@
       "parents": [
         "https://wegenenverkeer.data.vlaanderen.be/ns/abstracten#Behuizing"
       ]
+    },
+    {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/abstracten#IpAdresObject",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
+      "definition": {
+        "nl": "Abstracte klasse voor een IP4 adres."
+      },
+      "parents": []
     },
     {
       "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/abstracten#Kabel",
@@ -3169,6 +3177,34 @@
     },
     {
       "name": {
+        "nl": "iVRIBaseline"
+      },
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
+      "@type": "rdfs:Class"
+    },
+    {
+      "name": {
+        "nl": "Lantaarn lamptype"
+      },
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
+      "@type": "rdfs:Class"
+    },
+    {
+      "name": {
+        "nl": "verkeerslicht modelnaam"
+      },
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
+      "@type": "rdfs:Class"
+    },
+    {
+      "name": {
+        "nl": "Verkeerslicht masker"
+      },
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
+      "@type": "rdfs:Class"
+    },
+    {
+      "name": {
         "nl": "PT regelaarmodule merk"
       },
       "@id": "http://www.w3.org/2004/02/skos/core#Concept",
@@ -3198,34 +3234,6 @@
     {
       "name": {
         "nl": "Lantaarn vormgeving"
-      },
-      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
-      "@type": "rdfs:Class"
-    },
-    {
-      "name": {
-        "nl": "iVRIBaseline"
-      },
-      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
-      "@type": "rdfs:Class"
-    },
-    {
-      "name": {
-        "nl": "Lantaarn lamptype"
-      },
-      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
-      "@type": "rdfs:Class"
-    },
-    {
-      "name": {
-        "nl": "verkeerslicht modelnaam"
-      },
-      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
-      "@type": "rdfs:Class"
-    },
-    {
-      "name": {
-        "nl": "Verkeerslicht masker"
       },
       "@id": "http://www.w3.org/2004/02/skos/core#Concept",
       "@type": "rdfs:Class"
@@ -5228,6 +5236,20 @@
       ],
       "range": [
         "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMillimeter"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/abstracten#IpAdresObject.ipAdres",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "definition": {
+        "nl": "Netwerkadresgegevens of ip-adres van het element."
+      },
+      "domain": [
+        "https://wegenenverkeer.data.vlaanderen.be/ns/abstracten#IpAdresObject"
+      ],
+      "range": [
+        "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#DteIPv4Adres"
       ],
       "generalization": []
     },
@@ -7614,7 +7636,7 @@
       "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/abstracten#AbstracteAanvullendeGeometrie.naam",
       "@type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
       "definition": {
-        "nl": "De mensleesbare naam van een aanvullende geometrie. De beheerder kent deze naam toe of geeft de opdracht om deze toe te kennen."
+        "nl": "De mensleesbare naam van een aanvullende geometrie of bijlage. De beheerder kent deze naam toe of geeft de opdracht om deze toe te kennen."
       },
       "domain": [
         "https://wegenenverkeer.data.vlaanderen.be/ns/abstracten#AbstracteAanvullendeGeometrie"
@@ -7628,7 +7650,7 @@
       "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/abstracten#AbstracteAanvullendeGeometrie.bijlage",
       "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "definition": {
-        "nl": "Het document of artefact dat een geometrie heeft."
+        "nl": "Het document of artefact dat een geometrie heeft of een bijlage is."
       },
       "domain": [
         "https://wegenenverkeer.data.vlaanderen.be/ns/abstracten#AbstracteAanvullendeGeometrie"

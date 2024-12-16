@@ -1689,10 +1689,10 @@
   "license": "https://data.vlaanderen.be/id/licentie/modellicentie-gratis-hergebruik/v1.0",
   "issued": "TODO",
   "navigation": {
-    "prev": "/doc/vocabularium/wegenenverkeer/abstracten/ontwerpdocument/2.12.0-RC2"
+    "prev": "/doc/vocabularium/wegenenverkeer/abstracten/ontwerpdocument/2.13.0-RC2"
   },
   "publication-state": "https://data.vlaanderen.be/doc/concept/StandaardStatus/KandidaatStandaard",
-  "publication-date": "20-09-2024",
+  "publication-date": "16-12-2024",
   "classes": [
     {
       "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#AOWSType",
@@ -1751,6 +1751,7 @@
         "nl": "Abstracte om de eigenschappen en relaties van AanvullendeGeometrie te bundelen."
       },
       "parents": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMVersie",
         "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMDBStatus",
         "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMToestand"
       ]
@@ -1836,6 +1837,16 @@
         "nl": "Abstracte voor de bundeling van de axiale druk- en trekdraagvermogens van de totale wand,berekend volgens verschillende grenstoestanden."
       },
       "parents": []
+    },
+    {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#BalkGK",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
+      "definition": {
+        "nl": "Een abstracte om de gemeenschappelijke attributen en relaties die gebruikt worden door de verschillende balken in grondkerende constructies te verzamelen."
+      },
+      "parents": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#ConstructiefObject"
+      ]
     },
     {
       "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#Bebakening",
@@ -2090,6 +2101,14 @@
         "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#Grondkeringen",
         "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#Fundering"
       ]
+    },
+    {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#DetaiplanObject",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
+      "definition": {
+        "nl": "Abstracte dat het attribuut detailplan bevat."
+      },
+      "parents": []
     },
     {
       "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#Detectie",
@@ -3149,41 +3168,6 @@
     },
     {
       "name": {
-        "nl": "Seinlantaarn diameter"
-      },
-      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
-      "@type": "rdfs:Class"
-    },
-    {
-      "name": {
-        "nl": "iVRIBaseline"
-      },
-      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
-      "@type": "rdfs:Class"
-    },
-    {
-      "name": {
-        "nl": "Lantaarn lamptype"
-      },
-      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
-      "@type": "rdfs:Class"
-    },
-    {
-      "name": {
-        "nl": "verkeerslicht modelnaam"
-      },
-      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
-      "@type": "rdfs:Class"
-    },
-    {
-      "name": {
-        "nl": "Verkeerslicht masker"
-      },
-      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
-      "@type": "rdfs:Class"
-    },
-    {
-      "name": {
         "nl": "Luchtkwaliteitsopstelling modelnaam"
       },
       "@id": "http://www.w3.org/2004/02/skos/core#Concept",
@@ -3234,6 +3218,41 @@
     {
       "name": {
         "nl": "Lantaarn vormgeving"
+      },
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
+      "@type": "rdfs:Class"
+    },
+    {
+      "name": {
+        "nl": "Seinlantaarn diameter"
+      },
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
+      "@type": "rdfs:Class"
+    },
+    {
+      "name": {
+        "nl": "iVRIBaseline"
+      },
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
+      "@type": "rdfs:Class"
+    },
+    {
+      "name": {
+        "nl": "Lantaarn lamptype"
+      },
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
+      "@type": "rdfs:Class"
+    },
+    {
+      "name": {
+        "nl": "verkeerslicht modelnaam"
+      },
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
+      "@type": "rdfs:Class"
+    },
+    {
+      "name": {
+        "nl": "Verkeerslicht masker"
       },
       "@id": "http://www.w3.org/2004/02/skos/core#Concept",
       "@type": "rdfs:Class"
@@ -6270,6 +6289,20 @@
       "generalization": []
     },
     {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#DetaiplanObject.detailplan",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "definition": {
+        "nl": "Dit plan bevat o.a. informatie over de materiaalkwaliteit, conservering en het verankeringssysteem."
+      },
+      "domain": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#DetaiplanObject"
+      ],
+      "range": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcDocument"
+      ],
+      "generalization": []
+    },
+    {
       "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#DamplankAbstracte.technischeFiche",
       "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "definition": {
@@ -6937,6 +6970,20 @@
       "generalization": []
     },
     {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#BetonnenConstructieElement.technischeFicheBetonBescherming",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "definition": {
+        "nl": "Technische fiche dat informatie bevat over de betonbescherming."
+      },
+      "domain": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#BetonnenConstructieElement"
+      ],
+      "range": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcDocument"
+      ],
+      "generalization": []
+    },
+    {
       "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#BetonnenConstructieElement.betonspecificaties",
       "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "definition": {
@@ -6947,6 +6994,20 @@
       ],
       "range": [
         "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcBetonspecificaties"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#BetonnenConstructieElement.bekistingsplan",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "definition": {
+        "nl": "Een plan die bekistingsmaten bevat en ook alle maten van alle mogelijke uitsparingen die er kunnen zijn."
+      },
+      "domain": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#BetonnenConstructieElement"
+      ],
+      "range": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcDocument"
       ],
       "generalization": []
     },
@@ -7211,6 +7272,34 @@
       ],
       "range": [
         "http://www.w3.org/2004/02/skos/core#Concept"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#BalkGK.heeftVerankering",
+      "@type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
+      "definition": {
+        "nl": "Geeft aan of er verankering aanwezig is."
+      },
+      "domain": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#BalkGK"
+      ],
+      "range": [
+        "http://www.w3.org/2001/XMLSchema#boolean"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#BalkGK.bovenpeil",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "definition": {
+        "nl": "Het peil in meter TAW van het bovenvlak van de balk."
+      },
+      "domain": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#BalkGK"
+      ],
+      "range": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMeterTAW"
       ],
       "generalization": []
     },

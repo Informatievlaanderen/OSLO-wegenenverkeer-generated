@@ -2204,11 +2204,6 @@
             <rdfs:label xml:lang="nl">Sensor opstelwijze</rdfs:label>
             <rdfs:label xml:lang="nl">Smering type</rdfs:label>
             <rdfs:label xml:lang="nl">Luchtkwaliteitsopstelling merk</rdfs:label>
-            <rdfs:label xml:lang="nl">Seinlantaarn diameter</rdfs:label>
-            <rdfs:label xml:lang="nl">iVRIBaseline</rdfs:label>
-            <rdfs:label xml:lang="nl">Lantaarn lamptype</rdfs:label>
-            <rdfs:label xml:lang="nl">verkeerslicht modelnaam</rdfs:label>
-            <rdfs:label xml:lang="nl">Verkeerslicht masker</rdfs:label>
             <rdfs:label xml:lang="nl">Luchtkwaliteitsopstelling modelnaam</rdfs:label>
             <rdfs:label xml:lang="nl">Deur fabrikant</rdfs:label>
             <rdfs:label xml:lang="nl">Deur handgreeptype</rdfs:label>
@@ -2217,6 +2212,11 @@
             <rdfs:label xml:lang="nl">VRI detector typeweggebruiker</rdfs:label>
             <rdfs:label xml:lang="nl">seinlantaarn modelnaam</rdfs:label>
             <rdfs:label xml:lang="nl">Lantaarn vormgeving</rdfs:label>
+            <rdfs:label xml:lang="nl">Seinlantaarn diameter</rdfs:label>
+            <rdfs:label xml:lang="nl">iVRIBaseline</rdfs:label>
+            <rdfs:label xml:lang="nl">Lantaarn lamptype</rdfs:label>
+            <rdfs:label xml:lang="nl">verkeerslicht modelnaam</rdfs:label>
+            <rdfs:label xml:lang="nl">Verkeerslicht masker</rdfs:label>
             <rdfs:label xml:lang="nl">VR-module met firmware modelnaam</rdfs:label>
             <rdfs:label xml:lang="nl">seinlantaarn merk</rdfs:label>
             <rdfs:label xml:lang="nl">PT regelaarmodule modelnaam</rdfs:label>
@@ -2290,6 +2290,7 @@
       <owl:Class rdf:about="https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#AbstracteAanvullendeGeometrie">
         <rdfs:isDefinedBy rdf:resource="https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten"/>
         <rdfs:comment xml:lang="nl">Abstracte om de eigenschappen en relaties van AanvullendeGeometrie te bundelen.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMVersie"/>
         <rdfs:subClassOf rdf:resource="https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMDBStatus"/>
         <rdfs:subClassOf rdf:resource="https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMToestand"/>
       </owl:Class>
@@ -2574,6 +2575,30 @@
     <rdfs:domain rdf:resource="https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#AxiaalDraagvermogenWand"/>
     <rdfs:range rdf:resource="https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInKiloNewtonPerMeter"/>
   </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#BalkGK.bovenpeil">
+    <rdfs:isDefinedBy rdf:resource="https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten"/>
+    <rdfs:comment xml:lang="nl">Het peil in meter TAW van het bovenvlak van de balk.</rdfs:comment>
+    <rdfs:domain>
+      <owl:Class rdf:about="https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#BalkGK">
+        <rdfs:isDefinedBy rdf:resource="https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten"/>
+        <rdfs:comment xml:lang="nl">Een abstracte om de gemeenschappelijke attributen en relaties die gebruikt worden door de verschillende balken in grondkerende constructies te verzamelen.</rdfs:comment>
+        <rdfs:subClassOf>
+          <owl:Class rdf:about="https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#ConstructiefObject">
+            <rdfs:isDefinedBy rdf:resource="https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten"/>
+            <rdfs:comment xml:lang="nl">Een bundeling van alle constructieve installaties.</rdfs:comment>
+            <rdfs:subClassOf rdf:resource="https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#ConstructieElement"/>
+          </owl:Class>
+        </rdfs:subClassOf>
+      </owl:Class>
+    </rdfs:domain>
+    <rdfs:range rdf:resource="https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMeterTAW"/>
+  </owl:ObjectProperty>
+  <owl:DatatypeProperty rdf:about="https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#BalkGK.heeftVerankering">
+    <rdfs:isDefinedBy rdf:resource="https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten"/>
+    <rdfs:comment xml:lang="nl">Geeft aan of er verankering aanwezig is.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#BalkGK"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+  </owl:DatatypeProperty>
   <owl:ObjectProperty rdf:about="https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#Bebakening.kleurReflectorAflopend">
     <rdfs:isDefinedBy rdf:resource="https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten"/>
     <rdfs:comment xml:lang="nl">De kleur van de reflector stroomafwaarts.</rdfs:comment>
@@ -2745,16 +2770,28 @@
     <rdfs:domain rdf:resource="https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#Betonfundering"/>
     <rdfs:range rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
   </owl:ObjectProperty>
-  <owl:ObjectProperty rdf:about="https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#BetonnenConstructieElement.betonspecificaties">
+  <owl:ObjectProperty rdf:about="https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#BetonnenConstructieElement.bekistingsplan">
     <rdfs:isDefinedBy rdf:resource="https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten"/>
-    <rdfs:comment xml:lang="nl">Eigenschappen van het gebruikte beton.</rdfs:comment>
+    <rdfs:comment xml:lang="nl">Een plan die bekistingsmaten bevat en ook alle maten van alle mogelijke uitsparingen die er kunnen zijn.</rdfs:comment>
     <rdfs:domain>
       <owl:Class rdf:about="https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#BetonnenConstructieElement">
         <rdfs:isDefinedBy rdf:resource="https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten"/>
         <rdfs:comment xml:lang="nl">Bundeling van gemeenschappelijke eigenschappen van betonnen constructie-elementen.</rdfs:comment>
       </owl:Class>
     </rdfs:domain>
+    <rdfs:range rdf:resource="https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcDocument"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#BetonnenConstructieElement.betonspecificaties">
+    <rdfs:isDefinedBy rdf:resource="https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten"/>
+    <rdfs:comment xml:lang="nl">Eigenschappen van het gebruikte beton.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#BetonnenConstructieElement"/>
     <rdfs:range rdf:resource="https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcBetonspecificaties"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#BetonnenConstructieElement.technischeFicheBetonBescherming">
+    <rdfs:isDefinedBy rdf:resource="https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten"/>
+    <rdfs:comment xml:lang="nl">Technische fiche dat informatie bevat over de betonbescherming.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#BetonnenConstructieElement"/>
+    <rdfs:range rdf:resource="https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcDocument"/>
   </owl:ObjectProperty>
   <owl:ObjectProperty rdf:about="https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#BetonnenConstructieElement.uitvoeringsmethode">
     <rdfs:isDefinedBy rdf:resource="https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten"/>
@@ -2941,11 +2978,6 @@
   <owl:Class rdf:about="https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#ConstructieElementSluisStuw">
     <rdfs:isDefinedBy rdf:resource="https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten"/>
     <rdfs:comment xml:lang="nl">Abstracte voor de verschillende constructie elementen die bij een sluis of stuw kunnen horen.</rdfs:comment>
-  </owl:Class>
-  <owl:Class rdf:about="https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#ConstructiefObject">
-    <rdfs:isDefinedBy rdf:resource="https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten"/>
-    <rdfs:comment xml:lang="nl">Een bundeling van alle constructieve installaties.</rdfs:comment>
-    <rdfs:subClassOf rdf:resource="https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#ConstructieElement"/>
   </owl:Class>
   <owl:ObjectProperty rdf:about="https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#Constructiehoofd.diepteSponning">
     <rdfs:isDefinedBy rdf:resource="https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten"/>
@@ -3138,6 +3170,17 @@
     <rdfs:isDefinedBy rdf:resource="https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten"/>
     <rdfs:comment xml:lang="nl">Technische fiche dat de technische details bijhoudt van de damplank.</rdfs:comment>
     <rdfs:domain rdf:resource="https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#DamplankAbstracte"/>
+    <rdfs:range rdf:resource="https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcDocument"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#DetaiplanObject.detailplan">
+    <rdfs:isDefinedBy rdf:resource="https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten"/>
+    <rdfs:comment xml:lang="nl">Dit plan bevat o.a. informatie over de materiaalkwaliteit, conservering en het verankeringssysteem.</rdfs:comment>
+    <rdfs:domain>
+      <owl:Class rdf:about="https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#DetaiplanObject">
+        <rdfs:isDefinedBy rdf:resource="https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten"/>
+        <rdfs:comment xml:lang="nl">Abstracte dat het attribuut detailplan bevat.</rdfs:comment>
+      </owl:Class>
+    </rdfs:domain>
     <rdfs:range rdf:resource="https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcDocument"/>
   </owl:ObjectProperty>
   <owl:ObjectProperty rdf:about="https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#Detectie.soortBewaking">

@@ -1689,10 +1689,10 @@
   "license": "https://data.vlaanderen.be/id/licentie/modellicentie-gratis-hergebruik/v1.0",
   "issued": "TODO",
   "navigation": {
-    "prev": "/doc/vocabularium/wegenenverkeer/implementatieelement/ontwerpdocument/2.12.0-RC2"
+    "prev": "/doc/vocabularium/wegenenverkeer/implementatieelement/ontwerpdocument/2.13.0-RC2"
   },
   "publication-state": "https://data.vlaanderen.be/doc/concept/StandaardStatus/KandidaatStandaard",
-  "publication-date": "20-09-2024",
+  "publication-date": "16-12-2024",
   "classes": [
     {
       "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMDBStatus",
@@ -1719,6 +1719,7 @@
         "nl": "Abstracte als de basisklasse voor alle uniek geïdentificeerde OTL objecten met de basiseigenschappen die elk OTL object minstens heeft."
       },
       "parents": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMVersie",
         "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMToestand",
         "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMDBStatus"
       ]
@@ -1728,6 +1729,14 @@
       "@type": "http://www.w3.org/2002/07/owl#Class",
       "definition": {
         "nl": "Voegt een attribuut toe aan de subklasse dat de huidige stand in de levenscyclus van het object aangeeft."
+      },
+      "parents": []
+    },
+    {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMVersie",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
+      "definition": {
+        "nl": "Abstracte klasse met de eigenschappen om de versionering van een asset te beheren."
       },
       "parents": []
     },
@@ -1780,6 +1789,7 @@
         "nl": "Een Derdenobject mag enkel gebruikt worden om objecten aan te duiden die niet in beheer zijn van AWV en waarvan het type niet gekend is of aangeleverd."
       },
       "parents": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMVersie",
         "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMToestand",
         "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMDBStatus"
       ]
@@ -1887,6 +1897,14 @@
       "@type": "http://www.w3.org/2002/07/owl#Class",
       "definition": {
         "nl": "Complex datatype voor de afmeting van een zijde in millimeter."
+      },
+      "parents": []
+    },
+    {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcAssetVersie",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
+      "definition": {
+        "nl": "Complex datatype voor de eigenschappen ten behoeve van de versionering van een asset in de databank."
       },
       "parents": []
     },
@@ -2341,6 +2359,14 @@
       "parents": []
     },
     {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMegajoule",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
+      "definition": {
+        "nl": "Een kwantitatieve waarde dat een getal in megajoule voorstelt."
+      },
+      "parents": []
+    },
+    {
       "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMeter",
       "@type": "http://www.w3.org/2002/07/owl#Class",
       "definition": {
@@ -2557,6 +2583,7 @@
         "nl": "Abstracte die de relaties voorziet van gemeenschappelijk eigenschappen."
       },
       "parents": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMVersie",
         "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMDBStatus"
       ]
     },
@@ -2596,6 +2623,7 @@
         "nl": "Om een toegangspunt tot het object te verduidelijken, kan er een punt geometrie aangeleverd worden om het toegangspunt aan te geven."
       },
       "parents": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMVersie",
         "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMToestand",
         "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMDBStatus"
       ]
@@ -5885,6 +5913,48 @@
       "generalization": []
     },
     {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcAssetVersie.versienummer",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "definition": {
+        "nl": "Het versienummer als een oplopende integer."
+      },
+      "domain": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcAssetVersie"
+      ],
+      "range": [
+        "http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcAssetVersie.timestamp",
+      "@type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
+      "definition": {
+        "nl": "De timestamp van het moment dat de versienummer werd toegekend."
+      },
+      "domain": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcAssetVersie"
+      ],
+      "range": [
+        "http://www.w3.org/2001/XMLSchema#dateTime"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcAssetVersie.context",
+      "@type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
+      "definition": {
+        "nl": "De context van de versie creatie."
+      },
+      "domain": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcAssetVersie"
+      ],
+      "range": [
+        "http://www.w3.org/2001/XMLSchema#string"
+      ],
+      "generalization": []
+    },
+    {
       "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcAfmetingZijdeInMm.zijde",
       "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "definition": {
@@ -6405,6 +6475,20 @@
       ],
       "range": [
         "http://www.w3.org/2004/02/skos/core#Concept"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMVersie.assetVersie",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "definition": {
+        "nl": "De versie van de asset in de database."
+      },
+      "domain": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMVersie"
+      ],
+      "range": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcAssetVersie"
       ],
       "generalization": []
     },

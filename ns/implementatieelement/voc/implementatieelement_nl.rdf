@@ -2333,6 +2333,12 @@
             <rdfs:isDefinedBy rdf:resource="https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement"/>
             <rdfs:comment xml:lang="nl">Abstracte als de basisklasse voor alle uniek geïdentificeerde OTL objecten met de basiseigenschappen die elk OTL object minstens heeft.</rdfs:comment>
             <rdfs:subClassOf>
+              <owl:Class rdf:about="https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMVersie">
+                <rdfs:isDefinedBy rdf:resource="https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement"/>
+                <rdfs:comment xml:lang="nl">Abstracte klasse met de eigenschappen om de versionering van een asset te beheren.</rdfs:comment>
+              </owl:Class>
+            </rdfs:subClassOf>
+            <rdfs:subClassOf>
               <owl:Class rdf:about="https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMToestand">
                 <rdfs:isDefinedBy rdf:resource="https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement"/>
                 <rdfs:comment xml:lang="nl">Voegt een attribuut toe aan de subklasse dat de huidige stand in de levenscyclus van het object aangeeft.</rdfs:comment>
@@ -2404,6 +2410,17 @@
     <rdfs:domain rdf:resource="https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMToestand"/>
     <rdfs:range rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
   </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMVersie.assetVersie">
+    <rdfs:isDefinedBy rdf:resource="https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement"/>
+    <rdfs:comment xml:lang="nl">De versie van de asset in de database.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMVersie"/>
+    <rdfs:range>
+      <owl:Class rdf:about="https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcAssetVersie">
+        <rdfs:isDefinedBy rdf:resource="https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement"/>
+        <rdfs:comment xml:lang="nl">Complex datatype voor de eigenschappen ten behoeve van de versionering van een asset in de databank.</rdfs:comment>
+      </owl:Class>
+    </rdfs:range>
+  </owl:ObjectProperty>
   <owl:ObjectProperty rdf:about="https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#ActivityComplex.netwerk">
     <rdfs:isDefinedBy rdf:resource="https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement"/>
     <rdfs:comment xml:lang="nl">Geeft aan bij welk type nutsvoorzieningennet de kabelmof hoort volgens de types uit IMKL en Inspire.</rdfs:comment>
@@ -2457,6 +2474,7 @@
         <rdfs:isDefinedBy rdf:resource="https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement"/>
         <rdfs:comment xml:lang="nl">Object niet in eigendom van de assetbeheerder dat zonder verdere typering bewaard wordt om relaties met getypeerde assets te kunnen beheren.</rdfs:comment>
         <ns0:usageNote xml:lang="nl">Een Derdenobject mag enkel gebruikt worden om objecten aan te duiden die niet in beheer zijn van AWV en waarvan het type niet gekend is of aangeleverd.</ns0:usageNote>
+        <rdfs:subClassOf rdf:resource="https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMVersie"/>
         <rdfs:subClassOf rdf:resource="https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMToestand"/>
         <rdfs:subClassOf rdf:resource="https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMDBStatus"/>
       </owl:Class>
@@ -2506,6 +2524,7 @@
       <owl:Class rdf:about="https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#RelatieObject">
         <rdfs:isDefinedBy rdf:resource="https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement"/>
         <rdfs:comment xml:lang="nl">Abstracte die de relaties voorziet van gemeenschappelijk eigenschappen.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMVersie"/>
         <rdfs:subClassOf rdf:resource="https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMDBStatus"/>
       </owl:Class>
     </rdfs:subClassOf>
@@ -2747,6 +2766,24 @@
       </owl:Class>
     </rdfs:domain>
     <rdfs:range rdf:resource="https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMillimeter"/>
+  </owl:ObjectProperty>
+  <owl:DatatypeProperty rdf:about="https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcAssetVersie.context">
+    <rdfs:isDefinedBy rdf:resource="https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement"/>
+    <rdfs:comment xml:lang="nl">De context van de versie creatie.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcAssetVersie"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcAssetVersie.timestamp">
+    <rdfs:isDefinedBy rdf:resource="https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement"/>
+    <rdfs:comment xml:lang="nl">De timestamp van het moment dat de versienummer werd toegekend.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcAssetVersie"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+  </owl:DatatypeProperty>
+  <owl:ObjectProperty rdf:about="https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcAssetVersie.versienummer">
+    <rdfs:isDefinedBy rdf:resource="https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement"/>
+    <rdfs:comment xml:lang="nl">Het versienummer als een oplopende integer.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcAssetVersie"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
   </owl:ObjectProperty>
   <owl:ObjectProperty rdf:about="https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcBereikInKg.maximum">
     <rdfs:isDefinedBy rdf:resource="https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement"/>
@@ -3906,6 +3943,10 @@
     <rdfs:domain rdf:resource="https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMegaPascal"/>
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
   </owl:ObjectProperty>
+  <owl:Class rdf:about="https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMegajoule">
+    <rdfs:isDefinedBy rdf:resource="https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement"/>
+    <rdfs:comment xml:lang="nl">Een kwantitatieve waarde dat een getal in megajoule voorstelt.</rdfs:comment>
+  </owl:Class>
   <owl:DatatypeProperty rdf:about="https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMeter.standaardEenheid">
     <rdfs:isDefinedBy rdf:resource="https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement"/>
     <rdfs:comment xml:lang="nl">De standaard eenheid bij dit datatype is uitgedrukt in meter.</rdfs:comment>
@@ -4379,6 +4420,7 @@
         <rdfs:isDefinedBy rdf:resource="https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement"/>
         <rdfs:comment xml:lang="nl">De procedure die gevolgd moet worden om toegang te verkrijgen tot een object.</rdfs:comment>
         <ns0:usageNote xml:lang="nl">Om een toegangspunt tot het object te verduidelijken, kan er een punt geometrie aangeleverd worden om het toegangspunt aan te geven.</ns0:usageNote>
+        <rdfs:subClassOf rdf:resource="https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMVersie"/>
         <rdfs:subClassOf rdf:resource="https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMToestand"/>
         <rdfs:subClassOf rdf:resource="https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMDBStatus"/>
       </owl:Class>

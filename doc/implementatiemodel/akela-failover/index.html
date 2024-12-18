@@ -52,7 +52,7 @@
 	
               <dl>
               <dt>Status</dt><dd><a href="https://data.vlaanderen.be/doc/concept/StandaardStatus/KandidaatStandaard">https://data.vlaanderen.be/doc/concept/StandaardStatus/KandidaatStandaard</a></dd>
-              <dt>Uitgegeven op</dt><dd>5-02-2024</dd>
+              <dt>Uitgegeven op</dt><dd>18-12-2024</dd>
               <dt>Deze versie</dt><dd><a href="https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/akela-failover/ontwerpdocument/DEV">https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/akela-failover/ontwerpdocument/DEV</a></dd>
 			   <dt>Release notes deze versie</dt><dd><a href="/doc/implementatiemodel/master/html/ReleaseNotes.zip" target="_blank">Release notes</a></dd>
               
@@ -61,7 +61,7 @@
 		
 			   <!--
 			<dl>
-			  <dt>Uitgegeven op</dt> " " 5-02-2024
+			  <dt>Uitgegeven op</dt> " " 18-12-2024
               <dt></dt><dd><a href="https://data.vlaanderen.be/doc/concept/StandaardStatus/KandidaatStandaard">Status</a></dd>
     
               <dt></dt><dd><a href="https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/akela-failover/ontwerpdocument/DEV">Deze versie</a></dd>
@@ -76,8 +76,8 @@
 			  
 			  
               <dl>
-              <dt>Brondata</dt><dd><a href="https://github.com/Informatievlaanderen/OSLOthema-wegenenverkeer/tree/375d13fce16b81722f2044429bfec0904faf1784">https://github.com/Informatievlaanderen/OSLOthema-wegenenverkeer/tree/375d13fce16b81722f2044429bfec0904faf1784</a></dd>
-              <dt>Changelog</dt><dd><a href="https://github.com/Informatievlaanderen/OSLOthema-wegenenverkeer/blob/375d13fce16b81722f2044429bfec0904faf1784/CHANGELOG">https://github.com/Informatievlaanderen/OSLOthema-wegenenverkeer/blob/375d13fce16b81722f2044429bfec0904faf1784/CHANGELOG</a></dd>        
+              <dt>Brondata</dt><dd><a href="https://github.com/Informatievlaanderen/OSLOthema-wegenenverkeer/tree/0e5bbb26160c48c7229c131acf4c3262f64887ae">https://github.com/Informatievlaanderen/OSLOthema-wegenenverkeer/tree/0e5bbb26160c48c7229c131acf4c3262f64887ae</a></dd>
+              <dt>Changelog</dt><dd><a href="https://github.com/Informatievlaanderen/OSLOthema-wegenenverkeer/blob/0e5bbb26160c48c7229c131acf4c3262f64887ae/CHANGELOG">https://github.com/Informatievlaanderen/OSLOthema-wegenenverkeer/blob/0e5bbb26160c48c7229c131acf4c3262f64887ae/CHANGELOG</a></dd>        
               <dt>Standaardenregister</dt><dd><a href="https://data.vlaanderen.be/standaarden/">https://data.vlaanderen.be/standaarden/</a></dd>
 
               <dt>Afhankelijkheden</dt><dd>
@@ -87,8 +87,8 @@
 			   
 			  <!--
 			   <dl>
-              <dt></dt><dd><a href="https://github.com/Informatievlaanderen/OSLOthema-wegenenverkeer/tree/375d13fce16b81722f2044429bfec0904faf1784">Brondata</a></dd>
-              <dt></dt><dd><a href="https://github.com/Informatievlaanderen/OSLOthema-wegenenverkeer/blob/375d13fce16b81722f2044429bfec0904faf1784/CHANGELOG">Changelog</a></dd>          
+              <dt></dt><dd><a href="https://github.com/Informatievlaanderen/OSLOthema-wegenenverkeer/tree/0e5bbb26160c48c7229c131acf4c3262f64887ae">Brondata</a></dd>
+              <dt></dt><dd><a href="https://github.com/Informatievlaanderen/OSLOthema-wegenenverkeer/blob/0e5bbb26160c48c7229c131acf4c3262f64887ae/CHANGELOG">Changelog</a></dd>          
               <dt></dt><dd><a href="https://data.vlaanderen.be/standaarden/">Standaardenregister</a></dd>
 
               <dt>Afhankelijkheden</dt><dd>
@@ -198,6 +198,7 @@ Dit document is bedoeld om uit te groeien tot een standaard in het beschreven do
                       <a href="#AIM naam object">AIM naam object</a> |
                       <a href="#AIM object">AIM object</a> |
                       <a href="#AIM Toestand">AIM Toestand</a> |
+                      <a href="#AIM versie">AIM versie</a> |
                       <a href="#Appurtenance">Appurtenance</a> |
                       <a href="#Electricity appurtenance">Electricity appurtenance</a> |
                       <a href="#Electricity cable">Electricity cable</a> |
@@ -220,9 +221,11 @@ Dit document is bedoeld om uit te groeien tot een standaard in het beschreven do
                     <p> In dit document worden de volgende datatypes toegelicht:
                       <br />
                       |
+                      <a href="#Asset versie">Asset versie</a> |
                       <a href="#Bestandsbijlage">Bestandsbijlage</a> |
                       <a href="#Boolean">Boolean</a> |
                       <a href="#Datum">Datum</a> |
+                      <a href="#Datumtijd">Datumtijd</a> |
                       <a href="#Decimaal getal">Decimaal getal</a> |
                       <a href="#Identificator">Identificator</a> |
                       <a href="#Kwantitatieve waarde in euro">Kwantitatieve waarde in euro</a> |
@@ -254,13 +257,14 @@ Dit document is bedoeld om uit te groeien tot een standaard in het beschreven do
             </div>
             
               <div class="region region--no-space-top">
-              <h3 class="h3" id="Abstracte aanvullende geometrie"><a href="https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#AbstracteAanvullendeGeometrie" data-toggle="tooltip" data-content="https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#AbstracteAanvullendeGeometrie" data-placement="right">Abstracte aanvullende geometrie</a></h3>
+              <h3 class="h3" id="Abstracte aanvullende geometrie"><a href="https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#AbstracteAanvullendeGeometrie" data-toggle="tooltip" data-content="https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#AbstracteAanvullendeGeometrie" data-placement="right">Abstracte aanvullende geometrie</a></h3>
                 <div class="region region--no-space-top">
                   <dl>
                     <dt>Beschrijving</dt><dd>Abstracte om de eigenschappen en relaties van AanvullendeGeometrie te bundelen.</dd>
                     
 		     
 		    <dt>Subklasse van <dt><dd>
+                        <a href="#AIM versie">AIM versie</a>, 
                         <a href="#AIM databank status">AIM databank status</a>, 
                         <a href="#AIM Toestand">AIM Toestand</a>
 		   </dd>
@@ -292,10 +296,10 @@ Dit document is bedoeld om uit te groeien tot een standaard in het beschreven do
 
                     <tbody class="supertype">
                     
-                      <tr id="Abstracte%20aanvullende%20geometrie%3Aasset-id" typeof="rdfs:Property" resource="https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#AbstracteAanvullendeGeometrie.assetId">
+                      <tr id="Abstracte%20aanvullende%20geometrie%3Aasset-id" typeof="rdfs:Property" resource="https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#AbstracteAanvullendeGeometrie.assetId">
                         <td>
                           <code property="rdfs:label">
-                            <a href="https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#AbstracteAanvullendeGeometrie.assetId" data-toggle="tooltip" data-content="https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#AbstracteAanvullendeGeometrie.assetId" data-placement="right">
+                            <a href="https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#AbstracteAanvullendeGeometrie.assetId" data-toggle="tooltip" data-content="https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#AbstracteAanvullendeGeometrie.assetId" data-placement="right">
                             asset-id</a>
                           </code>
                         </td>
@@ -312,10 +316,10 @@ Dit document is bedoeld om uit te groeien tot een standaard in het beschreven do
                         <td></td>
                       </tr>
                     
-                      <tr id="Abstracte%20aanvullende%20geometrie%3Abijlage" typeof="rdfs:Property" resource="https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#AbstracteAanvullendeGeometrie.bijlage">
+                      <tr id="Abstracte%20aanvullende%20geometrie%3Abijlage" typeof="rdfs:Property" resource="https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#AbstracteAanvullendeGeometrie.bijlage">
                         <td>
                           <code property="rdfs:label">
-                            <a href="https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#AbstracteAanvullendeGeometrie.bijlage" data-toggle="tooltip" data-content="https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#AbstracteAanvullendeGeometrie.bijlage" data-placement="right">
+                            <a href="https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#AbstracteAanvullendeGeometrie.bijlage" data-toggle="tooltip" data-content="https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#AbstracteAanvullendeGeometrie.bijlage" data-placement="right">
                             bijlage</a>
                           </code>
                         </td>
@@ -327,15 +331,15 @@ Dit document is bedoeld om uit te groeien tot een standaard in het beschreven do
                           
                         </td>
                         <td>1</td>
-                        <td property="rdfs:comment">Het document of artefact dat een geometrie heeft.</td>
+                        <td property="rdfs:comment">Het document of artefact dat een geometrie heeft of een bijlage is.</td>
                         <td property="vann:usageNote"></td>
                         <td></td>
                       </tr>
                     
-                      <tr id="Abstracte%20aanvullende%20geometrie%3Anaam" typeof="rdfs:Property" resource="https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#AbstracteAanvullendeGeometrie.naam">
+                      <tr id="Abstracte%20aanvullende%20geometrie%3Anaam" typeof="rdfs:Property" resource="https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#AbstracteAanvullendeGeometrie.naam">
                         <td>
                           <code property="rdfs:label">
-                            <a href="https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#AbstracteAanvullendeGeometrie.naam" data-toggle="tooltip" data-content="https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#AbstracteAanvullendeGeometrie.naam" data-placement="right">
+                            <a href="https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#AbstracteAanvullendeGeometrie.naam" data-toggle="tooltip" data-content="https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#AbstracteAanvullendeGeometrie.naam" data-placement="right">
                             naam</a>
                           </code>
                         </td>
@@ -347,15 +351,15 @@ Dit document is bedoeld om uit te groeien tot een standaard in het beschreven do
                           
                         </td>
                         <td>1</td>
-                        <td property="rdfs:comment">De mensleesbare naam van een aanvullende geometrie. De beheerder kent deze naam toe of geeft de opdracht om deze toe te kennen.</td>
+                        <td property="rdfs:comment">De mensleesbare naam van een aanvullende geometrie of bijlage. De beheerder kent deze naam toe of geeft de opdracht om deze toe te kennen.</td>
                         <td property="vann:usageNote"></td>
                         <td></td>
                       </tr>
                     
-                      <tr id="Abstracte%20aanvullende%20geometrie%3Anotitie" typeof="rdfs:Property" resource="https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#AbstracteAanvullendeGeometrie.notitie">
+                      <tr id="Abstracte%20aanvullende%20geometrie%3Anotitie" typeof="rdfs:Property" resource="https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#AbstracteAanvullendeGeometrie.notitie">
                         <td>
                           <code property="rdfs:label">
-                            <a href="https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#AbstracteAanvullendeGeometrie.notitie" data-toggle="tooltip" data-content="https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#AbstracteAanvullendeGeometrie.notitie" data-placement="right">
+                            <a href="https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#AbstracteAanvullendeGeometrie.notitie" data-toggle="tooltip" data-content="https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#AbstracteAanvullendeGeometrie.notitie" data-placement="right">
                             notitie</a>
                           </code>
                         </td>
@@ -372,10 +376,10 @@ Dit document is bedoeld om uit te groeien tot een standaard in het beschreven do
                         <td></td>
                       </tr>
                     
-                      <tr id="Abstracte%20aanvullende%20geometrie%3Atype%20URI" typeof="rdfs:Property" resource="https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#AbstracteAanvullendeGeometrie.typeURI">
+                      <tr id="Abstracte%20aanvullende%20geometrie%3Atype%20URI" typeof="rdfs:Property" resource="https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#AbstracteAanvullendeGeometrie.typeURI">
                         <td>
                           <code property="rdfs:label">
-                            <a href="https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#AbstracteAanvullendeGeometrie.typeURI" data-toggle="tooltip" data-content="https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#AbstracteAanvullendeGeometrie.typeURI" data-placement="right">
+                            <a href="https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#AbstracteAanvullendeGeometrie.typeURI" data-toggle="tooltip" data-content="https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#AbstracteAanvullendeGeometrie.typeURI" data-placement="right">
                             type URI</a>
                           </code>
                         </td>
@@ -399,7 +403,7 @@ Dit document is bedoeld om uit te groeien tot een standaard in het beschreven do
             </div>
             
               <div class="region region--no-space-top">
-              <h3 class="h3" id="Activity complex"><a href="https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#ActivityComplex" data-toggle="tooltip" data-content="https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#ActivityComplex" data-placement="right">Activity complex</a></h3>
+              <h3 class="h3" id="Activity complex"><a href="https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#ActivityComplex" data-toggle="tooltip" data-content="https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#ActivityComplex" data-placement="right">Activity complex</a></h3>
                 <div class="region region--no-space-top">
                   <dl>
                     <dt>Beschrijving</dt><dd>Het gehele gebied dat door dezelfde exploitant op dezelfde locatie of op verschillende geografische locaties wordt beheerd,inclusief alle infrastructuur,apparatuur en materialen.</dd>
@@ -434,10 +438,10 @@ Dit document is bedoeld om uit te groeien tot een standaard in het beschreven do
 
                     <tbody class="supertype">
                     
-                      <tr id="Activity%20complex%3Anetwerk" typeof="rdfs:Property" resource="https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#ActivityComplex.netwerk">
+                      <tr id="Activity%20complex%3Anetwerk" typeof="rdfs:Property" resource="https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#ActivityComplex.netwerk">
                         <td>
                           <code property="rdfs:label">
-                            <a href="https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#ActivityComplex.netwerk" data-toggle="tooltip" data-content="https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#ActivityComplex.netwerk" data-placement="right">
+                            <a href="https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#ActivityComplex.netwerk" data-toggle="tooltip" data-content="https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#ActivityComplex.netwerk" data-placement="right">
                             netwerk</a>
                           </code>
                         </td>
@@ -461,7 +465,7 @@ Dit document is bedoeld om uit te groeien tot een standaard in het beschreven do
             </div>
             
               <div class="region region--no-space-top">
-              <h3 class="h3" id="AIM databank status"><a href="https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMDBStatus" data-toggle="tooltip" data-content="https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMDBStatus" data-placement="right">AIM databank status</a></h3>
+              <h3 class="h3" id="AIM databank status"><a href="https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMDBStatus" data-toggle="tooltip" data-content="https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMDBStatus" data-placement="right">AIM databank status</a></h3>
                 <div class="region region--no-space-top">
                   <dl>
                     <dt>Beschrijving</dt><dd>Voegt een attribuut toe aan de subklasse dat aangeeft of de asset zichtbaar is in de databank of (zacht) verwijderd is.</dd>
@@ -490,10 +494,10 @@ Dit document is bedoeld om uit te groeien tot een standaard in het beschreven do
 
                     <tbody class="supertype">
                     
-                      <tr id="AIM%20databank%20status%3Ais%20actief" typeof="rdfs:Property" resource="https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMDBStatus.isActief">
+                      <tr id="AIM%20databank%20status%3Ais%20actief" typeof="rdfs:Property" resource="https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMDBStatus.isActief">
                         <td>
                           <code property="rdfs:label">
-                            <a href="https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMDBStatus.isActief" data-toggle="tooltip" data-content="https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMDBStatus.isActief" data-placement="right">
+                            <a href="https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMDBStatus.isActief" data-toggle="tooltip" data-content="https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMDBStatus.isActief" data-placement="right">
                             is actief</a>
                           </code>
                         </td>
@@ -517,7 +521,7 @@ Dit document is bedoeld om uit te groeien tot een standaard in het beschreven do
             </div>
             
               <div class="region region--no-space-top">
-              <h3 class="h3" id="AIM naam object"><a href="https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMNaamObject" data-toggle="tooltip" data-content="https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMNaamObject" data-placement="right">AIM naam object</a></h3>
+              <h3 class="h3" id="AIM naam object"><a href="https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMNaamObject" data-toggle="tooltip" data-content="https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMNaamObject" data-placement="right">AIM naam object</a></h3>
                 <div class="region region--no-space-top">
                   <dl>
                     <dt>Beschrijving</dt><dd>Abstracte als de basisklasse voor elk OTL object dat benoemd wordt met een mensleesbare identificator.</dd>
@@ -550,10 +554,10 @@ Dit document is bedoeld om uit te groeien tot een standaard in het beschreven do
 
                     <tbody class="supertype">
                     
-                      <tr id="AIM%20naam%20object%3Anaam" typeof="rdfs:Property" resource="https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMNaamObject.naam">
+                      <tr id="AIM%20naam%20object%3Anaam" typeof="rdfs:Property" resource="https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMNaamObject.naam">
                         <td>
                           <code property="rdfs:label">
-                            <a href="https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMNaamObject.naam" data-toggle="tooltip" data-content="https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMNaamObject.naam" data-placement="right">
+                            <a href="https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMNaamObject.naam" data-toggle="tooltip" data-content="https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMNaamObject.naam" data-placement="right">
                             naam</a>
                           </code>
                         </td>
@@ -577,13 +581,14 @@ Dit document is bedoeld om uit te groeien tot een standaard in het beschreven do
             </div>
             
               <div class="region region--no-space-top">
-              <h3 class="h3" id="AIM object"><a href="https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMObject" data-toggle="tooltip" data-content="https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMObject" data-placement="right">AIM object</a></h3>
+              <h3 class="h3" id="AIM object"><a href="https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMObject" data-toggle="tooltip" data-content="https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMObject" data-placement="right">AIM object</a></h3>
                 <div class="region region--no-space-top">
                   <dl>
                     <dt>Beschrijving</dt><dd>Abstracte als de basisklasse voor alle uniek geïdentificeerde OTL objecten met de basiseigenschappen die elk OTL object minstens heeft.</dd>
                     
 		     
 		    <dt>Subklasse van <dt><dd>
+                        <a href="#AIM versie">AIM versie</a>, 
                         <a href="#AIM Toestand">AIM Toestand</a>, 
                         <a href="#AIM databank status">AIM databank status</a>
 		   </dd>
@@ -617,10 +622,10 @@ Dit document is bedoeld om uit te groeien tot een standaard in het beschreven do
 
                     <tbody class="supertype">
                     
-                      <tr id="AIM%20object%3Aasset-id" typeof="rdfs:Property" resource="https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMObject.assetId">
+                      <tr id="AIM%20object%3Aasset-id" typeof="rdfs:Property" resource="https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMObject.assetId">
                         <td>
                           <code property="rdfs:label">
-                            <a href="https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMObject.assetId" data-toggle="tooltip" data-content="https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMObject.assetId" data-placement="right">
+                            <a href="https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMObject.assetId" data-toggle="tooltip" data-content="https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMObject.assetId" data-placement="right">
                             asset-id</a>
                           </code>
                         </td>
@@ -637,10 +642,10 @@ Dit document is bedoeld om uit te groeien tot een standaard in het beschreven do
                         <td></td>
                       </tr>
                     
-                      <tr id="AIM%20object%3Abestekpostnummer" typeof="rdfs:Property" resource="https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMObject.bestekPostNummer">
+                      <tr id="AIM%20object%3Abestekpostnummer" typeof="rdfs:Property" resource="https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMObject.bestekPostNummer">
                         <td>
                           <code property="rdfs:label">
-                            <a href="https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMObject.bestekPostNummer" data-toggle="tooltip" data-content="https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMObject.bestekPostNummer" data-placement="right">
+                            <a href="https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMObject.bestekPostNummer" data-toggle="tooltip" data-content="https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMObject.bestekPostNummer" data-placement="right">
                             bestekpostnummer</a>
                           </code>
                         </td>
@@ -657,10 +662,10 @@ Dit document is bedoeld om uit te groeien tot een standaard in het beschreven do
                         <td></td>
                       </tr>
                     
-                      <tr id="AIM%20object%3Adatum%20oprichting%20object" typeof="rdfs:Property" resource="https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMObject.datumOprichtingObject">
+                      <tr id="AIM%20object%3Adatum%20oprichting%20object" typeof="rdfs:Property" resource="https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMObject.datumOprichtingObject">
                         <td>
                           <code property="rdfs:label">
-                            <a href="https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMObject.datumOprichtingObject" data-toggle="tooltip" data-content="https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMObject.datumOprichtingObject" data-placement="right">
+                            <a href="https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMObject.datumOprichtingObject" data-toggle="tooltip" data-content="https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMObject.datumOprichtingObject" data-placement="right">
                             datum oprichting object</a>
                           </code>
                         </td>
@@ -677,10 +682,10 @@ Dit document is bedoeld om uit te groeien tot een standaard in het beschreven do
                         <td></td>
                       </tr>
                     
-                      <tr id="AIM%20object%3Anotitie" typeof="rdfs:Property" resource="https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMObject.notitie">
+                      <tr id="AIM%20object%3Anotitie" typeof="rdfs:Property" resource="https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMObject.notitie">
                         <td>
                           <code property="rdfs:label">
-                            <a href="https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMObject.notitie" data-toggle="tooltip" data-content="https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMObject.notitie" data-placement="right">
+                            <a href="https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMObject.notitie" data-toggle="tooltip" data-content="https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMObject.notitie" data-placement="right">
                             notitie</a>
                           </code>
                         </td>
@@ -697,10 +702,10 @@ Dit document is bedoeld om uit te groeien tot een standaard in het beschreven do
                         <td></td>
                       </tr>
                     
-                      <tr id="AIM%20object%3Astandaardbestekpostnummer" typeof="rdfs:Property" resource="https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMObject.standaardBestekPostNummer">
+                      <tr id="AIM%20object%3Astandaardbestekpostnummer" typeof="rdfs:Property" resource="https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMObject.standaardBestekPostNummer">
                         <td>
                           <code property="rdfs:label">
-                            <a href="https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMObject.standaardBestekPostNummer" data-toggle="tooltip" data-content="https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMObject.standaardBestekPostNummer" data-placement="right">
+                            <a href="https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMObject.standaardBestekPostNummer" data-toggle="tooltip" data-content="https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMObject.standaardBestekPostNummer" data-placement="right">
                             standaardbestekpostnummer</a>
                           </code>
                         </td>
@@ -717,10 +722,10 @@ Dit document is bedoeld om uit te groeien tot een standaard in het beschreven do
                         <td></td>
                       </tr>
                     
-                      <tr id="AIM%20object%3Atheoretische%20levensduur" typeof="rdfs:Property" resource="https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMObject.theoretischeLevensduur">
+                      <tr id="AIM%20object%3Atheoretische%20levensduur" typeof="rdfs:Property" resource="https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMObject.theoretischeLevensduur">
                         <td>
                           <code property="rdfs:label">
-                            <a href="https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMObject.theoretischeLevensduur" data-toggle="tooltip" data-content="https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMObject.theoretischeLevensduur" data-placement="right">
+                            <a href="https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMObject.theoretischeLevensduur" data-toggle="tooltip" data-content="https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMObject.theoretischeLevensduur" data-placement="right">
                             theoretische levensduur</a>
                           </code>
                         </td>
@@ -737,10 +742,10 @@ Dit document is bedoeld om uit te groeien tot een standaard in het beschreven do
                         <td></td>
                       </tr>
                     
-                      <tr id="AIM%20object%3Atype%20URI" typeof="rdfs:Property" resource="https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMObject.typeURI">
+                      <tr id="AIM%20object%3Atype%20URI" typeof="rdfs:Property" resource="https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMObject.typeURI">
                         <td>
                           <code property="rdfs:label">
-                            <a href="https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMObject.typeURI" data-toggle="tooltip" data-content="https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMObject.typeURI" data-placement="right">
+                            <a href="https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMObject.typeURI" data-toggle="tooltip" data-content="https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMObject.typeURI" data-placement="right">
                             type URI</a>
                           </code>
                         </td>
@@ -764,7 +769,7 @@ Dit document is bedoeld om uit te groeien tot een standaard in het beschreven do
             </div>
             
               <div class="region region--no-space-top">
-              <h3 class="h3" id="AIM Toestand"><a href="https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMToestand" data-toggle="tooltip" data-content="https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMToestand" data-placement="right">AIM Toestand</a></h3>
+              <h3 class="h3" id="AIM Toestand"><a href="https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMToestand" data-toggle="tooltip" data-content="https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMToestand" data-placement="right">AIM Toestand</a></h3>
                 <div class="region region--no-space-top">
                   <dl>
                     <dt>Beschrijving</dt><dd>Voegt een attribuut toe aan de subklasse dat de huidige stand in de levenscyclus van het object aangeeft.</dd>
@@ -793,10 +798,10 @@ Dit document is bedoeld om uit te groeien tot een standaard in het beschreven do
 
                     <tbody class="supertype">
                     
-                      <tr id="AIM%20Toestand%3AAIM-toestand" typeof="rdfs:Property" resource="https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMToestand.toestand">
+                      <tr id="AIM%20Toestand%3AAIM-toestand" typeof="rdfs:Property" resource="https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMToestand.toestand">
                         <td>
                           <code property="rdfs:label">
-                            <a href="https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMToestand.toestand" data-toggle="tooltip" data-content="https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMToestand.toestand" data-placement="right">
+                            <a href="https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMToestand.toestand" data-toggle="tooltip" data-content="https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMToestand.toestand" data-placement="right">
                             AIM-toestand</a>
                           </code>
                         </td>
@@ -820,7 +825,63 @@ Dit document is bedoeld om uit te groeien tot een standaard in het beschreven do
             </div>
             
               <div class="region region--no-space-top">
-              <h3 class="h3" id="Appurtenance"><a href="https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#Appurtenance" data-toggle="tooltip" data-content="https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#Appurtenance" data-placement="right">Appurtenance</a></h3>
+              <h3 class="h3" id="AIM versie"><a href="https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMVersie" data-toggle="tooltip" data-content="https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMVersie" data-placement="right">AIM versie</a></h3>
+                <div class="region region--no-space-top">
+                  <dl>
+                    <dt>Beschrijving</dt><dd>Abstracte klasse met de eigenschappen om de versionering van een asset te beheren.</dd>
+                    
+		    
+                    <dt>Eigenschappen</dt>
+		     
+                    <dd>Voor deze entiteit zijn de volgende eigenschappen gedefinieerd:
+                      <a href="#AIM%20versie%3Aasset-versie">asset-versie</a>.</dd>
+                    
+                  </dl>
+                </div>
+		 
+                <div class="u-table-overflow">
+                  <table class="data-table">
+                    <thead>
+                      <tr class="data-table__header">
+                        <th class="data-table__header-title--sortable data-table__header-title--sortable-active">Eigenschap</th>
+                        <th class="data-table__header-title--sortable">Verwacht Type</th>
+                        <th class="data-table__header-title--sortable">Kardinaliteit</th>
+                        <th class="data-table__header-title--sortable">Beschrijving</th>
+                        <th class="data-table__header-title--sortable">Gebruik</th>
+                        <th class="data-table__header-title--sortable">Keuzelijst</th>
+                      </tr>
+                    </thead>
+
+                    <tbody class="supertype">
+                    
+                      <tr id="AIM%20versie%3Aasset-versie" typeof="rdfs:Property" resource="https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMVersie.assetVersie">
+                        <td>
+                          <code property="rdfs:label">
+                            <a href="https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMVersie.assetVersie" data-toggle="tooltip" data-content="https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMVersie.assetVersie" data-placement="right">
+                            asset-versie</a>
+                          </code>
+                        </td>
+                        <td>
+                          
+			    
+			    <a href="#Asset versie" data-placement="right">Asset versie</a>
+			    
+                          
+                        </td>
+                        <td>1</td>
+                        <td property="rdfs:comment">De versie van de asset in de database.</td>
+                        <td property="vann:usageNote"></td>
+                        <td></td>
+                      </tr>
+                    
+                    </tbody>
+                  </table>
+                </div>
+      			  
+            </div>
+            
+              <div class="region region--no-space-top">
+              <h3 class="h3" id="Appurtenance"><a href="https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#Appurtenance" data-toggle="tooltip" data-content="https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#Appurtenance" data-placement="right">Appurtenance</a></h3>
                 <div class="region region--no-space-top">
                   <dl>
                     <dt>Beschrijving</dt><dd>Appurtenance-objecten zijn toebehoren of accessoires, dus allerlei apparaten, toestellen en dergelijke,kortom diverse soorten leidingelementen.</dd>
@@ -855,10 +916,10 @@ Dit document is bedoeld om uit te groeien tot een standaard in het beschreven do
 
                     <tbody class="supertype">
                     
-                      <tr id="Appurtenance%3Aopstelhoogte" typeof="rdfs:Property" resource="https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#Appurtenance.opstelhoogte">
+                      <tr id="Appurtenance%3Aopstelhoogte" typeof="rdfs:Property" resource="https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#Appurtenance.opstelhoogte">
                         <td>
                           <code property="rdfs:label">
-                            <a href="https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#Appurtenance.opstelhoogte" data-toggle="tooltip" data-content="https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#Appurtenance.opstelhoogte" data-placement="right">
+                            <a href="https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#Appurtenance.opstelhoogte" data-toggle="tooltip" data-content="https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#Appurtenance.opstelhoogte" data-placement="right">
                             opstelhoogte</a>
                           </code>
                         </td>
@@ -882,7 +943,7 @@ Dit document is bedoeld om uit te groeien tot een standaard in het beschreven do
             </div>
             
               <div class="region region--no-space-top">
-              <h3 class="h3" id="Electricity appurtenance"><a href="https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#ElectricityAppurtenance" data-toggle="tooltip" data-content="https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#ElectricityAppurtenance" data-placement="right">Electricity appurtenance</a></h3>
+              <h3 class="h3" id="Electricity appurtenance"><a href="https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#ElectricityAppurtenance" data-toggle="tooltip" data-content="https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#ElectricityAppurtenance" data-placement="right">Electricity appurtenance</a></h3>
                 <div class="region region--no-space-top">
                   <dl>
                     <dt>Beschrijving</dt><dd>Appurtenance-objecten zijn toebehoren of accessoires, dus allerlei apparaten, toestellen en dergelijke,kortom diverse soorten leidingelementen.</dd>
@@ -918,10 +979,10 @@ Dit document is bedoeld om uit te groeien tot een standaard in het beschreven do
 
                     <tbody class="supertype">
                     
-                      <tr id="Electricity%20appurtenance%3AappurtenanceType" typeof="rdfs:Property" resource="https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#ElectricityAppurtenance.appurtenanceType">
+                      <tr id="Electricity%20appurtenance%3AappurtenanceType" typeof="rdfs:Property" resource="https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#ElectricityAppurtenance.appurtenanceType">
                         <td>
                           <code property="rdfs:label">
-                            <a href="https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#ElectricityAppurtenance.appurtenanceType" data-toggle="tooltip" data-content="https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#ElectricityAppurtenance.appurtenanceType" data-placement="right">
+                            <a href="https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#ElectricityAppurtenance.appurtenanceType" data-toggle="tooltip" data-content="https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#ElectricityAppurtenance.appurtenanceType" data-placement="right">
                             appurtenanceType</a>
                           </code>
                         </td>
@@ -938,10 +999,10 @@ Dit document is bedoeld om uit te groeien tot een standaard in het beschreven do
                         <td><a href="https://wegenenverkeer-test.data.vlaanderen.be/id/conceptscheme/KlElectricityAppurtenanceType">Link</a></td>
                       </tr>
                     
-                      <tr id="Electricity%20appurtenance%3Asubthema" typeof="rdfs:Property" resource="https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#ElectricityAppurtenance.subthema">
+                      <tr id="Electricity%20appurtenance%3Asubthema" typeof="rdfs:Property" resource="https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#ElectricityAppurtenance.subthema">
                         <td>
                           <code property="rdfs:label">
-                            <a href="https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#ElectricityAppurtenance.subthema" data-toggle="tooltip" data-content="https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#ElectricityAppurtenance.subthema" data-placement="right">
+                            <a href="https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#ElectricityAppurtenance.subthema" data-toggle="tooltip" data-content="https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#ElectricityAppurtenance.subthema" data-placement="right">
                             subthema</a>
                           </code>
                         </td>
@@ -965,7 +1026,7 @@ Dit document is bedoeld om uit te groeien tot een standaard in het beschreven do
             </div>
             
               <div class="region region--no-space-top">
-              <h3 class="h3" id="Electricity cable"><a href="https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#ElectricityCable" data-toggle="tooltip" data-content="https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#ElectricityCable" data-placement="right">Electricity cable</a></h3>
+              <h3 class="h3" id="Electricity cable"><a href="https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#ElectricityCable" data-toggle="tooltip" data-content="https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#ElectricityCable" data-placement="right">Electricity cable</a></h3>
                 <div class="region region--no-space-top">
                   <dl>
                     <dt>Beschrijving</dt><dd>Een aansluiting of reeks aansluitingen van een nutsvoorzieningennet voor het overbrengen van elektriciteit van de ene locatie naar een andere.</dd>
@@ -1002,10 +1063,10 @@ Dit document is bedoeld om uit te groeien tot een standaard in het beschreven do
 
                     <tbody class="supertype">
                     
-                      <tr id="Electricity%20cable%3Anominale%20spanning" typeof="rdfs:Property" resource="https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#ElectricityCable.nominaleSpanning">
+                      <tr id="Electricity%20cable%3Anominale%20spanning" typeof="rdfs:Property" resource="https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#ElectricityCable.nominaleSpanning">
                         <td>
                           <code property="rdfs:label">
-                            <a href="https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#ElectricityCable.nominaleSpanning" data-toggle="tooltip" data-content="https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#ElectricityCable.nominaleSpanning" data-placement="right">
+                            <a href="https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#ElectricityCable.nominaleSpanning" data-toggle="tooltip" data-content="https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#ElectricityCable.nominaleSpanning" data-placement="right">
                             nominale spanning</a>
                           </code>
                         </td>
@@ -1022,10 +1083,10 @@ Dit document is bedoeld om uit te groeien tot een standaard in het beschreven do
                         <td></td>
                       </tr>
                     
-                      <tr id="Electricity%20cable%3Aoperationele%20spanning" typeof="rdfs:Property" resource="https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#ElectricityCable.operationeleSpanning">
+                      <tr id="Electricity%20cable%3Aoperationele%20spanning" typeof="rdfs:Property" resource="https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#ElectricityCable.operationeleSpanning">
                         <td>
                           <code property="rdfs:label">
-                            <a href="https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#ElectricityCable.operationeleSpanning" data-toggle="tooltip" data-content="https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#ElectricityCable.operationeleSpanning" data-placement="right">
+                            <a href="https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#ElectricityCable.operationeleSpanning" data-toggle="tooltip" data-content="https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#ElectricityCable.operationeleSpanning" data-placement="right">
                             operationele spanning</a>
                           </code>
                         </td>
@@ -1042,10 +1103,10 @@ Dit document is bedoeld om uit te groeien tot een standaard in het beschreven do
                         <td></td>
                       </tr>
                     
-                      <tr id="Electricity%20cable%3Asubthema" typeof="rdfs:Property" resource="https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#ElectricityCable.subthema">
+                      <tr id="Electricity%20cable%3Asubthema" typeof="rdfs:Property" resource="https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#ElectricityCable.subthema">
                         <td>
                           <code property="rdfs:label">
-                            <a href="https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#ElectricityCable.subthema" data-toggle="tooltip" data-content="https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#ElectricityCable.subthema" data-placement="right">
+                            <a href="https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#ElectricityCable.subthema" data-toggle="tooltip" data-content="https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#ElectricityCable.subthema" data-placement="right">
                             subthema</a>
                           </code>
                         </td>
@@ -1069,14 +1130,14 @@ Dit document is bedoeld om uit te groeien tot een standaard in het beschreven do
             </div>
             
               <div class="region region--no-space-top">
-              <h3 class="h3" id="Heeft aanvullende geometrie"><a href="https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#HeeftAanvullendeGeometrie" data-toggle="tooltip" data-content="https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#HeeftAanvullendeGeometrie" data-placement="right">Heeft aanvullende geometrie</a></h3>
+              <h3 class="h3" id="Heeft aanvullende geometrie"><a href="https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#HeeftAanvullendeGeometrie" data-toggle="tooltip" data-content="https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#HeeftAanvullendeGeometrie" data-placement="right">Heeft aanvullende geometrie</a></h3>
                 <div class="region region--no-space-top">
                   <dl>
                     <dt>Beschrijving</dt><dd>Deze relatie legt een link tussen een object/onderdeel/installatie en een (bestands)bijlage waar een geometrie aan toegekend is. De richting loopt vanuit het fysiek object naar de bijlage met geometrie.</dd>
                     
 		     
 		    <dt>Subklasse van <dt><dd>
-                        <a href="https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DirectioneleRelatie">Directionele relatie</a>
+                        <a href="https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DirectioneleRelatie">Directionele relatie</a>
 		   </dd>
                     
                     <dt>Eigenschappen</dt>
@@ -1089,7 +1150,7 @@ Dit document is bedoeld om uit te groeien tot een standaard in het beschreven do
             </div>
             
               <div class="region region--no-space-top">
-              <h3 class="h3" id="Kabel"><a href="https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#Kabel" data-toggle="tooltip" data-content="https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#Kabel" data-placement="right">Kabel</a></h3>
+              <h3 class="h3" id="Kabel"><a href="https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Kabel" data-toggle="tooltip" data-content="https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Kabel" data-placement="right">Kabel</a></h3>
                 <div class="region region--no-space-top">
                   <dl>
                     <dt>Beschrijving</dt><dd>Abstracte voor attributen en relaties van allerlei types kabels.</dd>
@@ -1127,10 +1188,10 @@ Dit document is bedoeld om uit te groeien tot een standaard in het beschreven do
 
                     <tbody class="supertype">
                     
-                      <tr id="Kabel%3Abuitenmantel%20diameter" typeof="rdfs:Property" resource="https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#Kabel.buitenmantelDiameter">
+                      <tr id="Kabel%3Abuitenmantel%20diameter" typeof="rdfs:Property" resource="https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Kabel.buitenmantelDiameter">
                         <td>
                           <code property="rdfs:label">
-                            <a href="https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#Kabel.buitenmantelDiameter" data-toggle="tooltip" data-content="https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#Kabel.buitenmantelDiameter" data-placement="right">
+                            <a href="https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Kabel.buitenmantelDiameter" data-toggle="tooltip" data-content="https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Kabel.buitenmantelDiameter" data-placement="right">
                             buitenmantel diameter</a>
                           </code>
                         </td>
@@ -1147,10 +1208,10 @@ Dit document is bedoeld om uit te groeien tot een standaard in het beschreven do
                         <td></td>
                       </tr>
                     
-                      <tr id="Kabel%3Abuitenmantel%20kleur" typeof="rdfs:Property" resource="https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#Kabel.buitenmantelKleur">
+                      <tr id="Kabel%3Abuitenmantel%20kleur" typeof="rdfs:Property" resource="https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Kabel.buitenmantelKleur">
                         <td>
                           <code property="rdfs:label">
-                            <a href="https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#Kabel.buitenmantelKleur" data-toggle="tooltip" data-content="https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#Kabel.buitenmantelKleur" data-placement="right">
+                            <a href="https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Kabel.buitenmantelKleur" data-toggle="tooltip" data-content="https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Kabel.buitenmantelKleur" data-placement="right">
                             buitenmantel kleur</a>
                           </code>
                         </td>
@@ -1167,10 +1228,10 @@ Dit document is bedoeld om uit te groeien tot een standaard in het beschreven do
                         <td><a href="https://wegenenverkeer-test.data.vlaanderen.be/id/conceptscheme/KlKabelmantelKleur">Link</a></td>
                       </tr>
                     
-                      <tr id="Kabel%3Afabrikant" typeof="rdfs:Property" resource="https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#Kabel.fabrikant">
+                      <tr id="Kabel%3Afabrikant" typeof="rdfs:Property" resource="https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Kabel.fabrikant">
                         <td>
                           <code property="rdfs:label">
-                            <a href="https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#Kabel.fabrikant" data-toggle="tooltip" data-content="https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#Kabel.fabrikant" data-placement="right">
+                            <a href="https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Kabel.fabrikant" data-toggle="tooltip" data-content="https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Kabel.fabrikant" data-placement="right">
                             fabrikant</a>
                           </code>
                         </td>
@@ -1187,30 +1248,10 @@ Dit document is bedoeld om uit te groeien tot een standaard in het beschreven do
                         <td><a href="https://wegenenverkeer-test.data.vlaanderen.be/id/conceptscheme/KlKabelFabrikant">Link</a></td>
                       </tr>
                     
-                      <tr id="Kabel%3Aheeft%20aanvullende%20geometrie" typeof="rdfs:Property" resource="https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/akela-failover/#Heeft aanvullende geometrie">
+                      <tr id="Kabel%3Aheeft%20aanvullende%20geometrie" typeof="rdfs:Property" resource="https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/akela-failover/#Heeft aanvullende geometrie">
                         <td>
                           <code property="rdfs:label">
-                            <a href="https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/akela-failover/#Heeft aanvullende geometrie" data-toggle="tooltip" data-content="https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/akela-failover/#Heeft aanvullende geometrie" data-placement="right">
-                            Heeft aanvullende geometrie</a>
-                          </code>
-                        </td>
-                        <td>
-                          
-			    
-			    <a href="#Onderdoorboring" data-placement="right">Onderdoorboring</a>
-			    
-                          
-                        </td>
-                        <td></td>
-                        <td property="rdfs:comment">Deze relatie legt een link tussen een object/onderdeel/installatie en een (bestands)bijlage waar een geometrie aan toegekend is. De richting loopt vanuit het fysiek object naar de bijlage met geometrie.</td>
-                        <td property="vann:usageNote"></td>
-                        <td></td>
-                      </tr>
-                    
-                      <tr id="Kabel%3Aheeft%20aanvullende%20geometrie" typeof="rdfs:Property" resource="https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/akela-failover/#Heeft aanvullende geometrie">
-                        <td>
-                          <code property="rdfs:label">
-                            <a href="https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/akela-failover/#Heeft aanvullende geometrie" data-toggle="tooltip" data-content="https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/akela-failover/#Heeft aanvullende geometrie" data-placement="right">
+                            <a href="https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/akela-failover/#Heeft aanvullende geometrie" data-toggle="tooltip" data-content="https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/akela-failover/#Heeft aanvullende geometrie" data-placement="right">
                             Heeft aanvullende geometrie</a>
                           </code>
                         </td>
@@ -1227,10 +1268,30 @@ Dit document is bedoeld om uit te groeien tot een standaard in het beschreven do
                         <td></td>
                       </tr>
                     
-                      <tr id="Kabel%3Atype%20bescherming" typeof="rdfs:Property" resource="https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#Kabel.typeBescherming">
+                      <tr id="Kabel%3Aheeft%20aanvullende%20geometrie" typeof="rdfs:Property" resource="https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/akela-failover/#Heeft aanvullende geometrie">
                         <td>
                           <code property="rdfs:label">
-                            <a href="https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#Kabel.typeBescherming" data-toggle="tooltip" data-content="https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#Kabel.typeBescherming" data-placement="right">
+                            <a href="https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/akela-failover/#Heeft aanvullende geometrie" data-toggle="tooltip" data-content="https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/akela-failover/#Heeft aanvullende geometrie" data-placement="right">
+                            Heeft aanvullende geometrie</a>
+                          </code>
+                        </td>
+                        <td>
+                          
+			    
+			    <a href="#Onderdoorboring" data-placement="right">Onderdoorboring</a>
+			    
+                          
+                        </td>
+                        <td></td>
+                        <td property="rdfs:comment">Deze relatie legt een link tussen een object/onderdeel/installatie en een (bestands)bijlage waar een geometrie aan toegekend is. De richting loopt vanuit het fysiek object naar de bijlage met geometrie.</td>
+                        <td property="vann:usageNote"></td>
+                        <td></td>
+                      </tr>
+                    
+                      <tr id="Kabel%3Atype%20bescherming" typeof="rdfs:Property" resource="https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Kabel.typeBescherming">
+                        <td>
+                          <code property="rdfs:label">
+                            <a href="https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Kabel.typeBescherming" data-toggle="tooltip" data-content="https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Kabel.typeBescherming" data-placement="right">
                             type bescherming</a>
                           </code>
                         </td>
@@ -1254,7 +1315,7 @@ Dit document is bedoeld om uit te groeien tot een standaard in het beschreven do
             </div>
             
               <div class="region region--no-space-top">
-              <h3 class="h3" id="Kabelgeleiding en leiding bevestiging"><a href="https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#KabelgeleidingEnLeidingBevestiging" data-toggle="tooltip" data-content="https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#KabelgeleidingEnLeidingBevestiging" data-placement="right">Kabelgeleiding en leiding bevestiging</a></h3>
+              <h3 class="h3" id="Kabelgeleiding en leiding bevestiging"><a href="https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#KabelgeleidingEnLeidingBevestiging" data-toggle="tooltip" data-content="https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#KabelgeleidingEnLeidingBevestiging" data-placement="right">Kabelgeleiding en leiding bevestiging</a></h3>
                 <div class="region region--no-space-top">
                   <dl>
                     <dt>Beschrijving</dt><dd>Abstracte voor het bevestigen van kabelgeleidingen en leidingen aan bouwkundige elementen</dd>
@@ -1270,7 +1331,7 @@ Dit document is bedoeld om uit te groeien tot een standaard in het beschreven do
             </div>
             
               <div class="region region--no-space-top">
-              <h3 class="h3" id="Leiding"><a href="https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#Leiding" data-toggle="tooltip" data-content="https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#Leiding" data-placement="right">Leiding</a></h3>
+              <h3 class="h3" id="Leiding"><a href="https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Leiding" data-toggle="tooltip" data-content="https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Leiding" data-placement="right">Leiding</a></h3>
                 <div class="region region--no-space-top">
                   <dl>
                     <dt>Beschrijving</dt><dd>Abstracte om de gemeenschappelijke eigenschappen en relaties van de verschillende soorten leidingen onder één noemer te houden.</dd>
@@ -1306,10 +1367,10 @@ Dit document is bedoeld om uit te groeien tot een standaard in het beschreven do
 
                     <tbody class="supertype">
                     
-                      <tr id="Leiding%3Abuitendiameter" typeof="rdfs:Property" resource="https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#Leiding.buitendiameter">
+                      <tr id="Leiding%3Abuitendiameter" typeof="rdfs:Property" resource="https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Leiding.buitendiameter">
                         <td>
                           <code property="rdfs:label">
-                            <a href="https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#Leiding.buitendiameter" data-toggle="tooltip" data-content="https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#Leiding.buitendiameter" data-placement="right">
+                            <a href="https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Leiding.buitendiameter" data-toggle="tooltip" data-content="https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Leiding.buitendiameter" data-placement="right">
                             buitendiameter</a>
                           </code>
                         </td>
@@ -1326,10 +1387,10 @@ Dit document is bedoeld om uit te groeien tot een standaard in het beschreven do
                         <td></td>
                       </tr>
                     
-                      <tr id="Leiding%3Aheeft%20aanvullende%20geometrie" typeof="rdfs:Property" resource="https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/akela-failover/#Heeft aanvullende geometrie">
+                      <tr id="Leiding%3Aheeft%20aanvullende%20geometrie" typeof="rdfs:Property" resource="https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/akela-failover/#Heeft aanvullende geometrie">
                         <td>
                           <code property="rdfs:label">
-                            <a href="https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/akela-failover/#Heeft aanvullende geometrie" data-toggle="tooltip" data-content="https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/akela-failover/#Heeft aanvullende geometrie" data-placement="right">
+                            <a href="https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/akela-failover/#Heeft aanvullende geometrie" data-toggle="tooltip" data-content="https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/akela-failover/#Heeft aanvullende geometrie" data-placement="right">
                             Heeft aanvullende geometrie</a>
                           </code>
                         </td>
@@ -1346,10 +1407,10 @@ Dit document is bedoeld om uit te groeien tot een standaard in het beschreven do
                         <td></td>
                       </tr>
                     
-                      <tr id="Leiding%3Ais%20risicovol" typeof="rdfs:Property" resource="https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#Leiding.isRisicovol">
+                      <tr id="Leiding%3Ais%20risicovol" typeof="rdfs:Property" resource="https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Leiding.isRisicovol">
                         <td>
                           <code property="rdfs:label">
-                            <a href="https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#Leiding.isRisicovol" data-toggle="tooltip" data-content="https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#Leiding.isRisicovol" data-placement="right">
+                            <a href="https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Leiding.isRisicovol" data-toggle="tooltip" data-content="https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Leiding.isRisicovol" data-placement="right">
                             is risicovol</a>
                           </code>
                         </td>
@@ -1373,7 +1434,7 @@ Dit document is bedoeld om uit te groeien tot een standaard in het beschreven do
             </div>
             
               <div class="region region--no-space-top">
-              <h3 class="h3" id="Omhullende inrichting"><a href="https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#OmhullendeInrichting" data-toggle="tooltip" data-content="https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#OmhullendeInrichting" data-placement="right">Omhullende inrichting</a></h3>
+              <h3 class="h3" id="Omhullende inrichting"><a href="https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#OmhullendeInrichting" data-toggle="tooltip" data-content="https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#OmhullendeInrichting" data-placement="right">Omhullende inrichting</a></h3>
                 <div class="region region--no-space-top">
                   <dl>
                     <dt>Beschrijving</dt><dd>Abstracte voor het groeperen van de relaties voor onderdelen die kabels kunnen omhullen.</dd>
@@ -1403,30 +1464,10 @@ Dit document is bedoeld om uit te groeien tot een standaard in het beschreven do
 
                     <tbody class="supertype">
                     
-                      <tr id="Omhullende%20inrichting%3Aomhult" typeof="rdfs:Property" resource="https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/akela-failover/#Omhult">
+                      <tr id="Omhullende%20inrichting%3Aomhult" typeof="rdfs:Property" resource="https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/akela-failover/#Omhult">
                         <td>
                           <code property="rdfs:label">
-                            <a href="https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/akela-failover/#Omhult" data-toggle="tooltip" data-content="https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/akela-failover/#Omhult" data-placement="right">
-                            Omhult</a>
-                          </code>
-                        </td>
-                        <td>
-                          
-			    
-			    <a href="#Leiding" data-placement="right">Leiding</a>
-			    
-                          
-                        </td>
-                        <td></td>
-                        <td property="rdfs:comment">Deze relatie geeft aan dat het ene onderdeel het andere omhult. Dit vereist geen gesloten omhulling: de omhulling kan een open zijde hebben of bestaan uit open ruimtes. Deze relatie heeft een richting en gaat van het omhullende onderdeel naar het onderdeel dat omhuld wordt.</td>
-                        <td property="vann:usageNote"></td>
-                        <td></td>
-                      </tr>
-                    
-                      <tr id="Omhullende%20inrichting%3Aomhult" typeof="rdfs:Property" resource="https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/akela-failover/#Omhult">
-                        <td>
-                          <code property="rdfs:label">
-                            <a href="https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/akela-failover/#Omhult" data-toggle="tooltip" data-content="https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/akela-failover/#Omhult" data-placement="right">
+                            <a href="https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/akela-failover/#Omhult" data-toggle="tooltip" data-content="https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/akela-failover/#Omhult" data-placement="right">
                             Omhult</a>
                           </code>
                         </td>
@@ -1443,6 +1484,26 @@ Dit document is bedoeld om uit te groeien tot een standaard in het beschreven do
                         <td></td>
                       </tr>
                     
+                      <tr id="Omhullende%20inrichting%3Aomhult" typeof="rdfs:Property" resource="https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/akela-failover/#Omhult">
+                        <td>
+                          <code property="rdfs:label">
+                            <a href="https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/akela-failover/#Omhult" data-toggle="tooltip" data-content="https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/akela-failover/#Omhult" data-placement="right">
+                            Omhult</a>
+                          </code>
+                        </td>
+                        <td>
+                          
+			    
+			    <a href="#Leiding" data-placement="right">Leiding</a>
+			    
+                          
+                        </td>
+                        <td></td>
+                        <td property="rdfs:comment">Deze relatie geeft aan dat het ene onderdeel het andere omhult. Dit vereist geen gesloten omhulling: de omhulling kan een open zijde hebben of bestaan uit open ruimtes. Deze relatie heeft een richting en gaat van het omhullende onderdeel naar het onderdeel dat omhuld wordt.</td>
+                        <td property="vann:usageNote"></td>
+                        <td></td>
+                      </tr>
+                    
                     </tbody>
                   </table>
                 </div>
@@ -1450,14 +1511,14 @@ Dit document is bedoeld om uit te groeien tot een standaard in het beschreven do
             </div>
             
               <div class="region region--no-space-top">
-              <h3 class="h3" id="Omhult"><a href="https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Omhult" data-toggle="tooltip" data-content="https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Omhult" data-placement="right">Omhult</a></h3>
+              <h3 class="h3" id="Omhult"><a href="https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Omhult" data-toggle="tooltip" data-content="https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Omhult" data-placement="right">Omhult</a></h3>
                 <div class="region region--no-space-top">
                   <dl>
                     <dt>Beschrijving</dt><dd>Deze relatie geeft aan dat het ene onderdeel het andere omhult. Dit vereist geen gesloten omhulling: de omhulling kan een open zijde hebben of bestaan uit open ruimtes. Deze relatie heeft een richting en gaat van het omhullende onderdeel naar het onderdeel dat omhuld wordt.</dd>
                     
 		     
 		    <dt>Subklasse van <dt><dd>
-                        <a href="https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DirectioneleRelatie">Directionele relatie</a>
+                        <a href="https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DirectioneleRelatie">Directionele relatie</a>
 		   </dd>
                     
                     <dt>Eigenschappen</dt>
@@ -1470,7 +1531,7 @@ Dit document is bedoeld om uit te groeien tot een standaard in het beschreven do
             </div>
             
               <div class="region region--no-space-top">
-              <h3 class="h3" id="Onderdoorboring"><a href="https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Onderdoorboring" data-toggle="tooltip" data-content="https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Onderdoorboring" data-placement="right">Onderdoorboring</a></h3>
+              <h3 class="h3" id="Onderdoorboring"><a href="https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Onderdoorboring" data-toggle="tooltip" data-content="https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Onderdoorboring" data-placement="right">Onderdoorboring</a></h3>
                 <div class="region region--no-space-top">
                   <dl>
                     <dt>Beschrijving</dt><dd>Gebruikt voor de registratie van kenmerken en de geometrie van een boring onder een weg of spoorweg.</dd>
@@ -1504,10 +1565,10 @@ Dit document is bedoeld om uit te groeien tot een standaard in het beschreven do
 
                     <tbody class="supertype">
                     
-                      <tr id="Onderdoorboring%3Aretributie" typeof="rdfs:Property" resource="https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Onderdoorboring.retributie">
+                      <tr id="Onderdoorboring%3Aretributie" typeof="rdfs:Property" resource="https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Onderdoorboring.retributie">
                         <td>
                           <code property="rdfs:label">
-                            <a href="https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Onderdoorboring.retributie" data-toggle="tooltip" data-content="https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Onderdoorboring.retributie" data-placement="right">
+                            <a href="https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Onderdoorboring.retributie" data-toggle="tooltip" data-content="https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Onderdoorboring.retributie" data-placement="right">
                             retributie</a>
                           </code>
                         </td>
@@ -1524,10 +1585,10 @@ Dit document is bedoeld om uit te groeien tot een standaard in het beschreven do
                         <td></td>
                       </tr>
                     
-                      <tr id="Onderdoorboring%3Avergunning" typeof="rdfs:Property" resource="https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Onderdoorboring.vergunning">
+                      <tr id="Onderdoorboring%3Avergunning" typeof="rdfs:Property" resource="https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Onderdoorboring.vergunning">
                         <td>
                           <code property="rdfs:label">
-                            <a href="https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Onderdoorboring.vergunning" data-toggle="tooltip" data-content="https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Onderdoorboring.vergunning" data-placement="right">
+                            <a href="https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Onderdoorboring.vergunning" data-toggle="tooltip" data-content="https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Onderdoorboring.vergunning" data-placement="right">
                             vergunning</a>
                           </code>
                         </td>
@@ -1551,7 +1612,7 @@ Dit document is bedoeld om uit te groeien tot een standaard in het beschreven do
             </div>
             
               <div class="region region--no-space-top">
-              <h3 class="h3" id="Onderwaterkruising"><a href="https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Onderwaterkruising" data-toggle="tooltip" data-content="https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Onderwaterkruising" data-placement="right">Onderwaterkruising</a></h3>
+              <h3 class="h3" id="Onderwaterkruising"><a href="https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Onderwaterkruising" data-toggle="tooltip" data-content="https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Onderwaterkruising" data-placement="right">Onderwaterkruising</a></h3>
                 <div class="region region--no-space-top">
                   <dl>
                     <dt>Beschrijving</dt><dd>Gebruikt voor de registratie van kenmerken en geometrie van een ruimte waar kabels en leidingen onder een waterweg door gaan.</dd>
@@ -1586,10 +1647,10 @@ Dit document is bedoeld om uit te groeien tot een standaard in het beschreven do
 
                     <tbody class="supertype">
                     
-                      <tr id="Onderwaterkruising%3Aaanleg%20wijze" typeof="rdfs:Property" resource="https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Onderwaterkruising.aanlegWijze">
+                      <tr id="Onderwaterkruising%3Aaanleg%20wijze" typeof="rdfs:Property" resource="https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Onderwaterkruising.aanlegWijze">
                         <td>
                           <code property="rdfs:label">
-                            <a href="https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Onderwaterkruising.aanlegWijze" data-toggle="tooltip" data-content="https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Onderwaterkruising.aanlegWijze" data-placement="right">
+                            <a href="https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Onderwaterkruising.aanlegWijze" data-toggle="tooltip" data-content="https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Onderwaterkruising.aanlegWijze" data-placement="right">
                             aanleg wijze</a>
                           </code>
                         </td>
@@ -1606,10 +1667,10 @@ Dit document is bedoeld om uit te groeien tot een standaard in het beschreven do
                         <td><a href="https://wegenenverkeer-test.data.vlaanderen.be/id/conceptscheme/KlOnderwaterkruisingAanlegWijze">Link</a></td>
                       </tr>
                     
-                      <tr id="Onderwaterkruising%3Abuitendiameter" typeof="rdfs:Property" resource="https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Onderwaterkruising.buitendiameter">
+                      <tr id="Onderwaterkruising%3Abuitendiameter" typeof="rdfs:Property" resource="https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Onderwaterkruising.buitendiameter">
                         <td>
                           <code property="rdfs:label">
-                            <a href="https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Onderwaterkruising.buitendiameter" data-toggle="tooltip" data-content="https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Onderwaterkruising.buitendiameter" data-placement="right">
+                            <a href="https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Onderwaterkruising.buitendiameter" data-toggle="tooltip" data-content="https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Onderwaterkruising.buitendiameter" data-placement="right">
                             buitendiameter</a>
                           </code>
                         </td>
@@ -1626,10 +1687,10 @@ Dit document is bedoeld om uit te groeien tot een standaard in het beschreven do
                         <td></td>
                       </tr>
                     
-                      <tr id="Onderwaterkruising%3Alengte" typeof="rdfs:Property" resource="https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Onderwaterkruising.lengte">
+                      <tr id="Onderwaterkruising%3Alengte" typeof="rdfs:Property" resource="https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Onderwaterkruising.lengte">
                         <td>
                           <code property="rdfs:label">
-                            <a href="https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Onderwaterkruising.lengte" data-toggle="tooltip" data-content="https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Onderwaterkruising.lengte" data-placement="right">
+                            <a href="https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Onderwaterkruising.lengte" data-toggle="tooltip" data-content="https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Onderwaterkruising.lengte" data-placement="right">
                             lengte</a>
                           </code>
                         </td>
@@ -1653,7 +1714,7 @@ Dit document is bedoeld om uit te groeien tot een standaard in het beschreven do
             </div>
             
               <div class="region region--no-space-top">
-              <h3 class="h3" id="Pipe"><a href="https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#Pipe" data-toggle="tooltip" data-content="https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#Pipe" data-placement="right">Pipe</a></h3>
+              <h3 class="h3" id="Pipe"><a href="https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#Pipe" data-toggle="tooltip" data-content="https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#Pipe" data-placement="right">Pipe</a></h3>
                 <div class="region region--no-space-top">
                   <dl>
                     <dt>Beschrijving</dt><dd>Een buis die dienst kan doen als object voor het omhullen van meerdere kabels of andere (kleinere) leidingen.</dd>
@@ -1691,10 +1752,10 @@ Dit document is bedoeld om uit te groeien tot een standaard in het beschreven do
 
                     <tbody class="supertype">
                     
-                      <tr id="Pipe%3Acontainertype" typeof="rdfs:Property" resource="https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#Pipe.containerType">
+                      <tr id="Pipe%3Acontainertype" typeof="rdfs:Property" resource="https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#Pipe.containerType">
                         <td>
                           <code property="rdfs:label">
-                            <a href="https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#Pipe.containerType" data-toggle="tooltip" data-content="https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#Pipe.containerType" data-placement="right">
+                            <a href="https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#Pipe.containerType" data-toggle="tooltip" data-content="https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#Pipe.containerType" data-placement="right">
                             containertype</a>
                           </code>
                         </td>
@@ -1711,10 +1772,10 @@ Dit document is bedoeld om uit te groeien tot een standaard in het beschreven do
                         <td><a href="https://wegenenverkeer-test.data.vlaanderen.be/id/conceptscheme/KlPipeContainerType">Link</a></td>
                       </tr>
                     
-                      <tr id="Pipe%3Akleur" typeof="rdfs:Property" resource="https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#Pipe.kleur">
+                      <tr id="Pipe%3Akleur" typeof="rdfs:Property" resource="https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#Pipe.kleur">
                         <td>
                           <code property="rdfs:label">
-                            <a href="https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#Pipe.kleur" data-toggle="tooltip" data-content="https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#Pipe.kleur" data-placement="right">
+                            <a href="https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#Pipe.kleur" data-toggle="tooltip" data-content="https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#Pipe.kleur" data-placement="right">
                             kleur</a>
                           </code>
                         </td>
@@ -1731,10 +1792,10 @@ Dit document is bedoeld om uit te groeien tot een standaard in het beschreven do
                         <td><a href="https://wegenenverkeer-test.data.vlaanderen.be/id/conceptscheme/KlBeschermbuisKleur">Link</a></td>
                       </tr>
                     
-                      <tr id="Pipe%3Anetwerktype" typeof="rdfs:Property" resource="https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#Pipe.netwerkType">
+                      <tr id="Pipe%3Anetwerktype" typeof="rdfs:Property" resource="https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#Pipe.netwerkType">
                         <td>
                           <code property="rdfs:label">
-                            <a href="https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#Pipe.netwerkType" data-toggle="tooltip" data-content="https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#Pipe.netwerkType" data-placement="right">
+                            <a href="https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#Pipe.netwerkType" data-toggle="tooltip" data-content="https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#Pipe.netwerkType" data-placement="right">
                             netwerktype</a>
                           </code>
                         </td>
@@ -1758,7 +1819,7 @@ Dit document is bedoeld om uit te groeien tot een standaard in het beschreven do
             </div>
             
               <div class="region region--no-space-top">
-              <h3 class="h3" id="Telecommunications appurtenance"><a href="https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#TelecommunicationsAppurtenance" data-toggle="tooltip" data-content="https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#TelecommunicationsAppurtenance" data-placement="right">Telecommunications appurtenance</a></h3>
+              <h3 class="h3" id="Telecommunications appurtenance"><a href="https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#TelecommunicationsAppurtenance" data-toggle="tooltip" data-content="https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#TelecommunicationsAppurtenance" data-placement="right">Telecommunications appurtenance</a></h3>
                 <div class="region region--no-space-top">
                   <dl>
                     <dt>Beschrijving</dt><dd>Appurtenance-objecten zijn toebehoren of accessoires, dus allerlei apparaten, toestellen en dergelijke,kortom diverse soorten leidingelementen.</dd>
@@ -1793,10 +1854,10 @@ Dit document is bedoeld om uit te groeien tot een standaard in het beschreven do
 
                     <tbody class="supertype">
                     
-                      <tr id="Telecommunications%20appurtenance%3Aappurtenance%20type" typeof="rdfs:Property" resource="https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#TelecommunicationsAppurtenance.appurtenanceType">
+                      <tr id="Telecommunications%20appurtenance%3Aappurtenance%20type" typeof="rdfs:Property" resource="https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#TelecommunicationsAppurtenance.appurtenanceType">
                         <td>
                           <code property="rdfs:label">
-                            <a href="https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#TelecommunicationsAppurtenance.appurtenanceType" data-toggle="tooltip" data-content="https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#TelecommunicationsAppurtenance.appurtenanceType" data-placement="right">
+                            <a href="https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#TelecommunicationsAppurtenance.appurtenanceType" data-toggle="tooltip" data-content="https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#TelecommunicationsAppurtenance.appurtenanceType" data-placement="right">
                             appurtenance type</a>
                           </code>
                         </td>
@@ -1820,7 +1881,7 @@ Dit document is bedoeld om uit te groeien tot een standaard in het beschreven do
             </div>
             
               <div class="region region--no-space-top">
-              <h3 class="h3" id="Telecommunications cable"><a href="https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#TelecommunicationsCable" data-toggle="tooltip" data-content="https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#TelecommunicationsCable" data-placement="right">Telecommunications cable</a></h3>
+              <h3 class="h3" id="Telecommunications cable"><a href="https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#TelecommunicationsCable" data-toggle="tooltip" data-content="https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#TelecommunicationsCable" data-placement="right">Telecommunications cable</a></h3>
                 <div class="region region--no-space-top">
                   <dl>
                     <dt>Beschrijving</dt><dd>Een aansluiting of reeks aansluitingen van een nutsvoorzieningennet voor het overbrengen van data van de ene locatie naar een andere.</dd>
@@ -1856,10 +1917,10 @@ Dit document is bedoeld om uit te groeien tot een standaard in het beschreven do
 
                     <tbody class="supertype">
                     
-                      <tr id="Telecommunications%20cable%3Amateriaal%20type" typeof="rdfs:Property" resource="https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#TelecommunicationsCable.materiaalType">
+                      <tr id="Telecommunications%20cable%3Amateriaal%20type" typeof="rdfs:Property" resource="https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#TelecommunicationsCable.materiaalType">
                         <td>
                           <code property="rdfs:label">
-                            <a href="https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#TelecommunicationsCable.materiaalType" data-toggle="tooltip" data-content="https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#TelecommunicationsCable.materiaalType" data-placement="right">
+                            <a href="https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#TelecommunicationsCable.materiaalType" data-toggle="tooltip" data-content="https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#TelecommunicationsCable.materiaalType" data-placement="right">
                             materiaal type</a>
                           </code>
                         </td>
@@ -1876,10 +1937,10 @@ Dit document is bedoeld om uit te groeien tot een standaard in het beschreven do
                         <td><a href="https://wegenenverkeer-test.data.vlaanderen.be/id/conceptscheme/KlTelecomCableMateriaalType">Link</a></td>
                       </tr>
                     
-                      <tr id="Telecommunications%20cable%3Asubthema" typeof="rdfs:Property" resource="https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#TelecommunicationsCable.subthema">
+                      <tr id="Telecommunications%20cable%3Asubthema" typeof="rdfs:Property" resource="https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#TelecommunicationsCable.subthema">
                         <td>
                           <code property="rdfs:label">
-                            <a href="https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#TelecommunicationsCable.subthema" data-toggle="tooltip" data-content="https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#TelecommunicationsCable.subthema" data-placement="right">
+                            <a href="https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#TelecommunicationsCable.subthema" data-toggle="tooltip" data-content="https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#TelecommunicationsCable.subthema" data-placement="right">
                             subthema</a>
                           </code>
                         </td>
@@ -1910,7 +1971,104 @@ Dit document is bedoeld om uit te groeien tot een standaard in het beschreven do
             
             <div class="region region--no-space-top">
               
-              <h3 class="h3" id="Bestandsbijlage"><a href="https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcDocument" data-toggle="tooltip" data-content="https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcDocument" data-placement="right">Bestandsbijlage</a></h3>
+              <h3 class="h3" id="Asset versie"><a href="https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcAssetVersie" data-toggle="tooltip" data-content="https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcAssetVersie" data-placement="right">Asset versie</a></h3>
+	      
+                <div class="region region--no-space-top">
+                  <dl>
+                    <dt>Beschrijving</dt><dd>Complex datatype voor de eigenschappen ten behoeve van de versionering van een asset in de databank.</dd>
+                    
+		    
+                    <dt>Eigenschappen</dt>
+		     
+                    <dd>Voor dit datatype zijn de volgende eigenschappen gedefinieerd:
+                      <a href="#Asset%20versie%3Acontext">context</a>, 
+                      <a href="#Asset%20versie%3Atimestamp">timestamp</a>, 
+                      <a href="#Asset%20versie%3Aversienummer">versienummer</a>.</dd>
+                    
+                  </dl>
+                </div>
+		 
+                <div class="u-table-overflow">
+                  <table class="data-table">
+                    <thead>
+                      <tr class="data-table__header">
+                        <th class="data-table__header-title--sortable data-table__header-title--sortable-active">Eigenschap</th>
+                        <th class="data-table__header-title--sortable">Verwacht Type</th>
+                        <th class="data-table__header-title--sortable">Kardinaliteit</th>
+                        <th class="data-table__header-title--sortable">Beschrijving</th>
+                        <th class="data-table__header-title--sortable">Gebruik</th>
+                        <th class="data-table__header-title--sortable">Keuzelijst</th>
+                      </tr>
+                    </thead>
+
+                    <tbody class="supertype">
+                      
+                      <tr id="Asset%20versie%3Acontext" typeof="rdfs:Property" resource="https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcAssetVersie.context">
+                        <td>
+                          <code property="rdfs:label">
+                            <a href="https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcAssetVersie.context" data-toggle="tooltip" data-content="https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcAssetVersie.context" data-placement="right">context</a>
+                          </code>
+                        </td>
+                        <td>
+                          
+			    
+			    <a href="#String" data-placement="right">String</a>
+			    
+                          
+                        </td>
+                        <td>1</td>
+                        <td property="rdfs:comment">De context van de versie creatie.</td>
+                        <td property="vann:usageNote"></td>
+                        <td></td>
+                      </tr>
+                      
+                      <tr id="Asset%20versie%3Atimestamp" typeof="rdfs:Property" resource="https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcAssetVersie.timestamp">
+                        <td>
+                          <code property="rdfs:label">
+                            <a href="https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcAssetVersie.timestamp" data-toggle="tooltip" data-content="https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcAssetVersie.timestamp" data-placement="right">timestamp</a>
+                          </code>
+                        </td>
+                        <td>
+                          
+			    
+			    <a href="#Datumtijd" data-placement="right">Datumtijd</a>
+			    
+                          
+                        </td>
+                        <td>1</td>
+                        <td property="rdfs:comment">De timestamp van het moment dat de versienummer werd toegekend.</td>
+                        <td property="vann:usageNote"></td>
+                        <td></td>
+                      </tr>
+                      
+                      <tr id="Asset%20versie%3Aversienummer" typeof="rdfs:Property" resource="https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcAssetVersie.versienummer">
+                        <td>
+                          <code property="rdfs:label">
+                            <a href="https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcAssetVersie.versienummer" data-toggle="tooltip" data-content="https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcAssetVersie.versienummer" data-placement="right">versienummer</a>
+                          </code>
+                        </td>
+                        <td>
+                          
+			    
+			    <a href="#Natuurlijk getal" data-placement="right">Natuurlijk getal</a>
+			    
+                          
+                        </td>
+                        <td>1</td>
+                        <td property="rdfs:comment">Het versienummer als een oplopende integer.</td>
+                        <td property="vann:usageNote"></td>
+                        <td></td>
+                      </tr>
+                      
+                    </tbody>
+                  </table>
+                </div>
+                
+            </div>
+            
+            <div class="region region--no-space-top">
+              
+              <h3 class="h3" id="Bestandsbijlage"><a href="https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcDocument" data-toggle="tooltip" data-content="https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcDocument" data-placement="right">Bestandsbijlage</a></h3>
 	      
                 <div class="region region--no-space-top">
                   <dl>
@@ -1944,10 +2102,10 @@ Dit document is bedoeld om uit te groeien tot een standaard in het beschreven do
 
                     <tbody class="supertype">
                       
-                      <tr id="Bestandsbijlage%3Abestandsnaam" typeof="rdfs:Property" resource="https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcDocument.bestandsnaam">
+                      <tr id="Bestandsbijlage%3Abestandsnaam" typeof="rdfs:Property" resource="https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcDocument.bestandsnaam">
                         <td>
                           <code property="rdfs:label">
-                            <a href="https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcDocument.bestandsnaam" data-toggle="tooltip" data-content="https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcDocument.bestandsnaam" data-placement="right">bestandsnaam</a>
+                            <a href="https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcDocument.bestandsnaam" data-toggle="tooltip" data-content="https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcDocument.bestandsnaam" data-placement="right">bestandsnaam</a>
                           </code>
                         </td>
                         <td>
@@ -1963,10 +2121,10 @@ Dit document is bedoeld om uit te groeien tot een standaard in het beschreven do
                         <td></td>
                       </tr>
                       
-                      <tr id="Bestandsbijlage%3Amime-type" typeof="rdfs:Property" resource="https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcDocument.mimeType">
+                      <tr id="Bestandsbijlage%3Amime-type" typeof="rdfs:Property" resource="https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcDocument.mimeType">
                         <td>
                           <code property="rdfs:label">
-                            <a href="https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcDocument.mimeType" data-toggle="tooltip" data-content="https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcDocument.mimeType" data-placement="right">mime-type</a>
+                            <a href="https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcDocument.mimeType" data-toggle="tooltip" data-content="https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcDocument.mimeType" data-placement="right">mime-type</a>
                           </code>
                         </td>
                         <td>
@@ -1982,10 +2140,10 @@ Dit document is bedoeld om uit te groeien tot een standaard in het beschreven do
                         <td><a href="https://wegenenverkeer-test.data.vlaanderen.be/id/conceptscheme/KlAlgMimeType">Link</a></td>
                       </tr>
                       
-                      <tr id="Bestandsbijlage%3Aomschrijving" typeof="rdfs:Property" resource="https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcDocument.omschrijving">
+                      <tr id="Bestandsbijlage%3Aomschrijving" typeof="rdfs:Property" resource="https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcDocument.omschrijving">
                         <td>
                           <code property="rdfs:label">
-                            <a href="https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcDocument.omschrijving" data-toggle="tooltip" data-content="https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcDocument.omschrijving" data-placement="right">omschrijving</a>
+                            <a href="https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcDocument.omschrijving" data-toggle="tooltip" data-content="https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcDocument.omschrijving" data-placement="right">omschrijving</a>
                           </code>
                         </td>
                         <td>
@@ -2001,10 +2159,10 @@ Dit document is bedoeld om uit te groeien tot een standaard in het beschreven do
                         <td></td>
                       </tr>
                       
-                      <tr id="Bestandsbijlage%3Aopmaakdatum" typeof="rdfs:Property" resource="https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcDocument.opmaakdatum">
+                      <tr id="Bestandsbijlage%3Aopmaakdatum" typeof="rdfs:Property" resource="https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcDocument.opmaakdatum">
                         <td>
                           <code property="rdfs:label">
-                            <a href="https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcDocument.opmaakdatum" data-toggle="tooltip" data-content="https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcDocument.opmaakdatum" data-placement="right">opmaakdatum</a>
+                            <a href="https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcDocument.opmaakdatum" data-toggle="tooltip" data-content="https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcDocument.opmaakdatum" data-placement="right">opmaakdatum</a>
                           </code>
                         </td>
                         <td>
@@ -2020,10 +2178,10 @@ Dit document is bedoeld om uit te groeien tot een standaard in het beschreven do
                         <td></td>
                       </tr>
                       
-                      <tr id="Bestandsbijlage%3Auri" typeof="rdfs:Property" resource="https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcDocument.uri">
+                      <tr id="Bestandsbijlage%3Auri" typeof="rdfs:Property" resource="https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcDocument.uri">
                         <td>
                           <code property="rdfs:label">
-                            <a href="https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcDocument.uri" data-toggle="tooltip" data-content="https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcDocument.uri" data-placement="right">uri</a>
+                            <a href="https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcDocument.uri" data-toggle="tooltip" data-content="https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcDocument.uri" data-placement="right">uri</a>
                           </code>
                         </td>
                         <td>
@@ -2087,6 +2245,26 @@ Dit document is bedoeld om uit te groeien tot een standaard in het beschreven do
             
             <div class="region region--no-space-top">
               
+              <h3 class="h3" id="Datumtijd"><a href="http://www.w3.org/2001/XMLSchema#dateTime" data-toggle="tooltip" data-content="http://www.w3.org/2001/XMLSchema#dateTime" data-placement="right">Datumtijd</a></h3>
+	      
+                <div class="region region--no-space-top">
+                  <dl>
+                    <dt>Beschrijving</dt><dd>Beschrijft een datumtijd volgens http://www.w3.org/2001/XMLSchema#dateTime.</dd>
+                    
+                    <dt>Gebruik</dt><dd>https://www.w3.org/TR/xmlschema-2/#dateTime</dd>
+                    
+		    
+                    <dt>Eigenschappen</dt>
+		    
+                    <dd>Voor dit datatype zijn geen eigenschappen gedefinieerd.</dd>
+                    
+                  </dl>
+                </div>
+		
+            </div>
+            
+            <div class="region region--no-space-top">
+              
               <h3 class="h3" id="Decimaal getal"><a href="http://www.w3.org/2001/XMLSchema#decimal" data-toggle="tooltip" data-content="http://www.w3.org/2001/XMLSchema#decimal" data-placement="right">Decimaal getal</a></h3>
 	      
                 <div class="region region--no-space-top">
@@ -2107,7 +2285,7 @@ Dit document is bedoeld om uit te groeien tot een standaard in het beschreven do
             
             <div class="region region--no-space-top">
               
-              <h3 class="h3" id="Identificator"><a href="https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcIdentificator" data-toggle="tooltip" data-content="https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcIdentificator" data-placement="right">Identificator</a></h3>
+              <h3 class="h3" id="Identificator"><a href="https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcIdentificator" data-toggle="tooltip" data-content="https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcIdentificator" data-placement="right">Identificator</a></h3>
 	      
                 <div class="region region--no-space-top">
                   <dl>
@@ -2138,10 +2316,10 @@ Dit document is bedoeld om uit te groeien tot een standaard in het beschreven do
 
                     <tbody class="supertype">
                       
-                      <tr id="Identificator%3Aidentificator" typeof="rdfs:Property" resource="https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcIdentificator.identificator">
+                      <tr id="Identificator%3Aidentificator" typeof="rdfs:Property" resource="https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcIdentificator.identificator">
                         <td>
                           <code property="rdfs:label">
-                            <a href="https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcIdentificator.identificator" data-toggle="tooltip" data-content="https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcIdentificator.identificator" data-placement="right">identificator</a>
+                            <a href="https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcIdentificator.identificator" data-toggle="tooltip" data-content="https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcIdentificator.identificator" data-placement="right">identificator</a>
                           </code>
                         </td>
                         <td>
@@ -2157,10 +2335,10 @@ Dit document is bedoeld om uit te groeien tot een standaard in het beschreven do
                         <td></td>
                       </tr>
                       
-                      <tr id="Identificator%3Atoegekend%20door" typeof="rdfs:Property" resource="https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcIdentificator.toegekendDoor">
+                      <tr id="Identificator%3Atoegekend%20door" typeof="rdfs:Property" resource="https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcIdentificator.toegekendDoor">
                         <td>
                           <code property="rdfs:label">
-                            <a href="https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcIdentificator.toegekendDoor" data-toggle="tooltip" data-content="https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcIdentificator.toegekendDoor" data-placement="right">toegekend door</a>
+                            <a href="https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcIdentificator.toegekendDoor" data-toggle="tooltip" data-content="https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcIdentificator.toegekendDoor" data-placement="right">toegekend door</a>
                           </code>
                         </td>
                         <td>
@@ -2184,7 +2362,7 @@ Dit document is bedoeld om uit te groeien tot een standaard in het beschreven do
             
             <div class="region region--no-space-top">
               
-              <h3 class="h3" id="Kwantitatieve waarde in euro"><a href="https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInEuro" data-toggle="tooltip" data-content="https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInEuro" data-placement="right">Kwantitatieve waarde in euro</a></h3>
+              <h3 class="h3" id="Kwantitatieve waarde in euro"><a href="https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInEuro" data-toggle="tooltip" data-content="https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInEuro" data-placement="right">Kwantitatieve waarde in euro</a></h3>
 	      
                 <div class="region region--no-space-top">
                   <dl>
@@ -2215,10 +2393,10 @@ Dit document is bedoeld om uit te groeien tot een standaard in het beschreven do
 
                     <tbody class="supertype">
                       
-                      <tr id="Kwantitatieve%20waarde%20in%20euro%3Astandaard%20eenheid" typeof="rdfs:Property" resource="https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInEuro.standaardEenheid">
+                      <tr id="Kwantitatieve%20waarde%20in%20euro%3Astandaard%20eenheid" typeof="rdfs:Property" resource="https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInEuro.standaardEenheid">
                         <td>
                           <code property="rdfs:label">
-                            <a href="https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInEuro.standaardEenheid" data-toggle="tooltip" data-content="https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInEuro.standaardEenheid" data-placement="right">standaard eenheid</a>
+                            <a href="https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInEuro.standaardEenheid" data-toggle="tooltip" data-content="https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInEuro.standaardEenheid" data-placement="right">standaard eenheid</a>
                           </code>
                         </td>
                         <td>
@@ -2234,10 +2412,10 @@ Dit document is bedoeld om uit te groeien tot een standaard in het beschreven do
                         <td></td>
                       </tr>
                       
-                      <tr id="Kwantitatieve%20waarde%20in%20euro%3Awaarde" typeof="rdfs:Property" resource="https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInEuro.waarde">
+                      <tr id="Kwantitatieve%20waarde%20in%20euro%3Awaarde" typeof="rdfs:Property" resource="https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInEuro.waarde">
                         <td>
                           <code property="rdfs:label">
-                            <a href="https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInEuro.waarde" data-toggle="tooltip" data-content="https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInEuro.waarde" data-placement="right">waarde</a>
+                            <a href="https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInEuro.waarde" data-toggle="tooltip" data-content="https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInEuro.waarde" data-placement="right">waarde</a>
                           </code>
                         </td>
                         <td>
@@ -2261,7 +2439,7 @@ Dit document is bedoeld om uit te groeien tot een standaard in het beschreven do
             
             <div class="region region--no-space-top">
               
-              <h3 class="h3" id="Kwantitatieve waarde in maand"><a href="https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMaand" data-toggle="tooltip" data-content="https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMaand" data-placement="right">Kwantitatieve waarde in maand</a></h3>
+              <h3 class="h3" id="Kwantitatieve waarde in maand"><a href="https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInMaand" data-toggle="tooltip" data-content="https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInMaand" data-placement="right">Kwantitatieve waarde in maand</a></h3>
 	      
                 <div class="region region--no-space-top">
                   <dl>
@@ -2292,10 +2470,10 @@ Dit document is bedoeld om uit te groeien tot een standaard in het beschreven do
 
                     <tbody class="supertype">
                       
-                      <tr id="Kwantitatieve%20waarde%20in%20maand%3Astandaard%20eenheid" typeof="rdfs:Property" resource="https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMaand.standaardEenheid">
+                      <tr id="Kwantitatieve%20waarde%20in%20maand%3Astandaard%20eenheid" typeof="rdfs:Property" resource="https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInMaand.standaardEenheid">
                         <td>
                           <code property="rdfs:label">
-                            <a href="https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMaand.standaardEenheid" data-toggle="tooltip" data-content="https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMaand.standaardEenheid" data-placement="right">standaard eenheid</a>
+                            <a href="https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInMaand.standaardEenheid" data-toggle="tooltip" data-content="https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInMaand.standaardEenheid" data-placement="right">standaard eenheid</a>
                           </code>
                         </td>
                         <td>
@@ -2311,10 +2489,10 @@ Dit document is bedoeld om uit te groeien tot een standaard in het beschreven do
                         <td></td>
                       </tr>
                       
-                      <tr id="Kwantitatieve%20waarde%20in%20maand%3Awaarde" typeof="rdfs:Property" resource="https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMaand.waarde">
+                      <tr id="Kwantitatieve%20waarde%20in%20maand%3Awaarde" typeof="rdfs:Property" resource="https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInMaand.waarde">
                         <td>
                           <code property="rdfs:label">
-                            <a href="https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMaand.waarde" data-toggle="tooltip" data-content="https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMaand.waarde" data-placement="right">waarde</a>
+                            <a href="https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInMaand.waarde" data-toggle="tooltip" data-content="https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInMaand.waarde" data-placement="right">waarde</a>
                           </code>
                         </td>
                         <td>
@@ -2338,7 +2516,7 @@ Dit document is bedoeld om uit te groeien tot een standaard in het beschreven do
             
             <div class="region region--no-space-top">
               
-              <h3 class="h3" id="Kwantitatieve waarde in meter"><a href="https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMeter" data-toggle="tooltip" data-content="https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMeter" data-placement="right">Kwantitatieve waarde in meter</a></h3>
+              <h3 class="h3" id="Kwantitatieve waarde in meter"><a href="https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInMeter" data-toggle="tooltip" data-content="https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInMeter" data-placement="right">Kwantitatieve waarde in meter</a></h3>
 	      
                 <div class="region region--no-space-top">
                   <dl>
@@ -2369,10 +2547,10 @@ Dit document is bedoeld om uit te groeien tot een standaard in het beschreven do
 
                     <tbody class="supertype">
                       
-                      <tr id="Kwantitatieve%20waarde%20in%20meter%3Astandaard%20eenheid" typeof="rdfs:Property" resource="https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMeter.standaardEenheid">
+                      <tr id="Kwantitatieve%20waarde%20in%20meter%3Astandaard%20eenheid" typeof="rdfs:Property" resource="https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInMeter.standaardEenheid">
                         <td>
                           <code property="rdfs:label">
-                            <a href="https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMeter.standaardEenheid" data-toggle="tooltip" data-content="https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMeter.standaardEenheid" data-placement="right">standaard eenheid</a>
+                            <a href="https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInMeter.standaardEenheid" data-toggle="tooltip" data-content="https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInMeter.standaardEenheid" data-placement="right">standaard eenheid</a>
                           </code>
                         </td>
                         <td>
@@ -2388,10 +2566,10 @@ Dit document is bedoeld om uit te groeien tot een standaard in het beschreven do
                         <td></td>
                       </tr>
                       
-                      <tr id="Kwantitatieve%20waarde%20in%20meter%3Awaarde" typeof="rdfs:Property" resource="https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMeter.waarde">
+                      <tr id="Kwantitatieve%20waarde%20in%20meter%3Awaarde" typeof="rdfs:Property" resource="https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInMeter.waarde">
                         <td>
                           <code property="rdfs:label">
-                            <a href="https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMeter.waarde" data-toggle="tooltip" data-content="https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMeter.waarde" data-placement="right">waarde</a>
+                            <a href="https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInMeter.waarde" data-toggle="tooltip" data-content="https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInMeter.waarde" data-placement="right">waarde</a>
                           </code>
                         </td>
                         <td>
@@ -2415,7 +2593,7 @@ Dit document is bedoeld om uit te groeien tot een standaard in het beschreven do
             
             <div class="region region--no-space-top">
               
-              <h3 class="h3" id="Kwantitatieve waarde in millimeter"><a href="https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMillimeter" data-toggle="tooltip" data-content="https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMillimeter" data-placement="right">Kwantitatieve waarde in millimeter</a></h3>
+              <h3 class="h3" id="Kwantitatieve waarde in millimeter"><a href="https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInMillimeter" data-toggle="tooltip" data-content="https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInMillimeter" data-placement="right">Kwantitatieve waarde in millimeter</a></h3>
 	      
                 <div class="region region--no-space-top">
                   <dl>
@@ -2446,10 +2624,10 @@ Dit document is bedoeld om uit te groeien tot een standaard in het beschreven do
 
                     <tbody class="supertype">
                       
-                      <tr id="Kwantitatieve%20waarde%20in%20millimeter%3Astandaard%20eenheid" typeof="rdfs:Property" resource="https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMillimeter.standaardEenheid">
+                      <tr id="Kwantitatieve%20waarde%20in%20millimeter%3Astandaard%20eenheid" typeof="rdfs:Property" resource="https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInMillimeter.standaardEenheid">
                         <td>
                           <code property="rdfs:label">
-                            <a href="https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMillimeter.standaardEenheid" data-toggle="tooltip" data-content="https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMillimeter.standaardEenheid" data-placement="right">standaard eenheid</a>
+                            <a href="https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInMillimeter.standaardEenheid" data-toggle="tooltip" data-content="https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInMillimeter.standaardEenheid" data-placement="right">standaard eenheid</a>
                           </code>
                         </td>
                         <td>
@@ -2465,10 +2643,10 @@ Dit document is bedoeld om uit te groeien tot een standaard in het beschreven do
                         <td></td>
                       </tr>
                       
-                      <tr id="Kwantitatieve%20waarde%20in%20millimeter%3Awaarde" typeof="rdfs:Property" resource="https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMillimeter.waarde">
+                      <tr id="Kwantitatieve%20waarde%20in%20millimeter%3Awaarde" typeof="rdfs:Property" resource="https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInMillimeter.waarde">
                         <td>
                           <code property="rdfs:label">
-                            <a href="https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMillimeter.waarde" data-toggle="tooltip" data-content="https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMillimeter.waarde" data-placement="right">waarde</a>
+                            <a href="https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInMillimeter.waarde" data-toggle="tooltip" data-content="https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInMillimeter.waarde" data-placement="right">waarde</a>
                           </code>
                         </td>
                         <td>
@@ -2492,7 +2670,7 @@ Dit document is bedoeld om uit te groeien tot een standaard in het beschreven do
             
             <div class="region region--no-space-top">
               
-              <h3 class="h3" id="Kwantitatieve waarde in volt"><a href="https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInVolt" data-toggle="tooltip" data-content="https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInVolt" data-placement="right">Kwantitatieve waarde in volt</a></h3>
+              <h3 class="h3" id="Kwantitatieve waarde in volt"><a href="https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInVolt" data-toggle="tooltip" data-content="https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInVolt" data-placement="right">Kwantitatieve waarde in volt</a></h3>
 	      
                 <div class="region region--no-space-top">
                   <dl>
@@ -2523,10 +2701,10 @@ Dit document is bedoeld om uit te groeien tot een standaard in het beschreven do
 
                     <tbody class="supertype">
                       
-                      <tr id="Kwantitatieve%20waarde%20in%20volt%3Astandaard%20eenheid" typeof="rdfs:Property" resource="https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInVolt.standaardEenheid">
+                      <tr id="Kwantitatieve%20waarde%20in%20volt%3Astandaard%20eenheid" typeof="rdfs:Property" resource="https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInVolt.standaardEenheid">
                         <td>
                           <code property="rdfs:label">
-                            <a href="https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInVolt.standaardEenheid" data-toggle="tooltip" data-content="https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInVolt.standaardEenheid" data-placement="right">standaard eenheid</a>
+                            <a href="https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInVolt.standaardEenheid" data-toggle="tooltip" data-content="https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInVolt.standaardEenheid" data-placement="right">standaard eenheid</a>
                           </code>
                         </td>
                         <td>
@@ -2542,10 +2720,10 @@ Dit document is bedoeld om uit te groeien tot een standaard in het beschreven do
                         <td></td>
                       </tr>
                       
-                      <tr id="Kwantitatieve%20waarde%20in%20volt%3Awaarde" typeof="rdfs:Property" resource="https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInVolt.waarde">
+                      <tr id="Kwantitatieve%20waarde%20in%20volt%3Awaarde" typeof="rdfs:Property" resource="https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInVolt.waarde">
                         <td>
                           <code property="rdfs:label">
-                            <a href="https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInVolt.waarde" data-toggle="tooltip" data-content="https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInVolt.waarde" data-placement="right">waarde</a>
+                            <a href="https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInVolt.waarde" data-toggle="tooltip" data-content="https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInVolt.waarde" data-placement="right">waarde</a>
                           </code>
                         </td>
                         <td>
@@ -2629,7 +2807,7 @@ Dit document is bedoeld om uit te groeien tot een standaard in het beschreven do
             
             <div class="region region--no-space-top">
               
-              <h3 class="h3" id="Tekstblok"><a href="https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DteTekstblok" data-toggle="tooltip" data-content="https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DteTekstblok" data-placement="right">Tekstblok</a></h3>
+              <h3 class="h3" id="Tekstblok"><a href="https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DteTekstblok" data-toggle="tooltip" data-content="https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DteTekstblok" data-placement="right">Tekstblok</a></h3>
 	      
                 <div class="region region--no-space-top">
                   <dl>
@@ -2659,10 +2837,10 @@ Dit document is bedoeld om uit te groeien tot een standaard in het beschreven do
 
                     <tbody class="supertype">
                       
-                      <tr id="Tekstblok%3Awaarde" typeof="rdfs:Property" resource="https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DteTekstblok.waarde">
+                      <tr id="Tekstblok%3Awaarde" typeof="rdfs:Property" resource="https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DteTekstblok.waarde">
                         <td>
                           <code property="rdfs:label">
-                            <a href="https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DteTekstblok.waarde" data-toggle="tooltip" data-content="https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DteTekstblok.waarde" data-placement="right">waarde</a>
+                            <a href="https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DteTekstblok.waarde" data-toggle="tooltip" data-content="https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DteTekstblok.waarde" data-placement="right">waarde</a>
                           </code>
                         </td>
                         <td>

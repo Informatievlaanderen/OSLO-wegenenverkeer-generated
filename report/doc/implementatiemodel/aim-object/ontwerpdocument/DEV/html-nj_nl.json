@@ -13,8 +13,8 @@
     "documentconfig": {},
     "status": "https://data.vlaanderen.be/doc/concept/StandaardStatus/KandidaatStandaard",
     "statuslabel": "Onbekend",
-    "repositoryurl": "https://github.com/Informatievlaanderen/OSLOthema-wegenenverkeer/tree/d0c77fb2c4c9765c633e106ff3210bcf0361e604",
-    "changelogurl": "https://github.com/Informatievlaanderen/OSLOthema-wegenenverkeer/blob/d0c77fb2c4c9765c633e106ff3210bcf0361e604/CHANGELOG",
+    "repositoryurl": "https://github.com/Informatievlaanderen/OSLOthema-wegenenverkeer/tree/0e5bbb26160c48c7229c131acf4c3262f64887ae",
+    "changelogurl": "https://github.com/Informatievlaanderen/OSLOthema-wegenenverkeer/blob/0e5bbb26160c48c7229c131acf4c3262f64887ae/CHANGELOG",
     "feedbackurl": "https://docs.google.com/forms/d/e/1FAIpQLSeaxOnrCkcarNHWI21YfPJ7sZChHVzOB2-P9ptzxkD9YX69-g/viewform",
     "standaardregisterurl": "https://data.vlaanderen.be/standaarden/",
     "dependencies": [],
@@ -33,7 +33,15 @@
         "nl": "Iemand die of iets dat kan handelen of een effect kan teweeg brengen."
       },
       "usage": {},
-      "parents": [],
+      "parents": [
+        {
+          "label": "AIM databank status",
+          "name": "AIMDBStatus",
+          "package": "OSLO-Implementatieelement",
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMDBStatus",
+          "scoped_uri": "#AIM databank status"
+        }
+      ],
       "properties": [
         {
           "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aim-object/#heeft betrokkene",
@@ -107,10 +115,10 @@
         },
         {
           "uri": "http://purl.org/dc/terms/Agent.contactinfo",
-          "name": "Contactinfo",
-          "sort": "Contactinfo",
+          "name": "contactinfo",
+          "sort": "contactinfo",
           "label": {
-            "nl": "Contactinfo"
+            "nl": "contactinfo"
           },
           "description": {
             "nl": "Algemene contactgegevens voor de agent."
@@ -189,6 +197,13 @@
       },
       "usage": {},
       "parents": [
+        {
+          "label": "AIM versie",
+          "name": "AIMVersie",
+          "package": "OSLO-Implementatieelement",
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMVersie",
+          "scoped_uri": "#AIM versie"
+        },
         {
           "label": "AIM databank status",
           "name": "AIMDBStatus",
@@ -283,7 +298,7 @@
             "nl": "naam"
           },
           "description": {
-            "nl": "De mensleesbare naam van een aanvullende geometrie. De beheerder kent deze naam toe of geeft de opdracht om deze toe te kennen."
+            "nl": "De mensleesbare naam van een aanvullende geometrie of bijlage. De beheerder kent deze naam toe of geeft de opdracht om deze toe te kennen."
           },
           "usage": {},
           "domain": [
@@ -318,7 +333,7 @@
             "nl": "bijlage"
           },
           "description": {
-            "nl": "Het document of artefact dat een geometrie heeft."
+            "nl": "Het document of artefact dat een geometrie heeft of een bijlage is."
           },
           "usage": {},
           "domain": [
@@ -537,6 +552,13 @@
       },
       "usage": {},
       "parents": [
+        {
+          "label": "AIM versie",
+          "name": "AIMVersie",
+          "package": "OSLO-Implementatieelement",
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMVersie",
+          "scoped_uri": "#AIM versie"
+        },
         {
           "label": "AIM Toestand",
           "name": "AIMToestand",
@@ -1011,6 +1033,41 @@
           "codelist_uri": ""
         },
         {
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aim-object/#HeeftBijlage",
+          "name": "heeftBijlage",
+          "sort": "HeeftBijlage",
+          "label": {
+            "nl": "HeeftBijlage"
+          },
+          "description": {
+            "nl": "Deze relatie legt een link tussen een object/onderdeel/installatie en een (bestands)bijlage. De richting loopt vanuit het fysiek object naar de bijlage."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "AIMObject",
+              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMObject"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "Bijlage",
+              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Bijlage"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Bijlage",
+              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Bijlage",
+              "range_label": {
+                "nl": "Bijlage"
+              }
+            }
+          ],
+          "cardinality": "",
+          "codelist_uri": ""
+        },
+        {
           "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aim-object/#Heeft toegangsprocedure",
           "name": "heeft toegangsprocedure",
           "sort": "Heeft toegangsprocedure",
@@ -1198,7 +1255,154 @@
             }
           ],
           "cardinality": "1",
-          "codelist_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/id/conceptscheme/KlAIMToestand"
+          "codelist_uri": "https://wegenenverkeer-test.data.vlaanderen.be/id/conceptscheme/KlAIMToestand"
+        }
+      ]
+    },
+    {
+      "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMVersie",
+      "name": "AIM versie",
+      "label": {
+        "nl": "AIM versie"
+      },
+      "sort": "AIM versie",
+      "description": {
+        "nl": "Abstracte klasse met de eigenschappen om de versionering van een asset te beheren."
+      },
+      "usage": {},
+      "parents": [],
+      "properties": [
+        {
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMVersie.assetVersie",
+          "name": "asset-versie",
+          "sort": "asset-versie",
+          "label": {
+            "nl": "asset-versie"
+          },
+          "description": {
+            "nl": "De versie van de asset in de database."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "AIMVersie",
+              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMVersie"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "DtcAssetVersie",
+              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcAssetVersie"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Asset versie",
+              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcAssetVersie",
+              "range_label": {
+                "nl": "Asset versie"
+              }
+            }
+          ],
+          "cardinality": "1",
+          "codelist_uri": ""
+        }
+      ]
+    },
+    {
+      "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#Bijlage",
+      "name": "Bijlage",
+      "label": {
+        "nl": "Bijlage"
+      },
+      "sort": "Bijlage",
+      "description": {
+        "nl": "Een bestand (document,afbeelding,...) dat behoort tot 1 of meerdere assets."
+      },
+      "usage": {
+        "nl": "Klasse uit gebruik sinds versie 2.13.0-RC2"
+      },
+      "parents": [
+        {
+          "label": "Abstracte aanvullende geometrie",
+          "name": "AbstracteAanvullendeGeometrie",
+          "package": "OSLO-Abstracten",
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#AbstracteAanvullendeGeometrie",
+          "scoped_uri": "#Abstracte aanvullende geometrie"
+        }
+      ],
+      "properties": [
+        {
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Bijlage.type",
+          "name": "type",
+          "sort": "type",
+          "label": {
+            "nl": "type"
+          },
+          "description": {
+            "nl": "De typering of categorie van de bijlage."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "Bijlage",
+              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Bijlage"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "KlBijlageType",
+              "range_uri": "http://www.w3.org/2004/02/skos/core#Concept"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Bijlage type",
+              "range_puri": "http://www.w3.org/2004/02/skos/core#Concept",
+              "range_label": {
+                "nl": "Bijlage type"
+              }
+            }
+          ],
+          "cardinality": "1..*",
+          "codelist_uri": "https://wegenenverkeer-test.data.vlaanderen.be/id/conceptscheme/KlBijlageType"
+        },
+        {
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#Bijlage.type",
+          "name": "type",
+          "sort": "type",
+          "label": {
+            "nl": "type"
+          },
+          "description": {
+            "nl": "De typering of categorie van de bijlage."
+          },
+          "usage": {
+            "nl": "Klasse uit gebruik sinds versie 2.13.0-RC2"
+          },
+          "domain": [
+            {
+              "EA-Name": "Bijlage",
+              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#Bijlage"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "KlBijlageType",
+              "range_uri": "http://www.w3.org/2004/02/skos/core#Concept"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Bijlage type",
+              "range_puri": "http://www.w3.org/2004/02/skos/core#Concept",
+              "range_label": {
+                "nl": "Bijlage type"
+              }
+            }
+          ],
+          "cardinality": "1..*",
+          "codelist_uri": "https://wegenenverkeer-test.data.vlaanderen.be/id/conceptscheme/KlBijlageType"
         }
       ]
     },
@@ -1216,6 +1420,13 @@
         "nl": "Een Derdenobject mag enkel gebruikt worden om objecten aan te duiden die niet in beheer zijn van AWV en waarvan het type niet gekend is of aangeleverd."
       },
       "parents": [
+        {
+          "label": "AIM versie",
+          "name": "AIMVersie",
+          "package": "OSLO-Implementatieelement",
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMVersie",
+          "scoped_uri": "#AIM versie"
+        },
         {
           "label": "AIM Toestand",
           "name": "AIMToestand",
@@ -1777,7 +1988,7 @@
             }
           ],
           "cardinality": "1..*",
-          "codelist_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/id/conceptscheme/KlTypeSleutel"
+          "codelist_uri": "https://wegenenverkeer-test.data.vlaanderen.be/id/conceptscheme/KlTypeSleutel"
         },
         {
           "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#Toegangsprocedure.typeBadge",
@@ -1812,7 +2023,7 @@
             }
           ],
           "cardinality": "1..*",
-          "codelist_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/id/conceptscheme/KlTypeBadge"
+          "codelist_uri": "https://wegenenverkeer-test.data.vlaanderen.be/id/conceptscheme/KlTypeBadge"
         },
         {
           "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#Toegangsprocedure.toegangstijden",
@@ -2022,7 +2233,7 @@
             }
           ],
           "cardinality": "1..*",
-          "codelist_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/id/conceptscheme/KlToegangsprocedureAandachtspunt"
+          "codelist_uri": "https://wegenenverkeer-test.data.vlaanderen.be/id/conceptscheme/KlToegangsprocedureAandachtspunt"
         },
         {
           "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aim-object/#heeft betrokkene",
@@ -2115,7 +2326,7 @@
             }
           ],
           "cardinality": "1",
-          "codelist_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/id/conceptscheme/KlBijlageMetGeometrieType"
+          "codelist_uri": "https://wegenenverkeer-test.data.vlaanderen.be/id/conceptscheme/KlBijlageMetGeometrieType"
         }
       ]
     },
@@ -2140,6 +2351,103 @@
         }
       ],
       "properties": []
+    },
+    {
+      "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Bijlage",
+      "name": "Bijlage",
+      "label": {
+        "nl": "Bijlage"
+      },
+      "sort": "Bijlage",
+      "description": {
+        "nl": "Een bestand (document,afbeelding,...) dat behoort tot 1 of meerdere assets."
+      },
+      "usage": {
+        "nl": "Voor bijlagen die meerdere assettypes behandelen of aanvullende informatie bieden. Voor specifieke informatie van de asset, en waarvoor een eigenschap gedefinieerd is bv. technische fiche, detailplan, moet deze opgenomen worden via deze eigenschap."
+      },
+      "parents": [
+        {
+          "label": "Abstracte aanvullende geometrie",
+          "name": "AbstracteAanvullendeGeometrie",
+          "package": "OSLO-Abstracten",
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#AbstracteAanvullendeGeometrie",
+          "scoped_uri": "#Abstracte aanvullende geometrie"
+        }
+      ],
+      "properties": [
+        {
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Bijlage.type",
+          "name": "type",
+          "sort": "type",
+          "label": {
+            "nl": "type"
+          },
+          "description": {
+            "nl": "De typering of categorie van de bijlage."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "Bijlage",
+              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Bijlage"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "KlBijlageType",
+              "range_uri": "http://www.w3.org/2004/02/skos/core#Concept"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Bijlage type",
+              "range_puri": "http://www.w3.org/2004/02/skos/core#Concept",
+              "range_label": {
+                "nl": "Bijlage type"
+              }
+            }
+          ],
+          "cardinality": "1..*",
+          "codelist_uri": "https://wegenenverkeer-test.data.vlaanderen.be/id/conceptscheme/KlBijlageType"
+        },
+        {
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#Bijlage.type",
+          "name": "type",
+          "sort": "type",
+          "label": {
+            "nl": "type"
+          },
+          "description": {
+            "nl": "De typering of categorie van de bijlage."
+          },
+          "usage": {
+            "nl": "Klasse uit gebruik sinds versie 2.13.0-RC2"
+          },
+          "domain": [
+            {
+              "EA-Name": "Bijlage",
+              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#Bijlage"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "KlBijlageType",
+              "range_uri": "http://www.w3.org/2004/02/skos/core#Concept"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Bijlage type",
+              "range_puri": "http://www.w3.org/2004/02/skos/core#Concept",
+              "range_label": {
+                "nl": "Bijlage type"
+              }
+            }
+          ],
+          "cardinality": "1..*",
+          "codelist_uri": "https://wegenenverkeer-test.data.vlaanderen.be/id/conceptscheme/KlBijlageType"
+        }
+      ]
     },
     {
       "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#HeeftAanvullendeGeometrie",
@@ -2252,7 +2560,7 @@
             }
           ],
           "cardinality": "1",
-          "codelist_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/id/conceptscheme/KlBetrokkenheidRol"
+          "codelist_uri": "https://wegenenverkeer-test.data.vlaanderen.be/id/conceptscheme/KlBetrokkenheidRol"
         },
         {
           "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#HeeftBetrokkene.datumEinde",
@@ -2325,6 +2633,28 @@
           "codelist_uri": ""
         }
       ]
+    },
+    {
+      "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#HeeftBijlage",
+      "name": "HeeftBijlage",
+      "label": {
+        "nl": "HeeftBijlage"
+      },
+      "sort": "HeeftBijlage",
+      "description": {
+        "nl": "Deze relatie legt een link tussen een object/onderdeel/installatie en een (bestands)bijlage. De richting loopt vanuit het fysiek object naar de bijlage."
+      },
+      "usage": {},
+      "parents": [
+        {
+          "label": "Directionele relatie",
+          "name": "DirectioneleRelatie",
+          "package": "OSLO-Implementatieelement",
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DirectioneleRelatie",
+          "scoped_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DirectioneleRelatie"
+        }
+      ],
+      "properties": []
     },
     {
       "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#HeeftToegangsprocedure",
@@ -4249,6 +4579,22 @@
       "properties": []
     },
     {
+      "uri": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "name": "Datumtijd",
+      "label": {
+        "nl": "Datumtijd"
+      },
+      "sort": "Datumtijd",
+      "description": {
+        "nl": "Beschrijft een datumtijd volgens http://www.w3.org/2001/XMLSchema#dateTime."
+      },
+      "usage": {
+        "nl": "https://www.w3.org/TR/xmlschema-2/#dateTime"
+      },
+      "parents": [],
+      "properties": []
+    },
+    {
       "uri": "http://www.w3.org/2001/XMLSchema#decimal",
       "name": "Decimaal getal",
       "label": {
@@ -4688,7 +5034,7 @@
             }
           ],
           "cardinality": "1",
-          "codelist_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/id/conceptscheme/KlAlgWeekdagen"
+          "codelist_uri": "https://wegenenverkeer-test.data.vlaanderen.be/id/conceptscheme/KlAlgWeekdagen"
         },
         {
           "uri": "https://schema.org/closes",
@@ -4808,7 +5154,7 @@
             }
           ],
           "cardinality": "1",
-          "codelist_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/id/conceptscheme/KlAlgProvincie"
+          "codelist_uri": "https://wegenenverkeer-test.data.vlaanderen.be/id/conceptscheme/KlAlgProvincie"
         },
         {
           "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcAdres.postcode",
@@ -4913,7 +5259,7 @@
             }
           ],
           "cardinality": "1",
-          "codelist_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/id/conceptscheme/KlAlgGemeente"
+          "codelist_uri": "https://wegenenverkeer-test.data.vlaanderen.be/id/conceptscheme/KlAlgGemeente"
         },
         {
           "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcAdres.bus",
@@ -4930,6 +5276,126 @@
             {
               "EA-Name": "DtcAdres",
               "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcAdres"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "String",
+              "range_uri": "http://www.w3.org/2001/XMLSchema#string"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#String",
+              "range_puri": "http://www.w3.org/2001/XMLSchema#string",
+              "range_label": {
+                "nl": "String"
+              }
+            }
+          ],
+          "cardinality": "1",
+          "codelist_uri": ""
+        }
+      ]
+    },
+    {
+      "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcAssetVersie",
+      "name": "Asset versie",
+      "label": {
+        "nl": "Asset versie"
+      },
+      "sort": "Asset versie",
+      "description": {
+        "nl": "Complex datatype voor de eigenschappen ten behoeve van de versionering van een asset in de databank."
+      },
+      "usage": {},
+      "parents": [],
+      "properties": [
+        {
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcAssetVersie.versienummer",
+          "name": "versienummer",
+          "sort": "versienummer",
+          "label": {
+            "nl": "versienummer"
+          },
+          "description": {
+            "nl": "Het versienummer als een oplopende integer."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "DtcAssetVersie",
+              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcAssetVersie"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "NonNegativeInteger",
+              "range_uri": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Natuurlijk getal",
+              "range_puri": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+              "range_label": {
+                "nl": "Natuurlijk getal"
+              }
+            }
+          ],
+          "cardinality": "1",
+          "codelist_uri": ""
+        },
+        {
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcAssetVersie.timestamp",
+          "name": "timestamp",
+          "sort": "timestamp",
+          "label": {
+            "nl": "timestamp"
+          },
+          "description": {
+            "nl": "De timestamp van het moment dat de versienummer werd toegekend."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "DtcAssetVersie",
+              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcAssetVersie"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "DateTime",
+              "range_uri": "http://www.w3.org/2001/XMLSchema#dateTime"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Datumtijd",
+              "range_puri": "http://www.w3.org/2001/XMLSchema#dateTime",
+              "range_label": {
+                "nl": "Datumtijd"
+              }
+            }
+          ],
+          "cardinality": "1",
+          "codelist_uri": ""
+        },
+        {
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcAssetVersie.context",
+          "name": "context",
+          "sort": "context",
+          "label": {
+            "nl": "context"
+          },
+          "description": {
+            "nl": "De context van de versie creatie."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "DtcAssetVersie",
+              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcAssetVersie"
             }
           ],
           "range": [
@@ -5103,7 +5569,7 @@
             }
           ],
           "cardinality": "1",
-          "codelist_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/id/conceptscheme/KlAlgMimeType"
+          "codelist_uri": "https://wegenenverkeer-test.data.vlaanderen.be/id/conceptscheme/KlAlgMimeType"
         },
         {
           "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcDocument.bestandsnaam",
@@ -5273,7 +5739,7 @@
             }
           ],
           "cardinality": "1",
-          "codelist_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/id/conceptscheme/KlToegangsprocedureBijlageType"
+          "codelist_uri": "https://wegenenverkeer-test.data.vlaanderen.be/id/conceptscheme/KlToegangsprocedureBijlageType"
         },
         {
           "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcToegangsprocedureBijlage.nota",
@@ -5428,7 +5894,7 @@
             }
           ],
           "cardinality": "1",
-          "codelist_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/id/conceptscheme/KlToegangsprocedureToegangstijden"
+          "codelist_uri": "https://wegenenverkeer-test.data.vlaanderen.be/id/conceptscheme/KlToegangsprocedureToegangstijden"
         },
         {
           "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcToegangsprocedureToegangstijden.opmerking",

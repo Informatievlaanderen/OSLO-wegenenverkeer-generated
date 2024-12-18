@@ -2,7 +2,7 @@
   "metadata": {
     "title": "Camerainstallatie",
     "uri": "http://fixme.com",
-    "issued": "5-02-2024",
+    "issued": "18-12-2024",
     "filename": "camerainstallatie",
     "navigation": {
       "prev": "",
@@ -13,8 +13,8 @@
     "documentconfig": {},
     "status": "https://data.vlaanderen.be/doc/concept/StandaardStatus/KandidaatStandaard",
     "statuslabel": "Onbekend",
-    "repositoryurl": "https://github.com/Informatievlaanderen/OSLOthema-wegenenverkeer/tree/84464b4583c626910e8e7d1d9f6bb7d472f49408",
-    "changelogurl": "https://github.com/Informatievlaanderen/OSLOthema-wegenenverkeer/blob/84464b4583c626910e8e7d1d9f6bb7d472f49408/CHANGELOG",
+    "repositoryurl": "https://github.com/Informatievlaanderen/OSLOthema-wegenenverkeer/tree/0e5bbb26160c48c7229c131acf4c3262f64887ae",
+    "changelogurl": "https://github.com/Informatievlaanderen/OSLOthema-wegenenverkeer/blob/0e5bbb26160c48c7229c131acf4c3262f64887ae/CHANGELOG",
     "feedbackurl": "https://docs.google.com/forms/d/e/1FAIpQLSeaxOnrCkcarNHWI21YfPJ7sZChHVzOB2-P9ptzxkD9YX69-g/viewform",
     "standaardregisterurl": "https://data.vlaanderen.be/standaarden/",
     "dependencies": [],
@@ -34,6 +34,13 @@
       },
       "usage": {},
       "parents": [
+        {
+          "label": "AIM versie",
+          "name": "AIMVersie",
+          "package": "OSLO-Implementatieelement",
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMVersie",
+          "scoped_uri": "#AIM versie"
+        },
         {
           "label": "AIM databank status",
           "name": "AIMDBStatus",
@@ -128,7 +135,7 @@
             "nl": "naam"
           },
           "description": {
-            "nl": "De mensleesbare naam van een aanvullende geometrie. De beheerder kent deze naam toe of geeft de opdracht om deze toe te kennen."
+            "nl": "De mensleesbare naam van een aanvullende geometrie of bijlage. De beheerder kent deze naam toe of geeft de opdracht om deze toe te kennen."
           },
           "usage": {},
           "domain": [
@@ -163,7 +170,7 @@
             "nl": "bijlage"
           },
           "description": {
-            "nl": "Het document of artefact dat een geometrie heeft."
+            "nl": "Het document of artefact dat een geometrie heeft of een bijlage is."
           },
           "usage": {},
           "domain": [
@@ -427,7 +434,7 @@
             }
           ],
           "cardinality": "1",
-          "codelist_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/id/conceptscheme/KlBuitenkastVerfraaid"
+          "codelist_uri": "https://wegenenverkeer-test.data.vlaanderen.be/id/conceptscheme/KlBuitenkastVerfraaid"
         },
         {
           "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Buitenkast.keuringsfrequentie",
@@ -497,7 +504,7 @@
             }
           ],
           "cardinality": "1",
-          "codelist_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/id/conceptscheme/KlAlgIngressProtectionCode"
+          "codelist_uri": "https://wegenenverkeer-test.data.vlaanderen.be/id/conceptscheme/KlAlgIngressProtectionCode"
         }
       ]
     },
@@ -533,16 +540,16 @@
           ],
           "range": [
             {
-              "range_label": "Kast",
-              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Kast"
+              "range_label": "Camera",
+              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Camera"
             }
           ],
           "scopedrange": [
             {
-              "range_uri": "#Kast",
-              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Kast",
+              "range_uri": "#Camera",
+              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Camera",
               "range_label": {
-                "nl": "Kast"
+                "nl": "Camera"
               }
             }
           ],
@@ -568,16 +575,16 @@
           ],
           "range": [
             {
-              "range_label": "Kast",
-              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Kast"
+              "range_label": "Camera",
+              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Camera"
             }
           ],
           "scopedrange": [
             {
-              "range_uri": "#Kast",
-              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Kast",
+              "range_uri": "#Camera",
+              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Camera",
               "range_label": {
-                "nl": "Kast"
+                "nl": "Camera"
               }
             }
           ],
@@ -673,76 +680,6 @@
           ],
           "range": [
             {
-              "range_label": "Camera",
-              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Camera"
-            }
-          ],
-          "scopedrange": [
-            {
-              "range_uri": "#Camera",
-              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Camera",
-              "range_label": {
-                "nl": "Camera"
-              }
-            }
-          ],
-          "cardinality": "",
-          "codelist_uri": ""
-        },
-        {
-          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/camerainstallatie/#Bevestiging",
-          "name": "bevestiging",
-          "sort": "Bevestiging",
-          "label": {
-            "nl": "Bevestiging"
-          },
-          "description": {
-            "nl": "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Deze relatie heeft geen richting."
-          },
-          "usage": {},
-          "domain": [
-            {
-              "EA-Name": "Draagconstructie",
-              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Draagconstructie"
-            }
-          ],
-          "range": [
-            {
-              "range_label": "Camera",
-              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Camera"
-            }
-          ],
-          "scopedrange": [
-            {
-              "range_uri": "#Camera",
-              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Camera",
-              "range_label": {
-                "nl": "Camera"
-              }
-            }
-          ],
-          "cardinality": "",
-          "codelist_uri": ""
-        },
-        {
-          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/camerainstallatie/#Bevestiging",
-          "name": "bevestiging",
-          "sort": "Bevestiging",
-          "label": {
-            "nl": "Bevestiging"
-          },
-          "description": {
-            "nl": "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Deze relatie heeft geen richting."
-          },
-          "usage": {},
-          "domain": [
-            {
-              "EA-Name": "Draagconstructie",
-              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Draagconstructie"
-            }
-          ],
-          "range": [
-            {
               "range_label": "Montagekast",
               "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Montagekast"
             }
@@ -788,6 +725,76 @@
               "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Montagekast",
               "range_label": {
                 "nl": "Montagekast"
+              }
+            }
+          ],
+          "cardinality": "",
+          "codelist_uri": ""
+        },
+        {
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/camerainstallatie/#Bevestiging",
+          "name": "bevestiging",
+          "sort": "Bevestiging",
+          "label": {
+            "nl": "Bevestiging"
+          },
+          "description": {
+            "nl": "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Deze relatie heeft geen richting."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "Draagconstructie",
+              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Draagconstructie"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "Kast",
+              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Kast"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Kast",
+              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Kast",
+              "range_label": {
+                "nl": "Kast"
+              }
+            }
+          ],
+          "cardinality": "",
+          "codelist_uri": ""
+        },
+        {
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/camerainstallatie/#Bevestiging",
+          "name": "bevestiging",
+          "sort": "Bevestiging",
+          "label": {
+            "nl": "Bevestiging"
+          },
+          "description": {
+            "nl": "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Deze relatie heeft geen richting."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "Draagconstructie",
+              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Draagconstructie"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "Kast",
+              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Kast"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Kast",
+              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Kast",
+              "range_label": {
+                "nl": "Kast"
               }
             }
           ],
@@ -850,7 +857,7 @@
             }
           ],
           "cardinality": "1",
-          "codelist_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/id/conceptscheme/KlAlgMateriaal"
+          "codelist_uri": "https://wegenenverkeer-test.data.vlaanderen.be/id/conceptscheme/KlAlgMateriaal"
         },
         {
           "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Kast.indelingsplan",
@@ -976,76 +983,6 @@
           ],
           "range": [
             {
-              "range_label": "PoEInjector",
-              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#PoEInjector"
-            }
-          ],
-          "scopedrange": [
-            {
-              "range_uri": "#Power over Ethernet injector",
-              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#PoEInjector",
-              "range_label": {
-                "nl": "Power over Ethernet injector"
-              }
-            }
-          ],
-          "cardinality": "",
-          "codelist_uri": ""
-        },
-        {
-          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/camerainstallatie/#Bevestiging",
-          "name": "bevestiging",
-          "sort": "Bevestiging",
-          "label": {
-            "nl": "Bevestiging"
-          },
-          "description": {
-            "nl": "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Deze relatie heeft geen richting."
-          },
-          "usage": {},
-          "domain": [
-            {
-              "EA-Name": "Kast",
-              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Kast"
-            }
-          ],
-          "range": [
-            {
-              "range_label": "PoEInjector",
-              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#PoEInjector"
-            }
-          ],
-          "scopedrange": [
-            {
-              "range_uri": "#Power over Ethernet injector",
-              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#PoEInjector",
-              "range_label": {
-                "nl": "Power over Ethernet injector"
-              }
-            }
-          ],
-          "cardinality": "",
-          "codelist_uri": ""
-        },
-        {
-          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/camerainstallatie/#Bevestiging",
-          "name": "bevestiging",
-          "sort": "Bevestiging",
-          "label": {
-            "nl": "Bevestiging"
-          },
-          "description": {
-            "nl": "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Deze relatie heeft geen richting."
-          },
-          "usage": {},
-          "domain": [
-            {
-              "EA-Name": "Kast",
-              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Kast"
-            }
-          ],
-          "range": [
-            {
               "range_label": "Netwerkelement",
               "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Netwerkelement"
             }
@@ -1161,6 +1098,76 @@
               "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Omvormer",
               "range_label": {
                 "nl": "Omvormer"
+              }
+            }
+          ],
+          "cardinality": "",
+          "codelist_uri": ""
+        },
+        {
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/camerainstallatie/#Bevestiging",
+          "name": "bevestiging",
+          "sort": "Bevestiging",
+          "label": {
+            "nl": "Bevestiging"
+          },
+          "description": {
+            "nl": "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Deze relatie heeft geen richting."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "Kast",
+              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Kast"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "PoEInjector",
+              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#PoEInjector"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Power over Ethernet injector",
+              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#PoEInjector",
+              "range_label": {
+                "nl": "Power over Ethernet injector"
+              }
+            }
+          ],
+          "cardinality": "",
+          "codelist_uri": ""
+        },
+        {
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/camerainstallatie/#Bevestiging",
+          "name": "bevestiging",
+          "sort": "Bevestiging",
+          "label": {
+            "nl": "Bevestiging"
+          },
+          "description": {
+            "nl": "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Deze relatie heeft geen richting."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "Kast",
+              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Kast"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "PoEInjector",
+              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#PoEInjector"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Power over Ethernet injector",
+              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#PoEInjector",
+              "range_label": {
+                "nl": "Power over Ethernet injector"
               }
             }
           ],
@@ -1365,6 +1372,76 @@
           ],
           "range": [
             {
+              "range_label": "MACQPUFrontend",
+              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#MACQPUFrontend"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#MACQ PU Frontend",
+              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#MACQPUFrontend",
+              "range_label": {
+                "nl": "MACQ PU Frontend"
+              }
+            }
+          ],
+          "cardinality": "",
+          "codelist_uri": ""
+        },
+        {
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/camerainstallatie/#Sturing",
+          "name": "sturing",
+          "sort": "Sturing",
+          "label": {
+            "nl": "Sturing"
+          },
+          "description": {
+            "nl": "Deze relatie geeft aan of er een of andere vorm van dataverkeer is tussen 2 onderdelen. Een wegverlichtingstoestel dat aan staat wordt ook als sturing beschouwd, in dit geval is het een lang ononderbroken elektrisch aan-signaal. Deze relatie heeft geen richting."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "SoftwareToegang",
+              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#SoftwareToegang"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "MACQPUFrontend",
+              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#MACQPUFrontend"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#MACQ PU Frontend",
+              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#MACQPUFrontend",
+              "range_label": {
+                "nl": "MACQ PU Frontend"
+              }
+            }
+          ],
+          "cardinality": "",
+          "codelist_uri": ""
+        },
+        {
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/camerainstallatie/#Sturing",
+          "name": "sturing",
+          "sort": "Sturing",
+          "label": {
+            "nl": "Sturing"
+          },
+          "description": {
+            "nl": "Deze relatie geeft aan of er een of andere vorm van dataverkeer is tussen 2 onderdelen. Een wegverlichtingstoestel dat aan staat wordt ook als sturing beschouwd, in dit geval is het een lang ononderbroken elektrisch aan-signaal. Deze relatie heeft geen richting."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "SoftwareToegang",
+              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#SoftwareToegang"
+            }
+          ],
+          "range": [
+            {
               "range_label": "Netwerkpoort",
               "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Netwerkpoort"
             }
@@ -1480,76 +1557,6 @@
               "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Camera",
               "range_label": {
                 "nl": "Camera"
-              }
-            }
-          ],
-          "cardinality": "",
-          "codelist_uri": ""
-        },
-        {
-          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/camerainstallatie/#Sturing",
-          "name": "sturing",
-          "sort": "Sturing",
-          "label": {
-            "nl": "Sturing"
-          },
-          "description": {
-            "nl": "Deze relatie geeft aan of er een of andere vorm van dataverkeer is tussen 2 onderdelen. Een wegverlichtingstoestel dat aan staat wordt ook als sturing beschouwd, in dit geval is het een lang ononderbroken elektrisch aan-signaal. Deze relatie heeft geen richting."
-          },
-          "usage": {},
-          "domain": [
-            {
-              "EA-Name": "SoftwareToegang",
-              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#SoftwareToegang"
-            }
-          ],
-          "range": [
-            {
-              "range_label": "MACQPUFrontend",
-              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#MACQPUFrontend"
-            }
-          ],
-          "scopedrange": [
-            {
-              "range_uri": "#MACQ PU Frontend",
-              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#MACQPUFrontend",
-              "range_label": {
-                "nl": "MACQ PU Frontend"
-              }
-            }
-          ],
-          "cardinality": "",
-          "codelist_uri": ""
-        },
-        {
-          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/camerainstallatie/#Sturing",
-          "name": "sturing",
-          "sort": "Sturing",
-          "label": {
-            "nl": "Sturing"
-          },
-          "description": {
-            "nl": "Deze relatie geeft aan of er een of andere vorm van dataverkeer is tussen 2 onderdelen. Een wegverlichtingstoestel dat aan staat wordt ook als sturing beschouwd, in dit geval is het een lang ononderbroken elektrisch aan-signaal. Deze relatie heeft geen richting."
-          },
-          "usage": {},
-          "domain": [
-            {
-              "EA-Name": "SoftwareToegang",
-              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#SoftwareToegang"
-            }
-          ],
-          "range": [
-            {
-              "range_label": "MACQPUFrontend",
-              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#MACQPUFrontend"
-            }
-          ],
-          "scopedrange": [
-            {
-              "range_uri": "#MACQ PU Frontend",
-              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#MACQPUFrontend",
-              "range_label": {
-                "nl": "MACQ PU Frontend"
               }
             }
           ],
@@ -1678,6 +1685,13 @@
       },
       "usage": {},
       "parents": [
+        {
+          "label": "AIM versie",
+          "name": "AIMVersie",
+          "package": "OSLO-Implementatieelement",
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMVersie",
+          "scoped_uri": "#AIM versie"
+        },
         {
           "label": "AIM Toestand",
           "name": "AIMToestand",
@@ -1989,7 +2003,115 @@
             }
           ],
           "cardinality": "1",
-          "codelist_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/id/conceptscheme/KlAIMToestand"
+          "codelist_uri": "https://wegenenverkeer-test.data.vlaanderen.be/id/conceptscheme/KlAIMToestand"
+        }
+      ]
+    },
+    {
+      "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMVersie",
+      "name": "AIM versie",
+      "label": {
+        "nl": "AIM versie"
+      },
+      "sort": "AIM versie",
+      "description": {
+        "nl": "Abstracte klasse met de eigenschappen om de versionering van een asset te beheren."
+      },
+      "usage": {},
+      "parents": [],
+      "properties": [
+        {
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMVersie.assetVersie",
+          "name": "asset-versie",
+          "sort": "asset-versie",
+          "label": {
+            "nl": "asset-versie"
+          },
+          "description": {
+            "nl": "De versie van de asset in de database."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "AIMVersie",
+              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMVersie"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "DtcAssetVersie",
+              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcAssetVersie"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Asset versie",
+              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcAssetVersie",
+              "range_label": {
+                "nl": "Asset versie"
+              }
+            }
+          ],
+          "cardinality": "1",
+          "codelist_uri": ""
+        }
+      ]
+    },
+    {
+      "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#NaampadObject",
+      "name": "Naampad object",
+      "label": {
+        "nl": "Naampad object"
+      },
+      "sort": "Naampad object",
+      "description": {
+        "nl": "Abstracte als de basisklasse voor elk OTL object dat gebruik maakt van een naampad."
+      },
+      "usage": {},
+      "parents": [
+        {
+          "label": "AIM naam object",
+          "name": "AIMNaamObject",
+          "package": "OSLO-Implementatieelement",
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMNaamObject",
+          "scoped_uri": "#AIM naam object"
+        }
+      ],
+      "properties": [
+        {
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#NaampadObject.naampad",
+          "name": "naampad",
+          "sort": "naampad",
+          "label": {
+            "nl": "naampad"
+          },
+          "description": {
+            "nl": "Een set van objecten (bv. collecties) die aanduiden waar het object zich bevindt in de objectenboom (EM-Infra)."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "NaampadObject",
+              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#NaampadObject"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "String",
+              "range_uri": "http://www.w3.org/2001/XMLSchema#string"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#String",
+              "range_puri": "http://www.w3.org/2001/XMLSchema#string",
+              "range_label": {
+                "nl": "String"
+              }
+            }
+          ],
+          "cardinality": "1",
+          "codelist_uri": ""
         }
       ]
     },
@@ -2047,7 +2169,7 @@
             }
           ],
           "cardinality": "1",
-          "codelist_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/id/conceptscheme/KlAIDModuleType"
+          "codelist_uri": "https://wegenenverkeer-test.data.vlaanderen.be/id/conceptscheme/KlAIDModuleType"
         },
         {
           "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#AIDModule.technischeFiche",
@@ -2210,76 +2332,6 @@
           ],
           "range": [
             {
-              "range_label": "Camera",
-              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Camera"
-            }
-          ],
-          "scopedrange": [
-            {
-              "range_uri": "#Camera",
-              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Camera",
-              "range_label": {
-                "nl": "Camera"
-              }
-            }
-          ],
-          "cardinality": "",
-          "codelist_uri": ""
-        },
-        {
-          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/camerainstallatie/#Sturing",
-          "name": "sturing",
-          "sort": "Sturing",
-          "label": {
-            "nl": "Sturing"
-          },
-          "description": {
-            "nl": "Deze relatie geeft aan of er een of andere vorm van dataverkeer is tussen 2 onderdelen. Een wegverlichtingstoestel dat aan staat wordt ook als sturing beschouwd, in dit geval is het een lang ononderbroken elektrisch aan-signaal. Deze relatie heeft geen richting."
-          },
-          "usage": {},
-          "domain": [
-            {
-              "EA-Name": "AIDModule",
-              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#AIDModule"
-            }
-          ],
-          "range": [
-            {
-              "range_label": "Camera",
-              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Camera"
-            }
-          ],
-          "scopedrange": [
-            {
-              "range_uri": "#Camera",
-              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Camera",
-              "range_label": {
-                "nl": "Camera"
-              }
-            }
-          ],
-          "cardinality": "",
-          "codelist_uri": ""
-        },
-        {
-          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/camerainstallatie/#Sturing",
-          "name": "sturing",
-          "sort": "Sturing",
-          "label": {
-            "nl": "Sturing"
-          },
-          "description": {
-            "nl": "Deze relatie geeft aan of er een of andere vorm van dataverkeer is tussen 2 onderdelen. Een wegverlichtingstoestel dat aan staat wordt ook als sturing beschouwd, in dit geval is het een lang ononderbroken elektrisch aan-signaal. Deze relatie heeft geen richting."
-          },
-          "usage": {},
-          "domain": [
-            {
-              "EA-Name": "AIDModule",
-              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#AIDModule"
-            }
-          ],
-          "range": [
-            {
               "range_label": "SoftwareToegang",
               "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#SoftwareToegang"
             }
@@ -2325,6 +2377,76 @@
               "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#SoftwareToegang",
               "range_label": {
                 "nl": "Software toegang"
+              }
+            }
+          ],
+          "cardinality": "",
+          "codelist_uri": ""
+        },
+        {
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/camerainstallatie/#Sturing",
+          "name": "sturing",
+          "sort": "Sturing",
+          "label": {
+            "nl": "Sturing"
+          },
+          "description": {
+            "nl": "Deze relatie geeft aan of er een of andere vorm van dataverkeer is tussen 2 onderdelen. Een wegverlichtingstoestel dat aan staat wordt ook als sturing beschouwd, in dit geval is het een lang ononderbroken elektrisch aan-signaal. Deze relatie heeft geen richting."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "AIDModule",
+              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#AIDModule"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "Camera",
+              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Camera"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Camera",
+              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Camera",
+              "range_label": {
+                "nl": "Camera"
+              }
+            }
+          ],
+          "cardinality": "",
+          "codelist_uri": ""
+        },
+        {
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/camerainstallatie/#Sturing",
+          "name": "sturing",
+          "sort": "Sturing",
+          "label": {
+            "nl": "Sturing"
+          },
+          "description": {
+            "nl": "Deze relatie geeft aan of er een of andere vorm van dataverkeer is tussen 2 onderdelen. Een wegverlichtingstoestel dat aan staat wordt ook als sturing beschouwd, in dit geval is het een lang ononderbroken elektrisch aan-signaal. Deze relatie heeft geen richting."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "AIDModule",
+              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#AIDModule"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "Camera",
+              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Camera"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Camera",
+              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Camera",
+              "range_label": {
+                "nl": "Camera"
               }
             }
           ],
@@ -2387,7 +2509,7 @@
             }
           ],
           "cardinality": "1",
-          "codelist_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/id/conceptscheme/KlBijlageMetGeometrieType"
+          "codelist_uri": "https://wegenenverkeer-test.data.vlaanderen.be/id/conceptscheme/KlBijlageMetGeometrieType"
         }
       ]
     },
@@ -2474,7 +2596,7 @@
             }
           ],
           "cardinality": "1",
-          "codelist_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/id/conceptscheme/KlBevestigingsbeugelType"
+          "codelist_uri": "https://wegenenverkeer-test.data.vlaanderen.be/id/conceptscheme/KlBevestigingsbeugelType"
         },
         {
           "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Bevestigingsbeugel.isVerzegeld",
@@ -2790,7 +2912,7 @@
             }
           ],
           "cardinality": "1",
-          "codelist_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/id/conceptscheme/KlSpectrum"
+          "codelist_uri": "https://wegenenverkeer-test.data.vlaanderen.be/id/conceptscheme/KlSpectrum"
         },
         {
           "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Camera.servicePrioriteit",
@@ -2825,7 +2947,7 @@
             }
           ],
           "cardinality": "1",
-          "codelist_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/id/conceptscheme/KlServicePrioriteit"
+          "codelist_uri": "https://wegenenverkeer-test.data.vlaanderen.be/id/conceptscheme/KlServicePrioriteit"
         },
         {
           "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Camera.rijrichting",
@@ -2860,7 +2982,7 @@
             }
           ],
           "cardinality": "1",
-          "codelist_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/id/conceptscheme/KlAlgRijrichting"
+          "codelist_uri": "https://wegenenverkeer-test.data.vlaanderen.be/id/conceptscheme/KlAlgRijrichting"
         },
         {
           "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Camera.opstelwijze",
@@ -2895,7 +3017,7 @@
             }
           ],
           "cardinality": "1",
-          "codelist_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/id/conceptscheme/KlSensorOpstelwijze"
+          "codelist_uri": "https://wegenenverkeer-test.data.vlaanderen.be/id/conceptscheme/KlSensorOpstelwijze"
         },
         {
           "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Camera.opstelhoogte",
@@ -2967,7 +3089,7 @@
             }
           ],
           "cardinality": "1",
-          "codelist_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/id/conceptscheme/KlCameraModelnaam"
+          "codelist_uri": "https://wegenenverkeer-test.data.vlaanderen.be/id/conceptscheme/KlCameraModelnaam"
         },
         {
           "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Camera.merk",
@@ -3002,7 +3124,7 @@
             }
           ],
           "cardinality": "1",
-          "codelist_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/id/conceptscheme/KlCameraMerk"
+          "codelist_uri": "https://wegenenverkeer-test.data.vlaanderen.be/id/conceptscheme/KlCameraMerk"
         },
         {
           "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Camera.isPtz",
@@ -3707,11 +3829,11 @@
       "usage": {},
       "parents": [
         {
-          "label": "AIM naam object",
-          "name": "AIMNaamObject",
+          "label": "Naampad object",
+          "name": "NaampadObject",
           "package": "OSLO-Implementatieelement",
-          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMNaamObject",
-          "scoped_uri": "#AIM naam object"
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#NaampadObject",
+          "scoped_uri": "#Naampad object"
         },
         {
           "label": "Radioheruitzend module",
@@ -3897,7 +4019,7 @@
             }
           ],
           "cardinality": "1",
-          "codelist_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/id/conceptscheme/KlNetwerkelemModelnaam"
+          "codelist_uri": "https://wegenenverkeer-test.data.vlaanderen.be/id/conceptscheme/KlNetwerkelemModelnaam"
         },
         {
           "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Netwerkelement.merk",
@@ -3932,7 +4054,7 @@
             }
           ],
           "cardinality": "1",
-          "codelist_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/id/conceptscheme/KlNetwerkMerk"
+          "codelist_uri": "https://wegenenverkeer-test.data.vlaanderen.be/id/conceptscheme/KlNetwerkMerk"
         },
         {
           "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Netwerkelement.ipGateway",
@@ -4072,7 +4194,7 @@
             }
           ],
           "cardinality": "1",
-          "codelist_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/id/conceptscheme/KlNetwerkelemGebruik"
+          "codelist_uri": "https://wegenenverkeer-test.data.vlaanderen.be/id/conceptscheme/KlNetwerkelemGebruik"
         },
         {
           "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Netwerkelement.beschrijvingFabrikant",
@@ -4142,6 +4264,41 @@
             }
           ],
           "cardinality": "1",
+          "codelist_uri": ""
+        },
+        {
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/camerainstallatie/#Voedt",
+          "name": "voedt",
+          "sort": "Voedt",
+          "label": {
+            "nl": "Voedt"
+          },
+          "description": {
+            "nl": "Deze relatie wordt enkel gelegd naar onderdelen die permanent onder spanning staan in normaal bedrijf. Aan deze relatie wordt steeds een richting toegekend van de voedinggever naar de ontvanger."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "Netwerkelement",
+              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Netwerkelement"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "Netwerkelement",
+              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Netwerkelement"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Netwerkelement",
+              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Netwerkelement",
+              "range_label": {
+                "nl": "Netwerkelement"
+              }
+            }
+          ],
+          "cardinality": "",
           "codelist_uri": ""
         },
         {
@@ -4410,7 +4567,7 @@
             }
           ],
           "cardinality": "1",
-          "codelist_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/id/conceptscheme/KlNetwerkpoortType"
+          "codelist_uri": "https://wegenenverkeer-test.data.vlaanderen.be/id/conceptscheme/KlNetwerkpoortType"
         },
         {
           "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Netwerkpoort.technologie",
@@ -4445,7 +4602,7 @@
             }
           ],
           "cardinality": "1",
-          "codelist_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/id/conceptscheme/KlNetwerkTechnologie"
+          "codelist_uri": "https://wegenenverkeer-test.data.vlaanderen.be/id/conceptscheme/KlNetwerkTechnologie"
         },
         {
           "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Netwerkpoort.serienummer",
@@ -4550,7 +4707,7 @@
             }
           ],
           "cardinality": "1",
-          "codelist_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/id/conceptscheme/KlNetwerkMerk"
+          "codelist_uri": "https://wegenenverkeer-test.data.vlaanderen.be/id/conceptscheme/KlNetwerkMerk"
         },
         {
           "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Netwerkpoort.golflengte",
@@ -4585,7 +4742,7 @@
             }
           ],
           "cardinality": "1",
-          "codelist_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/id/conceptscheme/KlNetwerkpoortGolflengte"
+          "codelist_uri": "https://wegenenverkeer-test.data.vlaanderen.be/id/conceptscheme/KlNetwerkpoortGolflengte"
         },
         {
           "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Netwerkpoort.config",
@@ -4620,7 +4777,7 @@
             }
           ],
           "cardinality": "1",
-          "codelist_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/id/conceptscheme/KlNetwerkpoortConfig"
+          "codelist_uri": "https://wegenenverkeer-test.data.vlaanderen.be/id/conceptscheme/KlNetwerkpoortConfig"
         },
         {
           "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Netwerkpoort.code",
@@ -4816,76 +4973,6 @@
           ],
           "range": [
             {
-              "range_label": "Netwerkelement",
-              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Netwerkelement"
-            }
-          ],
-          "scopedrange": [
-            {
-              "range_uri": "#Netwerkelement",
-              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Netwerkelement",
-              "range_label": {
-                "nl": "Netwerkelement"
-              }
-            }
-          ],
-          "cardinality": "",
-          "codelist_uri": ""
-        },
-        {
-          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/camerainstallatie/#Sturing",
-          "name": "sturing",
-          "sort": "Sturing",
-          "label": {
-            "nl": "Sturing"
-          },
-          "description": {
-            "nl": "Deze relatie geeft aan of er een of andere vorm van dataverkeer is tussen 2 onderdelen. Een wegverlichtingstoestel dat aan staat wordt ook als sturing beschouwd, in dit geval is het een lang ononderbroken elektrisch aan-signaal. Deze relatie heeft geen richting."
-          },
-          "usage": {},
-          "domain": [
-            {
-              "EA-Name": "Netwerkpoort",
-              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Netwerkpoort"
-            }
-          ],
-          "range": [
-            {
-              "range_label": "Netwerkelement",
-              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Netwerkelement"
-            }
-          ],
-          "scopedrange": [
-            {
-              "range_uri": "#Netwerkelement",
-              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Netwerkelement",
-              "range_label": {
-                "nl": "Netwerkelement"
-              }
-            }
-          ],
-          "cardinality": "",
-          "codelist_uri": ""
-        },
-        {
-          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/camerainstallatie/#Sturing",
-          "name": "sturing",
-          "sort": "Sturing",
-          "label": {
-            "nl": "Sturing"
-          },
-          "description": {
-            "nl": "Deze relatie geeft aan of er een of andere vorm van dataverkeer is tussen 2 onderdelen. Een wegverlichtingstoestel dat aan staat wordt ook als sturing beschouwd, in dit geval is het een lang ononderbroken elektrisch aan-signaal. Deze relatie heeft geen richting."
-          },
-          "usage": {},
-          "domain": [
-            {
-              "EA-Name": "Netwerkpoort",
-              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Netwerkpoort"
-            }
-          ],
-          "range": [
-            {
               "range_label": "Omvormer",
               "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Omvormer"
             }
@@ -4931,6 +5018,76 @@
               "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Omvormer",
               "range_label": {
                 "nl": "Omvormer"
+              }
+            }
+          ],
+          "cardinality": "",
+          "codelist_uri": ""
+        },
+        {
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/camerainstallatie/#Sturing",
+          "name": "sturing",
+          "sort": "Sturing",
+          "label": {
+            "nl": "Sturing"
+          },
+          "description": {
+            "nl": "Deze relatie geeft aan of er een of andere vorm van dataverkeer is tussen 2 onderdelen. Een wegverlichtingstoestel dat aan staat wordt ook als sturing beschouwd, in dit geval is het een lang ononderbroken elektrisch aan-signaal. Deze relatie heeft geen richting."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "Netwerkpoort",
+              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Netwerkpoort"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "Netwerkelement",
+              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Netwerkelement"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Netwerkelement",
+              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Netwerkelement",
+              "range_label": {
+                "nl": "Netwerkelement"
+              }
+            }
+          ],
+          "cardinality": "",
+          "codelist_uri": ""
+        },
+        {
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/camerainstallatie/#Sturing",
+          "name": "sturing",
+          "sort": "Sturing",
+          "label": {
+            "nl": "Sturing"
+          },
+          "description": {
+            "nl": "Deze relatie geeft aan of er een of andere vorm van dataverkeer is tussen 2 onderdelen. Een wegverlichtingstoestel dat aan staat wordt ook als sturing beschouwd, in dit geval is het een lang ononderbroken elektrisch aan-signaal. Deze relatie heeft geen richting."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "Netwerkpoort",
+              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Netwerkpoort"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "Netwerkelement",
+              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Netwerkelement"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Netwerkelement",
+              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Netwerkelement",
+              "range_label": {
+                "nl": "Netwerkelement"
               }
             }
           ],
@@ -5070,7 +5227,7 @@
             }
           ],
           "cardinality": "1",
-          "codelist_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/id/conceptscheme/KlOmvormerType"
+          "codelist_uri": "https://wegenenverkeer-test.data.vlaanderen.be/id/conceptscheme/KlOmvormerType"
         },
         {
           "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Omvormer.technischeFiche",
@@ -5142,7 +5299,7 @@
             }
           ],
           "cardinality": "1",
-          "codelist_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/id/conceptscheme/KlOmvormerModelnaam"
+          "codelist_uri": "https://wegenenverkeer-test.data.vlaanderen.be/id/conceptscheme/KlOmvormerModelnaam"
         },
         {
           "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Omvormer.merk",
@@ -5177,7 +5334,7 @@
             }
           ],
           "cardinality": "1",
-          "codelist_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/id/conceptscheme/KlOmvormerMerk"
+          "codelist_uri": "https://wegenenverkeer-test.data.vlaanderen.be/id/conceptscheme/KlOmvormerMerk"
         },
         {
           "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Omvormer.ipAdres",
@@ -5247,6 +5404,41 @@
             }
           ],
           "cardinality": "1",
+          "codelist_uri": ""
+        },
+        {
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/camerainstallatie/#Voedt",
+          "name": "voedt",
+          "sort": "Voedt",
+          "label": {
+            "nl": "Voedt"
+          },
+          "description": {
+            "nl": "Deze relatie wordt enkel gelegd naar onderdelen die permanent onder spanning staan in normaal bedrijf. Aan deze relatie wordt steeds een richting toegekend van de voedinggever naar de ontvanger."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "Omvormer",
+              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Omvormer"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "Camera",
+              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Camera"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Camera",
+              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Camera",
+              "range_label": {
+                "nl": "Camera"
+              }
+            }
+          ],
+          "cardinality": "",
           "codelist_uri": ""
         },
         {
@@ -5480,7 +5672,7 @@
             }
           ],
           "cardinality": "1",
-          "codelist_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/id/conceptscheme/KlPoEInjectorModelnaam"
+          "codelist_uri": "https://wegenenverkeer-test.data.vlaanderen.be/id/conceptscheme/KlPoEInjectorModelnaam"
         },
         {
           "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#PoEInjector.merk",
@@ -5515,7 +5707,7 @@
             }
           ],
           "cardinality": "1",
-          "codelist_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/id/conceptscheme/KlPoEInjectorMerk"
+          "codelist_uri": "https://wegenenverkeer-test.data.vlaanderen.be/id/conceptscheme/KlPoEInjectorMerk"
         },
         {
           "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/camerainstallatie/#Voedt",
@@ -5629,16 +5821,16 @@
           ],
           "range": [
             {
-              "range_label": "Camera",
-              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Camera"
+              "range_label": "Omvormer",
+              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Omvormer"
             }
           ],
           "scopedrange": [
             {
-              "range_uri": "#Camera",
-              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Camera",
+              "range_uri": "#Omvormer",
+              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Omvormer",
               "range_label": {
-                "nl": "Camera"
+                "nl": "Omvormer"
               }
             }
           ],
@@ -5664,16 +5856,16 @@
           ],
           "range": [
             {
-              "range_label": "PoEInjector",
-              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#PoEInjector"
+              "range_label": "AIDModule",
+              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#AIDModule"
             }
           ],
           "scopedrange": [
             {
-              "range_uri": "#Power over Ethernet injector",
-              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#PoEInjector",
+              "range_uri": "#AID-module",
+              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#AIDModule",
               "range_label": {
-                "nl": "Power over Ethernet injector"
+                "nl": "AID-module"
               }
             }
           ],
@@ -5736,16 +5928,16 @@
           ],
           "range": [
             {
-              "range_label": "AIDModule",
-              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#AIDModule"
+              "range_label": "PoEInjector",
+              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#PoEInjector"
             }
           ],
           "scopedrange": [
             {
-              "range_uri": "#AID-module",
-              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#AIDModule",
+              "range_uri": "#Power over Ethernet injector",
+              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#PoEInjector",
               "range_label": {
-                "nl": "AID-module"
+                "nl": "Power over Ethernet injector"
               }
             }
           ],
@@ -5771,16 +5963,16 @@
           ],
           "range": [
             {
-              "range_label": "Omvormer",
-              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Omvormer"
+              "range_label": "Camera",
+              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Camera"
             }
           ],
           "scopedrange": [
             {
-              "range_uri": "#Omvormer",
-              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Omvormer",
+              "range_uri": "#Camera",
+              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Camera",
               "range_label": {
-                "nl": "Omvormer"
+                "nl": "Camera"
               }
             }
           ],
@@ -5982,7 +6174,7 @@
             }
           ],
           "cardinality": "1",
-          "codelist_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/id/conceptscheme/KlWegkantkastType"
+          "codelist_uri": "https://wegenenverkeer-test.data.vlaanderen.be/id/conceptscheme/KlWegkantkastType"
         },
         {
           "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Wegkantkast.mplan",
@@ -7905,6 +8097,22 @@
       "properties": []
     },
     {
+      "uri": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "name": "Datumtijd",
+      "label": {
+        "nl": "Datumtijd"
+      },
+      "sort": "Datumtijd",
+      "description": {
+        "nl": "Beschrijft een datumtijd volgens http://www.w3.org/2001/XMLSchema#dateTime."
+      },
+      "usage": {
+        "nl": "https://www.w3.org/TR/xmlschema-2/#dateTime"
+      },
+      "parents": [],
+      "properties": []
+    },
+    {
       "uri": "http://www.w3.org/2001/XMLSchema#decimal",
       "name": "Decimaal getal",
       "label": {
@@ -8049,7 +8257,7 @@
             }
           ],
           "cardinality": "1",
-          "codelist_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/id/conceptscheme/KlAlgProvincie"
+          "codelist_uri": "https://wegenenverkeer-test.data.vlaanderen.be/id/conceptscheme/KlAlgProvincie"
         },
         {
           "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcAdres.postcode",
@@ -8154,7 +8362,7 @@
             }
           ],
           "cardinality": "1",
-          "codelist_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/id/conceptscheme/KlAlgGemeente"
+          "codelist_uri": "https://wegenenverkeer-test.data.vlaanderen.be/id/conceptscheme/KlAlgGemeente"
         },
         {
           "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcAdres.bus",
@@ -8314,6 +8522,126 @@
       ]
     },
     {
+      "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcAssetVersie",
+      "name": "Asset versie",
+      "label": {
+        "nl": "Asset versie"
+      },
+      "sort": "Asset versie",
+      "description": {
+        "nl": "Complex datatype voor de eigenschappen ten behoeve van de versionering van een asset in de databank."
+      },
+      "usage": {},
+      "parents": [],
+      "properties": [
+        {
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcAssetVersie.versienummer",
+          "name": "versienummer",
+          "sort": "versienummer",
+          "label": {
+            "nl": "versienummer"
+          },
+          "description": {
+            "nl": "Het versienummer als een oplopende integer."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "DtcAssetVersie",
+              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcAssetVersie"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "NonNegativeInteger",
+              "range_uri": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Natuurlijk getal",
+              "range_puri": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+              "range_label": {
+                "nl": "Natuurlijk getal"
+              }
+            }
+          ],
+          "cardinality": "1",
+          "codelist_uri": ""
+        },
+        {
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcAssetVersie.timestamp",
+          "name": "timestamp",
+          "sort": "timestamp",
+          "label": {
+            "nl": "timestamp"
+          },
+          "description": {
+            "nl": "De timestamp van het moment dat de versienummer werd toegekend."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "DtcAssetVersie",
+              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcAssetVersie"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "DateTime",
+              "range_uri": "http://www.w3.org/2001/XMLSchema#dateTime"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Datumtijd",
+              "range_puri": "http://www.w3.org/2001/XMLSchema#dateTime",
+              "range_label": {
+                "nl": "Datumtijd"
+              }
+            }
+          ],
+          "cardinality": "1",
+          "codelist_uri": ""
+        },
+        {
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcAssetVersie.context",
+          "name": "context",
+          "sort": "context",
+          "label": {
+            "nl": "context"
+          },
+          "description": {
+            "nl": "De context van de versie creatie."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "DtcAssetVersie",
+              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcAssetVersie"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "String",
+              "range_uri": "http://www.w3.org/2001/XMLSchema#string"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#String",
+              "range_puri": "http://www.w3.org/2001/XMLSchema#string",
+              "range_label": {
+                "nl": "String"
+              }
+            }
+          ],
+          "cardinality": "1",
+          "codelist_uri": ""
+        }
+      ]
+    },
+    {
       "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcCameraBeeldverwerking",
       "name": "Camera beeldverwerkingsinstellingen",
       "label": {
@@ -8361,7 +8689,7 @@
             }
           ],
           "cardinality": "1",
-          "codelist_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/id/conceptscheme/KlCameraBeeldverwerkingstype"
+          "codelist_uri": "https://wegenenverkeer-test.data.vlaanderen.be/id/conceptscheme/KlCameraBeeldverwerkingstype"
         },
         {
           "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcCameraBeeldverwerking.configBestand",
@@ -8551,7 +8879,7 @@
             }
           ],
           "cardinality": "1",
-          "codelist_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/id/conceptscheme/KlAlgMimeType"
+          "codelist_uri": "https://wegenenverkeer-test.data.vlaanderen.be/id/conceptscheme/KlAlgMimeType"
         },
         {
           "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcDocument.bestandsnaam",

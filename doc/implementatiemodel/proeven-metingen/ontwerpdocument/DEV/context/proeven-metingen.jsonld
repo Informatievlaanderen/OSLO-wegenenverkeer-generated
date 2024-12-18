@@ -33,6 +33,10 @@
       "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#DtcAanlegBoomvorm.plantmaatOmtrek",
       "@type": "@id"
     },
+    "AanlegBoomvorm.plantwijze": {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#DtcAanlegBoomvorm.plantwijze",
+      "@type": "@id"
+    },
     "AanlegBoomvorm.verankering": {
       "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#DtcAanlegBoomvorm.verankering",
       "@type": "@id"
@@ -205,10 +209,28 @@
       "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMToestand.toestand",
       "@type": "@id"
     },
+    "AimVersie": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMVersie",
+    "AimVersie.assetVersie": {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMVersie.assetVersie",
+      "@type": "@id"
+    },
     "AlgBouwklassegroep": "http://www.w3.org/2004/02/skos/core#Concept",
     "AndereLaag": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#AndereLaag",
     "AndereVerharding": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#AndereVerharding",
     "ArtificiëleLaag": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#ArtificieleLaag",
+    "AssetVersie": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcAssetVersie",
+    "AssetVersie.context": {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcAssetVersie.context",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "AssetVersie.timestamp": {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcAssetVersie.timestamp",
+      "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "AssetVersie.versienummer": {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcAssetVersie.versienummer",
+      "@type": "@id"
+    },
     "BeschermingMaaischade": "http://www.w3.org/2004/02/skos/core#Concept",
     "BeschermingVraatschade": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#DtcBeschermingVraatschade",
     "BeschermingVraatschade.materiaal": {
@@ -247,6 +269,11 @@
     },
     "Bestrating.steenverband": {
       "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Bestrating.steenverband",
+      "@type": "@id"
+    },
+    "Bestrating.technischeFiche": {
+      "@container": "@set",
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Bestrating.technischeFiche",
       "@type": "@id"
     },
     "Bestrating.voegvulling": {
@@ -531,6 +558,7 @@
     },
     "DunneOverlagingType": "http://www.w3.org/2004/02/skos/core#Concept",
     "EindbeeldOpgaandeBoom": "http://www.w3.org/2004/02/skos/core#Concept",
+    "FabricageTypeRetroreflecterendVerkeersbord": "http://www.w3.org/2004/02/skos/core#Concept",
     "GeheelGetal": "http://www.w3.org/2001/XMLSchema#integer",
     "Geluidskarakteristiek": "http://www.w3.org/2004/02/skos/core#Concept",
     "GeluidstestRapport": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting#DtcGeluidstestRapport",
@@ -1057,6 +1085,7 @@
     "Performantieniveau": "http://www.w3.org/2004/02/skos/core#Concept",
     "PlantmaatHoutigeVegetatie": "http://www.w3.org/2004/02/skos/core#Concept",
     "PlantmaatOmtrek": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Plantwijze": "http://www.w3.org/2004/02/skos/core#Concept",
     "Productfamilies": "http://www.w3.org/2004/02/skos/core#Concept",
     "Productidentificatiecode": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcProductidentificatiecode",
     "Productidentificatiecode.keuringsverslag": {
@@ -1086,6 +1115,10 @@
       "@type": "@id"
     },
     "ProefBoomtoestand": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting#ProefBoomtoestand",
+    "ProefBoomtoestand.basiswaarde": {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting#ProefBoomtoestand.basiswaarde",
+      "@type": "@id"
+    },
     "ProefBoomtoestand.conditiebeoordeling": {
       "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting#ProefBoomtoestand.conditiebeoordeling",
       "@type": "@id"
@@ -1101,11 +1134,6 @@
     "ProefBoomtoestand.gebreken": {
       "@container": "@set",
       "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting#ProefBoomtoestand.gebreken",
-      "@type": "@id"
-    },
-    "ProefBoomtoestand.isInspectieVan": {
-      "@container": "@set",
-      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/proeven-metingen/#Is inspectie van",
       "@type": "@id"
     },
     "ProefBoomtoestand.kroondiameter": {
@@ -1133,7 +1161,7 @@
       "@type": "@id"
     },
     "ProefBoomtoestand.rapportageOnderzoek": {
-      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting#ProefBoomtoestand.basiswaarde",
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting#ProefBoomtoestand.rapportageOnderzoek",
       "@type": "@id"
     },
     "ProefBoomtoestand.soortwaarde": {
@@ -1622,8 +1650,24 @@
       "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#RetroreflecterendVerkeersbord.afwerkingsgraad",
       "@type": "@id"
     },
+    "RetroreflecterendVerkeersbord.fabricageDatum": {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#RetroreflecterendVerkeersbord.fabricageDatum",
+      "@type": "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "RetroreflecterendVerkeersbord.fabricageType": {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#RetroreflecterendVerkeersbord.fabricageType",
+      "@type": "@id"
+    },
     "RetroreflecterendVerkeersbord.grootteorde": {
       "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#RetroreflecterendVerkeersbord.grootteorde",
+      "@type": "@id"
+    },
+    "RetroreflecterendVerkeersbord.horizontaleVerschuiving": {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#RetroreflecterendVerkeersbord.horizontaleVerschuiving",
+      "@type": "@id"
+    },
+    "RetroreflecterendVerkeersbord.kaartvoorstelling": {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#RetroreflecterendVerkeersbord.kaartvoorstelling",
       "@type": "@id"
     },
     "RetroreflecterendVerkeersbord.kleurAchterkant": {
@@ -1689,7 +1733,7 @@
     "TypeSupplementenCbv": "http://www.w3.org/2004/02/skos/core#Concept",
     "Uri": "http://www.w3.org/2001/XMLSchema#anyURI",
     "VegetatieElement": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#VegetatieElement",
-    "VegetatieElement.hoogte": {
+    "VegetatieElement.hoogteklasse": {
       "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#VegetatieElement.hoogte",
       "@type": "@id"
     },
@@ -1699,6 +1743,10 @@
     },
     "VegetatieElement.soortnaam": {
       "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#VegetatieElement.soortnaam",
+      "@type": "@id"
+    },
+    "VegetatieElement.standplaats": {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#VegetatieElement.standplaats",
       "@type": "@id"
     },
     "VegetatieSoortnaam": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#DtcVegetatieSoortnaam",
@@ -1714,8 +1762,13 @@
       "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#DtcVegetatieSoortnaam.soortnaamWetenschappelijk",
       "@type": "http://www.w3.org/2001/XMLSchema#string"
     },
+    "VegetatieSoortnaam.wetenschappelijkeSoortnaam": {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#DtcVegetatieSoortnaam.wetenschappelijkeSoortnaam",
+      "@type": "@id"
+    },
     "VegetatieWortel": "http://www.w3.org/2004/02/skos/core#Concept",
     "VegetatieelementHoogte": "http://www.w3.org/2004/02/skos/core#Concept",
+    "VegetatieelementStandplaats": "http://www.w3.org/2004/02/skos/core#Concept",
     "Verkeersbord": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Verkeersbord",
     "Verkeersbord.aanzicht": {
       "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Verkeersbord.aanzicht",
@@ -1744,6 +1797,7 @@
     },
     "VoertuigOverhelling": "http://www.w3.org/2004/02/skos/core#Concept",
     "VormAanleveringHoutigeVegetatie": "http://www.w3.org/2004/02/skos/core#Concept",
-    "Walsbetonverharding": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Walsbetonverharding"
+    "Walsbetonverharding": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Walsbetonverharding",
+    "WetenschappelijkeSoortnaam": "http://www.w3.org/2004/02/skos/core#Concept"
   }
 }

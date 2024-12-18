@@ -2,7 +2,7 @@
   "metadata": {
     "title": "Complexe datatypes",
     "uri": "http://fixme.com",
-    "issued": "5-02-2024",
+    "issued": "18-12-2024",
     "filename": "complexe-datatypes",
     "navigation": {
       "prev": "",
@@ -13,8 +13,8 @@
     "documentconfig": {},
     "status": "https://data.vlaanderen.be/doc/concept/StandaardStatus/KandidaatStandaard",
     "statuslabel": "Onbekend",
-    "repositoryurl": "https://github.com/Informatievlaanderen/OSLOthema-wegenenverkeer/tree/7e8b6e9fd39cb378823a3f43de7c004329f4e94d",
-    "changelogurl": "https://github.com/Informatievlaanderen/OSLOthema-wegenenverkeer/blob/7e8b6e9fd39cb378823a3f43de7c004329f4e94d/CHANGELOG",
+    "repositoryurl": "https://github.com/Informatievlaanderen/OSLOthema-wegenenverkeer/tree/0e5bbb26160c48c7229c131acf4c3262f64887ae",
+    "changelogurl": "https://github.com/Informatievlaanderen/OSLOthema-wegenenverkeer/blob/0e5bbb26160c48c7229c131acf4c3262f64887ae/CHANGELOG",
     "feedbackurl": "https://docs.google.com/forms/d/e/1FAIpQLSeaxOnrCkcarNHWI21YfPJ7sZChHVzOB2-P9ptzxkD9YX69-g/viewform",
     "standaardregisterurl": "https://data.vlaanderen.be/standaarden/",
     "dependencies": [],
@@ -1761,6 +1761,22 @@
       "properties": []
     },
     {
+      "uri": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "name": "Datumtijd",
+      "label": {
+        "nl": "Datumtijd"
+      },
+      "sort": "Datumtijd",
+      "description": {
+        "nl": "Beschrijft een datumtijd volgens http://www.w3.org/2001/XMLSchema#dateTime."
+      },
+      "usage": {
+        "nl": "https://www.w3.org/TR/xmlschema-2/#dateTime"
+      },
+      "parents": [],
+      "properties": []
+    },
+    {
       "uri": "http://www.w3.org/2001/XMLSchema#decimal",
       "name": "Decimaal getal",
       "label": {
@@ -2216,7 +2232,7 @@
             }
           ],
           "cardinality": "1",
-          "codelist_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/id/conceptscheme/KlAlgWeekdagen"
+          "codelist_uri": "https://wegenenverkeer-test.data.vlaanderen.be/id/conceptscheme/KlAlgWeekdagen"
         },
         {
           "uri": "https://schema.org/closes",
@@ -2336,7 +2352,7 @@
             }
           ],
           "cardinality": "1",
-          "codelist_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/id/conceptscheme/KlAlgProvincie"
+          "codelist_uri": "https://wegenenverkeer-test.data.vlaanderen.be/id/conceptscheme/KlAlgProvincie"
         },
         {
           "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcAdres.postcode",
@@ -2441,7 +2457,7 @@
             }
           ],
           "cardinality": "1",
-          "codelist_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/id/conceptscheme/KlAlgGemeente"
+          "codelist_uri": "https://wegenenverkeer-test.data.vlaanderen.be/id/conceptscheme/KlAlgGemeente"
         },
         {
           "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcAdres.bus",
@@ -3416,6 +3432,126 @@
       ]
     },
     {
+      "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcAssetVersie",
+      "name": "Asset versie",
+      "label": {
+        "nl": "Asset versie"
+      },
+      "sort": "Asset versie",
+      "description": {
+        "nl": "Complex datatype voor de eigenschappen ten behoeve van de versionering van een asset in de databank."
+      },
+      "usage": {},
+      "parents": [],
+      "properties": [
+        {
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcAssetVersie.versienummer",
+          "name": "versienummer",
+          "sort": "versienummer",
+          "label": {
+            "nl": "versienummer"
+          },
+          "description": {
+            "nl": "Het versienummer als een oplopende integer."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "DtcAssetVersie",
+              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcAssetVersie"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "NonNegativeInteger",
+              "range_uri": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Natuurlijk getal",
+              "range_puri": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+              "range_label": {
+                "nl": "Natuurlijk getal"
+              }
+            }
+          ],
+          "cardinality": "1",
+          "codelist_uri": ""
+        },
+        {
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcAssetVersie.timestamp",
+          "name": "timestamp",
+          "sort": "timestamp",
+          "label": {
+            "nl": "timestamp"
+          },
+          "description": {
+            "nl": "De timestamp van het moment dat de versienummer werd toegekend."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "DtcAssetVersie",
+              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcAssetVersie"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "DateTime",
+              "range_uri": "http://www.w3.org/2001/XMLSchema#dateTime"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Datumtijd",
+              "range_puri": "http://www.w3.org/2001/XMLSchema#dateTime",
+              "range_label": {
+                "nl": "Datumtijd"
+              }
+            }
+          ],
+          "cardinality": "1",
+          "codelist_uri": ""
+        },
+        {
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcAssetVersie.context",
+          "name": "context",
+          "sort": "context",
+          "label": {
+            "nl": "context"
+          },
+          "description": {
+            "nl": "De context van de versie creatie."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "DtcAssetVersie",
+              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcAssetVersie"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "String",
+              "range_uri": "http://www.w3.org/2001/XMLSchema#string"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#String",
+              "range_puri": "http://www.w3.org/2001/XMLSchema#string",
+              "range_label": {
+                "nl": "String"
+              }
+            }
+          ],
+          "cardinality": "1",
+          "codelist_uri": ""
+        }
+      ]
+    },
+    {
       "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcBereikInKg",
       "name": "Bereik in kg",
       "label": {
@@ -3501,6 +3637,91 @@
       ]
     },
     {
+      "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcBeschermendeLaag",
+      "name": "Beschermende laag",
+      "label": {
+        "nl": "Beschermende laag"
+      },
+      "sort": "Beschermende laag",
+      "description": {
+        "nl": "Complex datatype voor de inventarisatie van het type beschermlaag en de corrosiebelastingscategorie."
+      },
+      "usage": {},
+      "parents": [],
+      "properties": [
+        {
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcBeschermendeLaag.corrosieklasse",
+          "name": "corrosieklasse",
+          "sort": "corrosieklasse",
+          "label": {
+            "nl": "corrosieklasse"
+          },
+          "description": {
+            "nl": "Een code om de mate van corrosieve belasting in een bepaalde omgeving te beschrijven, volgens ISO-12944-2."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "DtcBeschermendeLaag",
+              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcBeschermendeLaag"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "KlCorrosiebelastingscategorie",
+              "range_uri": "http://www.w3.org/2004/02/skos/core#Concept"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Corrosiebelastingscategorie",
+              "range_puri": "http://www.w3.org/2004/02/skos/core#Concept",
+              "range_label": {
+                "nl": "Corrosiebelastingscategorie"
+              }
+            }
+          ],
+          "cardinality": "1",
+          "codelist_uri": "https://wegenenverkeer-test.data.vlaanderen.be/id/conceptscheme/KlCorrosiebelastingscategorie"
+        },
+        {
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcBeschermendeLaag.beschermlaag",
+          "name": "beschermlaag",
+          "sort": "beschermlaag",
+          "label": {
+            "nl": "beschermlaag"
+          },
+          "description": {
+            "nl": "Type bescherming van de constructie of steun, bv. geschilderd of gegalvaniseerd."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "DtcBeschermendeLaag",
+              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcBeschermendeLaag"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "KlDraagConstrBeschermlaag",
+              "range_uri": "http://www.w3.org/2004/02/skos/core#Concept"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Draagconstructie beschermlaag",
+              "range_puri": "http://www.w3.org/2004/02/skos/core#Concept",
+              "range_label": {
+                "nl": "Draagconstructie beschermlaag"
+              }
+            }
+          ],
+          "cardinality": "1",
+          "codelist_uri": "https://wegenenverkeer-test.data.vlaanderen.be/id/conceptscheme/KlDraagConstrBeschermlaag"
+        }
+      ]
+    },
+    {
       "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcBetonspecificaties",
       "name": "Betonspecificaties",
       "label": {
@@ -3546,7 +3767,7 @@
             }
           ],
           "cardinality": "1..*",
-          "codelist_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/id/conceptscheme/KlToeslagmiddelBeton"
+          "codelist_uri": "https://wegenenverkeer-test.data.vlaanderen.be/id/conceptscheme/KlToeslagmiddelBeton"
         },
         {
           "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcBetonspecificaties.technischeFicheSpecificatiesBeton",
@@ -3863,7 +4084,7 @@
             }
           ],
           "cardinality": "1",
-          "codelist_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/id/conceptscheme/KlGebruiksdomein"
+          "codelist_uri": "https://wegenenverkeer-test.data.vlaanderen.be/id/conceptscheme/KlGebruiksdomein"
         },
         {
           "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcBetonspecificaties.betonsterkteklasse",
@@ -3898,7 +4119,7 @@
             }
           ],
           "cardinality": "1",
-          "codelist_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/id/conceptscheme/KlBetonsterkteklasse"
+          "codelist_uri": "https://wegenenverkeer-test.data.vlaanderen.be/id/conceptscheme/KlBetonsterkteklasse"
         },
         {
           "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcBetonspecificaties.betonomgevingsklassen",
@@ -3933,7 +4154,7 @@
             }
           ],
           "cardinality": "1..*",
-          "codelist_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/id/conceptscheme/KlBetonomgevingsklasse"
+          "codelist_uri": "https://wegenenverkeer-test.data.vlaanderen.be/id/conceptscheme/KlBetonomgevingsklasse"
         },
         {
           "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcBetonspecificaties.betonmilieuklassen",
@@ -3968,7 +4189,7 @@
             }
           ],
           "cardinality": "1..*",
-          "codelist_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/id/conceptscheme/KlBetonmilieuklasse"
+          "codelist_uri": "https://wegenenverkeer-test.data.vlaanderen.be/id/conceptscheme/KlBetonmilieuklasse"
         },
         {
           "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcBetonspecificaties.betondekking",
@@ -4055,7 +4276,7 @@
             }
           ],
           "cardinality": "1",
-          "codelist_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/id/conceptscheme/KlCameraBeeldverwerkingstype"
+          "codelist_uri": "https://wegenenverkeer-test.data.vlaanderen.be/id/conceptscheme/KlCameraBeeldverwerkingstype"
         },
         {
           "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcCameraBeeldverwerking.configBestand",
@@ -4140,7 +4361,7 @@
             }
           ],
           "cardinality": "1",
-          "codelist_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/id/conceptscheme/KlWalsmethode"
+          "codelist_uri": "https://wegenenverkeer-test.data.vlaanderen.be/id/conceptscheme/KlWalsmethode"
         },
         {
           "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcConstructiestaalspecificaties.staalsoort",
@@ -4175,7 +4396,7 @@
             }
           ],
           "cardinality": "1",
-          "codelist_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/id/conceptscheme/KlConstructiestaalsoort"
+          "codelist_uri": "https://wegenenverkeer-test.data.vlaanderen.be/id/conceptscheme/KlConstructiestaalsoort"
         }
       ]
     },
@@ -4330,7 +4551,7 @@
             }
           ],
           "cardinality": "1",
-          "codelist_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/id/conceptscheme/KlAlgMimeType"
+          "codelist_uri": "https://wegenenverkeer-test.data.vlaanderen.be/id/conceptscheme/KlAlgMimeType"
         },
         {
           "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcDocument.bestandsnaam",
@@ -4535,7 +4756,7 @@
             }
           ],
           "cardinality": "1",
-          "codelist_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/id/conceptscheme/KlSterkteklasseHout"
+          "codelist_uri": "https://wegenenverkeer-test.data.vlaanderen.be/id/conceptscheme/KlSterkteklasseHout"
         },
         {
           "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcHoutspecificaties.houtkwaliteitsklasse",
@@ -4570,7 +4791,7 @@
             }
           ],
           "cardinality": "1",
-          "codelist_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/id/conceptscheme/KlKwaliteitsklasseHout"
+          "codelist_uri": "https://wegenenverkeer-test.data.vlaanderen.be/id/conceptscheme/KlKwaliteitsklasseHout"
         },
         {
           "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcHoutspecificaties.houtduurzaamheidsklasse",
@@ -4605,7 +4826,7 @@
             }
           ],
           "cardinality": "1",
-          "codelist_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/id/conceptscheme/KlDuurzaamheidsklasseHout"
+          "codelist_uri": "https://wegenenverkeer-test.data.vlaanderen.be/id/conceptscheme/KlDuurzaamheidsklasseHout"
         },
         {
           "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcHoutspecificaties.fscCertificaat",
@@ -4810,7 +5031,7 @@
             }
           ],
           "cardinality": "1",
-          "codelist_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/id/conceptscheme/KlKrimpvoegvulling"
+          "codelist_uri": "https://wegenenverkeer-test.data.vlaanderen.be/id/conceptscheme/KlKrimpvoegvulling"
         }
       ]
     },
@@ -4895,7 +5116,7 @@
             }
           ],
           "cardinality": "1",
-          "codelist_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/id/conceptscheme/KlDuurzaamheidsklasseHout"
+          "codelist_uri": "https://wegenenverkeer-test.data.vlaanderen.be/id/conceptscheme/KlDuurzaamheidsklasseHout"
         },
         {
           "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcKunststofspecificaties.naam",
@@ -5860,7 +6081,7 @@
             }
           ],
           "cardinality": "1",
-          "codelist_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/id/conceptscheme/KlToegangsprocedureBijlageType"
+          "codelist_uri": "https://wegenenverkeer-test.data.vlaanderen.be/id/conceptscheme/KlToegangsprocedureBijlageType"
         },
         {
           "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcToegangsprocedureBijlage.nota",
@@ -6015,7 +6236,7 @@
             }
           ],
           "cardinality": "1",
-          "codelist_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/id/conceptscheme/KlToegangsprocedureToegangstijden"
+          "codelist_uri": "https://wegenenverkeer-test.data.vlaanderen.be/id/conceptscheme/KlToegangsprocedureToegangstijden"
         },
         {
           "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcToegangsprocedureToegangstijden.opmerking",
@@ -6454,13 +6675,13 @@
     },
     {
       "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInLiter",
-      "name": "Kwantitatieve waarde in Ampere",
+      "name": "Kwantitatieve waarde in liter",
       "label": {
-        "nl": "Kwantitatieve waarde in Ampere"
+        "nl": "Kwantitatieve waarde in liter"
       },
-      "sort": "Kwantitatieve waarde in Ampere",
+      "sort": "Kwantitatieve waarde in liter",
       "description": {
-        "nl": "Een kwantitatieve waarde die een getal in ampere uitdrukt."
+        "nl": "Een kwantitatieve waarde die een getal in liter uitdrukt."
       },
       "usage": {},
       "parents": [],
@@ -6508,10 +6729,10 @@
             "nl": "standaard eenheid"
           },
           "description": {
-            "nl": "De standaard eenheid bij dit datatype is uitgedrukt in ampere."
+            "nl": "De standaard eenheid bij dit datatype is uitgedrukt in liter."
           },
           "usage": {
-            "nl": "\"A\"^^cdt:ucumunit"
+            "nl": "\"L\"^^cdt:ucumunit"
           },
           "domain": [
             {
@@ -7457,7 +7678,7 @@
             }
           ],
           "cardinality": "1",
-          "codelist_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/id/conceptscheme/KlAardingAardingsstelsel"
+          "codelist_uri": "https://wegenenverkeer-test.data.vlaanderen.be/id/conceptscheme/KlAardingAardingsstelsel"
         },
         {
           "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#DtcAardingsstelsel.attestDNB",
@@ -7619,33 +7840,33 @@
       ]
     },
     {
-      "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#DtcDVWMaatgevendSchip",
-      "name": "Maximale diepgang",
+      "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#DtcDVWtoelaatbareSchipsafemetingen",
+      "name": "Toelaatbare schipsafmetingen",
       "label": {
-        "nl": "Maximale diepgang"
+        "nl": "Toelaatbare schipsafmetingen"
       },
-      "sort": "Maximale diepgang",
+      "sort": "Toelaatbare schipsafmetingen",
       "description": {
-        "nl": "TODO"
+        "nl": "Complexe datatype om de toelaatbare schipsafmetingen bij te houden."
       },
       "usage": {},
       "parents": [],
       "properties": [
         {
-          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#DtcDVWMaatgevendSchip.maximaleLengte",
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#DtcDVWtoelaatbareSchipsafemetingen.maximaleLengte",
           "name": "maximale lengte",
           "sort": "maximale lengte",
           "label": {
             "nl": "maximale lengte"
           },
           "description": {
-            "nl": "TODO"
+            "nl": "De maximale toelaatbare lengte."
           },
           "usage": {},
           "domain": [
             {
-              "EA-Name": "DtcDVWMaatgevendSchip",
-              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#DtcDVWMaatgevendSchip"
+              "EA-Name": "DtcDVWtoelaatbareSchipsafemetingen",
+              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#DtcDVWtoelaatbareSchipsafemetingen"
             }
           ],
           "range": [
@@ -7667,20 +7888,55 @@
           "codelist_uri": ""
         },
         {
-          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#DtcDVWMaatgevendSchip.maximaleDiepgang",
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#DtcDVWtoelaatbareSchipsafemetingen.maximaleHoogte",
+          "name": "maximale hoogte",
+          "sort": "maximale hoogte",
+          "label": {
+            "nl": "maximale hoogte"
+          },
+          "description": {
+            "nl": "De maximale toelaatbare hoogte."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "DtcDVWtoelaatbareSchipsafemetingen",
+              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#DtcDVWtoelaatbareSchipsafemetingen"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "KwantWrdInMeter",
+              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInMeter"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Kwantitatieve waarde in meter",
+              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInMeter",
+              "range_label": {
+                "nl": "Kwantitatieve waarde in meter"
+              }
+            }
+          ],
+          "cardinality": "1",
+          "codelist_uri": ""
+        },
+        {
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#DtcDVWtoelaatbareSchipsafemetingen.maximaleDiepgang",
           "name": "maximale diepgang",
           "sort": "maximale diepgang",
           "label": {
             "nl": "maximale diepgang"
           },
           "description": {
-            "nl": "TODO"
+            "nl": "De maximale toelaatbare diepgang."
           },
           "usage": {},
           "domain": [
             {
-              "EA-Name": "DtcDVWMaatgevendSchip",
-              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#DtcDVWMaatgevendSchip"
+              "EA-Name": "DtcDVWtoelaatbareSchipsafemetingen",
+              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#DtcDVWtoelaatbareSchipsafemetingen"
             }
           ],
           "range": [
@@ -7702,20 +7958,20 @@
           "codelist_uri": ""
         },
         {
-          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#DtcDVWMaatgevendSchip.maximaleBreedte",
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#DtcDVWtoelaatbareSchipsafemetingen.maximaleBreedte",
           "name": "maximale breedte",
           "sort": "maximale breedte",
           "label": {
             "nl": "maximale breedte"
           },
           "description": {
-            "nl": "TODO"
+            "nl": "De maximale toelaatbare Breedte"
           },
           "usage": {},
           "domain": [
             {
-              "EA-Name": "DtcDVWMaatgevendSchip",
-              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#DtcDVWMaatgevendSchip"
+              "EA-Name": "DtcDVWtoelaatbareSchipsafemetingen",
+              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#DtcDVWtoelaatbareSchipsafemetingen"
             }
           ],
           "range": [
@@ -7739,6 +7995,91 @@
       ]
     },
     {
+      "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#DtcMeteoFoto",
+      "name": "Meteo foto",
+      "label": {
+        "nl": "Meteo foto"
+      },
+      "sort": "Meteo foto",
+      "description": {
+        "nl": "Complex datatype voor meteo gerelateerde foto's."
+      },
+      "usage": {},
+      "parents": [],
+      "properties": [
+        {
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#DtcMeteoFoto.fotobestand",
+          "name": "fotobestand",
+          "sort": "fotobestand",
+          "label": {
+            "nl": "fotobestand"
+          },
+          "description": {
+            "nl": "Het bestand dat de foto bevat."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "DtcMeteoFoto",
+              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#DtcMeteoFoto"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "DtcDocument",
+              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcDocument"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Bestandsbijlage",
+              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcDocument",
+              "range_label": {
+                "nl": "Bestandsbijlage"
+              }
+            }
+          ],
+          "cardinality": "1",
+          "codelist_uri": ""
+        },
+        {
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#DtcMeteoFoto.beschrijving",
+          "name": "beschrijving",
+          "sort": "beschrijving",
+          "label": {
+            "nl": "beschrijving"
+          },
+          "description": {
+            "nl": "De beschrijving of categorie waarbij de foto's behoren."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "DtcMeteoFoto",
+              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#DtcMeteoFoto"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "KlMeteoFotoBeschrijving",
+              "range_uri": "http://www.w3.org/2004/02/skos/core#Concept"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Meteo foto beschrijving",
+              "range_puri": "http://www.w3.org/2004/02/skos/core#Concept",
+              "range_label": {
+                "nl": "Meteo foto beschrijving"
+              }
+            }
+          ],
+          "cardinality": "1",
+          "codelist_uri": "https://wegenenverkeer-test.data.vlaanderen.be/id/conceptscheme/KlMeteoFotoBeschrijving"
+        }
+      ]
+    },
+    {
       "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#DtcOntwerpSchip",
       "name": "Ontwerp schip",
       "label": {
@@ -7746,20 +8087,20 @@
       },
       "sort": "Ontwerp schip",
       "description": {
-        "nl": "TODO"
+        "nl": "Complexe datatype om de afmetingen van het ontwerpschip bij te houden."
       },
       "usage": {},
       "parents": [],
       "properties": [
         {
-          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#DtcOntwerpSchip.maximaleLengte",
-          "name": "maximale lengte",
-          "sort": "maximale lengte",
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#DtcOntwerpSchip.lengte",
+          "name": "lengte",
+          "sort": "lengte",
           "label": {
-            "nl": "maximale lengte"
+            "nl": "lengte"
           },
           "description": {
-            "nl": "TODO"
+            "nl": "De lengte van het ontwerpschip."
           },
           "usage": {},
           "domain": [
@@ -7787,14 +8128,49 @@
           "codelist_uri": ""
         },
         {
-          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#DtcOntwerpSchip.maximaleDiepgang",
-          "name": "maximale diepgang",
-          "sort": "maximale diepgang",
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#DtcOntwerpSchip.gewicht",
+          "name": "gewicht",
+          "sort": "gewicht",
           "label": {
-            "nl": "maximale diepgang"
+            "nl": "gewicht"
           },
           "description": {
-            "nl": "TODO"
+            "nl": "Het gewicht van het ontwerpschip."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "DtcOntwerpSchip",
+              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#DtcOntwerpSchip"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "KwantWrdInTon",
+              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInTon"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Kwantitatieve waarde in ton",
+              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInTon",
+              "range_label": {
+                "nl": "Kwantitatieve waarde in ton"
+              }
+            }
+          ],
+          "cardinality": "1",
+          "codelist_uri": ""
+        },
+        {
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#DtcOntwerpSchip.diepgang",
+          "name": "diepgang",
+          "sort": "diepgang",
+          "label": {
+            "nl": "diepgang"
+          },
+          "description": {
+            "nl": "De diepgang van het ontwerpschip."
           },
           "usage": {},
           "domain": [
@@ -7822,14 +8198,14 @@
           "codelist_uri": ""
         },
         {
-          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#DtcOntwerpSchip.maximaleBreedte",
-          "name": "maximale breedte",
-          "sort": "maximale breedte",
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#DtcOntwerpSchip.breedte",
+          "name": "breedte",
+          "sort": "breedte",
           "label": {
-            "nl": "maximale breedte"
+            "nl": "breedte"
           },
           "description": {
-            "nl": "TODO"
+            "nl": "De breedte van het ontwerpschip."
           },
           "usage": {},
           "domain": [
@@ -7866,20 +8242,20 @@
       },
       "sort": "Type beweegbare waterkerende constructie",
       "description": {
-        "nl": "TODO"
+        "nl": "Complex datatype om het type beweegbare waterkerende constructie aan te duiden"
       },
       "usage": {},
       "parents": [],
       "properties": [
         {
-          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#DtcTypeBWC.typeBeweging",
-          "name": "type beweging",
-          "sort": "type beweging",
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#DtcTypeBWC.typeConstructie",
+          "name": "type constructie",
+          "sort": "type constructie",
           "label": {
-            "nl": "type beweging"
+            "nl": "type constructie"
           },
           "description": {
-            "nl": "TODO"
+            "nl": "De type beweegbare waterkerende constructie."
           },
           "usage": {},
           "domain": [
@@ -7890,42 +8266,7 @@
           ],
           "range": [
             {
-              "range_label": "KlTypeBeweging",
-              "range_uri": "http://www.w3.org/2004/02/skos/core#Concept"
-            }
-          ],
-          "scopedrange": [
-            {
-              "range_uri": "#type beweging",
-              "range_puri": "http://www.w3.org/2004/02/skos/core#Concept",
-              "range_label": {
-                "nl": "type beweging"
-              }
-            }
-          ],
-          "cardinality": "1",
-          "codelist_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/id/conceptscheme/KlTypeBeweging"
-        },
-        {
-          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#DtcTypeBWC.typeBeweegbaarDeel",
-          "name": "type beweegbaar deel",
-          "sort": "type beweegbaar deel",
-          "label": {
-            "nl": "type beweegbaar deel"
-          },
-          "description": {
-            "nl": "TODO"
-          },
-          "usage": {},
-          "domain": [
-            {
-              "EA-Name": "DtcTypeBWC",
-              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#DtcTypeBWC"
-            }
-          ],
-          "range": [
-            {
-              "range_label": "KlBeweegbaarDeel",
+              "range_label": "KlConstructie",
               "range_uri": "http://www.w3.org/2004/02/skos/core#Concept"
             }
           ],
@@ -7939,7 +8280,42 @@
             }
           ],
           "cardinality": "1",
-          "codelist_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/id/conceptscheme/KlBeweegbaarDeel"
+          "codelist_uri": "https://wegenenverkeer-test.data.vlaanderen.be/id/conceptscheme/KlConstructie"
+        },
+        {
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#DtcTypeBWC.typeConcept",
+          "name": "type concept",
+          "sort": "type concept",
+          "label": {
+            "nl": "type concept"
+          },
+          "description": {
+            "nl": "Het type concept van de beweegbare waterkerende constructie."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "DtcTypeBWC",
+              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#DtcTypeBWC"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "KlTypeConcept",
+              "range_uri": "http://www.w3.org/2004/02/skos/core#Concept"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#type beweging",
+              "range_puri": "http://www.w3.org/2004/02/skos/core#Concept",
+              "range_label": {
+                "nl": "type beweging"
+              }
+            }
+          ],
+          "cardinality": "1",
+          "codelist_uri": "https://wegenenverkeer-test.data.vlaanderen.be/id/conceptscheme/KlTypeConcept"
         }
       ]
     },
@@ -7989,7 +8365,7 @@
             }
           ],
           "cardinality": "1..*",
-          "codelist_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/id/conceptscheme/KlMaaiPeriode"
+          "codelist_uri": "https://wegenenverkeer-test.data.vlaanderen.be/id/conceptscheme/KlMaaiPeriode"
         },
         {
           "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/levenscyclus#DtcMaaien.klepelmaaierToegelaten",
@@ -8199,7 +8575,7 @@
             }
           ],
           "cardinality": "1..*",
-          "codelist_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/id/conceptscheme/KlMaaiFrequentie"
+          "codelist_uri": "https://wegenenverkeer-test.data.vlaanderen.be/id/conceptscheme/KlMaaiFrequentie"
         }
       ]
     },
@@ -8249,7 +8625,7 @@
             }
           ],
           "cardinality": "1",
-          "codelist_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/id/conceptscheme/KlVegetatieWortel"
+          "codelist_uri": "https://wegenenverkeer-test.data.vlaanderen.be/id/conceptscheme/KlVegetatieWortel"
         },
         {
           "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#DtcAanlegBoomvorm.vraatschadeBescherming",
@@ -8284,7 +8660,7 @@
             }
           ],
           "cardinality": "1",
-          "codelist_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/id/conceptscheme/KlMateriaalBeschermingVraatschade"
+          "codelist_uri": "https://wegenenverkeer-test.data.vlaanderen.be/id/conceptscheme/KlMateriaalBeschermingVraatschade"
         },
         {
           "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#DtcAanlegBoomvorm.vormAanlevering",
@@ -8319,7 +8695,7 @@
             }
           ],
           "cardinality": "1",
-          "codelist_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/id/conceptscheme/KlVormAanleveringHoutigeVegetatie"
+          "codelist_uri": "https://wegenenverkeer-test.data.vlaanderen.be/id/conceptscheme/KlVormAanleveringHoutigeVegetatie"
         },
         {
           "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#DtcAanlegBoomvorm.verankeringstype",
@@ -8354,7 +8730,7 @@
             }
           ],
           "cardinality": "1",
-          "codelist_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/id/conceptscheme/KlBoomVerankeringtype"
+          "codelist_uri": "https://wegenenverkeer-test.data.vlaanderen.be/id/conceptscheme/KlBoomVerankeringtype"
         },
         {
           "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#DtcAanlegBoomvorm.verankering",
@@ -8389,7 +8765,42 @@
             }
           ],
           "cardinality": "1",
-          "codelist_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/id/conceptscheme/KlBoomVerankering"
+          "codelist_uri": "https://wegenenverkeer-test.data.vlaanderen.be/id/conceptscheme/KlBoomVerankering"
+        },
+        {
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#DtcAanlegBoomvorm.plantwijze",
+          "name": "plantwijze",
+          "sort": "plantwijze",
+          "label": {
+            "nl": "plantwijze"
+          },
+          "description": {
+            "nl": "De manier van (aan)planten."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "DtcAanlegBoomvorm",
+              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#DtcAanlegBoomvorm"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "KlPlantwijze",
+              "range_uri": "http://www.w3.org/2004/02/skos/core#Concept"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Plantwijze",
+              "range_puri": "http://www.w3.org/2004/02/skos/core#Concept",
+              "range_label": {
+                "nl": "Plantwijze"
+              }
+            }
+          ],
+          "cardinality": "1",
+          "codelist_uri": "https://wegenenverkeer-test.data.vlaanderen.be/id/conceptscheme/KlPlantwijze"
         },
         {
           "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#DtcAanlegBoomvorm.plantmaatOmtrek",
@@ -8424,7 +8835,7 @@
             }
           ],
           "cardinality": "1",
-          "codelist_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/id/conceptscheme/KlPlantmaatOmtrek"
+          "codelist_uri": "https://wegenenverkeer-test.data.vlaanderen.be/id/conceptscheme/KlPlantmaatOmtrek"
         },
         {
           "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#DtcAanlegBoomvorm.plantmaatHoogte",
@@ -8459,7 +8870,7 @@
             }
           ],
           "cardinality": "1",
-          "codelist_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/id/conceptscheme/KlPlantmaatHoogte"
+          "codelist_uri": "https://wegenenverkeer-test.data.vlaanderen.be/id/conceptscheme/KlPlantmaatHoogte"
         },
         {
           "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#DtcAanlegBoomvorm.maaischadeBescherming",
@@ -8494,7 +8905,7 @@
             }
           ],
           "cardinality": "1",
-          "codelist_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/id/conceptscheme/KlBeschermingMaaischade"
+          "codelist_uri": "https://wegenenverkeer-test.data.vlaanderen.be/id/conceptscheme/KlBeschermingMaaischade"
         },
         {
           "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#DtcAanlegBoomvorm.heeftWortelgeleidingwortelwering",
@@ -8599,7 +9010,7 @@
             }
           ],
           "cardinality": "1",
-          "codelist_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/id/conceptscheme/KlGroeiplaatsverbetering"
+          "codelist_uri": "https://wegenenverkeer-test.data.vlaanderen.be/id/conceptscheme/KlGroeiplaatsverbetering"
         },
         {
           "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#DtcAanlegBoomvorm.boompaalconstructie",
@@ -8634,7 +9045,7 @@
             }
           ],
           "cardinality": "1",
-          "codelist_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/id/conceptscheme/KlAantalBoompalen"
+          "codelist_uri": "https://wegenenverkeer-test.data.vlaanderen.be/id/conceptscheme/KlAantalBoompalen"
         },
         {
           "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#DtcAanlegBoomvorm.beschermingVraatschade",
@@ -8841,7 +9252,7 @@
             }
           ],
           "cardinality": "1",
-          "codelist_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/id/conceptscheme/KlBSSRandafwerking"
+          "codelist_uri": "https://wegenenverkeer-test.data.vlaanderen.be/id/conceptscheme/KlBSSRandafwerking"
         },
         {
           "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#DtcBSSRandafwerking.lengteRandafwerking",
@@ -8961,7 +9372,7 @@
             }
           ],
           "cardinality": "1",
-          "codelist_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/id/conceptscheme/KlMateriaalBeschermingVraatschade"
+          "codelist_uri": "https://wegenenverkeer-test.data.vlaanderen.be/id/conceptscheme/KlMateriaalBeschermingVraatschade"
         }
       ]
     },
@@ -9046,7 +9457,7 @@
             }
           ],
           "cardinality": "1",
-          "codelist_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/id/conceptscheme/KlCompacteBatterijModelnaam"
+          "codelist_uri": "https://wegenenverkeer-test.data.vlaanderen.be/id/conceptscheme/KlCompacteBatterijModelnaam"
         },
         {
           "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#DtcCompacteBatterij.merk",
@@ -9081,7 +9492,7 @@
             }
           ],
           "cardinality": "1",
-          "codelist_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/id/conceptscheme/KlCompacteBatterijMerk"
+          "codelist_uri": "https://wegenenverkeer-test.data.vlaanderen.be/id/conceptscheme/KlCompacteBatterijMerk"
         },
         {
           "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#DtcCompacteBatterij.ingebruikname",
@@ -9286,7 +9697,7 @@
             }
           ],
           "cardinality": "1",
-          "codelist_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/id/conceptscheme/KlLEGCMateriaal"
+          "codelist_uri": "https://wegenenverkeer-test.data.vlaanderen.be/id/conceptscheme/KlLEGCMateriaal"
         },
         {
           "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#DtcGCMateriaalKarakteristiek.geluidskarakteristiek",
@@ -9321,7 +9732,7 @@
             }
           ],
           "cardinality": "1",
-          "codelist_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/id/conceptscheme/KlLEGCGeluidskarakteristiek"
+          "codelist_uri": "https://wegenenverkeer-test.data.vlaanderen.be/id/conceptscheme/KlLEGCGeluidskarakteristiek"
         }
       ]
     },
@@ -9371,7 +9782,7 @@
             }
           ],
           "cardinality": "1",
-          "codelist_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/id/conceptscheme/KlGrondwerksoorten"
+          "codelist_uri": "https://wegenenverkeer-test.data.vlaanderen.be/id/conceptscheme/KlGrondwerksoorten"
         },
         {
           "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#DtcGrondAfgravinguitgraving.grondbestemming",
@@ -9406,7 +9817,7 @@
             }
           ],
           "cardinality": "1",
-          "codelist_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/id/conceptscheme/KlGrondbestemming"
+          "codelist_uri": "https://wegenenverkeer-test.data.vlaanderen.be/id/conceptscheme/KlGrondbestemming"
         }
       ]
     },
@@ -9456,7 +9867,7 @@
             }
           ],
           "cardinality": "1",
-          "codelist_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/id/conceptscheme/KlGrondwerksoorten"
+          "codelist_uri": "https://wegenenverkeer-test.data.vlaanderen.be/id/conceptscheme/KlGrondwerksoorten"
         },
         {
           "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#DtcGrondafdekking.herkomst",
@@ -9491,7 +9902,7 @@
             }
           ],
           "cardinality": "1",
-          "codelist_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/id/conceptscheme/KlGrondbestemming"
+          "codelist_uri": "https://wegenenverkeer-test.data.vlaanderen.be/id/conceptscheme/KlGrondbestemming"
         }
       ]
     },
@@ -9578,7 +9989,7 @@
             }
           ],
           "cardinality": "1",
-          "codelist_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/id/conceptscheme/KlGrondBijmengingHoeveelheidCode"
+          "codelist_uri": "https://wegenenverkeer-test.data.vlaanderen.be/id/conceptscheme/KlGrondBijmengingHoeveelheidCode"
         },
         {
           "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#DtcGrondbijmenging.bijmengingshoofdnaamcode",
@@ -9615,7 +10026,7 @@
             }
           ],
           "cardinality": "1",
-          "codelist_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/id/conceptscheme/KlGrondHoofdnaamCode"
+          "codelist_uri": "https://wegenenverkeer-test.data.vlaanderen.be/id/conceptscheme/KlGrondHoofdnaamCode"
         }
       ]
     },
@@ -9665,7 +10076,7 @@
             }
           ],
           "cardinality": "1",
-          "codelist_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/id/conceptscheme/KlGrondwerksoorten"
+          "codelist_uri": "https://wegenenverkeer-test.data.vlaanderen.be/id/conceptscheme/KlGrondwerksoorten"
         },
         {
           "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#DtcGrondophoging.herkomst",
@@ -9700,7 +10111,7 @@
             }
           ],
           "cardinality": "1",
-          "codelist_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/id/conceptscheme/KlGrondbestemming"
+          "codelist_uri": "https://wegenenverkeer-test.data.vlaanderen.be/id/conceptscheme/KlGrondbestemming"
         },
         {
           "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#DtcGrondophoging.grondtoevoegsel",
@@ -9735,7 +10146,7 @@
             }
           ],
           "cardinality": "1",
-          "codelist_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/id/conceptscheme/KlGrondtoevoegsel"
+          "codelist_uri": "https://wegenenverkeer-test.data.vlaanderen.be/id/conceptscheme/KlGrondtoevoegsel"
         }
       ]
     },
@@ -9787,7 +10198,7 @@
             }
           ],
           "cardinality": "1",
-          "codelist_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/id/conceptscheme/KlGrondHoofdnaamCode"
+          "codelist_uri": "https://wegenenverkeer-test.data.vlaanderen.be/id/conceptscheme/KlGrondHoofdnaamCode"
         },
         {
           "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#DtcGrondsoort.bijmenging",
@@ -9874,7 +10285,7 @@
             }
           ],
           "cardinality": "1",
-          "codelist_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/id/conceptscheme/KlVegetatieWortel"
+          "codelist_uri": "https://wegenenverkeer-test.data.vlaanderen.be/id/conceptscheme/KlVegetatieWortel"
         },
         {
           "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#DtcHoutigeAanleg.vraatschadeBescherming",
@@ -9909,7 +10320,7 @@
             }
           ],
           "cardinality": "1",
-          "codelist_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/id/conceptscheme/KlMateriaalBeschermingVraatschade"
+          "codelist_uri": "https://wegenenverkeer-test.data.vlaanderen.be/id/conceptscheme/KlMateriaalBeschermingVraatschade"
         },
         {
           "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#DtcHoutigeAanleg.vormAanlevering",
@@ -9944,7 +10355,7 @@
             }
           ],
           "cardinality": "1",
-          "codelist_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/id/conceptscheme/KlVormAanleveringHoutigeVegetatie"
+          "codelist_uri": "https://wegenenverkeer-test.data.vlaanderen.be/id/conceptscheme/KlVormAanleveringHoutigeVegetatie"
         },
         {
           "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#DtcHoutigeAanleg.plantverband",
@@ -9979,7 +10390,7 @@
             }
           ],
           "cardinality": "1",
-          "codelist_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/id/conceptscheme/KlVegetatiePlantverband"
+          "codelist_uri": "https://wegenenverkeer-test.data.vlaanderen.be/id/conceptscheme/KlVegetatiePlantverband"
         },
         {
           "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#DtcHoutigeAanleg.plantmaatOmtrek",
@@ -10014,7 +10425,7 @@
             }
           ],
           "cardinality": "1",
-          "codelist_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/id/conceptscheme/KlPlantmaatOmtrek"
+          "codelist_uri": "https://wegenenverkeer-test.data.vlaanderen.be/id/conceptscheme/KlPlantmaatOmtrek"
         },
         {
           "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#DtcHoutigeAanleg.plantmaatHoogte",
@@ -10049,7 +10460,7 @@
             }
           ],
           "cardinality": "1",
-          "codelist_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/id/conceptscheme/KlPlantmaatHoogte"
+          "codelist_uri": "https://wegenenverkeer-test.data.vlaanderen.be/id/conceptscheme/KlPlantmaatHoogte"
         },
         {
           "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#DtcHoutigeAanleg.plantdichtheid",
@@ -10154,7 +10565,7 @@
             }
           ],
           "cardinality": "1",
-          "codelist_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/id/conceptscheme/KlBeschermingMaaischade"
+          "codelist_uri": "https://wegenenverkeer-test.data.vlaanderen.be/id/conceptscheme/KlBeschermingMaaischade"
         },
         {
           "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#DtcHoutigeAanleg.heeftWortelgeleidingwortelwering",
@@ -10501,7 +10912,7 @@
             }
           ],
           "cardinality": "1",
-          "codelist_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/id/conceptscheme/KlLEKantopsluitingBijkomendeParameter"
+          "codelist_uri": "https://wegenenverkeer-test.data.vlaanderen.be/id/conceptscheme/KlLEKantopsluitingBijkomendeParameter"
         }
       ]
     },
@@ -10636,7 +11047,7 @@
             }
           ],
           "cardinality": "1",
-          "codelist_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/id/conceptscheme/KlMarkeringWaarborgperiode"
+          "codelist_uri": "https://wegenenverkeer-test.data.vlaanderen.be/id/conceptscheme/KlMarkeringWaarborgperiode"
         },
         {
           "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#DtcMarkeringOpvatting.opvatting",
@@ -10671,7 +11082,7 @@
             }
           ],
           "cardinality": "1",
-          "codelist_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/id/conceptscheme/KlSignalisatieMarkeringOpvatting"
+          "codelist_uri": "https://wegenenverkeer-test.data.vlaanderen.be/id/conceptscheme/KlSignalisatieMarkeringOpvatting"
         }
       ]
     },
@@ -10713,10 +11124,10 @@
           ],
           "scopedrange": [
             {
-              "range_uri": "#Kwantitatieve waarde in Ampere",
+              "range_uri": "#Kwantitatieve waarde in liter",
               "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInLiter",
               "range_label": {
-                "nl": "Kwantitatieve waarde in Ampere"
+                "nl": "Kwantitatieve waarde in liter"
               }
             }
           ],
@@ -10756,7 +11167,7 @@
             }
           ],
           "cardinality": "1",
-          "codelist_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/id/conceptscheme/KlViscositeitKlasse"
+          "codelist_uri": "https://wegenenverkeer-test.data.vlaanderen.be/id/conceptscheme/KlViscositeitKlasse"
         },
         {
           "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#DtcOlieType.typeOlie",
@@ -10791,7 +11202,7 @@
             }
           ],
           "cardinality": "1",
-          "codelist_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/id/conceptscheme/KlOlieType"
+          "codelist_uri": "https://wegenenverkeer-test.data.vlaanderen.be/id/conceptscheme/KlOlieType"
         },
         {
           "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#DtcOlieType.merk",
@@ -10826,7 +11237,7 @@
             }
           ],
           "cardinality": "1",
-          "codelist_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/id/conceptscheme/KlOlieMerk"
+          "codelist_uri": "https://wegenenverkeer-test.data.vlaanderen.be/id/conceptscheme/KlOlieMerk"
         },
         {
           "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#DtcOlieType.isSynthetisch",
@@ -10931,7 +11342,7 @@
             }
           ],
           "cardinality": "1..*",
-          "codelist_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/id/conceptscheme/KlOlieAdditieven"
+          "codelist_uri": "https://wegenenverkeer-test.data.vlaanderen.be/id/conceptscheme/KlOlieAdditieven"
         }
       ]
     },
@@ -10981,7 +11392,7 @@
             }
           ],
           "cardinality": "1",
-          "codelist_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/id/conceptscheme/KlProfielsoort"
+          "codelist_uri": "https://wegenenverkeer-test.data.vlaanderen.be/id/conceptscheme/KlProfielsoort"
         },
         {
           "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#DtcProfieltype.profielhoogtemaat",
@@ -11016,7 +11427,7 @@
             }
           ],
           "cardinality": "1",
-          "codelist_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/id/conceptscheme/KlProfielhoogtemaat"
+          "codelist_uri": "https://wegenenverkeer-test.data.vlaanderen.be/id/conceptscheme/KlProfielhoogtemaat"
         }
       ]
     },
@@ -11066,7 +11477,7 @@
             }
           ],
           "cardinality": "1",
-          "codelist_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/id/conceptscheme/KlBVLaagtype"
+          "codelist_uri": "https://wegenenverkeer-test.data.vlaanderen.be/id/conceptscheme/KlBVLaagtype"
         },
         {
           "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#DtcProfileerlaag.gewicht",
@@ -11151,7 +11562,7 @@
             }
           ],
           "cardinality": "1",
-          "codelist_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/id/conceptscheme/KlVegetatiePlantverband"
+          "codelist_uri": "https://wegenenverkeer-test.data.vlaanderen.be/id/conceptscheme/KlVegetatiePlantverband"
         },
         {
           "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#DtcSierbeplAanleg.plantmaat",
@@ -11186,7 +11597,7 @@
             }
           ],
           "cardinality": "1",
-          "codelist_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/id/conceptscheme/KlSierbeplPlantmaat"
+          "codelist_uri": "https://wegenenverkeer-test.data.vlaanderen.be/id/conceptscheme/KlSierbeplPlantmaat"
         },
         {
           "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#DtcSierbeplAanleg.plantdichtheid",
@@ -11256,7 +11667,7 @@
             }
           ],
           "cardinality": "1",
-          "codelist_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/id/conceptscheme/KlSierbeplContainer"
+          "codelist_uri": "https://wegenenverkeer-test.data.vlaanderen.be/id/conceptscheme/KlSierbeplContainer"
         },
         {
           "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#DtcSierbeplAanleg.aanplantingswijze",
@@ -11291,7 +11702,7 @@
             }
           ],
           "cardinality": "1",
-          "codelist_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/id/conceptscheme/KlAanplantingswijzeSierbeplanting"
+          "codelist_uri": "https://wegenenverkeer-test.data.vlaanderen.be/id/conceptscheme/KlAanplantingswijzeSierbeplanting"
         }
       ]
     },
@@ -11376,7 +11787,7 @@
             }
           ],
           "cardinality": "1",
-          "codelist_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/id/conceptscheme/KlPoortconfiguratieRichting"
+          "codelist_uri": "https://wegenenverkeer-test.data.vlaanderen.be/id/conceptscheme/KlPoortconfiguratieRichting"
         },
         {
           "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#DtcSoftwarePoortconfiguratie.poortnummer",
@@ -11461,7 +11872,7 @@
             }
           ],
           "cardinality": "1",
-          "codelist_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/id/conceptscheme/KlVervuilingSoorten"
+          "codelist_uri": "https://wegenenverkeer-test.data.vlaanderen.be/id/conceptscheme/KlVervuilingSoorten"
         },
         {
           "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#DtcSoortVervuiling.microgramPerKilogram",
@@ -11546,7 +11957,7 @@
             }
           ],
           "cardinality": "1",
-          "codelist_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/id/conceptscheme/KlTypeSuppCBV"
+          "codelist_uri": "https://wegenenverkeer-test.data.vlaanderen.be/id/conceptscheme/KlTypeSuppCBV"
         },
         {
           "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#DtcSupplementenCBV.kleur",
@@ -11581,7 +11992,7 @@
             }
           ],
           "cardinality": "1",
-          "codelist_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/id/conceptscheme/KlKleurSupp"
+          "codelist_uri": "https://wegenenverkeer-test.data.vlaanderen.be/id/conceptscheme/KlKleurSupp"
         }
       ]
     },
@@ -11631,7 +12042,7 @@
             }
           ],
           "cardinality": "1",
-          "codelist_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/id/conceptscheme/KlLETrottoirbandVorm"
+          "codelist_uri": "https://wegenenverkeer-test.data.vlaanderen.be/id/conceptscheme/KlLETrottoirbandVorm"
         },
         {
           "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#DtcTrottoirbandVorm.dikte",
@@ -11719,6 +12130,41 @@
       "parents": [],
       "properties": [
         {
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#DtcVegetatieSoortnaam.wetenschappelijkeSoortnaam",
+          "name": "wetenschappelijke soortnaam",
+          "sort": "wetenschappelijke soortnaam",
+          "label": {
+            "nl": "wetenschappelijke soortnaam"
+          },
+          "description": {
+            "nl": "De wetenschappelijke soortnaam van de vegetatie."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "DtcVegetatieSoortnaam",
+              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#DtcVegetatieSoortnaam"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "KlWetenschappelijkeSoortnaam",
+              "range_uri": "http://www.w3.org/2004/02/skos/core#Concept"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Wetenschappelijke soortnaam",
+              "range_puri": "http://www.w3.org/2004/02/skos/core#Concept",
+              "range_label": {
+                "nl": "Wetenschappelijke soortnaam"
+              }
+            }
+          ],
+          "cardinality": "1",
+          "codelist_uri": "https://wegenenverkeer-test.data.vlaanderen.be/id/conceptscheme/KlWetenschappelijkeSoortnaam"
+        },
+        {
           "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#DtcVegetatieSoortnaam.soortnaamWetenschappelijk",
           "name": "soortnaam wetenschappelijk",
           "sort": "soortnaam wetenschappelijk",
@@ -11728,7 +12174,9 @@
           "description": {
             "nl": "De wetenschappelijke soortnaam van de beplanting."
           },
-          "usage": {},
+          "usage": {
+            "nl": "Attribuut uit gebruik sinds versie 2.12.0-RC2"
+          },
           "domain": [
             {
               "EA-Name": "DtcVegetatieSoortnaam",
@@ -11873,7 +12321,7 @@
             }
           ],
           "cardinality": "1",
-          "codelist_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/id/conceptscheme/KlVoorzetconstructieBevestigingsmateriaal"
+          "codelist_uri": "https://wegenenverkeer-test.data.vlaanderen.be/id/conceptscheme/KlVoorzetconstructieBevestigingsmateriaal"
         },
         {
           "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#DtcVoorzetconstructieBevestigingsmateriaal.diameter",
@@ -11908,7 +12356,7 @@
             }
           ],
           "cardinality": "1",
-          "codelist_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/id/conceptscheme/KlVoorzetconstructieBevestigingsmateriaalDiameter"
+          "codelist_uri": "https://wegenenverkeer-test.data.vlaanderen.be/id/conceptscheme/KlVoorzetconstructieBevestigingsmateriaalDiameter"
         }
       ]
     },
@@ -11960,7 +12408,7 @@
             }
           ],
           "cardinality": "1",
-          "codelist_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/id/conceptscheme/KlZelfsluiterSluitkrachtnorm"
+          "codelist_uri": "https://wegenenverkeer-test.data.vlaanderen.be/id/conceptscheme/KlZelfsluiterSluitkrachtnorm"
         },
         {
           "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#DtcZelfsluiterSluitkracht.ingesteld",
@@ -11997,7 +12445,7 @@
             }
           ],
           "cardinality": "1",
-          "codelist_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/id/conceptscheme/KlZelfsluiterSluitkrachtnorm"
+          "codelist_uri": "https://wegenenverkeer-test.data.vlaanderen.be/id/conceptscheme/KlZelfsluiterSluitkrachtnorm"
         },
         {
           "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#DtcZelfsluiterSluitkracht.bovengrens",
@@ -12034,7 +12482,7 @@
             }
           ],
           "cardinality": "1",
-          "codelist_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/id/conceptscheme/KlZelfsluiterSluitkrachtnorm"
+          "codelist_uri": "https://wegenenverkeer-test.data.vlaanderen.be/id/conceptscheme/KlZelfsluiterSluitkrachtnorm"
         }
       ]
     },
@@ -12084,7 +12532,7 @@
             }
           ],
           "cardinality": "1",
-          "codelist_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/id/conceptscheme/KlLEGCTestType"
+          "codelist_uri": "https://wegenenverkeer-test.data.vlaanderen.be/id/conceptscheme/KlLEGCTestType"
         },
         {
           "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting#DtcGeluidstestRapport.testrapport",
@@ -12156,7 +12604,7 @@
             }
           ],
           "cardinality": "1",
-          "codelist_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/id/conceptscheme/KlLEGCNorm"
+          "codelist_uri": "https://wegenenverkeer-test.data.vlaanderen.be/id/conceptscheme/KlLEGCNorm"
         },
         {
           "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting#DtcGeluidstestRapport.luchtgeluidsisolatie",
@@ -12226,7 +12674,7 @@
             }
           ],
           "cardinality": "1",
-          "codelist_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/id/conceptscheme/KlGCMeetMethode"
+          "codelist_uri": "https://wegenenverkeer-test.data.vlaanderen.be/id/conceptscheme/KlGCMeetMethode"
         },
         {
           "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting#DtcGeluidstestRapport.gemetenWaarde",

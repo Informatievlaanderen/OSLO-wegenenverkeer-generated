@@ -1692,7 +1692,7 @@
     "prev": ""
   },
   "publication-state": "https://data.vlaanderen.be/doc/concept/StandaardStatus/KandidaatStandaard",
-  "publication-date": "5-02-2024",
+  "publication-date": "18-12-2024",
   "classes": [
     {
       "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#AOWSType",
@@ -1714,7 +1714,7 @@
       "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#AanhorigheidKoker",
       "@type": "http://www.w3.org/2002/07/owl#Class",
       "definition": {
-        "nl": "Een abstracte klasse die de aanhorigheden bundelt die in een koker kunnen voorkomen zodat de overerving van de bevestigings relatie kan plaatsvinden."
+        "nl": "Een abstracte klasse die de aanhorigheden bundelt die in een koker kunnen voorkomen zodat de overerving van de bevestigingsrelatie kan plaatsvinden."
       },
       "parents": []
     },
@@ -1737,12 +1737,21 @@
       ]
     },
     {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#AanvaarbeschermingGeleidewerk",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
+      "definition": {
+        "nl": "Een abstracte om de relaties van aanvaarbescherming en geleidewerk te bundelen."
+      },
+      "parents": []
+    },
+    {
       "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#AbstracteAanvullendeGeometrie",
       "@type": "http://www.w3.org/2002/07/owl#Class",
       "definition": {
         "nl": "Abstracte om de eigenschappen en relaties van AanvullendeGeometrie te bundelen."
       },
       "parents": [
+        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMVersie",
         "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMDBStatus",
         "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMToestand"
       ]
@@ -1755,8 +1764,8 @@
       },
       "parents": [
         "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Waterremmend",
-        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Grondkeringen",
-        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Fundering"
+        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Fundering",
+        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Grondkeringen"
       ]
     },
     {
@@ -1878,6 +1887,7 @@
       },
       "parents": [
         "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMObject",
+        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#AanhorighedenBrug",
         "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#AanhorigheidKoker"
       ]
     },
@@ -1987,6 +1997,22 @@
       "parents": [
         "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMNaamObject"
       ]
+    },
+    {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#ConstructieElementAanvaarbeschermingGeleidewerk",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
+      "definition": {
+        "nl": "Abstracte voor de verschillende constructie elementen van de aanvaarbescherming en geleidewerk."
+      },
+      "parents": []
+    },
+    {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#ConstructieElementSluisStuw",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
+      "definition": {
+        "nl": "Abstracte voor de verschillende constructie elementen die bij een sluis of stuw kunnen horen."
+      },
+      "parents": []
     },
     {
       "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#ConstructieElementenGC",
@@ -2155,6 +2181,14 @@
       "parents": []
     },
     {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#ElementSpecificatie",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
+      "definition": {
+        "nl": "De abstracte die de specificaties per element verzameld."
+      },
+      "parents": []
+    },
+    {
       "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Energiemeter",
       "@type": "http://www.w3.org/2002/07/owl#Class",
       "definition": {
@@ -2319,6 +2353,14 @@
       ]
     },
     {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#IpAdresObject",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
+      "definition": {
+        "nl": "Abstracte klasse voor een IP4 adres."
+      },
+      "parents": []
+    },
+    {
       "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Kabel",
       "@type": "http://www.w3.org/2002/07/owl#Class",
       "definition": {
@@ -2371,7 +2413,8 @@
         "nl": "Abstracte voor de gemeenschappelijke eigenschappen en relaties voor de kantopsluiting."
       },
       "parents": [
-        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#LijnvormigElement"
+        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#LijnvormigElement",
+        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#LaagProductidentificatiecode"
       ]
     },
     {
@@ -2391,8 +2434,8 @@
         "nl": "Abstracte klasse en bundeling voor ondiepe en halfdiepe funderingen zoals fundering op staal en op putten."
       },
       "parents": [
-        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#BetonnenConstructieElement",
-        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Fundering"
+        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Fundering",
+        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#BetonnenConstructieElement"
       ]
     },
     {
@@ -2558,6 +2601,14 @@
       "@type": "http://www.w3.org/2002/07/owl#Class",
       "definition": {
         "nl": "Abstracte voor het groeperen van de relaties voor onderdelen die kabels kunnen omhullen."
+      },
+      "parents": []
+    },
+    {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#OntwerpwaterstandStreefpeil",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
+      "definition": {
+        "nl": "Abstracte om de streefpeilen en relevante ontwerpwaterstanden (afwaarts & opwaarts) van sluizen en stuwen te bundelen"
       },
       "parents": []
     },
@@ -2763,14 +2814,6 @@
       ]
     },
     {
-      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#StreefpeilWaterbouwkundigeConstructie",
-      "@type": "http://www.w3.org/2002/07/owl#Class",
-      "definition": {
-        "nl": "Abstracte om de streefpeilen van sluizen en stuwen te bundelen"
-      },
-      "parents": []
-    },
-    {
       "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#TerreinDeel",
       "@type": "http://www.w3.org/2002/07/owl#Class",
       "definition": {
@@ -2798,7 +2841,7 @@
       "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#UitsparingSluisdeur",
       "@type": "http://www.w3.org/2002/07/owl#Class",
       "definition": {
-        "nl": "Abstracte om de gemeenschappelijke attributen van de uitsparingen van de sluisdeuren te bundelen"
+        "nl": "Een abstracte om eigenschappen en relaties van de uitsparingen te bundelen."
       },
       "parents": []
     },
@@ -2895,6 +2938,9 @@
       "definition": {
         "nl": "Abstracte klasse voor aanwijzingen ten behoeve van de weggebruikers die verbonden wordt aan het aankondigen of opleggen van een bepaalde verkeersmaatregel zoals bepaald in de wegcode."
       },
+      "usage": {
+        "nl": "Klasse uit gebruik sinds versie 0.0.0-RC0"
+      },
       "parents": [
         "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMObject"
       ]
@@ -2906,7 +2952,8 @@
         "nl": "Abstracte voor het geheel van de lichtbron en de behuizing die werden samengesteld met als doel: * de lichtstroom van de lichtbronnen hoofdzakelijk op het te verlichten oppervlak (doorlopende wegsectie, conflictgebied,...) te richten, teneinde de zichtbaarheid te verhogen; * de lichtstroom te beheersen zodat de weggebruikers niet verblind worden en de lichthinder beperkt wordt; * het optisch systeem, de lichtbronnen en de hulpapparatuur tegen uitwendige invloeden te beschermen"
       },
       "parents": [
-        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMNaamObject"
+        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMNaamObject",
+        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#SerienummerObject"
       ]
     },
     {
@@ -2980,6 +3027,20 @@
   "externals": [
     {
       "name": {
+        "nl": "Vegetatieelement standplaats"
+      },
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
+      "@type": "rdfs:Class"
+    },
+    {
+      "name": {
+        "nl": "Plantwijze"
+      },
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
+      "@type": "rdfs:Class"
+    },
+    {
+      "name": {
         "nl": "Uitvoeringsmethode"
       },
       "@id": "http://www.w3.org/2004/02/skos/core#Concept",
@@ -2994,14 +3055,14 @@
     },
     {
       "name": {
-        "nl": "Aanslagprofiel materiaal"
+        "nl": "Hoofdtype"
       },
       "@id": "http://www.w3.org/2004/02/skos/core#Concept",
       "@type": "rdfs:Class"
     },
     {
       "name": {
-        "nl": "Hoofdtype"
+        "nl": "Aanslagprofiel materiaal"
       },
       "@id": "http://www.w3.org/2004/02/skos/core#Concept",
       "@type": "rdfs:Class"
@@ -3029,21 +3090,7 @@
     },
     {
       "name": {
-        "nl": "Hardware CD DVD tape"
-      },
-      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
-      "@type": "rdfs:Class"
-    },
-    {
-      "name": {
-        "nl": "Hardware domein"
-      },
-      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
-      "@type": "rdfs:Class"
-    },
-    {
-      "name": {
-        "nl": "Hardware OS"
+        "nl": "Elektrisch metertype"
       },
       "@id": "http://www.w3.org/2004/02/skos/core#Concept",
       "@type": "rdfs:Class"
@@ -3071,14 +3118,28 @@
     },
     {
       "name": {
-        "nl": "Elektrisch metertype"
+        "nl": "Smering type"
       },
       "@id": "http://www.w3.org/2004/02/skos/core#Concept",
       "@type": "rdfs:Class"
     },
     {
       "name": {
-        "nl": "Smering type"
+        "nl": "Hardware CD DVD tape"
+      },
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
+      "@type": "rdfs:Class"
+    },
+    {
+      "name": {
+        "nl": "Hardware domein"
+      },
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
+      "@type": "rdfs:Class"
+    },
+    {
+      "name": {
+        "nl": "Hardware OS"
       },
       "@id": "http://www.w3.org/2004/02/skos/core#Concept",
       "@type": "rdfs:Class"
@@ -3127,20 +3188,6 @@
     },
     {
       "name": {
-        "nl": "PT regelaarmodule merk"
-      },
-      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
-      "@type": "rdfs:Class"
-    },
-    {
-      "name": {
-        "nl": "verkeerslicht merk"
-      },
-      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
-      "@type": "rdfs:Class"
-    },
-    {
-      "name": {
         "nl": "Lantaarn lamptype"
       },
       "@id": "http://www.w3.org/2004/02/skos/core#Concept",
@@ -3183,14 +3230,21 @@
     },
     {
       "name": {
-        "nl": "VR-module met firmware modelnaam"
+        "nl": "PT regelaarmodule merk"
       },
       "@id": "http://www.w3.org/2004/02/skos/core#Concept",
       "@type": "rdfs:Class"
     },
     {
       "name": {
-        "nl": "VR-module met firmware merk"
+        "nl": "verkeerslicht merk"
+      },
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
+      "@type": "rdfs:Class"
+    },
+    {
+      "name": {
+        "nl": "VR-module met firmware modelnaam"
       },
       "@id": "http://www.w3.org/2004/02/skos/core#Concept",
       "@type": "rdfs:Class"
@@ -3240,6 +3294,13 @@
     {
       "name": {
         "nl": "Verfraaiing buitenkast"
+      },
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
+      "@type": "rdfs:Class"
+    },
+    {
+      "name": {
+        "nl": "VR-module met firmware merk"
       },
       "@id": "http://www.w3.org/2004/02/skos/core#Concept",
       "@type": "rdfs:Class"
@@ -3407,7 +3468,7 @@
         "nl": "Duidt de wettelijke status aan van het verkeersteken."
       },
       "usage": {
-        "nl": "Bijvoorbeeld: vergund, niet-vergund, in ontwerp"
+        "nl": "Bijvoorbeeld: vergund, niet-vergund, in ontwerp. Klasse uit gebruik sinds versie 0.0.0-RC0"
       },
       "domain": [
         "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Verkeersteken"
@@ -3423,6 +3484,9 @@
       "definition": {
         "nl": "Variabele tekst die op het verkeersbordconcept komt te staan."
       },
+      "usage": {
+        "nl": "Klasse uit gebruik sinds versie 0.0.0-RC0"
+      },
       "domain": [
         "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Verkeersteken"
       ],
@@ -3436,6 +3500,9 @@
       "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "definition": {
         "nl": "Externe referentie naar een vergunning voor het tijdelijk aanbrengen of wijzigen van signalisatie op het openbaar domein of privaat domein met openbaar karakter."
+      },
+      "usage": {
+        "nl": "Klasse uit gebruik sinds versie 0.0.0-RC0"
       },
       "domain": [
         "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Verkeersteken"
@@ -3451,6 +3518,9 @@
       "definition": {
         "nl": "Tekstuele beschrijving waar het verkeersteken zal komen."
       },
+      "usage": {
+        "nl": "Klasse uit gebruik sinds versie 0.0.0-RC0"
+      },
       "domain": [
         "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Verkeersteken"
       ],
@@ -3464,6 +3534,9 @@
       "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "definition": {
         "nl": "Externe referentie naar een maatregel om de beweging en verplaatsing van de weggebruiker op het openbaar domein of privé domein met openbaar karakter te organiseren."
+      },
+      "usage": {
+        "nl": "Klasse uit gebruik sinds versie 0.0.0-RC0"
       },
       "domain": [
         "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Verkeersteken"
@@ -3479,6 +3552,9 @@
       "definition": {
         "nl": "Foto van het verkeersteken."
       },
+      "usage": {
+        "nl": "Klasse uit gebruik sinds versie 0.0.0-RC0"
+      },
       "domain": [
         "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Verkeersteken"
       ],
@@ -3492,6 +3568,9 @@
       "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "definition": {
         "nl": "Adres van het verkeersteken."
+      },
+      "usage": {
+        "nl": "Klasse uit gebruik sinds versie 0.0.0-RC0"
       },
       "domain": [
         "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Verkeersteken"
@@ -3721,6 +3800,20 @@
       "generalization": []
     },
     {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#VegetatieElement.standplaats",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "definition": {
+        "nl": "De plek of locatie waar het vegetatieelement groeit."
+      },
+      "domain": [
+        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#VegetatieElement"
+      ],
+      "range": [
+        "http://www.w3.org/2004/02/skos/core#Concept"
+      ],
+      "generalization": []
+    },
+    {
       "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#VegetatieElement.soortnaam",
       "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "definition": {
@@ -3782,8 +3875,25 @@
       "definition": {
         "nl": "Het merk van de VR module met Firmware."
       },
+      "usage": {
+        "nl": "Attribuut uit gebruik sinds versie 2.12.0-RC2"
+      },
       "domain": [
         "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#VRModuleMetFirmware"
+      ],
+      "range": [
+        "http://www.w3.org/2004/02/skos/core#Concept"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#UitsparingSluisdeur.vastAanslagmateriaal",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "definition": {
+        "nl": "De verschillende mogelijkheden m.b.t. het materiaal van de aanslag"
+      },
+      "domain": [
+        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#UitsparingSluisdeur"
       ],
       "range": [
         "http://www.w3.org/2004/02/skos/core#Concept"
@@ -3794,27 +3904,13 @@
       "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#UitsparingSluisdeur.detailplan",
       "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "definition": {
-        "nl": "Het detailplan van de uitsparing"
+        "nl": "Het detailplan van de uitsparing."
       },
       "domain": [
         "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#UitsparingSluisdeur"
       ],
       "range": [
         "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcDocument"
-      ],
-      "generalization": []
-    },
-    {
-      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#UitsparingSluisdeur.aanslagprofielMateriaal",
-      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
-      "definition": {
-        "nl": "De keuzelijst die de verschillende mogelijkheid geeft mbt het materiaal van het aanslagprofiel"
-      },
-      "domain": [
-        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#UitsparingSluisdeur"
-      ],
-      "range": [
-        "http://www.w3.org/2004/02/skos/core#Concept"
       ],
       "generalization": []
     },
@@ -3889,34 +3985,6 @@
       "generalization": []
     },
     {
-      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#StreefpeilWaterbouwkundigeConstructie.streefPeilOpwaarts",
-      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
-      "definition": {
-        "nl": "Het gewenste waterpeil dat wordt nagestreefd aan de stroomopwaartse kant van het sluizen en/of stuwencomplex"
-      },
-      "domain": [
-        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#StreefpeilWaterbouwkundigeConstructie"
-      ],
-      "range": [
-        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInMeterTAW"
-      ],
-      "generalization": []
-    },
-    {
-      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#StreefpeilWaterbouwkundigeConstructie.streefPeilAfwaarts",
-      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
-      "definition": {
-        "nl": "Het gewenste waterpeil dat wordt nagestreefd aan de stroomafwaartse kant van het sluizen en/of stuwencomplex"
-      },
-      "domain": [
-        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#StreefpeilWaterbouwkundigeConstructie"
-      ],
-      "range": [
-        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInMeterTAW"
-      ],
-      "generalization": []
-    },
-    {
       "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#SteunStandaard.kleur",
       "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "definition": {
@@ -3978,11 +4046,28 @@
       "definition": {
         "nl": "Type bescherming van de steun, bv. geschilderd of gegalvaniseerd."
       },
+      "usage": {
+        "nl": "Attribuut uit gebruik sinds versie 2.12.0-RC2"
+      },
       "domain": [
         "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#SteunStandaard"
       ],
       "range": [
         "http://www.w3.org/2004/02/skos/core#Concept"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#SteunStandaard.beschermendeLaag",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "definition": {
+        "nl": "Het type van bescherming van de constructie of steun met de corresponderende corrosieklasse."
+      },
+      "domain": [
+        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#SteunStandaard"
+      ],
+      "range": [
+        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcBeschermendeLaag"
       ],
       "generalization": []
     },
@@ -4389,6 +4474,62 @@
       ],
       "range": [
         "http://www.w3.org/2004/02/skos/core#Concept"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#OntwerpwaterstandStreefpeil.streefpeilOpwaarts",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "definition": {
+        "nl": "Het gewenste waterpeil dat wordt nagestreefd aan de stroomopwaartse kant van het sluizen en/of stuwencomplex."
+      },
+      "domain": [
+        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#OntwerpwaterstandStreefpeil"
+      ],
+      "range": [
+        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInMeterTAW"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#OntwerpwaterstandStreefpeil.streefpeilAfwaarts",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "definition": {
+        "nl": "Het gewenste waterpeil dat wordt nagestreefd aan de stroomafwaartse kant van het sluizen en/of stuwencomplex."
+      },
+      "domain": [
+        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#OntwerpwaterstandStreefpeil"
+      ],
+      "range": [
+        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInMeterTAW"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#OntwerpwaterstandStreefpeil.relevanteOntwerpWaterstandOpwaarts",
+      "@type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
+      "definition": {
+        "nl": "De relevante ontwerpwaterstand opwaarts van de waterbouwkundige constructie."
+      },
+      "domain": [
+        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#OntwerpwaterstandStreefpeil"
+      ],
+      "range": [
+        "http://www.w3.org/2001/XMLSchema#string"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#OntwerpwaterstandStreefpeil.relevanteOntwerpWaterstandAfwaarts",
+      "@type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
+      "definition": {
+        "nl": "De relevante ontwerpwaterstand afwaarts van de waterbouwkundige constructie."
+      },
+      "domain": [
+        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#OntwerpwaterstandStreefpeil"
+      ],
+      "range": [
+        "http://www.w3.org/2001/XMLSchema#string"
       ],
       "generalization": []
     },
@@ -5121,6 +5262,20 @@
       "generalization": []
     },
     {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#IpAdresObject.ipAdres",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "definition": {
+        "nl": "Netwerkadresgegevens of ip-adres van het element."
+      },
+      "domain": [
+        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#IpAdresObject"
+      ],
+      "range": [
+        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DteIPv4Adres"
+      ],
+      "generalization": []
+    },
+    {
       "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Inloopbehuizing.modelnaam",
       "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "definition": {
@@ -5152,7 +5307,7 @@
       "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Inloopbehuizing.inloopbehuizingMateriaal",
       "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "definition": {
-        "nl": "Materiaal waaruit de cabine vervaardigd is zonder buitenafwerking van dak of wanden."
+        "nl": "Materiaal waaruit de behuizing vervaardigd is zonder buitenafwerking van dak of wanden."
       },
       "domain": [
         "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Inloopbehuizing"
@@ -5810,6 +5965,48 @@
       "generalization": []
     },
     {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#ElementSpecificatie.elementLengte",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "definition": {
+        "nl": "De lengte van één element."
+      },
+      "domain": [
+        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#ElementSpecificatie"
+      ],
+      "range": [
+        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInMeter"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#ElementSpecificatie.elementGewicht",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "definition": {
+        "nl": "Het gewicht van één element."
+      },
+      "domain": [
+        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#ElementSpecificatie"
+      ],
+      "range": [
+        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInKilogram"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#ElementSpecificatie.elementBreedte",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "definition": {
+        "nl": "De breedte van één element."
+      },
+      "domain": [
+        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#ElementSpecificatie"
+      ],
+      "range": [
+        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInMeter"
+      ],
+      "generalization": []
+    },
+    {
       "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#ElektrischComponentennummerObject.componentnummer",
       "@type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
       "definition": {
@@ -6378,52 +6575,10 @@
       "generalization": []
     },
     {
-      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Constructiehoofd.vloerhoofdpeilOnderzijde",
-      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
-      "definition": {
-        "nl": "De hoogte van van het vloerpeil aan de onderzijde van het constructiehoofd"
-      },
-      "domain": [
-        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Constructiehoofd"
-      ],
-      "range": [
-        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInMeterTAW"
-      ],
-      "generalization": []
-    },
-    {
-      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Constructiehoofd.vloerhoofdpeilBovenzijde",
-      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
-      "definition": {
-        "nl": "De hoogte van van het vloerpeil aan de bovenzijde van het constructiehoofd"
-      },
-      "domain": [
-        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Constructiehoofd"
-      ],
-      "range": [
-        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInMeterTAW"
-      ],
-      "generalization": []
-    },
-    {
-      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Constructiehoofd.typeHoofd",
-      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
-      "definition": {
-        "nl": "Geeft het type hoofd aan van het constructiehoofd"
-      },
-      "domain": [
-        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Constructiehoofd"
-      ],
-      "range": [
-        "http://www.w3.org/2004/02/skos/core#Concept"
-      ],
-      "generalization": []
-    },
-    {
       "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Constructiehoofd.heeftKelder",
       "@type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
       "definition": {
-        "nl": "Geeft aan of er een kelder aanwezig is"
+        "nl": "Geeft aan of er een kelder aanwezig is."
       },
       "domain": [
         "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Constructiehoofd"
@@ -6437,7 +6592,7 @@
       "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Constructiehoofd.droogzetbaarheid",
       "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "definition": {
-        "nl": "Geeft aan of het constructiefhoofd al dan niet droog gezet kan worden"
+        "nl": "De verschillende mogelijkheden m.b.t. droogzetbaarheid van het constructiehoofd."
       },
       "domain": [
         "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Constructiehoofd"
@@ -6448,10 +6603,10 @@
       "generalization": []
     },
     {
-      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Constructiehoofd.drempelPeil",
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Constructiehoofd.drempelpeil",
       "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "definition": {
-        "nl": "De keuzelijst die de verschillende mogelijkheid geeft mbt droogzetbaarheid"
+        "nl": "Het peil van het laagste element van de vaste constructie van de constructiehoofd, uitgedrukt in mTAW."
       },
       "domain": [
         "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Constructiehoofd"
@@ -6462,44 +6617,16 @@
       "generalization": []
     },
     {
-      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Constructiehoofd.dikteTerHoogteVanDeSponning",
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Constructiehoofd.diepteSponning",
       "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "definition": {
-        "nl": "De dikte van de constructiehoofd ter hoogte van de sponning uitgedrukt in centimeter"
+        "nl": "Breedte van de oplegtand tov de sponning, uitgedrukt in centimeter."
       },
       "domain": [
         "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Constructiehoofd"
       ],
       "range": [
         "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInCentimeter"
-      ],
-      "generalization": []
-    },
-    {
-      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Constructiehoofd.breedteDrempel",
-      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
-      "definition": {
-        "nl": "De breedte van de drempel van het constructiehoofd uitgedrukt in meter"
-      },
-      "domain": [
-        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Constructiehoofd"
-      ],
-      "range": [
-        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInMeter"
-      ],
-      "generalization": []
-    },
-    {
-      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Constructiehoofd.bodempeilhoofd",
-      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
-      "definition": {
-        "nl": "De hoogte van het waterpeil aan de basis van het constructiehoofd uitgedrukt in mTAW"
-      },
-      "domain": [
-        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Constructiehoofd"
-      ],
-      "range": [
-        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInMeterTAW"
       ],
       "generalization": []
     },
@@ -6890,6 +7017,20 @@
       ],
       "range": [
         "http://www.w3.org/2004/02/skos/core#Concept"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Bestrating.technischeFiche",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "definition": {
+        "nl": "De technische fiche van de bestrating."
+      },
+      "domain": [
+        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Bestrating"
+      ],
+      "range": [
+        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcDocument"
       ],
       "generalization": []
     },
@@ -7517,7 +7658,7 @@
       "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#AbstracteAanvullendeGeometrie.naam",
       "@type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
       "definition": {
-        "nl": "De mensleesbare naam van een aanvullende geometrie. De beheerder kent deze naam toe of geeft de opdracht om deze toe te kennen."
+        "nl": "De mensleesbare naam van een aanvullende geometrie of bijlage. De beheerder kent deze naam toe of geeft de opdracht om deze toe te kennen."
       },
       "domain": [
         "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#AbstracteAanvullendeGeometrie"
@@ -7531,7 +7672,7 @@
       "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#AbstracteAanvullendeGeometrie.bijlage",
       "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "definition": {
-        "nl": "Het document of artefact dat een geometrie heeft."
+        "nl": "Het document of artefact dat een geometrie heeft of een bijlage is."
       },
       "domain": [
         "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#AbstracteAanvullendeGeometrie"

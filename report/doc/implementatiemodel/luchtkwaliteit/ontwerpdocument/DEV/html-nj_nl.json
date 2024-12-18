@@ -2,7 +2,7 @@
   "metadata": {
     "title": "Luchtkwaliteit",
     "uri": "http://fixme.com",
-    "issued": "5-02-2024",
+    "issued": "18-12-2024",
     "filename": "luchtkwaliteit",
     "navigation": {
       "prev": "",
@@ -13,8 +13,8 @@
     "documentconfig": {},
     "status": "https://data.vlaanderen.be/doc/concept/StandaardStatus/KandidaatStandaard",
     "statuslabel": "Onbekend",
-    "repositoryurl": "https://github.com/Informatievlaanderen/OSLOthema-wegenenverkeer/tree/375d13fce16b81722f2044429bfec0904faf1784",
-    "changelogurl": "https://github.com/Informatievlaanderen/OSLOthema-wegenenverkeer/blob/375d13fce16b81722f2044429bfec0904faf1784/CHANGELOG",
+    "repositoryurl": "https://github.com/Informatievlaanderen/OSLOthema-wegenenverkeer/tree/0e5bbb26160c48c7229c131acf4c3262f64887ae",
+    "changelogurl": "https://github.com/Informatievlaanderen/OSLOthema-wegenenverkeer/blob/0e5bbb26160c48c7229c131acf4c3262f64887ae/CHANGELOG",
     "feedbackurl": "https://docs.google.com/forms/d/e/1FAIpQLSeaxOnrCkcarNHWI21YfPJ7sZChHVzOB2-P9ptzxkD9YX69-g/viewform",
     "standaardregisterurl": "https://data.vlaanderen.be/standaarden/",
     "dependencies": [],
@@ -23,21 +23,35 @@
   },
   "classes": [
     {
-      "uri": "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#AanhorigheidKoker",
-      "name": "Aanhorigheden koker",
+      "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#AanhorighedenBrug",
+      "name": "Aanhorigheden brug",
       "label": {
-        "nl": "Aanhorigheden koker"
+        "nl": "Aanhorigheden brug"
       },
-      "sort": "Aanhorigheden koker",
+      "sort": "Aanhorigheden brug",
       "description": {
-        "nl": "Een abstracte klasse die de aanhorigheden bundelt die in een koker kunnen voorkomen zodat de overerving van de bevestigings relatie kan plaatsvinden."
+        "nl": "Een bundeling van aanhorigheden die bij een brug kunnen horen."
       },
       "usage": {},
       "parents": [],
       "properties": []
     },
     {
-      "uri": "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#BekledingComponent",
+      "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#AanhorigheidKoker",
+      "name": "Aanhorigheden koker",
+      "label": {
+        "nl": "Aanhorigheden koker"
+      },
+      "sort": "Aanhorigheden koker",
+      "description": {
+        "nl": "Een abstracte klasse die de aanhorigheden bundelt die in een koker kunnen voorkomen zodat de overerving van de bevestigingsrelatie kan plaatsvinden."
+      },
+      "usage": {},
+      "parents": [],
+      "properties": []
+    },
+    {
+      "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#BekledingComponent",
       "name": "Bekleding component",
       "label": {
         "nl": "Bekleding component"
@@ -52,20 +66,27 @@
           "label": "AIM object",
           "name": "AIMObject",
           "package": "OSLO-Implementatieelement",
-          "uri": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMObject",
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMObject",
           "scoped_uri": "#AIM object"
+        },
+        {
+          "label": "Aanhorigheden brug",
+          "name": "AanhorighedenBrug",
+          "package": "OSLO-Abstracten",
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#AanhorighedenBrug",
+          "scoped_uri": "#Aanhorigheden brug"
         },
         {
           "label": "Aanhorigheden koker",
           "name": "AanhorigheidKoker",
           "package": "OSLO-Abstracten",
-          "uri": "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#AanhorigheidKoker",
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#AanhorigheidKoker",
           "scoped_uri": "#Aanhorigheden koker"
         }
       ],
       "properties": [
         {
-          "uri": "https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/luchtkwaliteit/#Bevestiging",
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/luchtkwaliteit/#Bevestiging",
           "name": "bevestiging",
           "sort": "Bevestiging",
           "label": {
@@ -78,19 +99,19 @@
           "domain": [
             {
               "EA-Name": "BekledingComponent",
-              "uri": "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#BekledingComponent"
+              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#BekledingComponent"
             }
           ],
           "range": [
             {
               "range_label": "Luchtkwaliteittoestel",
-              "range_uri": "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#Luchtkwaliteittoestel"
+              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Luchtkwaliteittoestel"
             }
           ],
           "scopedrange": [
             {
               "range_uri": "#Luchtkwaliteit",
-              "range_puri": "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#Luchtkwaliteittoestel",
+              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Luchtkwaliteittoestel",
               "range_label": {
                 "nl": "Luchtkwaliteit"
               }
@@ -100,7 +121,7 @@
           "codelist_uri": ""
         },
         {
-          "uri": "https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/luchtkwaliteit/#Bevestiging",
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/luchtkwaliteit/#Bevestiging",
           "name": "bevestiging",
           "sort": "Bevestiging",
           "label": {
@@ -113,19 +134,19 @@
           "domain": [
             {
               "EA-Name": "BekledingComponent",
-              "uri": "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#BekledingComponent"
+              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#BekledingComponent"
             }
           ],
           "range": [
             {
               "range_label": "Luchtkwaliteittoestel",
-              "range_uri": "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#Luchtkwaliteittoestel"
+              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Luchtkwaliteittoestel"
             }
           ],
           "scopedrange": [
             {
               "range_uri": "#Luchtkwaliteit",
-              "range_puri": "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#Luchtkwaliteittoestel",
+              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Luchtkwaliteittoestel",
               "range_label": {
                 "nl": "Luchtkwaliteit"
               }
@@ -135,7 +156,7 @@
           "codelist_uri": ""
         },
         {
-          "uri": "https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/luchtkwaliteit/#Bevestiging",
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/luchtkwaliteit/#Bevestiging",
           "name": "bevestiging",
           "sort": "Bevestiging",
           "label": {
@@ -148,19 +169,89 @@
           "domain": [
             {
               "EA-Name": "BekledingComponent",
-              "uri": "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#BekledingComponent"
+              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#BekledingComponent"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "Luchtkwaliteitsensor",
+              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Luchtkwaliteitsensor"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Luchtkwaliteitsensor",
+              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Luchtkwaliteitsensor",
+              "range_label": {
+                "nl": "Luchtkwaliteitsensor"
+              }
+            }
+          ],
+          "cardinality": "",
+          "codelist_uri": ""
+        },
+        {
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/luchtkwaliteit/#Bevestiging",
+          "name": "bevestiging",
+          "sort": "Bevestiging",
+          "label": {
+            "nl": "Bevestiging"
+          },
+          "description": {
+            "nl": "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Deze relatie heeft geen richting."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "BekledingComponent",
+              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#BekledingComponent"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "Luchtkwaliteitsensor",
+              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Luchtkwaliteitsensor"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Luchtkwaliteitsensor",
+              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Luchtkwaliteitsensor",
+              "range_label": {
+                "nl": "Luchtkwaliteitsensor"
+              }
+            }
+          ],
+          "cardinality": "",
+          "codelist_uri": ""
+        },
+        {
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/luchtkwaliteit/#Bevestiging",
+          "name": "bevestiging",
+          "sort": "Bevestiging",
+          "label": {
+            "nl": "Bevestiging"
+          },
+          "description": {
+            "nl": "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Deze relatie heeft geen richting."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "BekledingComponent",
+              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#BekledingComponent"
             }
           ],
           "range": [
             {
               "range_label": "LKSensorDoorverbinddoos",
-              "range_uri": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#LKSensorDoorverbinddoos"
+              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#LKSensorDoorverbinddoos"
             }
           ],
           "scopedrange": [
             {
               "range_uri": "#Luchtkwaliteitsensor doorverbinddoos",
-              "range_puri": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#LKSensorDoorverbinddoos",
+              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#LKSensorDoorverbinddoos",
               "range_label": {
                 "nl": "Luchtkwaliteitsensor doorverbinddoos"
               }
@@ -170,7 +261,7 @@
           "codelist_uri": ""
         },
         {
-          "uri": "https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/luchtkwaliteit/#Bevestiging",
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/luchtkwaliteit/#Bevestiging",
           "name": "bevestiging",
           "sort": "Bevestiging",
           "label": {
@@ -183,19 +274,19 @@
           "domain": [
             {
               "EA-Name": "BekledingComponent",
-              "uri": "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#BekledingComponent"
+              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#BekledingComponent"
             }
           ],
           "range": [
             {
               "range_label": "LKSensorDoorverbinddoos",
-              "range_uri": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#LKSensorDoorverbinddoos"
+              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#LKSensorDoorverbinddoos"
             }
           ],
           "scopedrange": [
             {
               "range_uri": "#Luchtkwaliteitsensor doorverbinddoos",
-              "range_puri": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#LKSensorDoorverbinddoos",
+              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#LKSensorDoorverbinddoos",
               "range_label": {
                 "nl": "Luchtkwaliteitsensor doorverbinddoos"
               }
@@ -207,12 +298,12 @@
       ]
     },
     {
-      "uri": "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#ElektrischComponentennummerObject",
-      "name": "Elektisch componentennummer object",
+      "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#ElektrischComponentennummerObject",
+      "name": "Elektrisch componentennummer object",
       "label": {
-        "nl": "Elektisch componentennummer object"
+        "nl": "Elektrisch componentennummer object"
       },
-      "sort": "Elektisch componentennummer object",
+      "sort": "Elektrisch componentennummer object",
       "description": {
         "nl": "Abstracte voor Objecttypes waarvoor het componentnummer op het lokale elektrische schema moet bijgehouden worden."
       },
@@ -220,7 +311,7 @@
       "parents": [],
       "properties": [
         {
-          "uri": "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#ElektrischComponentennummerObject.componentnummer",
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#ElektrischComponentennummerObject.componentnummer",
           "name": "componentnummer",
           "sort": "componentnummer",
           "label": {
@@ -233,7 +324,7 @@
           "domain": [
             {
               "EA-Name": "ElektrischComponentennummerObject",
-              "uri": "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#ElektrischComponentennummerObject"
+              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#ElektrischComponentennummerObject"
             }
           ],
           "range": [
@@ -257,7 +348,7 @@
       ]
     },
     {
-      "uri": "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#Luchtkwaliteittoestel",
+      "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Luchtkwaliteittoestel",
       "name": "Luchtkwaliteit",
       "label": {
         "nl": "Luchtkwaliteit"
@@ -272,13 +363,13 @@
           "label": "AIM naam object",
           "name": "AIMNaamObject",
           "package": "OSLO-Implementatieelement",
-          "uri": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMNaamObject",
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMNaamObject",
           "scoped_uri": "#AIM naam object"
         }
       ],
       "properties": [
         {
-          "uri": "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#Luchtkwaliteittoestel.modelnaam",
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Luchtkwaliteittoestel.modelnaam",
           "name": "modelnaam",
           "sort": "modelnaam",
           "label": {
@@ -291,7 +382,7 @@
           "domain": [
             {
               "EA-Name": "Luchtkwaliteittoestel",
-              "uri": "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#Luchtkwaliteittoestel"
+              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Luchtkwaliteittoestel"
             }
           ],
           "range": [
@@ -313,7 +404,7 @@
           "codelist_uri": "https://wegenenverkeer-test.data.vlaanderen.be/id/conceptscheme/KlLuchtkwaliteitOpstellingModelnaam"
         },
         {
-          "uri": "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#Luchtkwaliteittoestel.merk",
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Luchtkwaliteittoestel.merk",
           "name": "merk",
           "sort": "merk",
           "label": {
@@ -326,7 +417,7 @@
           "domain": [
             {
               "EA-Name": "Luchtkwaliteittoestel",
-              "uri": "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#Luchtkwaliteittoestel"
+              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Luchtkwaliteittoestel"
             }
           ],
           "range": [
@@ -350,7 +441,7 @@
       ]
     },
     {
-      "uri": "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#SerienummerObject",
+      "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#SerienummerObject",
       "name": "Serienummerobject",
       "label": {
         "nl": "Serienummerobject"
@@ -363,7 +454,7 @@
       "parents": [],
       "properties": [
         {
-          "uri": "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#SerienummerObject.serienummer",
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#SerienummerObject.serienummer",
           "name": "serienummer",
           "sort": "serienummer",
           "label": {
@@ -376,7 +467,7 @@
           "domain": [
             {
               "EA-Name": "SerienummerObject",
-              "uri": "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#SerienummerObject"
+              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#SerienummerObject"
             }
           ],
           "range": [
@@ -400,7 +491,7 @@
       ]
     },
     {
-      "uri": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMDBStatus",
+      "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMDBStatus",
       "name": "AIM databank status",
       "label": {
         "nl": "AIM databank status"
@@ -413,7 +504,7 @@
       "parents": [],
       "properties": [
         {
-          "uri": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMDBStatus.isActief",
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMDBStatus.isActief",
           "name": "is actief",
           "sort": "is actief",
           "label": {
@@ -426,7 +517,7 @@
           "domain": [
             {
               "EA-Name": "AIMDBStatus",
-              "uri": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMDBStatus"
+              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMDBStatus"
             }
           ],
           "range": [
@@ -450,7 +541,7 @@
       ]
     },
     {
-      "uri": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMNaamObject",
+      "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMNaamObject",
       "name": "AIM naam object",
       "label": {
         "nl": "AIM naam object"
@@ -465,13 +556,13 @@
           "label": "AIM object",
           "name": "AIMObject",
           "package": "OSLO-Implementatieelement",
-          "uri": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMObject",
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMObject",
           "scoped_uri": "#AIM object"
         }
       ],
       "properties": [
         {
-          "uri": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMNaamObject.naam",
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMNaamObject.naam",
           "name": "naam",
           "sort": "naam",
           "label": {
@@ -484,7 +575,7 @@
           "domain": [
             {
               "EA-Name": "AIMNaamObject",
-              "uri": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMNaamObject"
+              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMNaamObject"
             }
           ],
           "range": [
@@ -508,7 +599,7 @@
       ]
     },
     {
-      "uri": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMObject",
+      "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMObject",
       "name": "AIM object",
       "label": {
         "nl": "AIM object"
@@ -520,23 +611,30 @@
       "usage": {},
       "parents": [
         {
+          "label": "AIM versie",
+          "name": "AIMVersie",
+          "package": "OSLO-Implementatieelement",
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMVersie",
+          "scoped_uri": "#AIM versie"
+        },
+        {
           "label": "AIM Toestand",
           "name": "AIMToestand",
           "package": "OSLO-Implementatieelement",
-          "uri": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMToestand",
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMToestand",
           "scoped_uri": "#AIM Toestand"
         },
         {
           "label": "AIM databank status",
           "name": "AIMDBStatus",
           "package": "OSLO-Implementatieelement",
-          "uri": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMDBStatus",
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMDBStatus",
           "scoped_uri": "#AIM databank status"
         }
       ],
       "properties": [
         {
-          "uri": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMObject.typeURI",
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMObject.typeURI",
           "name": "type URI",
           "sort": "type URI",
           "label": {
@@ -549,7 +647,7 @@
           "domain": [
             {
               "EA-Name": "AIMObject",
-              "uri": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMObject"
+              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMObject"
             }
           ],
           "range": [
@@ -571,7 +669,7 @@
           "codelist_uri": ""
         },
         {
-          "uri": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMObject.theoretischeLevensduur",
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMObject.theoretischeLevensduur",
           "name": "theoretische levensduur",
           "sort": "theoretische levensduur",
           "label": {
@@ -584,19 +682,19 @@
           "domain": [
             {
               "EA-Name": "AIMObject",
-              "uri": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMObject"
+              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMObject"
             }
           ],
           "range": [
             {
               "range_label": "KwantWrdInMaand",
-              "range_uri": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMaand"
+              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInMaand"
             }
           ],
           "scopedrange": [
             {
               "range_uri": "#Kwantitatieve waarde in maand",
-              "range_puri": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMaand",
+              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInMaand",
               "range_label": {
                 "nl": "Kwantitatieve waarde in maand"
               }
@@ -606,7 +704,7 @@
           "codelist_uri": ""
         },
         {
-          "uri": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMObject.standaardBestekPostNummer",
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMObject.standaardBestekPostNummer",
           "name": "standaardbestekpostnummer",
           "sort": "standaardbestekpostnummer",
           "label": {
@@ -619,7 +717,7 @@
           "domain": [
             {
               "EA-Name": "AIMObject",
-              "uri": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMObject"
+              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMObject"
             }
           ],
           "range": [
@@ -641,7 +739,7 @@
           "codelist_uri": ""
         },
         {
-          "uri": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMObject.notitie",
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMObject.notitie",
           "name": "notitie",
           "sort": "notitie",
           "label": {
@@ -654,7 +752,7 @@
           "domain": [
             {
               "EA-Name": "AIMObject",
-              "uri": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMObject"
+              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMObject"
             }
           ],
           "range": [
@@ -676,7 +774,7 @@
           "codelist_uri": ""
         },
         {
-          "uri": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMObject.datumOprichtingObject",
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMObject.datumOprichtingObject",
           "name": "datum oprichting object",
           "sort": "datum oprichting object",
           "label": {
@@ -689,7 +787,7 @@
           "domain": [
             {
               "EA-Name": "AIMObject",
-              "uri": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMObject"
+              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMObject"
             }
           ],
           "range": [
@@ -711,7 +809,7 @@
           "codelist_uri": ""
         },
         {
-          "uri": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMObject.bestekPostNummer",
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMObject.bestekPostNummer",
           "name": "bestekpostnummer",
           "sort": "bestekpostnummer",
           "label": {
@@ -726,7 +824,7 @@
           "domain": [
             {
               "EA-Name": "AIMObject",
-              "uri": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMObject"
+              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMObject"
             }
           ],
           "range": [
@@ -748,7 +846,7 @@
           "codelist_uri": ""
         },
         {
-          "uri": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMObject.assetId",
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMObject.assetId",
           "name": "asset-id",
           "sort": "asset-id",
           "label": {
@@ -761,19 +859,19 @@
           "domain": [
             {
               "EA-Name": "AIMObject",
-              "uri": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMObject"
+              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMObject"
             }
           ],
           "range": [
             {
               "range_label": "DtcIdentificator",
-              "range_uri": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcIdentificator"
+              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcIdentificator"
             }
           ],
           "scopedrange": [
             {
               "range_uri": "#Identificator",
-              "range_puri": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcIdentificator",
+              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcIdentificator",
               "range_label": {
                 "nl": "Identificator"
               }
@@ -785,7 +883,7 @@
       ]
     },
     {
-      "uri": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMToestand",
+      "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMToestand",
       "name": "AIM Toestand",
       "label": {
         "nl": "AIM Toestand"
@@ -798,7 +896,7 @@
       "parents": [],
       "properties": [
         {
-          "uri": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMToestand.toestand",
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMToestand.toestand",
           "name": "AIM-toestand",
           "sort": "AIM-toestand",
           "label": {
@@ -811,7 +909,7 @@
           "domain": [
             {
               "EA-Name": "AIMToestand",
-              "uri": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMToestand"
+              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMToestand"
             }
           ],
           "range": [
@@ -835,7 +933,57 @@
       ]
     },
     {
-      "uri": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#NaampadObject",
+      "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMVersie",
+      "name": "AIM versie",
+      "label": {
+        "nl": "AIM versie"
+      },
+      "sort": "AIM versie",
+      "description": {
+        "nl": "Abstracte klasse met de eigenschappen om de versionering van een asset te beheren."
+      },
+      "usage": {},
+      "parents": [],
+      "properties": [
+        {
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMVersie.assetVersie",
+          "name": "asset-versie",
+          "sort": "asset-versie",
+          "label": {
+            "nl": "asset-versie"
+          },
+          "description": {
+            "nl": "De versie van de asset in de database."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "AIMVersie",
+              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMVersie"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "DtcAssetVersie",
+              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcAssetVersie"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Asset versie",
+              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcAssetVersie",
+              "range_label": {
+                "nl": "Asset versie"
+              }
+            }
+          ],
+          "cardinality": "1",
+          "codelist_uri": ""
+        }
+      ]
+    },
+    {
+      "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#NaampadObject",
       "name": "Naampad object",
       "label": {
         "nl": "Naampad object"
@@ -850,13 +998,13 @@
           "label": "AIM naam object",
           "name": "AIMNaamObject",
           "package": "OSLO-Implementatieelement",
-          "uri": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMNaamObject",
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMNaamObject",
           "scoped_uri": "#AIM naam object"
         }
       ],
       "properties": [
         {
-          "uri": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#NaampadObject.naampad",
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#NaampadObject.naampad",
           "name": "naampad",
           "sort": "naampad",
           "label": {
@@ -869,7 +1017,7 @@
           "domain": [
             {
               "EA-Name": "NaampadObject",
-              "uri": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#NaampadObject"
+              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#NaampadObject"
             }
           ],
           "range": [
@@ -893,7 +1041,7 @@
       ]
     },
     {
-      "uri": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Luchtkwaliteitsensor",
+      "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Luchtkwaliteitsensor",
       "name": "Luchtkwaliteitsensor",
       "label": {
         "nl": "Luchtkwaliteitsensor"
@@ -908,14 +1056,14 @@
           "label": "Naampad object",
           "name": "NaampadObject",
           "package": "OSLO-Implementatieelement",
-          "uri": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#NaampadObject",
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#NaampadObject",
           "scoped_uri": "#Naampad object"
         }
       ],
       "properties": []
     },
     {
-      "uri": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Bevestiging",
+      "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Bevestiging",
       "name": "Bevestiging",
       "label": {
         "nl": "Bevestiging"
@@ -930,14 +1078,14 @@
           "label": "Niet-directionele relatie",
           "name": "NietDirectioneleRelatie",
           "package": "OSLO-Implementatieelement",
-          "uri": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#NietDirectioneleRelatie",
-          "scoped_uri": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#NietDirectioneleRelatie"
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#NietDirectioneleRelatie",
+          "scoped_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#NietDirectioneleRelatie"
         }
       ],
       "properties": []
     },
     {
-      "uri": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#HoortBij",
+      "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#HoortBij",
       "name": "Hoort bij",
       "label": {
         "nl": "Hoort bij"
@@ -952,14 +1100,14 @@
           "label": "Directionele relatie",
           "name": "DirectioneleRelatie",
           "package": "OSLO-Implementatieelement",
-          "uri": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DirectioneleRelatie",
-          "scoped_uri": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DirectioneleRelatie"
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DirectioneleRelatie",
+          "scoped_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DirectioneleRelatie"
         }
       ],
       "properties": []
     },
     {
-      "uri": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#IOKaart",
+      "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#IOKaart",
       "name": "IO-Kaart",
       "label": {
         "nl": "IO-Kaart"
@@ -974,27 +1122,27 @@
           "label": "AIM naam object",
           "name": "AIMNaamObject",
           "package": "OSLO-Implementatieelement",
-          "uri": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMNaamObject",
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMNaamObject",
           "scoped_uri": "#AIM naam object"
         },
         {
           "label": "Serienummerobject",
           "name": "SerienummerObject",
           "package": "OSLO-Abstracten",
-          "uri": "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#SerienummerObject",
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#SerienummerObject",
           "scoped_uri": "#Serienummerobject"
         },
         {
-          "label": "Elektisch componentennummer object",
+          "label": "Elektrisch componentennummer object",
           "name": "ElektrischComponentennummerObject",
           "package": "OSLO-Abstracten",
-          "uri": "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#ElektrischComponentennummerObject",
-          "scoped_uri": "#Elektisch componentennummer object"
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#ElektrischComponentennummerObject",
+          "scoped_uri": "#Elektrisch componentennummer object"
         }
       ],
       "properties": [
         {
-          "uri": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#IOKaart.signaalType",
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#IOKaart.signaalType",
           "name": "signaalType",
           "sort": "signaalType",
           "label": {
@@ -1007,7 +1155,7 @@
           "domain": [
             {
               "EA-Name": "IOKaart",
-              "uri": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#IOKaart"
+              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#IOKaart"
             }
           ],
           "range": [
@@ -1029,7 +1177,7 @@
           "codelist_uri": "https://wegenenverkeer-test.data.vlaanderen.be/id/conceptscheme/KlIOSignaaltype"
         },
         {
-          "uri": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#IOKaart.richting",
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#IOKaart.richting",
           "name": "richting",
           "sort": "richting",
           "label": {
@@ -1042,7 +1190,7 @@
           "domain": [
             {
               "EA-Name": "IOKaart",
-              "uri": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#IOKaart"
+              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#IOKaart"
             }
           ],
           "range": [
@@ -1064,7 +1212,7 @@
           "codelist_uri": "https://wegenenverkeer-test.data.vlaanderen.be/id/conceptscheme/KlIORichting"
         },
         {
-          "uri": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#IOKaart.poortadres",
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#IOKaart.poortadres",
           "name": "poortadres",
           "sort": "poortadres",
           "label": {
@@ -1077,7 +1225,7 @@
           "domain": [
             {
               "EA-Name": "IOKaart",
-              "uri": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#IOKaart"
+              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#IOKaart"
             }
           ],
           "range": [
@@ -1099,7 +1247,7 @@
           "codelist_uri": ""
         },
         {
-          "uri": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#IOKaart.modelnaam",
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#IOKaart.modelnaam",
           "name": "modelnaam",
           "sort": "modelnaam",
           "label": {
@@ -1112,7 +1260,7 @@
           "domain": [
             {
               "EA-Name": "IOKaart",
-              "uri": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#IOKaart"
+              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#IOKaart"
             }
           ],
           "range": [
@@ -1134,7 +1282,7 @@
           "codelist_uri": "https://wegenenverkeer-test.data.vlaanderen.be/id/conceptscheme/KlIOKaartModelnaam"
         },
         {
-          "uri": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#IOKaart.merk",
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#IOKaart.merk",
           "name": "merk",
           "sort": "merk",
           "label": {
@@ -1147,7 +1295,7 @@
           "domain": [
             {
               "EA-Name": "IOKaart",
-              "uri": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#IOKaart"
+              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#IOKaart"
             }
           ],
           "range": [
@@ -1169,7 +1317,7 @@
           "codelist_uri": "https://wegenenverkeer-test.data.vlaanderen.be/id/conceptscheme/KlIOKaartMerk"
         },
         {
-          "uri": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#IOKaart.firmwareversie",
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#IOKaart.firmwareversie",
           "name": "firmwareversie",
           "sort": "firmwareversie",
           "label": {
@@ -1182,7 +1330,7 @@
           "domain": [
             {
               "EA-Name": "IOKaart",
-              "uri": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#IOKaart"
+              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#IOKaart"
             }
           ],
           "range": [
@@ -1204,7 +1352,7 @@
           "codelist_uri": ""
         },
         {
-          "uri": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#IOKaart.bitsnelheid",
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#IOKaart.bitsnelheid",
           "name": "bitsnelheid",
           "sort": "bitsnelheid",
           "label": {
@@ -1217,7 +1365,7 @@
           "domain": [
             {
               "EA-Name": "IOKaart",
-              "uri": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#IOKaart"
+              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#IOKaart"
             }
           ],
           "range": [
@@ -1239,7 +1387,7 @@
           "codelist_uri": "https://wegenenverkeer-test.data.vlaanderen.be/id/conceptscheme/KlIOBitSnelheid"
         },
         {
-          "uri": "https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/luchtkwaliteit/#Sturing",
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/luchtkwaliteit/#Sturing",
           "name": "sturing",
           "sort": "Sturing",
           "label": {
@@ -1252,19 +1400,19 @@
           "domain": [
             {
               "EA-Name": "IOKaart",
-              "uri": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#IOKaart"
+              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#IOKaart"
             }
           ],
           "range": [
             {
               "range_label": "LuchtkwaliteitControleUnit",
-              "range_uri": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#LuchtkwaliteitControleUnit"
+              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#LuchtkwaliteitControleUnit"
             }
           ],
           "scopedrange": [
             {
               "range_uri": "#Luchtkwaliteit controle unit",
-              "range_puri": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#LuchtkwaliteitControleUnit",
+              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#LuchtkwaliteitControleUnit",
               "range_label": {
                 "nl": "Luchtkwaliteit controle unit"
               }
@@ -1274,7 +1422,7 @@
           "codelist_uri": ""
         },
         {
-          "uri": "https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/luchtkwaliteit/#Sturing",
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/luchtkwaliteit/#Sturing",
           "name": "sturing",
           "sort": "Sturing",
           "label": {
@@ -1287,19 +1435,19 @@
           "domain": [
             {
               "EA-Name": "IOKaart",
-              "uri": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#IOKaart"
+              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#IOKaart"
             }
           ],
           "range": [
             {
               "range_label": "LuchtkwaliteitControleUnit",
-              "range_uri": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#LuchtkwaliteitControleUnit"
+              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#LuchtkwaliteitControleUnit"
             }
           ],
           "scopedrange": [
             {
               "range_uri": "#Luchtkwaliteit controle unit",
-              "range_puri": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#LuchtkwaliteitControleUnit",
+              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#LuchtkwaliteitControleUnit",
               "range_label": {
                 "nl": "Luchtkwaliteit controle unit"
               }
@@ -1311,7 +1459,7 @@
       ]
     },
     {
-      "uri": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#LKSensorDoorverbinddoos",
+      "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#LKSensorDoorverbinddoos",
       "name": "Luchtkwaliteitsensor doorverbinddoos",
       "label": {
         "nl": "Luchtkwaliteitsensor doorverbinddoos"
@@ -1328,13 +1476,13 @@
           "label": "AIM naam object",
           "name": "AIMNaamObject",
           "package": "OSLO-Implementatieelement",
-          "uri": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMNaamObject",
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMNaamObject",
           "scoped_uri": "#AIM naam object"
         }
       ],
       "properties": [
         {
-          "uri": "https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/luchtkwaliteit/#Voedt",
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/luchtkwaliteit/#Voedt",
           "name": "voedt",
           "sort": "Voedt",
           "label": {
@@ -1347,19 +1495,19 @@
           "domain": [
             {
               "EA-Name": "LKSensorDoorverbinddoos",
-              "uri": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#LKSensorDoorverbinddoos"
+              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#LKSensorDoorverbinddoos"
             }
           ],
           "range": [
             {
               "range_label": "Luchtkwaliteitreflector",
-              "range_uri": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Luchtkwaliteitreflector"
+              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Luchtkwaliteitreflector"
             }
           ],
           "scopedrange": [
             {
               "range_uri": "#Luchtkwaliteitreflector",
-              "range_puri": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Luchtkwaliteitreflector",
+              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Luchtkwaliteitreflector",
               "range_label": {
                 "nl": "Luchtkwaliteitreflector"
               }
@@ -1369,7 +1517,7 @@
           "codelist_uri": ""
         },
         {
-          "uri": "https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/luchtkwaliteit/#Voedt",
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/luchtkwaliteit/#Voedt",
           "name": "voedt",
           "sort": "Voedt",
           "label": {
@@ -1382,19 +1530,19 @@
           "domain": [
             {
               "EA-Name": "LKSensorDoorverbinddoos",
-              "uri": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#LKSensorDoorverbinddoos"
+              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#LKSensorDoorverbinddoos"
             }
           ],
           "range": [
             {
               "range_label": "LuchtkwaliteitZenderOntvanger",
-              "range_uri": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#LuchtkwaliteitZenderOntvanger"
+              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#LuchtkwaliteitZenderOntvanger"
             }
           ],
           "scopedrange": [
             {
               "range_uri": "#Luchtkwaliteit Zender-Ontvanger",
-              "range_puri": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#LuchtkwaliteitZenderOntvanger",
+              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#LuchtkwaliteitZenderOntvanger",
               "range_label": {
                 "nl": "Luchtkwaliteit Zender-Ontvanger"
               }
@@ -1404,7 +1552,7 @@
           "codelist_uri": ""
         },
         {
-          "uri": "https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/luchtkwaliteit/#Sturing",
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/luchtkwaliteit/#Sturing",
           "name": "sturing",
           "sort": "Sturing",
           "label": {
@@ -1417,19 +1565,89 @@
           "domain": [
             {
               "EA-Name": "LKSensorDoorverbinddoos",
-              "uri": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#LKSensorDoorverbinddoos"
+              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#LKSensorDoorverbinddoos"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "LuchtkwaliteitZenderOntvanger",
+              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#LuchtkwaliteitZenderOntvanger"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Luchtkwaliteit Zender-Ontvanger",
+              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#LuchtkwaliteitZenderOntvanger",
+              "range_label": {
+                "nl": "Luchtkwaliteit Zender-Ontvanger"
+              }
+            }
+          ],
+          "cardinality": "",
+          "codelist_uri": ""
+        },
+        {
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/luchtkwaliteit/#Sturing",
+          "name": "sturing",
+          "sort": "Sturing",
+          "label": {
+            "nl": "Sturing"
+          },
+          "description": {
+            "nl": "Deze relatie geeft aan of er een of andere vorm van dataverkeer is tussen 2 onderdelen. Een wegverlichtingstoestel dat aan staat wordt ook als sturing beschouwd, in dit geval is het een lang ononderbroken elektrisch aan-signaal. Deze relatie heeft geen richting."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "LKSensorDoorverbinddoos",
+              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#LKSensorDoorverbinddoos"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "LuchtkwaliteitZenderOntvanger",
+              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#LuchtkwaliteitZenderOntvanger"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Luchtkwaliteit Zender-Ontvanger",
+              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#LuchtkwaliteitZenderOntvanger",
+              "range_label": {
+                "nl": "Luchtkwaliteit Zender-Ontvanger"
+              }
+            }
+          ],
+          "cardinality": "",
+          "codelist_uri": ""
+        },
+        {
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/luchtkwaliteit/#Sturing",
+          "name": "sturing",
+          "sort": "Sturing",
+          "label": {
+            "nl": "Sturing"
+          },
+          "description": {
+            "nl": "Deze relatie geeft aan of er een of andere vorm van dataverkeer is tussen 2 onderdelen. Een wegverlichtingstoestel dat aan staat wordt ook als sturing beschouwd, in dit geval is het een lang ononderbroken elektrisch aan-signaal. Deze relatie heeft geen richting."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "LKSensorDoorverbinddoos",
+              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#LKSensorDoorverbinddoos"
             }
           ],
           "range": [
             {
               "range_label": "Luchtkwaliteitreflector",
-              "range_uri": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Luchtkwaliteitreflector"
+              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Luchtkwaliteitreflector"
             }
           ],
           "scopedrange": [
             {
               "range_uri": "#Luchtkwaliteitreflector",
-              "range_puri": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Luchtkwaliteitreflector",
+              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Luchtkwaliteitreflector",
               "range_label": {
                 "nl": "Luchtkwaliteitreflector"
               }
@@ -1439,7 +1657,7 @@
           "codelist_uri": ""
         },
         {
-          "uri": "https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/luchtkwaliteit/#Sturing",
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/luchtkwaliteit/#Sturing",
           "name": "sturing",
           "sort": "Sturing",
           "label": {
@@ -1452,91 +1670,21 @@
           "domain": [
             {
               "EA-Name": "LKSensorDoorverbinddoos",
-              "uri": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#LKSensorDoorverbinddoos"
+              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#LKSensorDoorverbinddoos"
             }
           ],
           "range": [
             {
               "range_label": "Luchtkwaliteitreflector",
-              "range_uri": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Luchtkwaliteitreflector"
+              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Luchtkwaliteitreflector"
             }
           ],
           "scopedrange": [
             {
               "range_uri": "#Luchtkwaliteitreflector",
-              "range_puri": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Luchtkwaliteitreflector",
+              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Luchtkwaliteitreflector",
               "range_label": {
                 "nl": "Luchtkwaliteitreflector"
-              }
-            }
-          ],
-          "cardinality": "",
-          "codelist_uri": ""
-        },
-        {
-          "uri": "https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/luchtkwaliteit/#Sturing",
-          "name": "sturing",
-          "sort": "Sturing",
-          "label": {
-            "nl": "Sturing"
-          },
-          "description": {
-            "nl": "Deze relatie geeft aan of er een of andere vorm van dataverkeer is tussen 2 onderdelen. Een wegverlichtingstoestel dat aan staat wordt ook als sturing beschouwd, in dit geval is het een lang ononderbroken elektrisch aan-signaal. Deze relatie heeft geen richting."
-          },
-          "usage": {},
-          "domain": [
-            {
-              "EA-Name": "LKSensorDoorverbinddoos",
-              "uri": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#LKSensorDoorverbinddoos"
-            }
-          ],
-          "range": [
-            {
-              "range_label": "LuchtkwaliteitZenderOntvanger",
-              "range_uri": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#LuchtkwaliteitZenderOntvanger"
-            }
-          ],
-          "scopedrange": [
-            {
-              "range_uri": "#Luchtkwaliteit Zender-Ontvanger",
-              "range_puri": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#LuchtkwaliteitZenderOntvanger",
-              "range_label": {
-                "nl": "Luchtkwaliteit Zender-Ontvanger"
-              }
-            }
-          ],
-          "cardinality": "",
-          "codelist_uri": ""
-        },
-        {
-          "uri": "https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/luchtkwaliteit/#Sturing",
-          "name": "sturing",
-          "sort": "Sturing",
-          "label": {
-            "nl": "Sturing"
-          },
-          "description": {
-            "nl": "Deze relatie geeft aan of er een of andere vorm van dataverkeer is tussen 2 onderdelen. Een wegverlichtingstoestel dat aan staat wordt ook als sturing beschouwd, in dit geval is het een lang ononderbroken elektrisch aan-signaal. Deze relatie heeft geen richting."
-          },
-          "usage": {},
-          "domain": [
-            {
-              "EA-Name": "LKSensorDoorverbinddoos",
-              "uri": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#LKSensorDoorverbinddoos"
-            }
-          ],
-          "range": [
-            {
-              "range_label": "LuchtkwaliteitZenderOntvanger",
-              "range_uri": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#LuchtkwaliteitZenderOntvanger"
-            }
-          ],
-          "scopedrange": [
-            {
-              "range_uri": "#Luchtkwaliteit Zender-Ontvanger",
-              "range_puri": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#LuchtkwaliteitZenderOntvanger",
-              "range_label": {
-                "nl": "Luchtkwaliteit Zender-Ontvanger"
               }
             }
           ],
@@ -1546,7 +1694,7 @@
       ]
     },
     {
-      "uri": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#LuchtkwaliteitControleUnit",
+      "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#LuchtkwaliteitControleUnit",
       "name": "Luchtkwaliteit controle unit",
       "label": {
         "nl": "Luchtkwaliteit controle unit"
@@ -1561,13 +1709,13 @@
           "label": "Luchtkwaliteit",
           "name": "Luchtkwaliteittoestel",
           "package": "OSLO-Abstracten",
-          "uri": "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#Luchtkwaliteittoestel",
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Luchtkwaliteittoestel",
           "scoped_uri": "#Luchtkwaliteit"
         }
       ],
       "properties": [
         {
-          "uri": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#LuchtkwaliteitControleUnit.ipKlasse",
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#LuchtkwaliteitControleUnit.ipKlasse",
           "name": "ingress protection klasse",
           "sort": "ingress protection klasse",
           "label": {
@@ -1580,7 +1728,7 @@
           "domain": [
             {
               "EA-Name": "LuchtkwaliteitControleUnit",
-              "uri": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#LuchtkwaliteitControleUnit"
+              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#LuchtkwaliteitControleUnit"
             }
           ],
           "range": [
@@ -1602,7 +1750,7 @@
           "codelist_uri": "https://wegenenverkeer-test.data.vlaanderen.be/id/conceptscheme/KlAlgIngressProtectionCode"
         },
         {
-          "uri": "https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/luchtkwaliteit/#Voedt",
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/luchtkwaliteit/#Voedt",
           "name": "voedt",
           "sort": "Voedt",
           "label": {
@@ -1615,19 +1763,19 @@
           "domain": [
             {
               "EA-Name": "LuchtkwaliteitControleUnit",
-              "uri": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#LuchtkwaliteitControleUnit"
+              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#LuchtkwaliteitControleUnit"
             }
           ],
           "range": [
             {
               "range_label": "LKSensorDoorverbinddoos",
-              "range_uri": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#LKSensorDoorverbinddoos"
+              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#LKSensorDoorverbinddoos"
             }
           ],
           "scopedrange": [
             {
               "range_uri": "#Luchtkwaliteitsensor doorverbinddoos",
-              "range_puri": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#LKSensorDoorverbinddoos",
+              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#LKSensorDoorverbinddoos",
               "range_label": {
                 "nl": "Luchtkwaliteitsensor doorverbinddoos"
               }
@@ -1637,7 +1785,7 @@
           "codelist_uri": ""
         },
         {
-          "uri": "https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/luchtkwaliteit/#Sturing",
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/luchtkwaliteit/#Sturing",
           "name": "sturing",
           "sort": "Sturing",
           "label": {
@@ -1650,19 +1798,19 @@
           "domain": [
             {
               "EA-Name": "LuchtkwaliteitControleUnit",
-              "uri": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#LuchtkwaliteitControleUnit"
+              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#LuchtkwaliteitControleUnit"
             }
           ],
           "range": [
             {
               "range_label": "LKSensorDoorverbinddoos",
-              "range_uri": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#LKSensorDoorverbinddoos"
+              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#LKSensorDoorverbinddoos"
             }
           ],
           "scopedrange": [
             {
               "range_uri": "#Luchtkwaliteitsensor doorverbinddoos",
-              "range_puri": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#LKSensorDoorverbinddoos",
+              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#LKSensorDoorverbinddoos",
               "range_label": {
                 "nl": "Luchtkwaliteitsensor doorverbinddoos"
               }
@@ -1672,7 +1820,7 @@
           "codelist_uri": ""
         },
         {
-          "uri": "https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/luchtkwaliteit/#Sturing",
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/luchtkwaliteit/#Sturing",
           "name": "sturing",
           "sort": "Sturing",
           "label": {
@@ -1685,19 +1833,19 @@
           "domain": [
             {
               "EA-Name": "LuchtkwaliteitControleUnit",
-              "uri": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#LuchtkwaliteitControleUnit"
+              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#LuchtkwaliteitControleUnit"
             }
           ],
           "range": [
             {
               "range_label": "LKSensorDoorverbinddoos",
-              "range_uri": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#LKSensorDoorverbinddoos"
+              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#LKSensorDoorverbinddoos"
             }
           ],
           "scopedrange": [
             {
               "range_uri": "#Luchtkwaliteitsensor doorverbinddoos",
-              "range_puri": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#LKSensorDoorverbinddoos",
+              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#LKSensorDoorverbinddoos",
               "range_label": {
                 "nl": "Luchtkwaliteitsensor doorverbinddoos"
               }
@@ -1707,7 +1855,7 @@
           "codelist_uri": ""
         },
         {
-          "uri": "https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/luchtkwaliteit/#Sturing",
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/luchtkwaliteit/#Sturing",
           "name": "sturing",
           "sort": "Sturing",
           "label": {
@@ -1720,19 +1868,19 @@
           "domain": [
             {
               "EA-Name": "LuchtkwaliteitControleUnit",
-              "uri": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#LuchtkwaliteitControleUnit"
+              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#LuchtkwaliteitControleUnit"
             }
           ],
           "range": [
             {
               "range_label": "LuchtkwaliteitZenderOntvanger",
-              "range_uri": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#LuchtkwaliteitZenderOntvanger"
+              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#LuchtkwaliteitZenderOntvanger"
             }
           ],
           "scopedrange": [
             {
               "range_uri": "#Luchtkwaliteit Zender-Ontvanger",
-              "range_puri": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#LuchtkwaliteitZenderOntvanger",
+              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#LuchtkwaliteitZenderOntvanger",
               "range_label": {
                 "nl": "Luchtkwaliteit Zender-Ontvanger"
               }
@@ -1742,7 +1890,7 @@
           "codelist_uri": ""
         },
         {
-          "uri": "https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/luchtkwaliteit/#Sturing",
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/luchtkwaliteit/#Sturing",
           "name": "sturing",
           "sort": "Sturing",
           "label": {
@@ -1755,19 +1903,19 @@
           "domain": [
             {
               "EA-Name": "LuchtkwaliteitControleUnit",
-              "uri": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#LuchtkwaliteitControleUnit"
+              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#LuchtkwaliteitControleUnit"
             }
           ],
           "range": [
             {
               "range_label": "LuchtkwaliteitZenderOntvanger",
-              "range_uri": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#LuchtkwaliteitZenderOntvanger"
+              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#LuchtkwaliteitZenderOntvanger"
             }
           ],
           "scopedrange": [
             {
               "range_uri": "#Luchtkwaliteit Zender-Ontvanger",
-              "range_puri": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#LuchtkwaliteitZenderOntvanger",
+              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#LuchtkwaliteitZenderOntvanger",
               "range_label": {
                 "nl": "Luchtkwaliteit Zender-Ontvanger"
               }
@@ -1777,7 +1925,7 @@
           "codelist_uri": ""
         },
         {
-          "uri": "https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/luchtkwaliteit/#Hoort bij",
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/luchtkwaliteit/#Hoort bij",
           "name": "hoort bij",
           "sort": "Hoort bij",
           "label": {
@@ -1790,19 +1938,19 @@
           "domain": [
             {
               "EA-Name": "LuchtkwaliteitControleUnit",
-              "uri": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#LuchtkwaliteitControleUnit"
+              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#LuchtkwaliteitControleUnit"
             }
           ],
           "range": [
             {
               "range_label": "Luchtkwaliteitsensor",
-              "range_uri": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Luchtkwaliteitsensor"
+              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Luchtkwaliteitsensor"
             }
           ],
           "scopedrange": [
             {
               "range_uri": "#Luchtkwaliteitsensor",
-              "range_puri": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Luchtkwaliteitsensor",
+              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Luchtkwaliteitsensor",
               "range_label": {
                 "nl": "Luchtkwaliteitsensor"
               }
@@ -1814,7 +1962,7 @@
       ]
     },
     {
-      "uri": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#LuchtkwaliteitZenderOntvanger",
+      "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#LuchtkwaliteitZenderOntvanger",
       "name": "Luchtkwaliteit Zender-Ontvanger",
       "label": {
         "nl": "Luchtkwaliteit Zender-Ontvanger"
@@ -1829,13 +1977,13 @@
           "label": "Luchtkwaliteit",
           "name": "Luchtkwaliteittoestel",
           "package": "OSLO-Abstracten",
-          "uri": "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#Luchtkwaliteittoestel",
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Luchtkwaliteittoestel",
           "scoped_uri": "#Luchtkwaliteit"
         }
       ],
       "properties": [
         {
-          "uri": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#LuchtkwaliteitZenderOntvanger.meetZicht",
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#LuchtkwaliteitZenderOntvanger.meetZicht",
           "name": "meet zicht",
           "sort": "meet zicht",
           "label": {
@@ -1848,7 +1996,7 @@
           "domain": [
             {
               "EA-Name": "LuchtkwaliteitZenderOntvanger",
-              "uri": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#LuchtkwaliteitZenderOntvanger"
+              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#LuchtkwaliteitZenderOntvanger"
             }
           ],
           "range": [
@@ -1870,7 +2018,7 @@
           "codelist_uri": ""
         },
         {
-          "uri": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#LuchtkwaliteitZenderOntvanger.meetTemperatuur",
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#LuchtkwaliteitZenderOntvanger.meetTemperatuur",
           "name": "meet temperatuur",
           "sort": "meet temperatuur",
           "label": {
@@ -1883,7 +2031,7 @@
           "domain": [
             {
               "EA-Name": "LuchtkwaliteitZenderOntvanger",
-              "uri": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#LuchtkwaliteitZenderOntvanger"
+              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#LuchtkwaliteitZenderOntvanger"
             }
           ],
           "range": [
@@ -1905,7 +2053,7 @@
           "codelist_uri": ""
         },
         {
-          "uri": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#LuchtkwaliteitZenderOntvanger.meetNoX",
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#LuchtkwaliteitZenderOntvanger.meetNoX",
           "name": "meet NOx",
           "sort": "meet NOx",
           "label": {
@@ -1918,7 +2066,7 @@
           "domain": [
             {
               "EA-Name": "LuchtkwaliteitZenderOntvanger",
-              "uri": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#LuchtkwaliteitZenderOntvanger"
+              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#LuchtkwaliteitZenderOntvanger"
             }
           ],
           "range": [
@@ -1940,7 +2088,7 @@
           "codelist_uri": ""
         },
         {
-          "uri": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#LuchtkwaliteitZenderOntvanger.meetCO",
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#LuchtkwaliteitZenderOntvanger.meetCO",
           "name": "meet CO",
           "sort": "meet CO",
           "label": {
@@ -1953,7 +2101,7 @@
           "domain": [
             {
               "EA-Name": "LuchtkwaliteitZenderOntvanger",
-              "uri": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#LuchtkwaliteitZenderOntvanger"
+              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#LuchtkwaliteitZenderOntvanger"
             }
           ],
           "range": [
@@ -1975,7 +2123,7 @@
           "codelist_uri": ""
         },
         {
-          "uri": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#LuchtkwaliteitZenderOntvanger.isBeschermd",
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#LuchtkwaliteitZenderOntvanger.isBeschermd",
           "name": "is beschermd",
           "sort": "is beschermd",
           "label": {
@@ -1988,7 +2136,7 @@
           "domain": [
             {
               "EA-Name": "LuchtkwaliteitZenderOntvanger",
-              "uri": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#LuchtkwaliteitZenderOntvanger"
+              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#LuchtkwaliteitZenderOntvanger"
             }
           ],
           "range": [
@@ -2010,7 +2158,7 @@
           "codelist_uri": ""
         },
         {
-          "uri": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#LuchtkwaliteitZenderOntvanger.ipKlasse",
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#LuchtkwaliteitZenderOntvanger.ipKlasse",
           "name": "ingress protection klasse",
           "sort": "ingress protection klasse",
           "label": {
@@ -2023,7 +2171,7 @@
           "domain": [
             {
               "EA-Name": "LuchtkwaliteitZenderOntvanger",
-              "uri": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#LuchtkwaliteitZenderOntvanger"
+              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#LuchtkwaliteitZenderOntvanger"
             }
           ],
           "range": [
@@ -2045,7 +2193,7 @@
           "codelist_uri": "https://wegenenverkeer-test.data.vlaanderen.be/id/conceptscheme/KlAlgIngressProtectionCode"
         },
         {
-          "uri": "https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/luchtkwaliteit/#Hoort bij",
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/luchtkwaliteit/#Hoort bij",
           "name": "hoort bij",
           "sort": "Hoort bij",
           "label": {
@@ -2058,19 +2206,19 @@
           "domain": [
             {
               "EA-Name": "LuchtkwaliteitZenderOntvanger",
-              "uri": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#LuchtkwaliteitZenderOntvanger"
+              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#LuchtkwaliteitZenderOntvanger"
             }
           ],
           "range": [
             {
               "range_label": "Luchtkwaliteitsensor",
-              "range_uri": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Luchtkwaliteitsensor"
+              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Luchtkwaliteitsensor"
             }
           ],
           "scopedrange": [
             {
               "range_uri": "#Luchtkwaliteitsensor",
-              "range_puri": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Luchtkwaliteitsensor",
+              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Luchtkwaliteitsensor",
               "range_label": {
                 "nl": "Luchtkwaliteitsensor"
               }
@@ -2082,7 +2230,7 @@
       ]
     },
     {
-      "uri": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Luchtkwaliteitreflector",
+      "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Luchtkwaliteitreflector",
       "name": "Luchtkwaliteitreflector",
       "label": {
         "nl": "Luchtkwaliteitreflector"
@@ -2097,13 +2245,13 @@
           "label": "Luchtkwaliteit",
           "name": "Luchtkwaliteittoestel",
           "package": "OSLO-Abstracten",
-          "uri": "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#Luchtkwaliteittoestel",
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Luchtkwaliteittoestel",
           "scoped_uri": "#Luchtkwaliteit"
         }
       ],
       "properties": [
         {
-          "uri": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Luchtkwaliteitreflector.isBeschermd",
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Luchtkwaliteitreflector.isBeschermd",
           "name": "is beschermd",
           "sort": "is beschermd",
           "label": {
@@ -2116,7 +2264,7 @@
           "domain": [
             {
               "EA-Name": "Luchtkwaliteitreflector",
-              "uri": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Luchtkwaliteitreflector"
+              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Luchtkwaliteitreflector"
             }
           ],
           "range": [
@@ -2138,7 +2286,7 @@
           "codelist_uri": ""
         },
         {
-          "uri": "https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/luchtkwaliteit/#Hoort bij",
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/luchtkwaliteit/#Hoort bij",
           "name": "hoort bij",
           "sort": "Hoort bij",
           "label": {
@@ -2151,19 +2299,19 @@
           "domain": [
             {
               "EA-Name": "Luchtkwaliteitreflector",
-              "uri": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Luchtkwaliteitreflector"
+              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Luchtkwaliteitreflector"
             }
           ],
           "range": [
             {
               "range_label": "Luchtkwaliteitsensor",
-              "range_uri": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Luchtkwaliteitsensor"
+              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Luchtkwaliteitsensor"
             }
           ],
           "scopedrange": [
             {
               "range_uri": "#Luchtkwaliteitsensor",
-              "range_puri": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Luchtkwaliteitsensor",
+              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Luchtkwaliteitsensor",
               "range_label": {
                 "nl": "Luchtkwaliteitsensor"
               }
@@ -2175,7 +2323,7 @@
       ]
     },
     {
-      "uri": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Stroomkring",
+      "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Stroomkring",
       "name": "Stroomkring",
       "label": {
         "nl": "Stroomkring"
@@ -2190,13 +2338,13 @@
           "label": "AIM naam object",
           "name": "AIMNaamObject",
           "package": "OSLO-Implementatieelement",
-          "uri": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMNaamObject",
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMNaamObject",
           "scoped_uri": "#AIM naam object"
         }
       ],
       "properties": [
         {
-          "uri": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Stroomkring.stroomkringnummer",
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Stroomkring.stroomkringnummer",
           "name": "stroomkringnummer",
           "sort": "stroomkringnummer",
           "label": {
@@ -2209,7 +2357,7 @@
           "domain": [
             {
               "EA-Name": "Stroomkring",
-              "uri": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Stroomkring"
+              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Stroomkring"
             }
           ],
           "range": [
@@ -2231,7 +2379,7 @@
           "codelist_uri": ""
         },
         {
-          "uri": "https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/luchtkwaliteit/#Voedt",
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/luchtkwaliteit/#Voedt",
           "name": "voedt",
           "sort": "Voedt",
           "label": {
@@ -2244,19 +2392,19 @@
           "domain": [
             {
               "EA-Name": "Stroomkring",
-              "uri": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Stroomkring"
+              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Stroomkring"
             }
           ],
           "range": [
             {
               "range_label": "LuchtkwaliteitControleUnit",
-              "range_uri": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#LuchtkwaliteitControleUnit"
+              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#LuchtkwaliteitControleUnit"
             }
           ],
           "scopedrange": [
             {
               "range_uri": "#Luchtkwaliteit controle unit",
-              "range_puri": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#LuchtkwaliteitControleUnit",
+              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#LuchtkwaliteitControleUnit",
               "range_label": {
                 "nl": "Luchtkwaliteit controle unit"
               }
@@ -2266,7 +2414,7 @@
           "codelist_uri": ""
         },
         {
-          "uri": "https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/luchtkwaliteit/#Voedt",
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/luchtkwaliteit/#Voedt",
           "name": "voedt",
           "sort": "Voedt",
           "label": {
@@ -2279,19 +2427,19 @@
           "domain": [
             {
               "EA-Name": "Stroomkring",
-              "uri": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Stroomkring"
+              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Stroomkring"
             }
           ],
           "range": [
             {
               "range_label": "LKSensorDoorverbinddoos",
-              "range_uri": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#LKSensorDoorverbinddoos"
+              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#LKSensorDoorverbinddoos"
             }
           ],
           "scopedrange": [
             {
               "range_uri": "#Luchtkwaliteitsensor doorverbinddoos",
-              "range_puri": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#LKSensorDoorverbinddoos",
+              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#LKSensorDoorverbinddoos",
               "range_label": {
                 "nl": "Luchtkwaliteitsensor doorverbinddoos"
               }
@@ -2301,7 +2449,7 @@
           "codelist_uri": ""
         },
         {
-          "uri": "https://wegenenverkeer-test.data.vlaanderen.be/doc/implementatiemodel/luchtkwaliteit/#Voedt",
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/luchtkwaliteit/#Voedt",
           "name": "voedt",
           "sort": "Voedt",
           "label": {
@@ -2314,19 +2462,19 @@
           "domain": [
             {
               "EA-Name": "Stroomkring",
-              "uri": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Stroomkring"
+              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Stroomkring"
             }
           ],
           "range": [
             {
               "range_label": "LuchtkwaliteitZenderOntvanger",
-              "range_uri": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#LuchtkwaliteitZenderOntvanger"
+              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#LuchtkwaliteitZenderOntvanger"
             }
           ],
           "scopedrange": [
             {
               "range_uri": "#Luchtkwaliteit Zender-Ontvanger",
-              "range_puri": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#LuchtkwaliteitZenderOntvanger",
+              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#LuchtkwaliteitZenderOntvanger",
               "range_label": {
                 "nl": "Luchtkwaliteit Zender-Ontvanger"
               }
@@ -2338,7 +2486,7 @@
       ]
     },
     {
-      "uri": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Sturing",
+      "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Sturing",
       "name": "Sturing",
       "label": {
         "nl": "Sturing"
@@ -2353,14 +2501,14 @@
           "label": "Niet-directionele relatie",
           "name": "NietDirectioneleRelatie",
           "package": "OSLO-Implementatieelement",
-          "uri": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#NietDirectioneleRelatie",
-          "scoped_uri": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#NietDirectioneleRelatie"
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#NietDirectioneleRelatie",
+          "scoped_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#NietDirectioneleRelatie"
         }
       ],
       "properties": []
     },
     {
-      "uri": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Voedt",
+      "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Voedt",
       "name": "Voedt",
       "label": {
         "nl": "Voedt"
@@ -2375,13 +2523,13 @@
           "label": "Directionele relatie",
           "name": "DirectioneleRelatie",
           "package": "OSLO-Implementatieelement",
-          "uri": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DirectioneleRelatie",
-          "scoped_uri": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DirectioneleRelatie"
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DirectioneleRelatie",
+          "scoped_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DirectioneleRelatie"
         }
       ],
       "properties": [
         {
-          "uri": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Voedt.aansluitvermogen",
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Voedt.aansluitvermogen",
           "name": "aansluitvermogen",
           "sort": "aansluitvermogen",
           "label": {
@@ -2396,19 +2544,19 @@
           "domain": [
             {
               "EA-Name": "Voedt",
-              "uri": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Voedt"
+              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Voedt"
             }
           ],
           "range": [
             {
               "range_label": "KwantWrdInVolt",
-              "range_uri": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInVolt"
+              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInVolt"
             }
           ],
           "scopedrange": [
             {
               "range_uri": "#Kwantitatieve waarde in volt",
-              "range_puri": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInVolt",
+              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInVolt",
               "range_label": {
                 "nl": "Kwantitatieve waarde in volt"
               }
@@ -2418,7 +2566,7 @@
           "codelist_uri": ""
         },
         {
-          "uri": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Voedt.aansluitspanning",
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Voedt.aansluitspanning",
           "name": "aansluitspanning",
           "sort": "aansluitspanning",
           "label": {
@@ -2431,19 +2579,19 @@
           "domain": [
             {
               "EA-Name": "Voedt",
-              "uri": "https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#Voedt"
+              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Voedt"
             }
           ],
           "range": [
             {
               "range_label": "KwantWrdInVolt",
-              "range_uri": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInVolt"
+              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInVolt"
             }
           ],
           "scopedrange": [
             {
               "range_uri": "#Kwantitatieve waarde in volt",
-              "range_puri": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInVolt",
+              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInVolt",
               "range_label": {
                 "nl": "Kwantitatieve waarde in volt"
               }
@@ -4194,6 +4342,22 @@
       "properties": []
     },
     {
+      "uri": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "name": "Datumtijd",
+      "label": {
+        "nl": "Datumtijd"
+      },
+      "sort": "Datumtijd",
+      "description": {
+        "nl": "Beschrijft een datumtijd volgens http://www.w3.org/2001/XMLSchema#dateTime."
+      },
+      "usage": {
+        "nl": "https://www.w3.org/TR/xmlschema-2/#dateTime"
+      },
+      "parents": [],
+      "properties": []
+    },
+    {
       "uri": "http://www.w3.org/2001/XMLSchema#decimal",
       "name": "Decimaal getal",
       "label": {
@@ -4242,47 +4406,47 @@
       "properties": []
     },
     {
-      "uri": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcIdentificator",
-      "name": "Identificator",
+      "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcAssetVersie",
+      "name": "Asset versie",
       "label": {
-        "nl": "Identificator"
+        "nl": "Asset versie"
       },
-      "sort": "Identificator",
+      "sort": "Asset versie",
       "description": {
-        "nl": "Complex datatype voor de identificator van een AIM object volgens de bron van de identificator."
+        "nl": "Complex datatype voor de eigenschappen ten behoeve van de versionering van een asset in de databank."
       },
       "usage": {},
       "parents": [],
       "properties": [
         {
-          "uri": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcIdentificator.toegekendDoor",
-          "name": "toegekend door",
-          "sort": "toegekend door",
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcAssetVersie.versienummer",
+          "name": "versienummer",
+          "sort": "versienummer",
           "label": {
-            "nl": "toegekend door"
+            "nl": "versienummer"
           },
           "description": {
-            "nl": "Gegevens van de organisatie die de toekenning deed."
+            "nl": "Het versienummer als een oplopende integer."
           },
           "usage": {},
           "domain": [
             {
-              "EA-Name": "DtcIdentificator",
-              "uri": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcIdentificator"
+              "EA-Name": "DtcAssetVersie",
+              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcAssetVersie"
             }
           ],
           "range": [
             {
-              "range_label": "String",
-              "range_uri": "http://www.w3.org/2001/XMLSchema#string"
+              "range_label": "NonNegativeInteger",
+              "range_uri": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
             }
           ],
           "scopedrange": [
             {
-              "range_uri": "#String",
-              "range_puri": "http://www.w3.org/2001/XMLSchema#string",
+              "range_uri": "#Natuurlijk getal",
+              "range_puri": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
               "range_label": {
-                "nl": "String"
+                "nl": "Natuurlijk getal"
               }
             }
           ],
@@ -4290,20 +4454,55 @@
           "codelist_uri": ""
         },
         {
-          "uri": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcIdentificator.identificator",
-          "name": "identificator",
-          "sort": "identificator",
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcAssetVersie.timestamp",
+          "name": "timestamp",
+          "sort": "timestamp",
           "label": {
-            "nl": "identificator"
+            "nl": "timestamp"
           },
           "description": {
-            "nl": "Een groep van tekens om een AIM object te identificeren of te benoemen."
+            "nl": "De timestamp van het moment dat de versienummer werd toegekend."
           },
           "usage": {},
           "domain": [
             {
-              "EA-Name": "DtcIdentificator",
-              "uri": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcIdentificator"
+              "EA-Name": "DtcAssetVersie",
+              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcAssetVersie"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "DateTime",
+              "range_uri": "http://www.w3.org/2001/XMLSchema#dateTime"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Datumtijd",
+              "range_puri": "http://www.w3.org/2001/XMLSchema#dateTime",
+              "range_label": {
+                "nl": "Datumtijd"
+              }
+            }
+          ],
+          "cardinality": "1",
+          "codelist_uri": ""
+        },
+        {
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcAssetVersie.context",
+          "name": "context",
+          "sort": "context",
+          "label": {
+            "nl": "context"
+          },
+          "description": {
+            "nl": "De context van de versie creatie."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "DtcAssetVersie",
+              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcAssetVersie"
             }
           ],
           "range": [
@@ -4327,7 +4526,92 @@
       ]
     },
     {
-      "uri": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMaand",
+      "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcIdentificator",
+      "name": "Identificator",
+      "label": {
+        "nl": "Identificator"
+      },
+      "sort": "Identificator",
+      "description": {
+        "nl": "Complex datatype voor de identificator van een AIM object volgens de bron van de identificator."
+      },
+      "usage": {},
+      "parents": [],
+      "properties": [
+        {
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcIdentificator.toegekendDoor",
+          "name": "toegekend door",
+          "sort": "toegekend door",
+          "label": {
+            "nl": "toegekend door"
+          },
+          "description": {
+            "nl": "Gegevens van de organisatie die de toekenning deed."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "DtcIdentificator",
+              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcIdentificator"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "String",
+              "range_uri": "http://www.w3.org/2001/XMLSchema#string"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#String",
+              "range_puri": "http://www.w3.org/2001/XMLSchema#string",
+              "range_label": {
+                "nl": "String"
+              }
+            }
+          ],
+          "cardinality": "1",
+          "codelist_uri": ""
+        },
+        {
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcIdentificator.identificator",
+          "name": "identificator",
+          "sort": "identificator",
+          "label": {
+            "nl": "identificator"
+          },
+          "description": {
+            "nl": "Een groep van tekens om een AIM object te identificeren of te benoemen."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "DtcIdentificator",
+              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcIdentificator"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "String",
+              "range_uri": "http://www.w3.org/2001/XMLSchema#string"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#String",
+              "range_puri": "http://www.w3.org/2001/XMLSchema#string",
+              "range_label": {
+                "nl": "String"
+              }
+            }
+          ],
+          "cardinality": "1",
+          "codelist_uri": ""
+        }
+      ]
+    },
+    {
+      "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInMaand",
       "name": "Kwantitatieve waarde in maand",
       "label": {
         "nl": "Kwantitatieve waarde in maand"
@@ -4340,7 +4624,7 @@
       "parents": [],
       "properties": [
         {
-          "uri": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMaand.waarde",
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInMaand.waarde",
           "name": "waarde",
           "sort": "waarde",
           "label": {
@@ -4353,7 +4637,7 @@
           "domain": [
             {
               "EA-Name": "KwantWrdInMaand",
-              "uri": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMaand"
+              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInMaand"
             }
           ],
           "range": [
@@ -4375,7 +4659,7 @@
           "codelist_uri": ""
         },
         {
-          "uri": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMaand.standaardEenheid",
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInMaand.standaardEenheid",
           "name": "standaard eenheid",
           "sort": "standaard eenheid",
           "label": {
@@ -4390,7 +4674,7 @@
           "domain": [
             {
               "EA-Name": "KwantWrdInMaand",
-              "uri": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMaand"
+              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInMaand"
             }
           ],
           "range": [
@@ -4414,7 +4698,7 @@
       ]
     },
     {
-      "uri": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInVolt",
+      "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInVolt",
       "name": "Kwantitatieve waarde in volt",
       "label": {
         "nl": "Kwantitatieve waarde in volt"
@@ -4427,7 +4711,7 @@
       "parents": [],
       "properties": [
         {
-          "uri": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInVolt.waarde",
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInVolt.waarde",
           "name": "waarde",
           "sort": "waarde",
           "label": {
@@ -4440,7 +4724,7 @@
           "domain": [
             {
               "EA-Name": "KwantWrdInVolt",
-              "uri": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInVolt"
+              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInVolt"
             }
           ],
           "range": [
@@ -4462,7 +4746,7 @@
           "codelist_uri": ""
         },
         {
-          "uri": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInVolt.standaardEenheid",
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInVolt.standaardEenheid",
           "name": "standaard eenheid",
           "sort": "standaard eenheid",
           "label": {
@@ -4477,7 +4761,7 @@
           "domain": [
             {
               "EA-Name": "KwantWrdInVolt",
-              "uri": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInVolt"
+              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInVolt"
             }
           ],
           "range": [

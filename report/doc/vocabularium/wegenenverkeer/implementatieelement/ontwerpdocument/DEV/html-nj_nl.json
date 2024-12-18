@@ -2,7 +2,7 @@
   "metadata": {
     "title": "Implementatie-element",
     "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement",
-    "issued": "5-02-2024",
+    "issued": "18-12-2024",
     "filename": "implementatieelement",
     "navigation": {
       "prev": "",
@@ -13,8 +13,8 @@
     "documentconfig": {},
     "status": "https://data.vlaanderen.be/doc/concept/StandaardStatus/KandidaatStandaard",
     "statuslabel": "Onbekend",
-    "repositoryurl": "https://github.com/Informatievlaanderen/OSLOthema-wegenenverkeer/tree/0e31e30b3cb44a7d85b2bb705d580156db46bc5e",
-    "changelogurl": "https://github.com/Informatievlaanderen/OSLOthema-wegenenverkeer/blob/0e31e30b3cb44a7d85b2bb705d580156db46bc5e/CHANGELOG",
+    "repositoryurl": "https://github.com/Informatievlaanderen/OSLOthema-wegenenverkeer/tree/0e5bbb26160c48c7229c131acf4c3262f64887ae",
+    "changelogurl": "https://github.com/Informatievlaanderen/OSLOthema-wegenenverkeer/blob/0e5bbb26160c48c7229c131acf4c3262f64887ae/CHANGELOG",
     "feedbackurl": "https://docs.google.com/forms/d/e/1FAIpQLSeaxOnrCkcarNHWI21YfPJ7sZChHVzOB2-P9ptzxkD9YX69-g/viewform",
     "standaardregisterurl": "https://data.vlaanderen.be/standaarden/",
     "dependencies": [],
@@ -65,6 +65,7 @@
       "usage": {},
       "equivalent": [],
       "parents": [
+        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMVersie",
         "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMToestand",
         "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMDBStatus"
       ]
@@ -78,6 +79,20 @@
       "sort": "AIM Toestand",
       "description": {
         "nl": "Voegt een attribuut toe aan de subklasse dat de huidige stand in de levenscyclus van het object aangeeft."
+      },
+      "usage": {},
+      "equivalent": [],
+      "parents": []
+    },
+    {
+      "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMVersie",
+      "name": "AIM versie",
+      "label": {
+        "nl": "AIM versie"
+      },
+      "sort": "AIM versie",
+      "description": {
+        "nl": "Abstracte klasse met de eigenschappen om de versionering van een asset te beheren."
       },
       "usage": {},
       "equivalent": [],
@@ -120,6 +135,24 @@
       ]
     },
     {
+      "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#Bijlage",
+      "name": "Bijlage",
+      "label": {
+        "nl": "Bijlage"
+      },
+      "sort": "Bijlage",
+      "description": {
+        "nl": "Een bestand (document,afbeelding,...) dat behoort tot 1 of meerdere assets."
+      },
+      "usage": {
+        "nl": "Klasse uit gebruik sinds versie 2.13.0-RC2"
+      },
+      "equivalent": [],
+      "parents": [
+        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#AbstracteAanvullendeGeometrie"
+      ]
+    },
+    {
       "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#Derdenobject",
       "name": "Derdenobject",
       "label": {
@@ -134,6 +167,7 @@
       },
       "equivalent": [],
       "parents": [
+        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMVersie",
         "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMToestand",
         "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMDBStatus"
       ]
@@ -323,6 +357,20 @@
       "parents": []
     },
     {
+      "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcAssetVersie",
+      "name": "Asset versie",
+      "label": {
+        "nl": "Asset versie"
+      },
+      "sort": "Asset versie",
+      "description": {
+        "nl": "Complex datatype voor de eigenschappen ten behoeve van de versionering van een asset in de databank."
+      },
+      "usage": {},
+      "equivalent": [],
+      "parents": []
+    },
+    {
       "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcBereikInKg",
       "name": "Bereik in kg",
       "label": {
@@ -331,6 +379,20 @@
       "sort": "Bereik in kg",
       "description": {
         "nl": "Complex datatype om een bereik uit te drukken met een minimium en maximum in kilogram."
+      },
+      "usage": {},
+      "equivalent": [],
+      "parents": []
+    },
+    {
+      "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcBeschermendeLaag",
+      "name": "Beschermende laag",
+      "label": {
+        "nl": "Beschermende laag"
+      },
+      "sort": "Beschermende laag",
+      "description": {
+        "nl": "Complex datatype voor de inventarisatie van het type beschermlaag en de corrosiebelastingscategorie."
       },
       "usage": {},
       "equivalent": [],
@@ -1032,13 +1094,13 @@
     },
     {
       "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInLiter",
-      "name": "Kwantitatieve waarde in Ampere",
+      "name": "Kwantitatieve waarde in liter",
       "label": {
-        "nl": "Kwantitatieve waarde in Ampere"
+        "nl": "Kwantitatieve waarde in liter"
       },
-      "sort": "Kwantitatieve waarde in Ampere",
+      "sort": "Kwantitatieve waarde in liter",
       "description": {
-        "nl": "Een kwantitatieve waarde die een getal in ampere uitdrukt."
+        "nl": "Een kwantitatieve waarde die een getal in liter uitdrukt."
       },
       "usage": {},
       "equivalent": [],
@@ -2925,10 +2987,10 @@
       },
       "sort": "standaard eenheid",
       "description": {
-        "nl": "De standaard eenheid bij dit datatype is uitgedrukt in ampere."
+        "nl": "De standaard eenheid bij dit datatype is uitgedrukt in liter."
       },
       "usage": {
-        "nl": "\"A\"^^cdt:ucumunit"
+        "nl": "\"L\"^^cdt:ucumunit"
       },
       "domain": [
         "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInLiter"
@@ -5448,6 +5510,44 @@
       "parents": []
     },
     {
+      "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcBeschermendeLaag.corrosieklasse",
+      "name": "corrosieklasse",
+      "label": {
+        "nl": "corrosieklasse"
+      },
+      "sort": "corrosieklasse",
+      "description": {
+        "nl": "Een code om de mate van corrosieve belasting in een bepaalde omgeving te beschrijven, volgens ISO-12944-2."
+      },
+      "usage": {},
+      "domain": [
+        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcBeschermendeLaag"
+      ],
+      "range": [
+        "http://www.w3.org/2004/02/skos/core#Concept"
+      ],
+      "parents": []
+    },
+    {
+      "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcBeschermendeLaag.beschermlaag",
+      "name": "beschermlaag",
+      "label": {
+        "nl": "beschermlaag"
+      },
+      "sort": "beschermlaag",
+      "description": {
+        "nl": "Type bescherming van de constructie of steun, bv. geschilderd of gegalvaniseerd."
+      },
+      "usage": {},
+      "domain": [
+        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcBeschermendeLaag"
+      ],
+      "range": [
+        "http://www.w3.org/2004/02/skos/core#Concept"
+      ],
+      "parents": []
+    },
+    {
       "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcBereikInKg.minimium",
       "name": "minimum",
       "label": {
@@ -5482,6 +5582,63 @@
       ],
       "range": [
         "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInKilogram"
+      ],
+      "parents": []
+    },
+    {
+      "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcAssetVersie.versienummer",
+      "name": "versienummer",
+      "label": {
+        "nl": "versienummer"
+      },
+      "sort": "versienummer",
+      "description": {
+        "nl": "Het versienummer als een oplopende integer."
+      },
+      "usage": {},
+      "domain": [
+        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcAssetVersie"
+      ],
+      "range": [
+        "http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+      ],
+      "parents": []
+    },
+    {
+      "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcAssetVersie.timestamp",
+      "name": "timestamp",
+      "label": {
+        "nl": "timestamp"
+      },
+      "sort": "timestamp",
+      "description": {
+        "nl": "De timestamp van het moment dat de versienummer werd toegekend."
+      },
+      "usage": {},
+      "domain": [
+        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcAssetVersie"
+      ],
+      "range": [
+        "http://www.w3.org/2001/XMLSchema#dateTime"
+      ],
+      "parents": []
+    },
+    {
+      "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcAssetVersie.context",
+      "name": "context",
+      "label": {
+        "nl": "context"
+      },
+      "sort": "context",
+      "description": {
+        "nl": "De context van de versie creatie."
+      },
+      "usage": {},
+      "domain": [
+        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcAssetVersie"
+      ],
+      "range": [
+        "http://www.w3.org/2001/XMLSchema#string"
       ],
       "parents": []
     },
@@ -6134,6 +6291,27 @@
       "parents": []
     },
     {
+      "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#Bijlage.type",
+      "name": "type",
+      "label": {
+        "nl": "type"
+      },
+      "sort": "type",
+      "description": {
+        "nl": "De typering of categorie van de bijlage."
+      },
+      "usage": {
+        "nl": "Klasse uit gebruik sinds versie 2.13.0-RC2"
+      },
+      "domain": [
+        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#Bijlage"
+      ],
+      "range": [
+        "http://www.w3.org/2004/02/skos/core#Concept"
+      ],
+      "parents": []
+    },
+    {
       "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#Appurtenance.opstelhoogte",
       "name": "opstelhoogte",
       "label": {
@@ -6168,6 +6346,25 @@
       ],
       "range": [
         "http://www.w3.org/2004/02/skos/core#Concept"
+      ],
+      "parents": []
+    },
+    {
+      "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMVersie.assetVersie",
+      "name": "asset-versie",
+      "label": {
+        "nl": "asset-versie"
+      },
+      "sort": "asset-versie",
+      "description": {
+        "nl": "De versie van de asset in de database."
+      },
+      "usage": {},
+      "domain": [
+        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMVersie"
+      ],
+      "range": [
+        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcAssetVersie"
       ],
       "parents": []
     },
@@ -8071,6 +8268,22 @@
     },
     {
       "uri": "http://www.w3.org/2004/02/skos/core#Concept",
+      "name": "Toegangsprocedure aandachtspunt",
+      "label": {
+        "nl": "Toegangsprocedure aandachtspunt"
+      },
+      "description": {
+        "nl": "De soorten aandachtspunten voor toegang tot een object."
+      },
+      "usage": {},
+      "sort": "Toegangsprocedure aandachtspunt",
+      "indvl": false,
+      "inpackage": false,
+      "inscope": true,
+      "show": true
+    },
+    {
+      "uri": "http://www.w3.org/2004/02/skos/core#Concept",
       "name": "Type badge",
       "label": {
         "nl": "Type badge"
@@ -8087,38 +8300,6 @@
     },
     {
       "uri": "http://www.w3.org/2004/02/skos/core#Concept",
-      "name": "Electricity subthema",
-      "label": {
-        "nl": "Electricity subthema"
-      },
-      "description": {
-        "nl": "Lijst voor classificatie van elektrische kabels en appurtenances."
-      },
-      "usage": {},
-      "sort": "Electricity subthema",
-      "indvl": false,
-      "inpackage": false,
-      "inscope": true,
-      "show": true
-    },
-    {
-      "uri": "http://www.w3.org/2004/02/skos/core#Concept",
-      "name": "Pipe container type",
-      "label": {
-        "nl": "Pipe container type"
-      },
-      "description": {
-        "nl": "Lijst met types van pies voor het oude AKELA-type Pipe."
-      },
-      "usage": {},
-      "sort": "Pipe container type",
-      "indvl": false,
-      "inpackage": false,
-      "inscope": true,
-      "show": true
-    },
-    {
-      "uri": "http://www.w3.org/2004/02/skos/core#Concept",
       "name": "Type sleutel",
       "label": {
         "nl": "Type sleutel"
@@ -8128,6 +8309,22 @@
       },
       "usage": {},
       "sort": "Type sleutel",
+      "indvl": false,
+      "inpackage": false,
+      "inscope": true,
+      "show": true
+    },
+    {
+      "uri": "http://www.w3.org/2004/02/skos/core#Concept",
+      "name": "Bijlage type",
+      "label": {
+        "nl": "Bijlage type"
+      },
+      "description": {
+        "nl": "De mogelijke types of categorieën van het document."
+      },
+      "usage": {},
+      "sort": "Bijlage type",
       "indvl": false,
       "inpackage": false,
       "inscope": true,
@@ -8167,6 +8364,38 @@
     },
     {
       "uri": "http://www.w3.org/2004/02/skos/core#Concept",
+      "name": "Electricity subthema",
+      "label": {
+        "nl": "Electricity subthema"
+      },
+      "description": {
+        "nl": "Lijst voor classificatie van elektrische kabels en appurtenances."
+      },
+      "usage": {},
+      "sort": "Electricity subthema",
+      "indvl": false,
+      "inpackage": false,
+      "inscope": true,
+      "show": true
+    },
+    {
+      "uri": "http://www.w3.org/2004/02/skos/core#Concept",
+      "name": "Pipe container type",
+      "label": {
+        "nl": "Pipe container type"
+      },
+      "description": {
+        "nl": "Lijst met types van pies voor het oude AKELA-type Pipe."
+      },
+      "usage": {},
+      "sort": "Pipe container type",
+      "indvl": false,
+      "inpackage": false,
+      "inscope": true,
+      "show": true
+    },
+    {
+      "uri": "http://www.w3.org/2004/02/skos/core#Concept",
       "name": "Datakabel materiaal",
       "label": {
         "nl": "Datakabel materiaal"
@@ -8199,47 +8428,15 @@
     },
     {
       "uri": "http://www.w3.org/2004/02/skos/core#Concept",
-      "name": "Krimpvoegvulling",
+      "name": "Corrosiebelastingscategorie",
       "label": {
-        "nl": "Krimpvoegvulling"
+        "nl": "Corrosiebelastingscategorie"
       },
       "description": {
-        "nl": "De mogelijke vullingen voor een krimpvoeg."
+        "nl": "De mogelijke codes om de mate van corrosieve belasting in een bepaalde omgeving te beschrijven."
       },
       "usage": {},
-      "sort": "Krimpvoegvulling",
-      "indvl": false,
-      "inpackage": false,
-      "inscope": true,
-      "show": true
-    },
-    {
-      "uri": "http://www.w3.org/2004/02/skos/core#Concept",
-      "name": "Toegangsprocedure toegangstijden",
-      "label": {
-        "nl": "Toegangsprocedure toegangstijden"
-      },
-      "description": {
-        "nl": "De mogelijke toegangstijden bij een toegangsprocedure."
-      },
-      "usage": {},
-      "sort": "Toegangsprocedure toegangstijden",
-      "indvl": false,
-      "inpackage": false,
-      "inscope": true,
-      "show": true
-    },
-    {
-      "uri": "http://www.w3.org/2004/02/skos/core#Concept",
-      "name": "Betonomgevingsklasse",
-      "label": {
-        "nl": "Betonomgevingsklasse"
-      },
-      "description": {
-        "nl": "Omgevingsklasse waaraan het beton wordt blootgesteld."
-      },
-      "usage": {},
-      "sort": "Betonomgevingsklasse",
+      "sort": "Corrosiebelastingscategorie",
       "indvl": false,
       "inpackage": false,
       "inscope": true,
@@ -8311,6 +8508,54 @@
     },
     {
       "uri": "http://www.w3.org/2004/02/skos/core#Concept",
+      "name": "Krimpvoegvulling",
+      "label": {
+        "nl": "Krimpvoegvulling"
+      },
+      "description": {
+        "nl": "De mogelijke vullingen voor een krimpvoeg."
+      },
+      "usage": {},
+      "sort": "Krimpvoegvulling",
+      "indvl": false,
+      "inpackage": false,
+      "inscope": true,
+      "show": true
+    },
+    {
+      "uri": "http://www.w3.org/2004/02/skos/core#Concept",
+      "name": "Toegangsprocedure toegangstijden",
+      "label": {
+        "nl": "Toegangsprocedure toegangstijden"
+      },
+      "description": {
+        "nl": "De mogelijke toegangstijden bij een toegangsprocedure."
+      },
+      "usage": {},
+      "sort": "Toegangsprocedure toegangstijden",
+      "indvl": false,
+      "inpackage": false,
+      "inscope": true,
+      "show": true
+    },
+    {
+      "uri": "http://www.w3.org/2004/02/skos/core#Concept",
+      "name": "Betonomgevingsklasse",
+      "label": {
+        "nl": "Betonomgevingsklasse"
+      },
+      "description": {
+        "nl": "Omgevingsklasse waaraan het beton wordt blootgesteld."
+      },
+      "usage": {},
+      "sort": "Betonomgevingsklasse",
+      "indvl": false,
+      "inpackage": false,
+      "inscope": true,
+      "show": true
+    },
+    {
+      "uri": "http://www.w3.org/2004/02/skos/core#Concept",
       "name": "Betonsterkteklasse",
       "label": {
         "nl": "Betonsterkteklasse"
@@ -8320,6 +8565,22 @@
       },
       "usage": {},
       "sort": "Betonsterkteklasse",
+      "indvl": false,
+      "inpackage": false,
+      "inscope": true,
+      "show": true
+    },
+    {
+      "uri": "http://www.w3.org/2004/02/skos/core#Concept",
+      "name": "Toegankelijkheid",
+      "label": {
+        "nl": "Toegankelijkheid"
+      },
+      "description": {
+        "nl": "De mogelijke opties die de toegankelijkheid van een object aanduiden."
+      },
+      "usage": {},
+      "sort": "Toegankelijkheid",
       "indvl": false,
       "inpackage": false,
       "inscope": true,
@@ -8480,22 +8741,6 @@
       },
       "usage": {},
       "sort": "Bijlagetype toegangsprocedure",
-      "indvl": false,
-      "inpackage": false,
-      "inscope": true,
-      "show": true
-    },
-    {
-      "uri": "http://www.w3.org/2004/02/skos/core#Concept",
-      "name": "Toegangsprocedure aandachtspunt",
-      "label": {
-        "nl": "Toegangsprocedure aandachtspunt"
-      },
-      "description": {
-        "nl": "De soorten aandachtspunten voor toegang tot een object."
-      },
-      "usage": {},
-      "sort": "Toegangsprocedure aandachtspunt",
       "indvl": false,
       "inpackage": false,
       "inscope": true,
@@ -8759,15 +9004,15 @@
     },
     {
       "uri": "http://purl.org/dc/terms/Agent.contactinfo",
-      "name": "Contactinfo",
+      "name": "contactinfo",
       "label": {
-        "nl": "Contactinfo"
+        "nl": "contactinfo"
       },
       "description": {
         "nl": "Algemene contactgegevens voor de agent."
       },
       "usage": {},
-      "sort": "Contactinfo",
+      "sort": "contactinfo",
       "inscope": true,
       "indvl": false,
       "inpackage": false,

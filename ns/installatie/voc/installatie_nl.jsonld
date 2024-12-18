@@ -1692,7 +1692,7 @@
     "prev": ""
   },
   "publication-state": "https://data.vlaanderen.be/doc/concept/StandaardStatus/KandidaatStandaard",
-  "publication-date": "5-02-2024",
+  "publication-date": "18-12-2024",
   "classes": [
     {
       "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#ASTRIDInstallatie",
@@ -1701,14 +1701,14 @@
         "nl": "Een (radio)heruitzendingsinstallatie van radiosignalen (over TETRA in een hogere frequentieband van 380 tot 400 MHz) ondersteund door ASTRID als communicatiesysteem voor de hulpdiensten. Door de ontvangst- en zendfrequenties verschillend te maken ontstaat tweerichtingscommunicatie over grote afstanden en op plaatsen, waar radiogolven normaal niet geraken."
       },
       "parents": [
-        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMNaamObject"
+        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#NaampadObject"
       ]
     },
     {
       "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Aanslagbalk",
       "@type": "http://www.w3.org/2002/07/owl#Class",
       "definition": {
-        "nl": "Balk die kracht overdraagt tussen twee elementen."
+        "nl": "Balk die kracht overdraagt tussen een beweegbare waterkerende constructie en een aanslag."
       },
       "parents": [
         "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#ConstructiefObject"
@@ -1718,7 +1718,21 @@
       "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Aanvaarbescherming",
       "@type": "http://www.w3.org/2002/07/owl#Class",
       "definition": {
-        "nl": "Constructie om schepen te geleiden en/of te verhinderen dat ze ergens tegenaan botsen."
+        "nl": "Constructie om te verhinderen dat schepen ergens tegenaan botsen."
+      },
+      "parents": [
+        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMNaamObject",
+        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#AanvaarbeschermingGeleidewerk"
+      ]
+    },
+    {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#AanzichtVerkeersbordopstelling",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
+      "definition": {
+        "nl": "Een aanzicht van een verkeersbordopstelling is de verzameling van één of meerdere verkeersborden en hun bijbehorende ondersteunende elementen,zoals palen en eventuele onderborden, zoals deze zichtbaar zijn vanuit een specifieke kijkhoek of positie in de verkeerssituatie. Het aanzicht biedt inzicht in de ruimtelijke indeling, plaatsing en zichtbaarheid van de verkeersborden ten opzichte van de weggebruikers."
+      },
+      "usage": {
+        "nl": "Geometrie van AanzichtVerkeersbordopstelling heeft betrekking op de kaart voorstelling in de verkeersbordenapplicatie en heeft niets te maken met de fysieke positie."
       },
       "parents": [
         "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMNaamObject"
@@ -1750,8 +1764,31 @@
       "definition": {
         "nl": "De lagen tussen het baanbed en het baanoppervlak."
       },
+      "usage": {
+        "nl": "Klasse uit gebruik sinds versie 2.11.0-RC1"
+      },
       "parents": [
         "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMObject"
+      ]
+    },
+    {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Balans",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
+      "definition": {
+        "nl": "Een balans is een hoofdconstructieonderdeel van een beweegbare brug, type ophaalbrug. Klassiek bestaat het uit: twee balansarmen en hun onderlinge verbinding(en) met aan één zijde twee trekkers en aan de andere zijde een tegengewicht(kist). Een balans wordt scharnierend verankerd aan de bovenzijde van een hameipoort of aan die van (twee) hameistijlen. Dankzij dit onderdeel kan het met de trekkers verbonden val (ook 'klap') met het tegengewicht zodanig gebalanceerd worden, dat er weinig arbeid moet geleverd worden om dit brugdeel eenzijdig te kunnen lichten van zijn oplegging."
+      },
+      "parents": [
+        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#ConstructiefObject"
+      ]
+    },
+    {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Balansarm",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
+      "definition": {
+        "nl": "Onderdeel van een balans. Er kunnen één of meerdere balansarmen aanwezig zijn. Het is typisch een lange, horizontale arm die aan lastzijde via een trekker verbonden is met het beweegbare brugdeel ('het val' of ook 'de klap') en aan machtzijde het gebruik van tegengewicht mogelijk maakt."
+      },
+      "parents": [
+        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#ConstructiefObject"
       ]
     },
     {
@@ -1761,7 +1798,9 @@
         "nl": "Ruimteoverspannend enkelvoudig constructie-element waarvan de lengte vele malen groter is dan de breedte en de hoogte in doorsnede. De breedte is weer gelijk of kleiner dan de hoogte."
       },
       "parents": [
-        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#ConstructiefObject"
+        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#ConstructieElementSluisStuw",
+        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#ConstructiefObject",
+        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#ConstructieElementAanvaarbeschermingGeleidewerk"
       ]
     },
     {
@@ -1778,10 +1817,13 @@
       "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Been",
       "@type": "http://www.w3.org/2002/07/owl#Class",
       "definition": {
-        "nl": "Een aaneengesloten reeks van links die samen een traject realiseren over het netwerk, gebruik makende van eenzelfde technologie (vb SDH, OTN...)."
+        "nl": "Een aaneengesloten reeks van links die samen een traject realiseren over het netwerk,gebruik makende van eenzelfde technologie (vb SDH,OTN...)."
+      },
+      "usage": {
+        "nl": "De asset hoeft geometrisch niet gelokaliseerd te worden."
       },
       "parents": [
-        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMObject"
+        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMNaamObject"
       ]
     },
     {
@@ -1799,10 +1841,10 @@
       "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#BeweegbareWaterkerendeConstructie",
       "@type": "http://www.w3.org/2002/07/owl#Class",
       "definition": {
-        "nl": "Beweegbare bouwkundige constructie om een waterpeilverschil te keren."
+        "nl": "Beweegbare constructie om een waterpeilverschil te keren"
       },
       "parents": [
-        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMNaamObject"
+        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#ConstructiefObject"
       ]
     },
     {
@@ -1840,7 +1882,7 @@
       "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Bodembescherming",
       "@type": "http://www.w3.org/2002/07/owl#Class",
       "definition": {
-        "nl": "Een specifieke constructieve maatregel die is ontworpen om de bodem en onderliggende fundering van de sluis of stuw te beschermen tegen erosie en andere vormen van schade veroorzaakt door waterstromen. Bodembescherming helpt om de stabiliteit en duurzaamheid van de constructie te waarborgen en mogelijke gevolgen van erosie te voorkomen."
+        "nl": "Een constructieve maatregel om de onderwaterbodem te beschermen tegen erosie en andere vormen van schade."
       },
       "parents": [
         "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMNaamObject"
@@ -1890,7 +1932,7 @@
       "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Brugdeel",
       "@type": "http://www.w3.org/2002/07/owl#Class",
       "definition": {
-        "nl": "Het deel dat je kan wegnemen van een brug in zijn geheel. Dit kan ook meerdere overspanningen hebben."
+        "nl": "Het deel dat je kan wegnemen van een brug in zijn geheel. Dit kan ook meerdere overspanningen hebben. In het geval van beweegbare bruggen worden de onderdelen die de beweging mogelijk maken zoals balansarmen, tegengewicht, hameipoort,..etc ook gevat in het object brugdeel."
       },
       "parents": [
         "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMNaamObject"
@@ -1900,7 +1942,7 @@
       "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Brugdek",
       "@type": "http://www.w3.org/2002/07/owl#Class",
       "definition": {
-        "nl": "Dragende structuur die kan bestaan uit platen, balken,... Deze kan uitgevoerd worden in verschillende materialen (beton, staal, kunststof, hout)."
+        "nl": "Dragende structuur die kan bestaan uit platen,balken,... Deze kan uitgevoerd worden in verschillende materialen (beton,staal,kunststof,hout)."
       },
       "parents": [
         "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMNaamObject"
@@ -1910,7 +1952,7 @@
       "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Brugligger",
       "@type": "http://www.w3.org/2002/07/owl#Class",
       "definition": {
-        "nl": "Ondersteunende balkstructuur van een brug onder het brugdek."
+        "nl": "Ondersteunende balkstructuur van een brug onder, boven of aansluitend op het brugdek."
       },
       "parents": [
         "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#ConstructiefObject"
@@ -1943,6 +1985,49 @@
       ]
     },
     {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Deurkamer",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
+      "definition": {
+        "nl": "Compartiment van een waterbouwkundige constructie waarin een roldeur zich bevindt in geopende -of onderhoudstoestand."
+      },
+      "parents": [
+        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMNaamObject",
+        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#UitsparingSluisdeur"
+      ]
+    },
+    {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Deurkas",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
+      "definition": {
+        "nl": "Compartiment van een waterbouwkundige constructie waarin een puntdeur, draaideur of klepdeur zich bevindt in geopende toestand."
+      },
+      "parents": [
+        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMNaamObject",
+        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#UitsparingSluisdeur"
+      ]
+    },
+    {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Deurloop",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
+      "definition": {
+        "nl": "Vaste uitsparing op de bodem van het constructiehoofd over de breedte van de constructie voor de waterdichting en/of krachtoverdracht van de roldeur."
+      },
+      "parents": [
+        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMNaamObject"
+      ]
+    },
+    {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Deurnis",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
+      "definition": {
+        "nl": "Compartiment van een waterbouwkundige constructie waartegen de deurtip van een roldeur of draaideur aansluit in beweging naar gesloten toestand."
+      },
+      "parents": [
+        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMNaamObject",
+        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#UitsparingSluisdeur"
+      ]
+    },
+    {
       "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#DraagstructuurBWCTWC",
       "@type": "http://www.w3.org/2002/07/owl#Class",
       "definition": {
@@ -1950,6 +2035,16 @@
       },
       "parents": [
         "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#ConstructiefObject"
+      ]
+    },
+    {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Drempel",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
+      "definition": {
+        "nl": "Vaste opstand op de bodem van het constructiehoofd over de breedte van de constructie voor de waterdichting en/of krachtoverdracht van de beweegbare waterkerende constructie (m.u.v. roldeuren)."
+      },
+      "parents": [
+        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMNaamObject"
       ]
     },
     {
@@ -1986,10 +2081,18 @@
       "parents": []
     },
     {
-      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#DtcDVWMaatgevendSchip",
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#DtcDVWtoelaatbareSchipsafemetingen",
       "@type": "http://www.w3.org/2002/07/owl#Class",
       "definition": {
-        "nl": "TODO"
+        "nl": "Complexe datatype om de toelaatbare schipsafmetingen bij te houden."
+      },
+      "parents": []
+    },
+    {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#DtcMeteoFoto",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
+      "definition": {
+        "nl": "Complex datatype voor meteo gerelateerde foto's."
       },
       "parents": []
     },
@@ -1997,7 +2100,7 @@
       "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#DtcOntwerpSchip",
       "@type": "http://www.w3.org/2002/07/owl#Class",
       "definition": {
-        "nl": "TODO"
+        "nl": "Complexe datatype om de afmetingen van het ontwerpschip bij te houden."
       },
       "parents": []
     },
@@ -2005,7 +2108,7 @@
       "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#DtcTypeBWC",
       "@type": "http://www.w3.org/2002/07/owl#Class",
       "definition": {
-        "nl": "TODO"
+        "nl": "Complex datatype om het type beweegbare waterkerende constructie aan te duiden"
       },
       "parents": []
     },
@@ -2103,7 +2206,7 @@
       "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Fuik",
       "@type": "http://www.w3.org/2002/07/owl#Class",
       "definition": {
-        "nl": "Dit is een overgangszone tussen het waterlichaam en de sluis of stuw."
+        "nl": "Overgangszone tussen het waterlichaam en de frontmuur per sluis of stuw."
       },
       "parents": [
         "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMNaamObject"
@@ -2147,10 +2250,11 @@
       "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Geleidewerk",
       "@type": "http://www.w3.org/2002/07/owl#Class",
       "definition": {
-        "nl": "Een constructie in een watergang waarmee schepen worden afgeremd als ze een kunstwerk zoals een brug of sluis naderen en dreigen er tegen aan te varen in plaats van er doorheen en ook waar een schip de gelegenheid krijgt om aan te meren om te wachten wanneer de brug of sluis is gesloten."
+        "nl": "Een constructie in een waterweg waarmee schepen worden geleid als ze een kunstwerk zoals een brug of sluis naderen, binnenvaren of passeren."
       },
       "parents": [
-        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMNaamObject"
+        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMNaamObject",
+        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#AanvaarbeschermingGeleidewerk"
       ]
     },
     {
@@ -2172,6 +2276,17 @@
       "parents": [
         "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMNaamObject",
         "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Grondkeringen"
+      ]
+    },
+    {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Gewelf",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
+      "definition": {
+        "nl": "Gebogen structuur die de lasten van een constructie overbrengt naar de steunpunten (zoals pijlers, landhoofden, muren, etc.)"
+      },
+      "parents": [
+        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#ConstructieElementSluisStuw",
+        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#ConstructiefObject"
       ]
     },
     {
@@ -2216,13 +2331,65 @@
       ]
     },
     {
-      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#HorizontaleConstructieplaat",
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Hameipoort",
       "@type": "http://www.w3.org/2002/07/owl#Class",
       "definition": {
-        "nl": "Een plaat die dient ter constructie en die horizontaal wordt gebruikt. Deze omvat geen platen die met fundering te maken hebben (vb.: funderingsplaat, funderingszool,...)."
+        "nl": "Een hameipoort is een hoofdconstructieonderdeel van een beweegbare brug, type ophaalbrug. Het is een portaalstructuur die staat op de onderbouw, aan de scharnierzijde. Het draagt bovenaan de volledige balans die er scharnierend ermee verbonden is."
       },
       "parents": [
         "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#ConstructiefObject"
+      ]
+    },
+    {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Hameistijl",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
+      "definition": {
+        "nl": "Een hameistijl is een hoofdconstructieonderdeel van een beweegbare brug, type ophaalbrug. De verticale (kolom)structuur staat op de onderbouw, aan de scharnierzijde. Samen met een tweede hameistijl draagt het de balans die bovenaan scharnierend ermee verbonden is."
+      },
+      "parents": [
+        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#ConstructiefObject"
+      ]
+    },
+    {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Hanger",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
+      "definition": {
+        "nl": "Een hanger is een secundair constructieonderdeel van een hangbrug dat, meestal met talrijke andere hangers, een brugdeel ophangt aan een overspannende hoofddrager/hoofdkabel. Een moderne hanger bestaat meestal uit staalkabel, maar deze kan ook uit profielstaal, platstaal of rondstaal vervaardigd zijn of zelfs uit schakels bestaan."
+      },
+      "parents": [
+        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMNaamObject"
+      ]
+    },
+    {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Hefportiek",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
+      "definition": {
+        "nl": "Een hefportiek is een vrijstaand, stijf hoofdconstructieonderdeel. Het bestaat uit minstens twee steunbenen die onderling verbonden zijn en rusten op de onderbouw. Deze steunbenen staan (mede) in voor het verticale steunen en begeleiden van een beweegbaar constructieonderdeel wanneer dit niet rust op zijn vaste steunpunten. Het tilt meestal een brugdeel of beweegbare waterkerende constructie op. Meestal herbergt een hefportiek een mechaniek met ook een tegengewicht en steekt het samen met een tweede, gelijkaardig exemplaar aan de overzijde, hoog boven de rest van het kunstwerk uit. "
+      },
+      "parents": [
+        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#ConstructiefObject"
+      ]
+    },
+    {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Heftoren",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
+      "definition": {
+        "nl": "Een heftoren is een vrijstaand hoofdconstructieonderdeel dat als singulier steunpunt (mee) instaat voor het verticaal steunen en begeleiden van een beweegbaar constructieonderdeel wanneer dat niet rust op zijn vaste steunpunten (meestal een brugdeel of beweegbare waterkerende constructie). Meestal herbergt een heftoren een mechaniek met ook een tegengewicht en steekt het, samen de overige, gelijkaardige heftorens, hoog boven de rest van het kunstwerk uit."
+      },
+      "parents": [
+        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#ConstructiefObject"
+      ]
+    },
+    {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#HorizontaleConstructieplaat",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
+      "definition": {
+        "nl": "Een plaat die dient ter constructie en die horizontaal wordt gebruikt. Deze omvat geen platen die met fundering te maken hebben (vb.: funderingsplaat,funderingszool,...)."
+      },
+      "parents": [
+        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#ConstructieElementSluisStuw",
+        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#ConstructiefObject",
+        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#ConstructieElementAanvaarbeschermingGeleidewerk"
       ]
     },
     {
@@ -2240,6 +2407,9 @@
       "@type": "http://www.w3.org/2002/07/owl#Class",
       "definition": {
         "nl": "Netwerk dat bestaat uit meerdere L3 switches. Zij verbinden de verschillende L2 access structuren met de datacentres"
+      },
+      "usage": {
+        "nl": "De asset hoeft geometrisch niet gelokaliseerd te worden."
       },
       "parents": [
         "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#NaampadObject"
@@ -2263,7 +2433,8 @@
         "nl": "Een ruimte die een of meerdere kabels of leidingen beschermt tegen beschadiging en/of de kabels of leidingen op een gecontroleerde plaats laat hangen of liggen. De constructieve elementen die de ruimte creëeren vormen een aaneen- en afgesloten geheel dat niet meer uit elkaar kan gehaald worden. De kabels en leidingen zijn enkel nog toegankelijk door in de koker zelf rond te lopen (of te kruipen). De koker is op die toegankelijkheid voorzien."
       },
       "parents": [
-        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Kabelgeleiding"
+        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Kabelgeleiding",
+        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#ConstructiefObject"
       ]
     },
     {
@@ -2340,7 +2511,27 @@
       "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Kolk",
       "@type": "http://www.w3.org/2002/07/owl#Class",
       "definition": {
-        "nl": "Vaste waterbouwkundige constructie van een sluis tussen sluishoofden"
+        "nl": "Vaste waterbouwkundige constructie van een sluis tussen sluishoofden, met een regelbaar waterniveau, waarin een schip van het ene niveau naar het andere kan gaan."
+      },
+      "parents": [
+        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMNaamObject"
+      ]
+    },
+    {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Kolkvloer",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
+      "definition": {
+        "nl": "De vloer van de kolk. De vloer dient opgesplitst te worden per moot, elke moot heeft een aparte vloer."
+      },
+      "parents": [
+        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMNaamObject"
+      ]
+    },
+    {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Kolkwand",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
+      "definition": {
+        "nl": "De wand van een kolk. Wanden dienen opgesplitst te worden per moot. Elke moot heeft een aparte wand aan beide kanten."
       },
       "parents": [
         "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMNaamObject"
@@ -2353,7 +2544,9 @@
         "nl": "Een verticale constructie die dient als drager en bestaat uit een zuil of pilaar."
       },
       "parents": [
-        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#ConstructiefObject"
+        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#ConstructieElementSluisStuw",
+        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#ConstructiefObject",
+        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#ConstructieElementAanvaarbeschermingGeleidewerk"
       ]
     },
     {
@@ -2371,6 +2564,9 @@
       "@type": "http://www.w3.org/2002/07/owl#Class",
       "definition": {
         "nl": "Opstelling die het mogelijk maakt om een techniek direct te koppelen met het IP telematica netwerk. Een L2 access structuur bestaat uit meerdere L2 Switches die met elkaar verbonden zijn."
+      },
+      "usage": {
+        "nl": "De asset hoeft geometrisch niet gelokaliseerd te worden."
       },
       "parents": [
         "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#NaampadObject"
@@ -2414,8 +2610,8 @@
       },
       "parents": [
         "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMNaamObject",
-        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#AanhorigheidSluisStuw",
         "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#AanhorighedenBrug",
+        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#AanhorigheidSluisStuw",
         "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#AanhorigheidKoker"
       ]
     },
@@ -2424,6 +2620,9 @@
       "@type": "http://www.w3.org/2002/07/owl#Class",
       "definition": {
         "nl": "Het (glasvezel) traject tussen twee toestellen (NetwerkElementen) die rechtstreeks met mekaar communiceren."
+      },
+      "usage": {
+        "nl": "De asset hoeft geometrisch niet gelokaliseerd te worden."
       },
       "parents": [
         "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#NaampadObject"
@@ -2481,7 +2680,7 @@
         "nl": "Een meetpunt van Meten-In-Vlaanderen als plaats waar beide meetlussen bij benadering in de weg ingeslepen zijn."
       },
       "parents": [
-        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMNaamObject"
+        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#NaampadObject"
       ]
     },
     {
@@ -2494,7 +2693,8 @@
         "nl": "Vervangt MIVInstallatie om duidelijk te maken dat het om de aparte eenheden gaat (Sat's en LVE) en niet over het geheel van gekoppelde eenheden."
       },
       "parents": [
-        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMNaamObject"
+        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#NaampadObject",
+        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#IpAdresObject"
       ]
     },
     {
@@ -2527,14 +2727,14 @@
         "nl": "De plaats waar verschillende sensoren samen 1 meetstation vormen."
       },
       "parents": [
-        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMNaamObject"
+        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#NaampadObject"
       ]
     },
     {
       "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Omloopriool",
       "@type": "http://www.w3.org/2002/07/owl#Class",
       "definition": {
-        "nl": "Een vaste waterbouwkundige constructie voor het nivelleren van een sluis of het doorlaten van water."
+        "nl": "Een vaste waterbouwkundige constructie voor het nivelleren van een sluis."
       },
       "parents": [
         "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMNaamObject"
@@ -2575,6 +2775,9 @@
       "@type": "http://www.w3.org/2002/07/owl#Class",
       "definition": {
         "nl": "Een aaneengesloten reeks van benen die samen een verbinding realiseren over het netwerk, gebruik makende van eenzelfde technologie (vb SDH, OTN...). De verschillende benen binnen een pad volgen bij voorkeur een gescheiden geografisch traject binnen het netwerk."
+      },
+      "usage": {
+        "nl": "De asset hoeft geometrisch niet gelokaliseerd te worden."
       },
       "parents": [
         "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#NaampadObject"
@@ -2641,7 +2844,7 @@
         "nl": "Het geheel van ontvangstantenne, infrastructuur en straalkabel of zendantenne om de radiosignalen van radiozenders over FM (88 tot 108 MHz) of DAB (174 tot 230 MHz) uit te zenden op plaatsen, die afgesloten zijn van de buitenwereld, zoals tunnels en ondergrondse parkings."
       },
       "parents": [
-        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMNaamObject"
+        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#NaampadObject"
       ]
     },
     {
@@ -2694,29 +2897,18 @@
       },
       "parents": [
         "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMNaamObject",
-        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#StreefpeilWaterbouwkundigeConstructie"
+        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#OntwerpwaterstandStreefpeil"
       ]
     },
     {
       "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Sluishoofd",
       "@type": "http://www.w3.org/2002/07/owl#Class",
       "definition": {
-        "nl": "Constructiehoofd van een sluis waarin een sluisdeur zit"
+        "nl": "Constructiehoofd van een sluis waarin één of meerdere sluisdeuren zitten."
       },
       "parents": [
         "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMNaamObject",
         "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Constructiehoofd"
-      ]
-    },
-    {
-      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Sluisvloertegel",
-      "@type": "http://www.w3.org/2002/07/owl#Class",
-      "definition": {
-        "nl": "Een tegelvormige constructie-eenheid om de bodem van de sluis of het stuwcomplex te bedekken en te beschermen."
-      },
-      "parents": [
-        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMNaamObject",
-        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#BetonnenConstructieElement"
       ]
     },
     {
@@ -2758,18 +2950,28 @@
       },
       "parents": [
         "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMNaamObject",
-        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#StreefpeilWaterbouwkundigeConstructie"
+        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#OntwerpwaterstandStreefpeil"
       ]
     },
     {
       "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Stuwhoofd",
       "@type": "http://www.w3.org/2002/07/owl#Class",
       "definition": {
-        "nl": "Constructiehoofd van een stuw waarin een stuwelement zit"
+        "nl": "Constructiehoofd van een stuw waarin één of meerdere stuwelementen zitten."
       },
       "parents": [
         "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMNaamObject",
         "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Constructiehoofd"
+      ]
+    },
+    {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Tegengewichtkist",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
+      "definition": {
+        "nl": "De tegengewichtkist is een stevige behuizing die deel uitmaakt van de macht-zijde van balans of een gebalanceerd, beweegbaar brugdeel. Vaak erdoor beschermd tegen nadelige atmosferische invloeden, is er massa (ballast) in ondergebracht om een (regelbaar) tegengewicht te bekomen."
+      },
+      "parents": [
+        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#ConstructiefObject"
       ]
     },
     {
@@ -2796,7 +2998,7 @@
       "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#TijdelijkeWaterkerendeConstructie",
       "@type": "http://www.w3.org/2002/07/owl#Class",
       "definition": {
-        "nl": "Bouwkundige constructie, al dan niet opgebouwd uit meerdere op elkaar stapelbare elementen, voor het droogzetten van een (onderdeel van een) sluis of stuw"
+        "nl": "Constructie, al dan niet opgebouwd uit meerdere op elkaar stapelbare elementen, voor het droogzetten van een (onderdeel van een) sluis of stuw."
       },
       "parents": [
         "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#ConstructiefObject"
@@ -2818,6 +3020,9 @@
       "definition": {
         "nl": "Een trappentoren is een geïntegreerde constructie van trappen die kan dienen om 1 of meerdere niveaus te beklimmen."
       },
+      "usage": {
+        "nl": "Klasse uit gebruik sinds versie 2.12.0-RC2"
+      },
       "parents": [
         "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMNaamObject",
         "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#AanhorigheidKoker"
@@ -2827,7 +3032,7 @@
       "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Trekker",
       "@type": "http://www.w3.org/2002/07/owl#Class",
       "definition": {
-        "nl": "Een langwerpig (lijnvormig) element dat op trek wordt belast. Dit maakt de verbinding tussen het brugdek en de hoofddraagstructuur van het brugdeel (vb.: tussen boog en brugdek, tussen pyloon en brugdek, tussen draagkabel en brugdek, tussen windverband onder de brug en brugdek)."
+        "nl": "Een lineair mechanisch element, dubbelzijdig scharnierend, dat beoogd is om hoofdzakelijk op trek te belasten. Het verbindt, bijvoorbeeld, enerzijds het (bewegend) brugdeel/ beweegbare waterkerende constructie met anderzijds de lastzijde van de balansarm/bovenrolwagen."
       },
       "parents": [
         "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMNaamObject"
@@ -2849,6 +3054,9 @@
       "definition": {
         "nl": "Binnen de L2 access structuur vormt de VLAN een specifieke virtuele LAN. De toepassingen zijn verbonden met een specifieke VLAN. Rechtstreekse communicatie tussen toepassingen is enkel mogelijk indien deze zijn verbonden met dezelfde VLAN."
       },
+      "usage": {
+        "nl": "De asset hoeft geometrisch niet gelokaliseerd te worden."
+      },
       "parents": [
         "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#NaampadObject"
       ]
@@ -2857,10 +3065,11 @@
       "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#VakwerkElement",
       "@type": "http://www.w3.org/2002/07/owl#Class",
       "definition": {
-        "nl": "Element dat deel uitmaakt van een constructie waarbij balken en staven, volgens een stelsel van rechthoeken en/of driehoeken, aan de uiteinden en/of kruiselings verbonden worden tot een onwrikbaar geheel."
+        "nl": "Element dat deel uitmaakt van een constructie waarbij balken en staven,volgens een stelsel van rechthoeken en/of driehoeken,aan de uiteinden en/of kruiselings verbonden worden tot een onwrikbaar geheel."
       },
       "parents": [
-        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#ConstructiefObject"
+        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#ConstructiefObject",
+        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#ConstructieElementAanvaarbeschermingGeleidewerk"
       ]
     },
     {
@@ -2899,8 +3108,11 @@
       "definition": {
         "nl": "Inhoudelijke definitie van de betekenis van een verkeersbord zoals opgenomen in de wegcode."
       },
+      "usage": {
+        "nl": "De asset hoeft geometrisch niet gelokaliseerd te worden."
+      },
       "parents": [
-        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMObject"
+        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMNaamObject"
       ]
     },
     {
@@ -2908,6 +3120,9 @@
       "@type": "http://www.w3.org/2002/07/owl#Class",
       "definition": {
         "nl": "De voorstelling door middel van een verkeersbord van een aanwijzing ten behoeve van de weggebruikers die verbonden wordt aan het aankondigen of opleggen van een bepaalde verkeersmaatregel zoals bepaald in de wegcode."
+      },
+      "usage": {
+        "nl": "De asset hoeft geometrisch niet gelokaliseerd te worden."
       },
       "parents": [
         "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Verkeersteken"
@@ -2940,6 +3155,16 @@
       "@type": "http://www.w3.org/2002/07/owl#Class",
       "definition": {
         "nl": "Een aanvullend verlichtingssysteem aan de in -en uitgang van de koker met verschillende regimes."
+      },
+      "parents": [
+        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMNaamObject"
+      ]
+    },
+    {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Vloernis",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
+      "definition": {
+        "nl": "Vaste uitsparing (verticale verdieping) in de bodem van het constructiehoofd over de breedte van de constructie voor de waterdichting en/of krachtoverdracht van de beweegbare waterkerende constructie."
       },
       "parents": [
         "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMNaamObject"
@@ -3003,7 +3228,9 @@
         "nl": "Een verticaal constructiedeel,vrijstaand of omsluitend die een afscheiding vormt,bv. tussen 2 ruimtes."
       },
       "parents": [
-        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#ConstructiefObject"
+        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#ConstructieElementSluisStuw",
+        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#ConstructiefObject",
+        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#ConstructieElementAanvaarbeschermingGeleidewerk"
       ]
     },
     {
@@ -3031,6 +3258,9 @@
       "@type": "http://www.w3.org/2002/07/owl#Class",
       "definition": {
         "nl": "Gedeelte van het wegplatform dat buiten de rijbanen ligt. Een wegberm kan sloten en bijzonder ingerichte onderdelen bevatten."
+      },
+      "usage": {
+        "nl": "Klasse uit gebruik sinds versie 2.11.0-RC1"
       },
       "parents": [
         "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMObject",
@@ -3064,6 +3294,7 @@
         "nl": "Balk om een constructie te beschermen in geval van wrijvend contact met schepen."
       },
       "parents": [
+        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#AanhorighedenBrug",
         "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#AanhorigheidSluisStuw",
         "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#ConstructiefObject"
       ]
@@ -3072,10 +3303,10 @@
       "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Zoutbijlaadplaats",
       "@type": "http://www.w3.org/2002/07/owl#Class",
       "definition": {
-        "nl": "Site in het beheer van een district, waar strooiwagens zout of pekel kunnen bijladen, wanneer ze tijdens de winterdienst hun strooiroute afleggen. De leverancier kan toegang krijgen (batch of codeklavier) om de tanks of de silos terug te vullen."
+        "nl": "Site in het beheer van een district,waar strooiwagens zout of pekel kunnen bijladen,wanneer ze tijdens de winterdienst hun strooiroute afleggen. De leverancier kan toegang krijgen (badge of codeklavier) om de tanks of de silos terug te vullen."
       },
       "parents": [
-        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMNaamObject"
+        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#NaampadObject"
       ]
     },
     {
@@ -3083,6 +3314,9 @@
       "@type": "http://www.w3.org/2002/07/owl#Class",
       "definition": {
         "nl": "End-to-end gebruikersverbinding over het transport netwerk."
+      },
+      "usage": {
+        "nl": "De asset hoeft geometrisch niet gelokaliseerd te worden."
       },
       "parents": [
         "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#NaampadObject"
@@ -3093,20 +3327,6 @@
     {
       "name": {
         "nl": "Functie van rioleringsstelsel"
-      },
-      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
-      "@type": "rdfs:Class"
-    },
-    {
-      "name": {
-        "nl": "Wegberm type"
-      },
-      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
-      "@type": "rdfs:Class"
-    },
-    {
-      "name": {
-        "nl": "Wegberm BIO"
       },
       "@id": "http://www.w3.org/2004/02/skos/core#Concept",
       "@type": "rdfs:Class"
@@ -3169,6 +3389,13 @@
     },
     {
       "name": {
+        "nl": "Type hanger"
+      },
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
+      "@type": "rdfs:Class"
+    },
+    {
+      "name": {
         "nl": "Type aanvaarbescherming"
       },
       "@id": "http://www.w3.org/2004/02/skos/core#Concept",
@@ -3218,7 +3445,7 @@
     },
     {
       "name": {
-        "nl": "Kokercel type fundering"
+        "nl": "Koker type fundering"
       },
       "@id": "http://www.w3.org/2004/02/skos/core#Concept",
       "@type": "rdfs:Class"
@@ -3281,14 +3508,7 @@
     },
     {
       "name": {
-        "nl": "Type beweegbaar brugdeel"
-      },
-      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
-      "@type": "rdfs:Class"
-    },
-    {
-      "name": {
-        "nl": "graad van beweegbaarheid"
+        "nl": "Vast tegengewicht materiaal"
       },
       "@id": "http://www.w3.org/2004/02/skos/core#Concept",
       "@type": "rdfs:Class"
@@ -3309,49 +3529,28 @@
     },
     {
       "name": {
-        "nl": "type beweging"
+        "nl": "Kerende karakter van een sluis"
       },
       "@id": "http://www.w3.org/2004/02/skos/core#Concept",
       "@type": "rdfs:Class"
     },
     {
       "name": {
-        "nl": "Types geleidewerk"
+        "nl": "Regelbaar tegengewicht materiaal"
       },
       "@id": "http://www.w3.org/2004/02/skos/core#Concept",
       "@type": "rdfs:Class"
     },
     {
       "name": {
-        "nl": "Positie kolk"
+        "nl": "Type beweegbaar brugdeel"
       },
       "@id": "http://www.w3.org/2004/02/skos/core#Concept",
       "@type": "rdfs:Class"
     },
     {
       "name": {
-        "nl": "Vorm omloopriool"
-      },
-      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
-      "@type": "rdfs:Class"
-    },
-    {
-      "name": {
-        "nl": "Draagstructuur BWCTWC"
-      },
-      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
-      "@type": "rdfs:Class"
-    },
-    {
-      "name": {
-        "nl": "Sluistypes"
-      },
-      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
-      "@type": "rdfs:Class"
-    },
-    {
-      "name": {
-        "nl": "Type tijdelijke waterkerende constructie"
+        "nl": "graad van beweegbaarheid"
       },
       "@id": "http://www.w3.org/2004/02/skos/core#Concept",
       "@type": "rdfs:Class"
@@ -3365,14 +3564,7 @@
     },
     {
       "name": {
-        "nl": "Typen nivelleringssysteem"
-      },
-      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
-      "@type": "rdfs:Class"
-    },
-    {
-      "name": {
-        "nl": "Materiaal BWC TWC"
+        "nl": "Type nivelleringssysteem"
       },
       "@id": "http://www.w3.org/2004/02/skos/core#Concept",
       "@type": "rdfs:Class"
@@ -3386,6 +3578,13 @@
     },
     {
       "name": {
+        "nl": "Keuzelijst materiaal loopvloer"
+      },
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
+      "@type": "rdfs:Class"
+    },
+    {
+      "name": {
         "nl": "Beweegbaar deel"
       },
       "@id": "http://www.w3.org/2004/02/skos/core#Concept",
@@ -3393,7 +3592,7 @@
     },
     {
       "name": {
-        "nl": "Kerende karakter van een sluis"
+        "nl": "Draagstructuur BWCTWC"
       },
       "@id": "http://www.w3.org/2004/02/skos/core#Concept",
       "@type": "rdfs:Class"
@@ -3407,7 +3606,56 @@
     },
     {
       "name": {
-        "nl": "Lokaal terreintype"
+        "nl": "Positie kolk"
+      },
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
+      "@type": "rdfs:Class"
+    },
+    {
+      "name": {
+        "nl": "Types geleidewerk"
+      },
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
+      "@type": "rdfs:Class"
+    },
+    {
+      "name": {
+        "nl": "type beweging"
+      },
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
+      "@type": "rdfs:Class"
+    },
+    {
+      "name": {
+        "nl": "Materiaal BWC TWC"
+      },
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
+      "@type": "rdfs:Class"
+    },
+    {
+      "name": {
+        "nl": "Keuzelijst materiaal toegangsluik"
+      },
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
+      "@type": "rdfs:Class"
+    },
+    {
+      "name": {
+        "nl": "Type tijdelijke waterkerende constructie"
+      },
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
+      "@type": "rdfs:Class"
+    },
+    {
+      "name": {
+        "nl": "Keuzelijst droogzetbaarheid omloopriool"
+      },
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
+      "@type": "rdfs:Class"
+    },
+    {
+      "name": {
+        "nl": "Wijze geleiding"
       },
       "@id": "http://www.w3.org/2004/02/skos/core#Concept",
       "@type": "rdfs:Class"
@@ -3429,6 +3677,20 @@
     {
       "name": {
         "nl": "Aardingsinstallatie aardingsstelsel"
+      },
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
+      "@type": "rdfs:Class"
+    },
+    {
+      "name": {
+        "nl": "Meteo foto beschrijving"
+      },
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
+      "@type": "rdfs:Class"
+    },
+    {
+      "name": {
+        "nl": "Lokaal terreintype"
       },
       "@id": "http://www.w3.org/2004/02/skos/core#Concept",
       "@type": "rdfs:Class"
@@ -3516,6 +3778,20 @@
       },
       "@id": "http://www.w3.org/2004/02/skos/core#Concept",
       "@type": "rdfs:Class"
+    },
+    {
+      "name": {
+        "nl": "Wegberm BIO"
+      },
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
+      "@type": "rdfs:Class"
+    },
+    {
+      "name": {
+        "nl": "Wegberm type"
+      },
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
+      "@type": "rdfs:Class"
     }
   ],
   "properties": [
@@ -3593,7 +3869,7 @@
       "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Wrijfbalk.technischeFiche",
       "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "definition": {
-        "nl": "De technische fiche van de wrijfbalk"
+        "nl": "De technische fiche van de wrijfbalk."
       },
       "domain": [
         "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Wrijfbalk"
@@ -3637,6 +3913,9 @@
       "definition": {
         "nl": "Het type van wegberm."
       },
+      "usage": {
+        "nl": "Klasse uit gebruik sinds versie 2.11.0-RC1"
+      },
       "domain": [
         "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Wegberm"
       ],
@@ -3650,6 +3929,9 @@
       "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "definition": {
         "nl": "De bijzonder ingerichte onderdelen van de wegberm."
+      },
+      "usage": {
+        "nl": "Klasse uit gebruik sinds versie 2.11.0-RC1"
       },
       "domain": [
         "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Wegberm"
@@ -3698,6 +3980,20 @@
       ],
       "range": [
         "http://www.w3.org/2001/XMLSchema#boolean"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Vloernis.vastAanslagmateriaal",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "definition": {
+        "nl": "De verschillende mogelijkheden m.b.t. het materiaal van de aanslag"
+      },
+      "domain": [
+        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Vloernis"
+      ],
+      "range": [
+        "http://www.w3.org/2004/02/skos/core#Concept"
       ],
       "generalization": []
     },
@@ -3989,7 +4285,7 @@
       "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#VasteWaterbouwkundigeConstructie.typeNivelleringssysteem",
       "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "definition": {
-        "nl": "Verwijst naar het type systeem dat gebruikt wordt voor de nivellering in vaste waterbouwkundige constructies"
+        "nl": "Verwijst naar het type systeem dat gebruikt wordt voor de nivellering in vaste waterbouwkundige constructies."
       },
       "domain": [
         "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#VasteWaterbouwkundigeConstructie"
@@ -4000,10 +4296,24 @@
       "generalization": []
     },
     {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#VasteWaterbouwkundigeConstructie.heeftWoelkamer",
+      "@type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
+      "definition": {
+        "nl": "Geeft aan of er al dan niet een woelkamer aanwezig is in de vaste waterbouwkundige constructie."
+      },
+      "domain": [
+        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#VasteWaterbouwkundigeConstructie"
+      ],
+      "range": [
+        "http://www.w3.org/2001/XMLSchema#boolean"
+      ],
+      "generalization": []
+    },
+    {
       "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#VasteWaterbouwkundigeConstructie.heeftPompput",
       "@type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
       "definition": {
-        "nl": "Geeft aan of de vaste waterkerende constructie een pompput heeft"
+        "nl": "Geeft aan of de vaste waterbouwkundige constructie een pompput heeft."
       },
       "domain": [
         "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#VasteWaterbouwkundigeConstructie"
@@ -4160,7 +4470,7 @@
       "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#TijdelijkeWaterkerendeConstructie.type",
       "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "definition": {
-        "nl": "Het type tijdelijke waterkerende constructie"
+        "nl": "Het type tijdelijke waterkerende constructie."
       },
       "domain": [
         "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#TijdelijkeWaterkerendeConstructie"
@@ -4174,7 +4484,7 @@
       "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#TijdelijkeWaterkerendeConstructie.plaatsingsmethode",
       "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "definition": {
-        "nl": "De methode waarmee de tijdelijke waterkerende constructie geplaatst wordt"
+        "nl": "De methode waarmee de tijdelijke waterkerende constructie geplaatst wordt."
       },
       "domain": [
         "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#TijdelijkeWaterkerendeConstructie"
@@ -4188,7 +4498,7 @@
       "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#TijdelijkeWaterkerendeConstructie.overspanning",
       "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "definition": {
-        "nl": "De overspanning van de tijdelijke waterkerende constructie uitgedrukt in meter"
+        "nl": "De overspanning van de tijdelijke waterkerende constructie uitgedrukt in meter."
       },
       "domain": [
         "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#TijdelijkeWaterkerendeConstructie"
@@ -4199,10 +4509,24 @@
       "generalization": []
     },
     {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#TijdelijkeWaterkerendeConstructie.oplegbreedte",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "definition": {
+        "nl": "Breedte van de oplegtand t.o.v. de sponning, uitgedrukt in centimeter."
+      },
+      "domain": [
+        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#TijdelijkeWaterkerendeConstructie"
+      ],
+      "range": [
+        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInCentimeter"
+      ],
+      "generalization": []
+    },
+    {
       "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#TijdelijkeWaterkerendeConstructie.maximaalTeKerenWaterpeilverschil",
       "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "definition": {
-        "nl": "Het maximaal te keren waterpeil verschil uitgedrukt in meter"
+        "nl": "Het maximaal te keren waterpeil verschil uitgedrukt in meter."
       },
       "domain": [
         "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#TijdelijkeWaterkerendeConstructie"
@@ -4216,7 +4540,7 @@
       "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#TijdelijkeWaterkerendeConstructie.materiaal",
       "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "definition": {
-        "nl": "Het gebruikte materiaal voor de tijdelijke waterkerende constructie"
+        "nl": "Geeft de verschillende mogelijkheden aan om te weten vanuit welk materiaal de tijdelijke waterkerende constructie is uitgevoerd."
       },
       "domain": [
         "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#TijdelijkeWaterkerendeConstructie"
@@ -4227,10 +4551,10 @@
       "generalization": []
     },
     {
-      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#TijdelijkeWaterkerendeConstructie.gewicht",
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#TijdelijkeWaterkerendeConstructie.gewichtZwaarsteElement",
       "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "definition": {
-        "nl": "Het gewicht van de tijdelijke waterkerende constructie in ton"
+        "nl": "Het gewicht van het zwaarste element van de tijdelijke waterkerende constructie, uitgedrukt in ton."
       },
       "domain": [
         "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#TijdelijkeWaterkerendeConstructie"
@@ -4241,24 +4565,10 @@
       "generalization": []
     },
     {
-      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#TijdelijkeWaterkerendeConstructie.dikteTerHoogteVanDeSponning",
-      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
-      "definition": {
-        "nl": "De dikte ter hoogte van de sponningen uitgedrukt in centimeter"
-      },
-      "domain": [
-        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#TijdelijkeWaterkerendeConstructie"
-      ],
-      "range": [
-        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInCentimeter"
-      ],
-      "generalization": []
-    },
-    {
-      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#TijdelijkeWaterkerendeConstructie.bestaatUitElementenVarierendInHoogte",
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#TijdelijkeWaterkerendeConstructie.bestaatUitVarierendeElementen",
       "@type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
       "definition": {
-        "nl": "Geeft aan of de elementen al dan niet in hoogte varieren"
+        "nl": "Geeft aan of de tijdelijke waterkerende constructie al dan niet uit variërende elementen bestaat."
       },
       "domain": [
         "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#TijdelijkeWaterkerendeConstructie"
@@ -4311,24 +4621,24 @@
       "generalization": []
     },
     {
-      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Stuwhoofd.nuttigeBreedte",
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Tegengewichtkist.toegankelijkheid",
       "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "definition": {
-        "nl": "De breedte van het deel van het stuwhoofd dat daadwerkelijk wordt gebruikt voor de doorvaart van schepen"
+        "nl": "Duidt de toegankelijkheid aan van het tegengewichtkist."
       },
       "domain": [
-        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Stuwhoofd"
+        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Tegengewichtkist"
       ],
       "range": [
-        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInMeter"
+        "http://www.w3.org/2004/02/skos/core#Concept"
       ],
       "generalization": []
     },
     {
-      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Stuwhoofd.materiaalAanslagprofiel",
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Stuwhoofd.profielVastAanslag",
       "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "definition": {
-        "nl": "Het gebruikte materiaal van het aanslagprofiel"
+        "nl": "Het gebruikte materiaal van het aanslagprofiel."
       },
       "domain": [
         "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Stuwhoofd"
@@ -4342,13 +4652,27 @@
       "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Stuwhoofd.heeftAanslagprofiel",
       "@type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
       "definition": {
-        "nl": "Geeft aan of er een aanslagprofiel aanwezig is"
+        "nl": "Geeft aan of er een aanslagprofiel aanwezig is."
       },
       "domain": [
         "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Stuwhoofd"
       ],
       "range": [
         "http://www.w3.org/2001/XMLSchema#boolean"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Stuw.maximaalStuwPeil",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "definition": {
+        "nl": "Het maximale waterpeil dat kan worden bereikt aan de stroomopwaartse zijde van de stuw, gemeten vanaf de onderkant van de stuwconstructie."
+      },
+      "domain": [
+        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Stuw"
+      ],
+      "range": [
+        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInMeterTAW"
       ],
       "generalization": []
     },
@@ -4367,38 +4691,10 @@
       "generalization": []
     },
     {
-      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Stuw.hoogsteSchutpeilOnderkant",
-      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
-      "definition": {
-        "nl": "het maximale waterpeil dat kan worden bereikt aan de stroomopwaartse zijde van de stuw, gemeten vanaf de onderkant van de stuwconstructie"
-      },
-      "domain": [
-        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Stuw"
-      ],
-      "range": [
-        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInMeterTAW"
-      ],
-      "generalization": []
-    },
-    {
-      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Stuw.drempelPeil",
-      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
-      "definition": {
-        "nl": "Dit is het hoogste waterpeil aan de stuwzijde voordat het water begint te stromen over de stuw zelf. Wanneer het water dit niveau bereikt, begint het over de bovenkant van de stuw te stromen, waardoor de regulatie van waterstromen en niveaus stroomafwaarts mogelijk wordt."
-      },
-      "domain": [
-        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Stuw"
-      ],
-      "range": [
-        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInMeterTAW"
-      ],
-      "generalization": []
-    },
-    {
       "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Stuw.breedte",
       "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "definition": {
-        "nl": "De breedte van de stuw uitgedruikt in meter"
+        "nl": "De afstand tussen de dagkanten van de vaste constructie."
       },
       "domain": [
         "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Stuw"
@@ -4451,83 +4747,13 @@
       "generalization": []
     },
     {
-      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Sluisvloertegel.heeftVoegbanden",
-      "@type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
-      "definition": {
-        "nl": "Geeft aan of de sluisvloertegel al dan niet voegbanden heeft"
-      },
-      "domain": [
-        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Sluisvloertegel"
-      ],
-      "range": [
-        "http://www.w3.org/2001/XMLSchema#boolean"
-      ],
-      "generalization": []
-    },
-    {
-      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Sluisvloertegel.heeftDrainageOpeningen",
-      "@type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
-      "definition": {
-        "nl": "Geeft aan of de sluisvloertegel al dan niet drainage openingen heeft"
-      },
-      "domain": [
-        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Sluisvloertegel"
-      ],
-      "range": [
-        "http://www.w3.org/2001/XMLSchema#boolean"
-      ],
-      "generalization": []
-    },
-    {
-      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Sluisvloertegel.detailplanDrainageOpeningen",
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Sluishoofd.typeHoofd",
       "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "definition": {
-        "nl": "Het detailplan van de drainage openingen van de sluisvloertegel"
-      },
-      "domain": [
-        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Sluisvloertegel"
-      ],
-      "range": [
-        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcDocument"
-      ],
-      "generalization": []
-    },
-    {
-      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Sluisvloertegel.afmetingen",
-      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
-      "definition": {
-        "nl": "De afmetingen van de sluisvloertegel, breedte, lengte en hoogte, uitgedrukt in meter"
-      },
-      "domain": [
-        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Sluisvloertegel"
-      ],
-      "range": [
-        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcAfmetingBxlxhInM"
-      ],
-      "generalization": []
-    },
-    {
-      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Sluishoofd.doorvaartBreedte",
-      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
-      "definition": {
-        "nl": "De beschikbare breedte voor veilige navigatie door schepen uitgedrukt in meter"
+        "nl": "Geeft het type hoofd aan van het constructiehoofd."
       },
       "domain": [
         "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Sluishoofd"
-      ],
-      "range": [
-        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInMeter"
-      ],
-      "generalization": []
-    },
-    {
-      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Sluis.type",
-      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
-      "definition": {
-        "nl": "De keuzelijst die de verschillende types van een sluis bevat"
-      },
-      "domain": [
-        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Sluis"
       ],
       "range": [
         "http://www.w3.org/2004/02/skos/core#Concept"
@@ -4535,10 +4761,38 @@
       "generalization": []
     },
     {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Sluis.waterdiepte",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "definition": {
+        "nl": "De verticale afstand tussen het wateroppervlak, gemiddelde laagwaterstand (normale afwaarts pomppeil/ ALAT-waarde) , in de sluis van het laagste punt van de drempel, de sluishoofdvloer of sluiskolkvloer."
+      },
+      "domain": [
+        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Sluis"
+      ],
+      "range": [
+        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInMeter"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Sluis.vrijeHoogte",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "definition": {
+        "nl": "De verticale vrije ruimte tussen het wateroppervlak en het laagste punt van de bovenliggende constructie, zoals bruggen, balken of andere obstakels."
+      },
+      "domain": [
+        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Sluis"
+      ],
+      "range": [
+        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInMeter"
+      ],
+      "generalization": []
+    },
+    {
       "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Sluis.tonnenmaat",
       "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "definition": {
-        "nl": "de maximale grootte van schepen, uitgedrukt in tonnen, die de sluis kunnen passeren zonder de capaciteit of de structuur van de sluis te overschrijden"
+        "nl": "De maximale grootte van schepen, uitgedrukt in tonnen, die de sluis kunnen passeren zonder de capaciteit of de structuur van de sluis te overschrijden."
       },
       "domain": [
         "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Sluis"
@@ -4549,10 +4803,24 @@
       "generalization": []
     },
     {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Sluis.toelaatbareSchipsafmetingen",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "definition": {
+        "nl": "Het grootste schip dat door de sluis kan passeren"
+      },
+      "domain": [
+        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Sluis"
+      ],
+      "range": [
+        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#DtcDVWtoelaatbareSchipsafemetingen"
+      ],
+      "generalization": []
+    },
+    {
       "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Sluis.sluiscategorie",
       "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "definition": {
-        "nl": "De keuzelijst die de verschillende categorien van een sluis bevat"
+        "nl": "De verschillende categorieën van sluizen."
       },
       "domain": [
         "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Sluis"
@@ -4566,7 +4834,7 @@
       "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Sluis.ontwerpSchip",
       "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "definition": {
-        "nl": "schip met afmetingen dat wordt gekozen voor het ontwerp en de berekeningen van de sluis, dat representatief is voor het gemiddelde of typische scheepsverkeer dat naar verwachting de sluis zal gebruiken"
+        "nl": "Schip met afmetingen dat wordt gekozen voor het ontwerp en de berekeningen van de sluis, dat representatief is voor het gemiddelde of typische scheepsverkeer dat naar verwachting de sluis zal gebruiken."
       },
       "domain": [
         "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Sluis"
@@ -4577,24 +4845,10 @@
       "generalization": []
     },
     {
-      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Sluis.maatgevendSchip",
-      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
-      "definition": {
-        "nl": "het grootste schip dat door de sluis zal passeren"
-      },
-      "domain": [
-        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Sluis"
-      ],
-      "range": [
-        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#DtcDVWMaatgevendSchip"
-      ],
-      "generalization": []
-    },
-    {
       "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Sluis.lengte",
       "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "definition": {
-        "nl": "De lengte van de sluis uitgedrukt in meter"
+        "nl": "Lengte langs de kolkwand tussen de meest afwaartse deurkas/-kamer en de meest opwaartse deurkas/-kamer of het opwaarts hoog gefundeerd sluishoofd."
       },
       "domain": [
         "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Sluis"
@@ -4605,10 +4859,10 @@
       "generalization": []
     },
     {
-      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Sluis.kerendekarakter",
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Sluis.kerendeKarakter",
       "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "definition": {
-        "nl": "De keuzelijst die de verschillende kerende karakteren van een sluis bevat"
+        "nl": "De verschillende kerende karakters van een sluis."
       },
       "domain": [
         "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Sluis"
@@ -4619,10 +4873,10 @@
       "generalization": []
     },
     {
-      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Sluis.isMiddenhoofdAanwezig",
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Sluis.isOnderhevigAanGetijden",
       "@type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
       "definition": {
-        "nl": "geeft aan of er een middenhoofd aanwezig is"
+        "nl": "Geeft aan of de sluis onderhevig aan getijden is."
       },
       "domain": [
         "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Sluis"
@@ -4633,10 +4887,10 @@
       "generalization": []
     },
     {
-      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Sluis.isGetijdeGevoelig",
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Sluis.isMiddenhoofdAanwezig",
       "@type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
       "definition": {
-        "nl": "geeft aan of het getijde gevoelig is"
+        "nl": "Geeft aan of er een middenhoofd aanwezig is."
       },
       "domain": [
         "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Sluis"
@@ -4650,7 +4904,7 @@
       "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Sluis.heeftStopstreep",
       "@type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
       "definition": {
-        "nl": "geeft aan of er een stopstreep aanwezig is"
+        "nl": "Geeft aan of er een stopstreep aanwezig is"
       },
       "domain": [
         "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Sluis"
@@ -4661,38 +4915,10 @@
       "generalization": []
     },
     {
-      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Sluis.doorvaartHoogte",
-      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
-      "definition": {
-        "nl": "verticale vrije ruimte boven het wateroppervlak binnen de sluis, gemeten vanaf het laagste punt van de sluisdeur of de drempel tot aan het laagste punt van de bovenliggende constructie, zoals bruggen, balken of andere obstakels"
-      },
-      "domain": [
-        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Sluis"
-      ],
-      "range": [
-        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInMeter"
-      ],
-      "generalization": []
-    },
-    {
-      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Sluis.diepgang",
-      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
-      "definition": {
-        "nl": "verticale afstand tussen het wateroppervlak, laagste waterstand, in de sluis en het laagste punt van de sluisdeur of de bodem van de sluis"
-      },
-      "domain": [
-        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Sluis"
-      ],
-      "range": [
-        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInMeter"
-      ],
-      "generalization": []
-    },
-    {
       "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Sluis.breedte",
       "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "definition": {
-        "nl": "De breedte van de sluis uitgedruikt in meter"
+        "nl": "De afstand tussen de dagkanten van de vaste constructie, uitgedrukt in meter."
       },
       "domain": [
         "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Sluis"
@@ -5174,24 +5400,10 @@
       "generalization": []
     },
     {
-      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Omloopriool.vorm",
-      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
-      "definition": {
-        "nl": "Verwijst naar de type vorm dat de omloopriool kan hebben"
-      },
-      "domain": [
-        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Omloopriool"
-      ],
-      "range": [
-        "http://www.w3.org/2004/02/skos/core#Concept"
-      ],
-      "generalization": []
-    },
-    {
       "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Omloopriool.stroomsnelheid",
       "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "definition": {
-        "nl": "De stroomsnelheid van binnen het omloopriool uitgedruikt in meter per second"
+        "nl": "De stroomsnelheid bij maximaal verval binnen het omloopriool uitgedrukt in m/s."
       },
       "domain": [
         "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Omloopriool"
@@ -5202,10 +5414,10 @@
       "generalization": []
     },
     {
-      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Omloopriool.oppervlakte",
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Omloopriool.natteSectie",
       "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "definition": {
-        "nl": "De oppervlakte van de omloopriool uitgedrukt in vierkant meter"
+        "nl": "De natte sectie van het omloopriool uitgedrukt in vierkante meter"
       },
       "domain": [
         "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Omloopriool"
@@ -5219,7 +5431,7 @@
       "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Omloopriool.heeftOntluchtingskanaal",
       "@type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
       "definition": {
-        "nl": "Geeft aan of er een ontluchtingskanaal aanwezig is"
+        "nl": "Geeft aan of er een ontluchtingskanaal aanwezig is."
       },
       "domain": [
         "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Omloopriool"
@@ -5233,7 +5445,7 @@
       "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Omloopriool.droogzetbaarheid",
       "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "definition": {
-        "nl": "De keuzelijst die de verschillende mogelijkheden bevat mbt droogzetbaarheid"
+        "nl": "De verschillende mogelijkheden m.b.t. droogzetbaarheid."
       },
       "domain": [
         "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Omloopriool"
@@ -5328,6 +5540,20 @@
       "generalization": []
     },
     {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Meetstation.foto",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "definition": {
+        "nl": "De verschillende foto's van het meetstation."
+      },
+      "domain": [
+        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Meetstation"
+      ],
+      "range": [
+        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#DtcMeteoFoto"
+      ],
+      "generalization": []
+    },
+    {
       "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Meetstation.beoordelingLokaleTerrein",
       "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "definition": {
@@ -5418,6 +5644,23 @@
       "generalization": []
     },
     {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#MIVMeetpunt.wegdek",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "definition": {
+        "nl": "LEGACY-ATTRIBUUT zie usageNote! Het type wegdek waarin de meetlussen zijn verwerkt."
+      },
+      "usage": {
+        "nl": "Deze eigenschap is tijdelijk toegevoegd in het kader van het verweven van Legacy data en OTL data. De informatie in deze eigenschap zal op termijn moeten worden bijgehouden  in het type Laag."
+      },
+      "domain": [
+        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#MIVMeetpunt"
+      ],
+      "range": [
+        "http://www.w3.org/2004/02/skos/core#Concept"
+      ],
+      "generalization": []
+    },
+    {
       "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#MIVMeetpunt.uitslijprichting",
       "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "definition": {
@@ -5428,6 +5671,23 @@
       ],
       "range": [
         "http://www.w3.org/2004/02/skos/core#Concept"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#MIVMeetpunt.trekput",
+      "@type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
+      "definition": {
+        "nl": "LEGACY-ATTRIBUUT zie usageNote! Een trekput is een ondergrondse put waarin kabels van meetlussen op snelwegen samenkomen voor verbinding en onderhoud, zonder het wegdek open te breken."
+      },
+      "usage": {
+        "nl": "Deze eigenschap is tijdelijk toegevoegd in het kader van het verweven van Legacy data en OTL data. De informatie in deze eigenschap zal op termijn moeten worden bijgehouden  in het type Technische put."
+      },
+      "domain": [
+        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#MIVMeetpunt"
+      ],
+      "range": [
+        "http://www.w3.org/2001/XMLSchema#boolean"
       ],
       "generalization": []
     },
@@ -5543,6 +5803,23 @@
       },
       "usage": {
         "nl": "De lengte van een lus wordt gemeten parallel aan de rijweg. De breedte dwars op de rijweg. Beide lussen van een MIV meetpunt moeten altijd dezelfde afmetingen hebben."
+      },
+      "domain": [
+        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#MIVMeetpunt"
+      ],
+      "range": [
+        "http://www.w3.org/2004/02/skos/core#Concept"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#MIVMeetpunt.aansluiting",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "definition": {
+        "nl": "LEGACY-ATTRIBUUT zie usageNote! De aansluiting van de meetlussen op het verwerkingssysteem."
+      },
+      "usage": {
+        "nl": "Deze eigenschap is tijdelijk toegevoegd in het kader van het verweven van Legacy data en OTL data. De informatie in deze eigenschap zal op termijn moeten worden bijgehouden  in het type Datakabel"
       },
       "domain": [
         "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#MIVMeetpunt"
@@ -5698,6 +5975,20 @@
       ],
       "range": [
         "http://www.w3.org/2004/02/skos/core#Concept"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Leuning.technischeFiche",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "definition": {
+        "nl": "De technische fiche van de leuning."
+      },
+      "domain": [
+        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Leuning"
+      ],
+      "range": [
+        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcDocument"
       ],
       "generalization": []
     },
@@ -5996,10 +6287,80 @@
       "generalization": []
     },
     {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Kolkwand.heeftDraineervoorziening",
+      "@type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
+      "definition": {
+        "nl": "Geeft aan of er al dan niet een draineervoorziening aanwezig is."
+      },
+      "domain": [
+        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Kolkwand"
+      ],
+      "range": [
+        "http://www.w3.org/2001/XMLSchema#boolean"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Kolkvloer.isDrainerend",
+      "@type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
+      "definition": {
+        "nl": "Geeft aan of de kolkvloer al dan niet drainerend is."
+      },
+      "domain": [
+        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Kolkvloer"
+      ],
+      "range": [
+        "http://www.w3.org/2001/XMLSchema#boolean"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Kolkvloer.isConstructief",
+      "@type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
+      "definition": {
+        "nl": "Geeft aan of de kolkvloer al dan niet constructief is."
+      },
+      "domain": [
+        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Kolkvloer"
+      ],
+      "range": [
+        "http://www.w3.org/2001/XMLSchema#boolean"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Kolkvloer.detailPlanDrainageOpeningen",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "definition": {
+        "nl": "Het detailplan van de drainageopeningen, inclusief de filterconstructie, van de vloer."
+      },
+      "domain": [
+        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Kolkvloer"
+      ],
+      "range": [
+        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcDocument"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Kolkvloer.bodemPeilKolkvloer",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "definition": {
+        "nl": "Het peil van de bovenkant van de vloer"
+      },
+      "domain": [
+        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Kolkvloer"
+      ],
+      "range": [
+        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInMeterTAW"
+      ],
+      "generalization": []
+    },
+    {
       "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Kolk.positieKolk",
       "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "definition": {
-        "nl": "De mogelijke posities van de kolk binnen het geheel van de waterbouwkundige structuur"
+        "nl": "De mogelijke posities van de kolk binnen het geheel van de waterbouwkundige structuur."
       },
       "domain": [
         "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Kolk"
@@ -6013,7 +6374,7 @@
       "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Kolk.nuttigeKolklengte",
       "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "definition": {
-        "nl": "De lengte van de kolk uitgedrukt in meter dat daadwerkelijk gebruikt voor de doorstroming van water"
+        "nl": "De lengte van de kolk uitgedrukt in meter dat daadwerkelijk gebruikt wordt voor het versassen van schepen."
       },
       "domain": [
         "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Kolk"
@@ -6027,7 +6388,7 @@
       "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Kolk.droogzetbaarheid",
       "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "definition": {
-        "nl": "De keuzelijst die de verschillende mogelijkheid geeft mbt droogzetbaarheid"
+        "nl": "De verschillende mogelijkheid m.b.t. droogzetbaarheid van de kolk."
       },
       "domain": [
         "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Kolk"
@@ -6041,27 +6402,13 @@
       "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Kolk.breedteKolk",
       "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "definition": {
-        "nl": "De breedte van de kolk uitgedrukt in meter"
+        "nl": "De breedte de kolk, tussen de dagvlakken, uitgedrukt in meter."
       },
       "domain": [
         "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Kolk"
       ],
       "range": [
         "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInMeter"
-      ],
-      "generalization": []
-    },
-    {
-      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Kolk.aanzetpeilKolkvloer",
-      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
-      "definition": {
-        "nl": "Het aanzetpeil van een kolkvloer is het peil waarop de kolkvloer is aangelegd en wordt uitgedrukt in mTAW"
-      },
-      "domain": [
-        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Kolk"
-      ],
-      "range": [
-        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInMeterTAW"
       ],
       "generalization": []
     },
@@ -6127,6 +6474,9 @@
       "definition": {
         "nl": "Geeft aan of de funderingsaanzet al dan niet onder de bodem ligt."
       },
+      "usage": {
+        "nl": "Attribuut uit gebruik sinds versie 2.11.0-RC2"
+      },
       "domain": [
         "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Kokercomplex"
       ],
@@ -6141,6 +6491,9 @@
       "definition": {
         "nl": "Geeft aan of de fundering van het landhoofd in of op de rand van de waterweg ligt."
       },
+      "usage": {
+        "nl": "Attribuut uit gebruik sinds versie 2.11.0-RC2"
+      },
       "domain": [
         "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Kokercomplex"
       ],
@@ -6153,7 +6506,7 @@
       "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Koker.typeFundering",
       "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "definition": {
-        "nl": "Het type fundering dat gebruikt wordt voor de kokercel"
+        "nl": "Het type fundering dat gebruikt wordt voor de koker."
       },
       "domain": [
         "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Koker"
@@ -6297,6 +6650,104 @@
       },
       "domain": [
         "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#HorizontaleConstructieplaat"
+      ],
+      "range": [
+        "http://www.w3.org/2004/02/skos/core#Concept"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Heftoren.toegankelijkheid",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "definition": {
+        "nl": "Duidt de toegankelijkheid aan van de heftoren."
+      },
+      "domain": [
+        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Heftoren"
+      ],
+      "range": [
+        "http://www.w3.org/2004/02/skos/core#Concept"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Heftoren.isGevuldMetTegengewicht",
+      "@type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
+      "definition": {
+        "nl": "Aanduiding of de heftoren al dan niet gevuld is met een tegengewicht."
+      },
+      "domain": [
+        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Heftoren"
+      ],
+      "range": [
+        "http://www.w3.org/2001/XMLSchema#boolean"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Hefportiek.toegankelijkheid",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "definition": {
+        "nl": "Duidt de toegankelijkheid van het hefportiek aan."
+      },
+      "domain": [
+        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Hefportiek"
+      ],
+      "range": [
+        "http://www.w3.org/2004/02/skos/core#Concept"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Hefportiek.isGevuldMetTegengewicht",
+      "@type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
+      "definition": {
+        "nl": "Aanduiding of het hefportiek al dan niet gevuld is met een tegengewicht."
+      },
+      "domain": [
+        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Hefportiek"
+      ],
+      "range": [
+        "http://www.w3.org/2001/XMLSchema#boolean"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Hanger.type",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "definition": {
+        "nl": "Het type van de trekker."
+      },
+      "domain": [
+        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Hanger"
+      ],
+      "range": [
+        "http://www.w3.org/2004/02/skos/core#Concept"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Hameistijl.toegankelijkheid",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "definition": {
+        "nl": "Duidt de toegankelijkheid aan van de hameistijl."
+      },
+      "domain": [
+        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Hameistijl"
+      ],
+      "range": [
+        "http://www.w3.org/2004/02/skos/core#Concept"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Hameipoort.toegankelijkheid",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "definition": {
+        "nl": "Duidt de toegankelijkheid van de hameipoort aan."
+      },
+      "domain": [
+        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Hameipoort"
       ],
       "range": [
         "http://www.w3.org/2004/02/skos/core#Concept"
@@ -6629,16 +7080,44 @@
       "generalization": []
     },
     {
-      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Geleidewerk.typeGeleidewerken",
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Geleidewerk.wijzeGeleiding",
       "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "definition": {
-        "nl": "TODO"
+        "nl": "De wijze van de geleiding."
       },
       "domain": [
         "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Geleidewerk"
       ],
       "range": [
         "http://www.w3.org/2004/02/skos/core#Concept"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Geleidewerk.typeGeleidewerken",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "definition": {
+        "nl": "De verschillende types van geleidewerk."
+      },
+      "domain": [
+        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Geleidewerk"
+      ],
+      "range": [
+        "http://www.w3.org/2004/02/skos/core#Concept"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Geleidewerk.isAfmeringMogelijk",
+      "@type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
+      "definition": {
+        "nl": "Geeft aan of afgemeerd kan worden aan het geleidewerk."
+      },
+      "domain": [
+        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Geleidewerk"
+      ],
+      "range": [
+        "http://www.w3.org/2001/XMLSchema#boolean"
       ],
       "generalization": []
     },
@@ -6769,10 +7248,10 @@
       "generalization": []
     },
     {
-      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#DtcTypeBWC.typeBeweging",
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#DtcTypeBWC.typeConstructie",
       "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "definition": {
-        "nl": "TODO"
+        "nl": "De type beweegbare waterkerende constructie."
       },
       "domain": [
         "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#DtcTypeBWC"
@@ -6783,10 +7262,10 @@
       "generalization": []
     },
     {
-      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#DtcTypeBWC.typeBeweegbaarDeel",
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#DtcTypeBWC.typeConcept",
       "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "definition": {
-        "nl": "TODO"
+        "nl": "Het type concept van de beweegbare waterkerende constructie."
       },
       "domain": [
         "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#DtcTypeBWC"
@@ -6797,10 +7276,10 @@
       "generalization": []
     },
     {
-      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#DtcOntwerpSchip.maximaleLengte",
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#DtcOntwerpSchip.lengte",
       "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "definition": {
-        "nl": "TODO"
+        "nl": "De lengte van het ontwerpschip."
       },
       "domain": [
         "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#DtcOntwerpSchip"
@@ -6811,10 +7290,24 @@
       "generalization": []
     },
     {
-      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#DtcOntwerpSchip.maximaleDiepgang",
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#DtcOntwerpSchip.gewicht",
       "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "definition": {
-        "nl": "TODO"
+        "nl": "Het gewicht van het ontwerpschip."
+      },
+      "domain": [
+        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#DtcOntwerpSchip"
+      ],
+      "range": [
+        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInTon"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#DtcOntwerpSchip.diepgang",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "definition": {
+        "nl": "De diepgang van het ontwerpschip."
       },
       "domain": [
         "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#DtcOntwerpSchip"
@@ -6825,10 +7318,10 @@
       "generalization": []
     },
     {
-      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#DtcOntwerpSchip.maximaleBreedte",
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#DtcOntwerpSchip.breedte",
       "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "definition": {
-        "nl": "TODO"
+        "nl": "De breedte van het ontwerpschip."
       },
       "domain": [
         "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#DtcOntwerpSchip"
@@ -6839,13 +7332,41 @@
       "generalization": []
     },
     {
-      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#DtcDVWMaatgevendSchip.maximaleLengte",
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#DtcMeteoFoto.fotobestand",
       "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "definition": {
-        "nl": "TODO"
+        "nl": "Het bestand dat de foto bevat."
       },
       "domain": [
-        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#DtcDVWMaatgevendSchip"
+        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#DtcMeteoFoto"
+      ],
+      "range": [
+        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcDocument"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#DtcMeteoFoto.beschrijving",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "definition": {
+        "nl": "De beschrijving of categorie waarbij de foto's behoren."
+      },
+      "domain": [
+        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#DtcMeteoFoto"
+      ],
+      "range": [
+        "http://www.w3.org/2004/02/skos/core#Concept"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#DtcDVWtoelaatbareSchipsafemetingen.maximaleLengte",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "definition": {
+        "nl": "De maximale toelaatbare lengte."
+      },
+      "domain": [
+        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#DtcDVWtoelaatbareSchipsafemetingen"
       ],
       "range": [
         "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInMeter"
@@ -6853,13 +7374,13 @@
       "generalization": []
     },
     {
-      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#DtcDVWMaatgevendSchip.maximaleDiepgang",
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#DtcDVWtoelaatbareSchipsafemetingen.maximaleHoogte",
       "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "definition": {
-        "nl": "TODO"
+        "nl": "De maximale toelaatbare hoogte."
       },
       "domain": [
-        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#DtcDVWMaatgevendSchip"
+        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#DtcDVWtoelaatbareSchipsafemetingen"
       ],
       "range": [
         "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInMeter"
@@ -6867,13 +7388,27 @@
       "generalization": []
     },
     {
-      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#DtcDVWMaatgevendSchip.maximaleBreedte",
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#DtcDVWtoelaatbareSchipsafemetingen.maximaleDiepgang",
       "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "definition": {
-        "nl": "TODO"
+        "nl": "De maximale toelaatbare diepgang."
       },
       "domain": [
-        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#DtcDVWMaatgevendSchip"
+        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#DtcDVWtoelaatbareSchipsafemetingen"
+      ],
+      "range": [
+        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInMeter"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#DtcDVWtoelaatbareSchipsafemetingen.maximaleBreedte",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "definition": {
+        "nl": "De maximale toelaatbare Breedte"
+      },
+      "domain": [
+        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#DtcDVWtoelaatbareSchipsafemetingen"
       ],
       "range": [
         "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInMeter"
@@ -6968,16 +7503,100 @@
       "generalization": []
     },
     {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Drempel.vastAanslagmateriaal",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "definition": {
+        "nl": "De verschillende mogelijkheden m.b.t. het materiaal van de aanslag"
+      },
+      "domain": [
+        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Drempel"
+      ],
+      "range": [
+        "http://www.w3.org/2004/02/skos/core#Concept"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Drempel.typeDrempel",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "definition": {
+        "nl": "Vaste opstand op de bodem van het constructiehoofd over de breedte van de constructie voor de waterdichting en/of krachtoverdracht van de beweegbare waterkerende constructie (m.u.v. roldeuren)."
+      },
+      "domain": [
+        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Drempel"
+      ],
+      "range": [
+        "http://www.w3.org/2004/02/skos/core#Concept"
+      ],
+      "generalization": []
+    },
+    {
       "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#DraagstructuurBWCTWC.type",
       "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "definition": {
-        "nl": "TODO"
+        "nl": "Verwijst naar de type van draagstructuur gebruikt in beweegbare waterkerende constructies en tijdelijke waterkerende constructies"
       },
       "domain": [
         "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#DraagstructuurBWCTWC"
       ],
       "range": [
         "http://www.w3.org/2004/02/skos/core#Concept"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Deurnis.afmetingen",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "definition": {
+        "nl": "De afmetingen van de deurkamer, breedte en lengte, uitgedrukt in meter"
+      },
+      "domain": [
+        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Deurnis"
+      ],
+      "range": [
+        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcAfmetingBxhInM"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Deurloop.vastAanslagmateriaal",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "definition": {
+        "nl": "De verschillende mogelijkheden m.b.t. het materiaal van de aanslag"
+      },
+      "domain": [
+        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Deurloop"
+      ],
+      "range": [
+        "http://www.w3.org/2004/02/skos/core#Concept"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Deurkas.afmetingen",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "definition": {
+        "nl": "De afmetingen van de deurkas, breedte en lengte, uitgedrukt in meter"
+      },
+      "domain": [
+        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Deurkas"
+      ],
+      "range": [
+        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcAfmetingBxhInM"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Deurkamer.afmetingen",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "definition": {
+        "nl": "De afmetingen van de deurkamer, breedte en lengte, uitgedrukt in meter"
+      },
+      "domain": [
+        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Deurkamer"
+      ],
+      "range": [
+        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcAfmetingBxhInM"
       ],
       "generalization": []
     },
@@ -7517,7 +8136,7 @@
       "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Breekbalk.isDemonteerbaar",
       "@type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
       "definition": {
-        "nl": "geeft aan of de breekbalk demonteerbaar is"
+        "nl": "Geeft aan of de breekbalk demonteerbaar is."
       },
       "domain": [
         "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Breekbalk"
@@ -7528,24 +8147,10 @@
       "generalization": []
     },
     {
-      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Bodembescherming.oppervlakte",
-      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
-      "definition": {
-        "nl": "Geeft de oppervlakte van de bodembescherming aan"
-      },
-      "domain": [
-        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Bodembescherming"
-      ],
-      "range": [
-        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInVierkanteMeter"
-      ],
-      "generalization": []
-    },
-    {
       "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Bodembescherming.isWaterdoorlatend",
       "@type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
       "definition": {
-        "nl": "Geeft aan of de bodembescherming al dan niet waterdoorlatend is"
+        "nl": "Geeft aan of de bodembescherming al dan niet waterdoorlatend is."
       },
       "domain": [
         "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Bodembescherming"
@@ -7643,7 +8248,7 @@
       "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#BeweegbareWaterkerendeConstructie.niveauHoogtebeperking",
       "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "definition": {
-        "nl": "het niveau van de hoogte beperking, uitgedrukt in meter TAW"
+        "nl": "Het niveau van de hoogte beperking, uitgedrukt in meter TAW."
       },
       "domain": [
         "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#BeweegbareWaterkerendeConstructie"
@@ -7657,7 +8262,7 @@
       "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#BeweegbareWaterkerendeConstructie.materiaal",
       "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "definition": {
-        "nl": "De keuzelijst die de verschillende mogelijkheden bevat om te weten vanuit welk materiaal de beweegbare waterkerende constructie is uitgevoerd"
+        "nl": "Geeft de verschillende mogelijkheden aan om te weten vanuit welk materiaal de beweegbare waterkerende constructie is uitgevoerd."
       },
       "domain": [
         "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#BeweegbareWaterkerendeConstructie"
@@ -7668,10 +8273,10 @@
       "generalization": []
     },
     {
-      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#BeweegbareWaterkerendeConstructie.kruinPeil",
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#BeweegbareWaterkerendeConstructie.kruinpeil",
       "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "definition": {
-        "nl": "de hoogte van het bovenste horizontale deel van de constructie, gemeten boven het maaiveld of het aangrenzende wateroppervlak. Dit is het hoogste punt van de constructie waar het water normaliter niet overheen mag stromen om overstromingen te voorkomen"
+        "nl": "Het hoogste punt van de constructie waar het water normaliter niet overheen mag stromen om overstromingen te voorkomen."
       },
       "domain": [
         "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#BeweegbareWaterkerendeConstructie"
@@ -7685,7 +8290,7 @@
       "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#BeweegbareWaterkerendeConstructie.isNivelleerOfSpuivoorzieningAanwezig",
       "@type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
       "definition": {
-        "nl": "Geeft aan of er nivelleervoorzieningen of spuivoorzieningen aanwezig zijn."
+        "nl": "Geeft aan of er nivelleer -of spuivoorzieningen aanwezig zijn."
       },
       "domain": [
         "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#BeweegbareWaterkerendeConstructie"
@@ -7710,38 +8315,10 @@
       "generalization": []
     },
     {
-      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#BeweegbareWaterkerendeConstructie.isLkOfBcInspecteerbaar",
-      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
-      "definition": {
-        "nl": "De keuzelijst die de verschillende mogelijkheden bevat om te weten of de luchtkisten of ballastcompartimenten inspecteerbaar zijn"
-      },
-      "domain": [
-        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#BeweegbareWaterkerendeConstructie"
-      ],
-      "range": [
-        "http://www.w3.org/2004/02/skos/core#Concept"
-      ],
-      "generalization": []
-    },
-    {
-      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#BeweegbareWaterkerendeConstructie.isLkOfBcAanwezig",
-      "@type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
-      "definition": {
-        "nl": "geeft aan of er luchtkisten of ballastcompartimenten aanwezig zijn"
-      },
-      "domain": [
-        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#BeweegbareWaterkerendeConstructie"
-      ],
-      "range": [
-        "http://www.w3.org/2001/XMLSchema#boolean"
-      ],
-      "generalization": []
-    },
-    {
       "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#BeweegbareWaterkerendeConstructie.isHoogtebeperkingAanwezig",
       "@type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
       "definition": {
-        "nl": "geeft aan of er een hoogte beperking aanwezig is"
+        "nl": "Geeft aan of er een hoogte beperking aanwezig is."
       },
       "domain": [
         "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#BeweegbareWaterkerendeConstructie"
@@ -7755,7 +8332,7 @@
       "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#BeweegbareWaterkerendeConstructie.heeftPompput",
       "@type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
       "definition": {
-        "nl": "Geeft aan of de beweegbare waterkerende constructie een pompput heeft"
+        "nl": "Geeft aan of in de beweegbare waterkerende constructie een pompput aanwezig is."
       },
       "domain": [
         "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#BeweegbareWaterkerendeConstructie"
@@ -7769,7 +8346,7 @@
       "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#BeweegbareWaterkerendeConstructie.heeftOpboutbareHijsogen",
       "@type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
       "definition": {
-        "nl": "geeft aan of er opboutbare hijsogen aanwezig zijn"
+        "nl": "Geeft aan of er opboutbare hijsogen aanwezig zijn."
       },
       "domain": [
         "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#BeweegbareWaterkerendeConstructie"
@@ -7783,7 +8360,7 @@
       "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#BeweegbareWaterkerendeConstructie.heeftOpboutbareDraaischelpen",
       "@type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
       "definition": {
-        "nl": "geeft aan of er opboutbare opboutbare draaischelpen aanwezig zijn"
+        "nl": "Geeft aan of er opboutbare draaischelpen aanwezig zijn."
       },
       "domain": [
         "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#BeweegbareWaterkerendeConstructie"
@@ -7797,7 +8374,7 @@
       "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#BeweegbareWaterkerendeConstructie.heeftHijsogen",
       "@type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
       "definition": {
-        "nl": "geeft aan of er opboutbare hijsogen aanwezig zijn"
+        "nl": "Geeft aan of er hijsogen aanwezig zijn."
       },
       "domain": [
         "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#BeweegbareWaterkerendeConstructie"
@@ -7811,7 +8388,7 @@
       "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#BeweegbareWaterkerendeConstructie.heeftDraaischelpen",
       "@type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
       "definition": {
-        "nl": "geeft aan of er draaischelpen aanwezig zijn"
+        "nl": "Geeft aan of er draaischelpen aanwezig zijn."
       },
       "domain": [
         "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#BeweegbareWaterkerendeConstructie"
@@ -7825,7 +8402,7 @@
       "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#BeweegbareWaterkerendeConstructie.gewicht",
       "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "definition": {
-        "nl": "het gewicht van de beweegbare waterkerende constructie, uitgedrukt in tonnen"
+        "nl": "Het gewicht van de beweegbare waterkerende constructie, uitgedrukt in ton."
       },
       "domain": [
         "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#BeweegbareWaterkerendeConstructie"
@@ -7839,13 +8416,13 @@
       "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#BeweegbareWaterkerendeConstructie.basisAfmeting",
       "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "definition": {
-        "nl": "Complex data type met de basis afmetingen van een beweegabare waterkerende constructie."
+        "nl": "Breedte en hoogte van een beweegbare waterkerende constructie uitgedrukt in meter."
       },
       "domain": [
         "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#BeweegbareWaterkerendeConstructie"
       ],
       "range": [
-        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcAfmetingBxhInM"
+        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcAfmetingBxlxhInM"
       ],
       "generalization": []
     },
@@ -7906,13 +8483,27 @@
       "generalization": []
     },
     {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Balans.isGevuldMetTegengewicht",
+      "@type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
+      "definition": {
+        "nl": "Aanduiding of de balans al dan niet gevuld is met een tegengewicht."
+      },
+      "domain": [
+        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Balans"
+      ],
+      "range": [
+        "http://www.w3.org/2001/XMLSchema#boolean"
+      ],
+      "generalization": []
+    },
+    {
       "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Baanlichaam.langsprofiel",
       "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "definition": {
         "nl": "Een langsprofiel is een doorsnijding van een terrein of constructie met een verticaal vlak, aangebracht in de lengterichting van de as ervan."
       },
       "usage": {
-        "nl": "Bestanden van het type xlsx, dwg of pdf."
+        "nl": "Klasse uit gebruik sinds versie 2.11.0-RC1 .Bestanden van het type xlsx, dwg of pdf."
       },
       "domain": [
         "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Baanlichaam"
@@ -7929,7 +8520,7 @@
         "nl": "De horizontale ligging van het baanlichaam als document bijlage."
       },
       "usage": {
-        "nl": "Bestanden van het type xlsx, dwg of pdf."
+        "nl": "Klasse uit gebruik sinds versie 2.11.0-RC1 .Bestanden van het type xlsx, dwg of pdf."
       },
       "domain": [
         "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Baanlichaam"
@@ -7946,7 +8537,7 @@
         "nl": "Een dwarsprofiel is een doorsnijding van een terrein of constructie met een verticaal vlak, aangebracht loodrecht op de as ervan."
       },
       "usage": {
-        "nl": "Bestanden van het type xlsx, dwg of pdf."
+        "nl": "Klasse uit gebruik sinds versie 2.11.0-RC1 .Bestanden van het type xlsx, dwg of pdf."
       },
       "domain": [
         "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Baanlichaam"
@@ -8065,6 +8656,62 @@
       ],
       "range": [
         "http://www.w3.org/2004/02/skos/core#Concept"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#AanzichtVerkeersbordopstelling.technischeVoorstelling",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "definition": {
+        "nl": "Grafische weergave van de opstelling zoals fysiek te zien op het openbaar domein met aanduiding van opstelhoogtes en horizontale verschuivingen."
+      },
+      "domain": [
+        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#AanzichtVerkeersbordopstelling"
+      ],
+      "range": [
+        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcDocument"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#AanzichtVerkeersbordopstelling.kaartvoorstelling",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "definition": {
+        "nl": "Grafische weergave van de opstelling in ontwerp met visueel onderscheid op basis van de status van het bord nl: bestaand, gepland of te verwijderen."
+      },
+      "domain": [
+        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#AanzichtVerkeersbordopstelling"
+      ],
+      "range": [
+        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcDocument"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#AanzichtVerkeersbordopstelling.hoek",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "definition": {
+        "nl": "De hoek waarin het fysiek bord gepositioneerd is ten opzichte van een vooropgestelde as."
+      },
+      "domain": [
+        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#AanzichtVerkeersbordopstelling"
+      ],
+      "range": [
+        "http://www.w3.org/2001/XMLSchema#decimal"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#AanzichtVerkeersbordopstelling.foto",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "definition": {
+        "nl": "Een foto van de opstelling zoals die te zien is op het openbaar domein."
+      },
+      "domain": [
+        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#AanzichtVerkeersbordopstelling"
+      ],
+      "range": [
+        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcDocument"
       ],
       "generalization": []
     },

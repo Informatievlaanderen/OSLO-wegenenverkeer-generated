@@ -13,22 +13,26 @@ dc:Agent a rdfs:Class;
 
 skos:Concept a rdfs:Class;
   rdfs:label "AIM toestand"@nl,
+    "Toegangsprocedure aandachtspunt"@nl,
     "Type badge"@nl,
-    "Electricity subthema"@nl,
-    "Pipe container type"@nl,
     "Type sleutel"@nl,
+    "Bijlage type"@nl,
     "Electricity appurtenance type"@nl,
     "Telecommunications appurtenance type"@nl,
+    "Electricity subthema"@nl,
+    "Pipe container type"@nl,
     "Datakabel materiaal"@nl,
     "Telecommunications subthema"@nl,
-    "Krimpvoegvulling"@nl,
-    "Toegangsprocedure toegangstijden"@nl,
-    "Betonomgevingsklasse"@nl,
+    "Corrosiebelastingscategorie"@nl,
     "Schoorhoek"@nl,
     "Duurzaamheidsklasse van hout"@nl,
     "Walsmethode"@nl,
     "Constructiestaalsoort"@nl,
+    "Krimpvoegvulling"@nl,
+    "Toegangsprocedure toegangstijden"@nl,
+    "Betonomgevingsklasse"@nl,
     "Betonsterkteklasse"@nl,
+    "Toegankelijkheid"@nl,
     "Mimetype"@nl,
     "Gebruiksdomein"@nl,
     "Toeslagmiddel beton"@nl,
@@ -38,8 +42,10 @@ skos:Concept a rdfs:Class;
     "Algemeen faalmodus type"@nl,
     "Sterkteklasse van hout"@nl,
     "Betonmilieuklasse"@nl,
-    "Bijlagetype toegangsprocedure"@nl,
-    "Toegangsprocedure aandachtspunt"@nl .
+    "Bijlagetype toegangsprocedure"@nl .
+
+<https://data.vlaanderen.be/ns/mobiliteit#Verkeersteken> a rdfs:Class;
+  rdfs:label "Verkeersteken"@nl .
 
 schemas:ContactPoint a rdfs:Class;
   rdfs:label "Contactinfo"@nl .
@@ -111,6 +117,12 @@ schemas:OpeningHoursSpecification a rdfs:Class;
   rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement>;
   rdfs:range skos:Concept .
 
+<https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMVersie.assetVersie> a owl:ObjectProperty;
+  rdfs:comment "De versie van de asset in de database."@nl;
+  rdfs:domain <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMVersie>;
+  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement>;
+  rdfs:range <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcAssetVersie> .
+
 <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#ActivityComplex.netwerk> a owl:ObjectProperty;
   rdfs:comment "Geeft aan bij welk type nutsvoorzieningennet de kabelmof hoort volgens de types uit IMKL en Inspire."@nl;
   rdfs:domain <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#ActivityComplex>;
@@ -122,6 +134,13 @@ schemas:OpeningHoursSpecification a rdfs:Class;
   rdfs:domain <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#Appurtenance>;
   rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement>;
   rdfs:range <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInMeter> .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#Bijlage.type> a owl:ObjectProperty;
+  <http://purl.org/vocab/vann/usageNote> "Klasse uit gebruik sinds versie 2.13.0-RC2"@nl;
+  rdfs:comment "De typering of categorie van de bijlage."@nl;
+  rdfs:domain <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#Bijlage>;
+  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement>;
+  rdfs:range skos:Concept .
 
 <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#Derdenobject.assetId> a owl:ObjectProperty;
   rdfs:comment "Unieke identificatie van de asset zoals toegekend door de assetbeheerder of n.a.v. eerste aanlevering door de leverancier."@nl;
@@ -333,6 +352,24 @@ schemas:OpeningHoursSpecification a rdfs:Class;
   rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement>;
   rdfs:range <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInMillimeter> .
 
+<https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcAssetVersie.context> a owl:DatatypeProperty;
+  rdfs:comment "De context van de versie creatie."@nl;
+  rdfs:domain <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcAssetVersie>;
+  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement>;
+  rdfs:range xsd:string .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcAssetVersie.timestamp> a owl:DatatypeProperty;
+  rdfs:comment "De timestamp van het moment dat de versienummer werd toegekend."@nl;
+  rdfs:domain <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcAssetVersie>;
+  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement>;
+  rdfs:range xsd:dateTime .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcAssetVersie.versienummer> a owl:ObjectProperty;
+  rdfs:comment "Het versienummer als een oplopende integer."@nl;
+  rdfs:domain <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcAssetVersie>;
+  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement>;
+  rdfs:range xsd:nonNegativeInteger .
+
 <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcBereikInKg.maximum> a owl:ObjectProperty;
   rdfs:comment "Bovengrens van het bereik uitgedrukt in kilogram."@nl;
   rdfs:domain <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcBereikInKg>;
@@ -344,6 +381,18 @@ schemas:OpeningHoursSpecification a rdfs:Class;
   rdfs:domain <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcBereikInKg>;
   rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement>;
   rdfs:range <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInKilogram> .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcBeschermendeLaag.beschermlaag> a owl:ObjectProperty;
+  rdfs:comment "Type bescherming van de constructie of steun, bv. geschilderd of gegalvaniseerd."@nl;
+  rdfs:domain <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcBeschermendeLaag>;
+  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement>;
+  rdfs:range skos:Concept .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcBeschermendeLaag.corrosieklasse> a owl:ObjectProperty;
+  rdfs:comment "Een code om de mate van corrosieve belasting in een bepaalde omgeving te beschrijven, volgens ISO-12944-2."@nl;
+  rdfs:domain <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcBeschermendeLaag>;
+  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement>;
+  rdfs:range skos:Concept .
 
 <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcBetonspecificaties.betondekking> a owl:ObjectProperty;
   rdfs:comment "De afstand in millimeter tussen de buitenkant van het beton (het oppervlak van het beton) tot het dichtstbijzijnde wapeningsstaal."@nl;
@@ -1149,8 +1198,8 @@ schemas:OpeningHoursSpecification a rdfs:Class;
   rdfs:range xsd:decimal .
 
 <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInLiter.standaardEenheid> a owl:DatatypeProperty;
-  <http://purl.org/vocab/vann/usageNote> "\"A\"^^cdt:ucumunit"@nl;
-  rdfs:comment "De standaard eenheid bij dit datatype is uitgedrukt in ampere."@nl;
+  <http://purl.org/vocab/vann/usageNote> "\"L\"^^cdt:ucumunit"@nl;
+  rdfs:comment "De standaard eenheid bij dit datatype is uitgedrukt in liter."@nl;
   rdfs:domain <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInLiter>;
   rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement>;
   rdfs:range rdfs:Literal .
@@ -1615,7 +1664,7 @@ dc:Agent\.agentId a rdf:Property;
   rdfs:label "agent identificatie"@nl .
 
 dc:Agent\.contactinfo a rdf:Property;
-  rdfs:label "Contactinfo"@nl .
+  rdfs:label "contactinfo"@nl .
 
 dc:Agent\.naam a rdf:Property;
   rdfs:label "naam"@nl .
@@ -1659,6 +1708,12 @@ schemas:opens a rdf:Property;
   rdfs:comment "Het gehele gebied dat door dezelfde exploitant op dezelfde locatie of op verschillende geografische locaties wordt beheerd,inclusief alle infrastructuur,apparatuur en materialen."@nl;
   rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement>;
   rdfs:subClassOf <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMNaamObject> .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#Bijlage> a owl:Class;
+  <http://purl.org/vocab/vann/usageNote> "Klasse uit gebruik sinds versie 2.13.0-RC2"@nl;
+  rdfs:comment "Een bestand (document,afbeelding,...) dat behoort tot 1 of meerdere assets."@nl;
+  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement>;
+  rdfs:subClassOf <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#AbstracteAanvullendeGeometrie> .
 
 <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcAfmetingDiameterInCm> a owl:Class;
   rdfs:comment "Complex datatype voor de afmeting van een diameter in centimeter."@nl;
@@ -1713,6 +1768,10 @@ schemas:opens a rdf:Property;
 
 <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcBereikInKg> a owl:Class;
   rdfs:comment "Complex datatype om een bereik uit te drukken met een minimium en maximum in kilogram."@nl;
+  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement> .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcBeschermendeLaag> a owl:Class;
+  rdfs:comment "Complex datatype voor de inventarisatie van het type beschermlaag en de corrosiebelastingscategorie."@nl;
   rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement> .
 
 <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcCameraBeeldverwerking> a owl:Class;
@@ -1834,7 +1893,7 @@ schemas:opens a rdf:Property;
   rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement> .
 
 <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInLiter> a owl:Class;
-  rdfs:comment "Een kwantitatieve waarde die een getal in ampere uitdrukt."@nl;
+  rdfs:comment "Een kwantitatieve waarde die een getal in liter uitdrukt."@nl;
   rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement> .
 
 <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInLiterPerMinuut> a owl:Class;
@@ -1916,6 +1975,10 @@ schemas:opens a rdf:Property;
   rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement>;
   rdfs:subClassOf <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMObject> .
 
+<https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMVersie> a owl:Class;
+  rdfs:comment "Abstracte klasse met de eigenschappen om de versionering van een asset te beheren."@nl;
+  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement> .
+
 <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#Appurtenance> a owl:Class;
   <http://purl.org/vocab/vann/usageNote> "Gebruik dit type enkel voor aanlevering voor AKELA indien geen specifieke types aanwezig zijn in OTL."@nl;
   rdfs:comment "Appurtenance-objecten zijn toebehoren of accessoires, dus allerlei apparaten, toestellen en dergelijke,kortom diverse soorten leidingelementen."@nl;
@@ -1983,6 +2046,10 @@ schemas:opens a rdf:Property;
   rdfs:comment "Complex datatype voor de afmeting van de breedte,de lengte en hoogte in millimeter."@nl;
   rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement> .
 
+<https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcAssetVersie> a owl:Class;
+  rdfs:comment "Complex datatype voor de eigenschappen ten behoeve van de versionering van een asset in de databank."@nl;
+  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement> .
+
 <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcKunststofspecificaties> a owl:Class;
   rdfs:comment "Complex datatype dat specifieke eigenschappen van de kunststof bevat."@nl;
   rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement> .
@@ -2031,7 +2098,8 @@ schemas:opens a rdf:Property;
   <http://purl.org/vocab/vann/usageNote> "Een Derdenobject mag enkel gebruikt worden om objecten aan te duiden die niet in beheer zijn van AWV en waarvan het type niet gekend is of aangeleverd."@nl;
   rdfs:comment "Object niet in eigendom van de assetbeheerder dat zonder verdere typering bewaard wordt om relaties met getypeerde assets te kunnen beheren."@nl;
   rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement>;
-  rdfs:subClassOf <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMToestand>,
+  rdfs:subClassOf <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMVersie>,
+    <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMToestand>,
     <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMDBStatus> .
 
 <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#RelatieObject> a owl:Class;
@@ -2058,7 +2126,8 @@ schemas:opens a rdf:Property;
 <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMObject> a owl:Class;
   rdfs:comment "Abstracte als de basisklasse voor alle uniek geïdentificeerde OTL objecten met de basiseigenschappen die elk OTL object minstens heeft."@nl;
   rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement>;
-  rdfs:subClassOf <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMToestand>,
+  rdfs:subClassOf <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMVersie>,
+    <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMToestand>,
     <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMDBStatus> .
 
 <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#Toegangsprocedure> a owl:Class;
@@ -3525,6 +3594,7 @@ schemas:opens a rdf:Property;
   ];
   rdfs:seeAlso dc:Agent,
     skos:Concept,
+    <https://data.vlaanderen.be/ns/mobiliteit#Verkeersteken>,
     schemas:ContactPoint,
     schemas:DayOfWeek,
     schemas:OpeningHoursSpecification,

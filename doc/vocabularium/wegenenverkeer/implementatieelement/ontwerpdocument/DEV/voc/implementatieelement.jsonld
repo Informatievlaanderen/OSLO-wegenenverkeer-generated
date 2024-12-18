@@ -1692,7 +1692,7 @@
     "prev": ""
   },
   "publication-state": "https://data.vlaanderen.be/doc/concept/StandaardStatus/KandidaatStandaard",
-  "publication-date": "5-02-2024",
+  "publication-date": "18-12-2024",
   "classes": [
     {
       "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMDBStatus",
@@ -1719,6 +1719,7 @@
         "nl": "Abstracte als de basisklasse voor alle uniek geïdentificeerde OTL objecten met de basiseigenschappen die elk OTL object minstens heeft."
       },
       "parents": [
+        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMVersie",
         "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMToestand",
         "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMDBStatus"
       ]
@@ -1728,6 +1729,14 @@
       "@type": "http://www.w3.org/2002/07/owl#Class",
       "definition": {
         "nl": "Voegt een attribuut toe aan de subklasse dat de huidige stand in de levenscyclus van het object aangeeft."
+      },
+      "parents": []
+    },
+    {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMVersie",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
+      "definition": {
+        "nl": "Abstracte klasse met de eigenschappen om de versionering van een asset te beheren."
       },
       "parents": []
     },
@@ -1758,6 +1767,19 @@
       ]
     },
     {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#Bijlage",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
+      "definition": {
+        "nl": "Een bestand (document,afbeelding,...) dat behoort tot 1 of meerdere assets."
+      },
+      "usage": {
+        "nl": "Klasse uit gebruik sinds versie 2.13.0-RC2"
+      },
+      "parents": [
+        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#AbstracteAanvullendeGeometrie"
+      ]
+    },
+    {
       "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#Derdenobject",
       "@type": "http://www.w3.org/2002/07/owl#Class",
       "definition": {
@@ -1767,6 +1789,7 @@
         "nl": "Een Derdenobject mag enkel gebruikt worden om objecten aan te duiden die niet in beheer zijn van AWV en waarvan het type niet gekend is of aangeleverd."
       },
       "parents": [
+        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMVersie",
         "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMToestand",
         "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMDBStatus"
       ]
@@ -1878,10 +1901,26 @@
       "parents": []
     },
     {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcAssetVersie",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
+      "definition": {
+        "nl": "Complex datatype voor de eigenschappen ten behoeve van de versionering van een asset in de databank."
+      },
+      "parents": []
+    },
+    {
       "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcBereikInKg",
       "@type": "http://www.w3.org/2002/07/owl#Class",
       "definition": {
         "nl": "Complex datatype om een bereik uit te drukken met een minimium en maximum in kilogram."
+      },
+      "parents": []
+    },
+    {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcBeschermendeLaag",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
+      "definition": {
+        "nl": "Complex datatype voor de inventarisatie van het type beschermlaag en de corrosiebelastingscategorie."
       },
       "parents": []
     },
@@ -2291,7 +2330,7 @@
       "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInLiter",
       "@type": "http://www.w3.org/2002/07/owl#Class",
       "definition": {
-        "nl": "Een kwantitatieve waarde die een getal in ampere uitdrukt."
+        "nl": "Een kwantitatieve waarde die een getal in liter uitdrukt."
       },
       "parents": []
     },
@@ -2597,6 +2636,13 @@
     },
     {
       "name": {
+        "nl": "Toegangsprocedure aandachtspunt"
+      },
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
+      "@type": "rdfs:Class"
+    },
+    {
+      "name": {
         "nl": "Type badge"
       },
       "@id": "http://www.w3.org/2004/02/skos/core#Concept",
@@ -2604,21 +2650,14 @@
     },
     {
       "name": {
-        "nl": "Electricity subthema"
-      },
-      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
-      "@type": "rdfs:Class"
-    },
-    {
-      "name": {
-        "nl": "Pipe container type"
-      },
-      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
-      "@type": "rdfs:Class"
-    },
-    {
-      "name": {
         "nl": "Type sleutel"
+      },
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
+      "@type": "rdfs:Class"
+    },
+    {
+      "name": {
+        "nl": "Bijlage type"
       },
       "@id": "http://www.w3.org/2004/02/skos/core#Concept",
       "@type": "rdfs:Class"
@@ -2639,6 +2678,20 @@
     },
     {
       "name": {
+        "nl": "Electricity subthema"
+      },
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
+      "@type": "rdfs:Class"
+    },
+    {
+      "name": {
+        "nl": "Pipe container type"
+      },
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
+      "@type": "rdfs:Class"
+    },
+    {
+      "name": {
         "nl": "Datakabel materiaal"
       },
       "@id": "http://www.w3.org/2004/02/skos/core#Concept",
@@ -2653,21 +2706,7 @@
     },
     {
       "name": {
-        "nl": "Krimpvoegvulling"
-      },
-      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
-      "@type": "rdfs:Class"
-    },
-    {
-      "name": {
-        "nl": "Toegangsprocedure toegangstijden"
-      },
-      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
-      "@type": "rdfs:Class"
-    },
-    {
-      "name": {
-        "nl": "Betonomgevingsklasse"
+        "nl": "Corrosiebelastingscategorie"
       },
       "@id": "http://www.w3.org/2004/02/skos/core#Concept",
       "@type": "rdfs:Class"
@@ -2702,7 +2741,35 @@
     },
     {
       "name": {
+        "nl": "Krimpvoegvulling"
+      },
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
+      "@type": "rdfs:Class"
+    },
+    {
+      "name": {
+        "nl": "Toegangsprocedure toegangstijden"
+      },
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
+      "@type": "rdfs:Class"
+    },
+    {
+      "name": {
+        "nl": "Betonomgevingsklasse"
+      },
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
+      "@type": "rdfs:Class"
+    },
+    {
+      "name": {
         "nl": "Betonsterkteklasse"
+      },
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
+      "@type": "rdfs:Class"
+    },
+    {
+      "name": {
+        "nl": "Toegankelijkheid"
       },
       "@id": "http://www.w3.org/2004/02/skos/core#Concept",
       "@type": "rdfs:Class"
@@ -2779,9 +2846,9 @@
     },
     {
       "name": {
-        "nl": "Toegangsprocedure aandachtspunt"
+        "nl": "Verkeersteken"
       },
-      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
+      "@id": "https://data.vlaanderen.be/ns/mobiliteit#Verkeersteken",
       "@type": "rdfs:Class"
     },
     {
@@ -3880,10 +3947,10 @@
       "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInLiter.standaardEenheid",
       "@type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
       "definition": {
-        "nl": "De standaard eenheid bij dit datatype is uitgedrukt in ampere."
+        "nl": "De standaard eenheid bij dit datatype is uitgedrukt in liter."
       },
       "usage": {
-        "nl": "\"A\"^^cdt:ucumunit"
+        "nl": "\"L\"^^cdt:ucumunit"
       },
       "domain": [
         "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInLiter"
@@ -5787,6 +5854,34 @@
       "generalization": []
     },
     {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcBeschermendeLaag.corrosieklasse",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "definition": {
+        "nl": "Een code om de mate van corrosieve belasting in een bepaalde omgeving te beschrijven, volgens ISO-12944-2."
+      },
+      "domain": [
+        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcBeschermendeLaag"
+      ],
+      "range": [
+        "http://www.w3.org/2004/02/skos/core#Concept"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcBeschermendeLaag.beschermlaag",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "definition": {
+        "nl": "Type bescherming van de constructie of steun, bv. geschilderd of gegalvaniseerd."
+      },
+      "domain": [
+        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcBeschermendeLaag"
+      ],
+      "range": [
+        "http://www.w3.org/2004/02/skos/core#Concept"
+      ],
+      "generalization": []
+    },
+    {
       "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcBereikInKg.minimium",
       "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "definition": {
@@ -5811,6 +5906,48 @@
       ],
       "range": [
         "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInKilogram"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcAssetVersie.versienummer",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "definition": {
+        "nl": "Het versienummer als een oplopende integer."
+      },
+      "domain": [
+        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcAssetVersie"
+      ],
+      "range": [
+        "http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcAssetVersie.timestamp",
+      "@type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
+      "definition": {
+        "nl": "De timestamp van het moment dat de versienummer werd toegekend."
+      },
+      "domain": [
+        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcAssetVersie"
+      ],
+      "range": [
+        "http://www.w3.org/2001/XMLSchema#dateTime"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcAssetVersie.context",
+      "@type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
+      "definition": {
+        "nl": "De context van de versie creatie."
+      },
+      "domain": [
+        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcAssetVersie"
+      ],
+      "range": [
+        "http://www.w3.org/2001/XMLSchema#string"
       ],
       "generalization": []
     },
@@ -6294,6 +6431,23 @@
       "generalization": []
     },
     {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#Bijlage.type",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "definition": {
+        "nl": "De typering of categorie van de bijlage."
+      },
+      "usage": {
+        "nl": "Klasse uit gebruik sinds versie 2.13.0-RC2"
+      },
+      "domain": [
+        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#Bijlage"
+      ],
+      "range": [
+        "http://www.w3.org/2004/02/skos/core#Concept"
+      ],
+      "generalization": []
+    },
+    {
       "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#Appurtenance.opstelhoogte",
       "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "definition": {
@@ -6318,6 +6472,20 @@
       ],
       "range": [
         "http://www.w3.org/2004/02/skos/core#Concept"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMVersie.assetVersie",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "definition": {
+        "nl": "De versie van de asset in de database."
+      },
+      "domain": [
+        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMVersie"
+      ],
+      "range": [
+        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcAssetVersie"
       ],
       "generalization": []
     },
@@ -6559,7 +6727,7 @@
     },
     {
       "name": {
-        "nl": "Contactinfo"
+        "nl": "contactinfo"
       },
       "@id": "http://purl.org/dc/terms/Agent.contactinfo",
       "@type": "rdf:Property"

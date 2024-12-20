@@ -2574,6 +2574,14 @@
       ]
     },
     {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#MeetstationAbstract",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
+      "definition": {
+        "nl": "Bundeling van de generieke eigenschappen en relaties voor een meetstation."
+      },
+      "parents": []
+    },
+    {
       "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#MotorVermogenskring",
       "@type": "http://www.w3.org/2002/07/owl#Class",
       "definition": {
@@ -3196,34 +3204,6 @@
     },
     {
       "name": {
-        "nl": "verkeerslicht merk"
-      },
-      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
-      "@type": "rdfs:Class"
-    },
-    {
-      "name": {
-        "nl": "VRI detector typeweggebruiker"
-      },
-      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
-      "@type": "rdfs:Class"
-    },
-    {
-      "name": {
-        "nl": "seinlantaarn modelnaam"
-      },
-      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
-      "@type": "rdfs:Class"
-    },
-    {
-      "name": {
-        "nl": "Lantaarn vormgeving"
-      },
-      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
-      "@type": "rdfs:Class"
-    },
-    {
-      "name": {
         "nl": "Seinlantaarn diameter"
       },
       "@id": "http://www.w3.org/2004/02/skos/core#Concept",
@@ -3253,6 +3233,34 @@
     {
       "name": {
         "nl": "Verkeerslicht masker"
+      },
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
+      "@type": "rdfs:Class"
+    },
+    {
+      "name": {
+        "nl": "verkeerslicht merk"
+      },
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
+      "@type": "rdfs:Class"
+    },
+    {
+      "name": {
+        "nl": "VRI detector typeweggebruiker"
+      },
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
+      "@type": "rdfs:Class"
+    },
+    {
+      "name": {
+        "nl": "seinlantaarn modelnaam"
+      },
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
+      "@type": "rdfs:Class"
+    },
+    {
+      "name": {
+        "nl": "Lantaarn vormgeving"
       },
       "@id": "http://www.w3.org/2004/02/skos/core#Concept",
       "@type": "rdfs:Class"
@@ -4555,6 +4563,62 @@
       ],
       "range": [
         "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInVolt"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#MeetstationAbstract.onderhoudsrapport",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "definition": {
+        "nl": "Het rapport dat jaarlijks wordt opgesteld met details over het onderhoud van het meetstation."
+      },
+      "domain": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#MeetstationAbstract"
+      ],
+      "range": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcDocument"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#MeetstationAbstract.keuringsrapport",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "definition": {
+        "nl": "Het rapport dat 5 jaarlijks wordt opgesteld met details over het meetstation."
+      },
+      "domain": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#MeetstationAbstract"
+      ],
+      "range": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcDocument"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#MeetstationAbstract.heeftMaaibescherming",
+      "@type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
+      "definition": {
+        "nl": "Bepaalt of er al dan niet maaibescherming aanwezig is."
+      },
+      "domain": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#MeetstationAbstract"
+      ],
+      "range": [
+        "http://www.w3.org/2001/XMLSchema#boolean"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#MeetstationAbstract.foto",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "definition": {
+        "nl": "De verschillende foto's van het meetstation."
+      },
+      "domain": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#MeetstationAbstract"
+      ],
+      "range": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#DtcMeteoFoto"
       ],
       "generalization": []
     },

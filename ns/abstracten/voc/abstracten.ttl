@@ -30,15 +30,15 @@ skos:Concept a rdfs:Class;
     "Deur fabrikant"@nl,
     "Deur handgreeptype"@nl,
     "PT regelaarmodule merk"@nl,
-    "verkeerslicht merk"@nl,
-    "VRI detector typeweggebruiker"@nl,
-    "seinlantaarn modelnaam"@nl,
-    "Lantaarn vormgeving"@nl,
     "Seinlantaarn diameter"@nl,
     "iVRIBaseline"@nl,
     "Lantaarn lamptype"@nl,
     "verkeerslicht modelnaam"@nl,
     "Verkeerslicht masker"@nl,
+    "verkeerslicht merk"@nl,
+    "VRI detector typeweggebruiker"@nl,
+    "seinlantaarn modelnaam"@nl,
+    "Lantaarn vormgeving"@nl,
     "VR-module met firmware modelnaam"@nl,
     "seinlantaarn merk"@nl,
     "PT regelaarmodule modelnaam"@nl,
@@ -1515,6 +1515,30 @@ skos:Concept a rdfs:Class;
   rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten>;
   rdfs:range <https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#DtcMarkeringOpvatting> .
 
+<https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#MeetstationAbstract.foto> a owl:ObjectProperty;
+  rdfs:comment "De verschillende foto's van het meetstation."@nl;
+  rdfs:domain <https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#MeetstationAbstract>;
+  rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten>;
+  rdfs:range <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#DtcMeteoFoto> .
+
+<https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#MeetstationAbstract.heeftMaaibescherming> a owl:DatatypeProperty;
+  rdfs:comment "Bepaalt of er al dan niet maaibescherming aanwezig is."@nl;
+  rdfs:domain <https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#MeetstationAbstract>;
+  rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten>;
+  rdfs:range xsd:boolean .
+
+<https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#MeetstationAbstract.keuringsrapport> a owl:ObjectProperty;
+  rdfs:comment "Het rapport dat 5 jaarlijks wordt opgesteld met details over het meetstation."@nl;
+  rdfs:domain <https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#MeetstationAbstract>;
+  rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten>;
+  rdfs:range <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcDocument> .
+
+<https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#MeetstationAbstract.onderhoudsrapport> a owl:ObjectProperty;
+  rdfs:comment "Het rapport dat jaarlijks wordt opgesteld met details over het onderhoud van het meetstation."@nl;
+  rdfs:domain <https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#MeetstationAbstract>;
+  rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten>;
+  rdfs:range <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcDocument> .
+
 <https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#MotorVermogenskring> a owl:Class;
   rdfs:comment "Abstracte die de relaties van de elementen in de vermogenkring van een motor groepeert."@nl;
   rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten> .
@@ -2467,6 +2491,10 @@ skos:Concept a rdfs:Class;
   rdfs:comment "Abstracte voor de gemeenschappelijke eigenschappen en relaties van lijnvormige elementen."@nl;
   rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten>;
   rdfs:subClassOf <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMObject> .
+
+<https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#MeetstationAbstract> a owl:Class;
+  rdfs:comment "Bundeling van de generieke eigenschappen en relaties voor een meetstation."@nl;
+  rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten> .
 
 <https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#OntwerpwaterstandStreefpeil> a owl:Class;
   rdfs:comment "Abstracte om de streefpeilen en relevante ontwerpwaterstanden (afwaarts & opwaarts) van sluizen en stuwen te bundelen"@nl;

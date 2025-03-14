@@ -15,11 +15,11 @@ skos:Concept a rdfs:Class;
   rdfs:label "AIM toestand"@nl,
     "Toegangsprocedure aandachtspunt"@nl,
     "Type badge"@nl,
-    "Type sleutel"@nl,
-    "Bijlage type"@nl,
     "Electricity appurtenance type"@nl,
     "Telecommunications appurtenance type"@nl,
     "Electricity subthema"@nl,
+    "Type sleutel"@nl,
+    "Bijlage type"@nl,
     "Pipe container type"@nl,
     "Datakabel materiaal"@nl,
     "Telecommunications subthema"@nl,
@@ -60,6 +60,7 @@ schemas:OpeningHoursSpecification a rdfs:Class;
   rdfs:range xsd:boolean .
 
 <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMNaamObject.naam> a owl:DatatypeProperty;
+  <http://purl.org/vocab/vann/usageNote> "Dient leeg of consistent te zijn met het naampad indien het naampad attribuut aanwezig en gekend is."@nl;
   rdfs:comment "De mensleesbare naam van een asset zoals dit bv. ook terug te vinden is op een etiket op het object zelf. De assetbeheerder kent deze naam toe of geeft de opdracht om deze toe te kennen. Indien een object een algemeen gangbare naam heeft zoals bv. bij een waterloop dan wordt deze gebruikt."@nl;
   rdfs:domain <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMNaamObject>;
   rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement>;
@@ -822,7 +823,7 @@ schemas:OpeningHoursSpecification a rdfs:Class;
   rdfs:range <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInDecimaleGraden> .
 
 <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtuHellingsSchoorhoek.schoorhoek> a owl:ObjectProperty;
-  rdfs:comment "Hoek die het object maakt ten opzichte van de verticale, uitgedrukt in 1 op x (vb.: 1/4)."@nl;
+  rdfs:comment "Hoek die het object maakt ten opzichte van de verticale, uitgedrukt als een verhouding (1 op x), bijvoorbeeld 1 op 4. Bij verticale palen is er geen sprake van een schoorhoek in verhouding, omdat er geen horizontale afwijking is. In dat geval dient de hoek expliciet als 0 graden aangegeven te worden bij het attribuut Hellingshoek."@nl;
   rdfs:domain <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtuHellingsSchoorhoek>;
   rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement>;
   rdfs:range skos:Concept .
@@ -963,7 +964,7 @@ schemas:OpeningHoursSpecification a rdfs:Class;
 
 <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInHerz.standaardEenheid> a owl:DatatypeProperty;
   <http://purl.org/vocab/vann/usageNote> "\"s\"^^cdt:ucumunit"@nl;
-  rdfs:comment "De standaard eenheid bij dit datatype is uitgedrukt in seconde."@nl;
+  rdfs:comment "De standaard eenheid bij dit datatype is uitgedrukt in hertz."@nl;
   rdfs:domain <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInHerz>;
   rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement>;
   rdfs:range rdfs:Literal .
@@ -1246,9 +1247,17 @@ schemas:OpeningHoursSpecification a rdfs:Class;
   rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement>;
   rdfs:range xsd:decimal .
 
-<https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMegajoule> a owl:Class;
-  rdfs:comment "Een kwantitatieve waarde dat een getal in megajoule voorstelt."@nl;
-  rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement> .
+<https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMegajoule.standaardEenheid> a owl:DatatypeProperty;
+  rdfs:comment "De standaard eenheid bij dit datatype is uitgedrukt in megajoule."@nl;
+  rdfs:domain <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMegajoule>;
+  rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement>;
+  rdfs:range rdfs:Literal .
+
+<https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMegajoule.waarde> a owl:ObjectProperty;
+  rdfs:comment "Bevat een getal die bij het datatype hoort."@nl;
+  rdfs:domain <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMegajoule>;
+  rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement>;
+  rdfs:range xsd:decimal .
 
 <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMeter.standaardEenheid> a owl:DatatypeProperty;
   <http://purl.org/vocab/vann/usageNote> "\"m\"^^cdt:ucumunit"@nl;
@@ -1537,6 +1546,7 @@ schemas:OpeningHoursSpecification a rdfs:Class;
   rdfs:range xsd:decimal .
 
 <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#NaampadObject.naampad> a owl:DatatypeProperty;
+  <http://purl.org/vocab/vann/usageNote> "Dient consistent te zijn met de naam."@nl;
   rdfs:comment "Een set van objecten (bv. collecties) die aanduiden waar het object zich bevindt in de objectenboom (EM-Infra)."@nl;
   rdfs:domain <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#NaampadObject>;
   rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement>;
@@ -1899,6 +1909,10 @@ schemas:opens a rdf:Property;
 
 <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInLiterPerMinuut> a owl:Class;
   rdfs:comment "Een kwantitatieve waarde die een getal in liter per minuut uitdrukt."@nl;
+  rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement> .
+
+<https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMegajoule> a owl:Class;
+  rdfs:comment "Een kwantitatieve waarde dat een getal in megajoule voorstelt."@nl;
   rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement> .
 
 <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMeterPerSeconde> a owl:Class;

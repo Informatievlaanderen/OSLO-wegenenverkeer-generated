@@ -29,17 +29,17 @@ skos:Concept a rdfs:Class;
     "Luchtkwaliteitsopstelling modelnaam"@nl,
     "Deur fabrikant"@nl,
     "Deur handgreeptype"@nl,
-    "PT regelaarmodule merk"@nl,
     "Seinlantaarn diameter"@nl,
     "iVRIBaseline"@nl,
     "Lantaarn lamptype"@nl,
     "verkeerslicht modelnaam"@nl,
     "Verkeerslicht masker"@nl,
-    "verkeerslicht merk"@nl,
+    "PT regelaarmodule merk"@nl,
     "VRI detector typeweggebruiker"@nl,
     "seinlantaarn modelnaam"@nl,
     "Lantaarn vormgeving"@nl,
     "VR-module met firmware modelnaam"@nl,
+    "verkeerslicht merk"@nl,
     "seinlantaarn merk"@nl,
     "PT regelaarmodule modelnaam"@nl,
     "Verlichtingstoestel modelnaam"@nl,
@@ -578,6 +578,12 @@ skos:Concept a rdfs:Class;
   rdfs:domain <https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#Buitenkast>;
   rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten>;
   rdfs:range <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInJaar> .
+
+<https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#Buitenkast.laatsteKeuringsdatum> a owl:DatatypeProperty;
+  rdfs:comment "Deze datum geeft aan wanneer de laatste keuring plaatsvond en kan gebruikt worden om te bepalen wanneer een volgende keuring nodig is."@nl;
+  rdfs:domain <https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#Buitenkast>;
+  rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten>;
+  rdfs:range xsd:date .
 
 <https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#Buitenkast.verfraaid> a owl:ObjectProperty;
   rdfs:comment "Geeft aan of de wegkantkast voorzien van verfraaiing en of die al dan niet vergund is."@nl;
@@ -1243,8 +1249,8 @@ skos:Concept a rdfs:Class;
 <https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#Kabelgeleiding> a owl:Class;
   rdfs:comment "Abstracte voor het groeperen van inrichting met als functie het begeleiden van kabels en leidingen."@nl;
   rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten>;
-  rdfs:subClassOf <https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#OmhullendeInrichting>,
-    <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMNaamObject>,
+  rdfs:subClassOf <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMNaamObject>,
+    <https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#OmhullendeInrichting>,
     <https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#KabelgeleidingEnLeidingBevestiging> .
 
 <https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#Kantopsluiting.isGeprefabriceerd> a owl:DatatypeProperty;
@@ -2371,11 +2377,6 @@ skos:Concept a rdfs:Class;
   rdfs:comment "Abstracte om bestanden te bundelen omtrent voertuigkering."@nl;
   rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten> .
 
-<https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#Buitenkast> a owl:Class;
-  rdfs:comment "Abstracte voor kasten die typisch buiten staan en daarom bestand moeten zijn tegen de elementen en verfraaiing kunnen krijgen."@nl;
-  rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten>;
-  rdfs:subClassOf <https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#Kast> .
-
 <https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#ConstructieElement> a owl:Class;
   rdfs:comment "Abstracte voor de verschillende constructie elementen."@nl;
   rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten>;
@@ -2463,6 +2464,11 @@ skos:Concept a rdfs:Class;
   rdfs:comment "Verhardingstype opgebouwd uit bestratingen (rechthoekige of vierkante componenten van beperkte afmetingen) waardoor een aanzienlijk aantal voegen tussen de componenten zitten."@nl;
   rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten>;
   rdfs:subClassOf <https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#ArtificieleLaag> .
+
+<https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#Buitenkast> a owl:Class;
+  rdfs:comment "Abstracte voor kasten die typisch buiten staan en daarom bestand moeten zijn tegen de elementen en verfraaiing kunnen krijgen."@nl;
+  rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten>;
+  rdfs:subClassOf <https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#Kast> .
 
 <https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#Constructiehoofd> a owl:Class;
   rdfs:comment "Abstracte om eigenschappen en relaties te bundelen voor sluishoofd en stuwhoofd"@nl;

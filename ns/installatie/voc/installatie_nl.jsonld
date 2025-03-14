@@ -1689,10 +1689,10 @@
   "license": "https://data.vlaanderen.be/id/licentie/modellicentie-gratis-hergebruik/v1.0",
   "issued": "TODO",
   "navigation": {
-    "prev": "/doc/vocabularium/wegenenverkeer/installatie/ontwerpdocument/2.13.0-RC2"
+    "prev": "/doc/vocabularium/wegenenverkeer/installatie/ontwerpdocument/2.14.0-RC2"
   },
   "publication-state": "https://data.vlaanderen.be/doc/concept/StandaardStatus/KandidaatStandaard",
-  "publication-date": "16-12-2024",
+  "publication-date": "15-03-2025",
   "classes": [
     {
       "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#ASTRIDInstallatie",
@@ -1828,7 +1828,7 @@
       "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#BeweegbareWaterkerendeConstructie",
       "@type": "http://www.w3.org/2002/07/owl#Class",
       "definition": {
-        "nl": "Beweegbare constructie om een waterpeilverschil te keren"
+        "nl": "Een beweegbare constructie ontworpen om een waterpeilverschil te keren, inclusief alle gelaste onderdelen die bijdragen aan de structurele integriteit en functionaliteit van de constructie."
       },
       "parents": [
         "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#ConstructiefObject"
@@ -2080,6 +2080,14 @@
       "@type": "http://www.w3.org/2002/07/owl#Class",
       "definition": {
         "nl": "Complex datatype voor meteo gerelateerde foto's."
+      },
+      "parents": []
+    },
+    {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#DtcMinMaxHoogteSchermelement",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
+      "definition": {
+        "nl": "Complex datatype voor de hoogte in centimeter van het laagste element en van het hoogste element."
       },
       "parents": []
     },
@@ -2391,7 +2399,7 @@
       "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#HoogtebegrenzerInstallatie",
       "@type": "http://www.w3.org/2002/07/owl#Class",
       "definition": {
-        "nl": "een mechanische en/of elektronische opstelling dat bij kunstwerken (zoals bruggen of tunnels) de maximale doorrijhoogte van voertuigen detecteert en overtredingen voorkomt om schade te vermijden."
+        "nl": "Een mechanische en/of elektronische opstelling die bij kunstwerken (zoals bruggen of tunnels) de maximale doorrijhoogte van voertuigen detecteert en overtredingen voorkomt om schade te vermijden."
       },
       "parents": [
         "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMNaamObject"
@@ -2778,7 +2786,8 @@
         "nl": "Het geheel van meteorologische sensoren en andere infrastructuurelementen die samen een meteostation vormen."
       },
       "parents": [
-        "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#NaampadObject"
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#NaampadObject",
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#MeetstationAbstract"
       ]
     },
     {
@@ -2786,6 +2795,16 @@
       "@type": "http://www.w3.org/2002/07/owl#Class",
       "definition": {
         "nl": "Een vaste waterbouwkundige constructie voor het nivelleren van een sluis."
+      },
+      "parents": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMNaamObject"
+      ]
+    },
+    {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Omroepzone",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
+      "definition": {
+        "nl": "Een gebied binnen een infrastructuur zoals een tunnel of koker, waar meerdere luidsprekers samenwerken voor communicatie of alarmering."
       },
       "parents": [
         "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMNaamObject"
@@ -2886,6 +2905,16 @@
       },
       "parents": [
         "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#ConstructiefObject"
+      ]
+    },
+    {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#RSSGroep",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
+      "definition": {
+        "nl": "Een groep voor het groeperen van DynBordRSS. Deze groep is op zichzelf geen fysiek object, maar een verzameling van fysieke objecten."
+      },
+      "parents": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#NaampadObject"
       ]
     },
     {
@@ -3330,6 +3359,16 @@
       ]
     },
     {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Weguitrusting",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
+      "definition": {
+        "nl": "Generiek type om alles wat bij de weg hoort in onder te brengen."
+      },
+      "parents": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#NaampadObject"
+      ]
+    },
+    {
       "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Wilddetectiezone",
       "@type": "http://www.w3.org/2002/07/owl#Class",
       "definition": {
@@ -3360,6 +3399,16 @@
         "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#AanhorigheidSluisStuw",
         "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#ConstructiefObject",
         "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#DetaiplanObject"
+      ]
+    },
+    {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Z30Groep",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
+      "definition": {
+        "nl": "Type dat alle assets omvat die bij een zone 30 horen."
+      },
+      "parents": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#NaampadObject"
       ]
     },
     {
@@ -3522,6 +3571,34 @@
     },
     {
       "name": {
+        "nl": "Graad van statische bepaaldheid"
+      },
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
+      "@type": "rdfs:Class"
+    },
+    {
+      "name": {
+        "nl": "Type brugdeel"
+      },
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
+      "@type": "rdfs:Class"
+    },
+    {
+      "name": {
+        "nl": "Type trekker"
+      },
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
+      "@type": "rdfs:Class"
+    },
+    {
+      "name": {
+        "nl": "Vast tegengewicht materiaal"
+      },
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
+      "@type": "rdfs:Class"
+    },
+    {
+      "name": {
         "nl": "Type ondergrond"
       },
       "@id": "http://www.w3.org/2004/02/skos/core#Concept",
@@ -3537,41 +3614,6 @@
     {
       "name": {
         "nl": "Type materiaal"
-      },
-      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
-      "@type": "rdfs:Class"
-    },
-    {
-      "name": {
-        "nl": "Graad van statische bepaaldheid"
-      },
-      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
-      "@type": "rdfs:Class"
-    },
-    {
-      "name": {
-        "nl": "Type brugdeel"
-      },
-      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
-      "@type": "rdfs:Class"
-    },
-    {
-      "name": {
-        "nl": "Kerende karakter van een sluis"
-      },
-      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
-      "@type": "rdfs:Class"
-    },
-    {
-      "name": {
-        "nl": "Type trekker"
-      },
-      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
-      "@type": "rdfs:Class"
-    },
-    {
-      "name": {
-        "nl": "Vast tegengewicht materiaal"
       },
       "@id": "http://www.w3.org/2004/02/skos/core#Concept",
       "@type": "rdfs:Class"
@@ -3607,6 +3649,13 @@
     {
       "name": {
         "nl": "Materiaal dragende structuur brugdeel"
+      },
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
+      "@type": "rdfs:Class"
+    },
+    {
+      "name": {
+        "nl": "Kerende karakter van een sluis"
       },
       "@id": "http://www.w3.org/2004/02/skos/core#Concept",
       "@type": "rdfs:Class"
@@ -3655,6 +3704,20 @@
     },
     {
       "name": {
+        "nl": "type beweging"
+      },
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
+      "@type": "rdfs:Class"
+    },
+    {
+      "name": {
+        "nl": "Materiaal BWC TWC"
+      },
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
+      "@type": "rdfs:Class"
+    },
+    {
+      "name": {
         "nl": "Droogzetbaarheidtypes"
       },
       "@id": "http://www.w3.org/2004/02/skos/core#Concept",
@@ -3670,20 +3733,6 @@
     {
       "name": {
         "nl": "Types geleidewerk"
-      },
-      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
-      "@type": "rdfs:Class"
-    },
-    {
-      "name": {
-        "nl": "type beweging"
-      },
-      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
-      "@type": "rdfs:Class"
-    },
-    {
-      "name": {
-        "nl": "Materiaal BWC TWC"
       },
       "@id": "http://www.w3.org/2004/02/skos/core#Concept",
       "@type": "rdfs:Class"
@@ -3732,13 +3781,6 @@
     },
     {
       "name": {
-        "nl": "Lokaal terreintype"
-      },
-      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
-      "@type": "rdfs:Class"
-    },
-    {
-      "name": {
         "nl": "Aardingsinstallatie aardingsstelsel"
       },
       "@id": "http://www.w3.org/2004/02/skos/core#Concept",
@@ -3747,6 +3789,13 @@
     {
       "name": {
         "nl": "Meteo foto beschrijving"
+      },
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
+      "@type": "rdfs:Class"
+    },
+    {
+      "name": {
+        "nl": "Lokaal terreintype"
       },
       "@id": "http://www.w3.org/2004/02/skos/core#Concept",
       "@type": "rdfs:Class"
@@ -3788,6 +3837,13 @@
     },
     {
       "name": {
+        "nl": "MIV eenheid type"
+      },
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
+      "@type": "rdfs:Class"
+    },
+    {
+      "name": {
         "nl": "Kamer functie"
       },
       "@id": "http://www.w3.org/2004/02/skos/core#Concept",
@@ -3803,13 +3859,6 @@
     {
       "name": {
         "nl": "Radioheruitzendinstallatie merk"
-      },
-      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
-      "@type": "rdfs:Class"
-    },
-    {
-      "name": {
-        "nl": "MIV eenheid type"
       },
       "@id": "http://www.w3.org/2004/02/skos/core#Concept",
       "@type": "rdfs:Class"
@@ -3837,6 +3886,13 @@
     },
     {
       "name": {
+        "nl": "Wegberm type"
+      },
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
+      "@type": "rdfs:Class"
+    },
+    {
+      "name": {
         "nl": "Type aanvaarbescherming"
       },
       "@id": "http://www.w3.org/2004/02/skos/core#Concept",
@@ -3845,13 +3901,6 @@
     {
       "name": {
         "nl": "Wegberm BIO"
-      },
-      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
-      "@type": "rdfs:Class"
-    },
-    {
-      "name": {
-        "nl": "Wegberm type"
       },
       "@id": "http://www.w3.org/2004/02/skos/core#Concept",
       "@type": "rdfs:Class"
@@ -4841,7 +4890,7 @@
       "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Sluis.waterdiepte",
       "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "definition": {
-        "nl": "De verticale afstand tussen het wateroppervlak, gemiddelde laagwaterstand (normale afwaarts pomppeil/ ALAT-waarde) , in de sluis van het laagste punt van de drempel, de sluishoofdvloer of sluiskolkvloer."
+        "nl": "De verticale afstand tussen het wateroppervlak bij gemiddelde laagwaterstand (normale afwaarts pomppeil/ mTAW-waarde) en het laagste punt van de drempel, de sluishoofdvloer of sluiskolkvloer."
       },
       "domain": [
         "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Sluis"
@@ -5925,10 +5974,24 @@
       "generalization": []
     },
     {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#MIVMeetpunt.isGekoppeld",
+      "@type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
+      "definition": {
+        "nl": "Geeft aan of de data van het meetpunt wordt gebruikt voor de aansturing van andere verkeerstechnieken."
+      },
+      "domain": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#MIVMeetpunt"
+      ],
+      "range": [
+        "http://www.w3.org/2001/XMLSchema#boolean"
+      ],
+      "generalization": []
+    },
+    {
       "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#MIVMeetpunt.isBedekt",
       "@type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
       "definition": {
-        "nl": "Geeft aan of de lussen bedekt zijn door een toplaag. De bedekking door een toplaag zorgt er voor dat de lus niet zichtbaar is met het blote oog."
+        "nl": "Geeft aan of de lussen bedekt zijn door een toplaag. De bedekking door een toplaag betekent dat de lus zich in de onderlaag bevindt en zorgt er voor dat de lus niet zichtbaar is met het blote oog."
       },
       "domain": [
         "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#MIVMeetpunt"
@@ -5980,6 +6043,20 @@
       ],
       "range": [
         "http://www.w3.org/2004/02/skos/core#Concept"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#MIVMeetpunt.aantalWindingen",
+      "@type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
+      "definition": {
+        "nl": "Het aantal windingen dat een meetpunt heeft."
+      },
+      "domain": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#MIVMeetpunt"
+      ],
+      "range": [
+        "http://www.w3.org/2001/XMLSchema#integer"
       ],
       "generalization": []
     },
@@ -7290,6 +7367,20 @@
       "generalization": []
     },
     {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#GeluidwerendeConstructie.minMaxSchermhoogte",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "definition": {
+        "nl": "De waarde uitgedrukt in centimeter van het laagste en het hoogste schermelement in de constructie."
+      },
+      "domain": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#GeluidwerendeConstructie"
+      ],
+      "range": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#DtcMinMaxHoogteSchermelement"
+      ],
+      "generalization": []
+    },
+    {
       "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#GeluidwerendeConstructie.horizontaalRuimtebeslag",
       "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "definition": {
@@ -7569,6 +7660,34 @@
       ],
       "range": [
         "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMeter"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#DtcMinMaxHoogteSchermelement.minSchermhoogte",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "definition": {
+        "nl": "De waarde die de hoogte in centimeter weergeeft van het laagste element in de constructie."
+      },
+      "domain": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#DtcMinMaxHoogteSchermelement"
+      ],
+      "range": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInCentimeter"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#DtcMinMaxHoogteSchermelement.maxSchermhoogte",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "definition": {
+        "nl": "De waarde die de hoogte in centimeter weergeeft van het hoogste element in de constructie."
+      },
+      "domain": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#DtcMinMaxHoogteSchermelement"
+      ],
+      "range": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInCentimeter"
       ],
       "generalization": []
     },

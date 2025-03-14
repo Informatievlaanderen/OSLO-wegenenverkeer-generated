@@ -1689,10 +1689,10 @@
   "license": "https://data.vlaanderen.be/id/licentie/modellicentie-gratis-hergebruik/v1.0",
   "issued": "TODO",
   "navigation": {
-    "prev": "/doc/vocabularium/wegenenverkeer/implementatieelement/ontwerpdocument/2.13.0-RC2"
+    "prev": "/doc/vocabularium/wegenenverkeer/implementatieelement/ontwerpdocument/2.14.0-RC2"
   },
   "publication-state": "https://data.vlaanderen.be/doc/concept/StandaardStatus/KandidaatStandaard",
-  "publication-date": "16-12-2024",
+  "publication-date": "15-03-2025",
   "classes": [
     {
       "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMDBStatus",
@@ -2660,20 +2660,6 @@
     },
     {
       "name": {
-        "nl": "Type sleutel"
-      },
-      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
-      "@type": "rdfs:Class"
-    },
-    {
-      "name": {
-        "nl": "Bijlage type"
-      },
-      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
-      "@type": "rdfs:Class"
-    },
-    {
-      "name": {
         "nl": "Electricity appurtenance type"
       },
       "@id": "http://www.w3.org/2004/02/skos/core#Concept",
@@ -2689,6 +2675,20 @@
     {
       "name": {
         "nl": "Electricity subthema"
+      },
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
+      "@type": "rdfs:Class"
+    },
+    {
+      "name": {
+        "nl": "Type sleutel"
+      },
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
+      "@type": "rdfs:Class"
+    },
+    {
+      "name": {
+        "nl": "Bijlage type"
       },
       "@id": "http://www.w3.org/2004/02/skos/core#Concept",
       "@type": "rdfs:Class"
@@ -3148,6 +3148,9 @@
       "@type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
       "definition": {
         "nl": "Een set van objecten (bv. collecties) die aanduiden waar het object zich bevindt in de objectenboom (EM-Infra)."
+      },
+      "usage": {
+        "nl": "Dient consistent te zijn met de naam."
       },
       "domain": [
         "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#NaampadObject"
@@ -3840,6 +3843,34 @@
       "generalization": []
     },
     {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMegajoule.waarde",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "definition": {
+        "nl": "Bevat een getal die bij het datatype hoort."
+      },
+      "domain": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMegajoule"
+      ],
+      "range": [
+        "http://www.w3.org/2001/XMLSchema#decimal"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMegajoule.standaardEenheid",
+      "@type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
+      "definition": {
+        "nl": "De standaard eenheid bij dit datatype is uitgedrukt in megajoule."
+      },
+      "domain": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMegajoule"
+      ],
+      "range": [
+        "http://www.w3.org/2000/01/rdf-schema#Literal"
+      ],
+      "generalization": []
+    },
+    {
       "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMegaPascal.waarde",
       "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "definition": {
@@ -4505,7 +4536,7 @@
       "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInHerz.standaardEenheid",
       "@type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
       "definition": {
-        "nl": "De standaard eenheid bij dit datatype is uitgedrukt in seconde."
+        "nl": "De standaard eenheid bij dit datatype is uitgedrukt in hertz."
       },
       "usage": {
         "nl": "\"s\"^^cdt:ucumunit"
@@ -4840,7 +4871,7 @@
       "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtuHellingsSchoorhoek.schoorhoek",
       "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "definition": {
-        "nl": "Hoek die het object maakt ten opzichte van de verticale, uitgedrukt in 1 op x (vb.: 1/4)."
+        "nl": "Hoek die het object maakt ten opzichte van de verticale, uitgedrukt als een verhouding (1 op x), bijvoorbeeld 1 op 4. Bij verticale palen is er geen sprake van een schoorhoek in verhouding, omdat er geen horizontale afwijking is. In dat geval dient de hoek expliciet als 0 graden aangegeven te worden bij het attribuut Hellingshoek."
       },
       "domain": [
         "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtuHellingsSchoorhoek"
@@ -6612,6 +6643,9 @@
       "@type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
       "definition": {
         "nl": "De mensleesbare naam van een asset zoals dit bv. ook terug te vinden is op een etiket op het object zelf. De assetbeheerder kent deze naam toe of geeft de opdracht om deze toe te kennen. Indien een object een algemeen gangbare naam heeft zoals bv. bij een waterloop dan wordt deze gebruikt."
+      },
+      "usage": {
+        "nl": "Dient leeg of consistent te zijn met het naampad indien het naampad attribuut aanwezig en gekend is."
       },
       "domain": [
         "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMNaamObject"

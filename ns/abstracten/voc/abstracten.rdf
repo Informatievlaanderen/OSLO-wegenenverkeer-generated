@@ -2207,17 +2207,17 @@
             <rdfs:label xml:lang="nl">Luchtkwaliteitsopstelling modelnaam</rdfs:label>
             <rdfs:label xml:lang="nl">Deur fabrikant</rdfs:label>
             <rdfs:label xml:lang="nl">Deur handgreeptype</rdfs:label>
-            <rdfs:label xml:lang="nl">PT regelaarmodule merk</rdfs:label>
             <rdfs:label xml:lang="nl">Seinlantaarn diameter</rdfs:label>
             <rdfs:label xml:lang="nl">iVRIBaseline</rdfs:label>
             <rdfs:label xml:lang="nl">Lantaarn lamptype</rdfs:label>
             <rdfs:label xml:lang="nl">verkeerslicht modelnaam</rdfs:label>
             <rdfs:label xml:lang="nl">Verkeerslicht masker</rdfs:label>
-            <rdfs:label xml:lang="nl">verkeerslicht merk</rdfs:label>
+            <rdfs:label xml:lang="nl">PT regelaarmodule merk</rdfs:label>
             <rdfs:label xml:lang="nl">VRI detector typeweggebruiker</rdfs:label>
             <rdfs:label xml:lang="nl">seinlantaarn modelnaam</rdfs:label>
             <rdfs:label xml:lang="nl">Lantaarn vormgeving</rdfs:label>
             <rdfs:label xml:lang="nl">VR-module met firmware modelnaam</rdfs:label>
+            <rdfs:label xml:lang="nl">verkeerslicht merk</rdfs:label>
             <rdfs:label xml:lang="nl">seinlantaarn merk</rdfs:label>
             <rdfs:label xml:lang="nl">PT regelaarmodule modelnaam</rdfs:label>
             <rdfs:label xml:lang="nl">Verlichtingstoestel modelnaam</rdfs:label>
@@ -2954,6 +2954,12 @@
     <rdfs:domain rdf:resource="https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#Buitenkast"/>
     <rdfs:range rdf:resource="https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInJaar"/>
   </owl:ObjectProperty>
+  <owl:DatatypeProperty rdf:about="https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#Buitenkast.laatsteKeuringsdatum">
+    <rdfs:isDefinedBy rdf:resource="https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten"/>
+    <rdfs:comment xml:lang="nl">Deze datum geeft aan wanneer de laatste keuring plaatsvond en kan gebruikt worden om te bepalen wanneer een volgende keuring nodig is.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#Buitenkast"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+  </owl:DatatypeProperty>
   <owl:ObjectProperty rdf:about="https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#Buitenkast.verfraaid">
     <rdfs:isDefinedBy rdf:resource="https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten"/>
     <rdfs:comment xml:lang="nl">Geeft aan of de wegkantkast voorzien van verfraaiing en of die al dan niet vergund is.</rdfs:comment>
@@ -3825,13 +3831,13 @@
   <owl:Class rdf:about="https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#Kabelgeleiding">
     <rdfs:isDefinedBy rdf:resource="https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten"/>
     <rdfs:comment xml:lang="nl">Abstracte voor het groeperen van inrichting met als functie het begeleiden van kabels en leidingen.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMNaamObject"/>
     <rdfs:subClassOf>
       <owl:Class rdf:about="https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#OmhullendeInrichting">
         <rdfs:isDefinedBy rdf:resource="https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten"/>
         <rdfs:comment xml:lang="nl">Abstracte voor het groeperen van de relaties voor onderdelen die kabels kunnen omhullen.</rdfs:comment>
       </owl:Class>
     </rdfs:subClassOf>
-    <rdfs:subClassOf rdf:resource="https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMNaamObject"/>
     <rdfs:subClassOf>
       <owl:Class rdf:about="https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#KabelgeleidingEnLeidingBevestiging">
         <rdfs:isDefinedBy rdf:resource="https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten"/>

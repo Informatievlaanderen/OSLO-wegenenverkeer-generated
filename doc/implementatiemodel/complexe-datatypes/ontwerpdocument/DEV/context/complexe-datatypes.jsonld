@@ -387,6 +387,12 @@
       "@type": "@id"
     },
     "CameraBeeldverwerkingstypes": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Codelijst": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcCodelijst",
+    "Codelijst.type": {
+      "@id": "http://purl.org/dc/terms/type",
+      "@type": "@id"
+    },
+    "CodelijstType": "http://www.w3.org/2004/02/skos/core#Concept",
     "CompacteBatterij": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#DtcCompacteBatterij",
     "CompacteBatterij.capaciteit": {
       "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#DtcCompacteBatterij.capaciteit",
@@ -458,6 +464,19 @@
     "Datum": "http://www.w3.org/2001/XMLSchema#date",
     "Datumtijd": "http://www.w3.org/2001/XMLSchema#dateTime",
     "DecimaalGetal": "http://www.w3.org/2001/XMLSchema#decimal",
+    "Dimensie": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcDimensie",
+    "Dimensie.standaardEenheid": {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcDimensie.standaardeenheid",
+      "@type": "@id"
+    },
+    "Dimensie.typeGrootheid": {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcDimensie.type",
+      "@type": "@id"
+    },
+    "Dimensie.waarde": {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcDimensie.waarde",
+      "@type": "@id"
+    },
     "DraagconstructieBeschermlaag": "http://www.w3.org/2004/02/skos/core#Concept",
     "DuurzaamheidsklasseVanHout": "http://www.w3.org/2004/02/skos/core#Concept",
     "ExterneReferentie": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#DtcExterneReferentie",
@@ -512,6 +531,15 @@
       "@type": "@id"
     },
     "Gemeente": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Geometrie": "http://www.w3.org/ns/locn#Geometry",
+    "Geometrie.alsGml": {
+      "@id": "http://www.opengis.net/ont/geosparql#asGML",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "Geometrie.alsWkt": {
+      "@id": "http://www.opengis.net/ont/geosparql#asWKT",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
     "Groeiplaatsverbetering": "http://www.w3.org/2004/02/skos/core#Concept",
     "GrondHoofdnaamcode": "http://www.w3.org/2004/02/skos/core#Concept",
     "Grondafdekking": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#DtcGrondafdekking",
@@ -656,6 +684,7 @@
       "@type": "http://www.w3.org/2001/XMLSchema#string"
     },
     "KantopsluitingBijkomendeParameter": "http://www.w3.org/2004/02/skos/core#Concept",
+    "KlTypeGrootheid": "http://www.w3.org/2004/02/skos/core#Concept",
     "KleurSupplementen": "http://www.w3.org/2004/02/skos/core#Concept",
     "Krimpvoeg": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#DtcKrimpvoeg",
     "Krimpvoeg.krimpvoegFrequentie": {
@@ -1032,6 +1061,15 @@
       "@id": "https://schema.org/dayOfWeek",
       "@type": "@id"
     },
+    "Periode": "http://data.europa.eu/m8g/PeriodOfTime",
+    "Periode.begin": {
+      "@id": "http://data.europa.eu/m8g/startTime",
+      "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "Periode.einde": {
+      "@id": "http://data.europa.eu/m8g/endTime",
+      "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
     "PlantmaatHoutigeVegetatie": "http://www.w3.org/2004/02/skos/core#Concept",
     "PlantmaatOmtrek": "http://www.w3.org/2004/02/skos/core#Concept",
     "Plantwijze": "http://www.w3.org/2004/02/skos/core#Concept",
@@ -1139,6 +1177,7 @@
       "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#DtcSoortVervuiling.soortVervuiling",
       "@type": "@id"
     },
+    "Standaardeenheid": "http://www.w3.org/2004/02/skos/core#Concept",
     "SterkteklasseVanHout": "http://www.w3.org/2004/02/skos/core#Concept",
     "String": "http://www.w3.org/2001/XMLSchema#string",
     "SupplementenCbv": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#DtcSupplementenCBV",
@@ -1155,8 +1194,71 @@
       "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DteTekstblok.waarde",
       "@type": "http://www.w3.org/2001/XMLSchema#string"
     },
+    "Template": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcTemplate2",
+    "Template.variabele": {
+      "@container": "@set",
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcTemplate.variabele",
+      "@type": "@id"
+    },
+    "Template.waarde": {
+      "@id": "http://www.w3.org/1999/02/22-rdf-syntax-ns#value",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
     "TestType": "http://www.w3.org/2004/02/skos/core#Concept",
     "Tijd": "http://www.w3.org/2001/XMLSchema#time",
+    "Tijdschema": "https://schema.org/Schedule",
+    "Tijdschema.aantal": {
+      "@id": "https://schema.org/repeatCount",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "Tijdschema.duur": {
+      "@id": "https://schema.org/Schedule.duur",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "Tijdschema.einddatum": {
+      "@id": "https://schema.org/endDate",
+      "@type": "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "Tijdschema.eindtijd": {
+      "@id": "https://schema.org/endTime",
+      "@type": "http://www.w3.org/2001/XMLSchema#time"
+    },
+    "Tijdschema.frequentie": {
+      "@id": "https://schema.org/repeatFrequency",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "Tijdschema.perDag": {
+      "@container": "@set",
+      "@id": "https://schema.org/byDay",
+      "@type": "@id"
+    },
+    "Tijdschema.perDagVanDeMaand": {
+      "@container": "@set",
+      "@id": "https://schema.org/byMonthDay",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "Tijdschema.perMaand": {
+      "@container": "@set",
+      "@id": "https://schema.org/byMonth",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "Tijdschema.perSetpositie": {
+      "@id": "https://schema.org/Schedule.perSetPositie",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "Tijdschema.startdatum": {
+      "@id": "https://schema.org/startDate",
+      "@type": "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "Tijdschema.starttijd": {
+      "@id": "https://schema.org/startTime",
+      "@type": "http://www.w3.org/2001/XMLSchema#time"
+    },
+    "Tijdschema.uitzonderingsdatum": {
+      "@container": "@set",
+      "@id": "https://schema.org/exceptDate",
+      "@type": "http://www.w3.org/2001/XMLSchema#date"
+    },
     "Tijdsduur": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcTijdsduur",
     "Tijdsduur.minuten": {
       "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcTijdsduur.minuten",
@@ -1223,6 +1325,32 @@
     "TypeBeweging": "http://www.w3.org/2004/02/skos/core#Concept",
     "TypeSupplementenCbv": "http://www.w3.org/2004/02/skos/core#Concept",
     "Uri": "http://www.w3.org/2001/XMLSchema#anyURI",
+    "Variabele": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcVariabele2",
+    "Variabele.codelijst": {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcVariabele.codelijst",
+      "@type": "@id"
+    },
+    "Variabele.label": {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcVariabele.label",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "Variabele.standaardWaarde": {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcVariabele.standaardwaarde",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "Variabele.template": {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcVariabele.template",
+      "@type": "@id"
+    },
+    "Variabele.type": {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcVariabele.type",
+      "@type": "@id"
+    },
+    "Variabele.waarde": {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcVariabele.waarde",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "VariabeleType": "http://www.w3.org/2004/02/skos/core#Concept",
     "VegetatiePlantverband": "http://www.w3.org/2004/02/skos/core#Concept",
     "VegetatieSoortnaam": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#DtcVegetatieSoortnaam",
     "VegetatieSoortnaam.code": {
@@ -1254,7 +1382,18 @@
       "@type": "@id"
     },
     "VoorzetconstructieBevestigingsmateriaalDiameter": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Vorm": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcVorm",
+    "Vorm.dimensie": {
+      "@container": "@set",
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcVorm.dimensie",
+      "@type": "@id"
+    },
+    "Vorm.vormType": {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcVorm.vormType",
+      "@type": "@id"
+    },
     "VormAanleveringHoutigeVegetatie": "http://www.w3.org/2004/02/skos/core#Concept",
+    "VormType": "http://www.w3.org/2004/02/skos/core#Concept",
     "Walsmethode": "http://www.w3.org/2004/02/skos/core#Concept",
     "Weekdagen": "https://schema.org/DayOfWeek",
     "WetenschappelijkeSoortnaam": "http://www.w3.org/2004/02/skos/core#Concept",
@@ -1271,6 +1410,16 @@
       "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#DtcZelfsluiterSluitkracht.ondergrens",
       "@type": "@id"
     },
-    "ZelfsluiterSluitkrachtnorm": "http://www.w3.org/2004/02/skos/core#Concept"
+    "ZelfsluiterSluitkrachtnorm": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Zone": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcZone",
+    "Zone.geometrie": {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcZone.geometrie",
+      "@type": "@id"
+    },
+    "Zone.type": {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcZone.type",
+      "@type": "@id"
+    },
+    "Zonetype": "http://www.w3.org/2004/02/skos/core#Concept"
   }
 }

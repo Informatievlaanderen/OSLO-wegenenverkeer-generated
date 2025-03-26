@@ -13,8 +13,8 @@
     "documentconfig": {},
     "status": "https://data.vlaanderen.be/doc/concept/StandaardStatus/KandidaatStandaard",
     "statuslabel": "Onbekend",
-    "repositoryurl": "https://github.com/Informatievlaanderen/OSLOthema-wegenenverkeer/tree/f3aab4855a5747acc7f257c17c46682f551fc5bc",
-    "changelogurl": "https://github.com/Informatievlaanderen/OSLOthema-wegenenverkeer/blob/f3aab4855a5747acc7f257c17c46682f551fc5bc/CHANGELOG",
+    "repositoryurl": "https://github.com/Informatievlaanderen/OSLOthema-wegenenverkeer/tree/91064f6b7bcd31ce225056c3186a583679bc8f91",
+    "changelogurl": "https://github.com/Informatievlaanderen/OSLOthema-wegenenverkeer/blob/91064f6b7bcd31ce225056c3186a583679bc8f91/CHANGELOG",
     "feedbackurl": "https://docs.google.com/forms/d/e/1FAIpQLSeaxOnrCkcarNHWI21YfPJ7sZChHVzOB2-P9ptzxkD9YX69-g/viewform",
     "standaardregisterurl": "https://data.vlaanderen.be/standaarden/",
     "dependencies": [],
@@ -64,6 +64,56 @@
               "range_puri": "http://www.w3.org/2001/XMLSchema#boolean",
               "range_label": {
                 "nl": "Boolean"
+              }
+            }
+          ],
+          "cardinality": "1",
+          "codelist_uri": ""
+        }
+      ]
+    },
+    {
+      "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMVersie",
+      "name": "AIM versie",
+      "label": {
+        "nl": "AIM versie"
+      },
+      "sort": "AIM versie",
+      "description": {
+        "nl": "Abstracte klasse met de eigenschappen om de versionering van een asset te beheren."
+      },
+      "usage": {},
+      "parents": [],
+      "properties": [
+        {
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMVersie.assetVersie",
+          "name": "asset-versie",
+          "sort": "asset-versie",
+          "label": {
+            "nl": "asset-versie"
+          },
+          "description": {
+            "nl": "De versie van de asset in de database."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "AIMVersie",
+              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMVersie"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "DtcAssetVersie",
+              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcAssetVersie"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Asset versie",
+              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcAssetVersie",
+              "range_label": {
+                "nl": "Asset versie"
               }
             }
           ],
@@ -128,6 +178,13 @@
       },
       "usage": {},
       "parents": [
+        {
+          "label": "AIM versie",
+          "name": "AIMVersie",
+          "package": "OSLO-Implementatieelement",
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMVersie",
+          "scoped_uri": "#AIM versie"
+        },
         {
           "label": "AIM databank status",
           "name": "AIMDBStatus",
@@ -280,6 +337,130 @@
       ]
     },
     {
+      "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#BehoortTot",
+      "name": "Behoort tot",
+      "label": {
+        "nl": "Behoort tot"
+      },
+      "sort": "Behoort tot",
+      "description": {},
+      "usage": {},
+      "parents": [
+        {
+          "label": "Directionele relatie",
+          "name": "DirectioneleRelatie",
+          "package": "OSLO-Implementatieelement",
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DirectioneleRelatie",
+          "scoped_uri": "#Directionele relatie"
+        }
+      ],
+      "properties": []
+    },
+    {
+      "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#BekrachtigdBij",
+      "name": "Bekrachtigd bij",
+      "label": {
+        "nl": "Bekrachtigd bij"
+      },
+      "sort": "Bekrachtigd bij",
+      "description": {
+        "nl": "Een rechtsgrond of legale verschijningsvorm krijgt volledige rechtskracht door instemming onder opschortende voorwaarde van een andere."
+      },
+      "usage": {},
+      "parents": [
+        {
+          "label": "Directionele relatie",
+          "name": "DirectioneleRelatie",
+          "package": "OSLO-Implementatieelement",
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DirectioneleRelatie",
+          "scoped_uri": "#Directionele relatie"
+        }
+      ],
+      "properties": []
+    },
+    {
+      "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Bekrachtigt",
+      "name": "Bekrachtigt",
+      "label": {
+        "nl": "Bekrachtigt"
+      },
+      "sort": "Bekrachtigt",
+      "description": {
+        "nl": "Instemming onder opschortende voorwaarde van een rechtsgrond of legale verschijningsvorm op een andere zodat deze laatste volledige rechtskracht krijgt."
+      },
+      "usage": {},
+      "parents": [
+        {
+          "label": "Directionele relatie",
+          "name": "DirectioneleRelatie",
+          "package": "OSLO-Implementatieelement",
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DirectioneleRelatie",
+          "scoped_uri": "#Directionele relatie"
+        }
+      ],
+      "properties": []
+    },
+    {
+      "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#BevatOntwerp",
+      "name": "Bevat ontwerp",
+      "label": {
+        "nl": "Bevat ontwerp"
+      },
+      "sort": "Bevat ontwerp",
+      "description": {},
+      "usage": {},
+      "parents": [
+        {
+          "label": "Directionele relatie",
+          "name": "DirectioneleRelatie",
+          "package": "OSLO-Implementatieelement",
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DirectioneleRelatie",
+          "scoped_uri": "#Directionele relatie"
+        }
+      ],
+      "properties": []
+    },
+    {
+      "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#BevatOntwerpVoor",
+      "name": "Bevat ontwerp voor",
+      "label": {
+        "nl": "Bevat ontwerp voor"
+      },
+      "sort": "Bevat ontwerp voor",
+      "description": {},
+      "usage": {},
+      "parents": [
+        {
+          "label": "Directionele relatie",
+          "name": "DirectioneleRelatie",
+          "package": "OSLO-Implementatieelement",
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DirectioneleRelatie",
+          "scoped_uri": "#Directionele relatie"
+        }
+      ],
+      "properties": []
+    },
+    {
+      "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#BevatVerkeersteken",
+      "name": "Bevat verkeersteken",
+      "label": {
+        "nl": "Bevat verkeersteken"
+      },
+      "sort": "Bevat verkeersteken",
+      "description": {},
+      "usage": {},
+      "parents": [
+        {
+          "label": "Directionele relatie",
+          "name": "DirectioneleRelatie",
+          "package": "OSLO-Implementatieelement",
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DirectioneleRelatie",
+          "scoped_uri": "#Directionele relatie"
+        }
+      ],
+      "properties": []
+    },
+    {
       "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Bevestiging",
       "name": "Bevestiging",
       "label": {
@@ -297,6 +478,72 @@
           "package": "OSLO-Implementatieelement",
           "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#NietDirectioneleRelatie",
           "scoped_uri": "#Niet-directionele relatie"
+        }
+      ],
+      "properties": []
+    },
+    {
+      "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Citeert",
+      "name": "Citeert",
+      "label": {
+        "nl": "Citeert"
+      },
+      "sort": "Citeert",
+      "description": {
+        "nl": "Een citatie in de wettelijke tekst. Dit omvat zowel woordelijke citaten als citaten in verwijzingen."
+      },
+      "usage": {},
+      "parents": [
+        {
+          "label": "Directionele relatie",
+          "name": "DirectioneleRelatie",
+          "package": "OSLO-Implementatieelement",
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DirectioneleRelatie",
+          "scoped_uri": "#Directionele relatie"
+        }
+      ],
+      "properties": []
+    },
+    {
+      "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Corrigeert",
+      "name": "Corrigeert",
+      "label": {
+        "nl": "Corrigeert"
+      },
+      "sort": "Corrigeert",
+      "description": {
+        "nl": "Duidt aan dat deze rechtsgrond of legale verschijningsvorm tekstuele veranderingen zonder legale impact aanbrengt in een andere rechtsgrond of legale verschijningsvorm."
+      },
+      "usage": {},
+      "parents": [
+        {
+          "label": "Directionele relatie",
+          "name": "DirectioneleRelatie",
+          "package": "OSLO-Implementatieelement",
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DirectioneleRelatie",
+          "scoped_uri": "#Directionele relatie"
+        }
+      ],
+      "properties": []
+    },
+    {
+      "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#GecorrigeerdDoor",
+      "name": "Gecorrigeerd door",
+      "label": {
+        "nl": "Gecorrigeerd door"
+      },
+      "sort": "Gecorrigeerd door",
+      "description": {
+        "nl": "Duidt een rechtsgrond aan die een tekstuele verandering zonder legale impact aan deze rechtsgrond aanbrengt."
+      },
+      "usage": {},
+      "parents": [
+        {
+          "label": "Directionele relatie",
+          "name": "DirectioneleRelatie",
+          "package": "OSLO-Implementatieelement",
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DirectioneleRelatie",
+          "scoped_uri": "#Directionele relatie"
         }
       ],
       "properties": []
@@ -553,6 +800,134 @@
       "properties": []
     },
     {
+      "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#HeeftDeel",
+      "name": "Heeft deel",
+      "label": {
+        "nl": "Heeft deel"
+      },
+      "sort": "Heeft deel",
+      "description": {
+        "nl": "Duidt een rechtsgrond aan die een (fysiek) onderdeel voorstelt van deze rechtsgrond."
+      },
+      "usage": {},
+      "parents": [
+        {
+          "label": "Directionele relatie",
+          "name": "DirectioneleRelatie",
+          "package": "OSLO-Implementatieelement",
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DirectioneleRelatie",
+          "scoped_uri": "#Directionele relatie"
+        }
+      ],
+      "properties": []
+    },
+    {
+      "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#HeeftGerelateerdVerkeersteken",
+      "name": "Heeft gerelateerd verkeersteken",
+      "label": {
+        "nl": "Heeft gerelateerd verkeersteken"
+      },
+      "sort": "Heeft gerelateerd verkeersteken",
+      "description": {
+        "nl": "Verkeersteken dat hieraan gerelateerd is."
+      },
+      "usage": {},
+      "parents": [
+        {
+          "label": "Directionele relatie",
+          "name": "DirectioneleRelatie",
+          "package": "OSLO-Implementatieelement",
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DirectioneleRelatie",
+          "scoped_uri": "#Directionele relatie"
+        }
+      ],
+      "properties": []
+    },
+    {
+      "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#HeeftGevolg",
+      "name": "Heeft gevolg",
+      "label": {
+        "nl": "Heeft gevolg"
+      },
+      "sort": "Heeft gevolg",
+      "description": {
+        "nl": "Mobiliteitshinder (bv.: afgesloten weg) die ontstaan is door het innemen van de openbare ruimte."
+      },
+      "usage": {},
+      "parents": [
+        {
+          "label": "Directionele relatie",
+          "name": "DirectioneleRelatie",
+          "package": "OSLO-Implementatieelement",
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DirectioneleRelatie",
+          "scoped_uri": "#Directionele relatie"
+        }
+      ],
+      "properties": []
+    },
+    {
+      "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#HeeftMaatregelconcept",
+      "name": "Heeft maatregelconcept",
+      "label": {
+        "nl": "Heeft maatregelconcept"
+      },
+      "sort": "Heeft maatregelconcept",
+      "description": {},
+      "usage": {},
+      "parents": [
+        {
+          "label": "Directionele relatie",
+          "name": "DirectioneleRelatie",
+          "package": "OSLO-Implementatieelement",
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DirectioneleRelatie",
+          "scoped_uri": "#Directionele relatie"
+        }
+      ],
+      "properties": []
+    },
+    {
+      "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#HeeftMobiliteitsmaatregel",
+      "name": "Heeft mobiliteitsmaatregel",
+      "label": {
+        "nl": "Heeft mobiliteitsmaatregel"
+      },
+      "sort": "Heeft mobiliteitsmaatregel",
+      "description": {
+        "nl": "Mobiliteitsmaatregel die beschreven staat in het artikel."
+      },
+      "usage": {},
+      "parents": [
+        {
+          "label": "Directionele relatie",
+          "name": "DirectioneleRelatie",
+          "package": "OSLO-Implementatieelement",
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DirectioneleRelatie",
+          "scoped_uri": "#Directionele relatie"
+        }
+      ],
+      "properties": []
+    },
+    {
+      "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#HeeftMogelijkOnderbord",
+      "name": "Heeft mogelijk onderbord",
+      "label": {
+        "nl": "Heeft mogelijk onderbord"
+      },
+      "sort": "Heeft mogelijk onderbord",
+      "description": {},
+      "usage": {},
+      "parents": [
+        {
+          "label": "Directionele relatie",
+          "name": "DirectioneleRelatie",
+          "package": "OSLO-Implementatieelement",
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DirectioneleRelatie",
+          "scoped_uri": "#Directionele relatie"
+        }
+      ],
+      "properties": []
+    },
+    {
       "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#HeeftNetwerkProtectie",
       "name": "Heeft netwerk protectie",
       "label": {
@@ -597,6 +972,72 @@
       "properties": []
     },
     {
+      "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#HeeftOnderbord",
+      "name": "Heeft onderbord",
+      "label": {
+        "nl": "Heeft onderbord"
+      },
+      "sort": "Heeft onderbord",
+      "description": {
+        "nl": "Onderbord dat een bepaling toevoegt aan het verkeersteken."
+      },
+      "usage": {},
+      "parents": [
+        {
+          "label": "Directionele relatie",
+          "name": "DirectioneleRelatie",
+          "package": "OSLO-Implementatieelement",
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DirectioneleRelatie",
+          "scoped_uri": "#Directionele relatie"
+        }
+      ],
+      "properties": []
+    },
+    {
+      "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#HeeftOntwerp",
+      "name": "Heeft ontwerp",
+      "label": {
+        "nl": "Heeft ontwerp"
+      },
+      "sort": "Heeft ontwerp",
+      "description": {
+        "nl": "het ontwerp waarin het verkeersteken is opgenomen."
+      },
+      "usage": {},
+      "parents": [
+        {
+          "label": "Directionele relatie",
+          "name": "DirectioneleRelatie",
+          "package": "OSLO-Implementatieelement",
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DirectioneleRelatie",
+          "scoped_uri": "#Directionele relatie"
+        }
+      ],
+      "properties": []
+    },
+    {
+      "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#HeeftSignalisatieplan",
+      "name": "Heeft signalisatieplan",
+      "label": {
+        "nl": "Heeft signalisatieplan"
+      },
+      "sort": "Heeft signalisatieplan",
+      "description": {
+        "nl": "Signalisatieplan die bij de signalisatievergunning hoort."
+      },
+      "usage": {},
+      "parents": [
+        {
+          "label": "Directionele relatie",
+          "name": "DirectioneleRelatie",
+          "package": "OSLO-Implementatieelement",
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DirectioneleRelatie",
+          "scoped_uri": "#Directionele relatie"
+        }
+      ],
+      "properties": []
+    },
+    {
       "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#HeeftToegangsprocedure",
       "name": "Heeft toegangsprocedure",
       "label": {
@@ -605,6 +1046,94 @@
       "sort": "Heeft toegangsprocedure",
       "description": {
         "nl": "Deze relatie wordt gelegd tussen een klasse en de klasse Toegangsprocedure. De relatie vertrekt vanuit de klasse Toegangsprocedure en geeft aan dat er een toegangsprocedure van toepassing is voor een object."
+      },
+      "usage": {},
+      "parents": [
+        {
+          "label": "Directionele relatie",
+          "name": "DirectioneleRelatie",
+          "package": "OSLO-Implementatieelement",
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DirectioneleRelatie",
+          "scoped_uri": "#Directionele relatie"
+        }
+      ],
+      "properties": []
+    },
+    {
+      "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#HeeftTransportLinkSet",
+      "name": "Heeft transportlinkset",
+      "label": {
+        "nl": "Heeft transportlinkset"
+      },
+      "sort": "Heeft transportlinkset",
+      "description": {
+        "nl": "Verzameling weglinksequenties en/of individuele weglinks die een route vertegenwoordigen."
+      },
+      "usage": {},
+      "parents": [
+        {
+          "label": "Directionele relatie",
+          "name": "DirectioneleRelatie",
+          "package": "OSLO-Implementatieelement",
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DirectioneleRelatie",
+          "scoped_uri": "#Directionele relatie"
+        }
+      ],
+      "properties": []
+    },
+    {
+      "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#HeeftVerkeersteken",
+      "name": "Heeft verkeersteken",
+      "label": {
+        "nl": "Heeft verkeersteken"
+      },
+      "sort": "Heeft verkeersteken",
+      "description": {
+        "nl": "het verkeersteken dat is opgenomen in het ontwerp"
+      },
+      "usage": {},
+      "parents": [
+        {
+          "label": "Directionele relatie",
+          "name": "DirectioneleRelatie",
+          "package": "OSLO-Implementatieelement",
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DirectioneleRelatie",
+          "scoped_uri": "#Directionele relatie"
+        }
+      ],
+      "properties": []
+    },
+    {
+      "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#HeeftVoorwaarde",
+      "name": "Heeft voorwaarde",
+      "label": {
+        "nl": "Heeft voorwaarde"
+      },
+      "sort": "Heeft voorwaarde",
+      "description": {
+        "nl": "Bevat de voorwaarde van de legale verschijningsvorm."
+      },
+      "usage": {},
+      "parents": [
+        {
+          "label": "Directionele relatie",
+          "name": "DirectioneleRelatie",
+          "package": "OSLO-Implementatieelement",
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DirectioneleRelatie",
+          "scoped_uri": "#Directionele relatie"
+        }
+      ],
+      "properties": []
+    },
+    {
+      "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#HeftOp",
+      "name": "Heft op",
+      "label": {
+        "nl": "Heft op"
+      },
+      "sort": "Heft op",
+      "description": {
+        "nl": "Geeft aan dat een rechtsgrond of legale verschijningsvorm een andere opheft."
       },
       "usage": {},
       "parents": [
@@ -641,6 +1170,50 @@
       "properties": []
     },
     {
+      "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#IngetrokkenBij",
+      "name": "Ingetrokken bij",
+      "label": {
+        "nl": "Ingetrokken bij"
+      },
+      "sort": "Ingetrokken bij",
+      "description": {
+        "nl": "Geeft aan dat deze rechtsgrond of legale verschijningsvorm ingetrokken is bij een ander."
+      },
+      "usage": {},
+      "parents": [
+        {
+          "label": "Directionele relatie",
+          "name": "DirectioneleRelatie",
+          "package": "OSLO-Implementatieelement",
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DirectioneleRelatie",
+          "scoped_uri": "#Directionele relatie"
+        }
+      ],
+      "properties": []
+    },
+    {
+      "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#IngevoegdBij",
+      "name": "Ingevoegd bij",
+      "label": {
+        "nl": "Ingevoegd bij"
+      },
+      "sort": "Ingevoegd bij",
+      "description": {
+        "nl": "Bij deze rechtsgrond of legale verschijningsvorm is een verandering met legale impact ingevoegd door een andere."
+      },
+      "usage": {},
+      "parents": [
+        {
+          "label": "Directionele relatie",
+          "name": "DirectioneleRelatie",
+          "package": "OSLO-Implementatieelement",
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DirectioneleRelatie",
+          "scoped_uri": "#Directionele relatie"
+        }
+      ],
+      "properties": []
+    },
+    {
       "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#IsAdmOnderdeelVan",
       "name": "Is administratief onderdeel van",
       "label": {
@@ -650,6 +1223,68 @@
       "description": {
         "nl": "Deze relatie geeft aan dat een onderdeel louter met een administratieve functie toebehoort aan de collectie."
       },
+      "usage": {},
+      "parents": [
+        {
+          "label": "Directionele relatie",
+          "name": "DirectioneleRelatie",
+          "package": "OSLO-Implementatieelement",
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DirectioneleRelatie",
+          "scoped_uri": "#Directionele relatie"
+        }
+      ],
+      "properties": []
+    },
+    {
+      "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#IsDeelVan",
+      "name": "Is deel van",
+      "label": {
+        "nl": "Is deel van"
+      },
+      "sort": "Is deel van",
+      "description": {
+        "nl": "De rechtsgrond waar deze rechtsgrond onderdeel van uitmaakt."
+      },
+      "usage": {},
+      "parents": [
+        {
+          "label": "Directionele relatie",
+          "name": "DirectioneleRelatie",
+          "package": "OSLO-Implementatieelement",
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DirectioneleRelatie",
+          "scoped_uri": "#Directionele relatie"
+        }
+      ],
+      "properties": []
+    },
+    {
+      "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#IsGebaseerdOp",
+      "name": "Gebaseerd op",
+      "label": {
+        "nl": "Gebaseerd op"
+      },
+      "sort": "Gebaseerd op",
+      "description": {},
+      "usage": {},
+      "parents": [
+        {
+          "label": "Directionele relatie",
+          "name": "DirectioneleRelatie",
+          "package": "OSLO-Implementatieelement",
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DirectioneleRelatie",
+          "scoped_uri": "#Directionele relatie"
+        }
+      ],
+      "properties": []
+    },
+    {
+      "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#IsGerelateerdAan",
+      "name": "Relatie",
+      "label": {
+        "nl": "Relatie"
+      },
+      "sort": "Relatie",
+      "description": {},
       "usage": {},
       "parents": [
         {
@@ -693,6 +1328,50 @@
       "sort": "Is netwerk ECC",
       "description": {
         "nl": "Deze relatie geeft aan hoe afgeschermde netwerkelementen bereikt kunnen worden vanuit het gewone netwerk. De relatie vertrekt steeds in het controlerende netwerkelement."
+      },
+      "usage": {},
+      "parents": [
+        {
+          "label": "Directionele relatie",
+          "name": "DirectioneleRelatie",
+          "package": "OSLO-Implementatieelement",
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DirectioneleRelatie",
+          "scoped_uri": "#Directionele relatie"
+        }
+      ],
+      "properties": []
+    },
+    {
+      "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#IsOnderdeelVan",
+      "name": "Is onderdeel van",
+      "label": {
+        "nl": "Is onderdeel van"
+      },
+      "sort": "Is onderdeel van",
+      "description": {
+        "nl": "Het besluit waarvan het artikel een onderdeel is."
+      },
+      "usage": {},
+      "parents": [
+        {
+          "label": "Directionele relatie",
+          "name": "DirectioneleRelatie",
+          "package": "OSLO-Implementatieelement",
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DirectioneleRelatie",
+          "scoped_uri": "#Directionele relatie"
+        }
+      ],
+      "properties": []
+    },
+    {
+      "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#IsOntwerpVoor",
+      "name": "Is ontwerp voor",
+      "label": {
+        "nl": "Is ontwerp voor"
+      },
+      "sort": "Is ontwerp voor",
+      "description": {
+        "nl": "Mobiliteitsmaatregel die deel uitmaakt van het ontwerp"
       },
       "usage": {},
       "parents": [
@@ -795,6 +1474,28 @@
       "properties": []
     },
     {
+      "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#OpgehevenBij",
+      "name": "Opgeheven bij",
+      "label": {
+        "nl": "Opgeheven bij"
+      },
+      "sort": "Opgeheven bij",
+      "description": {
+        "nl": "Geeft aan dat deze rechtsgrond of legale verschijningsvorm opgeheven is door een ander."
+      },
+      "usage": {},
+      "parents": [
+        {
+          "label": "Directionele relatie",
+          "name": "DirectioneleRelatie",
+          "package": "OSLO-Implementatieelement",
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DirectioneleRelatie",
+          "scoped_uri": "#Directionele relatie"
+        }
+      ],
+      "properties": []
+    },
+    {
       "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Realiseert",
       "name": "Realiseert",
       "label": {
@@ -856,6 +1557,182 @@
           "package": "OSLO-Implementatieelement",
           "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#NietDirectioneleRelatie",
           "scoped_uri": "#Niet-directionele relatie"
+        }
+      ],
+      "properties": []
+    },
+    {
+      "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#TrektIn",
+      "name": "Trekt in",
+      "label": {
+        "nl": "Trekt in"
+      },
+      "sort": "Trekt in",
+      "description": {
+        "nl": "Geeft aan dat een rechtsgrond of legale verschijningsvorm een andere intrekt."
+      },
+      "usage": {},
+      "parents": [
+        {
+          "label": "Directionele relatie",
+          "name": "DirectioneleRelatie",
+          "package": "OSLO-Implementatieelement",
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DirectioneleRelatie",
+          "scoped_uri": "#Directionele relatie"
+        }
+      ],
+      "properties": []
+    },
+    {
+      "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#VeranderdDoor",
+      "name": "Veranderd door",
+      "label": {
+        "nl": "Veranderd door"
+      },
+      "sort": "Veranderd door",
+      "description": {
+        "nl": "Duidt aan dat deze rechtsgrond een verandering met legale gevolgen heeft ondergaan door een andere rechtsgrond. Dit omvat amendementen, vervangingen, herroepingen en andere types verandering."
+      },
+      "usage": {},
+      "parents": [
+        {
+          "label": "Directionele relatie",
+          "name": "DirectioneleRelatie",
+          "package": "OSLO-Implementatieelement",
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DirectioneleRelatie",
+          "scoped_uri": "#Directionele relatie"
+        }
+      ],
+      "properties": []
+    },
+    {
+      "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Verandert",
+      "name": "Verandert",
+      "label": {
+        "nl": "Verandert"
+      },
+      "sort": "Verandert",
+      "description": {
+        "nl": "Duidt aan dat deze rechtsgrond een verandering met legale gevolgen doorvoert op een andere rechtsgrond. Dit omvat amendementen, vervangingen, herroepingen en andere types verandering."
+      },
+      "usage": {},
+      "parents": [
+        {
+          "label": "Directionele relatie",
+          "name": "DirectioneleRelatie",
+          "package": "OSLO-Implementatieelement",
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DirectioneleRelatie",
+          "scoped_uri": "#Directionele relatie"
+        }
+      ],
+      "properties": []
+    },
+    {
+      "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Vereist",
+      "name": "Vereist",
+      "label": {
+        "nl": "Vereist"
+      },
+      "sort": "Vereist",
+      "description": {
+        "nl": "Mobiliteitsmaatregel die vereist is om een inname tot stand te brengen."
+      },
+      "usage": {},
+      "parents": [
+        {
+          "label": "Directionele relatie",
+          "name": "DirectioneleRelatie",
+          "package": "OSLO-Implementatieelement",
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DirectioneleRelatie",
+          "scoped_uri": "#Directionele relatie"
+        }
+      ],
+      "properties": []
+    },
+    {
+      "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Vergunt",
+      "name": "Vergunt",
+      "label": {
+        "nl": "Vergunt"
+      },
+      "sort": "Vergunt",
+      "description": {
+        "nl": "Inname dat vergunt is in de innamevergunning."
+      },
+      "usage": {},
+      "parents": [
+        {
+          "label": "Directionele relatie",
+          "name": "DirectioneleRelatie",
+          "package": "OSLO-Implementatieelement",
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DirectioneleRelatie",
+          "scoped_uri": "#Directionele relatie"
+        }
+      ],
+      "properties": []
+    },
+    {
+      "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#VervangenBij",
+      "name": "Vervangen bij",
+      "label": {
+        "nl": "Vervangen bij"
+      },
+      "sort": "Vervangen bij",
+      "description": {
+        "nl": "Geeft aan dat deze rechtsgrond of legale verschijningsvorm vervangen is bij een ander."
+      },
+      "usage": {},
+      "parents": [
+        {
+          "label": "Directionele relatie",
+          "name": "DirectioneleRelatie",
+          "package": "OSLO-Implementatieelement",
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DirectioneleRelatie",
+          "scoped_uri": "#Directionele relatie"
+        }
+      ],
+      "properties": []
+    },
+    {
+      "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Vervangt",
+      "name": "Vervangt",
+      "label": {
+        "nl": "Vervangt"
+      },
+      "sort": "Vervangt",
+      "description": {
+        "nl": "Geeft aan dat een rechtsgrond of legale verschijningsvorm een andere vervangt."
+      },
+      "usage": {},
+      "parents": [
+        {
+          "label": "Directionele relatie",
+          "name": "DirectioneleRelatie",
+          "package": "OSLO-Implementatieelement",
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DirectioneleRelatie",
+          "scoped_uri": "#Directionele relatie"
+        }
+      ],
+      "properties": []
+    },
+    {
+      "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#VerwijstNaar",
+      "name": "Verwijst naar",
+      "label": {
+        "nl": "Verwijst naar"
+      },
+      "sort": "Verwijst naar",
+      "description": {
+        "nl": "Artikel beschreven in de wegcode waarvan de verkeersmaatregel de uitvoering is."
+      },
+      "usage": {},
+      "parents": [
+        {
+          "label": "Directionele relatie",
+          "name": "DirectioneleRelatie",
+          "package": "OSLO-Implementatieelement",
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DirectioneleRelatie",
+          "scoped_uri": "#Directionele relatie"
         }
       ],
       "properties": []
@@ -964,6 +1841,50 @@
       "sort": "Voedt aangestuurd",
       "description": {
         "nl": "Deze relatie wordt enkel gelegd naar objecttypes die typisch een groot vermogen vereisen en onder spanning komen nadat het voedend element aangestuurd is om die spanning door te sturen."
+      },
+      "usage": {},
+      "parents": [
+        {
+          "label": "Directionele relatie",
+          "name": "DirectioneleRelatie",
+          "package": "OSLO-Implementatieelement",
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DirectioneleRelatie",
+          "scoped_uri": "#Directionele relatie"
+        }
+      ],
+      "properties": []
+    },
+    {
+      "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#VoegtIn",
+      "name": "Voegt in",
+      "label": {
+        "nl": "Voegt in"
+      },
+      "sort": "Voegt in",
+      "description": {
+        "nl": "Deze rechtsgrond of legale verschijningsvorm voegt een verandering met legale impact in bij een andere."
+      },
+      "usage": {},
+      "parents": [
+        {
+          "label": "Directionele relatie",
+          "name": "DirectioneleRelatie",
+          "package": "OSLO-Implementatieelement",
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DirectioneleRelatie",
+          "scoped_uri": "#Directionele relatie"
+        }
+      ],
+      "properties": []
+    },
+    {
+      "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#WordtAangeduidDoor",
+      "name": "Wordt aangeduid door",
+      "label": {
+        "nl": "Wordt aangeduid door"
+      },
+      "sort": "Wordt aangeduid door",
+      "description": {
+        "nl": "Een verkeersteken dat bijdraagt tot de aanduiding van een mobiliteitsmaatregel."
       },
       "usage": {},
       "parents": [
@@ -2717,6 +3638,22 @@
       "properties": []
     },
     {
+      "uri": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "name": "Datumtijd",
+      "label": {
+        "nl": "Datumtijd"
+      },
+      "sort": "Datumtijd",
+      "description": {
+        "nl": "Beschrijft een datumtijd volgens http://www.w3.org/2001/XMLSchema#dateTime."
+      },
+      "usage": {
+        "nl": "https://www.w3.org/TR/xmlschema-2/#dateTime"
+      },
+      "parents": [],
+      "properties": []
+    },
+    {
       "uri": "http://www.w3.org/2001/XMLSchema#decimal",
       "name": "Decimaal getal",
       "label": {
@@ -2728,6 +3665,22 @@
       },
       "usage": {
         "nl": "https://www.w3.org/TR/xmlschema-2/#decimal"
+      },
+      "parents": [],
+      "properties": []
+    },
+    {
+      "uri": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+      "name": "Natuurlijk getal",
+      "label": {
+        "nl": "Natuurlijk getal"
+      },
+      "sort": "Natuurlijk getal",
+      "description": {
+        "nl": "Beschrijft een natuurlijk getal volgens http://www.w3.org/2001/XMLSchema#nonNegativeInteger."
+      },
+      "usage": {
+        "nl": "https://www.w3.org/TR/xmlschema-2/#nonNegativeInteger"
       },
       "parents": [],
       "properties": []
@@ -3382,6 +4335,126 @@
             {
               "EA-Name": "DtcAdres",
               "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcAdres"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "String",
+              "range_uri": "http://www.w3.org/2001/XMLSchema#string"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#String",
+              "range_puri": "http://www.w3.org/2001/XMLSchema#string",
+              "range_label": {
+                "nl": "String"
+              }
+            }
+          ],
+          "cardinality": "1",
+          "codelist_uri": ""
+        }
+      ]
+    },
+    {
+      "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcAssetVersie",
+      "name": "Asset versie",
+      "label": {
+        "nl": "Asset versie"
+      },
+      "sort": "Asset versie",
+      "description": {
+        "nl": "Complex datatype voor de eigenschappen ten behoeve van de versionering van een asset in de databank."
+      },
+      "usage": {},
+      "parents": [],
+      "properties": [
+        {
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcAssetVersie.versienummer",
+          "name": "versienummer",
+          "sort": "versienummer",
+          "label": {
+            "nl": "versienummer"
+          },
+          "description": {
+            "nl": "Het versienummer als een oplopende integer."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "DtcAssetVersie",
+              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcAssetVersie"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "NonNegativeInteger",
+              "range_uri": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Natuurlijk getal",
+              "range_puri": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+              "range_label": {
+                "nl": "Natuurlijk getal"
+              }
+            }
+          ],
+          "cardinality": "1",
+          "codelist_uri": ""
+        },
+        {
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcAssetVersie.timestamp",
+          "name": "timestamp",
+          "sort": "timestamp",
+          "label": {
+            "nl": "timestamp"
+          },
+          "description": {
+            "nl": "De timestamp van het moment dat de versienummer werd toegekend."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "DtcAssetVersie",
+              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcAssetVersie"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "DateTime",
+              "range_uri": "http://www.w3.org/2001/XMLSchema#dateTime"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Datumtijd",
+              "range_puri": "http://www.w3.org/2001/XMLSchema#dateTime",
+              "range_label": {
+                "nl": "Datumtijd"
+              }
+            }
+          ],
+          "cardinality": "1",
+          "codelist_uri": ""
+        },
+        {
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcAssetVersie.context",
+          "name": "context",
+          "sort": "context",
+          "label": {
+            "nl": "context"
+          },
+          "description": {
+            "nl": "De context van de versie creatie."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "DtcAssetVersie",
+              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcAssetVersie"
             }
           ],
           "range": [

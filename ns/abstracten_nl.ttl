@@ -10,17 +10,10 @@
 skos:Concept a rdfs:Class;
   rdfs:label "Plantwijze"@nl .
 
-<https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#AOWSType.isGoedgekeurd> a owl:DatatypeProperty;
-  rdfs:comment "Bepaling van de goedkeuring van AOWS."@nl;
-  rdfs:domain <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#AOWSType>;
+<https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#AIMLinkObject> a owl:Class;
+  rdfs:comment "Abstracte voor de relaties met AIMObject te linken."@nl;
   rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten>;
-  rdfs:range xsd:boolean .
-
-<https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#AOWSType.versieGoedgekeurd> a owl:DatatypeProperty;
-  rdfs:comment "De versie van het standaardbestek 250 waar de goedkeuring is bepaald."@nl;
-  rdfs:domain <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#AOWSType>;
-  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten>;
-  rdfs:range xsd:string .
+  rdfs:subClassOf <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMObject> .
 
 <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#AbstracteAanvullendeGeometrie.assetId> a owl:ObjectProperty;
   rdfs:comment "Unieke identificatie van de aanvullende geometrie zoals toegekend door de beheerder of n.a.v. eerste aanlevering door de leverancier."@nl;
@@ -52,293 +45,9 @@ skos:Concept a rdfs:Class;
   rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten>;
   rdfs:range xsd:anyURI .
 
-<https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#AfschermendeConstructie.certificaathouder> a owl:DatatypeProperty;
-  rdfs:comment "De houder van het uitvoeringscertificaat."@nl;
-  rdfs:domain <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#AfschermendeConstructie>;
-  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten>;
-  rdfs:range xsd:string .
-
-<https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#AfschermendeConstructie.isPermanent> a owl:DatatypeProperty;
-  rdfs:comment "Vermelding of de afschermende constructie al dan niet van permanente aard is."@nl;
-  rdfs:domain <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#AfschermendeConstructie>;
-  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten>;
-  rdfs:range xsd:boolean .
-
-<https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#AfschermendeConstructie.materiaal> a owl:ObjectProperty;
-  rdfs:comment "Het gebruikte materiaal voor de afschermende constructie."@nl;
-  rdfs:domain <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#AfschermendeConstructie>;
-  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten>;
-  rdfs:range skos:Concept .
-
-<https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#AfschermendeConstructie.metTandGroef> a owl:DatatypeProperty;
-  rdfs:comment "Geeft aan of de afschermende constructie bevestigd is aan de onderliggende laag door middel van een tand-groef aansluiting."@nl;
-  rdfs:domain <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#AfschermendeConstructie>;
-  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten>;
-  rdfs:range xsd:boolean .
-
-<https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#AfschermendeConstructie.productidentificatiecode> a owl:ObjectProperty;
-  rdfs:comment "De productidentificatiecode voor het bepalen van de code van het gebruikte product (bv. COPRO/BENOR)."@nl;
-  rdfs:domain <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#AfschermendeConstructie>;
-  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten>;
-  rdfs:range <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcProductidentificatiecode> .
-
-<https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#AfschermendeConstructie.productnaam> a owl:DatatypeProperty;
-  rdfs:comment "Dit is de commerciële naam van de afschermende constructie."@nl;
-  rdfs:domain <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#AfschermendeConstructie>;
-  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten>;
-  rdfs:range xsd:string .
-
-<https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#AfschermendeConstructie.testrapport> a owl:ObjectProperty;
-  <http://purl.org/vocab/vann/usageNote> "Attribuut uit gebruik sinds versie 2.0.0-RC3"@nl;
-  rdfs:comment "De testresultaten van een afschermende constructie."@nl;
-  rdfs:domain <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#AfschermendeConstructie>;
-  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten>;
-  rdfs:range <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcDocument> .
-
-<https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#AfschermendeConstructie.uitvoeringscertificatie> a owl:ObjectProperty;
-  <http://purl.org/vocab/vann/usageNote> "Bestanden van het type xlsx of pdf."@nl;
-  rdfs:comment "Documentatie van het certificaat."@nl;
-  rdfs:domain <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#AfschermendeConstructie>;
-  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten>;
-  rdfs:range <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcDocument> .
-
-<https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#AfschermendeConstructie.video> a owl:ObjectProperty;
-  <http://purl.org/vocab/vann/usageNote> "Attribuut uit gebruik sinds versie 2.0.0-RC3 .Enkel videobestanden zijn toegelaten."@nl;
-  rdfs:comment "Video van de testen op afschermende constructies."@nl;
-  rdfs:domain <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#AfschermendeConstructie>;
-  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten>;
-  rdfs:range <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcDocument> .
-
-<https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Bebakening.kleurReflectorAflopend> a owl:ObjectProperty;
-  rdfs:comment "De kleur van de reflector stroomafwaarts."@nl;
-  rdfs:domain <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Bebakening>;
-  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten>;
-  rdfs:range skos:Concept .
-
-<https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Bebakening.kleurReflectorOplopend> a owl:ObjectProperty;
-  rdfs:comment "De kleur van de reflector stroomopwaarts."@nl;
-  rdfs:domain <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Bebakening>;
-  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten>;
-  rdfs:range skos:Concept .
-
-<https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#BevestigingGC> a owl:Class;
-  rdfs:comment "Abstracte om de bevestigingsrelatie naar de profielen en schermelementen van geluidswerende constructies te faciliteren."@nl;
+<https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Signalisatie> a owl:Class;
+  rdfs:comment "Abstracte voor de gemeenschappelijke eigenschappen en relaties van signalisatie-elementen."@nl;
   rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten> .
-
-<https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#BijlageVoertuigkering.testrapportVoertuigkering> a owl:ObjectProperty;
-  rdfs:comment "De testresultaten van de crashtesten die op de voertuigkerende constructie uitgevoerd zijn."@nl;
-  rdfs:domain <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#BijlageVoertuigkering>;
-  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten>;
-  rdfs:range <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcDocument> .
-
-<https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#BijlageVoertuigkering.videoVoertuigkering> a owl:ObjectProperty;
-  rdfs:comment "Video-opname van de crashtesten op de voertuigkerende constructie."@nl;
-  rdfs:domain <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#BijlageVoertuigkering>;
-  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten>;
-  rdfs:range <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcDocument> .
-
-<https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Draagconstructie> a owl:Class;
-  rdfs:comment "Abstracte voor alle draagconstructies."@nl;
-  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten> .
-
-<https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#DwarseMarkeringToegang> a owl:Class;
-  rdfs:comment "Abstracte als toegang tot de verschillende soorten dwarse markeringen."@nl;
-  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten>;
-  rdfs:subClassOf <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Markering>,
-    <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#AOWSType> .
-
-<https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#FiguratieMarkeringToegang> a owl:Class;
-  rdfs:comment "Abstracte als toegang tot de verschillende soorten figuratiemarkeringen."@nl;
-  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten>;
-  rdfs:subClassOf <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Markering>,
-    <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#AOWSType> .
-
-<https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Fundering.aanzetpeil> a owl:ObjectProperty;
-  rdfs:comment "De hoogte van het laagste punt van de onderkant van een element, ten opzichte van gemiddeld laagwaterpeil te Oostende (TAWpeil)."@nl;
-  rdfs:domain <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Fundering>;
-  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten>;
-  rdfs:range <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInMeterTAW> .
-
-<https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Fundering.hoogte> a owl:ObjectProperty;
-  <http://purl.org/vocab/vann/usageNote> "Attribuut uit gebruik sinds versie 2.0.0-RC4"@nl;
-  rdfs:comment "De afstand tussen het laagste punt van de onderkant en hoogste punt van de bovenkant van de fundering."@nl;
-  rdfs:domain <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Fundering>;
-  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten>;
-  rdfs:range <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInCentimeter> .
-
-<https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Kantopsluiting.isGeprefabriceerd> a owl:DatatypeProperty;
-  rdfs:comment "Aanduiding of de kantopsluiting al dan niet is geprefabriceerd."@nl;
-  rdfs:domain <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Kantopsluiting>;
-  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten>;
-  rdfs:range xsd:boolean .
-
-<https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Kantopsluiting.kleur> a owl:ObjectProperty;
-  rdfs:comment "De kleur van kantopsluiting."@nl;
-  rdfs:domain <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Kantopsluiting>;
-  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten>;
-  rdfs:range skos:Concept .
-
-<https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Kantopsluiting.krimpvoeg> a owl:ObjectProperty;
-  rdfs:comment "Een gedeeltelijke insnijding in een constructiedeel die uitzetting en krimp in de constructie toelaat."@nl;
-  rdfs:domain <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Kantopsluiting>;
-  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten>;
-  rdfs:range <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#DtcKrimpvoeg> .
-
-<https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Kantopsluiting.leveringsbon> a owl:ObjectProperty;
-  rdfs:comment "Een bon die informatie bevat zoals : tijdstip aanmaak van het mengsel, tijdstip begin lossen van het mengsel, toevoegingen aan het mengsel, eventuele opmerkingen, vrachtgegevens (chauffeur, kentekenplaat, naam van de werf, ...)"@nl;
-  rdfs:domain <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Kantopsluiting>;
-  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten>;
-  rdfs:range <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcDocument> .
-
-<https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Kantopsluiting.soort> a owl:ObjectProperty;
-  rdfs:comment "De soort van kantopsluiting."@nl;
-  rdfs:domain <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Kantopsluiting>;
-  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten>;
-  rdfs:range skos:Concept .
-
-<https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Kantopsluiting.totaleLengte> a owl:ObjectProperty;
-  rdfs:comment "De totale lengte van de geplaatste constructie van kantopsluitingen in meter."@nl;
-  rdfs:domain <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Kantopsluiting>;
-  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten>;
-  rdfs:range <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInMeter> .
-
-<https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#LEDBord.aantalLichtsensoren> a owl:DatatypeProperty;
-  rdfs:comment "Het aantal lichtsensoren waar het bord over beschikt die continu de intensiteit van het invallend licht meten."@nl;
-  rdfs:domain <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#LEDBord>;
-  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten>;
-  rdfs:range xsd:integer .
-
-<https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#LEDBord.dnsNaam> a owl:DatatypeProperty;
-  rdfs:comment "De DNSNaam (ook \"volledige domein naam\" genoemd ) is een unieke naam binnen het Domain Name System (DNS), het naamgevingssysteem waarmee computers, webservers, diensten en toepassing op een unieke manier kunnen worden geïdentificeerd. Deze bevat zowel de hostname en de top level domein naam bv. 120c8-ar1.belfa.be."@nl;
-  rdfs:domain <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#LEDBord>;
-  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten>;
-  rdfs:range xsd:string .
-
-<https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#LEDBord.heeftDeurcontact> a owl:DatatypeProperty;
-  rdfs:comment "Het LEDBord is beveiligd met een deurcontact dat waarschuwt voor ongeoorloofd openen van het bord door middel van een software-matig alarm."@nl;
-  rdfs:domain <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#LEDBord>;
-  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten>;
-  rdfs:range xsd:boolean .
-
-<https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#LEDBord.ipAdres> a owl:ObjectProperty;
-  rdfs:comment "Het IP netwerkadres van het LEDBord."@nl;
-  rdfs:domain <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#LEDBord>;
-  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten>;
-  rdfs:range <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DteIPv4Adres> .
-
-<https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#LEDBord.logischeGroepVerkeerscentrum> a owl:DatatypeProperty;
-  rdfs:comment "Identificator van de logische groep toegekend door het Verkeerscentrum."@nl;
-  rdfs:domain <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#LEDBord>;
-  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten>;
-  rdfs:range xsd:string .
-
-<https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#LEDBord.protocol> a owl:DatatypeProperty;
-  rdfs:comment "Communicatieprotocol waarmee het LEDBord wordt aangestuurd."@nl;
-  rdfs:domain <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#LEDBord>;
-  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten>;
-  rdfs:range xsd:string .
-
-<https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#LEDBord.technischeFiche> a owl:ObjectProperty;
-  rdfs:comment "Document met technische informatie over het LEDBord."@nl;
-  rdfs:domain <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#LEDBord>;
-  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten>;
-  rdfs:range <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcDocument> .
-
-<https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#LEDBord.versie> a owl:DatatypeProperty;
-  rdfs:comment "Versie van het LEDBord."@nl;
-  rdfs:domain <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#LEDBord>;
-  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten>;
-  rdfs:range xsd:string .
-
-<https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Laag.breedte> a owl:ObjectProperty;
-  rdfs:comment "De (gemiddelde) breedte van een laag in meter. Dit kan ook de nominale breedte zijn afhankelijk van de laag en situatie."@nl;
-  rdfs:domain <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Laag>;
-  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten>;
-  rdfs:range <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInMeter> .
-
-<https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Laag.laagRol> a owl:ObjectProperty;
-  rdfs:comment "De functie die de laag vervult in de verticale opbouw."@nl;
-  rdfs:domain <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Laag>;
-  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten>;
-  rdfs:range skos:Concept .
-
-<https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Laag.lengte> a owl:ObjectProperty;
-  rdfs:comment "De (gemiddelde) lengte van een laag in meter. Dit kan ook de nominale lengte zijn afhankelijk van de laag en situatie."@nl;
-  rdfs:domain <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Laag>;
-  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten>;
-  rdfs:range <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInMeter> .
-
-<https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Laag.oppervlakte> a owl:ObjectProperty;
-  rdfs:comment "De oppervlakte van een laag in vierkante meter."@nl;
-  rdfs:domain <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Laag>;
-  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten>;
-  rdfs:range <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInVierkanteMeter> .
-
-<https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#LaagBouwklasse.bouwklasse> a owl:ObjectProperty;
-  rdfs:comment "Een maat voor de verkeersbelasting over de volledige levensduur van de laag. De laag is ontworpen volgens de aangeduide bouwklasse."@nl;
-  rdfs:domain <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#LaagBouwklasse>;
-  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten>;
-  rdfs:range skos:Concept .
-
-<https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#LaagDikte.dikte> a owl:ObjectProperty;
-  rdfs:comment "De gemiddelde dikte van een laag in centimeter."@nl;
-  rdfs:domain <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#LaagDikte>;
-  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten>;
-  rdfs:range <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInCentimeter> .
-
-<https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#LaagProductidentificatiecode.productidentificatiecode> a owl:ObjectProperty;
-  rdfs:comment "De productidentificatiecode van het gebruikte product (bv. COPRO code of Benor code)."@nl;
-  rdfs:domain <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#LaagProductidentificatiecode>;
-  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten>;
-  rdfs:range <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcProductidentificatiecode> .
-
-<https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#LijnvormigElement.technischeFiche> a owl:ObjectProperty;
-  rdfs:comment "De technische fiche van het lijnvormig element."@nl;
-  rdfs:domain <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#LijnvormigElement>;
-  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten>;
-  rdfs:range <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcDocument> .
-
-<https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Markering.isHandwerk> a owl:DatatypeProperty;
-  rdfs:comment "Boolean om te bepalen of de markering machinaal of handmatig is aangebracht."@nl;
-  rdfs:domain <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Markering>;
-  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten>;
-  rdfs:range xsd:boolean .
-
-<https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Markering.isTijdelijk> a owl:DatatypeProperty;
-  rdfs:comment "Aanduiding of de wegmarkering al dan niet tot de werfsignalisatie behoort."@nl;
-  rdfs:domain <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Markering>;
-  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten>;
-  rdfs:range xsd:boolean .
-
-<https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Markering.kleur> a owl:ObjectProperty;
-  rdfs:comment "De kleur van de gebruikte markering."@nl;
-  rdfs:domain <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Markering>;
-  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten>;
-  rdfs:range skos:Concept .
-
-<https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Markering.markeringsoort> a owl:ObjectProperty;
-  rdfs:comment "De soort van markering (verf, thermopast,...)."@nl;
-  rdfs:domain <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Markering>;
-  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten>;
-  rdfs:range skos:Concept .
-
-<https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Markering.markeringsysteemCopro> a owl:ObjectProperty;
-  rdfs:comment "De product informatie van de markering via COPRO codes."@nl;
-  rdfs:domain <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Markering>;
-  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten>;
-  rdfs:range <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcProductidentificatiecode> .
-
-<https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Markering.opvatting> a owl:ObjectProperty;
-  rdfs:comment "De opvatting van de markering, zijnde middelenverbintenis of resultaatsverbintenis met een minimale levensduur."@nl;
-  rdfs:domain <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Markering>;
-  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten>;
-  rdfs:range <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#DtcMarkeringOpvatting> .
-
-<https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Straatmeubilair> a owl:Class;
-  rdfs:comment "Abstracte bedoeld om het straatmeubilair onder 1 noemer te houden."@nl;
-  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten>;
-  rdfs:subClassOf <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Signalisatie>,
-    <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMObject> .
 
 <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Verkeersbord.afmeting> a owl:ObjectProperty;
   rdfs:comment "De afmeting(en) van het verkeersbord."@nl;
@@ -347,6 +56,7 @@ skos:Concept a rdfs:Class;
   rdfs:range <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#DtuAfmetingVerkeersbord> .
 
 <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Verkeersbord.kaartVoorstelling> a owl:ObjectProperty;
+  rdfs:comment "TODO"@nl;
   rdfs:domain <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Verkeersbord>;
   rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten>;
   rdfs:range <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcDocument> .
@@ -358,110 +68,13 @@ skos:Concept a rdfs:Class;
   rdfs:range <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInMeter> .
 
 <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Verkeersbord.soortSteun> a owl:ObjectProperty;
+  rdfs:comment "Aanduiding welk type steun het verkeersbord draagt."@nl;
   rdfs:domain <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Verkeersbord>;
   rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten>;
   rdfs:range skos:Concept .
 
-<https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Verkeersteken.adres> a owl:ObjectProperty;
-  <http://purl.org/vocab/vann/usageNote> "Klasse uit gebruik sinds versie 0.0.0-RC0"@nl;
-  rdfs:comment "Adres van het verkeersteken."@nl;
-  rdfs:domain <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Verkeersteken>;
-  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten>;
-  rdfs:range <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcAdres> .
-
-<https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Verkeersteken.afbeelding> a owl:ObjectProperty;
-  <http://purl.org/vocab/vann/usageNote> "Klasse uit gebruik sinds versie 0.0.0-RC0"@nl;
-  rdfs:comment "Foto van het verkeersteken."@nl;
-  rdfs:domain <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Verkeersteken>;
-  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten>;
-  rdfs:range <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcDocument> .
-
-<https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Verkeersteken.mobiliteitsMaatregel> a owl:ObjectProperty;
-  <http://purl.org/vocab/vann/usageNote> "Klasse uit gebruik sinds versie 0.0.0-RC0"@nl;
-  rdfs:comment "Externe referentie naar een maatregel om de beweging en verplaatsing van de weggebruiker op het openbaar domein of privé domein met openbaar karakter te organiseren."@nl;
-  rdfs:domain <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Verkeersteken>;
-  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten>;
-  rdfs:range <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#DtcExterneReferentie> .
-
-<https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Verkeersteken.plaatsbeschrijving> a owl:DatatypeProperty;
-  <http://purl.org/vocab/vann/usageNote> "Klasse uit gebruik sinds versie 0.0.0-RC0"@nl;
-  rdfs:comment "Tekstuele beschrijving waar het verkeersteken zal komen."@nl;
-  rdfs:domain <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Verkeersteken>;
-  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten>;
-  rdfs:range xsd:string .
-
-<https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Verkeersteken.signalisatieVergunning> a owl:ObjectProperty;
-  <http://purl.org/vocab/vann/usageNote> "Klasse uit gebruik sinds versie 0.0.0-RC0"@nl;
-  rdfs:comment "Externe referentie naar een vergunning voor het tijdelijk aanbrengen of wijzigen van signalisatie op het openbaar domein of privaat domein met openbaar karakter."@nl;
-  rdfs:domain <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Verkeersteken>;
-  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten>;
-  rdfs:range <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#DtcExterneReferentie> .
-
-<https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Verkeersteken.variabelOpschrift> a owl:DatatypeProperty;
-  <http://purl.org/vocab/vann/usageNote> "Klasse uit gebruik sinds versie 0.0.0-RC0"@nl;
-  rdfs:comment "Variabele tekst die op het verkeersbordconcept komt te staan."@nl;
-  rdfs:domain <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Verkeersteken>;
-  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten>;
-  rdfs:range xsd:string .
-
-<https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Verkeersteken.wettelijkeStatus> a owl:ObjectProperty;
-  <http://purl.org/vocab/vann/usageNote> "Bijvoorbeeld: vergund, niet-vergund, in ontwerp. Klasse uit gebruik sinds versie 0.0.0-RC0"@nl;
-  rdfs:comment "Duidt de wettelijke status aan van het verkeersteken."@nl;
-  rdfs:domain <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Verkeersteken>;
-  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten>;
-  rdfs:range skos:Concept .
-
-<https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#ArtificieleLaag> a owl:Class;
-  rdfs:comment "Abstracte als noemer om de abstracten Laag, LaagProductidentificatiecode en LaagDikte te groeperen."@nl;
-  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten>;
-  rdfs:subClassOf <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Laag>,
-    <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#LaagDikte>,
-    <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#LaagProductidentificatiecode> .
-
-<https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#ConstructieElement> a owl:Class;
-  rdfs:comment "Abstracte voor de verschillende constructie elementen."@nl;
-  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten>;
-  rdfs:subClassOf <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMNaamObject> .
-
-<https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#LaagBouwklasse> a owl:Class;
-  rdfs:comment "Abstracte waarmee aan een laag het attribuut bouwklasse wordt toegekend."@nl;
-  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten>;
-  rdfs:subClassOf <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#ArtificieleLaag> .
-
-<https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Bebakening> a owl:Class;
-  rdfs:comment "Abstracte voor de bebakeningen."@nl;
-  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten>;
-  rdfs:subClassOf <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Signalisatie>,
-    <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMObject> .
-
-<https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Fundering> a owl:Class;
-  rdfs:comment "Abstracte voor verschillende manieren om er voor te zorgen dat het eigen gewicht van het object dat de fundering krijgt en de krachten uitgeoefend op dat object, zoals nuttige belasting, sneeuw, winddruk, enzovoorts, worden overgedragen op de draagkrachtige ondergrond. Een fundering zit hoofdzakelijk onder het maaiveld en heeft tot doel het stabiliseren van een ander object."@nl;
-  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten>;
-  rdfs:subClassOf <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#ConstructieElement> .
-
-<https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#LaagDikte> a owl:Class;
-  rdfs:comment "Abstracte waarmee aan een laag het attribuut dikte wordt toegekend."@nl;
-  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten> .
-
-<https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#BijlageVoertuigkering> a owl:Class;
-  rdfs:comment "Abstracte om bestanden te bundelen omtrent voertuigkering."@nl;
-  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten> .
-
-<https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#LaagProductidentificatiecode> a owl:Class;
-  rdfs:comment "Abstracte waarmee aan een laag de eigenschap productidentificatiecode wordt toegekend."@nl;
-  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten> .
-
-<https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#LijnvormigElement> a owl:Class;
-  rdfs:comment "Abstracte voor de gemeenschappelijke eigenschappen en relaties van lijnvormige elementen."@nl;
-  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten>;
-  rdfs:subClassOf <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMObject> .
-
-<https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Signalisatie> a owl:Class;
-  rdfs:comment "Abstracte voor de gemeenschappelijke eigenschappen en relaties van signalisatie-elementen."@nl;
-  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten> .
-
-<https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#AOWSType> a owl:Class;
-  rdfs:comment "Abstracte om alle eigenschappen en relaties van AOWS type onder 1 noemer te houden."@nl;
+<https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Verkeersbord> a owl:Class;
+  rdfs:comment "Abstracte klasse voor borden die een fysieke drager van verkeerstekens kunnen zijn waarvan de betekenis bepaald wordt door een verkeersbordconcept."@nl;
   rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten> .
 
 <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#AbstracteAanvullendeGeometrie> a owl:Class;
@@ -470,45 +83,6 @@ skos:Concept a rdfs:Class;
   rdfs:subClassOf <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMVersie>,
     <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMDBStatus>,
     <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMToestand> .
-
-<https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Laag> a owl:Class;
-  rdfs:comment "Abstracte voor de gemeenschappelijke eigenschappen van de onderliggende verhardings- en funderings-onderdelen."@nl;
-  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten>;
-  rdfs:subClassOf <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMObject> .
-
-<https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Verkeersbord> a owl:Class;
-  rdfs:comment "Abstracte klasse voor borden die een fysieke drager van verkeerstekens kunnen zijn waarvan de betekenis bepaald wordt door een verkeersbordconcept."@nl;
-  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten> .
-
-<https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Kantopsluiting> a owl:Class;
-  rdfs:comment "Abstracte voor de gemeenschappelijke eigenschappen en relaties voor de kantopsluiting."@nl;
-  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten>;
-  rdfs:subClassOf <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#LijnvormigElement>,
-    <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#LaagProductidentificatiecode> .
-
-<https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Verkeersteken> a owl:Class;
-  <http://purl.org/vocab/vann/usageNote> "Klasse uit gebruik sinds versie 0.0.0-RC0"@nl;
-  rdfs:comment "Abstracte klasse voor aanwijzingen ten behoeve van de weggebruikers die verbonden wordt aan het aankondigen of opleggen van een bepaalde verkeersmaatregel zoals bepaald in de wegcode."@nl;
-  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten>;
-  rdfs:subClassOf <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMObject> .
-
-<https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#LEDBord> a owl:Class;
-  rdfs:comment "Abstracte klasse die de gemeenschappelijke eigenschappen van verschillende types dynamische verkeersborden groepeert."@nl;
-  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten>;
-  rdfs:subClassOf <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMNaamObject>,
-    <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Verkeersbord> .
-
-<https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Markering> a owl:Class;
-  rdfs:comment "Abstracte als noemer voor de verschillende types van markeringen."@nl;
-  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten>;
-  rdfs:subClassOf <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMObject>,
-    <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Signalisatie> .
-
-<https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#AfschermendeConstructie> a owl:Class;
-  rdfs:comment "Abstracte die een lijn- of puntvormige constructie,geïnstalleerd langs de weg om een kerend vermogen te bieden aan een dwalend voertuig,samenvat."@nl;
-  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten>;
-  rdfs:subClassOf <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#BijlageVoertuigkering>,
-    <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#LijnvormigElement> .
 
 <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten> a owl:Ontology;
   rdfs:label "abstracten"@en,

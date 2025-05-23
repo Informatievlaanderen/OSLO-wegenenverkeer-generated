@@ -94,6 +94,7 @@
     <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/vlag/ontwerpdocument/DEV#KwantWrdInMeterShape>,
     <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/vlag/ontwerpdocument/DEV#KwantWrdInMillimeterShape>,
     <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/vlag/ontwerpdocument/DEV#PictogramShape>,
+    <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/vlag/ontwerpdocument/DEV#VLAGAIMObjectShape>,
     <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/vlag/ontwerpdocument/DEV#AanzichtVerkeersbordopstellingShape>,
     <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/vlag/ontwerpdocument/DEV#VerkeersbordopstellingShape>,
     <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/vlag/ontwerpdocument/DEV#BehoortTotShape>,
@@ -1347,6 +1348,8 @@
   shacl:closed false;
   shacl:property <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/vlag/ontwerpdocument/DEV#CodelijstShape/21b008a50eb152d6a3bdd4f895ab86965098b9f3>,
     <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/vlag/ontwerpdocument/DEV#CodelijstShape/6cc76a3c3740e17a760d5c82ebd7f4235a04c077>,
+    <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/vlag/ontwerpdocument/DEV#CodelijstShape/5fceb068938b8a837e254da418f45825d992aec8>,
+    <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/vlag/ontwerpdocument/DEV#CodelijstShape/e9d8e42e8041e72c4534134d5a9044b03bed7ec5>,
     <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/vlag/ontwerpdocument/DEV#CodelijstShape/236f0210baaf149903750c43bbe7012c21debb2a>,
     <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/vlag/ontwerpdocument/DEV#CodelijstShape/322371a77364a50f049d46180f6192532eea26dc>,
     <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/vlag/ontwerpdocument/DEV#CodelijstShape/4f381639bb6e021939f65b4f41409d1edaeade9b>,
@@ -1384,6 +1387,14 @@
   <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/vlag/ontwerpdocument/DEVnl> "De verwachte waarde voor type is een Literal"];
   <https://data.vlaanderen.be/ns/shacl#rule> "" .
 
+<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/vlag/ontwerpdocument/DEV#CodelijstShape/5fceb068938b8a837e254da418f45825d992aec8> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/vlag/ontwerpdocument/DEV#Codelijst%3Anaam";
+  shacl:description "TODO"@nl;
+  shacl:maxCount 1;
+  shacl:name "naam"@nl;
+  shacl:path skos:label;
+  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/vlag/ontwerpdocument/DEVnl> "Maximaal 1 waarden toegelaten voor naam"];
+  <https://data.vlaanderen.be/ns/shacl#rule> "" .
+
 <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/vlag/ontwerpdocument/DEV#CodelijstShape/6cc76a3c3740e17a760d5c82ebd7f4235a04c077> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/vlag/ontwerpdocument/DEV#Codelijst%3Abehoort%20tot";
   shacl:description "TODO"@nl;
   shacl:name "behoort tot"@nl;
@@ -1397,6 +1408,14 @@
   shacl:name "type"@nl;
   shacl:path dc:type;
   <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/vlag/ontwerpdocument/DEVnl> "Minimaal 1 waarden verwacht voor type"];
+  <https://data.vlaanderen.be/ns/shacl#rule> "" .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/vlag/ontwerpdocument/DEV#CodelijstShape/e9d8e42e8041e72c4534134d5a9044b03bed7ec5> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/vlag/ontwerpdocument/DEV#Codelijst%3Anaam";
+  shacl:description "TODO"@nl;
+  shacl:minCount 1;
+  shacl:name "naam"@nl;
+  shacl:path skos:label;
+  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/vlag/ontwerpdocument/DEVnl> "Minimaal 1 waarden verwacht voor naam"];
   <https://data.vlaanderen.be/ns/shacl#rule> "" .
 
 <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/vlag/ontwerpdocument/DEV#ConceptShape> a shacl:NodeShape;
@@ -5519,6 +5538,154 @@
   shacl:closed false;
   shacl:targetClass xsd:time .
 
+<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/vlag/ontwerpdocument/DEV#VLAGAIMObjectShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/vlag/ontwerpdocument/DEV#VLAGAIMObjectShape/11850b0eba9c0b7650e3f597f5798431092be202>,
+    <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/vlag/ontwerpdocument/DEV#VLAGAIMObjectShape/1690d2862c18ee0b342b2a9af3fed293b63ec742>,
+    <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/vlag/ontwerpdocument/DEV#VLAGAIMObjectShape/191880a3a5168856de55368623a06f106c823838>,
+    <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/vlag/ontwerpdocument/DEV#VLAGAIMObjectShape/683829ff99792b54b79b4516922992d0a2ceafb7>,
+    <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/vlag/ontwerpdocument/DEV#VLAGAIMObjectShape/0f9870a572aad9584df2e1f1de0f11bf8cc59f2c>,
+    <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/vlag/ontwerpdocument/DEV#VLAGAIMObjectShape/32c38583e60a0fc7dbdf54b3139a97e7c4906f43>,
+    <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/vlag/ontwerpdocument/DEV#VLAGAIMObjectShape/e32c06232cbdfbc98b827a2f84c601b77f677dd8>,
+    <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/vlag/ontwerpdocument/DEV#VLAGAIMObjectShape/f07ba254710a96e5170c60acc205d0bc7bc195da>,
+    <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/vlag/ontwerpdocument/DEV#VLAGAIMObjectShape/2067b1ce740472fe4bb310aa64edee88364198fa>,
+    <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/vlag/ontwerpdocument/DEV#VLAGAIMObjectShape/3c282bcf073ef235e0494ab5b7e15646099928c8>,
+    <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/vlag/ontwerpdocument/DEV#VLAGAIMObjectShape/46e2bd8c98b27191218a4ec7856e8288737fcea1>,
+    <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/vlag/ontwerpdocument/DEV#VLAGAIMObjectShape/b9808e1a33cfa6045dcb2e1a1b52f6b6d7c4b0f8>,
+    <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/vlag/ontwerpdocument/DEV#VLAGAIMObjectShape/6d8619f0bed179ca86ad82d184acfa530f1c9d79>,
+    <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/vlag/ontwerpdocument/DEV#VLAGAIMObjectShape/905a6099571a00403c5cd0ee9fa9ac0161cb21c9>,
+    <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/vlag/ontwerpdocument/DEV#VLAGAIMObjectShape/a15b5e83517fb6136565b8fc0f1f08159767e808>,
+    <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/vlag/ontwerpdocument/DEV#VLAGAIMObjectShape/bc2cc6b2a7fb3784b69dcc023c33fe30fefaa0c1>;
+  shacl:targetClass <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#VLAGAIMObject> .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/vlag/ontwerpdocument/DEV#VLAGAIMObjectShape/0f9870a572aad9584df2e1f1de0f11bf8cc59f2c> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/vlag/ontwerpdocument/DEV#VLAGAIMObject%3Adatum%20oprichting%20object";
+  shacl:description "De datum waarop het object op het terrein is beginnen bestaan, bv. de datum van aanleg."@nl;
+  shacl:name "datum oprichting object"@nl;
+  shacl:nodekind "sh:Literal";
+  shacl:path <https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#AIMObject.datumOprichtingObject>;
+  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/vlag/ontwerpdocument/DEVnl> "De verwachte waarde voor datum oprichting object is een Literal"];
+  <https://data.vlaanderen.be/ns/shacl#rule> "" .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/vlag/ontwerpdocument/DEV#VLAGAIMObjectShape/11850b0eba9c0b7650e3f597f5798431092be202> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/vlag/ontwerpdocument/DEV#VLAGAIMObject%3Aasset-id";
+  shacl:description "Unieke identificatie van de asset zoals toegekend door de assetbeheerder of n.a.v. eerste aanlevering door de leverancier."@nl;
+  shacl:minCount 1;
+  shacl:name "asset-id"@nl;
+  shacl:path <https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#AIMObject.assetId>;
+  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/vlag/ontwerpdocument/DEVnl> "Minimaal 1 waarden verwacht voor asset-id"];
+  <https://data.vlaanderen.be/ns/shacl#rule> "" .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/vlag/ontwerpdocument/DEV#VLAGAIMObjectShape/1690d2862c18ee0b342b2a9af3fed293b63ec742> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/vlag/ontwerpdocument/DEV#VLAGAIMObject%3Aasset-id";
+  shacl:class <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcIdentificator>;
+  shacl:description "Unieke identificatie van de asset zoals toegekend door de assetbeheerder of n.a.v. eerste aanlevering door de leverancier."@nl;
+  shacl:name "asset-id"@nl;
+  shacl:path <https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#AIMObject.assetId>;
+  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/vlag/ontwerpdocument/DEVnl> "De range van asset-id moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcIdentificator> zijn."];
+  <https://data.vlaanderen.be/ns/shacl#rule> "" .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/vlag/ontwerpdocument/DEV#VLAGAIMObjectShape/191880a3a5168856de55368623a06f106c823838> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/vlag/ontwerpdocument/DEV#VLAGAIMObject%3Aasset-id";
+  shacl:description "Unieke identificatie van de asset zoals toegekend door de assetbeheerder of n.a.v. eerste aanlevering door de leverancier."@nl;
+  shacl:maxCount 1;
+  shacl:name "asset-id"@nl;
+  shacl:path <https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#AIMObject.assetId>;
+  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/vlag/ontwerpdocument/DEVnl> "Maximaal 1 waarden toegelaten voor asset-id"];
+  <https://data.vlaanderen.be/ns/shacl#rule> "" .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/vlag/ontwerpdocument/DEV#VLAGAIMObjectShape/2067b1ce740472fe4bb310aa64edee88364198fa> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/vlag/ontwerpdocument/DEV#VLAGAIMObject%3Anotitie";
+  shacl:description "Extra notitie voor het object."@nl;
+  shacl:maxCount 1;
+  shacl:name "notitie"@nl;
+  shacl:path <https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#AIMObject.notitie>;
+  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/vlag/ontwerpdocument/DEVnl> "Maximaal 1 waarden toegelaten voor notitie"];
+  <https://data.vlaanderen.be/ns/shacl#rule> "" .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/vlag/ontwerpdocument/DEV#VLAGAIMObjectShape/32c38583e60a0fc7dbdf54b3139a97e7c4906f43> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/vlag/ontwerpdocument/DEV#VLAGAIMObject%3Adatum%20oprichting%20object";
+  shacl:description "De datum waarop het object op het terrein is beginnen bestaan, bv. de datum van aanleg."@nl;
+  shacl:maxCount 1;
+  shacl:name "datum oprichting object"@nl;
+  shacl:path <https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#AIMObject.datumOprichtingObject>;
+  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/vlag/ontwerpdocument/DEVnl> "Maximaal 1 waarden toegelaten voor datum oprichting object"];
+  <https://data.vlaanderen.be/ns/shacl#rule> "" .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/vlag/ontwerpdocument/DEV#VLAGAIMObjectShape/3c282bcf073ef235e0494ab5b7e15646099928c8> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/vlag/ontwerpdocument/DEV#VLAGAIMObject%3Anotitie";
+  shacl:description "Extra notitie voor het object."@nl;
+  shacl:name "notitie"@nl;
+  shacl:nodekind "sh:Literal";
+  shacl:path <https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#AIMObject.notitie>;
+  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/vlag/ontwerpdocument/DEVnl> "De verwachte waarde voor notitie is een Literal"];
+  <https://data.vlaanderen.be/ns/shacl#rule> "" .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/vlag/ontwerpdocument/DEV#VLAGAIMObjectShape/46e2bd8c98b27191218a4ec7856e8288737fcea1> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/vlag/ontwerpdocument/DEV#VLAGAIMObject%3Anotitie";
+  shacl:datatype xsd:string;
+  shacl:description "Extra notitie voor het object."@nl;
+  shacl:name "notitie"@nl;
+  shacl:path <https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#AIMObject.notitie>;
+  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/vlag/ontwerpdocument/DEVnl> "De range van notitie moet van het type <http://www.w3.org/2001/XMLSchema#string> zijn."];
+  <https://data.vlaanderen.be/ns/shacl#rule> "" .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/vlag/ontwerpdocument/DEV#VLAGAIMObjectShape/683829ff99792b54b79b4516922992d0a2ceafb7> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/vlag/ontwerpdocument/DEV#VLAGAIMObject%3Aasset-id";
+  shacl:description "Unieke identificatie van de asset zoals toegekend door de assetbeheerder of n.a.v. eerste aanlevering door de leverancier."@nl;
+  shacl:name "asset-id"@nl;
+  shacl:nodekind "sh:BlankNodeOrIRI";
+  shacl:path <https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#AIMObject.assetId>;
+  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/vlag/ontwerpdocument/DEVnl> "De verwachte waarde voor asset-id is een rdfs:Resource (URI of blank node)"];
+  <https://data.vlaanderen.be/ns/shacl#rule> "" .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/vlag/ontwerpdocument/DEV#VLAGAIMObjectShape/6d8619f0bed179ca86ad82d184acfa530f1c9d79> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/vlag/ontwerpdocument/DEV#VLAGAIMObject%3Atype%20URI";
+  shacl:description "De URI van het object volgens https://www.w3.org/2001/XMLSchema#anyURI ."@nl;
+  shacl:minCount 1;
+  shacl:name "type URI"@nl;
+  shacl:path <https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#AIMObject.typeURI>;
+  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/vlag/ontwerpdocument/DEVnl> "Minimaal 1 waarden verwacht voor type URI"];
+  <https://data.vlaanderen.be/ns/shacl#rule> "" .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/vlag/ontwerpdocument/DEV#VLAGAIMObjectShape/905a6099571a00403c5cd0ee9fa9ac0161cb21c9> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/vlag/ontwerpdocument/DEV#VLAGAIMObject%3Atype%20URI";
+  shacl:description "De URI van het object volgens https://www.w3.org/2001/XMLSchema#anyURI ."@nl;
+  shacl:maxCount 1;
+  shacl:name "type URI"@nl;
+  shacl:path <https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#AIMObject.typeURI>;
+  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/vlag/ontwerpdocument/DEVnl> "Maximaal 1 waarden toegelaten voor type URI"];
+  <https://data.vlaanderen.be/ns/shacl#rule> "" .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/vlag/ontwerpdocument/DEV#VLAGAIMObjectShape/a15b5e83517fb6136565b8fc0f1f08159767e808> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/vlag/ontwerpdocument/DEV#VLAGAIMObject%3Atype%20URI";
+  shacl:description "De URI van het object volgens https://www.w3.org/2001/XMLSchema#anyURI ."@nl;
+  shacl:name "type URI"@nl;
+  shacl:nodekind "sh:BlankNodeOrIRI";
+  shacl:path <https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#AIMObject.typeURI>;
+  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/vlag/ontwerpdocument/DEVnl> "De verwachte waarde voor type URI is een rdfs:Resource (URI of blank node)"];
+  <https://data.vlaanderen.be/ns/shacl#rule> "" .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/vlag/ontwerpdocument/DEV#VLAGAIMObjectShape/b9808e1a33cfa6045dcb2e1a1b52f6b6d7c4b0f8> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/vlag/ontwerpdocument/DEV#VLAGAIMObject%3Anotitie";
+  shacl:description "Extra notitie voor het object."@nl;
+  shacl:minCount 1;
+  shacl:name "notitie"@nl;
+  shacl:path <https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#AIMObject.notitie>;
+  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/vlag/ontwerpdocument/DEVnl> "Minimaal 1 waarden verwacht voor notitie"];
+  <https://data.vlaanderen.be/ns/shacl#rule> "" .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/vlag/ontwerpdocument/DEV#VLAGAIMObjectShape/bc2cc6b2a7fb3784b69dcc023c33fe30fefaa0c1> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/vlag/ontwerpdocument/DEV#VLAGAIMObject%3Atype%20URI";
+  shacl:class xsd:anyURI;
+  shacl:description "De URI van het object volgens https://www.w3.org/2001/XMLSchema#anyURI ."@nl;
+  shacl:name "type URI"@nl;
+  shacl:path <https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#AIMObject.typeURI>;
+  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/vlag/ontwerpdocument/DEVnl> "De range van type URI moet van het type <http://www.w3.org/2001/XMLSchema#anyURI> zijn."];
+  <https://data.vlaanderen.be/ns/shacl#rule> "" .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/vlag/ontwerpdocument/DEV#VLAGAIMObjectShape/e32c06232cbdfbc98b827a2f84c601b77f677dd8> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/vlag/ontwerpdocument/DEV#VLAGAIMObject%3Adatum%20oprichting%20object";
+  shacl:description "De datum waarop het object op het terrein is beginnen bestaan, bv. de datum van aanleg."@nl;
+  shacl:minCount 1;
+  shacl:name "datum oprichting object"@nl;
+  shacl:path <https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#AIMObject.datumOprichtingObject>;
+  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/vlag/ontwerpdocument/DEVnl> "Minimaal 1 waarden verwacht voor datum oprichting object"];
+  <https://data.vlaanderen.be/ns/shacl#rule> "" .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/vlag/ontwerpdocument/DEV#VLAGAIMObjectShape/f07ba254710a96e5170c60acc205d0bc7bc195da> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/vlag/ontwerpdocument/DEV#VLAGAIMObject%3Adatum%20oprichting%20object";
+  shacl:datatype xsd:date;
+  shacl:description "De datum waarop het object op het terrein is beginnen bestaan, bv. de datum van aanleg."@nl;
+  shacl:name "datum oprichting object"@nl;
+  shacl:path <https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#AIMObject.datumOprichtingObject>;
+  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/vlag/ontwerpdocument/DEVnl> "De range van datum oprichting object moet van het type <http://www.w3.org/2001/XMLSchema#date> zijn."];
+  <https://data.vlaanderen.be/ns/shacl#rule> "" .
+
 <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/vlag/ontwerpdocument/DEV#VerkeersbordShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:property <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/vlag/ontwerpdocument/DEV#VerkeersbordShape/20457340657d8dd350917f53bcff5ae8313f4a53>,
@@ -6205,8 +6372,28 @@
   shacl:property <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/vlag/ontwerpdocument/DEV#VerkeerstekenconceptShape/665aa800dd24db39b3fd2559fa35851b9ff8631e>,
     <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/vlag/ontwerpdocument/DEV#VerkeerstekenconceptShape/94dca738457c551c48e21a35a8af8952bd9cdfc7>,
     <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/vlag/ontwerpdocument/DEV#VerkeerstekenconceptShape/7ac03908564d88b2a008f8a2645414db50696d1c>,
-    <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/vlag/ontwerpdocument/DEV#VerkeerstekenconceptShape/8c37194f82c4b711e4f737e011d310f7a286d64f>;
+    <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/vlag/ontwerpdocument/DEV#VerkeerstekenconceptShape/8c37194f82c4b711e4f737e011d310f7a286d64f>,
+    <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/vlag/ontwerpdocument/DEV#VerkeerstekenconceptShape/08d23a4a06bdfa576326951768950071d927eae0>,
+    <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/vlag/ontwerpdocument/DEV#VerkeerstekenconceptShape/40c81f33eddbbce084181a4a9d49b0987ed93de0>,
+    <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/vlag/ontwerpdocument/DEV#VerkeerstekenconceptShape/c33cdb3b66ce5690a7c0895ddcf7963f50edf0f5>,
+    <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/vlag/ontwerpdocument/DEV#VerkeerstekenconceptShape/c9e354dd274c2109f86041d7df426c0f2c86420a>;
   shacl:targetClass <https://data.vlaanderen.be/ns/mobiliteit#Verkeerstekenconcept> .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/vlag/ontwerpdocument/DEV#VerkeerstekenconceptShape/08d23a4a06bdfa576326951768950071d927eae0> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/vlag/ontwerpdocument/DEV#Verkeerstekenconcept%3Ais%20AR%20plichtig";
+  shacl:datatype xsd:boolean;
+  shacl:description "Geeft aan of een aanvullend reglement dient opgesteld en goedgekeurd te worden om een vekeersteken te plaatsen dat gebaseerd is op dit concept."@nl;
+  shacl:name "is AR plichtig"@nl;
+  shacl:path <https://data.vlaanderen.be/ns/mobiliteit#Verkeerstekenconcept.ARplichtig>;
+  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/vlag/ontwerpdocument/DEVnl> "De range van is AR plichtig moet van het type <http://www.w3.org/2001/XMLSchema#boolean> zijn."];
+  <https://data.vlaanderen.be/ns/shacl#rule> "" .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/vlag/ontwerpdocument/DEV#VerkeerstekenconceptShape/40c81f33eddbbce084181a4a9d49b0987ed93de0> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/vlag/ontwerpdocument/DEV#Verkeerstekenconcept%3Ais%20AR%20plichtig";
+  shacl:description "Geeft aan of een aanvullend reglement dient opgesteld en goedgekeurd te worden om een vekeersteken te plaatsen dat gebaseerd is op dit concept."@nl;
+  shacl:name "is AR plichtig"@nl;
+  shacl:nodekind "sh:Literal";
+  shacl:path <https://data.vlaanderen.be/ns/mobiliteit#Verkeerstekenconcept.ARplichtig>;
+  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/vlag/ontwerpdocument/DEVnl> "De verwachte waarde voor is AR plichtig is een Literal"];
+  <https://data.vlaanderen.be/ns/shacl#rule> "" .
 
 <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/vlag/ontwerpdocument/DEV#VerkeerstekenconceptShape/665aa800dd24db39b3fd2559fa35851b9ff8631e> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/vlag/ontwerpdocument/DEV#Verkeerstekenconcept%3AHeeft%20maatregelconcept";
   shacl:class <https://data.vlaanderen.be/ns/mobiliteit#Mobiliteitsmaatregelconcept>;
@@ -6236,6 +6423,22 @@
   shacl:name "Heeft maatregelconcept"@nl;
   shacl:nodekind "sh:BlankNodeOrIRI";
   <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/vlag/ontwerpdocument/DEVnl> "De verwachte waarde voor Heeft maatregelconcept is een rdfs:Resource (URI of blank node)"];
+  <https://data.vlaanderen.be/ns/shacl#rule> "" .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/vlag/ontwerpdocument/DEV#VerkeerstekenconceptShape/c33cdb3b66ce5690a7c0895ddcf7963f50edf0f5> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/vlag/ontwerpdocument/DEV#Verkeerstekenconcept%3Ais%20AR%20plichtig";
+  shacl:description "Geeft aan of een aanvullend reglement dient opgesteld en goedgekeurd te worden om een vekeersteken te plaatsen dat gebaseerd is op dit concept."@nl;
+  shacl:maxCount 1;
+  shacl:name "is AR plichtig"@nl;
+  shacl:path <https://data.vlaanderen.be/ns/mobiliteit#Verkeerstekenconcept.ARplichtig>;
+  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/vlag/ontwerpdocument/DEVnl> "Maximaal 1 waarden toegelaten voor is AR plichtig"];
+  <https://data.vlaanderen.be/ns/shacl#rule> "" .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/vlag/ontwerpdocument/DEV#VerkeerstekenconceptShape/c9e354dd274c2109f86041d7df426c0f2c86420a> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/vlag/ontwerpdocument/DEV#Verkeerstekenconcept%3Ais%20AR%20plichtig";
+  shacl:description "Geeft aan of een aanvullend reglement dient opgesteld en goedgekeurd te worden om een vekeersteken te plaatsen dat gebaseerd is op dit concept."@nl;
+  shacl:minCount 1;
+  shacl:name "is AR plichtig"@nl;
+  shacl:path <https://data.vlaanderen.be/ns/mobiliteit#Verkeerstekenconcept.ARplichtig>;
+  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/vlag/ontwerpdocument/DEVnl> "Minimaal 1 waarden verwacht voor is AR plichtig"];
   <https://data.vlaanderen.be/ns/shacl#rule> "" .
 
 <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/vlag/ontwerpdocument/DEV#VoorwaardeShape> a shacl:NodeShape;

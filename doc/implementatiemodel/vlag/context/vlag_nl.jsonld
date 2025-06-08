@@ -121,6 +121,10 @@
       "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#DtuAfmetingVerkeersbord.rond",
       "@type": "@id"
     },
+    "AfmetingVerkeersbord.ruit": {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#DtuAfmetingVerkeersbord.ruit",
+      "@type": "@id"
+    },
     "AfmetingVerkeersbord.vierhoekig": {
       "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#DtuAfmetingVerkeersbord.vierhoekig",
       "@type": "@id"
@@ -191,7 +195,7 @@
       "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMObject.typeURI",
       "@type": "@id"
     },
-    "AimToestand": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMToestand",
+    "AimToestand": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#VLAGAIMToestand",
     "AimToestand.aimToestand": {
       "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMToestand.toestand",
       "@type": "@id"
@@ -403,6 +407,7 @@
     "HeeftMobiliteitsmaatregel": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#HeeftMobiliteitsmaatregel",
     "HeeftMogelijkOnderbord": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#HeeftMogelijkOnderbord",
     "HeeftOnderbord": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#HeeftOnderbord",
+    "HeeftOntwerp": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#HeeftOntwerp",
     "HeeftVerkeersteken": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#HeeftVerkeersteken",
     "HeeftVoorwaarde": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#HeeftVoorwaarde",
     "HoortBij": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#HoortBij",
@@ -416,9 +421,11 @@
       "@type": "http://www.w3.org/2001/XMLSchema#string"
     },
     "IsOnderdeelVan": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#IsOnderdeelVan",
+    "IsOntwerpVan": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#IsOntwerpVan",
     "IsOntwerpVoor": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#IsOntwerpVoor",
     "KlCode": "http://www.w3.org/2004/02/skos/core#Concept",
     "KlTypeGrootheid": "http://www.w3.org/2004/02/skos/core#Concept",
+    "KlVariabeleWaarden": "http://www.w3.org/2004/02/skos/core#Concept",
     "KwantitatieveWaardeInMeter": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInMeter",
     "KwantitatieveWaardeInMeter.standaardEenheid": {
       "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInMeter.standaardEenheid",
@@ -601,7 +608,7 @@
       "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DteTekstblok.waarde",
       "@type": "http://www.w3.org/2001/XMLSchema#string"
     },
-    "Template": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcTemplate2",
+    "Template": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcTemplate",
     "Template.variabele": {
       "@container": "@set",
       "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcTemplate.variabele",
@@ -666,35 +673,41 @@
       "@type": "http://www.w3.org/2001/XMLSchema#date"
     },
     "Uri": "http://www.w3.org/2001/XMLSchema#anyURI",
-    "Variabele": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcVariabele2",
-    "Variabele.codelijst": {
-      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcVariabele.codelijst",
-      "@type": "@id"
-    },
-    "Variabele.label": {
-      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcVariabele.label",
-      "@type": "http://www.w3.org/2001/XMLSchema#string"
-    },
-    "Variabele.standaardWaarde": {
-      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcVariabele.standaardwaarde",
-      "@type": "http://www.w3.org/2001/XMLSchema#string"
-    },
-    "Variabele.template": {
-      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcVariabele.template",
-      "@type": "@id"
-    },
-    "Variabele.type": {
-      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcVariabele.type",
+    "Variabele": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcVariabele",
+    "Variabele.uri": {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcVariabele.uri",
       "@type": "@id"
     },
     "Variabele.waarde": {
+      "@container": "@set",
       "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcVariabele.waarde",
+      "@type": "@id"
+    },
+    "VariabeleWaarden": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcVariabeleWaarden",
+    "VariabeleWaarden.codelijst": {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcVariabeleWaarden.codelijst",
+      "@type": "@id"
+    },
+    "VariabeleWaarden.datum": {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcVariabeleWaarden.datum",
+      "@type": "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "VariabeleWaarden.getal": {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcVariabeleWaarden.getal",
+      "@type": "@id"
+    },
+    "VariabeleWaarden.tekst": {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcVariabeleWaarden.tekst",
       "@type": "http://www.w3.org/2001/XMLSchema#string"
     },
-    "VariabeleType": "http://www.w3.org/2004/02/skos/core#Concept",
     "Verkeersbord": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Verkeersbord",
     "Verkeersbord.afmeting": {
       "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Verkeersbord.afmeting",
+      "@type": "@id"
+    },
+    "Verkeersbord.isOntwerpVan": {
+      "@container": "@set",
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/vlag/#Is ontwerp van",
       "@type": "@id"
     },
     "Verkeersbord.kaartVoorstelling": {
@@ -753,6 +766,11 @@
       "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/vlag/#Heeft aanzicht",
       "@type": "@id"
     },
+    "Verkeersbordopstelling.isOntwerpVan": {
+      "@container": "@set",
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/vlag/#Is ontwerp van",
+      "@type": "@id"
+    },
     "Verkeersbordopstelling.positieTenOpzichteVanDeRijweg": {
       "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Verkeersbordopstelling.positieTovRijweg",
       "@type": "@id"
@@ -789,6 +807,11 @@
       "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/vlag/#Heeft gerelateerd verkeersteken",
       "@type": "@id"
     },
+    "Verkeersteken.heeftOntwerp": {
+      "@container": "@set",
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/vlag/#Heeft ontwerp",
+      "@type": "@id"
+    },
     "Verkeersteken.inwerkingtreding": {
       "@container": "@set",
       "@id": "https://data.vlaanderen.be/ns/mobiliteit#inwerkingstijd",
@@ -810,7 +833,7 @@
     "Verkeersteken.variabele": {
       "@container": "@set",
       "@id": "https://data.vlaanderen.be/ns/mobiliteit#Verkeersteken.variabele",
-      "@type": "http://www.w3.org/2001/XMLSchema#string"
+      "@type": "@id"
     },
     "Verkeersteken.wettelijkeStatus": {
       "@id": "https://data.vlaanderen.be/ns/mobiliteit#Verkeersteken.wettelijkeStatus",
@@ -829,10 +852,16 @@
       "@type": "@id"
     },
     "Verkeerstekenconcept.isArPlichtig": {
-      "@id": "https://data.vlaanderen.be/ns/mobiliteit#Verkeerstekenconcept.ARplichtig",
+      "@id": "https://data.vlaanderen.be/ns/mobiliteit#Verkeerstekenconcept.isARPlichtig",
       "@type": "http://www.w3.org/2001/XMLSchema#boolean"
     },
+    "Verkeerstekenconcept.variabele": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/mobiliteit#Verkeerstekenconcept.variabele",
+      "@type": "@id"
+    },
     "VerkeerstekenconceptStatus": "http://www.w3.org/2004/02/skos/core#Concept",
+    "VlagAimToestand": "http://www.w3.org/2004/02/skos/core#Concept",
     "Voorwaarde": "https://data.vlaanderen.be/ns/besluit#Voorwaarde",
     "Voorwaarde.beschrijving": {
       "@id": "http://purl.org/dc/terms/description",

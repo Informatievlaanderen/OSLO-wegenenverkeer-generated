@@ -2,19 +2,19 @@
   "metadata": {
     "title": "VLAG",
     "uri": "http://fixme.com",
-    "issued": "23-05-2025",
+    "issued": "6-06-2025",
     "filename": "vlag",
     "navigation": {
       "prev": "",
-      "self": "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/vlag/ontwerpdocument/VLAG19"
+      "self": "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/vlag/ontwerpdocument/VLAG21"
     },
     "license": "https://data.vlaanderen.be/id/licentie/modellicentie-gratis-hergebruik/v1.0",
     "documenttype": "ap",
     "documentconfig": {},
     "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard",
     "statuslabel": "Ontwerp Standaard",
-    "repositoryurl": "https://github.com/Informatievlaanderen/OSLOthema-wegenenverkeer/tree/d423c929ccf1929da9e6da0fa6b9c6951e029617",
-    "changelogurl": "https://github.com/Informatievlaanderen/OSLOthema-wegenenverkeer/blob/d423c929ccf1929da9e6da0fa6b9c6951e029617/CHANGELOG",
+    "repositoryurl": "https://github.com/Informatievlaanderen/OSLOthema-wegenenverkeer/tree/cd54f35ed58706ea9fde55910810e93065d5851c",
+    "changelogurl": "https://github.com/Informatievlaanderen/OSLOthema-wegenenverkeer/blob/cd54f35ed58706ea9fde55910810e93065d5851c/CHANGELOG",
     "feedbackurl": "https://docs.google.com/forms/d/e/1FAIpQLSeaxOnrCkcarNHWI21YfPJ7sZChHVzOB2-P9ptzxkD9YX69-g/viewform",
     "standaardregisterurl": "https://data.vlaanderen.be/standaarden/",
     "dependencies": [],
@@ -721,7 +721,7 @@
               }
             }
           ],
-          "cardinality": "1..*",
+          "cardinality": "0..*",
           "codelist_uri": ""
         },
         {
@@ -1611,7 +1611,7 @@
               }
             }
           ],
-          "cardinality": "1..*",
+          "cardinality": "0..*",
           "codelist_uri": ""
         },
         {
@@ -2133,6 +2133,41 @@
           "codelist_uri": ""
         },
         {
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/vlag/#Heeft ontwerp",
+          "name": "heeft ontwerp",
+          "sort": "Heeft ontwerp",
+          "label": {
+            "nl": "Heeft ontwerp"
+          },
+          "description": {
+            "nl": "het ontwerp waarin het verkeersteken is opgenomen."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "Verkeersteken",
+              "uri": "https://data.vlaanderen.be/ns/mobiliteit#Verkeersteken"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "OntwerpVerkeersteken",
+              "range_uri": "https://data.vlaanderen.be/ns/mobiliteit#OntwerpVerkeersteken"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Ontwerp voor verkeersteken",
+              "range_puri": "https://data.vlaanderen.be/ns/mobiliteit#OntwerpVerkeersteken",
+              "range_label": {
+                "nl": "Ontwerp voor verkeersteken"
+              }
+            }
+          ],
+          "cardinality": "0..*",
+          "codelist_uri": ""
+        },
+        {
           "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/vlag/#Heeft gerelateerd verkeersteken",
           "name": "heeft gerelateerd verkeersteken",
           "sort": "heeft gerelateerd verkeersteken",
@@ -2332,16 +2367,16 @@
           ],
           "range": [
             {
-              "range_label": "String",
-              "range_uri": "http://www.w3.org/2001/XMLSchema#string"
+              "range_label": "DtcVariabele",
+              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcVariabele"
             }
           ],
           "scopedrange": [
             {
-              "range_uri": "#String",
-              "range_puri": "http://www.w3.org/2001/XMLSchema#string",
+              "range_uri": "#Variabele",
+              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcVariabele",
               "range_label": {
-                "nl": "String"
+                "nl": "Variabele"
               }
             }
           ],
@@ -2505,6 +2540,76 @@
           "codelist_uri": ""
         },
         {
+          "uri": "https://data.vlaanderen.be/ns/mobiliteit#Verkeerstekenconcept.variabele",
+          "name": "variabele",
+          "sort": "variabele",
+          "label": {
+            "nl": "variabele"
+          },
+          "description": {
+            "nl": "TODO"
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "Verkeerstekenconcept",
+              "uri": "https://data.vlaanderen.be/ns/mobiliteit#Verkeerstekenconcept"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "DtcVariabele",
+              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcVariabele"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Variabele",
+              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcVariabele",
+              "range_label": {
+                "nl": "Variabele"
+              }
+            }
+          ],
+          "cardinality": "0..*",
+          "codelist_uri": ""
+        },
+        {
+          "uri": "https://data.vlaanderen.be/ns/mobiliteit#Verkeerstekenconcept.isARPlichtig",
+          "name": "is AR plichtig",
+          "sort": "is AR plichtig",
+          "label": {
+            "nl": "is AR plichtig"
+          },
+          "description": {
+            "nl": "Geeft aan of een aanvullend reglement dient opgesteld en goedgekeurd te worden om een vekeersteken te plaatsen dat gebaseerd is op dit concept."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "Verkeerstekenconcept",
+              "uri": "https://data.vlaanderen.be/ns/mobiliteit#Verkeerstekenconcept"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "Boolean",
+              "range_uri": "http://www.w3.org/2001/XMLSchema#boolean"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Boolean",
+              "range_puri": "http://www.w3.org/2001/XMLSchema#boolean",
+              "range_label": {
+                "nl": "Boolean"
+              }
+            }
+          ],
+          "cardinality": "1",
+          "codelist_uri": ""
+        },
+        {
           "uri": "https://data.vlaanderen.be/ns/mobiliteit#Verkeerstekenconcept.heeftInstructie",
           "name": "instructie",
           "sort": "instructie",
@@ -2537,41 +2642,6 @@
             }
           ],
           "cardinality": "0..*",
-          "codelist_uri": ""
-        },
-        {
-          "uri": "https://data.vlaanderen.be/ns/mobiliteit#Verkeerstekenconcept.ARplichtig",
-          "name": "is AR plichtig",
-          "sort": "is AR plichtig",
-          "label": {
-            "nl": "is AR plichtig"
-          },
-          "description": {
-            "nl": "Geeft aan of een aanvullend reglement dient opgesteld en goedgekeurd te worden om een vekeersteken te plaatsen dat gebaseerd is op dit concept."
-          },
-          "usage": {},
-          "domain": [
-            {
-              "EA-Name": "Verkeerstekenconcept",
-              "uri": "https://data.vlaanderen.be/ns/mobiliteit#Verkeerstekenconcept"
-            }
-          ],
-          "range": [
-            {
-              "range_label": "Boolean",
-              "range_uri": "http://www.w3.org/2001/XMLSchema#boolean"
-            }
-          ],
-          "scopedrange": [
-            {
-              "range_uri": "#Boolean",
-              "range_puri": "http://www.w3.org/2001/XMLSchema#boolean",
-              "range_label": {
-                "nl": "Boolean"
-              }
-            }
-          ],
-          "cardinality": "1",
           "codelist_uri": ""
         }
       ]
@@ -3115,6 +3185,41 @@
             }
           ],
           "cardinality": "1",
+          "codelist_uri": ""
+        },
+        {
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/vlag/#Is ontwerp van",
+          "name": "is ontwerp van",
+          "sort": "Is ontwerp van",
+          "label": {
+            "nl": "Is ontwerp van"
+          },
+          "description": {
+            "nl": "TODO"
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "Verkeersbord",
+              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Verkeersbord"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "Verkeersbord",
+              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Verkeersbord"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Verkeersbord",
+              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Verkeersbord",
+              "range_label": {
+                "nl": "Verkeersbord"
+              }
+            }
+          ],
+          "cardinality": "",
           "codelist_uri": ""
         }
       ]
@@ -3678,9 +3783,9 @@
       "parents": [
         {
           "label": "AIM Toestand",
-          "name": "AIMToestand",
+          "name": "VLAGAIMToestand",
           "package": "OSLO-Implementatieelement",
-          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMToestand",
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#VLAGAIMToestand",
           "scoped_uri": "#AIM Toestand"
         },
         {
@@ -3838,6 +3943,126 @@
           ],
           "cardinality": "1",
           "codelist_uri": ""
+        },
+        {
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/vlag/#heeft betrokkene",
+          "name": "heeft betrokkene",
+          "sort": "heeft betrokkene",
+          "label": {
+            "nl": "heeft betrokkene"
+          },
+          "description": {
+            "nl": "Koppelt een natuurlijk persoon,rechtspersoon of een hoedanigheid (een functie eerder dan de persoon die de functie uitoefent) aan een object in een bepaalde rol."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "VLAGAIMObject",
+              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#VLAGAIMObject"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "Agent",
+              "range_uri": "http://purl.org/dc/terms/Agent"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Agent",
+              "range_puri": "http://purl.org/dc/terms/Agent",
+              "range_label": {
+                "nl": "Agent"
+              }
+            }
+          ],
+          "cardinality": "",
+          "codelist_uri": ""
+        },
+        {
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/vlag/#HeeftBijlage",
+          "name": "heeftBijlage",
+          "sort": "HeeftBijlage",
+          "label": {
+            "nl": "HeeftBijlage"
+          },
+          "description": {
+            "nl": "Deze relatie legt een link tussen een object/onderdeel/installatie en een (bestands)bijlage. De richting loopt vanuit het fysiek object naar de bijlage."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "VLAGAIMObject",
+              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#VLAGAIMObject"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "Bijlage",
+              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Bijlage"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Bijlage",
+              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Bijlage",
+              "range_label": {
+                "nl": "Bijlage"
+              }
+            }
+          ],
+          "cardinality": "",
+          "codelist_uri": ""
+        }
+      ]
+    },
+    {
+      "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#VLAGAIMToestand",
+      "name": "AIM Toestand",
+      "label": {
+        "nl": "AIM Toestand"
+      },
+      "sort": "AIM Toestand",
+      "description": {
+        "nl": "Voegt een attribuut toe aan de subklasse dat de huidige stand in de levenscyclus van het object aangeeft."
+      },
+      "usage": {},
+      "parents": [],
+      "properties": [
+        {
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#VLAGAIMToestand.toestand",
+          "name": "AIM-toestand",
+          "sort": "AIM-toestand",
+          "label": {
+            "nl": "AIM-toestand"
+          },
+          "description": {
+            "nl": "Geeft de actuele stand in de levenscyclus van het VLAG object."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "VLAGAIMToestand",
+              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#VLAGAIMToestand"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "KlVLAGAIMToestand",
+              "range_uri": "http://www.w3.org/2004/02/skos/core#Concept"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#VLAG AIM toestand",
+              "range_puri": "http://www.w3.org/2004/02/skos/core#Concept",
+              "range_label": {
+                "nl": "VLAG AIM toestand"
+              }
+            }
+          ],
+          "cardinality": "1",
+          "codelist_uri": "https://wegenenverkeer-test.data.vlaanderen.be/id/conceptscheme/KlVLAGAIMToestand"
         }
       ]
     },
@@ -4107,6 +4332,41 @@
           ],
           "cardinality": "1",
           "codelist_uri": "https://wegenenverkeer-test.data.vlaanderen.be/id/conceptscheme/KlPositieSoort"
+        },
+        {
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/vlag/#Is ontwerp van",
+          "name": "is ontwerp van",
+          "sort": "Is ontwerp van",
+          "label": {
+            "nl": "Is ontwerp van"
+          },
+          "description": {
+            "nl": "TODO"
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "Verkeersbordopstelling",
+              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Verkeersbordopstelling"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "Verkeersbordopstelling",
+              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Verkeersbordopstelling"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Verkeersbordopstelling",
+              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Verkeersbordopstelling",
+              "range_label": {
+                "nl": "Verkeersbordopstelling"
+              }
+            }
+          ],
+          "cardinality": "",
+          "codelist_uri": ""
         },
         {
           "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/vlag/#Heeft aanzicht",
@@ -4585,6 +4845,28 @@
       "properties": []
     },
     {
+      "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#HeeftOntwerp",
+      "name": "Heeft ontwerp",
+      "label": {
+        "nl": "Heeft ontwerp"
+      },
+      "sort": "Heeft ontwerp",
+      "description": {
+        "nl": "het ontwerp waarin het verkeersteken is opgenomen."
+      },
+      "usage": {},
+      "parents": [
+        {
+          "label": "Directionele relatie",
+          "name": "DirectioneleRelatie",
+          "package": "OSLO-Implementatieelement",
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DirectioneleRelatie",
+          "scoped_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DirectioneleRelatie"
+        }
+      ],
+      "properties": []
+    },
+    {
       "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#HeeftVerkeersteken",
       "name": "Heeft verkeersteken",
       "label": {
@@ -4679,6 +4961,28 @@
       "sort": "Is onderdeel van",
       "description": {
         "nl": "Het besluit waarvan het artikel een onderdeel is."
+      },
+      "usage": {},
+      "parents": [
+        {
+          "label": "Directionele relatie",
+          "name": "DirectioneleRelatie",
+          "package": "OSLO-Implementatieelement",
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DirectioneleRelatie",
+          "scoped_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DirectioneleRelatie"
+        }
+      ],
+      "properties": []
+    },
+    {
+      "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#IsOntwerpVan",
+      "name": "Is ontwerp van",
+      "label": {
+        "nl": "Is ontwerp van"
+      },
+      "sort": "Is ontwerp van",
+      "description": {
+        "nl": "TODO"
       },
       "usage": {},
       "parents": [
@@ -8979,176 +9283,6 @@
       ]
     },
     {
-      "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcTemplate1",
-      "name": "Template",
-      "label": {
-        "nl": "Template"
-      },
-      "sort": "Template",
-      "description": {
-        "nl": "TODO"
-      },
-      "usage": {},
-      "parents": [],
-      "properties": [
-        {
-          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcTemplate1.variabele",
-          "name": "variabele",
-          "sort": "variabele",
-          "label": {
-            "nl": "variabele"
-          },
-          "description": {
-            "nl": "TODO"
-          },
-          "usage": {},
-          "domain": [
-            {
-              "EA-Name": "DtcTemplate1",
-              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcTemplate1"
-            }
-          ],
-          "range": [
-            {
-              "range_label": "DtcVariabele1",
-              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcVariabele1"
-            }
-          ],
-          "scopedrange": [
-            {
-              "range_uri": "#Variabele",
-              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcVariabele1",
-              "range_label": {
-                "nl": "Variabele"
-              }
-            }
-          ],
-          "cardinality": "0..*",
-          "codelist_uri": ""
-        },
-        {
-          "uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#value",
-          "name": "waarde",
-          "sort": "waarde",
-          "label": {
-            "nl": "waarde"
-          },
-          "description": {
-            "nl": "De inhoud van de template als HTML of gewone string."
-          },
-          "usage": {},
-          "domain": [
-            {
-              "EA-Name": "DtcTemplate1",
-              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcTemplate1"
-            }
-          ],
-          "range": [
-            {
-              "range_label": "String",
-              "range_uri": "http://www.w3.org/2001/XMLSchema#string"
-            }
-          ],
-          "scopedrange": [
-            {
-              "range_uri": "#String",
-              "range_puri": "http://www.w3.org/2001/XMLSchema#string",
-              "range_label": {
-                "nl": "String"
-              }
-            }
-          ],
-          "cardinality": "1",
-          "codelist_uri": ""
-        }
-      ]
-    },
-    {
-      "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcTemplate2",
-      "name": "Template",
-      "label": {
-        "nl": "Template"
-      },
-      "sort": "Template",
-      "description": {
-        "nl": "TODO"
-      },
-      "usage": {},
-      "parents": [],
-      "properties": [
-        {
-          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcTemplate2.variabele",
-          "name": "variabele",
-          "sort": "variabele",
-          "label": {
-            "nl": "variabele"
-          },
-          "description": {
-            "nl": "TODO"
-          },
-          "usage": {},
-          "domain": [
-            {
-              "EA-Name": "DtcTemplate2",
-              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcTemplate2"
-            }
-          ],
-          "range": [
-            {
-              "range_label": "DtcVariabele2",
-              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcVariabele2"
-            }
-          ],
-          "scopedrange": [
-            {
-              "range_uri": "#Variabele",
-              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcVariabele2",
-              "range_label": {
-                "nl": "Variabele"
-              }
-            }
-          ],
-          "cardinality": "0..*",
-          "codelist_uri": ""
-        },
-        {
-          "uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#value",
-          "name": "waarde",
-          "sort": "waarde",
-          "label": {
-            "nl": "waarde"
-          },
-          "description": {
-            "nl": "De inhoud van de template als HTML of gewone string."
-          },
-          "usage": {},
-          "domain": [
-            {
-              "EA-Name": "DtcTemplate2",
-              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcTemplate2"
-            }
-          ],
-          "range": [
-            {
-              "range_label": "String",
-              "range_uri": "http://www.w3.org/2001/XMLSchema#string"
-            }
-          ],
-          "scopedrange": [
-            {
-              "range_uri": "#String",
-              "range_puri": "http://www.w3.org/2001/XMLSchema#string",
-              "range_label": {
-                "nl": "String"
-              }
-            }
-          ],
-          "cardinality": "1",
-          "codelist_uri": ""
-        }
-      ]
-    },
-    {
       "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcVariabele",
       "name": "Variabele",
       "label": {
@@ -9156,7 +9290,7 @@
       },
       "sort": "Variabele",
       "description": {
-        "nl": "TODO"
+        "nl": "Complex datatype die de variabele bevat."
       },
       "usage": {},
       "parents": [],
@@ -9169,11 +9303,9 @@
             "nl": "waarde"
           },
           "description": {
-            "nl": "TODO"
+            "nl": "De waarde van de variabele (getal, tekst, optie uit codelijst of datum)."
           },
-          "usage": {
-            "nl": "http://www.w3.org/2000/01/rdf-schema#value"
-          },
+          "usage": {},
           "domain": [
             {
               "EA-Name": "DtcVariabele",
@@ -9182,65 +9314,28 @@
           ],
           "range": [
             {
-              "range_label": "String",
-              "range_uri": "http://www.w3.org/2001/XMLSchema#string"
+              "range_label": "DtcVariabeleWaarden",
+              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcVariabeleWaarden"
             }
           ],
           "scopedrange": [
             {
-              "range_uri": "#String",
-              "range_puri": "http://www.w3.org/2001/XMLSchema#string",
+              "range_uri": "#Variabele waarden",
+              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcVariabeleWaarden",
               "range_label": {
-                "nl": "String"
+                "nl": "Variabele waarden"
               }
             }
           ],
-          "cardinality": "1",
+          "cardinality": "1..*",
           "codelist_uri": ""
         },
         {
-          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcVariabele.type",
-          "name": "type",
-          "sort": "type",
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcVariabele.uri",
+          "name": "uri",
+          "sort": "uri",
           "label": {
-            "nl": "type"
-          },
-          "description": {
-            "nl": "TODO"
-          },
-          "usage": {
-            "nl": "http://purl.org/dc/terms/type"
-          },
-          "domain": [
-            {
-              "EA-Name": "DtcVariabele",
-              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcVariabele"
-            }
-          ],
-          "range": [
-            {
-              "range_label": "KlVariabeleType",
-              "range_uri": "http://www.w3.org/2004/02/skos/core#Concept"
-            }
-          ],
-          "scopedrange": [
-            {
-              "range_uri": "#Variabele type",
-              "range_puri": "http://www.w3.org/2004/02/skos/core#Concept",
-              "range_label": {
-                "nl": "Variabele type"
-              }
-            }
-          ],
-          "cardinality": "1",
-          "codelist_uri": "https://wegenenverkeer-test.data.vlaanderen.be/id/conceptscheme/KlVariabeleType"
-        },
-        {
-          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcVariabele.template",
-          "name": "template",
-          "sort": "template",
-          "label": {
-            "nl": "template"
+            "nl": "uri"
           },
           "description": {
             "nl": "TODO"
@@ -9254,123 +9349,16 @@
           ],
           "range": [
             {
-              "range_label": "DtcTemplate1",
-              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcTemplate1"
+              "range_label": "AnyURI",
+              "range_uri": "http://www.w3.org/2001/XMLSchema#anyURI"
             }
           ],
           "scopedrange": [
             {
-              "range_uri": "#Template",
-              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcTemplate1",
+              "range_uri": "#URI",
+              "range_puri": "http://www.w3.org/2001/XMLSchema#anyURI",
               "range_label": {
-                "nl": "Template"
-              }
-            }
-          ],
-          "cardinality": "1",
-          "codelist_uri": ""
-        },
-        {
-          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcVariabele.standaardwaarde",
-          "name": "standaard waarde",
-          "sort": "standaard waarde",
-          "label": {
-            "nl": "standaard waarde"
-          },
-          "description": {
-            "nl": "TODO"
-          },
-          "usage": {},
-          "domain": [
-            {
-              "EA-Name": "DtcVariabele",
-              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcVariabele"
-            }
-          ],
-          "range": [
-            {
-              "range_label": "String",
-              "range_uri": "http://www.w3.org/2001/XMLSchema#string"
-            }
-          ],
-          "scopedrange": [
-            {
-              "range_uri": "#String",
-              "range_puri": "http://www.w3.org/2001/XMLSchema#string",
-              "range_label": {
-                "nl": "String"
-              }
-            }
-          ],
-          "cardinality": "1",
-          "codelist_uri": ""
-        },
-        {
-          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcVariabele.label",
-          "name": "label",
-          "sort": "label",
-          "label": {
-            "nl": "label"
-          },
-          "description": {
-            "nl": "TODO"
-          },
-          "usage": {
-            "nl": "http://purl.org/dc/terms/title"
-          },
-          "domain": [
-            {
-              "EA-Name": "DtcVariabele",
-              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcVariabele"
-            }
-          ],
-          "range": [
-            {
-              "range_label": "String",
-              "range_uri": "http://www.w3.org/2001/XMLSchema#string"
-            }
-          ],
-          "scopedrange": [
-            {
-              "range_uri": "#String",
-              "range_puri": "http://www.w3.org/2001/XMLSchema#string",
-              "range_label": {
-                "nl": "String"
-              }
-            }
-          ],
-          "cardinality": "1",
-          "codelist_uri": ""
-        },
-        {
-          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcVariabele.codelijst",
-          "name": "codelijst",
-          "sort": "codelijst",
-          "label": {
-            "nl": "codelijst"
-          },
-          "description": {
-            "nl": "TODO"
-          },
-          "usage": {},
-          "domain": [
-            {
-              "EA-Name": "DtcVariabele",
-              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcVariabele"
-            }
-          ],
-          "range": [
-            {
-              "range_label": "DtcCodelijst",
-              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcCodelijst"
-            }
-          ],
-          "scopedrange": [
-            {
-              "range_uri": "#Codelijst",
-              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcCodelijst",
-              "range_label": {
-                "nl": "Codelijst"
+                "nl": "URI"
               }
             }
           ],
@@ -9380,336 +9368,33 @@
       ]
     },
     {
-      "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcVariabele1",
-      "name": "Variabele",
+      "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcVariabeleWaarden",
+      "name": "Variabele waarden",
       "label": {
-        "nl": "Variabele"
+        "nl": "Variabele waarden"
       },
-      "sort": "Variabele",
-      "description": {},
-      "usage": {},
-      "parents": [],
-      "properties": [
-        {
-          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcVariabele1.waarde",
-          "name": "waarde",
-          "sort": "waarde",
-          "label": {
-            "nl": "waarde"
-          },
-          "description": {
-            "nl": "TODO"
-          },
-          "usage": {
-            "nl": "http://www.w3.org/2000/01/rdf-schema#value"
-          },
-          "domain": [
-            {
-              "EA-Name": "DtcVariabele1",
-              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcVariabele1"
-            }
-          ],
-          "range": [
-            {
-              "range_label": "String",
-              "range_uri": "http://www.w3.org/2001/XMLSchema#string"
-            }
-          ],
-          "scopedrange": [
-            {
-              "range_uri": "#String",
-              "range_puri": "http://www.w3.org/2001/XMLSchema#string",
-              "range_label": {
-                "nl": "String"
-              }
-            }
-          ],
-          "cardinality": "1",
-          "codelist_uri": ""
-        },
-        {
-          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcVariabele1.type",
-          "name": "type",
-          "sort": "type",
-          "label": {
-            "nl": "type"
-          },
-          "description": {
-            "nl": "TODO"
-          },
-          "usage": {
-            "nl": "http://purl.org/dc/terms/type"
-          },
-          "domain": [
-            {
-              "EA-Name": "DtcVariabele1",
-              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcVariabele1"
-            }
-          ],
-          "range": [
-            {
-              "range_label": "KlVariabeleType",
-              "range_uri": "http://www.w3.org/2004/02/skos/core#Concept"
-            }
-          ],
-          "scopedrange": [
-            {
-              "range_uri": "#Variabele type",
-              "range_puri": "http://www.w3.org/2004/02/skos/core#Concept",
-              "range_label": {
-                "nl": "Variabele type"
-              }
-            }
-          ],
-          "cardinality": "1",
-          "codelist_uri": "https://wegenenverkeer-test.data.vlaanderen.be/id/conceptscheme/KlVariabeleType"
-        },
-        {
-          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcVariabele1.template",
-          "name": "template",
-          "sort": "template",
-          "label": {
-            "nl": "template"
-          },
-          "description": {
-            "nl": "TODO"
-          },
-          "usage": {},
-          "domain": [
-            {
-              "EA-Name": "DtcVariabele1",
-              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcVariabele1"
-            }
-          ],
-          "range": [
-            {
-              "range_label": "DtcTemplate2",
-              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcTemplate2"
-            }
-          ],
-          "scopedrange": [
-            {
-              "range_uri": "#Template",
-              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcTemplate2",
-              "range_label": {
-                "nl": "Template"
-              }
-            }
-          ],
-          "cardinality": "1",
-          "codelist_uri": ""
-        },
-        {
-          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcVariabele1.standaardwaarde",
-          "name": "standaard waarde",
-          "sort": "standaard waarde",
-          "label": {
-            "nl": "standaard waarde"
-          },
-          "description": {
-            "nl": "TODO"
-          },
-          "usage": {},
-          "domain": [
-            {
-              "EA-Name": "DtcVariabele1",
-              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcVariabele1"
-            }
-          ],
-          "range": [
-            {
-              "range_label": "String",
-              "range_uri": "http://www.w3.org/2001/XMLSchema#string"
-            }
-          ],
-          "scopedrange": [
-            {
-              "range_uri": "#String",
-              "range_puri": "http://www.w3.org/2001/XMLSchema#string",
-              "range_label": {
-                "nl": "String"
-              }
-            }
-          ],
-          "cardinality": "1",
-          "codelist_uri": ""
-        },
-        {
-          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcVariabele1.label",
-          "name": "label",
-          "sort": "label",
-          "label": {
-            "nl": "label"
-          },
-          "description": {
-            "nl": "TODO"
-          },
-          "usage": {
-            "nl": "http://purl.org/dc/terms/title"
-          },
-          "domain": [
-            {
-              "EA-Name": "DtcVariabele1",
-              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcVariabele1"
-            }
-          ],
-          "range": [
-            {
-              "range_label": "String",
-              "range_uri": "http://www.w3.org/2001/XMLSchema#string"
-            }
-          ],
-          "scopedrange": [
-            {
-              "range_uri": "#String",
-              "range_puri": "http://www.w3.org/2001/XMLSchema#string",
-              "range_label": {
-                "nl": "String"
-              }
-            }
-          ],
-          "cardinality": "1",
-          "codelist_uri": ""
-        },
-        {
-          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcVariabele1.codelijst",
-          "name": "codelijst",
-          "sort": "codelijst",
-          "label": {
-            "nl": "codelijst"
-          },
-          "description": {
-            "nl": "TODO"
-          },
-          "usage": {},
-          "domain": [
-            {
-              "EA-Name": "DtcVariabele1",
-              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcVariabele1"
-            }
-          ],
-          "range": [
-            {
-              "range_label": "DtcCodelijst",
-              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcCodelijst"
-            }
-          ],
-          "scopedrange": [
-            {
-              "range_uri": "#Codelijst",
-              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcCodelijst",
-              "range_label": {
-                "nl": "Codelijst"
-              }
-            }
-          ],
-          "cardinality": "1",
-          "codelist_uri": ""
-        }
-      ]
-    },
-    {
-      "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcVariabele2",
-      "name": "Variabele",
-      "label": {
-        "nl": "Variabele"
-      },
-      "sort": "Variabele",
+      "sort": "Variabele waarden",
       "description": {
-        "nl": "TODO"
+        "nl": "Complex datatype die de variabele waarden definieert."
       },
       "usage": {},
       "parents": [],
       "properties": [
         {
-          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcVariabele2.waarde",
-          "name": "waarde",
-          "sort": "waarde",
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcVariabeleWaarden.tekst",
+          "name": "tekst",
+          "sort": "tekst",
           "label": {
-            "nl": "waarde"
+            "nl": "tekst"
           },
           "description": {
-            "nl": "TODO"
-          },
-          "usage": {
-            "nl": "http://www.w3.org/2000/01/rdf-schema#value"
-          },
-          "domain": [
-            {
-              "EA-Name": "DtcVariabele2",
-              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcVariabele2"
-            }
-          ],
-          "range": [
-            {
-              "range_label": "String",
-              "range_uri": "http://www.w3.org/2001/XMLSchema#string"
-            }
-          ],
-          "scopedrange": [
-            {
-              "range_uri": "#String",
-              "range_puri": "http://www.w3.org/2001/XMLSchema#string",
-              "range_label": {
-                "nl": "String"
-              }
-            }
-          ],
-          "cardinality": "1",
-          "codelist_uri": ""
-        },
-        {
-          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcVariabele2.type",
-          "name": "type",
-          "sort": "type",
-          "label": {
-            "nl": "type"
-          },
-          "description": {
-            "nl": "TODO"
-          },
-          "usage": {
-            "nl": "http://purl.org/dc/terms/type"
-          },
-          "domain": [
-            {
-              "EA-Name": "DtcVariabele2",
-              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcVariabele2"
-            }
-          ],
-          "range": [
-            {
-              "range_label": "KlVariabeleType",
-              "range_uri": "http://www.w3.org/2004/02/skos/core#Concept"
-            }
-          ],
-          "scopedrange": [
-            {
-              "range_uri": "#Variabele type",
-              "range_puri": "http://www.w3.org/2004/02/skos/core#Concept",
-              "range_label": {
-                "nl": "Variabele type"
-              }
-            }
-          ],
-          "cardinality": "1",
-          "codelist_uri": "https://wegenenverkeer-test.data.vlaanderen.be/id/conceptscheme/KlVariabeleType"
-        },
-        {
-          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcVariabele2.template",
-          "name": "template",
-          "sort": "template",
-          "label": {
-            "nl": "template"
-          },
-          "description": {
-            "nl": "TODO"
+            "nl": "Bevat de waarde als tekst."
           },
           "usage": {},
           "domain": [
             {
-              "EA-Name": "DtcVariabele2",
-              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcVariabele2"
+              "EA-Name": "DtcVariabeleWaarden",
+              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcVariabeleWaarden"
             }
           ],
           "range": [
@@ -9731,34 +9416,34 @@
           "codelist_uri": ""
         },
         {
-          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcVariabele2.standaardwaarde",
-          "name": "standaard waarde",
-          "sort": "standaard waarde",
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcVariabeleWaarden.getal",
+          "name": "getal",
+          "sort": "getal",
           "label": {
-            "nl": "standaard waarde"
+            "nl": "getal"
           },
           "description": {
-            "nl": "TODO"
+            "nl": "Bevat de waarde als getal."
           },
           "usage": {},
           "domain": [
             {
-              "EA-Name": "DtcVariabele2",
-              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcVariabele2"
+              "EA-Name": "DtcVariabeleWaarden",
+              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcVariabeleWaarden"
             }
           ],
           "range": [
             {
-              "range_label": "String",
-              "range_uri": "http://www.w3.org/2001/XMLSchema#string"
+              "range_label": "Decimal",
+              "range_uri": "http://www.w3.org/2001/XMLSchema#decimal"
             }
           ],
           "scopedrange": [
             {
-              "range_uri": "#String",
-              "range_puri": "http://www.w3.org/2001/XMLSchema#string",
+              "range_uri": "#Decimaal getal",
+              "range_puri": "http://www.w3.org/2001/XMLSchema#decimal",
               "range_label": {
-                "nl": "String"
+                "nl": "Decimaal getal"
               }
             }
           ],
@@ -9766,36 +9451,34 @@
           "codelist_uri": ""
         },
         {
-          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcVariabele2.label",
-          "name": "label",
-          "sort": "label",
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcVariabeleWaarden.datum",
+          "name": "datum",
+          "sort": "datum",
           "label": {
-            "nl": "label"
+            "nl": "datum"
           },
           "description": {
-            "nl": "TODO"
+            "nl": "Bevat de waarde als datum."
           },
-          "usage": {
-            "nl": "http://purl.org/dc/terms/title"
-          },
+          "usage": {},
           "domain": [
             {
-              "EA-Name": "DtcVariabele2",
-              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcVariabele2"
+              "EA-Name": "DtcVariabeleWaarden",
+              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcVariabeleWaarden"
             }
           ],
           "range": [
             {
-              "range_label": "String",
-              "range_uri": "http://www.w3.org/2001/XMLSchema#string"
+              "range_label": "Date",
+              "range_uri": "http://www.w3.org/2001/XMLSchema#date"
             }
           ],
           "scopedrange": [
             {
-              "range_uri": "#String",
-              "range_puri": "http://www.w3.org/2001/XMLSchema#string",
+              "range_uri": "#Datum",
+              "range_puri": "http://www.w3.org/2001/XMLSchema#date",
               "range_label": {
-                "nl": "String"
+                "nl": "Datum"
               }
             }
           ],
@@ -9803,39 +9486,39 @@
           "codelist_uri": ""
         },
         {
-          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcVariabele2.codelijst",
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcVariabeleWaarden.codelijst",
           "name": "codelijst",
           "sort": "codelijst",
           "label": {
             "nl": "codelijst"
           },
           "description": {
-            "nl": "TODO"
+            "nl": "Bevat een optie uit de codelijst."
           },
           "usage": {},
           "domain": [
             {
-              "EA-Name": "DtcVariabele2",
-              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcVariabele2"
+              "EA-Name": "DtcVariabeleWaarden",
+              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcVariabeleWaarden"
             }
           ],
           "range": [
             {
-              "range_label": "DtcCodelijst",
-              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcCodelijst"
+              "range_label": "KlVariabeleWaarden",
+              "range_uri": "http://www.w3.org/2004/02/skos/core#Concept"
             }
           ],
           "scopedrange": [
             {
-              "range_uri": "#Codelijst",
-              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcCodelijst",
+              "range_uri": "#KlVariabeleWaarden",
+              "range_puri": "http://www.w3.org/2004/02/skos/core#Concept",
               "range_label": {
-                "nl": "Codelijst"
+                "nl": "KlVariabeleWaarden"
               }
             }
           ],
           "cardinality": "1",
-          "codelist_uri": ""
+          "codelist_uri": "https://wegenenverkeer-test.data.vlaanderen.be/id/conceptscheme/KlVariabeleWaarden"
         }
       ]
     },
@@ -10410,6 +10093,41 @@
           "codelist_uri": ""
         },
         {
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#DtuAfmetingVerkeersbord.ruit",
+          "name": "ruit",
+          "sort": "ruit",
+          "label": {
+            "nl": "ruit"
+          },
+          "description": {
+            "nl": "De afmeting voor een ruitvormig verkeersbord (zijde in millimeter)."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "DtuAfmetingVerkeersbord",
+              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#DtuAfmetingVerkeersbord"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "DtcAfmetingZijdeInMm",
+              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcAfmetingZijdeInMm"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Afmeting zijde in millimeter",
+              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcAfmetingZijdeInMm",
+              "range_label": {
+                "nl": "Afmeting zijde in millimeter"
+              }
+            }
+          ],
+          "cardinality": "1",
+          "codelist_uri": ""
+        },
+        {
           "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#DtuAfmetingVerkeersbord.rond",
           "name": "rond",
           "sort": "rond",
@@ -10518,5 +10236,5 @@
     }
   ],
   "parents": [],
-  "documentroot": "/doc/implementatiemodel/vlag/ontwerpdocument/VLAG19"
+  "documentroot": "/doc/implementatiemodel/vlag/ontwerpdocument/VLAG21"
 }

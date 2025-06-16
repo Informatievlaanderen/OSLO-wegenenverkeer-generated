@@ -16,24 +16,25 @@ skos:Concept a rdfs:Class;
     "Type vakwerk-element"@nl,
     "Type brugligger"@nl,
     "Type windverband"@nl,
-    "Type horizontale plaat"@nl,
-    "Type hanger"@nl,
     "Primaire vorm combiwand"@nl,
     "Secundaire combiwand"@nl,
     "Type externe naspanning"@nl,
     "Materiaal tussenschot Berlinerwand"@nl,
+    "Type horizontale plaat"@nl,
+    "Type hanger"@nl,
     "Vorm leuning"@nl,
     "Type brandwerendheid"@nl,
     "Koker type fundering"@nl,
     "Afwerkingstype leuning"@nl,
     "type bouwmethode"@nl,
-    "Graad van statische bepaaldheid"@nl,
-    "Type brugdeel"@nl,
-    "Type trekker"@nl,
-    "Vast tegengewicht materiaal"@nl,
     "Type ondergrond"@nl,
     "Koker element gebruikers type"@nl,
     "Type materiaal"@nl,
+    "Graad van statische bepaaldheid"@nl,
+    "Type brugdeel"@nl,
+    "type doorsnede"@nl,
+    "Type trekker"@nl,
+    "Vast tegengewicht materiaal"@nl,
     "Regelbaar tegengewicht materiaal"@nl,
     "Type beweegbaar brugdeel"@nl,
     "graad van beweegbaarheid"@nl,
@@ -46,11 +47,11 @@ skos:Concept a rdfs:Class;
     "Keuzelijst materiaal loopvloer"@nl,
     "Beweegbaar deel"@nl,
     "Draagstructuur BWCTWC"@nl,
-    "type beweging"@nl,
-    "Materiaal BWC TWC"@nl,
     "Droogzetbaarheidtypes"@nl,
     "Positie kolk"@nl,
     "Types geleidewerk"@nl,
+    "type beweging"@nl,
+    "Materiaal BWC TWC"@nl,
     "Keuzelijst materiaal toegangsluik"@nl,
     "Type tijdelijke waterkerende constructie"@nl,
     "Keuzelijst droogzetbaarheid omloopriool"@nl,
@@ -58,23 +59,24 @@ skos:Concept a rdfs:Class;
     "Type van aardingsinstallatie"@nl,
     "Aardingsinstallatie aardingsnet"@nl,
     "Aardingsinstallatie aardingsstelsel"@nl,
+    "Type mechanisme"@nl,
+    "Pompgroep merk"@nl,
+    "Pompgroep modelnaam"@nl,
+    "Materiaal ventilatiekanaal"@nl,
+    "Kamer functie"@nl,
     "Meteo foto beschrijving"@nl,
     "Lokaal terreintype"@nl,
     "Z-pad type"@nl,
     "Pad netwerkprotectie"@nl,
-    "Pompgroep merk"@nl,
-    "Pompgroep modelnaam"@nl,
-    "Materiaal ventilatiekanaal"@nl,
-    "MIV eenheid type"@nl,
-    "Kamer functie"@nl,
     "Radioheruitzendinstallatie modelnaam"@nl,
     "Radioheruitzendinstallatie merk"@nl,
+    "MIV eenheid type"@nl,
     "MIV meetpuntgebied"@nl,
     "MIV meetpunt afmetingen"@nl,
     "Algemeen rijstrookcode"@nl,
-    "Wegberm type"@nl,
     "Type aanvaarbescherming"@nl,
-    "Wegberm BIO"@nl .
+    "Wegberm BIO"@nl,
+    "Wegberm type"@nl .
 
 <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#ASTRIDInstallatie.certificaat> a owl:ObjectProperty;
   rdfs:comment "Documenten van interne of externe organisaties, die de installatie goedkeuren of opmerkingen geven."@nl;
@@ -185,6 +187,12 @@ skos:Concept a rdfs:Class;
   rdfs:comment "Onderdeel van een balans. Er kunnen één of meerdere balansarmen aanwezig zijn. Het is typisch een lange, horizontale arm die aan lastzijde via een trekker verbonden is met het beweegbare brugdeel ('het val' of ook 'de klap') en aan machtzijde het gebruik van tegengewicht mogelijk maakt."@nl;
   rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
   rdfs:subClassOf <https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#ConstructiefObject> .
+
+<https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Balgmechanisme> a owl:Class;
+  rdfs:comment "Een mechanisme dat de beweegbare waterkerende constructie van een balgstuw beweegt door middel van lucht en/of waterdruk."@nl;
+  rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
+  rdfs:subClassOf <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMObject>,
+    <https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#Bewegingsmechanisme> .
 
 <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Balk.typeBalk> a owl:ObjectProperty;
   rdfs:comment "De soort van balk."@nl;
@@ -351,6 +359,24 @@ skos:Concept a rdfs:Class;
   rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
   rdfs:subClassOf <https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#ConstructiefObject> .
 
+<https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Bovenrolwagen.gewicht> a owl:ObjectProperty;
+  rdfs:comment "Het gewicht van de wagen, uitgedrukt in kilogram."@nl;
+  rdfs:domain <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Bovenrolwagen>;
+  rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
+  rdfs:range <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInTon> .
+
+<https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Bovenrolwagen.heeftDeksel> a owl:DatatypeProperty;
+  rdfs:comment "Geeft aan of de bovenrolwagen een deksel heeft of niet."@nl;
+  rdfs:domain <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Bovenrolwagen>;
+  rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
+  rdfs:range xsd:boolean .
+
+<https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Bovenrolwagen.heeftHijsogen> a owl:DatatypeProperty;
+  rdfs:comment "Geeft aan of de bovenrolwagen hijsogen heeft of niet."@nl;
+  rdfs:domain <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Bovenrolwagen>;
+  rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
+  rdfs:range xsd:boolean .
+
 <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Breekbalk.isDemonteerbaar> a owl:DatatypeProperty;
   rdfs:comment "Geeft aan of de breekbalk demonteerbaar is."@nl;
   rdfs:domain <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Breekbalk>;
@@ -475,6 +501,12 @@ skos:Concept a rdfs:Class;
   rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
   rdfs:subClassOf <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMNaamObject> .
 
+<https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Brugligger.aantalCellen> a owl:ObjectProperty;
+  rdfs:comment "Het aantal cellen van de kokerligger (indien het gaat om een kokerligger)."@nl;
+  rdfs:domain <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Brugligger>;
+  rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
+  rdfs:range xsd:nonNegativeInteger .
+
 <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Brugligger.detailplanBrugligger> a owl:ObjectProperty;
   rdfs:comment "Tekening of plan van de brugligger. Deze omvat o.a. ook afmetingen,..."@nl;
   rdfs:domain <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Brugligger>;
@@ -486,6 +518,34 @@ skos:Concept a rdfs:Class;
   rdfs:domain <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Brugligger>;
   rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
   rdfs:range skos:Concept .
+
+<https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Brugligger.typeDoorsnede> a owl:ObjectProperty;
+  rdfs:comment "Het type doorsnede van de brugligger."@nl;
+  rdfs:domain <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Brugligger>;
+  rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
+  rdfs:range skos:Concept .
+
+<https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Buffer.karakteristiekeToelaatbareBelasting> a owl:ObjectProperty;
+  rdfs:comment "De karakteristieke maximale toelaatbare belasting van de buffer, uitgedrukt in kilonewton."@nl;
+  rdfs:domain <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Buffer>;
+  rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
+  rdfs:range <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInKiloNewton> .
+
+<https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#CalamiteitendoorsteekGroep> a owl:Class;
+  rdfs:comment "Een groepstype bedoeld om calamiteitendoorsteken te groeperen."@nl;
+  rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
+  rdfs:subClassOf <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#NaampadObject> .
+
+<https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Cameragroep> a owl:Class;
+  rdfs:comment "Groepstype voor het groeperen van camera's."@nl;
+  rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
+  rdfs:subClassOf <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#NaampadObject> .
+
+<https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Centreermechanisme> a owl:Class;
+  rdfs:comment "Een geleidingsmechanisme dat een beweegbaar constructieonderdeel begeleidt opdat het zich correct positioneert bij het beëindigen van de beweging."@nl;
+  rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
+  rdfs:subClassOf <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMObject>,
+    <https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#Geleidingsmechanisme> .
 
 <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Combiwand.primaireVorm> a owl:ObjectProperty;
   rdfs:comment "Keuzelijst dat de primaire vorm van de combiwand aangeeft."@nl;
@@ -764,6 +824,11 @@ skos:Concept a rdfs:Class;
   rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
   rdfs:subClassOf <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMNaamObject> .
 
+<https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#DynBordGroep> a owl:Class;
+  rdfs:comment "Een groep voor het groeperen van Dynamische borden: DynBordRSS, DynBordPK, DynBordVMS en DynBordRVMS. Deze groep is op zichzelf geen fysiek object,maar een verzameling van fysieke objecten."@nl;
+  rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
+  rdfs:subClassOf <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#NaampadObject> .
+
 <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Ecoduct.type> a owl:ObjectProperty;
   rdfs:comment "Het type van ecoduct, zoals bv ecoveloduct, bermbrug,."@nl;
   rdfs:domain <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Ecoduct>;
@@ -958,10 +1023,22 @@ skos:Concept a rdfs:Class;
   rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
   rdfs:range <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcDocument> .
 
+<https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Glijgeleiding> a owl:Class;
+  rdfs:comment "Een geleidingssysteem dat gebruik maakt van glijdende oppervlakken om beweging mogelijk te maken."@nl;
+  rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
+  rdfs:subClassOf <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMObject>,
+    <https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#Geleidingsmechanisme> .
+
 <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Gording> a owl:Class;
   rdfs:comment "Een balk of ligger(s) die is(zijn) aangebracht om de stabiliteit van verticale grondkerende elementen zoals damwanden, palen of berlinerwanden te waarborgen."@nl;
   rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
   rdfs:subClassOf <https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#BalkGK> .
+
+<https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Grendelmechanisme> a owl:Class;
+  rdfs:comment "Een mechanisme dat de beweging van een beweegbare constructie blokkeert. Het bestaat uit een grendel die in een vaste of beweegbare constructie schuift of draait om beweging te verhinderen."@nl;
+  rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
+  rdfs:subClassOf <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMObject>,
+    <https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#Geleidingsmechanisme> .
 
 <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#GroepDwarseMarkeringEnFiguratie.totaleOppervlakte> a owl:ObjectProperty;
   rdfs:comment "De oppervlakte van de groep dwarse en/of figuratie markering."@nl;
@@ -1016,6 +1093,23 @@ skos:Concept a rdfs:Class;
   rdfs:domain <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Gronddam>;
   rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
   rdfs:range <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMeter> .
+
+<https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Grondverbetering> a owl:Class;
+  rdfs:comment "Proces waarbij de fysieke eigenschappen van de grond worden aangepast om de draagkracht te verhogen, de samendrukbaarheid te verminderen, en de stabiliteit te verbeteren, door technieken zoals verdichting, chemische stabilisatie, het gebruik van geokunststoffen, en het aanbrengen van grindkernen."@nl;
+  rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
+  rdfs:subClassOf <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMNaamObject> .
+
+<https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Halsbeugelmechanisme.isRegelbaar> a owl:DatatypeProperty;
+  rdfs:comment "Geeft aan of het halsbeugelmechanisme regelbaar is of niet."@nl;
+  rdfs:domain <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Halsbeugelmechanisme>;
+  rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
+  rdfs:range xsd:boolean .
+
+<https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Halsbeugelmechanisme.type> a owl:ObjectProperty;
+  rdfs:comment "Geeft de verschillende types halsbeugelmechanismen aan."@nl;
+  rdfs:domain <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Halsbeugelmechanisme>;
+  rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
+  rdfs:range skos:Concept .
 
 <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Hameipoort.toegankelijkheid> a owl:ObjectProperty;
   rdfs:comment "Duidt de toegankelijkheid van de hameipoort aan."@nl;
@@ -1075,9 +1169,56 @@ skos:Concept a rdfs:Class;
   rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
   rdfs:subClassOf <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#NaampadObject> .
 
+<https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#HydraulischeCilinder.heeftHijsogen> a owl:DatatypeProperty;
+  rdfs:comment "Geeft aan of de cilinder hijsogen heeft."@nl;
+  rdfs:domain <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#HydraulischeCilinder>;
+  rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
+  rdfs:range xsd:boolean .
+
+<https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#HydraulischeCilinder.heeftStandmeting> a owl:DatatypeProperty;
+  rdfs:comment "Geeft aan of de cilinder een inwendige standmeting heeft."@nl;
+  rdfs:domain <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#HydraulischeCilinder>;
+  rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
+  rdfs:range xsd:boolean .
+
+<https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#HydraulischeCilinder.heeftTegenstang> a owl:DatatypeProperty;
+  rdfs:comment "Geeft aan of de cilinder voorzien is van een tegenstang. In zo'n geval bevindt er zich een stang aan beide kanten van de zuiger."@nl;
+  rdfs:domain <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#HydraulischeCilinder>;
+  rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
+  rdfs:range xsd:boolean .
+
+<https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#HydraulischeCilinder.maximaleWerkdruk> a owl:ObjectProperty;
+  rdfs:comment "De druk die overeenstemt met de maximale ijkingsdruk van de veiligheidskleppen; is gelijk aan 1,10 maal de grootste waarde van de nominale en van de uitzonderlijke druk."@nl;
+  rdfs:domain <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#HydraulischeCilinder>;
+  rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
+  rdfs:range <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInBar> .
+
+<https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#HydraulischeCilinder.nominaleDruk> a owl:ObjectProperty;
+  rdfs:comment "De druk die overeenstemt met de nominale kracht."@nl;
+  rdfs:domain <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#HydraulischeCilinder>;
+  rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
+  rdfs:range <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInBar> .
+
+<https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#HydraulischeCilinder.nominaleKracht> a owl:ObjectProperty;
+  rdfs:comment "De kracht die overeenstemt met belastingsniveau 1, volgend uit de belastingscombinatie 1 van het SB270."@nl;
+  rdfs:domain <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#HydraulischeCilinder>;
+  rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
+  rdfs:range <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInKiloNewton> .
+
+<https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#HydraulischeCilinder.proefdruk> a owl:ObjectProperty;
+  rdfs:comment "De druk die gelijk is aan 1,50 maal de maximale werkdruk."@nl;
+  rdfs:domain <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#HydraulischeCilinder>;
+  rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
+  rdfs:range <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInBar> .
+
 <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#IPBackbone> a owl:Class;
   <http://purl.org/vocab/vann/usageNote> "De asset hoeft geometrisch niet gelokaliseerd te worden."@nl;
   rdfs:comment "Netwerk dat bestaat uit meerdere L3 switches. Zij verbinden de verschillende L2 access structuren met de datacentres"@nl;
+  rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
+  rdfs:subClassOf <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#NaampadObject> .
+
+<https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#IVSBGroep> a owl:Class;
+  rdfs:comment "Een groepstype dat inwendig verlichte signalisatieborden kan bevatten."@nl;
   rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
   rdfs:subClassOf <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#NaampadObject> .
 
@@ -1093,11 +1234,35 @@ skos:Concept a rdfs:Class;
   rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
   rdfs:range skos:Concept .
 
+<https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Kabelbewegingsmechanisme> a owl:Class;
+  rdfs:comment "Een mechanisme dat gebruik maakt van kabels om kracht over te brengen en bewegingen uit te voeren."@nl;
+  rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
+  rdfs:subClassOf <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMObject>,
+    <https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#Bewegingsmechanisme> .
+
 <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Kabelkoker> a owl:Class;
   rdfs:comment "Een ruimte die een of meerdere kabels of leidingen beschermt tegen beschadiging en/of de kabels of leidingen op een gecontroleerde plaats laat hangen of liggen. De constructieve elementen die de ruimte creëeren vormen een aaneen- en afgesloten geheel dat niet meer uit elkaar kan gehaald worden. De kabels en leidingen zijn enkel nog toegankelijk door in de koker zelf rond te lopen (of te kruipen). De koker is op die toegankelijkheid voorzien."@nl;
   rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
   rdfs:subClassOf <https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#Kabelgeleiding>,
     <https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#ConstructiefObject> .
+
+<https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Kabelveerhuis.diameter> a owl:ObjectProperty;
+  rdfs:comment "De diameter van het kabelveerhuis, uitgedrukt in millimeter."@nl;
+  rdfs:domain <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Kabelveerhuis>;
+  rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
+  rdfs:range <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMillimeter> .
+
+<https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Kabelveerhuis.gewicht> a owl:ObjectProperty;
+  rdfs:comment "Het gewicht, uitgedrukt in kilogram."@nl;
+  rdfs:domain <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Kabelveerhuis>;
+  rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
+  rdfs:range <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInKilogram> .
+
+<https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Kabelveerhuis.lengte> a owl:ObjectProperty;
+  rdfs:comment "De lengte van het kabelveerhuis, uitgedrukt in millimeter."@nl;
+  rdfs:domain <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Kabelveerhuis>;
+  rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
+  rdfs:range <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMillimeter> .
 
 <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Kelderlandhoofd.funderingsAanzetOnderDeBodemVanDeWaterweg> a owl:DatatypeProperty;
   rdfs:comment "Geeft aan of er een funderingsaanzet is onder de bodem van de waterweg, al dan niet."@nl;
@@ -1217,7 +1382,7 @@ skos:Concept a rdfs:Class;
 <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Kokerventilatie> a owl:Class;
   rdfs:comment "Het geheel van ventilatoren, luchtkanalen, sensoren en regelapparatuur om de luchtsnelheid, luchtdruk en luchtsamenstelling in een koker te bewaken en aan te passen aan veranderende omstandigheden, zoals verkeerscongestie of noodsituaties zoals brand."@nl;
   rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
-  rdfs:subClassOf <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMNaamObject> .
+  rdfs:subClassOf <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#NaampadObject> .
 
 <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Kolk.breedteKolk> a owl:ObjectProperty;
   rdfs:comment "De breedte de kolk, tussen de dagvlakken, uitgedrukt in meter."@nl;
@@ -1618,6 +1783,11 @@ skos:Concept a rdfs:Class;
   rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
   rdfs:subClassOf <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMObject> .
 
+<https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#MechanischeCilinder> a owl:Class;
+  rdfs:comment "Elektrisch aangedreven actuator waarbij de beweging wordt bewerkstelligd door een inwendig spindelmechanisme."@nl;
+  rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
+  rdfs:subClassOf <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMNaamObject> .
+
 <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Meetstation.beoordelingLokaleTerrein> a owl:ObjectProperty;
   <http://purl.org/vocab/vann/usageNote> "Klasse uit gebruik sinds versie 2.14.0-RC1"@nl;
   rdfs:comment "Het soort terrein waarin het meetstation staat met betrekking tot het reliëf en de vegetatie."@nl;
@@ -1704,6 +1874,12 @@ skos:Concept a rdfs:Class;
   rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
   rdfs:range <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcDocument> .
 
+<https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Meteostation.technischeFiche> a owl:ObjectProperty;
+  rdfs:comment "De technische fiches als bijlage."@nl;
+  rdfs:domain <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Meteostation>;
+  rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
+  rdfs:range <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcDocument> .
+
 <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Omloopriool.droogzetbaarheid> a owl:ObjectProperty;
   rdfs:comment "De verschillende mogelijkheden m.b.t. droogzetbaarheid."@nl;
   rdfs:domain <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Omloopriool>;
@@ -1738,6 +1914,30 @@ skos:Concept a rdfs:Class;
   rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
   rdfs:subClassOf <https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#RetroreflecterendVerkeersbord> .
 
+<https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Onderrolwagen.gewicht> a owl:ObjectProperty;
+  rdfs:comment "Het gewicht van de wagen, uitgedrukt in kilogram."@nl;
+  rdfs:domain <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Onderrolwagen>;
+  rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
+  rdfs:range <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInTon> .
+
+<https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Onderrolwagen.heeftSchraper> a owl:DatatypeProperty;
+  rdfs:comment "Geeft aan of de onderrolwagen een schraper heeft of niet."@nl;
+  rdfs:domain <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Onderrolwagen>;
+  rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
+  rdfs:range xsd:boolean .
+
+<https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Onderrolwagen.heeftTrekoog> a owl:DatatypeProperty;
+  rdfs:comment "Geeft aan of de onderrolwagen een trekoog heeft of niet."@nl;
+  rdfs:domain <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Onderrolwagen>;
+  rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
+  rdfs:range xsd:boolean .
+
+<https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Oplegmechanisme> a owl:Class;
+  rdfs:comment "Mechanisme dat de overdracht van krachten tussen brugdek en onderbouw toelaat en regelt, terwijl gecontroleerde vervormingen zoals rotatie, translatie of uitzetting mogelijk blijven."@nl;
+  rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
+  rdfs:subClassOf <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMObject>,
+    <https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#Geleidingsmechanisme> .
+
 <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Oplegrij.aantalOpleggingenOpRij> a owl:ObjectProperty;
   rdfs:comment "Het aantal opleggingen die op een rij liggen."@nl;
   rdfs:domain <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Oplegrij>;
@@ -1746,6 +1946,11 @@ skos:Concept a rdfs:Class;
 
 <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Overbrenging> a owl:Class;
   rdfs:comment "Een overbrenging of transmissie brengt een vermogen (bv. van een motor) over op een bewegingsmechanisme. Daarbij kan de snelheid, de kracht en het koppel aangepast worden aan de noden van het bewegingsmechanisme (bv. door gebruik te maken van een tandwielkast)."@nl;
+  rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
+  rdfs:subClassOf <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMNaamObject> .
+
+<https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Paalmatras> a owl:Class;
+  rdfs:comment "Een funderingsconstructie die wordt gebruikt op slappe bodems, voornamelijk bij de aanleg van wegen en andere infrastructuur. Het combineert (funderings)palen met een dragende matras van gewapend geokunststof en grofkorrelig materiaal, om belastingen efficiënt naar de dieper gelegen stabiele grondlagen over te brengen. De palen dragen de matras, die op zijn beurt de belasting verdeelt en overdraagt aan de palen. Deze aanpak minimaliseert zettingen en verbetert de stabiliteit van de constructie."@nl;
   rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
   rdfs:subClassOf <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMNaamObject> .
 
@@ -1862,11 +2067,6 @@ skos:Concept a rdfs:Class;
   rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
   rdfs:subClassOf <https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#ConstructiefObject> .
 
-<https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#RSSGroep> a owl:Class;
-  rdfs:comment "Een groep voor het groeperen van DynBordRSS. Deze groep is op zichzelf geen fysiek object, maar een verzameling van fysieke objecten."@nl;
-  rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
-  rdfs:subClassOf <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#NaampadObject> .
-
 <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#RadioheruitzendInstallatie.bevatASTRID> a owl:DatatypeProperty;
   rdfs:comment "De al dan niet aanwezigheid van een ASTIRD module in de radioheruitzend installatie."@nl;
   rdfs:domain <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#RadioheruitzendInstallatie>;
@@ -1933,6 +2133,18 @@ skos:Concept a rdfs:Class;
   rdfs:domain <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Rioleringsstelsel>;
   rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
   rdfs:range skos:Concept .
+
+<https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Rolgeleiding> a owl:Class;
+  rdfs:comment "Een geleidingssysteem dat gebruik maakt van rollende elementen zoals wielen of rollen om de wrijving tijdens een lineaire of roterende beweging te minimaliseren."@nl;
+  rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
+  rdfs:subClassOf <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMObject>,
+    <https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#Geleidingsmechanisme> .
+
+<https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Scharnierpunt> a owl:Class;
+  rdfs:comment "Een vast draaipunt om een horizontale as van een beweegbare constructie, zoals sluisdeur (klepdeur en segmentdeur) of brug. Het scharnierpunt vormt de plaats waar de rotatie van een deur, paneel of ander bewegend deel plaatsvindt."@nl;
+  rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
+  rdfs:subClassOf <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMNaamObject>,
+    <https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#Geleidingsmechanisme> .
 
 <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#SecansTangenspalenwand.hOhAfstandPalen> a owl:ObjectProperty;
   rdfs:comment "Hart op hart afstand tussen palen in de wand."@nl;
@@ -2043,6 +2255,12 @@ skos:Concept a rdfs:Class;
   rdfs:subClassOf <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMNaamObject>,
     <https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#Grondkeringen> .
 
+<https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Spindelmechanisme> a owl:Class;
+  rdfs:comment "Een mechanisme waarbij een spindel gebruikt wordt in combinatie met één of meer spindelmoeren en eventueel andere koppelingen of aandrijfcomponenten om nauwkeurige lineaire bewegingen te faciliteren."@nl;
+  rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
+  rdfs:subClassOf <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMObject>,
+    <https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#Bewegingsmechanisme> .
+
 <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#StalenCaisson> a owl:Class;
   rdfs:comment "Dit is een samengesteld element bestaande uit twee of meerdere warmgewalste stalen damplanken met Z- of U-vorm."@nl;
   rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
@@ -2065,6 +2283,12 @@ skos:Concept a rdfs:Class;
   rdfs:domain <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#StalenFunderingsprofiel>;
   rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
   rdfs:range xsd:boolean .
+
+<https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Stangenmechanisme> a owl:Class;
+  rdfs:comment "Een mechanisme waarbij een kruk en een stang samenwerken om een lineaire beweging om te zetten in een roterende beweging of omgekeerd."@nl;
+  rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
+  rdfs:subClassOf <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMObject>,
+    <https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#Bewegingsmechanisme> .
 
 <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Stuw.breedte> a owl:ObjectProperty;
   rdfs:comment "De afstand tussen de dagkanten van de vaste constructie."@nl;
@@ -2095,6 +2319,29 @@ skos:Concept a rdfs:Class;
   rdfs:domain <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Stuwhoofd>;
   rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
   rdfs:range skos:Concept .
+
+<https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Taatsmechanisme.isRegelbaar> a owl:DatatypeProperty;
+  rdfs:comment "Geeft aan of het taatsmechanisme regelbaar is of niet."@nl;
+  rdfs:domain <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Taatsmechanisme>;
+  rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
+  rdfs:range xsd:boolean .
+
+<https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Taatsmechanisme.type> a owl:ObjectProperty;
+  rdfs:comment "Geeft de verschillende types taatsmechanismen aan."@nl;
+  rdfs:domain <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Taatsmechanisme>;
+  rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
+  rdfs:range skos:Concept .
+
+<https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Tandheugelmechanisme> a owl:Class;
+  rdfs:comment "Een mechanisme bestaande uit een tandheugel en een tandwiel dat wordt gebruikt om een lineaire beweging om te zetten in een roterende beweging of omgekeerd."@nl;
+  rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
+  rdfs:subClassOf <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMObject> .
+
+<https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Tandkransmechanisme> a owl:Class;
+  rdfs:comment "Een mechanisme bestaande uit een tandkrans en een aandrijvende tandwielcomponent dat wordt gebruikt om beweging en krachten over te brengen in een cirkelvormige bewegingen, zoals bij draaibruggen of sluisdeuren."@nl;
+  rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
+  rdfs:subClassOf <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMObject>,
+    <https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#Bewegingsmechanisme> .
 
 <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Tegengewichtkist.toegankelijkheid> a owl:ObjectProperty;
   rdfs:comment "Duidt de toegankelijkheid aan van het tegengewichtkist."@nl;
@@ -2205,16 +2452,28 @@ skos:Concept a rdfs:Class;
   rdfs:subClassOf <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMNaamObject>,
     <https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#AanhorigheidKoker> .
 
+<https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Trekker.heeftVerendElement> a owl:DatatypeProperty;
+  rdfs:comment "Geeft aan de trekker een verend element heeft of niet."@nl;
+  rdfs:domain <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Trekker>;
+  rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
+  rdfs:range xsd:boolean .
+
 <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Trekker.type> a owl:ObjectProperty;
   rdfs:comment "Het type van de trekker."@nl;
   rdfs:domain <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Trekker>;
   rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
   rdfs:range skos:Concept .
 
+<https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Tunneluitrusting> a owl:Class;
+  <http://purl.org/vocab/vann/usageNote> "Dit type is uitsluitend bedoeld om Legacy Tu (TunnelInstallatie) op te vangen en dient ertoe de bestaande boomstructuur van Legacy ook in het OTL te ondersteunen. "@nl;
+  rdfs:comment "Generiek groepstype om alle types te groeperen die bij een koker horen."@nl;
+  rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
+  rdfs:subClassOf <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#NaampadObject> .
+
 <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Tunnelverlichting> a owl:Class;
   rdfs:comment "Het systeem van verlichtingselementen en armaturen, typisch ontworpen en geïnstalleerd in een tunnel, om aangepaste lichtniveaus volgens verschillende regimes te bieden voor veilig verkeer en zichtbaarheid binnenin een koker."@nl;
   rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
-  rdfs:subClassOf <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMNaamObject> .
+  rdfs:subClassOf <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#NaampadObject> .
 
 <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#VLAN.defaultGateway> a owl:ObjectProperty;
   rdfs:comment "Het IP adres van de gateway. Binnen een deelnetwerk is de Gateway de toegangspoort tot het ruimere netwerk."@nl;
@@ -2267,7 +2526,7 @@ skos:Concept a rdfs:Class;
 <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Ventilatiecluster> a owl:Class;
   rdfs:comment "Een systeem van ventilatoren die samenwerken om de luchtstroom en luchtkwaliteit in een deel van de koker of een specifieke ruimte te reguleren en te verbeteren."@nl;
   rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
-  rdfs:subClassOf <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMNaamObject> .
+  rdfs:subClassOf <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#NaampadObject> .
 
 <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Ventilatiekanaal.materiaal> a owl:ObjectProperty;
   rdfs:comment "Het materiaal van een ventilatiekanaal verwijst naar de substantie waaruit het kanaal is vervaardigd."@nl;
@@ -2370,6 +2629,12 @@ skos:Concept a rdfs:Class;
   rdfs:domain <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Verkeersbordopstelling>;
   rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
   rdfs:range <https://wegenenverkeer-test.data.vlaanderen.be/ns/onderdeel#DtcExterneReferentie> .
+
+<https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#VerlichteOversteekplaatsGroep> a owl:Class;
+  <http://purl.org/vocab/vann/usageNote> "Naast het groeperen van punctuele verlichtingsmasten wordt dit type ook gebruikt om de legacy-concepten VVOP en VFOP op te vangen."@nl;
+  rdfs:comment "Groepstype voor het groeperen van punctuele verlichtingsmasten."@nl;
+  rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
+  rdfs:subClassOf <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#NaampadObject> .
 
 <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#VernageldeWand.detailplan> a owl:ObjectProperty;
   rdfs:comment "Plan met details van de opbouw van de vernagelde wand."@nl;
@@ -2555,6 +2820,12 @@ skos:Concept a rdfs:Class;
   rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
   rdfs:subClassOf <https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#ConstructiefObject> .
 
+<https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Buffer> a owl:Class;
+  rdfs:comment "Een absorberend element dat wordt gebruikt om krachten of schokken op te vangen en te dempen."@nl;
+  rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
+  rdfs:subClassOf <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMNaamObject>,
+    <https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#Geleidingsmechanisme> .
+
 <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Deurkamer> a owl:Class;
   rdfs:comment "Compartiment van een waterbouwkundige constructie waarin een roldeur zich bevindt in geopende -of onderhoudstoestand."@nl;
   rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
@@ -2705,11 +2976,6 @@ skos:Concept a rdfs:Class;
   rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
   rdfs:subClassOf <https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#ConstructiefObject> .
 
-<https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Trekker> a owl:Class;
-  rdfs:comment "Een lineair mechanisch element, dubbelzijdig scharnierend, dat beoogd is om hoofdzakelijk op trek te belasten. Het verbindt, bijvoorbeeld, enerzijds het (bewegend) brugdeel/ beweegbare waterkerende constructie met anderzijds de lastzijde van de balansarm/bovenrolwagen."@nl;
-  rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
-  rdfs:subClassOf <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMNaamObject> .
-
 <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#VakwerkElement> a owl:Class;
   rdfs:comment "Element dat deel uitmaakt van een constructie waarbij balken en staven,volgens een stelsel van rechthoeken en/of driehoeken,aan de uiteinden en/of kruiselings verbonden worden tot een onwrikbaar geheel."@nl;
   rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
@@ -2771,11 +3037,6 @@ skos:Concept a rdfs:Class;
   rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
   rdfs:subClassOf <https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#EMAfbakening> .
 
-<https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Brugligger> a owl:Class;
-  rdfs:comment "Ondersteunende balkstructuur van een brug onder, boven of aansluitend op het brugdek."@nl;
-  rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
-  rdfs:subClassOf <https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#ConstructiefObject> .
-
 <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Drempel> a owl:Class;
   rdfs:comment "Vaste opstand op de bodem van het constructiehoofd over de breedte van de constructie voor de waterdichting en/of krachtoverdracht van de beweegbare waterkerende constructie (m.u.v. roldeuren)."@nl;
   rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
@@ -2796,6 +3057,12 @@ skos:Concept a rdfs:Class;
   rdfs:comment "Groepering van de dwarse- en figuratiemarkering."@nl;
   rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
   rdfs:subClassOf <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMObject> .
+
+<https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Halsbeugelmechanisme> a owl:Class;
+  rdfs:comment "Dient om de beweging van de waterkerende constructie, meer bepaald puntdeur of draaideur, te geleiden. De geleiding bestaat hoofdzakelijk uit een rotatie om een verticale as en soms mogelijk ook een translatie."@nl;
+  rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
+  rdfs:subClassOf <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMObject>,
+    <https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#Geleidingsmechanisme> .
 
 <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Hefportiek> a owl:Class;
   rdfs:comment "Een hefportiek is een vrijstaand, stijf hoofdconstructieonderdeel. Het bestaat uit minstens twee steunbenen die onderling verbonden zijn en rusten op de onderbouw. Deze steunbenen staan (mede) in voor het verticale steunen en begeleiden van een beweegbaar constructieonderdeel wanneer dit niet rust op zijn vaste steunpunten. Het tilt meestal een brugdeel of beweegbare waterkerende constructie op. Meestal herbergt een hefportiek een mechaniek met ook een tegengewicht en steekt het samen met een tweede, gelijkaardig exemplaar aan de overzijde, hoog boven de rest van het kunstwerk uit. "@nl;
@@ -2857,10 +3124,22 @@ skos:Concept a rdfs:Class;
   rdfs:subClassOf <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMNaamObject>,
     <https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#Constructiehoofd> .
 
+<https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Taatsmechanisme> a owl:Class;
+  rdfs:comment "Wordt gebruikt om bouwkundige constructies, zoals een puntdeur, draaideur of draaibrug, te geleiden. De geleiding omvat voornamelijk rotatie en soms ook translatie. Daarnaast vervult het een dragende functie met betrekking tot de sluisdeur."@nl;
+  rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
+  rdfs:subClassOf <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMObject>,
+    <https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#Geleidingsmechanisme> .
+
 <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#TijdelijkeBerlinerwandTussenschot> a owl:Class;
   rdfs:comment "Het tussenschot (plaat of plank tussen profielen) voor een tijdelijke berlinerwand. Om een berlinerwand te definiëren die permanent in de grond blijft, moeten de specifieke (materiaal)onderdelen gebruikt worden."@nl;
   rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
   rdfs:subClassOf <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMNaamObject> .
+
+<https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Trekker> a owl:Class;
+  rdfs:comment "Een lineair mechanisch element, dubbelzijdig scharnierend, dat beoogd is om hoofdzakelijk op trek te belasten. Het verbindt, bijvoorbeeld, enerzijds het (bewegend) brugdeel/ beweegbare waterkerende constructie met anderzijds de lastzijde van de balansarm/bovenrolwagen."@nl;
+  rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
+  rdfs:subClassOf <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMNaamObject>,
+    <https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#TechnischDocument> .
 
 <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Ventilatiekanaal> a owl:Class;
   rdfs:comment "Een buis die paarsgewijs zorgt voor passieve verluchting van een afgesloten ruimte door langs de ene buis lucht naar binnen en door de andere naar buiten te laten stromen op basis van de hoogte ten opzichte van elkaar."@nl;
@@ -2891,6 +3170,13 @@ skos:Concept a rdfs:Class;
   rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
   rdfs:subClassOf <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMNaamObject> .
 
+<https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Bovenrolwagen> a owl:Class;
+  rdfs:comment "Dit object is verbonden met de roldeur en bevat wielen die over de bovenste looprails van de constructie rijden, waardoor de deur horizontaal kan bewegen."@nl;
+  rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
+  rdfs:subClassOf <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMNaamObject>,
+    <https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#Geleidingsmechanisme>,
+    <https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#StaalsoortObject> .
+
 <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#DtcAardingsstelsel> a owl:Class;
   <http://purl.org/vocab/vann/usageNote> "Het attest is enkel vereist voor globale aardingsstelsels. Voor gescheiden aardinsstelsel kanhet attribuut attestDNB leeg blijven."@nl;
   rdfs:comment "Complex datatype dat het mogelijk maakt om het attest van de distributienetbeheerder toe te voegen in het geval van een globaal aardingsstelsel."@nl;
@@ -2913,6 +3199,12 @@ skos:Concept a rdfs:Class;
   rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
   rdfs:subClassOf <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMNaamObject>,
     <https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#AanvaarbeschermingGeleidewerk> .
+
+<https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Kabelveerhuis> a owl:Class;
+  rdfs:comment "Een behuizing die een veersysteem bevat, dat wordt gebruikt om de spanning op de kabels binnen het mechanisme te reguleren."@nl;
+  rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
+  rdfs:subClassOf <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMObject>,
+    <https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#TechnischDocument> .
 
 <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Kesp> a owl:Class;
   rdfs:comment "Algemene benaming voor het aanduiden van een betonnen balk bovenaan grondkerende structuren, een kopbalk als het ware (wordt ook wel kaaimuurkop genoemd). Ankervoorzieningen, ladders, enz. worden in/tegen de kesp bevestigd."@nl;
@@ -2942,6 +3234,13 @@ skos:Concept a rdfs:Class;
   rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
   rdfs:subClassOf <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#NaampadObject>,
     <https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#IpAdresObject> .
+
+<https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Onderrolwagen> a owl:Class;
+  rdfs:comment "Dit object is verbonden met de roldeur en bevat wielen die over de onderste looprails van de constructie rijden, waardoor de deur horizontaal kan bewegen."@nl;
+  rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
+  rdfs:subClassOf <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMNaamObject>,
+    <https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#Geleidingsmechanisme>,
+    <https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#StaalsoortObject> .
 
 <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Rioleringsstelsel> a owl:Class;
   rdfs:comment "De groepering van de objecten die behoren tot het riolering, aanvoer- of afvoerstelsel."@nl;
@@ -2987,6 +3286,11 @@ skos:Concept a rdfs:Class;
   rdfs:comment "Het geheel van infrastructuurelementen en toestellen op één locatie voor de exploitatie van een asweger."@nl;
   rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
   rdfs:subClassOf <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMNaamObject> .
+
+<https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Brugligger> a owl:Class;
+  rdfs:comment "Ondersteunende balkstructuur van een brug onder,boven of aansluitend op het brugdek."@nl;
+  rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
+  rdfs:subClassOf <https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#ConstructiefObject> .
 
 <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#DtcBurgerlijkeKlasseBrug> a owl:Class;
   rdfs:comment "Complex datatype om de burgerlijke klasse van een brug te bepalen."@nl;
@@ -3068,12 +3372,6 @@ skos:Concept a rdfs:Class;
   rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
   rdfs:subClassOf <https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#EMAfbakening> .
 
-<https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Meteostation> a owl:Class;
-  rdfs:comment "Het geheel van meteorologische sensoren en andere infrastructuurelementen die samen een meteostation vormen."@nl;
-  rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
-  rdfs:subClassOf <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#NaampadObject>,
-    <https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#MeetstationAbstract> .
-
 <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#PompGroep> a owl:Class;
   <http://purl.org/vocab/vann/usageNote> "Gebruik PompGroep voor een modulair systeem."@nl;
   rdfs:comment "Een systeem dat instaat voor het omzetten van elektrische energie in een verplaatsing of drukverhoging van water. In dit geval spreekt men van een pomp. In de omgekeerde situatie spreekt men van een turbine."@nl;
@@ -3101,9 +3399,20 @@ skos:Concept a rdfs:Class;
   rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
   rdfs:subClassOf <https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#EMAfbakening> .
 
+<https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Meteostation> a owl:Class;
+  rdfs:comment "Het geheel van meteorologische sensoren en andere infrastructuurelementen die samen een meteostation vormen."@nl;
+  rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
+  rdfs:subClassOf <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#NaampadObject>,
+    <https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#MeetstationAbstract> .
+
 <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#VerkeersbordConcept> a owl:Class;
   <http://purl.org/vocab/vann/usageNote> "De asset hoeft geometrisch niet gelokaliseerd te worden."@nl;
   rdfs:comment "Inhoudelijke definitie van de betekenis van een verkeersbord zoals opgenomen in de wegcode."@nl;
+  rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
+  rdfs:subClassOf <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMNaamObject> .
+
+<https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#HydraulischeCilinder> a owl:Class;
+  rdfs:comment "Hydraulisch aangedreven actuator waarbij de beweging wordt bewerkstelligd door een inwendige hydraulische druk."@nl;
   rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
   rdfs:subClassOf <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMNaamObject> .
 
@@ -3181,8 +3490,7 @@ skos:Concept a rdfs:Class;
       foaf:name "AWV"
     ];
     foaf:firstName "Julien";
-    foaf:lastName "Wynants";
-    foaf:mbox <mailto:julien.wynants@mow.vlaanderen.be>
+    foaf:lastName "Wynants"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -3190,8 +3498,7 @@ skos:Concept a rdfs:Class;
       foaf:name "RealDolmen"
     ];
     foaf:firstName "Pim";
-    foaf:lastName "Wollants";
-    foaf:mbox <mailto:pim.wollants@realdolmen.com>
+    foaf:lastName "Wollants"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -3199,8 +3506,7 @@ skos:Concept a rdfs:Class;
       foaf:name "AWV"
     ];
     foaf:firstName "Wim";
-    foaf:lastName "Willaert";
-    foaf:mbox <mailto:Wim.Willaert@mow.vlaanderen.be>
+    foaf:lastName "Willaert"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -3208,8 +3514,7 @@ skos:Concept a rdfs:Class;
       foaf:name "AWV"
     ];
     foaf:firstName "Kristof";
-    foaf:lastName "Wieme";
-    foaf:mbox <mailto:kristof.wieme@mow.vlaanderen.be>
+    foaf:lastName "Wieme"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -3217,8 +3522,7 @@ skos:Concept a rdfs:Class;
       foaf:name "AWV"
     ];
     foaf:firstName "Bert";
-    foaf:lastName "Weyne";
-    foaf:mbox <mailto:bert.weyne@mow.vlaanderen.be>
+    foaf:lastName "Weyne"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -3226,8 +3530,7 @@ skos:Concept a rdfs:Class;
       foaf:name "AWV"
     ];
     foaf:firstName "Eli";
-    foaf:lastName "Weerts";
-    foaf:mbox <mailto:Eli.Weerts@mow.vlaanderen.be>
+    foaf:lastName "Weerts"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -3235,8 +3538,7 @@ skos:Concept a rdfs:Class;
       foaf:name "AWV"
     ];
     foaf:firstName "Koen";
-    foaf:lastName "Wardenier";
-    foaf:mbox <mailto:koen.wardenier@mow.vlaanderen.be>
+    foaf:lastName "Wardenier"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -3244,8 +3546,7 @@ skos:Concept a rdfs:Class;
       foaf:name "AWV"
     ];
     foaf:firstName "Pieter";
-    foaf:lastName "Vrijsen";
-    foaf:mbox <mailto:Pieter.Vrijsen@mow.vlaanderen.be>
+    foaf:lastName "Vrijsen"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -3253,8 +3554,7 @@ skos:Concept a rdfs:Class;
       foaf:name "AWV"
     ];
     foaf:firstName "David";
-    foaf:lastName "Vlaminck";
-    foaf:mbox <mailto:david.vlaminck@mow.vlaanderen.be>
+    foaf:lastName "Vlaminck"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -3262,8 +3562,7 @@ skos:Concept a rdfs:Class;
       foaf:name "Dynniq"
     ];
     foaf:firstName "Els";
-    foaf:lastName "Vivijs";
-    foaf:mbox <mailto:els.vivijs@dynniq.be>
+    foaf:lastName "Vivijs"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -3271,8 +3570,7 @@ skos:Concept a rdfs:Class;
       foaf:name "MOW afdeling Geotechniek"
     ];
     foaf:firstName "Leen";
-    foaf:lastName "Vincke";
-    foaf:mbox <mailto:leen.vincke@mow.vlaanderen.be>
+    foaf:lastName "Vincke"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -3280,8 +3578,7 @@ skos:Concept a rdfs:Class;
       foaf:name "AWV"
     ];
     foaf:firstName "Yoeri";
-    foaf:lastName "Vernelen";
-    foaf:mbox <mailto:Yoeri.Vernelen@mow.vlaanderen.be>
+    foaf:lastName "Vernelen"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -3289,8 +3586,7 @@ skos:Concept a rdfs:Class;
       foaf:name "Jidoka"
     ];
     foaf:firstName "Christopher";
-    foaf:lastName "Verhulst";
-    foaf:mbox <mailto:christopher.verhulst@jidoka.be>
+    foaf:lastName "Verhulst"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -3298,8 +3594,7 @@ skos:Concept a rdfs:Class;
       foaf:name "AWV"
     ];
     foaf:firstName "Tim";
-    foaf:lastName "Verhaeghe";
-    foaf:mbox <mailto:tim.verhaeghe@mow.vlaanderen.be>
+    foaf:lastName "Verhaeghe"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -3307,8 +3602,7 @@ skos:Concept a rdfs:Class;
       foaf:name "AWV"
     ];
     foaf:firstName "Frederick";
-    foaf:lastName "Verdonck";
-    foaf:mbox <mailto:frederick.verdonck@mow.vlaanderen.be>
+    foaf:lastName "Verdonck"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -3316,8 +3610,7 @@ skos:Concept a rdfs:Class;
       foaf:name "AWV"
     ];
     foaf:firstName "Arne";
-    foaf:lastName "Verburgh";
-    foaf:mbox <mailto:Arne.Verburgh@mow.vlaanderen.be>
+    foaf:lastName "Verburgh"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -3325,8 +3618,7 @@ skos:Concept a rdfs:Class;
       foaf:name "Geosolutions"
     ];
     foaf:firstName "Anouck";
-    foaf:lastName "Vanrykel";
-    foaf:mbox <mailto:anouck.vanrykel@geosolutions.be>
+    foaf:lastName "Vanrykel"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -3334,8 +3626,7 @@ skos:Concept a rdfs:Class;
       foaf:name "Bouwunie"
     ];
     foaf:firstName "Jerome";
-    foaf:lastName "Vanroye";
-    foaf:mbox <mailto:jerome.vanroye@telenet.be>
+    foaf:lastName "Vanroye"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -3343,8 +3634,7 @@ skos:Concept a rdfs:Class;
       foaf:name "INBO"
     ];
     foaf:firstName "Andy";
-    foaf:lastName "Vankerckvoorde";
-    foaf:mbox <mailto:andy.vankerckvoorde@inbo.be>
+    foaf:lastName "Vankerckvoorde"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -3352,8 +3642,7 @@ skos:Concept a rdfs:Class;
       foaf:name "AWV"
     ];
     foaf:firstName "Alvarez";
-    foaf:lastName "Vanhove";
-    foaf:mbox <mailto:Alvarez.Vanhove@mow.vlaanderen.be>
+    foaf:lastName "Vanhove"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -3361,8 +3650,7 @@ skos:Concept a rdfs:Class;
       foaf:name "AWV"
     ];
     foaf:firstName "Barbara";
-    foaf:lastName "Vanhooreweder";
-    foaf:mbox <mailto:Barbara.Vanhooreweder@mow.vlaanderen.be>
+    foaf:lastName "Vanhooreweder"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -3370,8 +3658,7 @@ skos:Concept a rdfs:Class;
       foaf:name "AWV"
     ];
     foaf:firstName "Peter";
-    foaf:lastName "Vandenhole";
-    foaf:mbox <mailto:peter.vandenhole@mow.vlaanderen.be>
+    foaf:lastName "Vandenhole"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -3379,8 +3666,7 @@ skos:Concept a rdfs:Class;
       foaf:name "AWV"
     ];
     foaf:firstName "Freek";
-    foaf:lastName "Vandenbussche";
-    foaf:mbox <mailto:Freek.Vandenbussche@mow.vlaanderen.be>
+    foaf:lastName "Vandenbussche"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -3388,8 +3674,7 @@ skos:Concept a rdfs:Class;
       foaf:name "AWV"
     ];
     foaf:firstName "Patrick";
-    foaf:lastName "Van den Heuvel";
-    foaf:mbox <mailto:patrick.vandenheuvel@mow.vlaanderen.be>
+    foaf:lastName "Van den Heuvel"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -3397,8 +3682,7 @@ skos:Concept a rdfs:Class;
       foaf:name "BAM NV"
     ];
     foaf:firstName "Maarten";
-    foaf:lastName "Van de poel";
-    foaf:mbox <mailto:maarten.vandepoel@bamnv.be>
+    foaf:lastName "Van de poel"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -3406,8 +3690,7 @@ skos:Concept a rdfs:Class;
       foaf:name "AWV"
     ];
     foaf:firstName "Bart";
-    foaf:lastName "Van Vaerenberg";
-    foaf:mbox <mailto:bart.vanvaerenberg@mow.vlaanderen.be>
+    foaf:lastName "Van Vaerenberg"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -3415,8 +3698,7 @@ skos:Concept a rdfs:Class;
       foaf:name "AWV"
     ];
     foaf:firstName "Pieter";
-    foaf:lastName "Van Nieuwerburgh";
-    foaf:mbox <mailto:Pieter.VanNieuwerburgh@mow.vlaanderen.be>
+    foaf:lastName "Van Nieuwerburgh"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -3424,8 +3706,7 @@ skos:Concept a rdfs:Class;
       foaf:name "AWV"
     ];
     foaf:firstName "Sam";
-    foaf:lastName "Van Nieuwenhuyse";
-    foaf:mbox <mailto:sam.vannieuwenhuyse@mow.vlaanderen.be>
+    foaf:lastName "Van Nieuwenhuyse"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -3433,8 +3714,7 @@ skos:Concept a rdfs:Class;
       foaf:name "Arcadis"
     ];
     foaf:firstName "Ann";
-    foaf:lastName "Van Melkebeek";
-    foaf:mbox <mailto:ann.vanmelkebeek@arcadis.com>
+    foaf:lastName "Van Melkebeek"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -3442,8 +3722,7 @@ skos:Concept a rdfs:Class;
       foaf:name "AWV"
     ];
     foaf:firstName "Annick";
-    foaf:lastName "Van Laere";
-    foaf:mbox <mailto:annick.vanlaere@mow.vlaanderen.be>
+    foaf:lastName "Van Laere"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -3451,8 +3730,7 @@ skos:Concept a rdfs:Class;
       foaf:name "AWV"
     ];
     foaf:firstName "Stanny";
-    foaf:lastName "Van Herzeele";
-    foaf:mbox <mailto:stanny.vanherzeele@mow.vlaanderen.be>
+    foaf:lastName "Van Herzeele"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -3460,8 +3738,7 @@ skos:Concept a rdfs:Class;
       foaf:name "AWV"
     ];
     foaf:firstName "Wouter";
-    foaf:lastName "Van Herck";
-    foaf:mbox <mailto:Wouter.VanHerck@mow.vlaanderen.be>
+    foaf:lastName "Van Herck"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -3469,8 +3746,7 @@ skos:Concept a rdfs:Class;
       foaf:name "AWV"
     ];
     foaf:firstName "Jan";
-    foaf:lastName "Van Gestel";
-    foaf:mbox <mailto:Jan.VanGestel@mow.vlaanderen.be>
+    foaf:lastName "Van Gestel"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -3478,8 +3754,7 @@ skos:Concept a rdfs:Class;
       foaf:name "AWV"
     ];
     foaf:firstName "Bert";
-    foaf:lastName "Van Gaver";
-    foaf:mbox <mailto:Bert.VanGaver@mow.vlaanderen.be>
+    foaf:lastName "Van Gaver"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -3495,8 +3770,7 @@ skos:Concept a rdfs:Class;
       foaf:name "AWV"
     ];
     foaf:firstName "Karl";
-    foaf:lastName "Van Duppen";
-    foaf:mbox <mailto:karl.vanduppen@mow.vlaanderen.be>
+    foaf:lastName "Van Duppen"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -3504,8 +3778,7 @@ skos:Concept a rdfs:Class;
       foaf:name "VMM"
     ];
     foaf:firstName "Koen";
-    foaf:lastName "Van Driessen";
-    foaf:mbox <mailto:k.vandriessen@vmm.be>
+    foaf:lastName "Van Driessen"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -3513,8 +3786,7 @@ skos:Concept a rdfs:Class;
       foaf:name "Techlink"
     ];
     foaf:firstName "Kris";
-    foaf:lastName "Van Dingenen";
-    foaf:mbox <mailto:kris.vandingenen@techlink.be>
+    foaf:lastName "Van Dingenen"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -3522,8 +3794,7 @@ skos:Concept a rdfs:Class;
       foaf:name "Departement Omgeving"
     ];
     foaf:firstName "Marleen";
-    foaf:lastName "Van Damme";
-    foaf:mbox <mailto:marleen.vandamme@vlaanderen.be>
+    foaf:lastName "Van Damme"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -3531,8 +3802,7 @@ skos:Concept a rdfs:Class;
       foaf:name "AWV"
     ];
     foaf:firstName "Tine";
-    foaf:lastName "Van Damme";
-    foaf:mbox <mailto:tine.vandamme@mow.vlaanderen.be>
+    foaf:lastName "Van Damme"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -3540,8 +3810,7 @@ skos:Concept a rdfs:Class;
       foaf:name "AWV"
     ];
     foaf:firstName "Liesbeth";
-    foaf:lastName "Van Camp";
-    foaf:mbox <mailto:Liesbeth.VanCamp@mow.vlaanderen.be>
+    foaf:lastName "Van Camp"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -3549,8 +3818,7 @@ skos:Concept a rdfs:Class;
       foaf:name "AWV"
     ];
     foaf:firstName "Tom";
-    foaf:lastName "Van Calster";
-    foaf:mbox <mailto:tom.vancalster@mow.vlaanderen.be>
+    foaf:lastName "Van Calster"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -3558,8 +3826,7 @@ skos:Concept a rdfs:Class;
       foaf:name "AWV"
     ];
     foaf:firstName "Bert";
-    foaf:lastName "Van Buyten";
-    foaf:mbox <mailto:Bert.VanBuyten@mow.vlaanderen.be>
+    foaf:lastName "Van Buyten"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -3567,8 +3834,7 @@ skos:Concept a rdfs:Class;
       foaf:name "AWV"
     ];
     foaf:firstName "Jan";
-    foaf:lastName "Van Boxelaere";
-    foaf:mbox <mailto:jan.vanboxelaere@mow.vlaanderen.be>
+    foaf:lastName "Van Boxelaere"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -3576,8 +3842,7 @@ skos:Concept a rdfs:Class;
       foaf:name "AWV"
     ];
     foaf:firstName "Patrick";
-    foaf:lastName "Van Acker";
-    foaf:mbox <mailto:patrick.vanacker@mow.vlaanderen.be>
+    foaf:lastName "Van Acker"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -3585,8 +3850,7 @@ skos:Concept a rdfs:Class;
       foaf:name "Ixor"
     ];
     foaf:firstName "Christian";
-    foaf:lastName "Tytgat";
-    foaf:mbox <mailto:christian.tytgat@ixor.be>
+    foaf:lastName "Tytgat"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -3594,8 +3858,7 @@ skos:Concept a rdfs:Class;
       foaf:name "Arcadis"
     ];
     foaf:firstName "Andrea";
-    foaf:lastName "Trincado Fernandez";
-    foaf:mbox <mailto:andrea.trincadofernandez@arcadis.com>
+    foaf:lastName "Trincado Fernandez"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -3603,8 +3866,7 @@ skos:Concept a rdfs:Class;
       foaf:name "VMM"
     ];
     foaf:firstName "Philip";
-    foaf:lastName "Thomas";
-    foaf:mbox <mailto:P.Thomas@vmm.be>
+    foaf:lastName "Thomas"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -3612,8 +3874,7 @@ skos:Concept a rdfs:Class;
       foaf:name "VMM"
     ];
     foaf:firstName "Ivo";
-    foaf:lastName "Terrens";
-    foaf:mbox <mailto:I.Terrens@vmm.be>
+    foaf:lastName "Terrens"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -3621,8 +3882,7 @@ skos:Concept a rdfs:Class;
       foaf:name "Witas"
     ];
     foaf:firstName "Wim";
-    foaf:lastName "Tas";
-    foaf:mbox <mailto:wim@witas.be>
+    foaf:lastName "Tas"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -3630,8 +3890,7 @@ skos:Concept a rdfs:Class;
       foaf:name "AWV"
     ];
     foaf:firstName "Immanuel";
-    foaf:lastName "Taets";
-    foaf:mbox <mailto:Immanuel.Taets@mow.vlaanderen.be>
+    foaf:lastName "Taets"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -3639,8 +3898,7 @@ skos:Concept a rdfs:Class;
       foaf:name "AWV"
     ];
     foaf:firstName "Peter";
-    foaf:lastName "Stulens";
-    foaf:mbox <mailto:Peter.Stulens@mow.vlaanderen.be>
+    foaf:lastName "Stulens"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -3648,8 +3906,7 @@ skos:Concept a rdfs:Class;
       foaf:name "AWV"
     ];
     foaf:firstName "Guy";
-    foaf:lastName "Sonck";
-    foaf:mbox <mailto:guy.sonck@mow.vlaanderen.be>
+    foaf:lastName "Sonck"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -3657,8 +3914,7 @@ skos:Concept a rdfs:Class;
       foaf:name "AWV"
     ];
     foaf:firstName "Jeremy";
-    foaf:lastName "Soenens";
-    foaf:mbox <mailto:Jeremy.Soenens@mow.vlaanderen.be>
+    foaf:lastName "Soenens"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -3666,8 +3922,7 @@ skos:Concept a rdfs:Class;
       foaf:name "AIV"
     ];
     foaf:firstName "Jens";
-    foaf:lastName "Scheerlinck";
-    foaf:mbox <mailto:Jens.Scheerlinck@kb.vlaanderen.be>
+    foaf:lastName "Scheerlinck"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -3675,8 +3930,7 @@ skos:Concept a rdfs:Class;
       foaf:name "PWC"
     ];
     foaf:firstName "Jens";
-    foaf:lastName "Scheerlinck";
-    foaf:mbox <mailto:jens.scheerlinck@pwc.com>
+    foaf:lastName "Scheerlinck"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -3684,8 +3938,7 @@ skos:Concept a rdfs:Class;
       foaf:name "BAM NV"
     ];
     foaf:firstName "Stephan";
-    foaf:lastName "Schaeffer";
-    foaf:mbox <mailto:stephan.schaeffer@bamnv.be>
+    foaf:lastName "Schaeffer"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -3693,8 +3946,7 @@ skos:Concept a rdfs:Class;
       foaf:name "AIV"
     ];
     foaf:firstName "Liesbeth";
-    foaf:lastName "Rombouts";
-    foaf:mbox <mailto:Liesbeth.Rombouts@kb.vlaanderen.be>
+    foaf:lastName "Rombouts"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -3702,8 +3954,7 @@ skos:Concept a rdfs:Class;
       foaf:name "AWV"
     ];
     foaf:firstName "Mathias";
-    foaf:lastName "Renders";
-    foaf:mbox <mailto:Mathias.Renders@mow.vlaanderen.be>
+    foaf:lastName "Renders"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -3711,8 +3962,7 @@ skos:Concept a rdfs:Class;
       foaf:name "AWV"
     ];
     foaf:firstName "Kristof";
-    foaf:lastName "Ramaekers";
-    foaf:mbox <mailto:Kristof.Ramaekers@mow.vlaanderen.be>
+    foaf:lastName "Ramaekers"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -3720,8 +3970,7 @@ skos:Concept a rdfs:Class;
       foaf:name "AWV"
     ];
     foaf:firstName "Thomas";
-    foaf:lastName "Plumet";
-    foaf:mbox <mailto:thomas.plumet@mow.vlaanderen.be>
+    foaf:lastName "Plumet"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -3729,8 +3978,7 @@ skos:Concept a rdfs:Class;
       foaf:name "AWV"
     ];
     foaf:firstName "Mark";
-    foaf:lastName "Pissens";
-    foaf:mbox <mailto:Mark.Pissens@mow.vlaanderen.be>
+    foaf:lastName "Pissens"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -3738,8 +3986,7 @@ skos:Concept a rdfs:Class;
       foaf:name "AWV"
     ];
     foaf:firstName "Isabelle";
-    foaf:lastName "Piette";
-    foaf:mbox <mailto:isabelle.piette@mow.vlaanderen.be>
+    foaf:lastName "Piette"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -3747,8 +3994,7 @@ skos:Concept a rdfs:Class;
       foaf:name "AWV"
     ];
     foaf:firstName "Stephane";
-    foaf:lastName "Peeters";
-    foaf:mbox <mailto:stephane.peeters@mow.vlaanderen.be>
+    foaf:lastName "Peeters"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -3756,8 +4002,7 @@ skos:Concept a rdfs:Class;
       foaf:name "AWV"
     ];
     foaf:firstName "Danny";
-    foaf:lastName "Peelaers";
-    foaf:mbox <mailto:Danny.Peelaers@mow.vlaanderen.be>
+    foaf:lastName "Peelaers"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -3765,8 +4010,7 @@ skos:Concept a rdfs:Class;
       foaf:name "AWV"
     ];
     foaf:firstName "Willem";
-    foaf:lastName "Pauwels";
-    foaf:mbox <mailto:willem.pauwels@mow.vlaanderen.be>
+    foaf:lastName "Pauwels"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -3774,8 +4018,7 @@ skos:Concept a rdfs:Class;
       foaf:name "AWV"
     ];
     foaf:firstName "Timothy";
-    foaf:lastName "Nuttens";
-    foaf:mbox <mailto:Timothy.Nuttens@mow.vlaanderen.be>
+    foaf:lastName "Nuttens"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -3783,8 +4026,7 @@ skos:Concept a rdfs:Class;
       foaf:name "AWV"
     ];
     foaf:firstName "Bjorn";
-    foaf:lastName "Mortier";
-    foaf:mbox <mailto:Bjorn.Mortier@mow.vlaanderen.be>
+    foaf:lastName "Mortier"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -3792,8 +4034,7 @@ skos:Concept a rdfs:Class;
       foaf:name "AWV"
     ];
     foaf:firstName "Marleen";
-    foaf:lastName "Moelants";
-    foaf:mbox <mailto:Marleen.Moelants@mow.vlaanderen.be>
+    foaf:lastName "Moelants"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -3801,8 +4042,7 @@ skos:Concept a rdfs:Class;
       foaf:name "VMM"
     ];
     foaf:firstName "Katleen";
-    foaf:lastName "Miserez";
-    foaf:mbox <mailto:K.Miserez@vmm.be>
+    foaf:lastName "Miserez"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -3810,8 +4050,7 @@ skos:Concept a rdfs:Class;
       foaf:name "AWV"
     ];
     foaf:firstName "Koen";
-    foaf:lastName "Meulemans";
-    foaf:mbox <mailto:koen.meulemans@mow.vlaanderen.be>
+    foaf:lastName "Meulemans"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -3819,8 +4058,7 @@ skos:Concept a rdfs:Class;
       foaf:name "AWV"
     ];
     foaf:firstName "Alex";
-    foaf:lastName "Mettepenningen";
-    foaf:mbox <mailto:alex.mettepenningen@mow.vlaanderen.be>
+    foaf:lastName "Mettepenningen"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -3828,8 +4066,7 @@ skos:Concept a rdfs:Class;
       foaf:name "AWV"
     ];
     foaf:firstName "Peter";
-    foaf:lastName "Merlevede";
-    foaf:mbox <mailto:Peter.Merlevede@mow.vlaanderen.be>
+    foaf:lastName "Merlevede"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -3837,8 +4074,7 @@ skos:Concept a rdfs:Class;
       foaf:name "AWV"
     ];
     foaf:firstName "Bart";
-    foaf:lastName "Mergaerts";
-    foaf:mbox <mailto:Bart.Mergaerts@mow.vlaanderen.be>
+    foaf:lastName "Mergaerts"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -3846,8 +4082,7 @@ skos:Concept a rdfs:Class;
       foaf:name "LNE"
     ];
     foaf:firstName "Jan";
-    foaf:lastName "Menschaert";
-    foaf:mbox <mailto:jan.menschaert@lne.vlaanderen.be>
+    foaf:lastName "Menschaert"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -3855,8 +4090,7 @@ skos:Concept a rdfs:Class;
       foaf:name "AWV"
     ];
     foaf:firstName "Davy";
-    foaf:lastName "Meeus";
-    foaf:mbox <mailto:davy.meeus@mow.vlaanderen.be>
+    foaf:lastName "Meeus"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -3864,8 +4098,7 @@ skos:Concept a rdfs:Class;
       foaf:name "AWV"
     ];
     foaf:firstName "Wim";
-    foaf:lastName "Meermans";
-    foaf:mbox <mailto:Wim.Meermans@mow.vlaanderen.be>
+    foaf:lastName "Meermans"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -3873,14 +4106,12 @@ skos:Concept a rdfs:Class;
       foaf:name "VMM"
     ];
     foaf:firstName "Koen";
-    foaf:lastName "Martens";
-    foaf:mbox <mailto:k.martens@vmm.be>
+    foaf:lastName "Martens"
   ], [
     a foaf:Person;
     schema:affiliation [foaf:name "Geovise"];
     foaf:firstName "Karel";
-    foaf:lastName "Maesen";
-    foaf:mbox <mailto:karel@geovise.com>
+    foaf:lastName "Maesen"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -3888,8 +4119,7 @@ skos:Concept a rdfs:Class;
       foaf:name "Pointfree"
     ];
     foaf:firstName "Joachim";
-    foaf:lastName "Maes";
-    foaf:mbox <mailto:joachim.maes@pointfree.be>
+    foaf:lastName "Maes"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -3897,8 +4127,7 @@ skos:Concept a rdfs:Class;
       foaf:name "AWV"
     ];
     foaf:firstName "Rudi";
-    foaf:lastName "Luyten";
-    foaf:mbox <mailto:Rudi.Luyten@mow.vlaanderen.be>
+    foaf:lastName "Luyten"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -3906,8 +4135,7 @@ skos:Concept a rdfs:Class;
       foaf:name "Infoflow"
     ];
     foaf:firstName "Christophe";
-    foaf:lastName "Luyckx";
-    foaf:mbox <mailto:christopheluyckx@infoflow.be>
+    foaf:lastName "Luyckx"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -3915,8 +4143,7 @@ skos:Concept a rdfs:Class;
       foaf:name "VMM"
     ];
     foaf:firstName "Dries";
-    foaf:lastName "Luts";
-    foaf:mbox <mailto:D.Luts@vmm.be>
+    foaf:lastName "Luts"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -3924,8 +4151,7 @@ skos:Concept a rdfs:Class;
       foaf:name "Aquafin"
     ];
     foaf:firstName "Pieter";
-    foaf:lastName "Lootens";
-    foaf:mbox <mailto:pieter.lootens@aquafin.be>
+    foaf:lastName "Lootens"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -3933,8 +4159,7 @@ skos:Concept a rdfs:Class;
       foaf:name "AWV"
     ];
     foaf:firstName "Tim";
-    foaf:lastName "Lonneux";
-    foaf:mbox <mailto:tim.lonneux@mow.vlaanderen.be>
+    foaf:lastName "Lonneux"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -3942,8 +4167,7 @@ skos:Concept a rdfs:Class;
       foaf:name "AWV"
     ];
     foaf:firstName "Herman";
-    foaf:lastName "Longueville";
-    foaf:mbox <mailto:herman.longueville@mow.vlaanderen.be>
+    foaf:lastName "Longueville"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -3951,8 +4175,7 @@ skos:Concept a rdfs:Class;
       foaf:name "AWV"
     ];
     foaf:firstName "Peter";
-    foaf:lastName "Lewyllie";
-    foaf:mbox <mailto:peter.lewyllie@mow.vlaanderen.be>
+    foaf:lastName "Lewyllie"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -3960,8 +4183,7 @@ skos:Concept a rdfs:Class;
       foaf:name "Aquafin"
     ];
     foaf:firstName "Mieke";
-    foaf:lastName "Lesage";
-    foaf:mbox <mailto:mieke.lesage@aquafin.be>
+    foaf:lastName "Lesage"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -3969,8 +4191,7 @@ skos:Concept a rdfs:Class;
       foaf:name "AWV"
     ];
     foaf:firstName "Luc";
-    foaf:lastName "Laurys";
-    foaf:mbox <mailto:luc.laurys@mow.vlaanderen.be>
+    foaf:lastName "Laurys"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -3978,8 +4199,7 @@ skos:Concept a rdfs:Class;
       foaf:name "AWV"
     ];
     foaf:firstName "Jurgen";
-    foaf:lastName "Latte";
-    foaf:mbox <mailto:jurgen.latte@mow.vlaanderen.be>
+    foaf:lastName "Latte"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -3987,8 +4207,7 @@ skos:Concept a rdfs:Class;
       foaf:name "AWV"
     ];
     foaf:firstName "Yanick";
-    foaf:lastName "Lathuy";
-    foaf:mbox <mailto:yanick.lathuy@mow.vlaanderen.be>
+    foaf:lastName "Lathuy"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -3996,8 +4215,7 @@ skos:Concept a rdfs:Class;
       foaf:name "AWV"
     ];
     foaf:firstName "Jo";
-    foaf:lastName "Laps";
-    foaf:mbox <mailto:Jo.Laps@mow.vlaanderen.be>
+    foaf:lastName "Laps"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -4005,8 +4223,7 @@ skos:Concept a rdfs:Class;
       foaf:name "AWV"
     ];
     foaf:firstName "John";
-    foaf:lastName "Lammertyn";
-    foaf:mbox <mailto:john.lammertyn@mow.vlaanderen.be>
+    foaf:lastName "Lammertyn"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -4014,8 +4231,7 @@ skos:Concept a rdfs:Class;
       foaf:name "AWV"
     ];
     foaf:firstName "Philip";
-    foaf:lastName "Lameire";
-    foaf:mbox <mailto:philip.lameire@mow.vlaanderen.be>
+    foaf:lastName "Lameire"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -4023,8 +4239,7 @@ skos:Concept a rdfs:Class;
       foaf:name "AWV"
     ];
     foaf:firstName "Philippe";
-    foaf:lastName "Keppens";
-    foaf:mbox <mailto:Philippe.Keppens@mow.vlaanderen.be>
+    foaf:lastName "Keppens"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -4032,8 +4247,7 @@ skos:Concept a rdfs:Class;
       foaf:name "AWV"
     ];
     foaf:firstName "Claudia";
-    foaf:lastName "Juvyns";
-    foaf:mbox <mailto:claudia.juvyns@mow.vlaanderen.be>
+    foaf:lastName "Juvyns"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -4041,8 +4255,7 @@ skos:Concept a rdfs:Class;
       foaf:name "AWV"
     ];
     foaf:firstName "Bart";
-    foaf:lastName "Janssens";
-    foaf:mbox <mailto:Bart.Janssens@mow.vlaanderen.be>
+    foaf:lastName "Janssens"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -4050,8 +4263,7 @@ skos:Concept a rdfs:Class;
       foaf:name "Autodesk"
     ];
     foaf:firstName "Peter";
-    foaf:lastName "Ingels";
-    foaf:mbox <mailto:peter.ingels@autodesk.com>
+    foaf:lastName "Ingels"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -4059,8 +4271,7 @@ skos:Concept a rdfs:Class;
       foaf:name "AWV"
     ];
     foaf:firstName "Ruben";
-    foaf:lastName "Huylebroeck";
-    foaf:mbox <mailto:ruben.huylebroeck@mow.vlaanderen.be>
+    foaf:lastName "Huylebroeck"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -4068,8 +4279,7 @@ skos:Concept a rdfs:Class;
       foaf:name "AWV"
     ];
     foaf:firstName "Kris";
-    foaf:lastName "Huygen";
-    foaf:mbox <mailto:Kris.Huygen@mow.vlaanderen.be>
+    foaf:lastName "Huygen"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -4077,8 +4287,7 @@ skos:Concept a rdfs:Class;
       foaf:name "AWV"
     ];
     foaf:firstName "Peter";
-    foaf:lastName "Hooreweghe";
-    foaf:mbox <mailto:peter.hooreweghe@mow.vlaanderen.be>
+    foaf:lastName "Hooreweghe"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -4086,8 +4295,7 @@ skos:Concept a rdfs:Class;
       foaf:name "Dynniq"
     ];
     foaf:firstName "Annick";
-    foaf:lastName "Hooge";
-    foaf:mbox <mailto:annick.hooge@dynniq.be>
+    foaf:lastName "Hooge"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -4095,8 +4303,7 @@ skos:Concept a rdfs:Class;
       foaf:name "AWV"
     ];
     foaf:firstName "Josef";
-    foaf:lastName "Hennissen";
-    foaf:mbox <mailto:josef.hennissen@mow.vlaanderen.be>
+    foaf:lastName "Hennissen"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -4104,8 +4311,7 @@ skos:Concept a rdfs:Class;
       foaf:name "AWV"
     ];
     foaf:firstName "Dirk";
-    foaf:lastName "Goelen";
-    foaf:mbox <mailto:dirk.goelen@mow.vlaanderen.be>
+    foaf:lastName "Goelen"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -4113,8 +4319,7 @@ skos:Concept a rdfs:Class;
       foaf:name "GIM"
     ];
     foaf:firstName "Stijn";
-    foaf:lastName "Goedertier";
-    foaf:mbox <mailto:stijn.goedertier@gim.be>
+    foaf:lastName "Goedertier"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -4122,8 +4327,7 @@ skos:Concept a rdfs:Class;
       foaf:name "AWV"
     ];
     foaf:firstName "Nele";
-    foaf:lastName "Gheysen";
-    foaf:mbox <mailto:nele.gheysen@mow.vlaanderen.be>
+    foaf:lastName "Gheysen"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -4131,8 +4335,7 @@ skos:Concept a rdfs:Class;
       foaf:name "Pàu"
     ];
     foaf:firstName "Benoit";
-    foaf:lastName "Gevaert";
-    foaf:mbox <mailto:benoit@pau.be>
+    foaf:lastName "Gevaert"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -4140,8 +4343,7 @@ skos:Concept a rdfs:Class;
       foaf:name "AWV"
     ];
     foaf:firstName "Dave";
-    foaf:lastName "Geudens";
-    foaf:mbox <mailto:dave.geudens@mow.vlaanderen.be>
+    foaf:lastName "Geudens"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -4149,8 +4351,7 @@ skos:Concept a rdfs:Class;
       foaf:name "AWV"
     ];
     foaf:firstName "Ben";
-    foaf:lastName "Geerts";
-    foaf:mbox <mailto:ben.geerts@mow.vlaanderen.be>
+    foaf:lastName "Geerts"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -4158,8 +4359,7 @@ skos:Concept a rdfs:Class;
       foaf:name "AWV"
     ];
     foaf:firstName "Sofie";
-    foaf:lastName "Geens";
-    foaf:mbox <mailto:Sofie.Geens@mow.vlaanderen.be>
+    foaf:lastName "Geens"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -4167,8 +4367,7 @@ skos:Concept a rdfs:Class;
       foaf:name "Dynniq"
     ];
     foaf:firstName "Peter";
-    foaf:lastName "Gaublomme";
-    foaf:mbox <mailto:peter.gaublomme@dynniq.be>
+    foaf:lastName "Gaublomme"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -4176,8 +4375,7 @@ skos:Concept a rdfs:Class;
       foaf:name "Vlario"
     ];
     foaf:firstName "Wendy";
-    foaf:lastName "Francken";
-    foaf:mbox <mailto:wendy.francken@vlario.be>
+    foaf:lastName "Francken"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -4185,8 +4383,7 @@ skos:Concept a rdfs:Class;
       foaf:name "BAM NV"
     ];
     foaf:firstName "Yves";
-    foaf:lastName "Ferong";
-    foaf:mbox <mailto:yves.ferong@bamnv.be>
+    foaf:lastName "Ferong"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -4194,8 +4391,7 @@ skos:Concept a rdfs:Class;
       foaf:name "AWV"
     ];
     foaf:firstName "Dirk";
-    foaf:lastName "Eelen";
-    foaf:mbox <mailto:dirk.eelen@mow.vlaanderen.be>
+    foaf:lastName "Eelen"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -4203,8 +4399,7 @@ skos:Concept a rdfs:Class;
       foaf:name "AWV"
     ];
     foaf:firstName "Migäel";
-    foaf:lastName "Duro Gonzalez";
-    foaf:mbox <mailto:migäel.durogonzalez@mow.vlaanderen.be>
+    foaf:lastName "Duro Gonzalez"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -4212,8 +4407,7 @@ skos:Concept a rdfs:Class;
       foaf:name "AWV"
     ];
     foaf:firstName "Tony";
-    foaf:lastName "Durinck";
-    foaf:mbox <mailto:tony.durinck@mow.vlaanderen.be>
+    foaf:lastName "Durinck"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -4221,8 +4415,7 @@ skos:Concept a rdfs:Class;
       foaf:name "AWV"
     ];
     foaf:firstName "Mario";
-    foaf:lastName "Dumon";
-    foaf:mbox <mailto:Mario.Dumon@mow.vlaanderen.be>
+    foaf:lastName "Dumon"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -4230,8 +4423,7 @@ skos:Concept a rdfs:Class;
       foaf:name "Ixor"
     ];
     foaf:firstName "Vincent";
-    foaf:lastName "Ducheyne";
-    foaf:mbox <mailto:vincent.ducheyne@ixor.be>
+    foaf:lastName "Ducheyne"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -4239,8 +4431,7 @@ skos:Concept a rdfs:Class;
       foaf:name "AWV"
     ];
     foaf:firstName "Lieven";
-    foaf:lastName "Duchateau";
-    foaf:mbox <mailto:lieven.duchateau@mow.vlaanderen.be>
+    foaf:lastName "Duchateau"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -4248,8 +4439,7 @@ skos:Concept a rdfs:Class;
       foaf:name "AWV"
     ];
     foaf:firstName "Kris";
-    foaf:lastName "Dhondt";
-    foaf:mbox <mailto:kris.dhondt@mow.vlaanderen.be>
+    foaf:lastName "Dhondt"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -4257,8 +4447,7 @@ skos:Concept a rdfs:Class;
       foaf:name "Vlaanderen Connect"
     ];
     foaf:firstName "Anthony";
-    foaf:lastName "Dewulf";
-    foaf:mbox <mailto:anthony.dewulf@mow.vlaanderen.be>
+    foaf:lastName "Dewulf"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -4266,8 +4455,7 @@ skos:Concept a rdfs:Class;
       foaf:name "AWV"
     ];
     foaf:firstName "Bram";
-    foaf:lastName "Dewil";
-    foaf:mbox <mailto:Bram.Dewil@mow.vlaanderen.be>
+    foaf:lastName "Dewil"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -4275,8 +4463,7 @@ skos:Concept a rdfs:Class;
       foaf:name "VlaWeBo"
     ];
     foaf:firstName "Eli";
-    foaf:lastName "Desmedt";
-    foaf:mbox <mailto:eli.desmedt@confederatiebouw.be>
+    foaf:lastName "Desmedt"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -4284,8 +4471,7 @@ skos:Concept a rdfs:Class;
       foaf:name "AWV"
     ];
     foaf:firstName "Tom";
-    foaf:lastName "Deschilder";
-    foaf:mbox <mailto:Tom.Deschilder@mow.vlaanderen.be>
+    foaf:lastName "Deschilder"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -4293,8 +4479,7 @@ skos:Concept a rdfs:Class;
       foaf:name "AWV"
     ];
     foaf:firstName "Joachim";
-    foaf:lastName "Dero";
-    foaf:mbox <mailto:Joachim.Dero@mow.vlaanderen.be>
+    foaf:lastName "Dero"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -4302,8 +4487,7 @@ skos:Concept a rdfs:Class;
       foaf:name "AWV"
     ];
     foaf:firstName "Veerle";
-    foaf:lastName "Delcourt";
-    foaf:mbox <mailto:veerle.delcourt@mow.vlaanderen.be>
+    foaf:lastName "Delcourt"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -4311,8 +4495,7 @@ skos:Concept a rdfs:Class;
       foaf:name "AWV"
     ];
     foaf:firstName "Katrien";
-    foaf:lastName "Decock";
-    foaf:mbox <mailto:Katrien.Decock@mow.vlaanderen.be>
+    foaf:lastName "Decock"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -4320,8 +4503,7 @@ skos:Concept a rdfs:Class;
       foaf:name "AIV"
     ];
     foaf:firstName "Liesbet";
-    foaf:lastName "De wolf";
-    foaf:mbox <mailto:liesbet.dewolf@kb.vlaanderen.be>
+    foaf:lastName "De wolf"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -4329,8 +4511,7 @@ skos:Concept a rdfs:Class;
       foaf:name "VMM"
     ];
     foaf:firstName "Koen";
-    foaf:lastName "De Witte";
-    foaf:mbox <mailto:K.DeWitte@vmm.be>
+    foaf:lastName "De Witte"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -4338,8 +4519,7 @@ skos:Concept a rdfs:Class;
       foaf:name "AWV"
     ];
     foaf:firstName "Karen";
-    foaf:lastName "De Winne";
-    foaf:mbox <mailto:karen.dewinne@mow.vlaanderen.be>
+    foaf:lastName "De Winne"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -4347,8 +4527,7 @@ skos:Concept a rdfs:Class;
       foaf:name "VMSW"
     ];
     foaf:firstName "Theo";
-    foaf:lastName "De Vos";
-    foaf:mbox <mailto:theo.devos@vmsw.be>
+    foaf:lastName "De Vos"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -4356,8 +4535,7 @@ skos:Concept a rdfs:Class;
       foaf:name "Arcadis"
     ];
     foaf:firstName "Geert";
-    foaf:lastName "De Smedt";
-    foaf:mbox <mailto:geert.desmedt@arcadis.com>
+    foaf:lastName "De Smedt"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -4365,8 +4543,7 @@ skos:Concept a rdfs:Class;
       foaf:name "Natuur en Bos"
     ];
     foaf:firstName "Carl";
-    foaf:lastName "De Schepper";
-    foaf:mbox <mailto:carl.deschepper@vlaanderen.be>
+    foaf:lastName "De Schepper"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -4374,8 +4551,7 @@ skos:Concept a rdfs:Class;
       foaf:name "VMSW"
     ];
     foaf:firstName "Marcel";
-    foaf:lastName "De Brael";
-    foaf:mbox <mailto:marcel.debrael@vmsw.be>
+    foaf:lastName "De Brael"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -4383,8 +4559,7 @@ skos:Concept a rdfs:Class;
       foaf:name "AWV"
     ];
     foaf:firstName "Erik";
-    foaf:lastName "De Bisschop";
-    foaf:mbox <mailto:Erik.DeBisschop@mow.vlaanderen.be>
+    foaf:lastName "De Bisschop"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -4392,8 +4567,7 @@ skos:Concept a rdfs:Class;
       foaf:name "AWV"
     ];
     foaf:firstName "Wim";
-    foaf:lastName "Danheel";
-    foaf:mbox <mailto:Wim.Danheel@mow.vlaanderen.be>
+    foaf:lastName "Danheel"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -4401,8 +4575,7 @@ skos:Concept a rdfs:Class;
       foaf:name "AWV"
     ];
     foaf:firstName "Johan";
-    foaf:lastName "Dalins";
-    foaf:mbox <mailto:Johan.Dalins@mow.vlaanderen.be>
+    foaf:lastName "Dalins"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -4410,8 +4583,7 @@ skos:Concept a rdfs:Class;
       foaf:name "AWV"
     ];
     foaf:firstName "Sammy";
-    foaf:lastName "Dalewyn";
-    foaf:mbox <mailto:sammy.dalewyn@mow.vlaanderen.be>
+    foaf:lastName "Dalewyn"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -4419,8 +4591,7 @@ skos:Concept a rdfs:Class;
       foaf:name "VMSW"
     ];
     foaf:firstName "Johan";
-    foaf:lastName "Criquielion";
-    foaf:mbox <mailto:johan.criquielion@vmsw.be>
+    foaf:lastName "Criquielion"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -4428,8 +4599,7 @@ skos:Concept a rdfs:Class;
       foaf:name "AWV"
     ];
     foaf:firstName "Kathy";
-    foaf:lastName "Courtens";
-    foaf:mbox <mailto:kathy.courtens@mow.vlaanderen.be>
+    foaf:lastName "Courtens"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -4437,8 +4607,7 @@ skos:Concept a rdfs:Class;
       foaf:name "AWV"
     ];
     foaf:firstName "Jan";
-    foaf:lastName "Couck";
-    foaf:mbox <mailto:Jan.Couck@mow.vlaanderen.be>
+    foaf:lastName "Couck"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -4446,8 +4615,7 @@ skos:Concept a rdfs:Class;
       foaf:name "AWV"
     ];
     foaf:firstName "Kristof";
-    foaf:lastName "Coppens";
-    foaf:mbox <mailto:Kristof.Coppens@mow.vlaanderen.be>
+    foaf:lastName "Coppens"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -4455,8 +4623,7 @@ skos:Concept a rdfs:Class;
       foaf:name "Willemen Infra"
     ];
     foaf:firstName "Frank";
-    foaf:lastName "Christianen";
-    foaf:mbox <mailto:frank.christianen@willemeninfra.be>
+    foaf:lastName "Christianen"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -4464,8 +4631,7 @@ skos:Concept a rdfs:Class;
       foaf:name "AWV"
     ];
     foaf:firstName "Kurt";
-    foaf:lastName "Ceulemans";
-    foaf:mbox <mailto:kurt.ceulemans@mow.vlaanderen.be>
+    foaf:lastName "Ceulemans"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -4473,8 +4639,7 @@ skos:Concept a rdfs:Class;
       foaf:name "AWV"
     ];
     foaf:firstName "Ann";
-    foaf:lastName "Buytaert";
-    foaf:mbox <mailto:Ann.Buytaert@mow.vlaanderen.be>
+    foaf:lastName "Buytaert"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -4482,8 +4647,7 @@ skos:Concept a rdfs:Class;
       foaf:name "Geonius"
     ];
     foaf:firstName "Jordy";
-    foaf:lastName "Brouwers";
-    foaf:mbox <mailto:j.brouwers@geonius.nl>
+    foaf:lastName "Brouwers"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -4491,8 +4655,7 @@ skos:Concept a rdfs:Class;
       foaf:name "AWV"
     ];
     foaf:firstName "Boudewijn";
-    foaf:lastName "Broodcoorens";
-    foaf:mbox <mailto:Boudewijn.Broodcoorens@mow.vlaanderen.be>
+    foaf:lastName "Broodcoorens"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -4500,8 +4663,7 @@ skos:Concept a rdfs:Class;
       foaf:name "AWV"
     ];
     foaf:firstName "Margo";
-    foaf:lastName "Briessinck";
-    foaf:mbox <mailto:Margo.Briessinck@mow.vlaanderen.be>
+    foaf:lastName "Briessinck"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -4509,8 +4671,7 @@ skos:Concept a rdfs:Class;
       foaf:name "AWV"
     ];
     foaf:firstName "Jan";
-    foaf:lastName "Bosmans";
-    foaf:mbox <mailto:jan.bosmans@mow.vlaanderen.be>
+    foaf:lastName "Bosmans"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -4518,8 +4679,7 @@ skos:Concept a rdfs:Class;
       foaf:name "MOW"
     ];
     foaf:firstName "Sophie";
-    foaf:lastName "Bordere";
-    foaf:mbox <mailto:Sophie.Bordere@mow.vlaanderen.be>
+    foaf:lastName "Bordere"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -4527,8 +4687,7 @@ skos:Concept a rdfs:Class;
       foaf:name "AWV"
     ];
     foaf:firstName "Hans";
-    foaf:lastName "Bonte";
-    foaf:mbox <mailto:hans.bonte@mow.vlaanderen.be>
+    foaf:lastName "Bonte"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -4536,8 +4695,7 @@ skos:Concept a rdfs:Class;
       foaf:name "AWV"
     ];
     foaf:firstName "Natasha";
-    foaf:lastName "Blommaert";
-    foaf:mbox <mailto:Natasha.Blommaert@mow.vlaanderen.be>
+    foaf:lastName "Blommaert"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -4545,8 +4703,7 @@ skos:Concept a rdfs:Class;
       foaf:name "AWV"
     ];
     foaf:firstName "Koen";
-    foaf:lastName "Beuckels";
-    foaf:mbox <mailto:koen.beuckels@mow.vlaanderen.be>
+    foaf:lastName "Beuckels"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -4554,8 +4711,7 @@ skos:Concept a rdfs:Class;
       foaf:name "AWV"
     ];
     foaf:firstName "Carine";
-    foaf:lastName "Berre";
-    foaf:mbox <mailto:carine.berre@mow.vlaanderen.be>
+    foaf:lastName "Berre"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -4563,8 +4719,7 @@ skos:Concept a rdfs:Class;
       foaf:name "VMM"
     ];
     foaf:firstName "Katia";
-    foaf:lastName "Beringhs";
-    foaf:mbox <mailto:K.Beringhs@vmm.be>
+    foaf:lastName "Beringhs"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -4572,8 +4727,7 @@ skos:Concept a rdfs:Class;
       foaf:name "Geosolutions"
     ];
     foaf:firstName "Bernard";
-    foaf:lastName "Baetens";
-    foaf:mbox <mailto:bernard.baetens@geosolutions.be>
+    foaf:lastName "Baetens"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -4581,8 +4735,7 @@ skos:Concept a rdfs:Class;
       foaf:name "Dynniq"
     ];
     foaf:firstName "Danny";
-    foaf:lastName "Asselman";
-    foaf:mbox <mailto:danny.asselman@dynniq.be>
+    foaf:lastName "Asselman"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -4590,8 +4743,7 @@ skos:Concept a rdfs:Class;
       foaf:name "AWV"
     ];
     foaf:firstName "Mustafa";
-    foaf:lastName "Aktas";
-    foaf:mbox <mailto:Mustafa.Aktas@mow.vlaanderen.be>
+    foaf:lastName "Aktas"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -4599,8 +4751,7 @@ skos:Concept a rdfs:Class;
       foaf:name "AWV"
     ];
     foaf:firstName "Kris";
-    foaf:lastName "Aernout";
-    foaf:mbox <mailto:kris.aernout@mow.vlaanderen.be>
+    foaf:lastName "Aernout"
   ];
   dc:issued "TODO";
   dc:license "https://data.vlaanderen.be/id/licentie/modellicentie-gratis-hergebruik/v1.0",
@@ -4618,8 +4769,7 @@ skos:Concept a rdfs:Class;
       foaf:name "AWV"
     ];
     foaf:firstName "Raf";
-    foaf:lastName "Vanlathem";
-    foaf:mbox <mailto:raf.vanlathem@mow.vlaanderen.be>
+    foaf:lastName "Vanlathem"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -4627,8 +4777,7 @@ skos:Concept a rdfs:Class;
       foaf:name "2m@BIT"
     ];
     foaf:firstName "Davy";
-    foaf:lastName "Vanhoudt";
-    foaf:mbox <mailto:Davy.Vanhoudt@outlook.be>
+    foaf:lastName "Vanhoudt"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -4636,8 +4785,7 @@ skos:Concept a rdfs:Class;
       foaf:name "Swecobelgium"
     ];
     foaf:firstName "Arno";
-    foaf:lastName "VanDyck";
-    foaf:mbox <mailto:Arno.vandyck@swecobelgium.be>
+    foaf:lastName "VanDyck"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -4645,8 +4793,7 @@ skos:Concept a rdfs:Class;
       foaf:name "Swecobelgium"
     ];
     foaf:firstName "Ricardo";
-    foaf:lastName "Sousa";
-    foaf:mbox <mailto:Ricardo.Sousa@swecobelgium.be>
+    foaf:lastName "Sousa"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -4654,8 +4801,7 @@ skos:Concept a rdfs:Class;
       foaf:name "ACPartners"
     ];
     foaf:firstName "Joost";
-    foaf:lastName "De Weghe";
-    foaf:mbox <mailto:deweghejoost@gmail.com>
+    foaf:lastName "De Weghe"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -4663,8 +4809,7 @@ skos:Concept a rdfs:Class;
       foaf:name "Geonius"
     ];
     foaf:firstName "Jordy";
-    foaf:lastName "Brouwers";
-    foaf:mbox <mailto:j.brouwers@geonius.be>
+    foaf:lastName "Brouwers"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -4672,8 +4817,7 @@ skos:Concept a rdfs:Class;
       foaf:name "MB"
     ];
     foaf:firstName "Maxim";
-    foaf:lastName "Broos";
-    foaf:mbox <mailto:hello@maximbroos.com>
+    foaf:lastName "Broos"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -4681,6 +4825,5 @@ skos:Concept a rdfs:Class;
       foaf:name "Geosolutions"
     ];
     foaf:firstName "Simon";
-    foaf:lastName "Baert";
-    foaf:mbox <mailto:simon.baert@geosolutions.be>
+    foaf:lastName "Baert"
   ] .

@@ -1,0 +1,5209 @@
+{
+  "@context": {
+    "affiliation": {
+      "@id": "http://schema.org/affiliation"
+    },
+    "authors": {
+      "@id": "foaf:maker",
+      "@type": "foaf:Person"
+    },
+    "classes": {
+      "@reverse": "rdfs:isDefinedBy"
+    },
+    "contributors": {
+      "@id": "dcterms:contributor",
+      "@type": "foaf:Person"
+    },
+    "datatypes": {
+      "@reverse": "rdfs:isDefinedBy"
+    },
+    "dcat": "http://www.w3.org/ns/dcat#",
+    "dcterms": "http://purl.org/dc/terms/",
+    "domain": {
+      "@id": "rdfs:domain"
+    },
+    "editors": {
+      "@id": "rec:editor",
+      "@type": "foaf:Person"
+    },
+    "externals": {
+      "@id": "rdfs:seeAlso",
+      "@type": "http://www.w3.org/2000/01/rdf-schema#Class"
+    },
+    "foaf": "http://xmlns.com/foaf/0.1/",
+    "generalization": {
+      "@id": "rdfs:subPropertyOf"
+    },
+    "issued": {
+      "@id": "dcterms:issued"
+    },
+    "label": {
+      "@container": "@language",
+      "@id": "rdfs:label"
+    },
+    "maxCardinality": {
+      "@id": "sh:maxCount"
+    },
+    "minCardinality": {
+      "@id": "sh:minCount"
+    },
+    "modified": {
+      "@id": "dcterms:modified",
+      "@type": "xsd:date"
+    },
+    "name": {
+      "@id": "rdfs:label"
+    },
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "person": "http://www.w3.org/ns/person#",
+    "properties": {
+      "@reverse": "rdfs:isDefinedBy"
+    },
+    "qb": "http://purl.org/linked-data/cube#",
+    "range": {
+      "@id": "rdfs:range"
+    },
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "rec": "http://www.w3.org/2001/02pd/rec54#",
+    "sdmx-attribute": "http://purl.org/linked-data/sdmx/2009/attribute#",
+    "sdmx-concept": "http://purl.org/linked-data/sdmx/2009/concept#",
+    "sdmx-dimension": "http://purl.org/linked-data/sdmx/2009/dimension#",
+    "sh": "http://w3.org/ns/shacl#",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "vann": "http://purl.org/vocab/vann/",
+    "vlaanderen": "http://data.vlaanderen.be/ns/",
+    "void": "http://rdfs.org/ns/void#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie-vlag",
+  "@type": "http://www.w3.org/2002/07/owl#Ontology",
+  "authors": [
+    {
+      "@type": "foaf:Person",
+      "affiliation": {
+        "foaf:homepage": "http://wegenenverkeer.be/",
+        "foaf:name": "AWV"
+      },
+      "foaf:firstName": "Raf",
+      "foaf:lastName": "Vanlathem"
+    },
+    {
+      "@type": "foaf:Person",
+      "affiliation": {
+        "foaf:homepage": "https://www.linkedin.com/in/davy-vanhoudt-447082138/?originalSubdomain=be",
+        "foaf:name": "2m@BIT"
+      },
+      "foaf:firstName": "Davy",
+      "foaf:lastName": "Vanhoudt"
+    },
+    {
+      "@type": "foaf:Person",
+      "affiliation": {
+        "foaf:homepage": "http://swecobelgium.be/",
+        "foaf:name": "Swecobelgium"
+      },
+      "foaf:firstName": "Arno",
+      "foaf:lastName": "VanDyck"
+    },
+    {
+      "@type": "foaf:Person",
+      "affiliation": {
+        "foaf:homepage": "http://swecobelgium.be/",
+        "foaf:name": "Swecobelgium"
+      },
+      "foaf:firstName": "Ricardo",
+      "foaf:lastName": "Sousa"
+    },
+    {
+      "@type": "foaf:Person",
+      "affiliation": {
+        "foaf:homepage": "http://www.acpartners.be/",
+        "foaf:name": "ACPartners"
+      },
+      "foaf:firstName": "Joost",
+      "foaf:lastName": "De Weghe"
+    },
+    {
+      "@type": "foaf:Person",
+      "affiliation": {
+        "foaf:homepage": "https://www.geonius.be/",
+        "foaf:name": "Geonius"
+      },
+      "foaf:firstName": "Jordy",
+      "foaf:lastName": "Brouwers"
+    },
+    {
+      "@type": "foaf:Person",
+      "affiliation": {
+        "foaf:homepage": "http://maximbroos.com/",
+        "foaf:name": "MB"
+      },
+      "foaf:firstName": "Maxim",
+      "foaf:lastName": "Broos"
+    },
+    {
+      "@type": "foaf:Person",
+      "affiliation": {
+        "foaf:homepage": "http://wegenenverkeer.be/",
+        "foaf:name": "Geosolutions"
+      },
+      "foaf:firstName": "Simon",
+      "foaf:lastName": "Baert"
+    }
+  ],
+  "branchtag": "a0b027e443aa08b307cd6f4ba733a16db6627bdf",
+  "classes": [
+    {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie-vlag#AanzichtVerkeersbordopstelling",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
+      "EA-Guid": "{BB36E481-C1B8-43d1-A6C4-969C984A6D4C}",
+      "definition": {
+        "nl": "Een aanzicht van een verkeersbordopstelling is de verzameling van één of meerdere verkeersborden en hun bijbehorende ondersteunende elementen,zoals palen en eventuele onderborden, zoals deze zichtbaar zijn vanuit een specifieke kijkhoek of positie in de verkeerssituatie. Het aanzicht biedt inzicht in de ruimtelijke indeling, plaatsing en zichtbaarheid van de verkeersborden ten opzichte van de weggebruikers."
+      },
+      "definition-nl": {
+        "nl": "Een aanzicht van een verkeersbordopstelling is de verzameling van één of meerdere verkeersborden en hun bijbehorende ondersteunende elementen,zoals palen en eventuele onderborden, zoals deze zichtbaar zijn vanuit een specifieke kijkhoek of positie in de verkeerssituatie. Het aanzicht biedt inzicht in de ruimtelijke indeling, plaatsing en zichtbaarheid van de verkeersborden ten opzichte van de weggebruikers."
+      },
+      "extra": {
+        "EA-Guid": "{BB36E481-C1B8-43d1-A6C4-969C984A6D4C}",
+        "EA-Name": "AanzichtVerkeersbordopstelling",
+        "EA-Package": "OSLO-Installatie",
+        "EA-Parents": "",
+        "EA-Parents2": [
+          {
+            "label": "AIM naam object",
+            "name": "AIMNaamObject",
+            "package": "OSLO-Implementatieelement",
+            "uri": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#AIMNaamObject"
+          }
+        ],
+        "EA-Type": "CLASS",
+        "RawTags": [
+          {
+            "key": "beheerstatus",
+            "note": "Values: Nieuw,Gepubliceerd,InVerwerking,UitGebruik,Vervangen,Geconsolideerd,UitGebruikGeconsolideerd,NieuwGeconsolideerd,NieuwUitGebruik\r\nDefault: Nieuw\r\n",
+            "value": "Nieuw"
+          },
+          {
+            "key": "creatie",
+            "note": "null",
+            "value": "2024Q4."
+          },
+          {
+            "key": "definition-nl",
+            "note": "Een aanzicht van een verkeersbordopstelling is de verzameling van één of meerdere verkeersborden en hun bijbehorende ondersteunende elementen,zoals palen en eventuele onderborden, zoals deze zichtbaar zijn vanuit een specifieke kijkhoek of positie in de verkeerssituatie. Het aanzicht biedt inzicht in de ruimtelijke indeling, plaatsing en zichtbaarheid van de verkeersborden ten opzichte van de weggebruikers.",
+            "value": "NOTE"
+          },
+          {
+            "key": "deprecated",
+            "note": "Values: false,true\r\nDefault: false\r\n",
+            "value": "false"
+          },
+          {
+            "key": "label-nl",
+            "note": "null",
+            "value": "Aanzicht verkeersbordopstelling"
+          },
+          {
+            "key": "uri",
+            "note": "null",
+            "value": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie-vlag#AanzichtVerkeersbordopstelling"
+          },
+          {
+            "key": "usageNote-nl",
+            "note": "null",
+            "value": "Geometrie van AanzichtVerkeersbordopstelling heeft betrekking op de kaart voorstelling in de verkeersbordenapplicatie en heeft niets te maken met de fysieke positie."
+          }
+        ],
+        "Scope": "FULL_DEFINITON",
+        "definition": {
+          "nl": "Een aanzicht van een verkeersbordopstelling is de verzameling van één of meerdere verkeersborden en hun bijbehorende ondersteunende elementen,zoals palen en eventuele onderborden, zoals deze zichtbaar zijn vanuit een specifieke kijkhoek of positie in de verkeerssituatie. Het aanzicht biedt inzicht in de ruimtelijke indeling, plaatsing en zichtbaarheid van de verkeersborden ten opzichte van de weggebruikers."
+        },
+        "definition-en": "",
+        "definition-nl": {
+          "nl": "Een aanzicht van een verkeersbordopstelling is de verzameling van één of meerdere verkeersborden en hun bijbehorende ondersteunende elementen,zoals palen en eventuele onderborden, zoals deze zichtbaar zijn vanuit een specifieke kijkhoek of positie in de verkeerssituatie. Het aanzicht biedt inzicht in de ruimtelijke indeling, plaatsing en zichtbaarheid van de verkeersborden ten opzichte van de weggebruikers."
+        },
+        "equivalent": "",
+        "label": {
+          "nl": "Aanzicht verkeersbordopstelling"
+        },
+        "label-en": "",
+        "label-nl": {
+          "nl": "Aanzicht verkeersbordopstelling"
+        },
+        "parentclasses": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#AIMNaamObject",
+        "sameAs": "",
+        "subclass": "",
+        "subclass1": "",
+        "usage": {
+          "nl": "Geometrie van AanzichtVerkeersbordopstelling heeft betrekking op de kaart voorstelling in de verkeersbordenapplicatie en heeft niets te maken met de fysieke positie."
+        },
+        "usageNote-en": "",
+        "usageNote-nl": {
+          "nl": "Geometrie van AanzichtVerkeersbordopstelling heeft betrekking op de kaart voorstelling in de verkeersbordenapplicatie en heeft niets te maken met de fysieke positie."
+        }
+      },
+      "inpackage": "ACTIVE_PACKAGE",
+      "label": {
+        "nl": "Aanzicht verkeersbordopstelling"
+      },
+      "label-nl": {
+        "nl": "Aanzicht verkeersbordopstelling"
+      },
+      "name": "Aanzicht verkeersbordopstelling",
+      "parents": [
+        "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#AIMNaamObject"
+      ],
+      "usage": {
+        "nl": "Geometrie van AanzichtVerkeersbordopstelling heeft betrekking op de kaart voorstelling in de verkeersbordenapplicatie en heeft niets te maken met de fysieke positie."
+      },
+      "usageNote-nl": {
+        "nl": "Geometrie van AanzichtVerkeersbordopstelling heeft betrekking op de kaart voorstelling in de verkeersbordenapplicatie en heeft niets te maken met de fysieke positie."
+      }
+    },
+    {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie-vlag#DtcAardingsstelsel",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
+      "EA-Guid": "{A53A6A8D-E3DF-4172-AE29-9DBD83A5C2A1}",
+      "definition": {
+        "nl": "Complex datatype dat het mogelijk maakt om het attest van de distributienetbeheerder toe te voegen in het geval van een globaal aardingsstelsel."
+      },
+      "definition-nl": {
+        "nl": "Complex datatype dat het mogelijk maakt om het attest van de distributienetbeheerder toe te voegen in het geval van een globaal aardingsstelsel."
+      },
+      "extra": {
+        "EA-Guid": "{A53A6A8D-E3DF-4172-AE29-9DBD83A5C2A1}",
+        "EA-Name": "DtcAardingsstelsel",
+        "EA-Package": "OSLO-Installatie",
+        "EA-Parents": "",
+        "EA-Parents2": [],
+        "EA-Type": "DATATYPE",
+        "RawTags": [
+          {
+            "key": "beheerstatus",
+            "note": "Values: Nieuw,Gepubliceerd,InVerwerking,UitGebruik,Vervangen,Geconsolideerd,UitGebruikGeconsolideerd,NieuwGeconsolideerd,NieuwUitGebruik\r\nDefault: Nieuw\r\n",
+            "value": "Gepubliceerd"
+          },
+          {
+            "key": "creatie",
+            "note": "null",
+            "value": "2.4.0-RC1.254"
+          },
+          {
+            "key": "definition-nl",
+            "note": "null",
+            "value": "Complex datatype dat het mogelijk maakt om het attest van de distributienetbeheerder toe te voegen in het geval van een globaal aardingsstelsel."
+          },
+          {
+            "key": "laatstGewijzigd",
+            "note": "null",
+            "value": "2.4.0-RC1.254"
+          },
+          {
+            "key": "label-nl",
+            "note": "null",
+            "value": "Aardingsstelsel details."
+          },
+          {
+            "key": "uri",
+            "note": "null",
+            "value": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie-vlag#DtcAardingsstelsel"
+          },
+          {
+            "key": "usageNote-nl",
+            "note": "null",
+            "value": "Het attest is enkel vereist voor globale aardingsstelsels. Voor gescheiden aardinsstelsel kanhet attribuut attestDNB leeg blijven."
+          },
+          {
+            "key": "usagenote-nl",
+            "note": "null",
+            "value": "Het attest is enkel vereist voor globale aardingsstelsels. Voor gescheiden aardinsstelsel kanhet attribuut attestDNB leeg blijven."
+          }
+        ],
+        "Scope": "FULL_DEFINITON",
+        "definition": {
+          "nl": "Complex datatype dat het mogelijk maakt om het attest van de distributienetbeheerder toe te voegen in het geval van een globaal aardingsstelsel."
+        },
+        "definition-en": "",
+        "definition-nl": {
+          "nl": "Complex datatype dat het mogelijk maakt om het attest van de distributienetbeheerder toe te voegen in het geval van een globaal aardingsstelsel."
+        },
+        "equivalent": "",
+        "label": {
+          "nl": "Aardingsstelsel details."
+        },
+        "label-en": "",
+        "label-nl": {
+          "nl": "Aardingsstelsel details."
+        },
+        "parentclasses": "",
+        "sameAs": "",
+        "subclass": "",
+        "subclass1": "",
+        "usage": {
+          "nl": "Het attest is enkel vereist voor globale aardingsstelsels. Voor gescheiden aardinsstelsel kanhet attribuut attestDNB leeg blijven."
+        },
+        "usageNote-en": "",
+        "usageNote-nl": {
+          "nl": "Het attest is enkel vereist voor globale aardingsstelsels. Voor gescheiden aardinsstelsel kanhet attribuut attestDNB leeg blijven."
+        }
+      },
+      "inpackage": "ACTIVE_PACKAGE",
+      "label": {
+        "nl": "Aardingsstelsel details."
+      },
+      "label-nl": {
+        "nl": "Aardingsstelsel details."
+      },
+      "name": "Aardingsstelsel details.",
+      "parents": [],
+      "usage": {
+        "nl": "Het attest is enkel vereist voor globale aardingsstelsels. Voor gescheiden aardinsstelsel kanhet attribuut attestDNB leeg blijven."
+      },
+      "usageNote-nl": {
+        "nl": "Het attest is enkel vereist voor globale aardingsstelsels. Voor gescheiden aardinsstelsel kanhet attribuut attestDNB leeg blijven."
+      }
+    },
+    {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie-vlag#DtcBurgerlijkeKlasseBrug",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
+      "EA-Guid": "{01000B9F-4296-4b19-8B22-D699BDA5E025}",
+      "definition": {
+        "nl": "Complex datatype om de burgerlijke klasse van een brug te bepalen."
+      },
+      "definition-nl": {
+        "nl": "Complex datatype om de burgerlijke klasse van een brug te bepalen."
+      },
+      "extra": {
+        "EA-Guid": "{01000B9F-4296-4b19-8B22-D699BDA5E025}",
+        "EA-Name": "DtcBurgerlijkeKlasseBrug",
+        "EA-Package": "OSLO-Installatie",
+        "EA-Parents": "",
+        "EA-Parents2": [],
+        "EA-Type": "DATATYPE",
+        "RawTags": [
+          {
+            "key": "beheerstatus",
+            "note": "Values: Nieuw,Gepubliceerd,InVerwerking,UitGebruik,Vervangen,Geconsolideerd,UitGebruikGeconsolideerd,NieuwGeconsolideerd,NieuwUitGebruik\r\nDefault: Nieuw\r\n",
+            "value": "Gepubliceerd"
+          },
+          {
+            "key": "creatie",
+            "note": "null",
+            "value": "2.5.0-RC2.287"
+          },
+          {
+            "key": "definition-nl",
+            "note": "null",
+            "value": "Complex datatype om de burgerlijke klasse van een brug te bepalen."
+          },
+          {
+            "key": "laatstGewijzigd",
+            "note": "null",
+            "value": "2.5.0-RC2.287"
+          },
+          {
+            "key": "label-nl",
+            "note": "null",
+            "value": "Burgerlijke klasse brug"
+          },
+          {
+            "key": "uri",
+            "note": "null",
+            "value": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie-vlag#DtcBurgerlijkeKlasseBrug"
+          }
+        ],
+        "Scope": "FULL_DEFINITON",
+        "definition": {
+          "nl": "Complex datatype om de burgerlijke klasse van een brug te bepalen."
+        },
+        "definition-en": "",
+        "definition-nl": {
+          "nl": "Complex datatype om de burgerlijke klasse van een brug te bepalen."
+        },
+        "equivalent": "",
+        "label": {
+          "nl": "Burgerlijke klasse brug"
+        },
+        "label-en": "",
+        "label-nl": {
+          "nl": "Burgerlijke klasse brug"
+        },
+        "parentclasses": "",
+        "sameAs": "",
+        "subclass": "",
+        "subclass1": "",
+        "usage": "",
+        "usageNote-en": "",
+        "usageNote-nl": ""
+      },
+      "inpackage": "ACTIVE_PACKAGE",
+      "label": {
+        "nl": "Burgerlijke klasse brug"
+      },
+      "label-nl": {
+        "nl": "Burgerlijke klasse brug"
+      },
+      "name": "Burgerlijke klasse brug",
+      "parents": []
+    },
+    {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie-vlag#DtcDVWtoelaatbareSchipsafemetingen",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
+      "EA-Guid": "{F69E1469-08F4-4240-8379-859F91D670B9}",
+      "definition": {
+        "nl": "Complexe datatype om de toelaatbare schipsafmetingen bij te houden."
+      },
+      "definition-nl": {
+        "nl": "Complexe datatype om de toelaatbare schipsafmetingen bij te houden."
+      },
+      "extra": {
+        "EA-Guid": "{F69E1469-08F4-4240-8379-859F91D670B9}",
+        "EA-Name": "DtcDVWtoelaatbareSchipsafemetingen",
+        "EA-Package": "OSLO-Installatie",
+        "EA-Parents": "",
+        "EA-Parents2": [],
+        "EA-Type": "DATATYPE",
+        "RawTags": [
+          {
+            "key": "beheerstatus",
+            "note": "Values: Nieuw,Gepubliceerd,InVerwerking,UitGebruik,Vervangen,Geconsolideerd,UitGebruikGeconsolideerd,NieuwGeconsolideerd,NieuwUitGebruik\r\nDefault: Nieuw\r\n",
+            "value": "Gepubliceerd"
+          },
+          {
+            "key": "creatie",
+            "note": "null",
+            "value": "2.12.0-RC2.516"
+          },
+          {
+            "key": "definition-nl",
+            "note": "Complexe datatype om de toelaatbare schipsafmetingen bij te houden. ",
+            "value": "Complexe datatype om de toelaatbare schipsafmetingen bij te houden."
+          },
+          {
+            "key": "laatstGewijzigd",
+            "note": "null",
+            "value": "2.12.0-RC2.516"
+          },
+          {
+            "key": "label-nl",
+            "note": "null",
+            "value": "Toelaatbare schipsafmetingen"
+          },
+          {
+            "key": "uri",
+            "note": "null",
+            "value": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie-vlag#DtcDVWtoelaatbareSchipsafemetingen"
+          }
+        ],
+        "Scope": "FULL_DEFINITON",
+        "definition": {
+          "nl": "Complexe datatype om de toelaatbare schipsafmetingen bij te houden."
+        },
+        "definition-en": "",
+        "definition-nl": {
+          "nl": "Complexe datatype om de toelaatbare schipsafmetingen bij te houden."
+        },
+        "equivalent": "",
+        "label": {
+          "nl": "Toelaatbare schipsafmetingen"
+        },
+        "label-en": "",
+        "label-nl": {
+          "nl": "Toelaatbare schipsafmetingen"
+        },
+        "parentclasses": "",
+        "sameAs": "",
+        "subclass": "",
+        "subclass1": "",
+        "usage": "",
+        "usageNote-en": "",
+        "usageNote-nl": ""
+      },
+      "inpackage": "ACTIVE_PACKAGE",
+      "label": {
+        "nl": "Toelaatbare schipsafmetingen"
+      },
+      "label-nl": {
+        "nl": "Toelaatbare schipsafmetingen"
+      },
+      "name": "Toelaatbare schipsafmetingen",
+      "parents": []
+    },
+    {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie-vlag#DtcMeteoFoto",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
+      "EA-Guid": "{AF7E4C63-26A2-4914-A7C2-79863F4704C0}",
+      "definition": {
+        "nl": "Complex datatype voor meteo gerelateerde foto's."
+      },
+      "definition-nl": {
+        "nl": "Complex datatype voor meteo gerelateerde foto's."
+      },
+      "extra": {
+        "EA-Guid": "{AF7E4C63-26A2-4914-A7C2-79863F4704C0}",
+        "EA-Name": "DtcMeteoFoto",
+        "EA-Package": "OSLO-Installatie",
+        "EA-Parents": "",
+        "EA-Parents2": [],
+        "EA-Type": "DATATYPE",
+        "RawTags": [
+          {
+            "key": "beheerstatus",
+            "note": "Values: Nieuw,Gepubliceerd,InVerwerking,UitGebruik,Vervangen,Geconsolideerd,UitGebruikGeconsolideerd,NieuwGeconsolideerd,NieuwUitGebruik\r\nDefault: Nieuw\r\n",
+            "value": "Gepubliceerd"
+          },
+          {
+            "key": "creatie",
+            "note": "null",
+            "value": "2.12.0-RC2.493"
+          },
+          {
+            "key": "definition-nl",
+            "note": "null",
+            "value": "Complex datatype voor meteo gerelateerde foto's."
+          },
+          {
+            "key": "laatstGewijzigd",
+            "note": "null",
+            "value": "2.12.0-RC2.493"
+          },
+          {
+            "key": "label-nl",
+            "note": "null",
+            "value": "Meteo foto"
+          },
+          {
+            "key": "uri",
+            "note": "null",
+            "value": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie-vlag#DtcMeteoFoto"
+          }
+        ],
+        "Scope": "FULL_DEFINITON",
+        "definition": {
+          "nl": "Complex datatype voor meteo gerelateerde foto's."
+        },
+        "definition-en": "",
+        "definition-nl": {
+          "nl": "Complex datatype voor meteo gerelateerde foto's."
+        },
+        "equivalent": "",
+        "label": {
+          "nl": "Meteo foto"
+        },
+        "label-en": "",
+        "label-nl": {
+          "nl": "Meteo foto"
+        },
+        "parentclasses": "",
+        "sameAs": "",
+        "subclass": "",
+        "subclass1": "",
+        "usage": "",
+        "usageNote-en": "",
+        "usageNote-nl": ""
+      },
+      "inpackage": "ACTIVE_PACKAGE",
+      "label": {
+        "nl": "Meteo foto"
+      },
+      "label-nl": {
+        "nl": "Meteo foto"
+      },
+      "name": "Meteo foto",
+      "parents": []
+    },
+    {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie-vlag#DtcOntwerpSchip",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
+      "EA-Guid": "{07E1FAF7-CE33-4619-876B-793F4E512A6C}",
+      "definition": {
+        "nl": "Complexe datatype om de afmetingen van het ontwerpschip bij te houden."
+      },
+      "definition-nl": {
+        "nl": "Complexe datatype om de afmetingen van het ontwerpschip bij te houden."
+      },
+      "extra": {
+        "EA-Guid": "{07E1FAF7-CE33-4619-876B-793F4E512A6C}",
+        "EA-Name": "DtcOntwerpSchip",
+        "EA-Package": "OSLO-Installatie",
+        "EA-Parents": "",
+        "EA-Parents2": [],
+        "EA-Type": "DATATYPE",
+        "RawTags": [
+          {
+            "key": "beheerstatus",
+            "note": "Values: Nieuw,Gepubliceerd,InVerwerking,UitGebruik,Vervangen,Geconsolideerd,UitGebruikGeconsolideerd,NieuwGeconsolideerd,NieuwUitGebruik\r\nDefault: Nieuw\r\n",
+            "value": "Gepubliceerd"
+          },
+          {
+            "key": "creatie",
+            "note": "null",
+            "value": "2.12.0-RC2.516"
+          },
+          {
+            "key": "definition-nl",
+            "note": "Complexe datatype om de afmetingen van het ontwerpschip bij te houden. ",
+            "value": "Complexe datatype om de afmetingen van het ontwerpschip bij te houden."
+          },
+          {
+            "key": "laatstGewijzigd",
+            "note": "null",
+            "value": "2.12.0-RC2.516"
+          },
+          {
+            "key": "label-nl",
+            "note": "null",
+            "value": "Ontwerp schip"
+          },
+          {
+            "key": "uri",
+            "note": "null",
+            "value": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie-vlag#DtcOntwerpSchip"
+          }
+        ],
+        "Scope": "FULL_DEFINITON",
+        "definition": {
+          "nl": "Complexe datatype om de afmetingen van het ontwerpschip bij te houden."
+        },
+        "definition-en": "",
+        "definition-nl": {
+          "nl": "Complexe datatype om de afmetingen van het ontwerpschip bij te houden."
+        },
+        "equivalent": "",
+        "label": {
+          "nl": "Ontwerp schip"
+        },
+        "label-en": "",
+        "label-nl": {
+          "nl": "Ontwerp schip"
+        },
+        "parentclasses": "",
+        "sameAs": "",
+        "subclass": "",
+        "subclass1": "",
+        "usage": "",
+        "usageNote-en": "",
+        "usageNote-nl": ""
+      },
+      "inpackage": "ACTIVE_PACKAGE",
+      "label": {
+        "nl": "Ontwerp schip"
+      },
+      "label-nl": {
+        "nl": "Ontwerp schip"
+      },
+      "name": "Ontwerp schip",
+      "parents": []
+    },
+    {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie-vlag#DtcTypeBWC",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
+      "EA-Guid": "{A5050CEE-B20B-4109-9DF9-ACB961E3A117}",
+      "definition": {
+        "nl": "Complex datatype om het type beweegbare waterkerende constructie aan te duiden"
+      },
+      "definition-nl": {
+        "nl": "Complex datatype om het type beweegbare waterkerende constructie aan te duiden"
+      },
+      "extra": {
+        "EA-Guid": "{A5050CEE-B20B-4109-9DF9-ACB961E3A117}",
+        "EA-Name": "DtcTypeBWC",
+        "EA-Package": "OSLO-Installatie",
+        "EA-Parents": "",
+        "EA-Parents2": [],
+        "EA-Type": "DATATYPE",
+        "RawTags": [
+          {
+            "key": "beheerstatus",
+            "note": "Values: Nieuw,Gepubliceerd,InVerwerking,UitGebruik,Vervangen,Geconsolideerd,UitGebruikGeconsolideerd,NieuwGeconsolideerd,NieuwUitGebruik\r\nDefault: Nieuw\r\n",
+            "value": "Gepubliceerd"
+          },
+          {
+            "key": "creatie",
+            "note": "null",
+            "value": "2.12.0-RC2.516"
+          },
+          {
+            "key": "definition-nl",
+            "note": "null",
+            "value": "Complex datatype om het type beweegbare waterkerende constructie aan te duiden"
+          },
+          {
+            "key": "laatstGewijzigd",
+            "note": "null",
+            "value": "2.12.0-RC2.516"
+          },
+          {
+            "key": "label-nl",
+            "note": "null",
+            "value": "Type beweegbare waterkerende constructie"
+          },
+          {
+            "key": "uri",
+            "note": "null",
+            "value": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie-vlag#DtcTypeBWC"
+          }
+        ],
+        "Scope": "FULL_DEFINITON",
+        "definition": {
+          "nl": "Complex datatype om het type beweegbare waterkerende constructie aan te duiden"
+        },
+        "definition-en": "",
+        "definition-nl": {
+          "nl": "Complex datatype om het type beweegbare waterkerende constructie aan te duiden"
+        },
+        "equivalent": "",
+        "label": {
+          "nl": "Type beweegbare waterkerende constructie"
+        },
+        "label-en": "",
+        "label-nl": {
+          "nl": "Type beweegbare waterkerende constructie"
+        },
+        "parentclasses": "",
+        "sameAs": "",
+        "subclass": "",
+        "subclass1": "",
+        "usage": "",
+        "usageNote-en": "",
+        "usageNote-nl": ""
+      },
+      "inpackage": "ACTIVE_PACKAGE",
+      "label": {
+        "nl": "Type beweegbare waterkerende constructie"
+      },
+      "label-nl": {
+        "nl": "Type beweegbare waterkerende constructie"
+      },
+      "name": "Type beweegbare waterkerende constructie",
+      "parents": []
+    }
+  ],
+  "config": "config/config-voc.json",
+  "contributors": [
+    {
+      "@type": "foaf:Person",
+      "affiliation": {
+        "foaf:homepage": "http://wegenenverkeer.be/",
+        "foaf:name": "AWV"
+      },
+      "foaf:firstName": "Julien",
+      "foaf:lastName": "Wynants"
+    },
+    {
+      "@type": "foaf:Person",
+      "affiliation": {
+        "foaf:homepage": "https://www.realdolmen.com",
+        "foaf:name": "RealDolmen"
+      },
+      "foaf:firstName": "Pim",
+      "foaf:lastName": "Wollants"
+    },
+    {
+      "@type": "foaf:Person",
+      "affiliation": {
+        "foaf:homepage": "http://wegenenverkeer.be/",
+        "foaf:name": "AWV"
+      },
+      "foaf:firstName": "Wim",
+      "foaf:lastName": "Willaert"
+    },
+    {
+      "@type": "foaf:Person",
+      "affiliation": {
+        "foaf:homepage": "http://wegenenverkeer.be/",
+        "foaf:name": "AWV"
+      },
+      "foaf:firstName": "Kristof",
+      "foaf:lastName": "Wieme"
+    },
+    {
+      "@type": "foaf:Person",
+      "affiliation": {
+        "foaf:homepage": "http://wegenenverkeer.be/",
+        "foaf:name": "AWV"
+      },
+      "foaf:firstName": "Bert",
+      "foaf:lastName": "Weyne"
+    },
+    {
+      "@type": "foaf:Person",
+      "affiliation": {
+        "foaf:homepage": "http://wegenenverkeer.be/",
+        "foaf:name": "AWV"
+      },
+      "foaf:firstName": "Eli",
+      "foaf:lastName": "Weerts"
+    },
+    {
+      "@type": "foaf:Person",
+      "affiliation": {
+        "foaf:homepage": "http://wegenenverkeer.be/",
+        "foaf:name": "AWV"
+      },
+      "foaf:firstName": "Koen",
+      "foaf:lastName": "Wardenier"
+    },
+    {
+      "@type": "foaf:Person",
+      "affiliation": {
+        "foaf:homepage": "http://wegenenverkeer.be/",
+        "foaf:name": "AWV"
+      },
+      "foaf:firstName": "Pieter",
+      "foaf:lastName": "Vrijsen"
+    },
+    {
+      "@type": "foaf:Person",
+      "affiliation": {
+        "foaf:homepage": "http://wegenenverkeer.be/",
+        "foaf:name": "AWV"
+      },
+      "foaf:firstName": "David",
+      "foaf:lastName": "Vlaminck"
+    },
+    {
+      "@type": "foaf:Person",
+      "affiliation": {
+        "foaf:homepage": "https://dynniq.com/",
+        "foaf:name": "Dynniq"
+      },
+      "foaf:firstName": "Els",
+      "foaf:lastName": "Vivijs"
+    },
+    {
+      "@type": "foaf:Person",
+      "affiliation": {
+        "foaf:homepage": "https://departement-mow.vlaanderen.be/nl/afdelingen/geotechniek",
+        "foaf:name": "MOW afdeling Geotechniek"
+      },
+      "foaf:firstName": "Leen",
+      "foaf:lastName": "Vincke"
+    },
+    {
+      "@type": "foaf:Person",
+      "affiliation": {
+        "foaf:homepage": "http://wegenenverkeer.be/",
+        "foaf:name": "AWV"
+      },
+      "foaf:firstName": "Yoeri",
+      "foaf:lastName": "Vernelen"
+    },
+    {
+      "@type": "foaf:Person",
+      "affiliation": {
+        "foaf:homepage": "https://www.jidoka.be/",
+        "foaf:name": "Jidoka"
+      },
+      "foaf:firstName": "Christopher",
+      "foaf:lastName": "Verhulst"
+    },
+    {
+      "@type": "foaf:Person",
+      "affiliation": {
+        "foaf:homepage": "http://wegenenverkeer.be/",
+        "foaf:name": "AWV"
+      },
+      "foaf:firstName": "Tim",
+      "foaf:lastName": "Verhaeghe"
+    },
+    {
+      "@type": "foaf:Person",
+      "affiliation": {
+        "foaf:homepage": "http://wegenenverkeer.be/",
+        "foaf:name": "AWV"
+      },
+      "foaf:firstName": "Frederick",
+      "foaf:lastName": "Verdonck"
+    },
+    {
+      "@type": "foaf:Person",
+      "affiliation": {
+        "foaf:homepage": "http://wegenenverkeer.be/",
+        "foaf:name": "AWV"
+      },
+      "foaf:firstName": "Arne",
+      "foaf:lastName": "Verburgh"
+    },
+    {
+      "@type": "foaf:Person",
+      "affiliation": {
+        "foaf:homepage": "https://geosolutions.be/",
+        "foaf:name": "Geosolutions"
+      },
+      "foaf:firstName": "Anouck",
+      "foaf:lastName": "Vanrykel"
+    },
+    {
+      "@type": "foaf:Person",
+      "affiliation": {
+        "foaf:homepage": "https://www.bouwunie.be/nl/",
+        "foaf:name": "Bouwunie"
+      },
+      "foaf:firstName": "Jerome",
+      "foaf:lastName": "Vanroye"
+    },
+    {
+      "@type": "foaf:Person",
+      "affiliation": {
+        "foaf:homepage": "https://pureportal.inbo.be/",
+        "foaf:name": "INBO"
+      },
+      "foaf:firstName": "Andy",
+      "foaf:lastName": "Vankerckvoorde"
+    },
+    {
+      "@type": "foaf:Person",
+      "affiliation": {
+        "foaf:homepage": "http://wegenenverkeer.be/",
+        "foaf:name": "AWV"
+      },
+      "foaf:firstName": "Alvarez",
+      "foaf:lastName": "Vanhove"
+    },
+    {
+      "@type": "foaf:Person",
+      "affiliation": {
+        "foaf:homepage": "http://wegenenverkeer.be/",
+        "foaf:name": "AWV"
+      },
+      "foaf:firstName": "Barbara",
+      "foaf:lastName": "Vanhooreweder"
+    },
+    {
+      "@type": "foaf:Person",
+      "affiliation": {
+        "foaf:homepage": "http://wegenenverkeer.be/",
+        "foaf:name": "AWV"
+      },
+      "foaf:firstName": "Peter",
+      "foaf:lastName": "Vandenhole"
+    },
+    {
+      "@type": "foaf:Person",
+      "affiliation": {
+        "foaf:homepage": "http://wegenenverkeer.be/",
+        "foaf:name": "AWV"
+      },
+      "foaf:firstName": "Freek",
+      "foaf:lastName": "Vandenbussche"
+    },
+    {
+      "@type": "foaf:Person",
+      "affiliation": {
+        "foaf:homepage": "http://wegenenverkeer.be/",
+        "foaf:name": "AWV"
+      },
+      "foaf:firstName": "Patrick",
+      "foaf:lastName": "Van den Heuvel"
+    },
+    {
+      "@type": "foaf:Person",
+      "affiliation": {
+        "foaf:homepage": "https://lantis.be/",
+        "foaf:name": "BAM NV"
+      },
+      "foaf:firstName": "Maarten",
+      "foaf:lastName": "Van de poel"
+    },
+    {
+      "@type": "foaf:Person",
+      "affiliation": {
+        "foaf:homepage": "http://wegenenverkeer.be/",
+        "foaf:name": "AWV"
+      },
+      "foaf:firstName": "Bart",
+      "foaf:lastName": "Van Vaerenberg"
+    },
+    {
+      "@type": "foaf:Person",
+      "affiliation": {
+        "foaf:homepage": "http://wegenenverkeer.be/",
+        "foaf:name": "AWV"
+      },
+      "foaf:firstName": "Pieter",
+      "foaf:lastName": "Van Nieuwerburgh"
+    },
+    {
+      "@type": "foaf:Person",
+      "affiliation": {
+        "foaf:homepage": "http://wegenenverkeer.be/",
+        "foaf:name": "AWV"
+      },
+      "foaf:firstName": "Sam",
+      "foaf:lastName": "Van Nieuwenhuyse"
+    },
+    {
+      "@type": "foaf:Person",
+      "affiliation": {
+        "foaf:homepage": "https://www.arcadis.com/en/global/",
+        "foaf:name": "Arcadis"
+      },
+      "foaf:firstName": "Ann",
+      "foaf:lastName": "Van Melkebeek"
+    },
+    {
+      "@type": "foaf:Person",
+      "affiliation": {
+        "foaf:homepage": "http://wegenenverkeer.be/",
+        "foaf:name": "AWV"
+      },
+      "foaf:firstName": "Annick",
+      "foaf:lastName": "Van Laere"
+    },
+    {
+      "@type": "foaf:Person",
+      "affiliation": {
+        "foaf:homepage": "http://wegenenverkeer.be/",
+        "foaf:name": "AWV"
+      },
+      "foaf:firstName": "Stanny",
+      "foaf:lastName": "Van Herzeele"
+    },
+    {
+      "@type": "foaf:Person",
+      "affiliation": {
+        "foaf:homepage": "http://wegenenverkeer.be/",
+        "foaf:name": "AWV"
+      },
+      "foaf:firstName": "Wouter",
+      "foaf:lastName": "Van Herck"
+    },
+    {
+      "@type": "foaf:Person",
+      "affiliation": {
+        "foaf:homepage": "http://wegenenverkeer.be/",
+        "foaf:name": "AWV"
+      },
+      "foaf:firstName": "Jan",
+      "foaf:lastName": "Van Gestel"
+    },
+    {
+      "@type": "foaf:Person",
+      "affiliation": {
+        "foaf:homepage": "http://wegenenverkeer.be/",
+        "foaf:name": "AWV"
+      },
+      "foaf:firstName": "Bert",
+      "foaf:lastName": "Van Gaver"
+    },
+    {
+      "@type": "foaf:Person",
+      "affiliation": {
+        "foaf:homepage": "http://wegenenverkeer.be/",
+        "foaf:name": "AWV"
+      },
+      "foaf:firstName": "Geert",
+      "foaf:lastName": "Van Gaever"
+    },
+    {
+      "@type": "foaf:Person",
+      "affiliation": {
+        "foaf:homepage": "http://wegenenverkeer.be/",
+        "foaf:name": "AWV"
+      },
+      "foaf:firstName": "Karl",
+      "foaf:lastName": "Van Duppen"
+    },
+    {
+      "@type": "foaf:Person",
+      "affiliation": {
+        "foaf:homepage": "https://www.vmm.be",
+        "foaf:name": "VMM"
+      },
+      "foaf:firstName": "Koen",
+      "foaf:lastName": "Van Driessen"
+    },
+    {
+      "@type": "foaf:Person",
+      "affiliation": {
+        "foaf:homepage": "https://www.techlink.be/nl/home",
+        "foaf:name": "Techlink"
+      },
+      "foaf:firstName": "Kris",
+      "foaf:lastName": "Van Dingenen"
+    },
+    {
+      "@type": "foaf:Person",
+      "affiliation": {
+        "foaf:homepage": "https://www.dov.vlaanderen.be/",
+        "foaf:name": "Departement Omgeving"
+      },
+      "foaf:firstName": "Marleen",
+      "foaf:lastName": "Van Damme"
+    },
+    {
+      "@type": "foaf:Person",
+      "affiliation": {
+        "foaf:homepage": "http://wegenenverkeer.be/",
+        "foaf:name": "AWV"
+      },
+      "foaf:firstName": "Tine",
+      "foaf:lastName": "Van Damme"
+    },
+    {
+      "@type": "foaf:Person",
+      "affiliation": {
+        "foaf:homepage": "http://wegenenverkeer.be/",
+        "foaf:name": "AWV"
+      },
+      "foaf:firstName": "Liesbeth",
+      "foaf:lastName": "Van Camp"
+    },
+    {
+      "@type": "foaf:Person",
+      "affiliation": {
+        "foaf:homepage": "http://wegenenverkeer.be/",
+        "foaf:name": "AWV"
+      },
+      "foaf:firstName": "Tom",
+      "foaf:lastName": "Van Calster"
+    },
+    {
+      "@type": "foaf:Person",
+      "affiliation": {
+        "foaf:homepage": "http://wegenenverkeer.be/",
+        "foaf:name": "AWV"
+      },
+      "foaf:firstName": "Bert",
+      "foaf:lastName": "Van Buyten"
+    },
+    {
+      "@type": "foaf:Person",
+      "affiliation": {
+        "foaf:homepage": "http://wegenenverkeer.be/",
+        "foaf:name": "AWV"
+      },
+      "foaf:firstName": "Jan",
+      "foaf:lastName": "Van Boxelaere"
+    },
+    {
+      "@type": "foaf:Person",
+      "affiliation": {
+        "foaf:homepage": "http://wegenenverkeer.be/",
+        "foaf:name": "AWV"
+      },
+      "foaf:firstName": "Patrick",
+      "foaf:lastName": "Van Acker"
+    },
+    {
+      "@type": "foaf:Person",
+      "affiliation": {
+        "foaf:homepage": "https://ixor.be/",
+        "foaf:name": "Ixor"
+      },
+      "foaf:firstName": "Christian",
+      "foaf:lastName": "Tytgat"
+    },
+    {
+      "@type": "foaf:Person",
+      "affiliation": {
+        "foaf:homepage": "https://www.arcadis.com/en/global/",
+        "foaf:name": "Arcadis"
+      },
+      "foaf:firstName": "Andrea",
+      "foaf:lastName": "Trincado Fernandez"
+    },
+    {
+      "@type": "foaf:Person",
+      "affiliation": {
+        "foaf:homepage": "https://www.vmm.be/",
+        "foaf:name": "VMM"
+      },
+      "foaf:firstName": "Philip",
+      "foaf:lastName": "Thomas"
+    },
+    {
+      "@type": "foaf:Person",
+      "affiliation": {
+        "foaf:homepage": "https://www.vmm.be/",
+        "foaf:name": "VMM"
+      },
+      "foaf:firstName": "Ivo",
+      "foaf:lastName": "Terrens"
+    },
+    {
+      "@type": "foaf:Person",
+      "affiliation": {
+        "foaf:homepage": "https://www.witas.be/nl/",
+        "foaf:name": "Witas"
+      },
+      "foaf:firstName": "Wim",
+      "foaf:lastName": "Tas"
+    },
+    {
+      "@type": "foaf:Person",
+      "affiliation": {
+        "foaf:homepage": "http://wegenenverkeer.be/",
+        "foaf:name": "AWV"
+      },
+      "foaf:firstName": "Immanuel",
+      "foaf:lastName": "Taets"
+    },
+    {
+      "@type": "foaf:Person",
+      "affiliation": {
+        "foaf:homepage": "http://wegenenverkeer.be/",
+        "foaf:name": "AWV"
+      },
+      "foaf:firstName": "Peter",
+      "foaf:lastName": "Stulens"
+    },
+    {
+      "@type": "foaf:Person",
+      "affiliation": {
+        "foaf:homepage": "http://wegenenverkeer.be/",
+        "foaf:name": "AWV"
+      },
+      "foaf:firstName": "Guy",
+      "foaf:lastName": "Sonck"
+    },
+    {
+      "@type": "foaf:Person",
+      "affiliation": {
+        "foaf:homepage": "http://wegenenverkeer.be/",
+        "foaf:name": "AWV"
+      },
+      "foaf:firstName": "Jeremy",
+      "foaf:lastName": "Soenens"
+    },
+    {
+      "@type": "foaf:Person",
+      "affiliation": {
+        "foaf:homepage": "https://data.vlaanderen.be/",
+        "foaf:name": "AIV"
+      },
+      "foaf:firstName": "Jens",
+      "foaf:lastName": "Scheerlinck"
+    },
+    {
+      "@type": "foaf:Person",
+      "affiliation": {
+        "foaf:homepage": "https://www.pwc.com/",
+        "foaf:name": "PWC"
+      },
+      "foaf:firstName": "Jens",
+      "foaf:lastName": "Scheerlinck"
+    },
+    {
+      "@type": "foaf:Person",
+      "affiliation": {
+        "foaf:homepage": "https://lantis.be/",
+        "foaf:name": "BAM NV"
+      },
+      "foaf:firstName": "Stephan",
+      "foaf:lastName": "Schaeffer"
+    },
+    {
+      "@type": "foaf:Person",
+      "affiliation": {
+        "foaf:homepage": "https://data.vlaanderen.be/",
+        "foaf:name": "AIV"
+      },
+      "foaf:firstName": "Liesbeth",
+      "foaf:lastName": "Rombouts"
+    },
+    {
+      "@type": "foaf:Person",
+      "affiliation": {
+        "foaf:homepage": "http://wegenenverkeer.be/",
+        "foaf:name": "AWV"
+      },
+      "foaf:firstName": "Mathias",
+      "foaf:lastName": "Renders"
+    },
+    {
+      "@type": "foaf:Person",
+      "affiliation": {
+        "foaf:homepage": "http://wegenenverkeer.be/",
+        "foaf:name": "AWV"
+      },
+      "foaf:firstName": "Kristof",
+      "foaf:lastName": "Ramaekers"
+    },
+    {
+      "@type": "foaf:Person",
+      "affiliation": {
+        "foaf:homepage": "http://wegenenverkeer.be/",
+        "foaf:name": "AWV"
+      },
+      "foaf:firstName": "Thomas",
+      "foaf:lastName": "Plumet"
+    },
+    {
+      "@type": "foaf:Person",
+      "affiliation": {
+        "foaf:homepage": "http://wegenenverkeer.be/",
+        "foaf:name": "AWV"
+      },
+      "foaf:firstName": "Mark",
+      "foaf:lastName": "Pissens"
+    },
+    {
+      "@type": "foaf:Person",
+      "affiliation": {
+        "foaf:homepage": "http://wegenenverkeer.be/",
+        "foaf:name": "AWV"
+      },
+      "foaf:firstName": "Isabelle",
+      "foaf:lastName": "Piette"
+    },
+    {
+      "@type": "foaf:Person",
+      "affiliation": {
+        "foaf:homepage": "http://wegenenverkeer.be/",
+        "foaf:name": "AWV"
+      },
+      "foaf:firstName": "Stephane",
+      "foaf:lastName": "Peeters"
+    },
+    {
+      "@type": "foaf:Person",
+      "affiliation": {
+        "foaf:homepage": "http://wegenenverkeer.be/",
+        "foaf:name": "AWV"
+      },
+      "foaf:firstName": "Danny",
+      "foaf:lastName": "Peelaers"
+    },
+    {
+      "@type": "foaf:Person",
+      "affiliation": {
+        "foaf:homepage": "http://wegenenverkeer.be/",
+        "foaf:name": "AWV"
+      },
+      "foaf:firstName": "Willem",
+      "foaf:lastName": "Pauwels"
+    },
+    {
+      "@type": "foaf:Person",
+      "affiliation": {
+        "foaf:homepage": "http://wegenenverkeer.be/",
+        "foaf:name": "AWV"
+      },
+      "foaf:firstName": "Timothy",
+      "foaf:lastName": "Nuttens"
+    },
+    {
+      "@type": "foaf:Person",
+      "affiliation": {
+        "foaf:homepage": "http://wegenenverkeer.be/",
+        "foaf:name": "AWV"
+      },
+      "foaf:firstName": "Bjorn",
+      "foaf:lastName": "Mortier"
+    },
+    {
+      "@type": "foaf:Person",
+      "affiliation": {
+        "foaf:homepage": "http://wegenenverkeer.be/",
+        "foaf:name": "AWV"
+      },
+      "foaf:firstName": "Marleen",
+      "foaf:lastName": "Moelants"
+    },
+    {
+      "@type": "foaf:Person",
+      "affiliation": {
+        "foaf:homepage": "https://www.vmm.be/",
+        "foaf:name": "VMM"
+      },
+      "foaf:firstName": "Katleen",
+      "foaf:lastName": "Miserez"
+    },
+    {
+      "@type": "foaf:Person",
+      "affiliation": {
+        "foaf:homepage": "http://wegenenverkeer.be/",
+        "foaf:name": "AWV"
+      },
+      "foaf:firstName": "Koen",
+      "foaf:lastName": "Meulemans"
+    },
+    {
+      "@type": "foaf:Person",
+      "affiliation": {
+        "foaf:homepage": "http://wegenenverkeer.be/",
+        "foaf:name": "AWV"
+      },
+      "foaf:firstName": "Alex",
+      "foaf:lastName": "Mettepenningen"
+    },
+    {
+      "@type": "foaf:Person",
+      "affiliation": {
+        "foaf:homepage": "http://wegenenverkeer.be/",
+        "foaf:name": "AWV"
+      },
+      "foaf:firstName": "Peter",
+      "foaf:lastName": "Merlevede"
+    },
+    {
+      "@type": "foaf:Person",
+      "affiliation": {
+        "foaf:homepage": "http://wegenenverkeer.be/",
+        "foaf:name": "AWV"
+      },
+      "foaf:firstName": "Bart",
+      "foaf:lastName": "Mergaerts"
+    },
+    {
+      "@type": "foaf:Person",
+      "affiliation": {
+        "foaf:homepage": "https://www.lne.be/",
+        "foaf:name": "LNE"
+      },
+      "foaf:firstName": "Jan",
+      "foaf:lastName": "Menschaert"
+    },
+    {
+      "@type": "foaf:Person",
+      "affiliation": {
+        "foaf:homepage": "http://wegenenverkeer.be/",
+        "foaf:name": "AWV"
+      },
+      "foaf:firstName": "Davy",
+      "foaf:lastName": "Meeus"
+    },
+    {
+      "@type": "foaf:Person",
+      "affiliation": {
+        "foaf:homepage": "http://wegenenverkeer.be/",
+        "foaf:name": "AWV"
+      },
+      "foaf:firstName": "Wim",
+      "foaf:lastName": "Meermans"
+    },
+    {
+      "@type": "foaf:Person",
+      "affiliation": {
+        "foaf:homepage": "https://www.vmm.be/",
+        "foaf:name": "VMM"
+      },
+      "foaf:firstName": "Koen",
+      "foaf:lastName": "Martens"
+    },
+    {
+      "@type": "foaf:Person",
+      "affiliation": {
+        "foaf:homepage": "www.geovise.com",
+        "foaf:name": "Geovise"
+      },
+      "foaf:firstName": "Karel",
+      "foaf:lastName": "Maesen"
+    },
+    {
+      "@type": "foaf:Person",
+      "affiliation": {
+        "foaf:homepage": "https://www.pointfree.be",
+        "foaf:name": "Pointfree"
+      },
+      "foaf:firstName": "Joachim",
+      "foaf:lastName": "Maes"
+    },
+    {
+      "@type": "foaf:Person",
+      "affiliation": {
+        "foaf:homepage": "http://wegenenverkeer.be/",
+        "foaf:name": "AWV"
+      },
+      "foaf:firstName": "Rudi",
+      "foaf:lastName": "Luyten"
+    },
+    {
+      "@type": "foaf:Person",
+      "affiliation": {
+        "foaf:homepage": "https://www.linkedin.com/company/infoflow_2/about/",
+        "foaf:name": "Infoflow"
+      },
+      "foaf:firstName": "Christophe",
+      "foaf:lastName": "Luyckx"
+    },
+    {
+      "@type": "foaf:Person",
+      "affiliation": {
+        "foaf:homepage": "https://www.vmm.be/",
+        "foaf:name": "VMM"
+      },
+      "foaf:firstName": "Dries",
+      "foaf:lastName": "Luts"
+    },
+    {
+      "@type": "foaf:Person",
+      "affiliation": {
+        "foaf:homepage": "https://www.aquafin.be/",
+        "foaf:name": "Aquafin"
+      },
+      "foaf:firstName": "Pieter",
+      "foaf:lastName": "Lootens"
+    },
+    {
+      "@type": "foaf:Person",
+      "affiliation": {
+        "foaf:homepage": "http://wegenenverkeer.be/",
+        "foaf:name": "AWV"
+      },
+      "foaf:firstName": "Tim",
+      "foaf:lastName": "Lonneux"
+    },
+    {
+      "@type": "foaf:Person",
+      "affiliation": {
+        "foaf:homepage": "http://wegenenverkeer.be/",
+        "foaf:name": "AWV"
+      },
+      "foaf:firstName": "Herman",
+      "foaf:lastName": "Longueville"
+    },
+    {
+      "@type": "foaf:Person",
+      "affiliation": {
+        "foaf:homepage": "http://wegenenverkeer.be/",
+        "foaf:name": "AWV"
+      },
+      "foaf:firstName": "Peter",
+      "foaf:lastName": "Lewyllie"
+    },
+    {
+      "@type": "foaf:Person",
+      "affiliation": {
+        "foaf:homepage": "https://www.aquafin.be/",
+        "foaf:name": "Aquafin"
+      },
+      "foaf:firstName": "Mieke",
+      "foaf:lastName": "Lesage"
+    },
+    {
+      "@type": "foaf:Person",
+      "affiliation": {
+        "foaf:homepage": "http://wegenenverkeer.be/",
+        "foaf:name": "AWV"
+      },
+      "foaf:firstName": "Luc",
+      "foaf:lastName": "Laurys"
+    },
+    {
+      "@type": "foaf:Person",
+      "affiliation": {
+        "foaf:homepage": "http://wegenenverkeer.be/",
+        "foaf:name": "AWV"
+      },
+      "foaf:firstName": "Jurgen",
+      "foaf:lastName": "Latte"
+    },
+    {
+      "@type": "foaf:Person",
+      "affiliation": {
+        "foaf:homepage": "http://wegenenverkeer.be/",
+        "foaf:name": "AWV"
+      },
+      "foaf:firstName": "Yanick",
+      "foaf:lastName": "Lathuy"
+    },
+    {
+      "@type": "foaf:Person",
+      "affiliation": {
+        "foaf:homepage": "http://wegenenverkeer.be/",
+        "foaf:name": "AWV"
+      },
+      "foaf:firstName": "Jo",
+      "foaf:lastName": "Laps"
+    },
+    {
+      "@type": "foaf:Person",
+      "affiliation": {
+        "foaf:homepage": "http://wegenenverkeer.be/",
+        "foaf:name": "AWV"
+      },
+      "foaf:firstName": "John",
+      "foaf:lastName": "Lammertyn"
+    },
+    {
+      "@type": "foaf:Person",
+      "affiliation": {
+        "foaf:homepage": "http://wegenenverkeer.be/",
+        "foaf:name": "AWV"
+      },
+      "foaf:firstName": "Philip",
+      "foaf:lastName": "Lameire"
+    },
+    {
+      "@type": "foaf:Person",
+      "affiliation": {
+        "foaf:homepage": "http://wegenenverkeer.be/",
+        "foaf:name": "AWV"
+      },
+      "foaf:firstName": "Philippe",
+      "foaf:lastName": "Keppens"
+    },
+    {
+      "@type": "foaf:Person",
+      "affiliation": {
+        "foaf:homepage": "http://wegenenverkeer.be/",
+        "foaf:name": "AWV"
+      },
+      "foaf:firstName": "Claudia",
+      "foaf:lastName": "Juvyns"
+    },
+    {
+      "@type": "foaf:Person",
+      "affiliation": {
+        "foaf:homepage": "http://wegenenverkeer.be/",
+        "foaf:name": "AWV"
+      },
+      "foaf:firstName": "Bart",
+      "foaf:lastName": "Janssens"
+    },
+    {
+      "@type": "foaf:Person",
+      "affiliation": {
+        "foaf:homepage": "https://www.autodesk.com/",
+        "foaf:name": "Autodesk"
+      },
+      "foaf:firstName": "Peter",
+      "foaf:lastName": "Ingels"
+    },
+    {
+      "@type": "foaf:Person",
+      "affiliation": {
+        "foaf:homepage": "http://wegenenverkeer.be/",
+        "foaf:name": "AWV"
+      },
+      "foaf:firstName": "Ruben",
+      "foaf:lastName": "Huylebroeck"
+    },
+    {
+      "@type": "foaf:Person",
+      "affiliation": {
+        "foaf:homepage": "http://wegenenverkeer.be/",
+        "foaf:name": "AWV"
+      },
+      "foaf:firstName": "Kris",
+      "foaf:lastName": "Huygen"
+    },
+    {
+      "@type": "foaf:Person",
+      "affiliation": {
+        "foaf:homepage": "http://wegenenverkeer.be/",
+        "foaf:name": "AWV"
+      },
+      "foaf:firstName": "Peter",
+      "foaf:lastName": "Hooreweghe"
+    },
+    {
+      "@type": "foaf:Person",
+      "affiliation": {
+        "foaf:homepage": "https://dynniq.com/",
+        "foaf:name": "Dynniq"
+      },
+      "foaf:firstName": "Annick",
+      "foaf:lastName": "Hooge"
+    },
+    {
+      "@type": "foaf:Person",
+      "affiliation": {
+        "foaf:homepage": "http://wegenenverkeer.be/",
+        "foaf:name": "AWV"
+      },
+      "foaf:firstName": "Josef",
+      "foaf:lastName": "Hennissen"
+    },
+    {
+      "@type": "foaf:Person",
+      "affiliation": {
+        "foaf:homepage": "http://wegenenverkeer.be/",
+        "foaf:name": "AWV"
+      },
+      "foaf:firstName": "Dirk",
+      "foaf:lastName": "Goelen"
+    },
+    {
+      "@type": "foaf:Person",
+      "affiliation": {
+        "foaf:homepage": "https://www.gim.be",
+        "foaf:name": "GIM"
+      },
+      "foaf:firstName": "Stijn",
+      "foaf:lastName": "Goedertier"
+    },
+    {
+      "@type": "foaf:Person",
+      "affiliation": {
+        "foaf:homepage": "http://wegenenverkeer.be/",
+        "foaf:name": "AWV"
+      },
+      "foaf:firstName": "Nele",
+      "foaf:lastName": "Gheysen"
+    },
+    {
+      "@type": "foaf:Person",
+      "affiliation": {
+        "foaf:homepage": "https://pau.be/",
+        "foaf:name": "Pàu"
+      },
+      "foaf:firstName": "Benoit",
+      "foaf:lastName": "Gevaert"
+    },
+    {
+      "@type": "foaf:Person",
+      "affiliation": {
+        "foaf:homepage": "http://wegenenverkeer.be/",
+        "foaf:name": "AWV"
+      },
+      "foaf:firstName": "Dave",
+      "foaf:lastName": "Geudens"
+    },
+    {
+      "@type": "foaf:Person",
+      "affiliation": {
+        "foaf:homepage": "http://wegenenverkeer.be/",
+        "foaf:name": "AWV"
+      },
+      "foaf:firstName": "Ben",
+      "foaf:lastName": "Geerts"
+    },
+    {
+      "@type": "foaf:Person",
+      "affiliation": {
+        "foaf:homepage": "http://wegenenverkeer.be/",
+        "foaf:name": "AWV"
+      },
+      "foaf:firstName": "Sofie",
+      "foaf:lastName": "Geens"
+    },
+    {
+      "@type": "foaf:Person",
+      "affiliation": {
+        "foaf:homepage": "https://dynniq.com/",
+        "foaf:name": "Dynniq"
+      },
+      "foaf:firstName": "Peter",
+      "foaf:lastName": "Gaublomme"
+    },
+    {
+      "@type": "foaf:Person",
+      "affiliation": {
+        "foaf:homepage": "https://www.vlario.be/",
+        "foaf:name": "Vlario"
+      },
+      "foaf:firstName": "Wendy",
+      "foaf:lastName": "Francken"
+    },
+    {
+      "@type": "foaf:Person",
+      "affiliation": {
+        "foaf:homepage": "https://lantis.be/",
+        "foaf:name": "BAM NV"
+      },
+      "foaf:firstName": "Yves",
+      "foaf:lastName": "Ferong"
+    },
+    {
+      "@type": "foaf:Person",
+      "affiliation": {
+        "foaf:homepage": "http://wegenenverkeer.be/",
+        "foaf:name": "AWV"
+      },
+      "foaf:firstName": "Dirk",
+      "foaf:lastName": "Eelen"
+    },
+    {
+      "@type": "foaf:Person",
+      "affiliation": {
+        "foaf:homepage": "http://wegenenverkeer.be/",
+        "foaf:name": "AWV"
+      },
+      "foaf:firstName": "Migäel",
+      "foaf:lastName": "Duro Gonzalez"
+    },
+    {
+      "@type": "foaf:Person",
+      "affiliation": {
+        "foaf:homepage": "http://wegenenverkeer.be/",
+        "foaf:name": "AWV"
+      },
+      "foaf:firstName": "Tony",
+      "foaf:lastName": "Durinck"
+    },
+    {
+      "@type": "foaf:Person",
+      "affiliation": {
+        "foaf:homepage": "http://wegenenverkeer.be/",
+        "foaf:name": "AWV"
+      },
+      "foaf:firstName": "Mario",
+      "foaf:lastName": "Dumon"
+    },
+    {
+      "@type": "foaf:Person",
+      "affiliation": {
+        "foaf:homepage": "https://ixor.be/",
+        "foaf:name": "Ixor"
+      },
+      "foaf:firstName": "Vincent",
+      "foaf:lastName": "Ducheyne"
+    },
+    {
+      "@type": "foaf:Person",
+      "affiliation": {
+        "foaf:homepage": "http://wegenenverkeer.be/",
+        "foaf:name": "AWV"
+      },
+      "foaf:firstName": "Lieven",
+      "foaf:lastName": "Duchateau"
+    },
+    {
+      "@type": "foaf:Person",
+      "affiliation": {
+        "foaf:homepage": "http://wegenenverkeer.be/",
+        "foaf:name": "AWV"
+      },
+      "foaf:firstName": "Kris",
+      "foaf:lastName": "Dhondt"
+    },
+    {
+      "@type": "foaf:Person",
+      "affiliation": {
+        "foaf:homepage": "http://wegenenverkeer.be/",
+        "foaf:name": "Vlaanderen Connect"
+      },
+      "foaf:firstName": "Anthony",
+      "foaf:lastName": "Dewulf"
+    },
+    {
+      "@type": "foaf:Person",
+      "affiliation": {
+        "foaf:homepage": "http://wegenenverkeer.be/",
+        "foaf:name": "AWV"
+      },
+      "foaf:firstName": "Bram",
+      "foaf:lastName": "Dewil"
+    },
+    {
+      "@type": "foaf:Person",
+      "affiliation": {
+        "foaf:homepage": "http://www.confederatiebouw.be/newhome/index.html",
+        "foaf:name": "VlaWeBo"
+      },
+      "foaf:firstName": "Eli",
+      "foaf:lastName": "Desmedt"
+    },
+    {
+      "@type": "foaf:Person",
+      "affiliation": {
+        "foaf:homepage": "http://wegenenverkeer.be/",
+        "foaf:name": "AWV"
+      },
+      "foaf:firstName": "Tom",
+      "foaf:lastName": "Deschilder"
+    },
+    {
+      "@type": "foaf:Person",
+      "affiliation": {
+        "foaf:homepage": "http://wegenenverkeer.be/",
+        "foaf:name": "AWV"
+      },
+      "foaf:firstName": "Joachim",
+      "foaf:lastName": "Dero"
+    },
+    {
+      "@type": "foaf:Person",
+      "affiliation": {
+        "foaf:homepage": "http://wegenenverkeer.be/",
+        "foaf:name": "AWV"
+      },
+      "foaf:firstName": "Veerle",
+      "foaf:lastName": "Delcourt"
+    },
+    {
+      "@type": "foaf:Person",
+      "affiliation": {
+        "foaf:homepage": "http://wegenenverkeer.be/",
+        "foaf:name": "AWV"
+      },
+      "foaf:firstName": "Katrien",
+      "foaf:lastName": "Decock"
+    },
+    {
+      "@type": "foaf:Person",
+      "affiliation": {
+        "foaf:homepage": "https://data.vlaanderen.be/",
+        "foaf:name": "AIV"
+      },
+      "foaf:firstName": "Liesbet",
+      "foaf:lastName": "De wolf"
+    },
+    {
+      "@type": "foaf:Person",
+      "affiliation": {
+        "foaf:homepage": "https://www.vmm.be/",
+        "foaf:name": "VMM"
+      },
+      "foaf:firstName": "Koen",
+      "foaf:lastName": "De Witte"
+    },
+    {
+      "@type": "foaf:Person",
+      "affiliation": {
+        "foaf:homepage": "http://wegenenverkeer.be/",
+        "foaf:name": "AWV"
+      },
+      "foaf:firstName": "Karen",
+      "foaf:lastName": "De Winne"
+    },
+    {
+      "@type": "foaf:Person",
+      "affiliation": {
+        "foaf:homepage": "https://www.vmsw.be/",
+        "foaf:name": "VMSW"
+      },
+      "foaf:firstName": "Theo",
+      "foaf:lastName": "De Vos"
+    },
+    {
+      "@type": "foaf:Person",
+      "affiliation": {
+        "foaf:homepage": "https://www.arcadis.com/en/global/",
+        "foaf:name": "Arcadis"
+      },
+      "foaf:firstName": "Geert",
+      "foaf:lastName": "De Smedt"
+    },
+    {
+      "@type": "foaf:Person",
+      "affiliation": {
+        "foaf:homepage": "https://www.natuurenbos.be",
+        "foaf:name": "Natuur en Bos"
+      },
+      "foaf:firstName": "Carl",
+      "foaf:lastName": "De Schepper"
+    },
+    {
+      "@type": "foaf:Person",
+      "affiliation": {
+        "foaf:homepage": "https://www.vmsw.be/",
+        "foaf:name": "VMSW"
+      },
+      "foaf:firstName": "Marcel",
+      "foaf:lastName": "De Brael"
+    },
+    {
+      "@type": "foaf:Person",
+      "affiliation": {
+        "foaf:homepage": "http://wegenenverkeer.be/",
+        "foaf:name": "AWV"
+      },
+      "foaf:firstName": "Erik",
+      "foaf:lastName": "De Bisschop"
+    },
+    {
+      "@type": "foaf:Person",
+      "affiliation": {
+        "foaf:homepage": "http://wegenenverkeer.be/",
+        "foaf:name": "AWV"
+      },
+      "foaf:firstName": "Wim",
+      "foaf:lastName": "Danheel"
+    },
+    {
+      "@type": "foaf:Person",
+      "affiliation": {
+        "foaf:homepage": "http://wegenenverkeer.be/",
+        "foaf:name": "AWV"
+      },
+      "foaf:firstName": "Johan",
+      "foaf:lastName": "Dalins"
+    },
+    {
+      "@type": "foaf:Person",
+      "affiliation": {
+        "foaf:homepage": "http://wegenenverkeer.be/",
+        "foaf:name": "AWV"
+      },
+      "foaf:firstName": "Sammy",
+      "foaf:lastName": "Dalewyn"
+    },
+    {
+      "@type": "foaf:Person",
+      "affiliation": {
+        "foaf:homepage": "https://www.vmsw.be/",
+        "foaf:name": "VMSW"
+      },
+      "foaf:firstName": "Johan",
+      "foaf:lastName": "Criquielion"
+    },
+    {
+      "@type": "foaf:Person",
+      "affiliation": {
+        "foaf:homepage": "http://wegenenverkeer.be/",
+        "foaf:name": "AWV"
+      },
+      "foaf:firstName": "Kathy",
+      "foaf:lastName": "Courtens"
+    },
+    {
+      "@type": "foaf:Person",
+      "affiliation": {
+        "foaf:homepage": "http://wegenenverkeer.be/",
+        "foaf:name": "AWV"
+      },
+      "foaf:firstName": "Jan",
+      "foaf:lastName": "Couck"
+    },
+    {
+      "@type": "foaf:Person",
+      "affiliation": {
+        "foaf:homepage": "http://wegenenverkeer.be/",
+        "foaf:name": "AWV"
+      },
+      "foaf:firstName": "Kristof",
+      "foaf:lastName": "Coppens"
+    },
+    {
+      "@type": "foaf:Person",
+      "affiliation": {
+        "foaf:homepage": "https://www.willemen.be/nl/aannemer/willemen-infra",
+        "foaf:name": "Willemen Infra"
+      },
+      "foaf:firstName": "Frank",
+      "foaf:lastName": "Christianen"
+    },
+    {
+      "@type": "foaf:Person",
+      "affiliation": {
+        "foaf:homepage": "http://wegenenverkeer.be/",
+        "foaf:name": "AWV"
+      },
+      "foaf:firstName": "Kurt",
+      "foaf:lastName": "Ceulemans"
+    },
+    {
+      "@type": "foaf:Person",
+      "affiliation": {
+        "foaf:homepage": "http://wegenenverkeer.be/",
+        "foaf:name": "AWV"
+      },
+      "foaf:firstName": "Ann",
+      "foaf:lastName": "Buytaert"
+    },
+    {
+      "@type": "foaf:Person",
+      "affiliation": {
+        "foaf:homepage": "https://geonius.nl/",
+        "foaf:name": "Geonius"
+      },
+      "foaf:firstName": "Jordy",
+      "foaf:lastName": "Brouwers"
+    },
+    {
+      "@type": "foaf:Person",
+      "affiliation": {
+        "foaf:homepage": "http://wegenenverkeer.be/",
+        "foaf:name": "AWV"
+      },
+      "foaf:firstName": "Boudewijn",
+      "foaf:lastName": "Broodcoorens"
+    },
+    {
+      "@type": "foaf:Person",
+      "affiliation": {
+        "foaf:homepage": "http://wegenenverkeer.be/",
+        "foaf:name": "AWV"
+      },
+      "foaf:firstName": "Margo",
+      "foaf:lastName": "Briessinck"
+    },
+    {
+      "@type": "foaf:Person",
+      "affiliation": {
+        "foaf:homepage": "http://wegenenverkeer.be/",
+        "foaf:name": "AWV"
+      },
+      "foaf:firstName": "Jan",
+      "foaf:lastName": "Bosmans"
+    },
+    {
+      "@type": "foaf:Person",
+      "affiliation": {
+        "foaf:homepage": "https://departement-mow.vlaanderen.be/nl",
+        "foaf:name": "MOW"
+      },
+      "foaf:firstName": "Sophie",
+      "foaf:lastName": "Bordere"
+    },
+    {
+      "@type": "foaf:Person",
+      "affiliation": {
+        "foaf:homepage": "http://wegenenverkeer.be/",
+        "foaf:name": "AWV"
+      },
+      "foaf:firstName": "Hans",
+      "foaf:lastName": "Bonte"
+    },
+    {
+      "@type": "foaf:Person",
+      "affiliation": {
+        "foaf:homepage": "http://wegenenverkeer.be/",
+        "foaf:name": "AWV"
+      },
+      "foaf:firstName": "Natasha",
+      "foaf:lastName": "Blommaert"
+    },
+    {
+      "@type": "foaf:Person",
+      "affiliation": {
+        "foaf:homepage": "http://wegenenverkeer.be/",
+        "foaf:name": "AWV"
+      },
+      "foaf:firstName": "Koen",
+      "foaf:lastName": "Beuckels"
+    },
+    {
+      "@type": "foaf:Person",
+      "affiliation": {
+        "foaf:homepage": "http://wegenenverkeer.be/",
+        "foaf:name": "AWV"
+      },
+      "foaf:firstName": "Carine",
+      "foaf:lastName": "Berre"
+    },
+    {
+      "@type": "foaf:Person",
+      "affiliation": {
+        "foaf:homepage": "https://www.vmm.be/",
+        "foaf:name": "VMM"
+      },
+      "foaf:firstName": "Katia",
+      "foaf:lastName": "Beringhs"
+    },
+    {
+      "@type": "foaf:Person",
+      "affiliation": {
+        "foaf:homepage": "https://geosolutions.be/",
+        "foaf:name": "Geosolutions"
+      },
+      "foaf:firstName": "Bernard",
+      "foaf:lastName": "Baetens"
+    },
+    {
+      "@type": "foaf:Person",
+      "affiliation": {
+        "foaf:homepage": "https://dynniq.com/",
+        "foaf:name": "Dynniq"
+      },
+      "foaf:firstName": "Danny",
+      "foaf:lastName": "Asselman"
+    },
+    {
+      "@type": "foaf:Person",
+      "affiliation": {
+        "foaf:homepage": "http://wegenenverkeer.be/",
+        "foaf:name": "AWV"
+      },
+      "foaf:firstName": "Mustafa",
+      "foaf:lastName": "Aktas"
+    },
+    {
+      "@type": "foaf:Person",
+      "affiliation": {
+        "foaf:homepage": "http://wegenenverkeer.be/",
+        "foaf:name": "AWV"
+      },
+      "foaf:firstName": "Kris",
+      "foaf:lastName": "Aernout"
+    }
+  ],
+  "contributors-column": "OTL",
+  "contributors-file": "stakeholders.csv",
+  "dependencies": [],
+  "diagram": "OSLO-Installatie",
+  "documentcommit": "a0b027e443aa08b307cd6f4ba733a16db6627bdf",
+  "eap": "OSLO-AWV-VOC-VLAG.eap",
+  "editors": [],
+  "externalproperties": [
+    {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/installatie#Verkeersbordopstelling.wegSegment",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "EA-Guid": "{8EA0233E-C13C-407b-BBFA-3713255A5516}",
+      "codelist": [],
+      "definition": {
+        "nl": "Wegsegment waarbij de verkeersbordopstelling geplaatst is."
+      },
+      "definition-nl": {
+        "nl": "Wegsegment waarbij de verkeersbordopstelling geplaatst is."
+      },
+      "domain": [
+        {
+          "EA-Name": "Verkeersbordopstelling",
+          "uri": "https://wegenenverkeer.data.vlaanderen.be/ns/installatie#Verkeersbordopstelling"
+        }
+      ],
+      "extra": {
+        "EA-Domain": "Verkeersbordopstelling",
+        "EA-Domain-Guid": "{862C6971-D2BC-4d88-AB9D-D237A14E9CF6}",
+        "EA-Guid": "{8EA0233E-C13C-407b-BBFA-3713255A5516}",
+        "EA-Name": "wegSegment",
+        "EA-Package": "OSLO-Installatie",
+        "EA-Range": "DtcExterneReferentie",
+        "EA-Type": "attribute",
+        "RangeData": {
+          "EA-GUID": "{26B745CA-6036-4dd1-AE7B-689923C3D699}",
+          "EA-Name": "DtcExterneReferentie",
+          "EA-Package": "OSLO-Onderdeel",
+          "uri": "https://wegenenverkeer.data.vlaanderen.be/ns/onderdeel#DtcExterneReferentie"
+        },
+        "RawTags": [
+          {
+            "key": "beheerstatus",
+            "note": "Values: Nieuw,Gepubliceerd,InVerwerking,UitGebruik,Vervangen,Geconsolideerd,UitGebruikGeconsolideerd,NieuwGeconsolideerd,NieuwUitGebruik\r\nDefault: Nieuw\r\n",
+            "value": "Gepubliceerd"
+          },
+          {
+            "key": "uri",
+            "note": "null",
+            "value": "https://wegenenverkeer.data.vlaanderen.be/ns/installatie#Verkeersbordopstelling.wegSegment"
+          },
+          {
+            "key": "definition-nl",
+            "note": "null",
+            "value": "Wegsegment waarbij de verkeersbordopstelling geplaatst is."
+          },
+          {
+            "key": "label-nl",
+            "note": "null",
+            "value": "wegsegment"
+          },
+          {
+            "key": "usageNote-nl",
+            "note": "null",
+            "value": "Dit is niet noodzakelijk het wegsegment waarop het verkeersbord van toepassing is."
+          }
+        ],
+        "Scope": "TRANSLATIONS_ONLY",
+        "definition": {
+          "nl": "Wegsegment waarbij de verkeersbordopstelling geplaatst is."
+        },
+        "definition-en": "",
+        "definition-nl": {
+          "nl": "Wegsegment waarbij de verkeersbordopstelling geplaatst is."
+        },
+        "equivalent": "",
+        "label": {
+          "nl": "wegsegment"
+        },
+        "label-en": "",
+        "label-nl": {
+          "nl": "wegsegment"
+        },
+        "sameAs": "",
+        "subclass": "",
+        "subclass1": "",
+        "usage": {
+          "nl": "Dit is niet noodzakelijk het wegsegment waarop het verkeersbord van toepassing is."
+        },
+        "usageNote-en": "",
+        "usageNote-nl": {
+          "nl": "Dit is niet noodzakelijk het wegsegment waarop het verkeersbord van toepassing is."
+        }
+      },
+      "generalization": [],
+      "inpackage": "OTHER_PACKAGE",
+      "label": {
+        "nl": "wegsegment"
+      },
+      "label-nl": {
+        "nl": "wegsegment"
+      },
+      "maxCardinality": "*",
+      "minCardinality": "0",
+      "name": "wegsegment",
+      "range": [
+        {
+          "EA-GUID": "{26B745CA-6036-4dd1-AE7B-689923C3D699}",
+          "EA-Name": "DtcExterneReferentie",
+          "EA-Package": "OSLO-Onderdeel",
+          "uri": "https://wegenenverkeer.data.vlaanderen.be/ns/onderdeel#DtcExterneReferentie"
+        }
+      ],
+      "usage": {
+        "nl": "Dit is niet noodzakelijk het wegsegment waarop het verkeersbord van toepassing is."
+      },
+      "usageNote-nl": {
+        "nl": "Dit is niet noodzakelijk het wegsegment waarop het verkeersbord van toepassing is."
+      }
+    },
+    {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/installatie#Verkeersbordopstelling.soortSteun",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "EA-Guid": "{A86F0E85-959F-4d5a-B0CC-8B110207C4CF}",
+      "codelist": [],
+      "definition": {
+        "nl": "Aanduiding welk type steun het verkeersbord draagt."
+      },
+      "definition-nl": {
+        "nl": "Aanduiding welk type steun het verkeersbord draagt."
+      },
+      "domain": [
+        {
+          "EA-Name": "Verkeersbordopstelling",
+          "uri": "https://wegenenverkeer.data.vlaanderen.be/ns/installatie#Verkeersbordopstelling"
+        }
+      ],
+      "extra": {
+        "EA-Domain": "Verkeersbordopstelling",
+        "EA-Domain-Guid": "{862C6971-D2BC-4d88-AB9D-D237A14E9CF6}",
+        "EA-Guid": "{A86F0E85-959F-4d5a-B0CC-8B110207C4CF}",
+        "EA-Name": "soortSteun",
+        "EA-Package": "OSLO-Installatie",
+        "EA-Range": "KlSoortSteun",
+        "EA-Type": "attribute",
+        "RangeData": {
+          "EA-GUID": "{C34DC407-8D4A-40ec-8701-3937206337F0}",
+          "EA-Name": "KlSoortSteun",
+          "EA-Package": "OSLO-Onderdeel",
+          "uri": "http://www.w3.org/2004/02/skos/core#Concept"
+        },
+        "RawTags": [
+          {
+            "key": "deprecated",
+            "note": "Values: false,true\r\nDefault: false\r\n",
+            "value": "false"
+          },
+          {
+            "key": "uri",
+            "note": "null",
+            "value": "https://wegenenverkeer.data.vlaanderen.be/ns/installatie#Verkeersbordopstelling.soortSteun"
+          },
+          {
+            "key": "beheerstatus",
+            "note": "Values: Nieuw,Gepubliceerd,InVerwerking,UitGebruik,Vervangen,Geconsolideerd,UitGebruikGeconsolideerd,NieuwGeconsolideerd,NieuwUitGebruik\r\nDefault: Nieuw\r\n",
+            "value": "Nieuw"
+          },
+          {
+            "key": "definition-nl",
+            "note": "null",
+            "value": "Aanduiding welk type steun het verkeersbord draagt."
+          }
+        ],
+        "Scope": "TRANSLATIONS_ONLY",
+        "definition": {
+          "nl": "Aanduiding welk type steun het verkeersbord draagt."
+        },
+        "definition-en": "",
+        "definition-nl": {
+          "nl": "Aanduiding welk type steun het verkeersbord draagt."
+        },
+        "equivalent": "",
+        "label": "",
+        "label-en": "",
+        "label-nl": {
+          "nl": "TODO"
+        },
+        "sameAs": "",
+        "subclass": "",
+        "subclass1": "",
+        "usage": "",
+        "usageNote-en": "",
+        "usageNote-nl": ""
+      },
+      "generalization": [],
+      "inpackage": "OTHER_PACKAGE",
+      "label-nl": {
+        "nl": "TODO"
+      },
+      "maxCardinality": "1",
+      "minCardinality": "1",
+      "name": "",
+      "range": [
+        {
+          "EA-GUID": "{C34DC407-8D4A-40ec-8701-3937206337F0}",
+          "EA-Name": "KlSoortSteun",
+          "EA-Package": "OSLO-Onderdeel",
+          "uri": "http://www.w3.org/2004/02/skos/core#Concept"
+        }
+      ]
+    },
+    {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/installatie#Verkeersbordopstelling.positieTovRijweg",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "EA-Guid": "{CA51D906-9FC1-4c17-B450-5F65AF8A0CF3}",
+      "codelist": [],
+      "definition": {
+        "nl": "De plaatsing van de opstelling ten aanzien van de rijbaan."
+      },
+      "definition-nl": {
+        "nl": "De plaatsing van de opstelling ten aanzien van de rijbaan."
+      },
+      "domain": [
+        {
+          "EA-Name": "Verkeersbordopstelling",
+          "uri": "https://wegenenverkeer.data.vlaanderen.be/ns/installatie#Verkeersbordopstelling"
+        }
+      ],
+      "extra": {
+        "EA-Domain": "Verkeersbordopstelling",
+        "EA-Domain-Guid": "{862C6971-D2BC-4d88-AB9D-D237A14E9CF6}",
+        "EA-Guid": "{CA51D906-9FC1-4c17-B450-5F65AF8A0CF3}",
+        "EA-Name": "positieTovRijweg",
+        "EA-Package": "OSLO-Installatie",
+        "EA-Range": "KlPositieSoort",
+        "EA-Type": "attribute",
+        "RangeData": {
+          "EA-GUID": "{A88A5387-3347-4b0d-ACDD-676A3EC7B7E5}",
+          "EA-Name": "KlPositieSoort",
+          "EA-Package": "OSLO-Onderdeel",
+          "uri": "http://www.w3.org/2004/02/skos/core#Concept"
+        },
+        "RawTags": [
+          {
+            "key": "uri",
+            "note": "null",
+            "value": "https://wegenenverkeer.data.vlaanderen.be/ns/installatie#Verkeersbordopstelling.positieTovRijweg"
+          },
+          {
+            "key": "definition-nl",
+            "note": "null",
+            "value": "De plaatsing van de opstelling ten aanzien van de rijbaan."
+          },
+          {
+            "key": "usageNote-nl",
+            "note": "null",
+            "value": "Bijvoorbeeld: boven, rechts, links"
+          },
+          {
+            "key": "beheerstatus",
+            "note": "Values: Nieuw,Gepubliceerd,InVerwerking,UitGebruik,Vervangen,Geconsolideerd,UitGebruikGeconsolideerd,NieuwGeconsolideerd,NieuwUitGebruik\r\nDefault: Nieuw\r\n",
+            "value": "Gepubliceerd"
+          },
+          {
+            "key": "label-nl",
+            "note": "null",
+            "value": "positie ten opzichte van de rijweg"
+          }
+        ],
+        "Scope": "TRANSLATIONS_ONLY",
+        "definition": {
+          "nl": "De plaatsing van de opstelling ten aanzien van de rijbaan."
+        },
+        "definition-en": "",
+        "definition-nl": {
+          "nl": "De plaatsing van de opstelling ten aanzien van de rijbaan."
+        },
+        "equivalent": "",
+        "label": {
+          "nl": "positie ten opzichte van de rijweg"
+        },
+        "label-en": "",
+        "label-nl": {
+          "nl": "positie ten opzichte van de rijweg"
+        },
+        "sameAs": "",
+        "subclass": "",
+        "subclass1": "",
+        "usage": {
+          "nl": "Bijvoorbeeld: boven, rechts, links"
+        },
+        "usageNote-en": "",
+        "usageNote-nl": {
+          "nl": "Bijvoorbeeld: boven, rechts, links"
+        }
+      },
+      "generalization": [],
+      "inpackage": "OTHER_PACKAGE",
+      "label": {
+        "nl": "positie ten opzichte van de rijweg"
+      },
+      "label-nl": {
+        "nl": "positie ten opzichte van de rijweg"
+      },
+      "maxCardinality": "1",
+      "minCardinality": "1",
+      "name": "positie ten opzichte van de rijweg",
+      "range": [
+        {
+          "EA-GUID": "{A88A5387-3347-4b0d-ACDD-676A3EC7B7E5}",
+          "EA-Name": "KlPositieSoort",
+          "EA-Package": "OSLO-Onderdeel",
+          "uri": "http://www.w3.org/2004/02/skos/core#Concept"
+        }
+      ],
+      "usage": {
+        "nl": "Bijvoorbeeld: boven, rechts, links"
+      },
+      "usageNote-nl": {
+        "nl": "Bijvoorbeeld: boven, rechts, links"
+      }
+    }
+  ],
+  "externals": [
+    {
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
+      "EA-Guid": "{570E5265-D996-4330-9ACF-74A55D2C6BD2}",
+      "definition": {
+        "nl": "De mogelijke beweegbare delen."
+      },
+      "definition-nl": {
+        "nl": "De mogelijke beweegbare delen."
+      },
+      "extra": {
+        "EA-Guid": "{570E5265-D996-4330-9ACF-74A55D2C6BD2}",
+        "EA-Name": "KlConstructie",
+        "EA-Package": "OSLO-Installatie",
+        "EA-Parents": "",
+        "EA-Parents2": [],
+        "EA-Type": "ENUMERATION",
+        "RawTags": [
+          {
+            "key": "ap-codelist",
+            "note": "null",
+            "value": "https://wegenenverkeer-test.data.vlaanderen.be/id/conceptscheme/KlConstructie"
+          },
+          {
+            "key": "beheerstatus",
+            "note": "Values: Nieuw,Gepubliceerd,InVerwerking,UitGebruik,Vervangen,Geconsolideerd,UitGebruikGeconsolideerd,NieuwGeconsolideerd,NieuwUitGebruik\r\nDefault: Nieuw\r\n",
+            "value": "Gepubliceerd"
+          },
+          {
+            "key": "creatie",
+            "note": "null",
+            "value": "2.12.0-RC2.516"
+          },
+          {
+            "key": "definition-nl",
+            "note": "null",
+            "value": "De mogelijke beweegbare delen."
+          },
+          {
+            "key": "laatstGewijzigd",
+            "note": "null",
+            "value": "2.12.0-RC2.516"
+          },
+          {
+            "key": "label-nl",
+            "note": "null",
+            "value": "Beweegbaar deel"
+          },
+          {
+            "key": "uri",
+            "note": "null",
+            "value": "http://www.w3.org/2004/02/skos/core#Concept"
+          }
+        ],
+        "Scope": "TRANSLATIONS_ONLY",
+        "definition": {
+          "nl": "De mogelijke beweegbare delen."
+        },
+        "definition-en": "",
+        "definition-nl": {
+          "nl": "De mogelijke beweegbare delen."
+        },
+        "equivalent": "",
+        "label": {
+          "nl": "Beweegbaar deel"
+        },
+        "label-en": "",
+        "label-nl": {
+          "nl": "Beweegbaar deel"
+        },
+        "parentclasses": "",
+        "sameAs": "",
+        "subclass": "",
+        "subclass1": "",
+        "usage": "",
+        "usageNote-en": "",
+        "usageNote-nl": ""
+      },
+      "inpackage": "OTHER_PACKAGE",
+      "label": {
+        "nl": "Beweegbaar deel"
+      },
+      "label-nl": {
+        "nl": "Beweegbaar deel"
+      },
+      "name": "Beweegbaar deel"
+    },
+    {
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
+      "EA-Guid": "{CD5CFD32-F138-47fa-AD7A-F2135D8E2C0B}",
+      "definition": {
+        "nl": "De mogelijke types van concepten van een beweegbare waterkerende constructie."
+      },
+      "definition-nl": {
+        "nl": "De mogelijke types van concepten van een beweegbare waterkerende constructie."
+      },
+      "extra": {
+        "EA-Guid": "{CD5CFD32-F138-47fa-AD7A-F2135D8E2C0B}",
+        "EA-Name": "KlTypeConcept",
+        "EA-Package": "OSLO-Installatie",
+        "EA-Parents": "",
+        "EA-Parents2": [],
+        "EA-Type": "ENUMERATION",
+        "RawTags": [
+          {
+            "key": "ap-codelist",
+            "note": "null",
+            "value": "https://wegenenverkeer-test.data.vlaanderen.be/id/conceptscheme/KlTypeConcept"
+          },
+          {
+            "key": "beheerstatus",
+            "note": "Values: Nieuw,Gepubliceerd,InVerwerking,UitGebruik,Vervangen,Geconsolideerd,UitGebruikGeconsolideerd,NieuwGeconsolideerd,NieuwUitGebruik\r\nDefault: Nieuw\r\n",
+            "value": "Gepubliceerd"
+          },
+          {
+            "key": "creatie",
+            "note": "null",
+            "value": "2.12.0-RC2.516"
+          },
+          {
+            "key": "definition-nl",
+            "note": "null",
+            "value": "De mogelijke types van concepten van een beweegbare waterkerende constructie."
+          },
+          {
+            "key": "laatstGewijzigd",
+            "note": "null",
+            "value": "2.12.0-RC2.516"
+          },
+          {
+            "key": "label-nl",
+            "note": "null",
+            "value": "type beweging"
+          },
+          {
+            "key": "uri",
+            "note": "null",
+            "value": "http://www.w3.org/2004/02/skos/core#Concept"
+          }
+        ],
+        "Scope": "TRANSLATIONS_ONLY",
+        "definition": {
+          "nl": "De mogelijke types van concepten van een beweegbare waterkerende constructie."
+        },
+        "definition-en": "",
+        "definition-nl": {
+          "nl": "De mogelijke types van concepten van een beweegbare waterkerende constructie."
+        },
+        "equivalent": "",
+        "label": {
+          "nl": "type beweging"
+        },
+        "label-en": "",
+        "label-nl": {
+          "nl": "type beweging"
+        },
+        "parentclasses": "",
+        "sameAs": "",
+        "subclass": "",
+        "subclass1": "",
+        "usage": "",
+        "usageNote-en": "",
+        "usageNote-nl": ""
+      },
+      "inpackage": "OTHER_PACKAGE",
+      "label": {
+        "nl": "type beweging"
+      },
+      "label-nl": {
+        "nl": "type beweging"
+      },
+      "name": "type beweging"
+    },
+    {
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
+      "EA-Guid": "{D65DE1E7-0A4D-4c5e-96E0-B0A638456EC3}",
+      "definition": {
+        "nl": "Lijst van mogelijke aardinggsstelsels."
+      },
+      "definition-nl": {
+        "nl": "Lijst van mogelijke aardinggsstelsels."
+      },
+      "extra": {
+        "EA-Guid": "{D65DE1E7-0A4D-4c5e-96E0-B0A638456EC3}",
+        "EA-Name": "KlAardingAardingsstelsel",
+        "EA-Package": "OSLO-Installatie",
+        "EA-Parents": "",
+        "EA-Parents2": [],
+        "EA-Type": "ENUMERATION",
+        "RawTags": [
+          {
+            "key": "ap-codelist",
+            "note": "null",
+            "value": "https://wegenenverkeer-test.data.vlaanderen.be/id/conceptscheme/KlAardingAardingsstelsel"
+          },
+          {
+            "key": "beheerstatus",
+            "note": "Values: Nieuw,Gepubliceerd,InVerwerking,UitGebruik,Vervangen,Geconsolideerd,UitGebruikGeconsolideerd,NieuwGeconsolideerd,NieuwUitGebruik\r\nDefault: Nieuw\r\n",
+            "value": "Gepubliceerd"
+          },
+          {
+            "key": "creatie",
+            "note": "null",
+            "value": "28"
+          },
+          {
+            "key": "definition-nl",
+            "note": "null",
+            "value": "Lijst van mogelijke aardinggsstelsels."
+          },
+          {
+            "key": "idOrigineel",
+            "note": "null",
+            "value": "5572"
+          },
+          {
+            "key": "laatstGewijzigd",
+            "note": "null",
+            "value": "2.4.0-RC1.254"
+          },
+          {
+            "key": "label-nl",
+            "note": "null",
+            "value": "Aardingsinstallatie aardingsstelsel"
+          },
+          {
+            "key": "uri",
+            "note": "null",
+            "value": "http://www.w3.org/2004/02/skos/core#Concept"
+          }
+        ],
+        "Scope": "TRANSLATIONS_ONLY",
+        "definition": {
+          "nl": "Lijst van mogelijke aardinggsstelsels."
+        },
+        "definition-en": "",
+        "definition-nl": {
+          "nl": "Lijst van mogelijke aardinggsstelsels."
+        },
+        "equivalent": "",
+        "label": {
+          "nl": "Aardingsinstallatie aardingsstelsel"
+        },
+        "label-en": "",
+        "label-nl": {
+          "nl": "Aardingsinstallatie aardingsstelsel"
+        },
+        "parentclasses": "",
+        "sameAs": "",
+        "subclass": "",
+        "subclass1": "",
+        "usage": "",
+        "usageNote-en": "",
+        "usageNote-nl": ""
+      },
+      "inpackage": "OTHER_PACKAGE",
+      "label": {
+        "nl": "Aardingsinstallatie aardingsstelsel"
+      },
+      "label-nl": {
+        "nl": "Aardingsinstallatie aardingsstelsel"
+      },
+      "name": "Aardingsinstallatie aardingsstelsel"
+    },
+    {
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
+      "EA-Guid": "{25286ED8-3A5B-4e22-A420-711926F168B3}",
+      "definition": {
+        "nl": "De mogelijke beschrijvingen voor meteo-gerelateerde foto's."
+      },
+      "definition-nl": {
+        "nl": "De mogelijke beschrijvingen voor meteo-gerelateerde foto's."
+      },
+      "extra": {
+        "EA-Guid": "{25286ED8-3A5B-4e22-A420-711926F168B3}",
+        "EA-Name": "KlMeteoFotoBeschrijving",
+        "EA-Package": "OSLO-Installatie",
+        "EA-Parents": "",
+        "EA-Parents2": [],
+        "EA-Type": "ENUMERATION",
+        "RawTags": [
+          {
+            "key": "ap-codelist",
+            "note": "null",
+            "value": "https://wegenenverkeer-test.data.vlaanderen.be/id/conceptscheme/KlMeteoFotoBeschrijving"
+          },
+          {
+            "key": "beheerstatus",
+            "note": "Values: Nieuw,Gepubliceerd,InVerwerking,UitGebruik,Vervangen,Geconsolideerd,UitGebruikGeconsolideerd,NieuwGeconsolideerd,NieuwUitGebruik\r\nDefault: Nieuw\r\n",
+            "value": "Gepubliceerd"
+          },
+          {
+            "key": "creatie",
+            "note": "null",
+            "value": "2.12.0-RC2.493"
+          },
+          {
+            "key": "definition-nl",
+            "note": "null",
+            "value": "De mogelijke beschrijvingen voor meteo-gerelateerde foto's."
+          },
+          {
+            "key": "laatstGewijzigd",
+            "note": "null",
+            "value": "2.12.0-RC2.493"
+          },
+          {
+            "key": "label-nl",
+            "note": "null",
+            "value": "Meteo foto beschrijving"
+          },
+          {
+            "key": "uri",
+            "note": "null",
+            "value": "http://www.w3.org/2004/02/skos/core#Concept"
+          }
+        ],
+        "Scope": "TRANSLATIONS_ONLY",
+        "definition": {
+          "nl": "De mogelijke beschrijvingen voor meteo-gerelateerde foto's."
+        },
+        "definition-en": "",
+        "definition-nl": {
+          "nl": "De mogelijke beschrijvingen voor meteo-gerelateerde foto's."
+        },
+        "equivalent": "",
+        "label": {
+          "nl": "Meteo foto beschrijving"
+        },
+        "label-en": "",
+        "label-nl": {
+          "nl": "Meteo foto beschrijving"
+        },
+        "parentclasses": "",
+        "sameAs": "",
+        "subclass": "",
+        "subclass1": "",
+        "usage": "",
+        "usageNote-en": "",
+        "usageNote-nl": ""
+      },
+      "inpackage": "OTHER_PACKAGE",
+      "label": {
+        "nl": "Meteo foto beschrijving"
+      },
+      "label-nl": {
+        "nl": "Meteo foto beschrijving"
+      },
+      "name": "Meteo foto beschrijving"
+    },
+    {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/installatie#Verkeersbordopstelling",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
+      "EA-Guid": "{862C6971-D2BC-4d88-AB9D-D237A14E9CF6}",
+      "definition": {
+        "nl": "Het geheel van verticale verkeerssignalisatie die bevestigd is aan één of meerdere draagconstructies op éénzelfde geolocatie."
+      },
+      "definition-nl": {
+        "nl": "Het geheel van verticale verkeerssignalisatie die bevestigd is aan één of meerdere draagconstructies op éénzelfde geolocatie."
+      },
+      "extra": {
+        "EA-Guid": "{862C6971-D2BC-4d88-AB9D-D237A14E9CF6}",
+        "EA-Name": "Verkeersbordopstelling",
+        "EA-Package": "OSLO-Installatie",
+        "EA-Parents": "",
+        "EA-Parents2": [
+          {
+            "label": "AIM object",
+            "name": "AIMObject",
+            "package": "OSLO-Implementatieelement",
+            "uri": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#AIMObject"
+          },
+          {
+            "label": "Signalisatie",
+            "name": "Signalisatie",
+            "package": "OSLO-Abstracten",
+            "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten-vlag#Signalisatie"
+          }
+        ],
+        "EA-Type": "CLASS",
+        "RawTags": [
+          {
+            "key": "beheerstatus",
+            "note": "Values: Nieuw,Gepubliceerd,InVerwerking,UitGebruik,Vervangen,Geconsolideerd,UitGebruikGeconsolideerd,NieuwGeconsolideerd,NieuwUitGebruik\r\nDefault: Nieuw\r\n",
+            "value": "Gepubliceerd"
+          },
+          {
+            "key": "creatie",
+            "note": "null",
+            "value": "28"
+          },
+          {
+            "key": "definition-nl",
+            "note": "null",
+            "value": "Het geheel van verticale verkeerssignalisatie die bevestigd is aan één of meerdere draagconstructies op éénzelfde geolocatie."
+          },
+          {
+            "key": "idOrigineel",
+            "note": "null",
+            "value": "4552"
+          },
+          {
+            "key": "laatstGewijzigd",
+            "note": "null",
+            "value": "2.1.0-RC2.187"
+          },
+          {
+            "key": "label-nl",
+            "note": "null",
+            "value": "Verkeersbordopstelling"
+          },
+          {
+            "key": "uri",
+            "note": "null",
+            "value": "https://wegenenverkeer.data.vlaanderen.be/ns/installatie#Verkeersbordopstelling"
+          },
+          {
+            "key": "uri",
+            "note": "null",
+            "value": "https://wegenenverkeer.data.vlaanderen.be/ns/installatie#Verkeersbordopstelling"
+          }
+        ],
+        "Scope": "TRANSLATIONS_ONLY",
+        "definition": {
+          "nl": "Het geheel van verticale verkeerssignalisatie die bevestigd is aan één of meerdere draagconstructies op éénzelfde geolocatie."
+        },
+        "definition-en": "",
+        "definition-nl": {
+          "nl": "Het geheel van verticale verkeerssignalisatie die bevestigd is aan één of meerdere draagconstructies op éénzelfde geolocatie."
+        },
+        "equivalent": "",
+        "label": {
+          "nl": "Verkeersbordopstelling"
+        },
+        "label-en": "",
+        "label-nl": {
+          "nl": "Verkeersbordopstelling"
+        },
+        "parentclasses": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#AIMObject, https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten-vlag#Signalisatie",
+        "sameAs": "",
+        "subclass": "",
+        "subclass1": "",
+        "usage": "",
+        "usageNote-en": "",
+        "usageNote-nl": ""
+      },
+      "inpackage": "OTHER_PACKAGE",
+      "label": {
+        "nl": "Verkeersbordopstelling"
+      },
+      "label-nl": {
+        "nl": "Verkeersbordopstelling"
+      },
+      "name": "Verkeersbordopstelling"
+    }
+  ],
+  "extra": {
+    "EA-Guid": "{FC2C0B1C-C11F-43e8-B95C-686538B8A89A}",
+    "EA-Name": "OSLO-Installatie",
+    "RawTags": [
+      {
+        "key": "baseURI",
+        "note": "null",
+        "value": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie-vlag#"
+      },
+      {
+        "key": "title-nl",
+        "note": "null",
+        "value": "Installatie VLAG"
+      }
+    ],
+    "issued": "TODO",
+    "license": "TODO",
+    "title-nl": "Installatie VLAG"
+  },
+  "feedbackurl": "",
+  "hostname": "https://wegenenverkeer.data.dev-vlaanderen.be/",
+  "issued": "TODO",
+  "label": {
+    "en": "installatie-vlag",
+    "nl": "installatie-vlag"
+  },
+  "license": "https://data.vlaanderen.be/id/licentie/modellicentie-gratis-hergebruik/v1.0",
+  "name": "installatie-vlag",
+  "navigation": {
+    "prev": ""
+  },
+  "prefix": "wegenenverkeer",
+  "properties": [
+    {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie-vlag#DtcTypeBWC.typeConstructie",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "EA-Guid": "{7F95F110-F9DD-4396-AB65-D5D562B6EF54}",
+      "codelist": [],
+      "definition": {
+        "nl": "De type beweegbare waterkerende constructie."
+      },
+      "definition-nl": {
+        "nl": "De type beweegbare waterkerende constructie."
+      },
+      "domain": [
+        {
+          "EA-Name": "DtcTypeBWC",
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie-vlag#DtcTypeBWC"
+        }
+      ],
+      "extra": {
+        "EA-Domain": "DtcTypeBWC",
+        "EA-Domain-Guid": "{A5050CEE-B20B-4109-9DF9-ACB961E3A117}",
+        "EA-Guid": "{7F95F110-F9DD-4396-AB65-D5D562B6EF54}",
+        "EA-Name": "typeConstructie",
+        "EA-Package": "OSLO-Installatie",
+        "EA-Range": "KlConstructie",
+        "EA-Type": "attribute",
+        "RangeData": {
+          "EA-GUID": "{570E5265-D996-4330-9ACF-74A55D2C6BD2}",
+          "EA-Name": "KlConstructie",
+          "EA-Package": "OSLO-Installatie",
+          "uri": "http://www.w3.org/2004/02/skos/core#Concept"
+        },
+        "RawTags": [
+          {
+            "key": "definition-nl",
+            "note": "null",
+            "value": "De type beweegbare waterkerende constructie."
+          },
+          {
+            "key": "deprecated",
+            "note": "Values: false,true\r\nDefault: false\r\n",
+            "value": "false"
+          },
+          {
+            "key": "imported",
+            "note": "null",
+            "value": "1"
+          },
+          {
+            "key": "uri",
+            "note": "null",
+            "value": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie-vlag#DtcTypeBWC.typeConstructie"
+          },
+          {
+            "key": "label-nl",
+            "note": "null",
+            "value": "type constructie"
+          },
+          {
+            "key": "beheerstatus",
+            "note": "Values: Nieuw,Gepubliceerd,InVerwerking,UitGebruik,Vervangen,Geconsolideerd,UitGebruikGeconsolideerd,NieuwGeconsolideerd,NieuwUitGebruik\r\nDefault: Nieuw\r\n",
+            "value": "Gepubliceerd"
+          }
+        ],
+        "Scope": "FULL_DEFINITON",
+        "definition": {
+          "nl": "De type beweegbare waterkerende constructie."
+        },
+        "definition-en": "",
+        "definition-nl": {
+          "nl": "De type beweegbare waterkerende constructie."
+        },
+        "equivalent": "",
+        "label": {
+          "nl": "type constructie"
+        },
+        "label-en": "",
+        "label-nl": {
+          "nl": "type constructie"
+        },
+        "sameAs": "",
+        "subclass": "",
+        "subclass1": "",
+        "usage": "",
+        "usageNote-en": "",
+        "usageNote-nl": ""
+      },
+      "generalization": [],
+      "inpackage": "ACTIVE_PACKAGE",
+      "label": {
+        "nl": "type constructie"
+      },
+      "label-nl": {
+        "nl": "type constructie"
+      },
+      "maxCardinality": "1",
+      "minCardinality": "1",
+      "name": "type constructie",
+      "range": [
+        {
+          "EA-GUID": "{570E5265-D996-4330-9ACF-74A55D2C6BD2}",
+          "EA-Name": "KlConstructie",
+          "EA-Package": "OSLO-Installatie",
+          "uri": "http://www.w3.org/2004/02/skos/core#Concept"
+        }
+      ]
+    },
+    {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie-vlag#DtcTypeBWC.typeConcept",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "EA-Guid": "{5D774025-FCF6-415a-B84A-83C4D056DE88}",
+      "codelist": [],
+      "definition": {
+        "nl": "Het type concept van de beweegbare waterkerende constructie."
+      },
+      "definition-nl": {
+        "nl": "Het type concept van de beweegbare waterkerende constructie."
+      },
+      "domain": [
+        {
+          "EA-Name": "DtcTypeBWC",
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie-vlag#DtcTypeBWC"
+        }
+      ],
+      "extra": {
+        "EA-Domain": "DtcTypeBWC",
+        "EA-Domain-Guid": "{A5050CEE-B20B-4109-9DF9-ACB961E3A117}",
+        "EA-Guid": "{5D774025-FCF6-415a-B84A-83C4D056DE88}",
+        "EA-Name": "typeConcept",
+        "EA-Package": "OSLO-Installatie",
+        "EA-Range": "KlTypeConcept",
+        "EA-Type": "attribute",
+        "RangeData": {
+          "EA-GUID": "{CD5CFD32-F138-47fa-AD7A-F2135D8E2C0B}",
+          "EA-Name": "KlTypeConcept",
+          "EA-Package": "OSLO-Installatie",
+          "uri": "http://www.w3.org/2004/02/skos/core#Concept"
+        },
+        "RawTags": [
+          {
+            "key": "definition-nl",
+            "note": "null",
+            "value": "Het type concept van de beweegbare waterkerende constructie."
+          },
+          {
+            "key": "deprecated",
+            "note": "Values: false,true\r\nDefault: false\r\n",
+            "value": "false"
+          },
+          {
+            "key": "imported",
+            "note": "null",
+            "value": "1"
+          },
+          {
+            "key": "uri",
+            "note": "null",
+            "value": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie-vlag#DtcTypeBWC.typeConcept"
+          },
+          {
+            "key": "label-nl",
+            "note": "null",
+            "value": "type concept"
+          },
+          {
+            "key": "beheerstatus",
+            "note": "Values: Nieuw,Gepubliceerd,InVerwerking,UitGebruik,Vervangen,Geconsolideerd,UitGebruikGeconsolideerd,NieuwGeconsolideerd,NieuwUitGebruik\r\nDefault: Nieuw\r\n",
+            "value": "Gepubliceerd"
+          }
+        ],
+        "Scope": "FULL_DEFINITON",
+        "definition": {
+          "nl": "Het type concept van de beweegbare waterkerende constructie."
+        },
+        "definition-en": "",
+        "definition-nl": {
+          "nl": "Het type concept van de beweegbare waterkerende constructie."
+        },
+        "equivalent": "",
+        "label": {
+          "nl": "type concept"
+        },
+        "label-en": "",
+        "label-nl": {
+          "nl": "type concept"
+        },
+        "sameAs": "",
+        "subclass": "",
+        "subclass1": "",
+        "usage": "",
+        "usageNote-en": "",
+        "usageNote-nl": ""
+      },
+      "generalization": [],
+      "inpackage": "ACTIVE_PACKAGE",
+      "label": {
+        "nl": "type concept"
+      },
+      "label-nl": {
+        "nl": "type concept"
+      },
+      "maxCardinality": "1",
+      "minCardinality": "1",
+      "name": "type concept",
+      "range": [
+        {
+          "EA-GUID": "{CD5CFD32-F138-47fa-AD7A-F2135D8E2C0B}",
+          "EA-Name": "KlTypeConcept",
+          "EA-Package": "OSLO-Installatie",
+          "uri": "http://www.w3.org/2004/02/skos/core#Concept"
+        }
+      ]
+    },
+    {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie-vlag#DtcOntwerpSchip.lengte",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "EA-Guid": "{3B548AC0-6EDD-460b-A415-A53E2CB87EFB}",
+      "codelist": [],
+      "definition": {
+        "nl": "De lengte van het ontwerpschip."
+      },
+      "definition-nl": {
+        "nl": "De lengte van het ontwerpschip."
+      },
+      "domain": [
+        {
+          "EA-Name": "DtcOntwerpSchip",
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie-vlag#DtcOntwerpSchip"
+        }
+      ],
+      "extra": {
+        "EA-Domain": "DtcOntwerpSchip",
+        "EA-Domain-Guid": "{07E1FAF7-CE33-4619-876B-793F4E512A6C}",
+        "EA-Guid": "{3B548AC0-6EDD-460b-A415-A53E2CB87EFB}",
+        "EA-Name": "lengte",
+        "EA-Package": "OSLO-Installatie",
+        "EA-Range": "KwantWrdInMeter",
+        "EA-Type": "attribute",
+        "RangeData": {
+          "EA-GUID": "{30A575B2-90E9-4879-A70F-2DE16F53B112}",
+          "EA-Name": "KwantWrdInMeter",
+          "EA-Package": "OSLO-Implementatieelement",
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement-vlag#KwantWrdInMeter"
+        },
+        "RawTags": [
+          {
+            "key": "definition-nl",
+            "note": "null",
+            "value": "De lengte van het ontwerpschip."
+          },
+          {
+            "key": "deprecated",
+            "note": "Values: false,true\r\nDefault: false\r\n",
+            "value": "false"
+          },
+          {
+            "key": "imported",
+            "note": "null",
+            "value": "1"
+          },
+          {
+            "key": "uri",
+            "note": "null",
+            "value": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie-vlag#DtcOntwerpSchip.lengte"
+          },
+          {
+            "key": "label-nl",
+            "note": "null",
+            "value": "lengte"
+          },
+          {
+            "key": "beheerstatus",
+            "note": "Values: Nieuw,Gepubliceerd,InVerwerking,UitGebruik,Vervangen,Geconsolideerd,UitGebruikGeconsolideerd,NieuwGeconsolideerd,NieuwUitGebruik\r\nDefault: Nieuw\r\n",
+            "value": "Gepubliceerd"
+          }
+        ],
+        "Scope": "FULL_DEFINITON",
+        "definition": {
+          "nl": "De lengte van het ontwerpschip."
+        },
+        "definition-en": "",
+        "definition-nl": {
+          "nl": "De lengte van het ontwerpschip."
+        },
+        "equivalent": "",
+        "label": {
+          "nl": "lengte"
+        },
+        "label-en": "",
+        "label-nl": {
+          "nl": "lengte"
+        },
+        "sameAs": "",
+        "subclass": "",
+        "subclass1": "",
+        "usage": "",
+        "usageNote-en": "",
+        "usageNote-nl": ""
+      },
+      "generalization": [],
+      "inpackage": "ACTIVE_PACKAGE",
+      "label": {
+        "nl": "lengte"
+      },
+      "label-nl": {
+        "nl": "lengte"
+      },
+      "maxCardinality": "1",
+      "minCardinality": "1",
+      "name": "lengte",
+      "range": [
+        {
+          "EA-GUID": "{30A575B2-90E9-4879-A70F-2DE16F53B112}",
+          "EA-Name": "KwantWrdInMeter",
+          "EA-Package": "OSLO-Implementatieelement",
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement-vlag#KwantWrdInMeter"
+        }
+      ]
+    },
+    {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie-vlag#DtcOntwerpSchip.gewicht",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "EA-Guid": "{4F18BFA3-7F98-47d7-9AA2-CBD3918EEBFB}",
+      "codelist": [],
+      "definition": {
+        "nl": "Het gewicht van het ontwerpschip."
+      },
+      "definition-nl": {
+        "nl": "Het gewicht van het ontwerpschip."
+      },
+      "domain": [
+        {
+          "EA-Name": "DtcOntwerpSchip",
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie-vlag#DtcOntwerpSchip"
+        }
+      ],
+      "extra": {
+        "EA-Domain": "DtcOntwerpSchip",
+        "EA-Domain-Guid": "{07E1FAF7-CE33-4619-876B-793F4E512A6C}",
+        "EA-Guid": "{4F18BFA3-7F98-47d7-9AA2-CBD3918EEBFB}",
+        "EA-Name": "gewicht",
+        "EA-Package": "OSLO-Installatie",
+        "EA-Range": "KwantWrdInTon",
+        "EA-Type": "attribute",
+        "RangeData": {
+          "EA-GUID": "{F6DAC347-51C7-4425-8B3C-45053AC164EC}",
+          "EA-Name": "KwantWrdInTon",
+          "EA-Package": "OSLO-Implementatieelement",
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement-vlag#KwantWrdInTon"
+        },
+        "RawTags": [
+          {
+            "key": "definition-nl",
+            "note": "null",
+            "value": "Het gewicht van het ontwerpschip."
+          },
+          {
+            "key": "uri",
+            "note": "null",
+            "value": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie-vlag#DtcOntwerpSchip.gewicht"
+          },
+          {
+            "key": "label-nl",
+            "note": "null",
+            "value": "gewicht"
+          },
+          {
+            "key": "beheerstatus",
+            "note": "Values: Nieuw,Gepubliceerd,InVerwerking,UitGebruik,Vervangen,Geconsolideerd,UitGebruikGeconsolideerd,NieuwGeconsolideerd,NieuwUitGebruik\r\nDefault: Nieuw\r\n",
+            "value": "Gepubliceerd"
+          },
+          {
+            "key": "deprecated",
+            "note": "Values: false,true\r\nDefault: false\r\n",
+            "value": "false"
+          }
+        ],
+        "Scope": "FULL_DEFINITON",
+        "definition": {
+          "nl": "Het gewicht van het ontwerpschip."
+        },
+        "definition-en": "",
+        "definition-nl": {
+          "nl": "Het gewicht van het ontwerpschip."
+        },
+        "equivalent": "",
+        "label": {
+          "nl": "gewicht"
+        },
+        "label-en": "",
+        "label-nl": {
+          "nl": "gewicht"
+        },
+        "sameAs": "",
+        "subclass": "",
+        "subclass1": "",
+        "usage": "",
+        "usageNote-en": "",
+        "usageNote-nl": ""
+      },
+      "generalization": [],
+      "inpackage": "ACTIVE_PACKAGE",
+      "label": {
+        "nl": "gewicht"
+      },
+      "label-nl": {
+        "nl": "gewicht"
+      },
+      "maxCardinality": "1",
+      "minCardinality": "1",
+      "name": "gewicht",
+      "range": [
+        {
+          "EA-GUID": "{F6DAC347-51C7-4425-8B3C-45053AC164EC}",
+          "EA-Name": "KwantWrdInTon",
+          "EA-Package": "OSLO-Implementatieelement",
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement-vlag#KwantWrdInTon"
+        }
+      ]
+    },
+    {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie-vlag#DtcOntwerpSchip.diepgang",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "EA-Guid": "{D824AA6F-492D-402b-BE69-D61A10444B8D}",
+      "codelist": [],
+      "definition": {
+        "nl": "De diepgang van het ontwerpschip."
+      },
+      "definition-nl": {
+        "nl": "De diepgang van het ontwerpschip."
+      },
+      "domain": [
+        {
+          "EA-Name": "DtcOntwerpSchip",
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie-vlag#DtcOntwerpSchip"
+        }
+      ],
+      "extra": {
+        "EA-Domain": "DtcOntwerpSchip",
+        "EA-Domain-Guid": "{07E1FAF7-CE33-4619-876B-793F4E512A6C}",
+        "EA-Guid": "{D824AA6F-492D-402b-BE69-D61A10444B8D}",
+        "EA-Name": "diepgang",
+        "EA-Package": "OSLO-Installatie",
+        "EA-Range": "KwantWrdInMeter",
+        "EA-Type": "attribute",
+        "RangeData": {
+          "EA-GUID": "{30A575B2-90E9-4879-A70F-2DE16F53B112}",
+          "EA-Name": "KwantWrdInMeter",
+          "EA-Package": "OSLO-Implementatieelement",
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement-vlag#KwantWrdInMeter"
+        },
+        "RawTags": [
+          {
+            "key": "impact",
+            "note": "null",
+            "value": "CT000516_D08"
+          },
+          {
+            "key": "definition-nl",
+            "note": "null",
+            "value": "De diepgang van het ontwerpschip."
+          },
+          {
+            "key": "deprecated",
+            "note": "Values: false,true\r\nDefault: false\r\n",
+            "value": "false"
+          },
+          {
+            "key": "imported",
+            "note": "null",
+            "value": "1"
+          },
+          {
+            "key": "uri",
+            "note": "null",
+            "value": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie-vlag#DtcOntwerpSchip.diepgang"
+          },
+          {
+            "key": "label-nl",
+            "note": "null",
+            "value": "diepgang"
+          },
+          {
+            "key": "beheerstatus",
+            "note": "Values: Nieuw,Gepubliceerd,InVerwerking,UitGebruik,Vervangen,Geconsolideerd,UitGebruikGeconsolideerd,NieuwGeconsolideerd,NieuwUitGebruik\r\nDefault: Nieuw\r\n",
+            "value": "Gepubliceerd"
+          }
+        ],
+        "Scope": "FULL_DEFINITON",
+        "definition": {
+          "nl": "De diepgang van het ontwerpschip."
+        },
+        "definition-en": "",
+        "definition-nl": {
+          "nl": "De diepgang van het ontwerpschip."
+        },
+        "equivalent": "",
+        "label": {
+          "nl": "diepgang"
+        },
+        "label-en": "",
+        "label-nl": {
+          "nl": "diepgang"
+        },
+        "sameAs": "",
+        "subclass": "",
+        "subclass1": "",
+        "usage": "",
+        "usageNote-en": "",
+        "usageNote-nl": ""
+      },
+      "generalization": [],
+      "inpackage": "ACTIVE_PACKAGE",
+      "label": {
+        "nl": "diepgang"
+      },
+      "label-nl": {
+        "nl": "diepgang"
+      },
+      "maxCardinality": "1",
+      "minCardinality": "1",
+      "name": "diepgang",
+      "range": [
+        {
+          "EA-GUID": "{30A575B2-90E9-4879-A70F-2DE16F53B112}",
+          "EA-Name": "KwantWrdInMeter",
+          "EA-Package": "OSLO-Implementatieelement",
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement-vlag#KwantWrdInMeter"
+        }
+      ]
+    },
+    {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie-vlag#DtcOntwerpSchip.breedte",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "EA-Guid": "{D70DEDB5-715B-49fb-9F7E-B46D397222ED}",
+      "codelist": [],
+      "definition": {
+        "nl": "De breedte van het ontwerpschip."
+      },
+      "definition-nl": {
+        "nl": "De breedte van het ontwerpschip."
+      },
+      "domain": [
+        {
+          "EA-Name": "DtcOntwerpSchip",
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie-vlag#DtcOntwerpSchip"
+        }
+      ],
+      "extra": {
+        "EA-Domain": "DtcOntwerpSchip",
+        "EA-Domain-Guid": "{07E1FAF7-CE33-4619-876B-793F4E512A6C}",
+        "EA-Guid": "{D70DEDB5-715B-49fb-9F7E-B46D397222ED}",
+        "EA-Name": "breedte",
+        "EA-Package": "OSLO-Installatie",
+        "EA-Range": "KwantWrdInMeter",
+        "EA-Type": "attribute",
+        "RangeData": {
+          "EA-GUID": "{30A575B2-90E9-4879-A70F-2DE16F53B112}",
+          "EA-Name": "KwantWrdInMeter",
+          "EA-Package": "OSLO-Implementatieelement",
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement-vlag#KwantWrdInMeter"
+        },
+        "RawTags": [
+          {
+            "key": "definition-nl",
+            "note": "null",
+            "value": "De breedte van het ontwerpschip."
+          },
+          {
+            "key": "deprecated",
+            "note": "Values: false,true\r\nDefault: false\r\n",
+            "value": "false"
+          },
+          {
+            "key": "imported",
+            "note": "null",
+            "value": "1"
+          },
+          {
+            "key": "uri",
+            "note": "null",
+            "value": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie-vlag#DtcOntwerpSchip.breedte"
+          },
+          {
+            "key": "label-nl",
+            "note": "null",
+            "value": "breedte"
+          },
+          {
+            "key": "beheerstatus",
+            "note": "Values: Nieuw,Gepubliceerd,InVerwerking,UitGebruik,Vervangen,Geconsolideerd,UitGebruikGeconsolideerd,NieuwGeconsolideerd,NieuwUitGebruik\r\nDefault: Nieuw\r\n",
+            "value": "Gepubliceerd"
+          }
+        ],
+        "Scope": "FULL_DEFINITON",
+        "definition": {
+          "nl": "De breedte van het ontwerpschip."
+        },
+        "definition-en": "",
+        "definition-nl": {
+          "nl": "De breedte van het ontwerpschip."
+        },
+        "equivalent": "",
+        "label": {
+          "nl": "breedte"
+        },
+        "label-en": "",
+        "label-nl": {
+          "nl": "breedte"
+        },
+        "sameAs": "",
+        "subclass": "",
+        "subclass1": "",
+        "usage": "",
+        "usageNote-en": "",
+        "usageNote-nl": ""
+      },
+      "generalization": [],
+      "inpackage": "ACTIVE_PACKAGE",
+      "label": {
+        "nl": "breedte"
+      },
+      "label-nl": {
+        "nl": "breedte"
+      },
+      "maxCardinality": "1",
+      "minCardinality": "1",
+      "name": "breedte",
+      "range": [
+        {
+          "EA-GUID": "{30A575B2-90E9-4879-A70F-2DE16F53B112}",
+          "EA-Name": "KwantWrdInMeter",
+          "EA-Package": "OSLO-Implementatieelement",
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement-vlag#KwantWrdInMeter"
+        }
+      ]
+    },
+    {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie-vlag#DtcMeteoFoto.fotobestand",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "EA-Guid": "{679A6462-262C-412c-8D96-85A965ED0492}",
+      "codelist": [],
+      "definition": {
+        "nl": "Het bestand dat de foto bevat."
+      },
+      "definition-nl": {
+        "nl": "Het bestand dat de foto bevat."
+      },
+      "domain": [
+        {
+          "EA-Name": "DtcMeteoFoto",
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie-vlag#DtcMeteoFoto"
+        }
+      ],
+      "extra": {
+        "EA-Domain": "DtcMeteoFoto",
+        "EA-Domain-Guid": "{AF7E4C63-26A2-4914-A7C2-79863F4704C0}",
+        "EA-Guid": "{679A6462-262C-412c-8D96-85A965ED0492}",
+        "EA-Name": "fotobestand",
+        "EA-Package": "OSLO-Installatie",
+        "EA-Range": "DtcDocument",
+        "EA-Type": "attribute",
+        "RangeData": {
+          "EA-GUID": "{389F3E48-BAD7-4e4f-8C27-7F090D5F417F}",
+          "EA-Name": "DtcDocument",
+          "EA-Package": "OSLO-Implementatieelement",
+          "uri": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#DtcDocument"
+        },
+        "RawTags": [
+          {
+            "key": "deprecated",
+            "note": "Values: false,true\r\nDefault: false\r\n",
+            "value": "false"
+          },
+          {
+            "key": "uri",
+            "note": "null",
+            "value": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie-vlag#DtcMeteoFoto.fotobestand"
+          },
+          {
+            "key": "label-nl",
+            "note": "null",
+            "value": "fotobestand"
+          },
+          {
+            "key": "definition-nl",
+            "note": "null",
+            "value": "Het bestand dat de foto bevat."
+          },
+          {
+            "key": "beheerstatus",
+            "note": "Values: Nieuw,Gepubliceerd,InVerwerking,UitGebruik,Vervangen,Geconsolideerd,UitGebruikGeconsolideerd,NieuwGeconsolideerd,NieuwUitGebruik\r\nDefault: Nieuw\r\n",
+            "value": "Gepubliceerd"
+          }
+        ],
+        "Scope": "FULL_DEFINITON",
+        "definition": {
+          "nl": "Het bestand dat de foto bevat."
+        },
+        "definition-en": "",
+        "definition-nl": {
+          "nl": "Het bestand dat de foto bevat."
+        },
+        "equivalent": "",
+        "label": {
+          "nl": "fotobestand"
+        },
+        "label-en": "",
+        "label-nl": {
+          "nl": "fotobestand"
+        },
+        "sameAs": "",
+        "subclass": "",
+        "subclass1": "",
+        "usage": "",
+        "usageNote-en": "",
+        "usageNote-nl": ""
+      },
+      "generalization": [],
+      "inpackage": "ACTIVE_PACKAGE",
+      "label": {
+        "nl": "fotobestand"
+      },
+      "label-nl": {
+        "nl": "fotobestand"
+      },
+      "maxCardinality": "1",
+      "minCardinality": "1",
+      "name": "fotobestand",
+      "range": [
+        {
+          "EA-GUID": "{389F3E48-BAD7-4e4f-8C27-7F090D5F417F}",
+          "EA-Name": "DtcDocument",
+          "EA-Package": "OSLO-Implementatieelement",
+          "uri": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#DtcDocument"
+        }
+      ]
+    },
+    {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie-vlag#DtcMeteoFoto.beschrijving",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "EA-Guid": "{F2D73109-B157-4351-938F-FA4E3EF68636}",
+      "codelist": [],
+      "definition": {
+        "nl": "De beschrijving of categorie waarbij de foto's behoren."
+      },
+      "definition-nl": {
+        "nl": "De beschrijving of categorie waarbij de foto's behoren."
+      },
+      "domain": [
+        {
+          "EA-Name": "DtcMeteoFoto",
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie-vlag#DtcMeteoFoto"
+        }
+      ],
+      "extra": {
+        "EA-Domain": "DtcMeteoFoto",
+        "EA-Domain-Guid": "{AF7E4C63-26A2-4914-A7C2-79863F4704C0}",
+        "EA-Guid": "{F2D73109-B157-4351-938F-FA4E3EF68636}",
+        "EA-Name": "beschrijving",
+        "EA-Package": "OSLO-Installatie",
+        "EA-Range": "KlMeteoFotoBeschrijving",
+        "EA-Type": "attribute",
+        "RangeData": {
+          "EA-GUID": "{25286ED8-3A5B-4e22-A420-711926F168B3}",
+          "EA-Name": "KlMeteoFotoBeschrijving",
+          "EA-Package": "OSLO-Installatie",
+          "uri": "http://www.w3.org/2004/02/skos/core#Concept"
+        },
+        "RawTags": [
+          {
+            "key": "label-nl",
+            "note": "null",
+            "value": "beschrijving"
+          },
+          {
+            "key": "definition-nl",
+            "note": "null",
+            "value": "De beschrijving of categorie waarbij de foto's behoren."
+          },
+          {
+            "key": "deprecated",
+            "note": "Values: false,true\r\nDefault: false\r\n",
+            "value": "false"
+          },
+          {
+            "key": "uri",
+            "note": "null",
+            "value": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie-vlag#DtcMeteoFoto.beschrijving"
+          },
+          {
+            "key": "beheerstatus",
+            "note": "Values: Nieuw,Gepubliceerd,InVerwerking,UitGebruik,Vervangen,Geconsolideerd,UitGebruikGeconsolideerd,NieuwGeconsolideerd,NieuwUitGebruik\r\nDefault: Nieuw\r\n",
+            "value": "Gepubliceerd"
+          }
+        ],
+        "Scope": "FULL_DEFINITON",
+        "definition": {
+          "nl": "De beschrijving of categorie waarbij de foto's behoren."
+        },
+        "definition-en": "",
+        "definition-nl": {
+          "nl": "De beschrijving of categorie waarbij de foto's behoren."
+        },
+        "equivalent": "",
+        "label": {
+          "nl": "beschrijving"
+        },
+        "label-en": "",
+        "label-nl": {
+          "nl": "beschrijving"
+        },
+        "sameAs": "",
+        "subclass": "",
+        "subclass1": "",
+        "usage": "",
+        "usageNote-en": "",
+        "usageNote-nl": ""
+      },
+      "generalization": [],
+      "inpackage": "ACTIVE_PACKAGE",
+      "label": {
+        "nl": "beschrijving"
+      },
+      "label-nl": {
+        "nl": "beschrijving"
+      },
+      "maxCardinality": "1",
+      "minCardinality": "1",
+      "name": "beschrijving",
+      "range": [
+        {
+          "EA-GUID": "{25286ED8-3A5B-4e22-A420-711926F168B3}",
+          "EA-Name": "KlMeteoFotoBeschrijving",
+          "EA-Package": "OSLO-Installatie",
+          "uri": "http://www.w3.org/2004/02/skos/core#Concept"
+        }
+      ]
+    },
+    {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie-vlag#DtcDVWtoelaatbareSchipsafemetingen.maximaleLengte",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "EA-Guid": "{AB094E45-8BF2-4a47-ADD0-9F965239FD20}",
+      "codelist": [],
+      "definition": {
+        "nl": "De maximale toelaatbare lengte."
+      },
+      "definition-nl": {
+        "nl": "De maximale toelaatbare lengte."
+      },
+      "domain": [
+        {
+          "EA-Name": "DtcDVWtoelaatbareSchipsafemetingen",
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie-vlag#DtcDVWtoelaatbareSchipsafemetingen"
+        }
+      ],
+      "extra": {
+        "EA-Domain": "DtcDVWtoelaatbareSchipsafemetingen",
+        "EA-Domain-Guid": "{F69E1469-08F4-4240-8379-859F91D670B9}",
+        "EA-Guid": "{AB094E45-8BF2-4a47-ADD0-9F965239FD20}",
+        "EA-Name": "maximaleLengte",
+        "EA-Package": "OSLO-Installatie",
+        "EA-Range": "KwantWrdInMeter",
+        "EA-Type": "attribute",
+        "RangeData": {
+          "EA-GUID": "{30A575B2-90E9-4879-A70F-2DE16F53B112}",
+          "EA-Name": "KwantWrdInMeter",
+          "EA-Package": "OSLO-Implementatieelement",
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement-vlag#KwantWrdInMeter"
+        },
+        "RawTags": [
+          {
+            "key": "definition-nl",
+            "note": "null",
+            "value": "De maximale toelaatbare lengte."
+          },
+          {
+            "key": "deprecated",
+            "note": "Values: false,true\r\nDefault: false\r\n",
+            "value": "false"
+          },
+          {
+            "key": "imported",
+            "note": "null",
+            "value": "1"
+          },
+          {
+            "key": "uri",
+            "note": "null",
+            "value": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie-vlag#DtcDVWtoelaatbareSchipsafemetingen.maximaleLengte"
+          },
+          {
+            "key": "label-nl",
+            "note": "null",
+            "value": "maximale lengte"
+          },
+          {
+            "key": "beheerstatus",
+            "note": "Values: Nieuw,Gepubliceerd,InVerwerking,UitGebruik,Vervangen,Geconsolideerd,UitGebruikGeconsolideerd,NieuwGeconsolideerd,NieuwUitGebruik\r\nDefault: Nieuw\r\n",
+            "value": "Gepubliceerd"
+          }
+        ],
+        "Scope": "FULL_DEFINITON",
+        "definition": {
+          "nl": "De maximale toelaatbare lengte."
+        },
+        "definition-en": "",
+        "definition-nl": {
+          "nl": "De maximale toelaatbare lengte."
+        },
+        "equivalent": "",
+        "label": {
+          "nl": "maximale lengte"
+        },
+        "label-en": "",
+        "label-nl": {
+          "nl": "maximale lengte"
+        },
+        "sameAs": "",
+        "subclass": "",
+        "subclass1": "",
+        "usage": "",
+        "usageNote-en": "",
+        "usageNote-nl": ""
+      },
+      "generalization": [],
+      "inpackage": "ACTIVE_PACKAGE",
+      "label": {
+        "nl": "maximale lengte"
+      },
+      "label-nl": {
+        "nl": "maximale lengte"
+      },
+      "maxCardinality": "1",
+      "minCardinality": "1",
+      "name": "maximale lengte",
+      "range": [
+        {
+          "EA-GUID": "{30A575B2-90E9-4879-A70F-2DE16F53B112}",
+          "EA-Name": "KwantWrdInMeter",
+          "EA-Package": "OSLO-Implementatieelement",
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement-vlag#KwantWrdInMeter"
+        }
+      ]
+    },
+    {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie-vlag#DtcDVWtoelaatbareSchipsafemetingen.maximaleHoogte",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "EA-Guid": "{70D30C55-A1A3-4948-B1C1-89599D245EC3}",
+      "codelist": [],
+      "definition": {
+        "nl": "De maximale toelaatbare hoogte."
+      },
+      "definition-nl": {
+        "nl": "De maximale toelaatbare hoogte."
+      },
+      "domain": [
+        {
+          "EA-Name": "DtcDVWtoelaatbareSchipsafemetingen",
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie-vlag#DtcDVWtoelaatbareSchipsafemetingen"
+        }
+      ],
+      "extra": {
+        "EA-Domain": "DtcDVWtoelaatbareSchipsafemetingen",
+        "EA-Domain-Guid": "{F69E1469-08F4-4240-8379-859F91D670B9}",
+        "EA-Guid": "{70D30C55-A1A3-4948-B1C1-89599D245EC3}",
+        "EA-Name": "maximaleHoogte",
+        "EA-Package": "OSLO-Installatie",
+        "EA-Range": "KwantWrdInMeter",
+        "EA-Type": "attribute",
+        "RangeData": {
+          "EA-GUID": "{30A575B2-90E9-4879-A70F-2DE16F53B112}",
+          "EA-Name": "KwantWrdInMeter",
+          "EA-Package": "OSLO-Implementatieelement",
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement-vlag#KwantWrdInMeter"
+        },
+        "RawTags": [
+          {
+            "key": "definition-nl",
+            "note": "null",
+            "value": "De maximale toelaatbare hoogte."
+          },
+          {
+            "key": "deprecated",
+            "note": "Values: false,true\r\nDefault: false\r\n",
+            "value": "false"
+          },
+          {
+            "key": "uri",
+            "note": "null",
+            "value": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie-vlag#DtcDVWtoelaatbareSchipsafemetingen.maximaleHoogte"
+          },
+          {
+            "key": "label-nl",
+            "note": "null",
+            "value": "maximale hoogte"
+          },
+          {
+            "key": "beheerstatus",
+            "note": "Values: Nieuw,Gepubliceerd,InVerwerking,UitGebruik,Vervangen,Geconsolideerd,UitGebruikGeconsolideerd,NieuwGeconsolideerd,NieuwUitGebruik\r\nDefault: Nieuw\r\n",
+            "value": "Gepubliceerd"
+          }
+        ],
+        "Scope": "FULL_DEFINITON",
+        "definition": {
+          "nl": "De maximale toelaatbare hoogte."
+        },
+        "definition-en": "",
+        "definition-nl": {
+          "nl": "De maximale toelaatbare hoogte."
+        },
+        "equivalent": "",
+        "label": {
+          "nl": "maximale hoogte"
+        },
+        "label-en": "",
+        "label-nl": {
+          "nl": "maximale hoogte"
+        },
+        "sameAs": "",
+        "subclass": "",
+        "subclass1": "",
+        "usage": "",
+        "usageNote-en": "",
+        "usageNote-nl": ""
+      },
+      "generalization": [],
+      "inpackage": "ACTIVE_PACKAGE",
+      "label": {
+        "nl": "maximale hoogte"
+      },
+      "label-nl": {
+        "nl": "maximale hoogte"
+      },
+      "maxCardinality": "1",
+      "minCardinality": "1",
+      "name": "maximale hoogte",
+      "range": [
+        {
+          "EA-GUID": "{30A575B2-90E9-4879-A70F-2DE16F53B112}",
+          "EA-Name": "KwantWrdInMeter",
+          "EA-Package": "OSLO-Implementatieelement",
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement-vlag#KwantWrdInMeter"
+        }
+      ]
+    },
+    {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie-vlag#DtcDVWtoelaatbareSchipsafemetingen.maximaleDiepgang",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "EA-Guid": "{33AA24D7-0DA4-479d-87FF-B8A46AC84E95}",
+      "codelist": [],
+      "definition": {
+        "nl": "De maximale toelaatbare diepgang."
+      },
+      "definition-nl": {
+        "nl": "De maximale toelaatbare diepgang."
+      },
+      "domain": [
+        {
+          "EA-Name": "DtcDVWtoelaatbareSchipsafemetingen",
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie-vlag#DtcDVWtoelaatbareSchipsafemetingen"
+        }
+      ],
+      "extra": {
+        "EA-Domain": "DtcDVWtoelaatbareSchipsafemetingen",
+        "EA-Domain-Guid": "{F69E1469-08F4-4240-8379-859F91D670B9}",
+        "EA-Guid": "{33AA24D7-0DA4-479d-87FF-B8A46AC84E95}",
+        "EA-Name": "maximaleDiepgang",
+        "EA-Package": "OSLO-Installatie",
+        "EA-Range": "KwantWrdInMeter",
+        "EA-Type": "attribute",
+        "RangeData": {
+          "EA-GUID": "{30A575B2-90E9-4879-A70F-2DE16F53B112}",
+          "EA-Name": "KwantWrdInMeter",
+          "EA-Package": "OSLO-Implementatieelement",
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement-vlag#KwantWrdInMeter"
+        },
+        "RawTags": [
+          {
+            "key": "definition-nl",
+            "note": "null",
+            "value": "De maximale toelaatbare diepgang."
+          },
+          {
+            "key": "deprecated",
+            "note": "Values: false,true\r\nDefault: false\r\n",
+            "value": "false"
+          },
+          {
+            "key": "imported",
+            "note": "null",
+            "value": "1"
+          },
+          {
+            "key": "uri",
+            "note": "null",
+            "value": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie-vlag#DtcDVWtoelaatbareSchipsafemetingen.maximaleDiepgang"
+          },
+          {
+            "key": "label-nl",
+            "note": "null",
+            "value": "maximale diepgang"
+          },
+          {
+            "key": "beheerstatus",
+            "note": "Values: Nieuw,Gepubliceerd,InVerwerking,UitGebruik,Vervangen,Geconsolideerd,UitGebruikGeconsolideerd,NieuwGeconsolideerd,NieuwUitGebruik\r\nDefault: Nieuw\r\n",
+            "value": "Gepubliceerd"
+          }
+        ],
+        "Scope": "FULL_DEFINITON",
+        "definition": {
+          "nl": "De maximale toelaatbare diepgang."
+        },
+        "definition-en": "",
+        "definition-nl": {
+          "nl": "De maximale toelaatbare diepgang."
+        },
+        "equivalent": "",
+        "label": {
+          "nl": "maximale diepgang"
+        },
+        "label-en": "",
+        "label-nl": {
+          "nl": "maximale diepgang"
+        },
+        "sameAs": "",
+        "subclass": "",
+        "subclass1": "",
+        "usage": "",
+        "usageNote-en": "",
+        "usageNote-nl": ""
+      },
+      "generalization": [],
+      "inpackage": "ACTIVE_PACKAGE",
+      "label": {
+        "nl": "maximale diepgang"
+      },
+      "label-nl": {
+        "nl": "maximale diepgang"
+      },
+      "maxCardinality": "1",
+      "minCardinality": "1",
+      "name": "maximale diepgang",
+      "range": [
+        {
+          "EA-GUID": "{30A575B2-90E9-4879-A70F-2DE16F53B112}",
+          "EA-Name": "KwantWrdInMeter",
+          "EA-Package": "OSLO-Implementatieelement",
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement-vlag#KwantWrdInMeter"
+        }
+      ]
+    },
+    {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie-vlag#DtcDVWtoelaatbareSchipsafemetingen.maximaleBreedte",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "EA-Guid": "{5F03C41A-70B1-4c00-995B-495666EDB0BB}",
+      "codelist": [],
+      "definition": {
+        "nl": "De maximale toelaatbare Breedte"
+      },
+      "definition-nl": {
+        "nl": "De maximale toelaatbare Breedte"
+      },
+      "domain": [
+        {
+          "EA-Name": "DtcDVWtoelaatbareSchipsafemetingen",
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie-vlag#DtcDVWtoelaatbareSchipsafemetingen"
+        }
+      ],
+      "extra": {
+        "EA-Domain": "DtcDVWtoelaatbareSchipsafemetingen",
+        "EA-Domain-Guid": "{F69E1469-08F4-4240-8379-859F91D670B9}",
+        "EA-Guid": "{5F03C41A-70B1-4c00-995B-495666EDB0BB}",
+        "EA-Name": "maximaleBreedte",
+        "EA-Package": "OSLO-Installatie",
+        "EA-Range": "KwantWrdInMeter",
+        "EA-Type": "attribute",
+        "RangeData": {
+          "EA-GUID": "{30A575B2-90E9-4879-A70F-2DE16F53B112}",
+          "EA-Name": "KwantWrdInMeter",
+          "EA-Package": "OSLO-Implementatieelement",
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement-vlag#KwantWrdInMeter"
+        },
+        "RawTags": [
+          {
+            "key": "definition-nl",
+            "note": "null",
+            "value": "De maximale toelaatbare Breedte"
+          },
+          {
+            "key": "deprecated",
+            "note": "Values: false,true\r\nDefault: false\r\n",
+            "value": "false"
+          },
+          {
+            "key": "imported",
+            "note": "null",
+            "value": "1"
+          },
+          {
+            "key": "uri",
+            "note": "null",
+            "value": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie-vlag#DtcDVWtoelaatbareSchipsafemetingen.maximaleBreedte"
+          },
+          {
+            "key": "label-nl",
+            "note": "null",
+            "value": "maximale breedte"
+          },
+          {
+            "key": "beheerstatus",
+            "note": "Values: Nieuw,Gepubliceerd,InVerwerking,UitGebruik,Vervangen,Geconsolideerd,UitGebruikGeconsolideerd,NieuwGeconsolideerd,NieuwUitGebruik\r\nDefault: Nieuw\r\n",
+            "value": "Gepubliceerd"
+          }
+        ],
+        "Scope": "FULL_DEFINITON",
+        "definition": {
+          "nl": "De maximale toelaatbare Breedte"
+        },
+        "definition-en": "",
+        "definition-nl": {
+          "nl": "De maximale toelaatbare Breedte"
+        },
+        "equivalent": "",
+        "label": {
+          "nl": "maximale breedte"
+        },
+        "label-en": "",
+        "label-nl": {
+          "nl": "maximale breedte"
+        },
+        "sameAs": "",
+        "subclass": "",
+        "subclass1": "",
+        "usage": "",
+        "usageNote-en": "",
+        "usageNote-nl": ""
+      },
+      "generalization": [],
+      "inpackage": "ACTIVE_PACKAGE",
+      "label": {
+        "nl": "maximale breedte"
+      },
+      "label-nl": {
+        "nl": "maximale breedte"
+      },
+      "maxCardinality": "1",
+      "minCardinality": "1",
+      "name": "maximale breedte",
+      "range": [
+        {
+          "EA-GUID": "{30A575B2-90E9-4879-A70F-2DE16F53B112}",
+          "EA-Name": "KwantWrdInMeter",
+          "EA-Package": "OSLO-Implementatieelement",
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement-vlag#KwantWrdInMeter"
+        }
+      ]
+    },
+    {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie-vlag#DtcBurgerlijkeKlasseBrug.voorwaarden",
+      "@type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
+      "EA-Guid": "{389CA881-680A-437c-81B0-9EC64F58A476}",
+      "codelist": [],
+      "definition": {
+        "nl": "De randvoorwaarden van toepassing op de brug."
+      },
+      "definition-nl": {
+        "nl": "De randvoorwaarden van toepassing op de brug."
+      },
+      "domain": [
+        {
+          "EA-Name": "DtcBurgerlijkeKlasseBrug",
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie-vlag#DtcBurgerlijkeKlasseBrug"
+        }
+      ],
+      "extra": {
+        "EA-Domain": "DtcBurgerlijkeKlasseBrug",
+        "EA-Domain-Guid": "{01000B9F-4296-4b19-8B22-D699BDA5E025}",
+        "EA-Guid": "{389CA881-680A-437c-81B0-9EC64F58A476}",
+        "EA-Name": "voorwaarden",
+        "EA-Package": "OSLO-Installatie",
+        "EA-Range": "String",
+        "EA-Type": "attribute",
+        "RangeData": {
+          "EA-Name": "String",
+          "EA-Package": "",
+          "uri": "http://www.w3.org/2001/XMLSchema#string"
+        },
+        "RawTags": [
+          {
+            "key": "definition-nl",
+            "note": "null",
+            "value": "De randvoorwaarden van toepassing op de brug."
+          },
+          {
+            "key": "label-nl",
+            "note": "null",
+            "value": "voorwaarden"
+          },
+          {
+            "key": "uri",
+            "note": "null",
+            "value": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie-vlag#DtcBurgerlijkeKlasseBrug.voorwaarden"
+          },
+          {
+            "key": "beheerstatus",
+            "note": "Values: Nieuw,Gepubliceerd,InVerwerking,UitGebruik,Vervangen,Geconsolideerd,UitGebruikGeconsolideerd,NieuwGeconsolideerd,NieuwUitGebruik\r\nDefault: Nieuw\r\n",
+            "value": "Gepubliceerd"
+          }
+        ],
+        "Scope": "FULL_DEFINITON",
+        "definition": {
+          "nl": "De randvoorwaarden van toepassing op de brug."
+        },
+        "definition-en": "",
+        "definition-nl": {
+          "nl": "De randvoorwaarden van toepassing op de brug."
+        },
+        "equivalent": "",
+        "label": {
+          "nl": "voorwaarden"
+        },
+        "label-en": "",
+        "label-nl": {
+          "nl": "voorwaarden"
+        },
+        "sameAs": "",
+        "subclass": "",
+        "subclass1": "",
+        "usage": "",
+        "usageNote-en": "",
+        "usageNote-nl": ""
+      },
+      "generalization": [],
+      "inpackage": "ACTIVE_PACKAGE",
+      "label": {
+        "nl": "voorwaarden"
+      },
+      "label-nl": {
+        "nl": "voorwaarden"
+      },
+      "maxCardinality": "1",
+      "minCardinality": "1",
+      "name": "voorwaarden",
+      "range": [
+        {
+          "EA-Name": "String",
+          "EA-Package": "",
+          "uri": "http://www.w3.org/2001/XMLSchema#string"
+        }
+      ]
+    },
+    {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie-vlag#DtcBurgerlijkeKlasseBrug.totaleLast",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "EA-Guid": "{83F4A4CB-89F9-4e63-8EC6-10EBD69AE07A}",
+      "codelist": [],
+      "definition": {
+        "nl": "Maximale totale last van een uitzonderlijk voertuig dat zonder bijkomend advies over de brug mag rijden, uitgedrukt in kiloNewton."
+      },
+      "definition-nl": {
+        "nl": "Maximale totale last van een uitzonderlijk voertuig dat zonder bijkomend advies over de brug mag rijden, uitgedrukt in kiloNewton."
+      },
+      "domain": [
+        {
+          "EA-Name": "DtcBurgerlijkeKlasseBrug",
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie-vlag#DtcBurgerlijkeKlasseBrug"
+        }
+      ],
+      "extra": {
+        "EA-Domain": "DtcBurgerlijkeKlasseBrug",
+        "EA-Domain-Guid": "{01000B9F-4296-4b19-8B22-D699BDA5E025}",
+        "EA-Guid": "{83F4A4CB-89F9-4e63-8EC6-10EBD69AE07A}",
+        "EA-Name": "totaleLast",
+        "EA-Package": "OSLO-Installatie",
+        "EA-Range": "KwantWrdInKiloNewton",
+        "EA-Type": "attribute",
+        "RangeData": {
+          "EA-GUID": "{85F38958-B334-49a4-B6CE-5B8BCE117F38}",
+          "EA-Name": "KwantWrdInKiloNewton",
+          "EA-Package": "OSLO-Implementatieelement",
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement-vlag#KwantWrdInKiloNewton"
+        },
+        "RawTags": [
+          {
+            "key": "definition-nl",
+            "note": "null",
+            "value": "Maximale totale last van een uitzonderlijk voertuig dat zonder bijkomend advies over de brug mag rijden, uitgedrukt in kiloNewton."
+          },
+          {
+            "key": "uri",
+            "note": "null",
+            "value": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie-vlag#DtcBurgerlijkeKlasseBrug.totaleLast"
+          },
+          {
+            "key": "label-nl",
+            "note": "null",
+            "value": "totale last"
+          },
+          {
+            "key": "beheerstatus",
+            "note": "Values: Nieuw,Gepubliceerd,InVerwerking,UitGebruik,Vervangen,Geconsolideerd,UitGebruikGeconsolideerd,NieuwGeconsolideerd,NieuwUitGebruik\r\nDefault: Nieuw\r\n",
+            "value": "Gepubliceerd"
+          }
+        ],
+        "Scope": "FULL_DEFINITON",
+        "definition": {
+          "nl": "Maximale totale last van een uitzonderlijk voertuig dat zonder bijkomend advies over de brug mag rijden, uitgedrukt in kiloNewton."
+        },
+        "definition-en": "",
+        "definition-nl": {
+          "nl": "Maximale totale last van een uitzonderlijk voertuig dat zonder bijkomend advies over de brug mag rijden, uitgedrukt in kiloNewton."
+        },
+        "equivalent": "",
+        "label": {
+          "nl": "totale last"
+        },
+        "label-en": "",
+        "label-nl": {
+          "nl": "totale last"
+        },
+        "sameAs": "",
+        "subclass": "",
+        "subclass1": "",
+        "usage": "",
+        "usageNote-en": "",
+        "usageNote-nl": ""
+      },
+      "generalization": [],
+      "inpackage": "ACTIVE_PACKAGE",
+      "label": {
+        "nl": "totale last"
+      },
+      "label-nl": {
+        "nl": "totale last"
+      },
+      "maxCardinality": "1",
+      "minCardinality": "1",
+      "name": "totale last",
+      "range": [
+        {
+          "EA-GUID": "{85F38958-B334-49a4-B6CE-5B8BCE117F38}",
+          "EA-Name": "KwantWrdInKiloNewton",
+          "EA-Package": "OSLO-Implementatieelement",
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement-vlag#KwantWrdInKiloNewton"
+        }
+      ]
+    },
+    {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie-vlag#DtcBurgerlijkeKlasseBrug.astype",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "EA-Guid": "{E236CDA4-7178-46c2-9A5D-38B0FE3B4070}",
+      "codelist": [],
+      "definition": {
+        "nl": "Maximale aslast van een uitzonderlijk voertuig dat zonder bijkomend advies over de brug mag rijden, uitgedrukt in kiloNewton."
+      },
+      "definition-nl": {
+        "nl": "Maximale aslast van een uitzonderlijk voertuig dat zonder bijkomend advies over de brug mag rijden, uitgedrukt in kiloNewton."
+      },
+      "domain": [
+        {
+          "EA-Name": "DtcBurgerlijkeKlasseBrug",
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie-vlag#DtcBurgerlijkeKlasseBrug"
+        }
+      ],
+      "extra": {
+        "EA-Domain": "DtcBurgerlijkeKlasseBrug",
+        "EA-Domain-Guid": "{01000B9F-4296-4b19-8B22-D699BDA5E025}",
+        "EA-Guid": "{E236CDA4-7178-46c2-9A5D-38B0FE3B4070}",
+        "EA-Name": "astype",
+        "EA-Package": "OSLO-Installatie",
+        "EA-Range": "KwantWrdInKiloNewton",
+        "EA-Type": "attribute",
+        "RangeData": {
+          "EA-GUID": "{85F38958-B334-49a4-B6CE-5B8BCE117F38}",
+          "EA-Name": "KwantWrdInKiloNewton",
+          "EA-Package": "OSLO-Implementatieelement",
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement-vlag#KwantWrdInKiloNewton"
+        },
+        "RawTags": [
+          {
+            "key": "beheerstatus",
+            "note": "Values: Nieuw,Gepubliceerd,InVerwerking,UitGebruik,Vervangen,Geconsolideerd,UitGebruikGeconsolideerd,NieuwGeconsolideerd,NieuwUitGebruik\r\nDefault: Nieuw\r\n",
+            "value": "Gepubliceerd"
+          },
+          {
+            "key": "definition-nl",
+            "note": "null",
+            "value": "Maximale aslast van een uitzonderlijk voertuig dat zonder bijkomend advies over de brug mag rijden, uitgedrukt in kiloNewton."
+          },
+          {
+            "key": "label-nl",
+            "note": "null",
+            "value": "astype"
+          },
+          {
+            "key": "uri",
+            "note": "null",
+            "value": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie-vlag#DtcBurgerlijkeKlasseBrug.astype"
+          }
+        ],
+        "Scope": "FULL_DEFINITON",
+        "definition": {
+          "nl": "Maximale aslast van een uitzonderlijk voertuig dat zonder bijkomend advies over de brug mag rijden, uitgedrukt in kiloNewton."
+        },
+        "definition-en": "",
+        "definition-nl": {
+          "nl": "Maximale aslast van een uitzonderlijk voertuig dat zonder bijkomend advies over de brug mag rijden, uitgedrukt in kiloNewton."
+        },
+        "equivalent": "",
+        "label": {
+          "nl": "astype"
+        },
+        "label-en": "",
+        "label-nl": {
+          "nl": "astype"
+        },
+        "sameAs": "",
+        "subclass": "",
+        "subclass1": "",
+        "usage": "",
+        "usageNote-en": "",
+        "usageNote-nl": ""
+      },
+      "generalization": [],
+      "inpackage": "ACTIVE_PACKAGE",
+      "label": {
+        "nl": "astype"
+      },
+      "label-nl": {
+        "nl": "astype"
+      },
+      "maxCardinality": "1",
+      "minCardinality": "1",
+      "name": "astype",
+      "range": [
+        {
+          "EA-GUID": "{85F38958-B334-49a4-B6CE-5B8BCE117F38}",
+          "EA-Name": "KwantWrdInKiloNewton",
+          "EA-Package": "OSLO-Implementatieelement",
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement-vlag#KwantWrdInKiloNewton"
+        }
+      ]
+    },
+    {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie-vlag#DtcAardingsstelsel.type",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "EA-Guid": "{09E2B691-94AC-43e1-9EAA-76E5CDCFA95A}",
+      "codelist": [],
+      "definition": {
+        "nl": "Geeft het type aan van het aardingsstelsel volgens een keuzelijst."
+      },
+      "definition-nl": {
+        "nl": "Geeft het type aan van het aardingsstelsel volgens een keuzelijst."
+      },
+      "domain": [
+        {
+          "EA-Name": "DtcAardingsstelsel",
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie-vlag#DtcAardingsstelsel"
+        }
+      ],
+      "extra": {
+        "EA-Domain": "DtcAardingsstelsel",
+        "EA-Domain-Guid": "{A53A6A8D-E3DF-4172-AE29-9DBD83A5C2A1}",
+        "EA-Guid": "{09E2B691-94AC-43e1-9EAA-76E5CDCFA95A}",
+        "EA-Name": "type",
+        "EA-Package": "OSLO-Installatie",
+        "EA-Range": "KlAardingAardingsstelsel",
+        "EA-Type": "attribute",
+        "RangeData": {
+          "EA-GUID": "{D65DE1E7-0A4D-4c5e-96E0-B0A638456EC3}",
+          "EA-Name": "KlAardingAardingsstelsel",
+          "EA-Package": "OSLO-Installatie",
+          "uri": "http://www.w3.org/2004/02/skos/core#Concept"
+        },
+        "RawTags": [
+          {
+            "key": "beheerstatus",
+            "note": "Values: Nieuw,Gepubliceerd,InVerwerking,UitGebruik,Vervangen,Geconsolideerd,UitGebruikGeconsolideerd,NieuwGeconsolideerd,NieuwUitGebruik\r\nDefault: Nieuw\r\n",
+            "value": "Gepubliceerd"
+          },
+          {
+            "key": "definition-nl",
+            "note": "null",
+            "value": "Geeft het type aan van het aardingsstelsel volgens een keuzelijst."
+          },
+          {
+            "key": "label-nl",
+            "note": "null",
+            "value": "type"
+          },
+          {
+            "key": "uri",
+            "note": "null",
+            "value": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie-vlag#DtcAardingsstelsel.type"
+          }
+        ],
+        "Scope": "FULL_DEFINITON",
+        "definition": {
+          "nl": "Geeft het type aan van het aardingsstelsel volgens een keuzelijst."
+        },
+        "definition-en": "",
+        "definition-nl": {
+          "nl": "Geeft het type aan van het aardingsstelsel volgens een keuzelijst."
+        },
+        "equivalent": "",
+        "label": {
+          "nl": "type"
+        },
+        "label-en": "",
+        "label-nl": {
+          "nl": "type"
+        },
+        "sameAs": "",
+        "subclass": "",
+        "subclass1": "",
+        "usage": "",
+        "usageNote-en": "",
+        "usageNote-nl": ""
+      },
+      "generalization": [],
+      "inpackage": "ACTIVE_PACKAGE",
+      "label": {
+        "nl": "type"
+      },
+      "label-nl": {
+        "nl": "type"
+      },
+      "maxCardinality": "1",
+      "minCardinality": "1",
+      "name": "type",
+      "range": [
+        {
+          "EA-GUID": "{D65DE1E7-0A4D-4c5e-96E0-B0A638456EC3}",
+          "EA-Name": "KlAardingAardingsstelsel",
+          "EA-Package": "OSLO-Installatie",
+          "uri": "http://www.w3.org/2004/02/skos/core#Concept"
+        }
+      ]
+    },
+    {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie-vlag#DtcAardingsstelsel.attestDNB",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "EA-Guid": "{B863FDAC-6E2B-402f-A655-C7E0D9B9CA96}",
+      "codelist": [],
+      "definition": {
+        "nl": "Een bestandsbijlage met het attest volgens het aardingsstelsel voorzien door de distributienetbeheerder ."
+      },
+      "definition-nl": {
+        "nl": "Een bestandsbijlage met het attest volgens het aardingsstelsel voorzien door de distributienetbeheerder ."
+      },
+      "domain": [
+        {
+          "EA-Name": "DtcAardingsstelsel",
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie-vlag#DtcAardingsstelsel"
+        }
+      ],
+      "extra": {
+        "EA-Domain": "DtcAardingsstelsel",
+        "EA-Domain-Guid": "{A53A6A8D-E3DF-4172-AE29-9DBD83A5C2A1}",
+        "EA-Guid": "{B863FDAC-6E2B-402f-A655-C7E0D9B9CA96}",
+        "EA-Name": "attestDNB",
+        "EA-Package": "OSLO-Installatie",
+        "EA-Range": "DtcDocument",
+        "EA-Type": "attribute",
+        "RangeData": {
+          "EA-GUID": "{389F3E48-BAD7-4e4f-8C27-7F090D5F417F}",
+          "EA-Name": "DtcDocument",
+          "EA-Package": "OSLO-Implementatieelement",
+          "uri": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#DtcDocument"
+        },
+        "RawTags": [
+          {
+            "key": "label-nl",
+            "note": "null",
+            "value": "attest distributienetbeheerder"
+          },
+          {
+            "key": "usageNote-nl",
+            "note": "null",
+            "value": "Voor een globaal aardingsstelsel moet een attest voorzien worden zoniet moet er van uitgegaan worden dat het om een gescheiden stelsel gaat "
+          },
+          {
+            "key": "uri",
+            "note": "null",
+            "value": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie-vlag#DtcAardingsstelsel.attestDNB"
+          },
+          {
+            "key": "beheerstatus",
+            "note": "Values: Nieuw,Gepubliceerd,InVerwerking,UitGebruik,Vervangen,Geconsolideerd,UitGebruikGeconsolideerd,NieuwGeconsolideerd,NieuwUitGebruik\r\nDefault: Nieuw\r\n",
+            "value": "Gepubliceerd"
+          },
+          {
+            "key": "definition-nl",
+            "note": "null",
+            "value": "Een bestandsbijlage met het attest volgens het aardingsstelsel voorzien door de distributienetbeheerder ."
+          }
+        ],
+        "Scope": "FULL_DEFINITON",
+        "definition": {
+          "nl": "Een bestandsbijlage met het attest volgens het aardingsstelsel voorzien door de distributienetbeheerder ."
+        },
+        "definition-en": "",
+        "definition-nl": {
+          "nl": "Een bestandsbijlage met het attest volgens het aardingsstelsel voorzien door de distributienetbeheerder ."
+        },
+        "equivalent": "",
+        "label": {
+          "nl": "attest distributienetbeheerder"
+        },
+        "label-en": "",
+        "label-nl": {
+          "nl": "attest distributienetbeheerder"
+        },
+        "sameAs": "",
+        "subclass": "",
+        "subclass1": "",
+        "usage": {
+          "nl": "Voor een globaal aardingsstelsel moet een attest voorzien worden zoniet moet er van uitgegaan worden dat het om een gescheiden stelsel gaat "
+        },
+        "usageNote-en": "",
+        "usageNote-nl": {
+          "nl": "Voor een globaal aardingsstelsel moet een attest voorzien worden zoniet moet er van uitgegaan worden dat het om een gescheiden stelsel gaat "
+        }
+      },
+      "generalization": [],
+      "inpackage": "ACTIVE_PACKAGE",
+      "label": {
+        "nl": "attest distributienetbeheerder"
+      },
+      "label-nl": {
+        "nl": "attest distributienetbeheerder"
+      },
+      "maxCardinality": "1",
+      "minCardinality": "1",
+      "name": "attest distributienetbeheerder",
+      "range": [
+        {
+          "EA-GUID": "{389F3E48-BAD7-4e4f-8C27-7F090D5F417F}",
+          "EA-Name": "DtcDocument",
+          "EA-Package": "OSLO-Implementatieelement",
+          "uri": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#DtcDocument"
+        }
+      ],
+      "usage": {
+        "nl": "Voor een globaal aardingsstelsel moet een attest voorzien worden zoniet moet er van uitgegaan worden dat het om een gescheiden stelsel gaat "
+      },
+      "usageNote-nl": {
+        "nl": "Voor een globaal aardingsstelsel moet een attest voorzien worden zoniet moet er van uitgegaan worden dat het om een gescheiden stelsel gaat "
+      }
+    },
+    {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie-vlag#AanzichtVerkeersbordopstelling.technischeVoorstelling",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "EA-Guid": "{159008EA-5933-4793-B3AD-5AF082B7781D}",
+      "codelist": [],
+      "definition": {
+        "nl": "Grafische weergave van de opstelling zoals fysiek te zien op het openbaar domein met aanduiding van opstelhoogtes en horizontale verschuivingen."
+      },
+      "definition-nl": {
+        "nl": "Grafische weergave van de opstelling zoals fysiek te zien op het openbaar domein met aanduiding van opstelhoogtes en horizontale verschuivingen."
+      },
+      "domain": [
+        {
+          "EA-Name": "AanzichtVerkeersbordopstelling",
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie-vlag#AanzichtVerkeersbordopstelling"
+        }
+      ],
+      "extra": {
+        "EA-Domain": "AanzichtVerkeersbordopstelling",
+        "EA-Domain-Guid": "{BB36E481-C1B8-43d1-A6C4-969C984A6D4C}",
+        "EA-Guid": "{159008EA-5933-4793-B3AD-5AF082B7781D}",
+        "EA-Name": "technischeVoorstelling",
+        "EA-Package": "OSLO-Installatie",
+        "EA-Range": "DtcDocument",
+        "EA-Type": "attribute",
+        "RangeData": {
+          "EA-GUID": "{389F3E48-BAD7-4e4f-8C27-7F090D5F417F}",
+          "EA-Name": "DtcDocument",
+          "EA-Package": "OSLO-Implementatieelement",
+          "uri": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#DtcDocument"
+        },
+        "RawTags": [
+          {
+            "key": "deprecated",
+            "note": "Values: false,true\r\nDefault: false\r\n",
+            "value": "false"
+          },
+          {
+            "key": "uri",
+            "note": "null",
+            "value": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie-vlag#AanzichtVerkeersbordopstelling.technischeVoorstelling"
+          },
+          {
+            "key": "label-nl",
+            "note": "null",
+            "value": "technische voorstelling"
+          },
+          {
+            "key": "definition-nl",
+            "note": "null",
+            "value": "Grafische weergave van de opstelling zoals fysiek te zien op het openbaar domein met aanduiding van opstelhoogtes en horizontale verschuivingen."
+          },
+          {
+            "key": "beheerstatus",
+            "note": "Values: Nieuw,Gepubliceerd,InVerwerking,UitGebruik,Vervangen,Geconsolideerd,UitGebruikGeconsolideerd,NieuwGeconsolideerd,NieuwUitGebruik\r\nDefault: Nieuw\r\n",
+            "value": "NieuwGeconsolideerd"
+          }
+        ],
+        "Scope": "FULL_DEFINITON",
+        "definition": {
+          "nl": "Grafische weergave van de opstelling zoals fysiek te zien op het openbaar domein met aanduiding van opstelhoogtes en horizontale verschuivingen."
+        },
+        "definition-en": "",
+        "definition-nl": {
+          "nl": "Grafische weergave van de opstelling zoals fysiek te zien op het openbaar domein met aanduiding van opstelhoogtes en horizontale verschuivingen."
+        },
+        "equivalent": "",
+        "label": {
+          "nl": "technische voorstelling"
+        },
+        "label-en": "",
+        "label-nl": {
+          "nl": "technische voorstelling"
+        },
+        "sameAs": "",
+        "subclass": "",
+        "subclass1": "",
+        "usage": "",
+        "usageNote-en": "",
+        "usageNote-nl": ""
+      },
+      "generalization": [],
+      "inpackage": "ACTIVE_PACKAGE",
+      "label": {
+        "nl": "technische voorstelling"
+      },
+      "label-nl": {
+        "nl": "technische voorstelling"
+      },
+      "maxCardinality": "1",
+      "minCardinality": "1",
+      "name": "technische voorstelling",
+      "range": [
+        {
+          "EA-GUID": "{389F3E48-BAD7-4e4f-8C27-7F090D5F417F}",
+          "EA-Name": "DtcDocument",
+          "EA-Package": "OSLO-Implementatieelement",
+          "uri": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#DtcDocument"
+        }
+      ]
+    },
+    {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie-vlag#AanzichtVerkeersbordopstelling.kaartvoorstelling",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "EA-Guid": "{C8B3DC5F-7731-4d2e-8825-3E1E9813AB00}",
+      "codelist": [],
+      "definition": {
+        "nl": "Grafische weergave van de opstelling in ontwerp met visueel onderscheid op basis van de status van het bord nl: bestaand, gepland of te verwijderen."
+      },
+      "definition-nl": {
+        "nl": "Grafische weergave van de opstelling in ontwerp met visueel onderscheid op basis van de status van het bord nl: bestaand, gepland of te verwijderen."
+      },
+      "domain": [
+        {
+          "EA-Name": "AanzichtVerkeersbordopstelling",
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie-vlag#AanzichtVerkeersbordopstelling"
+        }
+      ],
+      "extra": {
+        "EA-Domain": "AanzichtVerkeersbordopstelling",
+        "EA-Domain-Guid": "{BB36E481-C1B8-43d1-A6C4-969C984A6D4C}",
+        "EA-Guid": "{C8B3DC5F-7731-4d2e-8825-3E1E9813AB00}",
+        "EA-Name": "kaartvoorstelling",
+        "EA-Package": "OSLO-Installatie",
+        "EA-Range": "DtcDocument",
+        "EA-Type": "attribute",
+        "RangeData": {
+          "EA-GUID": "{389F3E48-BAD7-4e4f-8C27-7F090D5F417F}",
+          "EA-Name": "DtcDocument",
+          "EA-Package": "OSLO-Implementatieelement",
+          "uri": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#DtcDocument"
+        },
+        "RawTags": [
+          {
+            "key": "deprecated",
+            "note": "Values: false,true\r\nDefault: false\r\n",
+            "value": "false"
+          },
+          {
+            "key": "uri",
+            "note": "null",
+            "value": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie-vlag#AanzichtVerkeersbordopstelling.kaartvoorstelling"
+          },
+          {
+            "key": "beheerstatus",
+            "note": "Values: Nieuw,Gepubliceerd,InVerwerking,UitGebruik,Vervangen,Geconsolideerd,UitGebruikGeconsolideerd,NieuwGeconsolideerd,NieuwUitGebruik\r\nDefault: Nieuw\r\n",
+            "value": "Nieuw"
+          },
+          {
+            "key": "label-nl",
+            "note": "null",
+            "value": "kaartvoorstelling"
+          },
+          {
+            "key": "definition-nl",
+            "note": "null",
+            "value": "Grafische weergave van de opstelling in ontwerp met visueel onderscheid op basis van de status van het bord nl: bestaand, gepland of te verwijderen."
+          }
+        ],
+        "Scope": "FULL_DEFINITON",
+        "definition": {
+          "nl": "Grafische weergave van de opstelling in ontwerp met visueel onderscheid op basis van de status van het bord nl: bestaand, gepland of te verwijderen."
+        },
+        "definition-en": "",
+        "definition-nl": {
+          "nl": "Grafische weergave van de opstelling in ontwerp met visueel onderscheid op basis van de status van het bord nl: bestaand, gepland of te verwijderen."
+        },
+        "equivalent": "",
+        "label": {
+          "nl": "kaartvoorstelling"
+        },
+        "label-en": "",
+        "label-nl": {
+          "nl": "kaartvoorstelling"
+        },
+        "sameAs": "",
+        "subclass": "",
+        "subclass1": "",
+        "usage": "",
+        "usageNote-en": "",
+        "usageNote-nl": ""
+      },
+      "generalization": [],
+      "inpackage": "ACTIVE_PACKAGE",
+      "label": {
+        "nl": "kaartvoorstelling"
+      },
+      "label-nl": {
+        "nl": "kaartvoorstelling"
+      },
+      "maxCardinality": "1",
+      "minCardinality": "1",
+      "name": "kaartvoorstelling",
+      "range": [
+        {
+          "EA-GUID": "{389F3E48-BAD7-4e4f-8C27-7F090D5F417F}",
+          "EA-Name": "DtcDocument",
+          "EA-Package": "OSLO-Implementatieelement",
+          "uri": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#DtcDocument"
+        }
+      ]
+    },
+    {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie-vlag#AanzichtVerkeersbordopstelling.hoek",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "EA-Guid": "{C639F15F-5E3B-44a4-A5AD-D89D9BC58879}",
+      "codelist": [],
+      "definition": {
+        "nl": "De hoek waarin het fysiek bord gepositioneerd is ten opzichte van een vooropgestelde as."
+      },
+      "definition-nl": {
+        "nl": "De hoek waarin het fysiek bord gepositioneerd is ten opzichte van een vooropgestelde as."
+      },
+      "domain": [
+        {
+          "EA-Name": "AanzichtVerkeersbordopstelling",
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie-vlag#AanzichtVerkeersbordopstelling"
+        }
+      ],
+      "extra": {
+        "EA-Domain": "AanzichtVerkeersbordopstelling",
+        "EA-Domain-Guid": "{BB36E481-C1B8-43d1-A6C4-969C984A6D4C}",
+        "EA-Guid": "{C639F15F-5E3B-44a4-A5AD-D89D9BC58879}",
+        "EA-Name": "hoek",
+        "EA-Package": "OSLO-Installatie",
+        "EA-Range": "Decimal",
+        "EA-Type": "attribute",
+        "RangeData": {
+          "EA-GUID": "{3300D9AD-B706-43fe-B750-0EB2D8679F90}",
+          "EA-Name": "Decimal",
+          "EA-Package": "W3-XML-Schema",
+          "uri": "http://www.w3.org/2001/XMLSchema#decimal"
+        },
+        "RawTags": [
+          {
+            "key": "deprecated",
+            "note": "Values: false,true\r\nDefault: false\r\n",
+            "value": "false"
+          },
+          {
+            "key": "uri",
+            "note": "null",
+            "value": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie-vlag#AanzichtVerkeersbordopstelling.hoek"
+          },
+          {
+            "key": "beheerstatus",
+            "note": "Values: Nieuw,Gepubliceerd,InVerwerking,UitGebruik,Vervangen,Geconsolideerd,UitGebruikGeconsolideerd,NieuwGeconsolideerd,NieuwUitGebruik\r\nDefault: Nieuw\r\n",
+            "value": "Nieuw"
+          },
+          {
+            "key": "label-nl",
+            "note": "null",
+            "value": "hoek"
+          },
+          {
+            "key": "definition-nl",
+            "note": "null",
+            "value": "De hoek waarin het fysiek bord gepositioneerd is ten opzichte van een vooropgestelde as."
+          }
+        ],
+        "Scope": "FULL_DEFINITON",
+        "definition": {
+          "nl": "De hoek waarin het fysiek bord gepositioneerd is ten opzichte van een vooropgestelde as."
+        },
+        "definition-en": "",
+        "definition-nl": {
+          "nl": "De hoek waarin het fysiek bord gepositioneerd is ten opzichte van een vooropgestelde as."
+        },
+        "equivalent": "",
+        "label": {
+          "nl": "hoek"
+        },
+        "label-en": "",
+        "label-nl": {
+          "nl": "hoek"
+        },
+        "sameAs": "",
+        "subclass": "",
+        "subclass1": "",
+        "usage": "",
+        "usageNote-en": "",
+        "usageNote-nl": ""
+      },
+      "generalization": [],
+      "inpackage": "ACTIVE_PACKAGE",
+      "label": {
+        "nl": "hoek"
+      },
+      "label-nl": {
+        "nl": "hoek"
+      },
+      "maxCardinality": "1",
+      "minCardinality": "1",
+      "name": "hoek",
+      "range": [
+        {
+          "EA-GUID": "{3300D9AD-B706-43fe-B750-0EB2D8679F90}",
+          "EA-Name": "Decimal",
+          "EA-Package": "W3-XML-Schema",
+          "uri": "http://www.w3.org/2001/XMLSchema#decimal"
+        }
+      ]
+    },
+    {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie-vlag#AanzichtVerkeersbordopstelling.foto",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "EA-Guid": "{26D87A50-2ED4-4a29-BB0E-036D0D428C2A}",
+      "codelist": [],
+      "definition": {
+        "nl": "Een foto van de opstelling zoals die te zien is op het openbaar domein."
+      },
+      "definition-nl": {
+        "nl": "Een foto van de opstelling zoals die te zien is op het openbaar domein."
+      },
+      "domain": [
+        {
+          "EA-Name": "AanzichtVerkeersbordopstelling",
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie-vlag#AanzichtVerkeersbordopstelling"
+        }
+      ],
+      "extra": {
+        "EA-Domain": "AanzichtVerkeersbordopstelling",
+        "EA-Domain-Guid": "{BB36E481-C1B8-43d1-A6C4-969C984A6D4C}",
+        "EA-Guid": "{26D87A50-2ED4-4a29-BB0E-036D0D428C2A}",
+        "EA-Name": "foto",
+        "EA-Package": "OSLO-Installatie",
+        "EA-Range": "DtcDocument",
+        "EA-Type": "attribute",
+        "RangeData": {
+          "EA-GUID": "{389F3E48-BAD7-4e4f-8C27-7F090D5F417F}",
+          "EA-Name": "DtcDocument",
+          "EA-Package": "OSLO-Implementatieelement",
+          "uri": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#DtcDocument"
+        },
+        "RawTags": [
+          {
+            "key": "deprecated",
+            "note": "Values: false,true\r\nDefault: false\r\n",
+            "value": "false"
+          },
+          {
+            "key": "uri",
+            "note": "null",
+            "value": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie-vlag#AanzichtVerkeersbordopstelling.foto"
+          },
+          {
+            "key": "beheerstatus",
+            "note": "Values: Nieuw,Gepubliceerd,InVerwerking,UitGebruik,Vervangen,Geconsolideerd,UitGebruikGeconsolideerd,NieuwGeconsolideerd,NieuwUitGebruik\r\nDefault: Nieuw\r\n",
+            "value": "Nieuw"
+          },
+          {
+            "key": "label-nl",
+            "note": "null",
+            "value": "foto"
+          },
+          {
+            "key": "definition-nl",
+            "note": "null",
+            "value": "Een foto van de opstelling zoals die te zien is op het openbaar domein."
+          }
+        ],
+        "Scope": "FULL_DEFINITON",
+        "definition": {
+          "nl": "Een foto van de opstelling zoals die te zien is op het openbaar domein."
+        },
+        "definition-en": "",
+        "definition-nl": {
+          "nl": "Een foto van de opstelling zoals die te zien is op het openbaar domein."
+        },
+        "equivalent": "",
+        "label": {
+          "nl": "foto"
+        },
+        "label-en": "",
+        "label-nl": {
+          "nl": "foto"
+        },
+        "sameAs": "",
+        "subclass": "",
+        "subclass1": "",
+        "usage": "",
+        "usageNote-en": "",
+        "usageNote-nl": ""
+      },
+      "generalization": [],
+      "inpackage": "ACTIVE_PACKAGE",
+      "label": {
+        "nl": "foto"
+      },
+      "label-nl": {
+        "nl": "foto"
+      },
+      "maxCardinality": "1",
+      "minCardinality": "1",
+      "name": "foto",
+      "range": [
+        {
+          "EA-GUID": "{389F3E48-BAD7-4e4f-8C27-7F090D5F417F}",
+          "EA-Name": "DtcDocument",
+          "EA-Package": "OSLO-Implementatieelement",
+          "uri": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#DtcDocument"
+        }
+      ]
+    }
+  ],
+  "publication-date": "xx-xx-2025",
+  "publication-state": "https://data.vlaanderen.be/doc/concept/StandaardStatus/KandidaatStandaard",
+  "repository": "https://github.com/Informatievlaanderen/OSLOthema-wegenenverkeer",
+  "site": "site-skeleton/VLAG/installatie-voc",
+  "standaardregisterurl": "https://data.vlaanderen.be/standaarden/",
+  "template": "installatie-VLAG-voc.j2",
+  "title": "Installatie VLAG",
+  "title-nl": {
+    "nl": "Installatie VLAG"
+  },
+  "toolchaincommit": "8aa5a61d554b7025fe03cb1ad0c9ae3ef073cad9",
+  "translation": [
+    {
+      "language": "nl",
+      "mergefile": "installatie-vlag_nl_merged.json",
+      "template": "installatie-VLAG-voc.j2",
+      "title": "Installatie VLAG",
+      "translationjson": "installatie-vlag_nl.json"
+    }
+  ],
+  "type": "voc",
+  "urlref": "/doc/vocabularium/wegenenverkeer/installatie-vlag/ontwerpdocument/VLAG/DEV"
+}

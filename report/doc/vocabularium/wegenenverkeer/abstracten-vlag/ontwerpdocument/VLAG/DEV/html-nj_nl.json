@@ -13,8 +13,8 @@
     "documentconfig": {},
     "status": "https://data.vlaanderen.be/doc/concept/StandaardStatus/KandidaatStandaard",
     "statuslabel": "Onbekend",
-    "repositoryurl": "https://github.com/Informatievlaanderen/OSLOthema-wegenenverkeer/tree/561418a998e4ae9203f926dcdb3d56235361a9e3",
-    "changelogurl": "https://github.com/Informatievlaanderen/OSLOthema-wegenenverkeer/blob/561418a998e4ae9203f926dcdb3d56235361a9e3/CHANGELOG",
+    "repositoryurl": "https://github.com/Informatievlaanderen/OSLOthema-wegenenverkeer/tree/a3639de4eef31c8338fa07c416ee95f31cbe7a46",
+    "changelogurl": "https://github.com/Informatievlaanderen/OSLOthema-wegenenverkeer/blob/a3639de4eef31c8338fa07c416ee95f31cbe7a46/CHANGELOG",
     "feedbackurl": "",
     "standaardregisterurl": "https://data.vlaanderen.be/standaarden/",
     "dependencies": [],
@@ -39,6 +39,20 @@
       ]
     },
     {
+      "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten-vlag#AOWSType",
+      "name": "AOWS type",
+      "label": {
+        "nl": "AOWS type"
+      },
+      "sort": "AOWS type",
+      "description": {
+        "nl": "Abstracte om alle eigenschappen en relaties van AOWS type onder 1 noemer te houden."
+      },
+      "usage": {},
+      "equivalent": [],
+      "parents": []
+    },
+    {
       "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten-vlag#AbstracteAanvullendeGeometrie",
       "name": "Abstracte aanvullende geometrie",
       "label": {
@@ -57,6 +71,57 @@
       ]
     },
     {
+      "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten-vlag#DwarseMarkeringToegang",
+      "name": "dwarse markering toegang",
+      "label": {
+        "nl": "dwarse markering toegang"
+      },
+      "sort": "dwarse markering toegang",
+      "description": {
+        "nl": "Abstracte als toegang tot de verschillende soorten dwarse markeringen."
+      },
+      "usage": {},
+      "equivalent": [],
+      "parents": [
+        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten-vlag#Markering",
+        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten-vlag#AOWSType"
+      ]
+    },
+    {
+      "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten-vlag#FiguratieMarkeringToegang",
+      "name": "Figuratiemarkering toegang",
+      "label": {
+        "nl": "Figuratiemarkering toegang"
+      },
+      "sort": "Figuratiemarkering toegang",
+      "description": {
+        "nl": "Abstracte als toegang tot de verschillende soorten figuratiemarkeringen."
+      },
+      "usage": {},
+      "equivalent": [],
+      "parents": [
+        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten-vlag#Markering",
+        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten-vlag#AOWSType"
+      ]
+    },
+    {
+      "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten-vlag#Markering",
+      "name": "Markering",
+      "label": {
+        "nl": "Markering"
+      },
+      "sort": "Markering",
+      "description": {
+        "nl": "Abstracte als noemer voor de verschillende types van markeringen."
+      },
+      "usage": {},
+      "equivalent": [],
+      "parents": [
+        "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#AIMObject",
+        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten-vlag#Signalisatie"
+      ]
+    },
+    {
       "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten-vlag#Signalisatie",
       "name": "Signalisatie",
       "label": {
@@ -72,6 +137,120 @@
     }
   ],
   "properties": [
+    {
+      "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten-vlag#Markering.opvatting",
+      "name": "opvatting",
+      "label": {
+        "nl": "opvatting"
+      },
+      "sort": "opvatting",
+      "description": {
+        "nl": "De opvatting van de markering, zijnde middelenverbintenis of resultaatsverbintenis met een minimale levensduur."
+      },
+      "usage": {},
+      "domain": [
+        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten-vlag#Markering"
+      ],
+      "range": [
+        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel-vlag#DtcMarkeringOpvatting"
+      ],
+      "parents": []
+    },
+    {
+      "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten-vlag#Markering.markeringsysteemCopro",
+      "name": "markeringsysteem COPRO",
+      "label": {
+        "nl": "markeringsysteem COPRO"
+      },
+      "sort": "markeringsysteem COPRO",
+      "description": {
+        "nl": "De product informatie van de markering via COPRO codes."
+      },
+      "usage": {},
+      "domain": [
+        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten-vlag#Markering"
+      ],
+      "range": [
+        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement-vlag#DtcProductidentificatiecode"
+      ],
+      "parents": []
+    },
+    {
+      "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten-vlag#Markering.markeringsoort",
+      "name": "markeringsoort",
+      "label": {
+        "nl": "markeringsoort"
+      },
+      "sort": "markeringsoort",
+      "description": {
+        "nl": "De soort van markering (verf, thermopast,...)."
+      },
+      "usage": {},
+      "domain": [
+        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten-vlag#Markering"
+      ],
+      "range": [
+        "http://www.w3.org/2004/02/skos/core#Concept"
+      ],
+      "parents": []
+    },
+    {
+      "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten-vlag#Markering.kleur",
+      "name": "kleur",
+      "label": {
+        "nl": "kleur"
+      },
+      "sort": "kleur",
+      "description": {
+        "nl": "De kleur van de gebruikte markering."
+      },
+      "usage": {},
+      "domain": [
+        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten-vlag#Markering"
+      ],
+      "range": [
+        "http://www.w3.org/2004/02/skos/core#Concept"
+      ],
+      "parents": []
+    },
+    {
+      "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten-vlag#Markering.isTijdelijk",
+      "name": "is tijdelijk",
+      "label": {
+        "nl": "is tijdelijk"
+      },
+      "sort": "is tijdelijk",
+      "description": {
+        "nl": "Aanduiding of de wegmarkering al dan niet tot de werfsignalisatie behoort."
+      },
+      "usage": {},
+      "domain": [
+        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten-vlag#Markering"
+      ],
+      "range": [
+        "http://www.w3.org/2001/XMLSchema#boolean"
+      ],
+      "parents": []
+    },
+    {
+      "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten-vlag#Markering.isHandwerk",
+      "name": "is handwerk",
+      "label": {
+        "nl": "is handwerk"
+      },
+      "sort": "is handwerk",
+      "description": {
+        "nl": "Boolean om te bepalen of de markering machinaal of handmatig is aangebracht."
+      },
+      "usage": {},
+      "domain": [
+        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten-vlag#Markering"
+      ],
+      "range": [
+        "http://www.w3.org/2001/XMLSchema#boolean"
+      ],
+      "parents": []
+    },
     {
       "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten-vlag#AbstracteAanvullendeGeometrie.typeURI",
       "name": "type URI",
@@ -164,6 +343,44 @@
       ],
       "range": [
         "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#DtcIdentificator"
+      ],
+      "parents": []
+    },
+    {
+      "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten-vlag#AOWSType.versieGoedgekeurd",
+      "name": "versie goedgekeurd",
+      "label": {
+        "nl": "versie goedgekeurd"
+      },
+      "sort": "versie goedgekeurd",
+      "description": {
+        "nl": "De versie van het standaardbestek 250 waar de goedkeuring is bepaald."
+      },
+      "usage": {},
+      "domain": [
+        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten-vlag#AOWSType"
+      ],
+      "range": [
+        "http://www.w3.org/2001/XMLSchema#string"
+      ],
+      "parents": []
+    },
+    {
+      "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten-vlag#AOWSType.isGoedgekeurd",
+      "name": "is goedgekeurd",
+      "label": {
+        "nl": "is goedgekeurd"
+      },
+      "sort": "is goedgekeurd",
+      "description": {
+        "nl": "Bepaling van de goedkeuring van AOWS."
+      },
+      "usage": {},
+      "domain": [
+        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten-vlag#AOWSType"
+      ],
+      "range": [
+        "http://www.w3.org/2001/XMLSchema#boolean"
       ],
       "parents": []
     }

@@ -1528,6 +1528,14 @@
   "publication-date": "xx-xx-2025",
   "classes": [
     {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement-vlag#2DGebouwgeometrie",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
+      "definition": {
+        "nl": "Geometrie van het gebouw en metadata over welk deel van het gebouw door de geometrie wordt voorgesteld en hoe deze werd bepaald."
+      },
+      "parents": []
+    },
+    {
       "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement-vlag#AIMDBStatus",
       "@type": "http://www.w3.org/2002/07/owl#Class",
       "definition": {
@@ -1540,6 +1548,14 @@
       "@type": "http://www.w3.org/2002/07/owl#Class",
       "definition": {
         "nl": "Abstracte klasse met de eigenschappen om de versionering van een asset te beheren."
+      },
+      "parents": []
+    },
+    {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement-vlag#Adreslocator",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
+      "definition": {
+        "nl": "Menselijk leesbare aanduiding of naam die een gebruiker of applicatie toelaat om het adres te onderscheiden van naburige adressen in de straat,de administratieve eenheid etc waarin het adres ligt."
       },
       "parents": []
     },
@@ -1564,6 +1580,16 @@
       },
       "parents": [
         "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten-vlag#AIMLinkObject"
+      ]
+    },
+    {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement-vlag#ContactinfoVolgensRol",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
+      "definition": {
+        "nl": "Contactgegevens volgens een bepaalde rol (bv. veiligheidscoördinator)."
+      },
+      "parents": [
+        "http://schema.org/ContactPoint"
       ]
     },
     {
@@ -1864,6 +1890,11 @@
       "parents": []
     },
     {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement-vlag#DteGetypeerdeString",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
+      "parents": []
+    },
+    {
       "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement-vlag#DteIPv4Adres",
       "@type": "http://www.w3.org/2002/07/owl#Class",
       "definition": {
@@ -1900,6 +1931,30 @@
       "@type": "http://www.w3.org/2002/07/owl#Class",
       "definition": {
         "nl": "Union datatype voor de hellings- of de schoorhoek."
+      },
+      "parents": []
+    },
+    {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement-vlag#Gebeurtenisdatum",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
+      "definition": {
+        "nl": "Datum waarop een gebeurtenis plaatsvond evt op een alternatieve manier beschreven."
+      },
+      "parents": []
+    },
+    {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement-vlag#GeografischePositie",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
+      "definition": {
+        "nl": "Geografische positie aangegeven dmv een punt."
+      },
+      "parents": []
+    },
+    {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement-vlag#Geometrie",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
+      "usage": {
+        "nl": "http://www.w3.org/ns/locn#Geometry"
       },
       "parents": []
     },
@@ -2320,6 +2375,25 @@
       "parents": []
     },
     {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement-vlag#Locatieaanduiding",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
+      "definition": {
+        "nl": "Alfanumerieke code die een adreslocator uniek identificeert binnen de straat,administratieve eenheid etc."
+      },
+      "parents": []
+    },
+    {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement-vlag#Locatienaam",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
+      "definition": {
+        "nl": "Naam of omschrijving vh het geografisch object dat een adreslocator aanduidt."
+      },
+      "usage": {
+        "nl": "Bvb de naam ve gebouw of deel ve gebouw of de naam ve kamer in een gebouw."
+      },
+      "parents": []
+    },
+    {
       "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement-vlag#NaampadObject",
       "@type": "http://www.w3.org/2002/07/owl#Class",
       "definition": {
@@ -2398,6 +2472,20 @@
   "externals": [
     {
       "name": {
+        "nl": "Kost"
+      },
+      "@id": "http://data.europa.eu/m8g/Cost",
+      "@type": "rdfs:Class"
+    },
+    {
+      "name": {
+        "nl": "Periode"
+      },
+      "@id": "http://data.europa.eu/m8g/PeriodOfTime",
+      "@type": "rdfs:Class"
+    },
+    {
+      "name": {
         "nl": "Periode"
       },
       "@id": "http://data.europa.eu/m8g/PeriodOfTime",
@@ -2408,6 +2496,44 @@
         "nl": "Agent"
       },
       "@id": "http://purl.org/dc/terms/Agent",
+      "@type": "rdfs:Class"
+    },
+    {
+      "name": {
+        "nl": "Contactpunt"
+      },
+      "@id": "http://schema.org/ContactPoint",
+      "@type": "rdfs:Class"
+    },
+    {
+      "name": {
+        "nl": "Openingsurenspecificatie"
+      },
+      "@id": "http://schema.org/OpeningHoursSpecification",
+      "@type": "rdfs:Class"
+    },
+    {
+      "name": {
+        "nl": "Punt"
+      },
+      "@id": "http://www.opengis.net/ont/sf#Point",
+      "@type": "rdfs:Class"
+    },
+    {
+      "name": {
+        "nl": "Polygoon"
+      },
+      "@id": "http://www.opengis.net/ont/sf#Polygon",
+      "@type": "rdfs:Class"
+    },
+    {
+      "name": {},
+      "@id": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
+      "@type": "rdfs:Class"
+    },
+    {
+      "name": {},
+      "@id": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
       "@type": "rdfs:Class"
     },
     {
@@ -2584,9 +2710,49 @@
       "@type": "rdfs:Class"
     },
     {
+      "name": {},
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
+      "@type": "rdfs:Class"
+    },
+    {
+      "name": {},
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
+      "@type": "rdfs:Class"
+    },
+    {
+      "name": {},
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
+      "@type": "rdfs:Class"
+    },
+    {
+      "name": {},
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
+      "@type": "rdfs:Class"
+    },
+    {
+      "name": {},
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
+      "@type": "rdfs:Class"
+    },
+    {
+      "name": {},
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
+      "@type": "rdfs:Class"
+    },
+    {
+      "name": {},
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
+      "@type": "rdfs:Class"
+    },
+    {
       "name": {
         "nl": "Codelijst type"
       },
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
+      "@type": "rdfs:Class"
+    },
+    {
+      "name": {},
       "@id": "http://www.w3.org/2004/02/skos/core#Concept",
       "@type": "rdfs:Class"
     },
@@ -2651,9 +2817,58 @@
     },
     {
       "name": {
+        "nl": "Adresvoorstelling"
+      },
+      "@id": "http://www.w3.org/ns/locn#Address",
+      "@type": "rdfs:Class"
+    },
+    {
+      "name": {
         "nl": "Geometrie"
       },
       "@id": "http://www.w3.org/ns/locn#Geometry",
+      "@type": "rdfs:Class"
+    },
+    {
+      "name": {
+        "nl": "Activiteit"
+      },
+      "@id": "http://www.w3.org/ns/prov#Activity",
+      "@type": "rdfs:Class"
+    },
+    {
+      "name": {
+        "nl": "Agent"
+      },
+      "@id": "http://www.w3.org/ns/prov#Agent",
+      "@type": "rdfs:Class"
+    },
+    {
+      "name": {
+        "nl": "Entiteit"
+      },
+      "@id": "http://www.w3.org/ns/prov#Entity",
+      "@type": "rdfs:Class"
+    },
+    {
+      "name": {
+        "nl": "Generatie"
+      },
+      "@id": "http://www.w3.org/ns/prov#Generation",
+      "@type": "rdfs:Class"
+    },
+    {
+      "name": {
+        "nl": "Invalidatie"
+      },
+      "@id": "http://www.w3.org/ns/prov#Invalidation",
+      "@type": "rdfs:Class"
+    },
+    {
+      "name": {
+        "nl": "Locatie"
+      },
+      "@id": "http://www.w3.org/ns/prov#Location",
       "@type": "rdfs:Class"
     },
     {
@@ -2806,6 +3021,13 @@
     {
       "name": {
         "nl": "Tijdschema"
+      },
+      "@id": "https://schema.org/Schedule",
+      "@type": "rdfs:Class"
+    },
+    {
+      "name": {
+        "nl": "Schema"
       },
       "@id": "https://schema.org/Schedule",
       "@type": "rdfs:Class"
@@ -3096,6 +3318,48 @@
       ],
       "range": [
         "http://www.w3.org/2001/XMLSchema#string"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement-vlag#Locatienaam.type",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "definition": {
+        "nl": "Aard vh geografisch object."
+      },
+      "domain": [
+        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement-vlag#Locatienaam"
+      ],
+      "range": [
+        "http://www.w3.org/2004/02/skos/core#Concept"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement-vlag#Locatieaanduiding.type",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "definition": {
+        "nl": "Aard vd locatieaanduiding."
+      },
+      "domain": [
+        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement-vlag#Locatieaanduiding"
+      ],
+      "range": [
+        "http://www.w3.org/2004/02/skos/core#Concept"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement-vlag#Locatieaanduiding.aanduiding",
+      "@type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
+      "definition": {
+        "nl": "Alfanumerieke code waarmee het identificerend deel van een adreslocator wordt aangeduid."
+      },
+      "domain": [
+        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement-vlag#Locatieaanduiding"
+      ],
+      "range": [
+        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement-vlag#DteGetypeerdeString"
       ],
       "generalization": []
     },
@@ -4705,6 +4969,99 @@
       ],
       "range": [
         "http://www.w3.org/2000/01/rdf-schema#Literal"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement-vlag#GeografischePositie.specificatie",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "definition": {
+        "nl": "Het type object op basis waarvan het punt werd bepaald."
+      },
+      "usage": {
+        "nl": "Bvb perceel, gebouw..."
+      },
+      "domain": [
+        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement-vlag#GeografischePositie"
+      ],
+      "range": [
+        "http://www.w3.org/2004/02/skos/core#Concept"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement-vlag#GeografischePositie.methode",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "definition": {
+        "nl": "De manier waarop het punt werd bepaald."
+      },
+      "usage": {
+        "nl": "Bvb positie afgeleid ve bestaand object (bvb door berekening vd centroïde)."
+      },
+      "domain": [
+        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement-vlag#GeografischePositie"
+      ],
+      "range": [
+        "http://www.w3.org/2004/02/skos/core#Concept"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement-vlag#GeografischePositie.default",
+      "@type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
+      "definition": {
+        "nl": "Geeft aan of de positie een default positie is."
+      },
+      "usage": {
+        "nl": "Hieronder wordt de positie verstaan die per default moet worden gebruikt als het object meerdere posities heeft."
+      },
+      "domain": [
+        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement-vlag#GeografischePositie"
+      ],
+      "range": [
+        "http://www.w3.org/2001/XMLSchema#boolean"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement-vlag#Gebeurtenisdatum.tussentijdstip",
+      "@type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
+      "definition": {
+        "nl": "Datum en tijd van een moment tussen begin en einde."
+      },
+      "domain": [
+        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement-vlag#Gebeurtenisdatum"
+      ],
+      "range": [
+        "http://www.w3.org/2001/XMLSchema#dateTime"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement-vlag#Gebeurtenisdatum.einde",
+      "@type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
+      "definition": {
+        "nl": "Datum en tijd waarop de gebeurtenis eindigde."
+      },
+      "domain": [
+        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement-vlag#Gebeurtenisdatum"
+      ],
+      "range": [
+        "http://www.w3.org/2001/XMLSchema#dateTime"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement-vlag#Gebeurtenisdatum.begin",
+      "@type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
+      "definition": {
+        "nl": "Datum en tijd waarop de gebeurtenis startte."
+      },
+      "domain": [
+        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement-vlag#Gebeurtenisdatum"
+      ],
+      "range": [
+        "http://www.w3.org/2001/XMLSchema#dateTime"
       ],
       "generalization": []
     },
@@ -6448,6 +6805,32 @@
       "generalization": []
     },
     {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement-vlag#ContactinfoVolgensRol.rol",
+      "@type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
+      "definition": {
+        "nl": "Functie die bij de contactinfo hoort, bijvoorbeeld van de hoofdverantwoordelijke"
+      },
+      "domain": [
+        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement-vlag#ContactinfoVolgensRol"
+      ],
+      "range": [
+        "http://www.w3.org/2001/XMLSchema#string"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement-vlag#ContactinfoVolgensRol.isPubliek",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+      "definition": {
+        "nl": "Duidt aan of de contactinfo door iedereen gezien mag worden."
+      },
+      "domain": [
+        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement-vlag#ContactinfoVolgensRol"
+      ],
+      "range": [],
+      "generalization": []
+    },
+    {
       "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement-vlag#Concept.label",
       "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
       "definition": {
@@ -6477,6 +6860,48 @@
       "generalization": []
     },
     {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement-vlag#Adreslocator.niveau",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "definition": {
+        "nl": "Het niveau waarnaar de locator verwijst."
+      },
+      "usage": {
+        "nl": "Waarbij het niveau staat voor de geografische granulariteit vd locator: zo verwijzen locators vh type huisnummer doorgaans naar het gebouw terwijl busnummers naar een deel vh gebouw verwijzen."
+      },
+      "domain": [
+        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement-vlag#Adreslocator"
+      ],
+      "range": [
+        "http://www.w3.org/2004/02/skos/core#Concept"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement-vlag#Adreslocator.naam",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "domain": [
+        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement-vlag#Adreslocator"
+      ],
+      "range": [
+        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement-vlag#Locatienaam"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement-vlag#Adreslocator.aanduiding",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "definition": {
+        "nl": "Alfanumerieke code die de locator uniek identificeert binnen de straat, administratieve eenheid etc."
+      },
+      "domain": [
+        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement-vlag#Adreslocator"
+      ],
+      "range": [
+        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement-vlag#Locatieaanduiding"
+      ],
+      "generalization": []
+    },
+    {
       "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement-vlag#AIMVersie.assetVersie",
       "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "definition": {
@@ -6498,6 +6923,62 @@
       },
       "domain": [
         "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement-vlag#AIMDBStatus"
+      ],
+      "range": [
+        "http://www.w3.org/2001/XMLSchema#boolean"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement-vlag#2DGebouwgeometrie.specificatie",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "definition": {
+        "nl": "Deel van het gebouw dat door de xy-coördinaten wordt voorgesteld."
+      },
+      "domain": [
+        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement-vlag#2DGebouwgeometrie"
+      ],
+      "range": [
+        "http://www.w3.org/2004/02/skos/core#Concept"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement-vlag#2DGebouwgeometrie.methode",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "definition": {
+        "nl": "Beschrijving van de manier waarop de geometrie aangemaakt werd."
+      },
+      "domain": [
+        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement-vlag#2DGebouwgeometrie"
+      ],
+      "range": [
+        "http://www.w3.org/2004/02/skos/core#Concept"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement-vlag#2DGebouwgeometrie.geometrie",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "definition": {
+        "nl": "2D geometrische voorstelling van het gebouw."
+      },
+      "domain": [
+        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement-vlag#2DGebouwgeometrie"
+      ],
+      "range": [
+        "http://www.opengis.net/ont/sf#Polygon"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement-vlag#2DGebouwgeometrie.default",
+      "@type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
+      "definition": {
+        "nl": "Geometrie die moet worden gebruikt bv bij voorstelling op kaart."
+      },
+      "domain": [
+        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement-vlag#2DGebouwgeometrie"
       ],
       "range": [
         "http://www.w3.org/2001/XMLSchema#boolean"
@@ -6725,6 +7206,13 @@
     },
     {
       "name": {
+        "nl": "starttijd"
+      },
+      "@id": "https://schema.org/startTime",
+      "@type": "rdf:Property"
+    },
+    {
+      "name": {
         "nl": "startdatum"
       },
       "@id": "https://schema.org/startDate",
@@ -6732,9 +7220,30 @@
     },
     {
       "name": {
+        "nl": "startdatum"
+      },
+      "@id": "https://schema.org/startDate",
+      "@type": "rdf:Property"
+    },
+    {
+      "name": {
+        "nl": "frequentie van de herhalingen"
+      },
+      "@id": "https://schema.org/repeatFrequency",
+      "@type": "rdf:Property"
+    },
+    {
+      "name": {
         "nl": "frequentie"
       },
       "@id": "https://schema.org/repeatFrequency",
+      "@type": "rdf:Property"
+    },
+    {
+      "name": {
+        "nl": "aantal herhalingen"
+      },
+      "@id": "https://schema.org/repeatCount",
       "@type": "rdf:Property"
     },
     {
@@ -6760,9 +7269,30 @@
     },
     {
       "name": {
+        "nl": "uitzonderingsdatum"
+      },
+      "@id": "https://schema.org/exceptDate",
+      "@type": "rdf:Property"
+    },
+    {
+      "name": {
         "nl": "eindtijd"
       },
       "@id": "https://schema.org/endTime",
+      "@type": "rdf:Property"
+    },
+    {
+      "name": {
+        "nl": "eindtijd"
+      },
+      "@id": "https://schema.org/endTime",
+      "@type": "rdf:Property"
+    },
+    {
+      "name": {
+        "nl": "einddatum"
+      },
+      "@id": "https://schema.org/endDate",
       "@type": "rdf:Property"
     },
     {
@@ -6795,6 +7325,20 @@
     },
     {
       "name": {
+        "nl": "per dag van de maand"
+      },
+      "@id": "https://schema.org/byMonthDay",
+      "@type": "rdf:Property"
+    },
+    {
+      "name": {
+        "nl": "per maand"
+      },
+      "@id": "https://schema.org/byMonth",
+      "@type": "rdf:Property"
+    },
+    {
+      "name": {
         "nl": "per maand"
       },
       "@id": "https://schema.org/byMonth",
@@ -6809,9 +7353,30 @@
     },
     {
       "name": {
+        "nl": "per dag"
+      },
+      "@id": "https://schema.org/byDay",
+      "@type": "rdf:Property"
+    },
+    {
+      "name": {
         "nl": "per setpositie"
       },
       "@id": "https://schema.org/Schedule.perSetPositie",
+      "@type": "rdf:Property"
+    },
+    {
+      "name": {
+        "nl": "per setpositie"
+      },
+      "@id": "https://schema.org/Schedule.perSetPositie",
+      "@type": "rdf:Property"
+    },
+    {
+      "name": {
+        "nl": "duur"
+      },
+      "@id": "https://schema.org/Schedule.duur",
       "@type": "rdf:Property"
     },
     {
@@ -6998,6 +7563,20 @@
     },
     {
       "name": {
+        "nl": "pagina"
+      },
+      "@id": "http://xmlns.com/foaf/0.1/page",
+      "@type": "rdf:Property"
+    },
+    {
+      "name": {
+        "nl": "naam"
+      },
+      "@id": "http://xmlns.com/foaf/0.1/name",
+      "@type": "rdf:Property"
+    },
+    {
+      "name": {
         "nl": "contactnaam"
       },
       "@id": "http://xmlns.com/foaf/0.1/name",
@@ -7005,9 +7584,135 @@
     },
     {
       "name": {
+        "nl": "was geassocieerd met"
+      },
+      "@id": "http://www.w3.org/ns/prov#wasAssociatedWith",
+      "@type": "rdf:Property"
+    },
+    {
+      "name": {
+        "nl": "gebruikt"
+      },
+      "@id": "http://www.w3.org/ns/prov#used",
+      "@type": "rdf:Property"
+    },
+    {
+      "name": {
+        "nl": "op tijdstip"
+      },
+      "@id": "http://www.w3.org/ns/prov#atTime",
+      "@type": "rdf:Property"
+    },
+    {
+      "name": {
+        "nl": "op tijdstip"
+      },
+      "@id": "http://www.w3.org/ns/prov#atTime",
+      "@type": "rdf:Property"
+    },
+    {
+      "name": {
+        "nl": "activiteit"
+      },
+      "@id": "http://www.w3.org/ns/prov#activity",
+      "@type": "rdf:Property"
+    },
+    {
+      "name": {
+        "nl": "activiteit"
+      },
+      "@id": "http://www.w3.org/ns/prov#activity",
+      "@type": "rdf:Property"
+    },
+    {
+      "name": {
+        "nl": "bewerking"
+      },
+      "@id": "http://www.w3.org/ns/prov#Activity.bewerking",
+      "@type": "rdf:Property"
+    },
+    {
+      "name": {
+        "nl": "straatnaam"
+      },
+      "@id": "http://www.w3.org/ns/locn#thoroughfare",
+      "@type": "rdf:Property"
+    },
+    {
+      "name": {
+        "nl": "postnaam"
+      },
+      "@id": "http://www.w3.org/ns/locn#postName",
+      "@type": "rdf:Property"
+    },
+    {
+      "name": {
+        "nl": "postcode"
+      },
+      "@id": "http://www.w3.org/ns/locn#postCode",
+      "@type": "rdf:Property"
+    },
+    {
+      "name": {
+        "nl": "postbus"
+      },
+      "@id": "http://www.w3.org/ns/locn#poBox",
+      "@type": "rdf:Property"
+    },
+    {
+      "name": {
+        "nl": "locatienaam"
+      },
+      "@id": "http://www.w3.org/ns/locn#locatorName",
+      "@type": "rdf:Property"
+    },
+    {
+      "name": {
+        "nl": "locatieaanduiding"
+      },
+      "@id": "http://www.w3.org/ns/locn#locatorDesignator",
+      "@type": "rdf:Property"
+    },
+    {
+      "name": {
         "nl": "locatie"
       },
       "@id": "http://www.w3.org/ns/locn#geometry",
+      "@type": "rdf:Property"
+    },
+    {
+      "name": {
+        "nl": "geometrie"
+      },
+      "@id": "http://www.w3.org/ns/locn#geometry",
+      "@type": "rdf:Property"
+    },
+    {
+      "name": {
+        "nl": "volledig adres"
+      },
+      "@id": "http://www.w3.org/ns/locn#fullAddress",
+      "@type": "rdf:Property"
+    },
+    {
+      "name": {
+        "nl": "administratieve eenheid niveau 2"
+      },
+      "@id": "http://www.w3.org/ns/locn#adminUnitL2",
+      "@type": "rdf:Property"
+    },
+    {
+      "name": {
+        "nl": "administratieve eenheid niveau 1"
+      },
+      "@id": "http://www.w3.org/ns/locn#adminUnitL1",
+      "@type": "rdf:Property"
+    },
+    {
+      "name": {
+        "nl": "adresgebied"
+      },
+      "@id": "http://www.w3.org/ns/locn#addressArea",
       "@type": "rdf:Property"
     },
     {
@@ -7022,6 +7727,41 @@
         "nl": "adres"
       },
       "@id": "http://www.w3.org/ns/locn#address",
+      "@type": "rdf:Property"
+    },
+    {
+      "name": {
+        "nl": "adres"
+      },
+      "@id": "http://www.w3.org/ns/locn#address",
+      "@type": "rdf:Property"
+    },
+    {
+      "name": {
+        "nl": "land"
+      },
+      "@id": "http://www.w3.org/ns/locn#Address.land",
+      "@type": "rdf:Property"
+    },
+    {
+      "name": {
+        "nl": "huisnummer"
+      },
+      "@id": "http://www.w3.org/ns/locn#Address.huisnummer",
+      "@type": "rdf:Property"
+    },
+    {
+      "name": {
+        "nl": "gemeentenaam"
+      },
+      "@id": "http://www.w3.org/ns/locn#Address.gemeentenaam",
+      "@type": "rdf:Property"
+    },
+    {
+      "name": {
+        "nl": "busnummer"
+      },
+      "@id": "http://www.w3.org/ns/locn#Address.busnummer",
       "@type": "rdf:Property"
     },
     {
@@ -7061,6 +7801,25 @@
     },
     {
       "name": {
+        "nl": "label"
+      },
+      "@id": "http://www.w3.org/2000/01/rdf-schema#label",
+      "@type": "rdf:Property"
+    },
+    {
+      "name": {
+        "nl": "label"
+      },
+      "@id": "http://www.w3.org/2000/01/rdf-schema#label",
+      "@type": "rdf:Property"
+    },
+    {
+      "name": {},
+      "@id": "http://www.w3.org/2000/01/rdf-schema#label",
+      "@type": "rdf:Property"
+    },
+    {
+      "name": {
         "nl": "waarde"
       },
       "@id": "http://www.w3.org/1999/02/22-rdf-syntax-ns#value",
@@ -7082,9 +7841,44 @@
     },
     {
       "name": {
+        "nl": "als WKT"
+      },
+      "@id": "http://www.opengis.net/ont/geosparql#asWKT",
+      "@type": "rdf:Property"
+    },
+    {
+      "name": {
         "nl": "als GML"
       },
       "@id": "http://www.opengis.net/ont/geosparql#asGML",
+      "@type": "rdf:Property"
+    },
+    {
+      "name": {
+        "nl": "als GML"
+      },
+      "@id": "http://www.opengis.net/ont/geosparql#asGML",
+      "@type": "rdf:Property"
+    },
+    {
+      "name": {
+        "nl": "aanschrijfprefix"
+      },
+      "@id": "http://ww.w3.org/2006/vcard/ns#honorific-prefix",
+      "@type": "rdf:Property"
+    },
+    {
+      "name": {
+        "nl": "geldig tot"
+      },
+      "@id": "http://schema.org/validThrough",
+      "@type": "rdf:Property"
+    },
+    {
+      "name": {
+        "nl": "geldig van"
+      },
+      "@id": "http://schema.org/validFrom",
       "@type": "rdf:Property"
     },
     {
@@ -7096,9 +7890,44 @@
     },
     {
       "name": {
+        "nl": "telefoon"
+      },
+      "@id": "http://schema.org/telephone",
+      "@type": "rdf:Property"
+    },
+    {
+      "name": {
+        "nl": "opent"
+      },
+      "@id": "http://schema.org/opens",
+      "@type": "rdf:Property"
+    },
+    {
+      "name": {
+        "nl": "openingsuren"
+      },
+      "@id": "http://schema.org/openingHours",
+      "@type": "rdf:Property"
+    },
+    {
+      "name": {
+        "nl": "uren beschikbaarheid"
+      },
+      "@id": "http://schema.org/hoursAvailable",
+      "@type": "rdf:Property"
+    },
+    {
+      "name": {
         "nl": "beschikbaarheid"
       },
       "@id": "http://schema.org/hoursAvailable",
+      "@type": "rdf:Property"
+    },
+    {
+      "name": {
+        "nl": "faxnummer"
+      },
+      "@id": "http://schema.org/faxNumber",
       "@type": "rdf:Property"
     },
     {
@@ -7120,6 +7949,27 @@
         "nl": "email"
       },
       "@id": "http://schema.org/email",
+      "@type": "rdf:Property"
+    },
+    {
+      "name": {
+        "nl": "email"
+      },
+      "@id": "http://schema.org/email",
+      "@type": "rdf:Property"
+    },
+    {
+      "name": {
+        "nl": "dag van week"
+      },
+      "@id": "http://schema.org/dayOfWeek",
+      "@type": "rdf:Property"
+    },
+    {
+      "name": {
+        "nl": "sluit"
+      },
+      "@id": "http://schema.org/closes",
       "@type": "rdf:Property"
     },
     {
@@ -7173,6 +8023,13 @@
     },
     {
       "name": {
+        "nl": "beschrijving"
+      },
+      "@id": "http://purl.org/dc/terms/description",
+      "@type": "rdf:Property"
+    },
+    {
+      "name": {
         "nl": "naam"
       },
       "@id": "http://purl.org/dc/terms/Agent.naam",
@@ -7194,6 +8051,20 @@
     },
     {
       "name": {
+        "nl": "waarde"
+      },
+      "@id": "http://data.europa.eu/m8g/value",
+      "@type": "rdf:Property"
+    },
+    {
+      "name": {
+        "nl": "begin"
+      },
+      "@id": "http://data.europa.eu/m8g/startTime",
+      "@type": "rdf:Property"
+    },
+    {
+      "name": {
         "nl": "begin"
       },
       "@id": "http://data.europa.eu/m8g/startTime",
@@ -7204,6 +8075,20 @@
         "nl": "einde"
       },
       "@id": "http://data.europa.eu/m8g/endTime",
+      "@type": "rdf:Property"
+    },
+    {
+      "name": {
+        "nl": "einde"
+      },
+      "@id": "http://data.europa.eu/m8g/endTime",
+      "@type": "rdf:Property"
+    },
+    {
+      "name": {
+        "nl": "valuta"
+      },
+      "@id": "http://data.europa.eu/m8g/currency",
       "@type": "rdf:Property"
     },
     {

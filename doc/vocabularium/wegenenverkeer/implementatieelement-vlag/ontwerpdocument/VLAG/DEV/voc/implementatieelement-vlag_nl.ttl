@@ -1,6 +1,7 @@
 @prefix dc: <http://purl.org/dc/terms/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema: <http://schema.org/> .
@@ -8,11 +9,28 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
+<http://data.europa.eu/m8g/Cost> a rdfs:Class;
+  rdfs:label "Kost"@nl .
+
 <http://data.europa.eu/m8g/PeriodOfTime> a rdfs:Class;
   rdfs:label "Periode"@nl .
 
 dc:Agent a rdfs:Class;
   rdfs:label "Agent"@nl .
+
+schema:ContactPoint a rdfs:Class;
+  rdfs:label "Contactpunt"@nl .
+
+schema:OpeningHoursSpecification a rdfs:Class;
+  rdfs:label "Openingsurenspecificatie"@nl .
+
+<http://www.opengis.net/ont/sf#Point> a rdfs:Class;
+  rdfs:label "Punt"@nl .
+
+<http://www.opengis.net/ont/sf#Polygon> a rdfs:Class;
+  rdfs:label "Polygoon"@nl .
+
+rdf:langString a rdfs:Class .
 
 skos:Concept a rdfs:Class;
   rdfs:label "AIM toestand"@nl,
@@ -48,8 +66,29 @@ skos:Concept a rdfs:Class;
     "Zonetype"@nl,
     "Verkeersbordcategorie"@nl .
 
+<http://www.w3.org/ns/locn#Address> a rdfs:Class;
+  rdfs:label "Adresvoorstelling"@nl .
+
 <http://www.w3.org/ns/locn#Geometry> a rdfs:Class;
   rdfs:label "Geometrie"@nl .
+
+prov:Activity a rdfs:Class;
+  rdfs:label "Activiteit"@nl .
+
+prov:Agent a rdfs:Class;
+  rdfs:label "Agent"@nl .
+
+prov:Entity a rdfs:Class;
+  rdfs:label "Entiteit"@nl .
+
+prov:Generation a rdfs:Class;
+  rdfs:label "Generatie"@nl .
+
+prov:Invalidation a rdfs:Class;
+  rdfs:label "Invalidatie"@nl .
+
+prov:Location a rdfs:Class;
+  rdfs:label "Locatie"@nl .
 
 <https://data.vlaanderen.be/ns/besluit#AanvullendReglement> a rdfs:Class;
   rdfs:label "Aanvullend Reglement"@nl .
@@ -115,7 +154,8 @@ schemas:OpeningHoursSpecification a rdfs:Class;
   rdfs:label "Openingsurenspecificatie"@nl .
 
 schemas:Schedule a rdfs:Class;
-  rdfs:label "Tijdschema"@nl .
+  rdfs:label "Tijdschema"@nl,
+    "Schema"@nl .
 
 <https://w3id.org/tribont/core#Shape> a rdfs:Class;
   rdfs:label "Vorm"@nl .
@@ -150,6 +190,30 @@ schemas:Schedule a rdfs:Class;
 <https://www.w3.org/2004/02/skos/core#ConceptScheme> a rdfs:Class;
   rdfs:label "Codelijst"@nl .
 
+<https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement-vlag#2DGebouwgeometrie.default> a owl:DatatypeProperty;
+  rdfs:comment "Geometrie die moet worden gebruikt bv bij voorstelling op kaart."@nl;
+  rdfs:domain <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement-vlag#2DGebouwgeometrie>;
+  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement-vlag>;
+  rdfs:range xsd:boolean .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement-vlag#2DGebouwgeometrie.geometrie> a owl:ObjectProperty;
+  rdfs:comment "2D geometrische voorstelling van het gebouw."@nl;
+  rdfs:domain <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement-vlag#2DGebouwgeometrie>;
+  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement-vlag>;
+  rdfs:range <http://www.opengis.net/ont/sf#Polygon> .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement-vlag#2DGebouwgeometrie.methode> a owl:ObjectProperty;
+  rdfs:comment "Beschrijving van de manier waarop de geometrie aangemaakt werd."@nl;
+  rdfs:domain <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement-vlag#2DGebouwgeometrie>;
+  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement-vlag>;
+  rdfs:range skos:Concept .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement-vlag#2DGebouwgeometrie.specificatie> a owl:ObjectProperty;
+  rdfs:comment "Deel van het gebouw dat door de xy-coördinaten wordt voorgesteld."@nl;
+  rdfs:domain <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement-vlag#2DGebouwgeometrie>;
+  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement-vlag>;
+  rdfs:range skos:Concept .
+
 <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement-vlag#AIMDBStatus.isActief> a owl:DatatypeProperty;
   rdfs:comment "Geeft aan of het object actief kan gebruikt worden of (zacht) verwijderd is uit het asset beheer systeem."@nl;
   rdfs:domain <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement-vlag#AIMDBStatus>;
@@ -162,6 +226,24 @@ schemas:Schedule a rdfs:Class;
   rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement-vlag>;
   rdfs:range <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement-vlag#DtcAssetVersie> .
 
+<https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement-vlag#Adreslocator.aanduiding> a owl:ObjectProperty;
+  rdfs:comment "Alfanumerieke code die de locator uniek identificeert binnen de straat, administratieve eenheid etc."@nl;
+  rdfs:domain <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement-vlag#Adreslocator>;
+  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement-vlag>;
+  rdfs:range <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement-vlag#Locatieaanduiding> .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement-vlag#Adreslocator.naam> a owl:ObjectProperty;
+  rdfs:domain <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement-vlag#Adreslocator>;
+  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement-vlag>;
+  rdfs:range <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement-vlag#Locatienaam> .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement-vlag#Adreslocator.niveau> a owl:ObjectProperty;
+  <http://purl.org/vocab/vann/usageNote> "Waarbij het niveau staat voor de geografische granulariteit vd locator: zo verwijzen locators vh type huisnummer doorgaans naar het gebouw terwijl busnummers naar een deel vh gebouw verwijzen."@nl;
+  rdfs:comment "Het niveau waarnaar de locator verwijst."@nl;
+  rdfs:domain <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement-vlag#Adreslocator>;
+  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement-vlag>;
+  rdfs:range skos:Concept .
+
 <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement-vlag#Bijlage.type> a owl:ObjectProperty;
   <http://purl.org/vocab/vann/usageNote> "Klasse uit gebruik sinds versie 2.13.0-RC2"@nl;
   rdfs:comment "De typering of categorie van de bijlage."@nl;
@@ -173,6 +255,17 @@ schemas:Schedule a rdfs:Class;
   rdfs:comment "TODO"@nl;
   rdfs:domain <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement-vlag#Concept>;
   rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement-vlag> .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement-vlag#ContactinfoVolgensRol.isPubliek> a rdf:Property;
+  rdfs:comment "Duidt aan of de contactinfo door iedereen gezien mag worden."@nl;
+  rdfs:domain <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement-vlag#ContactinfoVolgensRol>;
+  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement-vlag> .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement-vlag#ContactinfoVolgensRol.rol> a owl:DatatypeProperty;
+  rdfs:comment "Functie die bij de contactinfo hoort, bijvoorbeeld van de hoofdverantwoordelijke"@nl;
+  rdfs:domain <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement-vlag#ContactinfoVolgensRol>;
+  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement-vlag>;
+  rdfs:range xsd:string .
 
 <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement-vlag#Derdenobject.assetId> a owl:ObjectProperty;
   rdfs:comment "Unieke identificatie van de asset zoals toegekend door de assetbeheerder of n.a.v. eerste aanlevering door de leverancier."@nl;
@@ -920,6 +1013,49 @@ schemas:Schedule a rdfs:Class;
   rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement-vlag>;
   rdfs:range skos:Concept .
 
+<https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement-vlag#Gebeurtenisdatum.begin> a owl:DatatypeProperty;
+  rdfs:comment "Datum en tijd waarop de gebeurtenis startte."@nl;
+  rdfs:domain <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement-vlag#Gebeurtenisdatum>;
+  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement-vlag>;
+  rdfs:range xsd:dateTime .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement-vlag#Gebeurtenisdatum.einde> a owl:DatatypeProperty;
+  rdfs:comment "Datum en tijd waarop de gebeurtenis eindigde."@nl;
+  rdfs:domain <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement-vlag#Gebeurtenisdatum>;
+  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement-vlag>;
+  rdfs:range xsd:dateTime .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement-vlag#Gebeurtenisdatum.tussentijdstip> a owl:DatatypeProperty;
+  rdfs:comment "Datum en tijd van een moment tussen begin en einde."@nl;
+  rdfs:domain <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement-vlag#Gebeurtenisdatum>;
+  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement-vlag>;
+  rdfs:range xsd:dateTime .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement-vlag#GeografischePositie.default> a owl:DatatypeProperty;
+  <http://purl.org/vocab/vann/usageNote> "Hieronder wordt de positie verstaan die per default moet worden gebruikt als het object meerdere posities heeft."@nl;
+  rdfs:comment "Geeft aan of de positie een default positie is."@nl;
+  rdfs:domain <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement-vlag#GeografischePositie>;
+  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement-vlag>;
+  rdfs:range xsd:boolean .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement-vlag#GeografischePositie.methode> a owl:ObjectProperty;
+  <http://purl.org/vocab/vann/usageNote> "Bvb positie afgeleid ve bestaand object (bvb door berekening vd centroïde)."@nl;
+  rdfs:comment "De manier waarop het punt werd bepaald."@nl;
+  rdfs:domain <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement-vlag#GeografischePositie>;
+  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement-vlag>;
+  rdfs:range skos:Concept .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement-vlag#GeografischePositie.specificatie> a owl:ObjectProperty;
+  <http://purl.org/vocab/vann/usageNote> "Bvb perceel, gebouw..."@nl;
+  rdfs:comment "Het type object op basis waarvan het punt werd bepaald."@nl;
+  rdfs:domain <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement-vlag#GeografischePositie>;
+  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement-vlag>;
+  rdfs:range skos:Concept .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement-vlag#Geometrie> a owl:Class;
+  <http://purl.org/vocab/vann/usageNote> "http://www.w3.org/ns/locn#Geometry"@nl;
+  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement-vlag> .
+
 <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement-vlag#KwantWrdInAmpere.standaardEenheid> a owl:DatatypeProperty;
   <http://purl.org/vocab/vann/usageNote> "\"A\"^^cdt:ucumunit"@nl;
   rdfs:comment "De standaard eenheid bij dit datatype is uitgedrukt in ampere."@nl;
@@ -1595,6 +1731,24 @@ schemas:Schedule a rdfs:Class;
   rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement-vlag>;
   rdfs:range xsd:decimal .
 
+<https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement-vlag#Locatieaanduiding.aanduiding> a owl:DatatypeProperty;
+  rdfs:comment "Alfanumerieke code waarmee het identificerend deel van een adreslocator wordt aangeduid."@nl;
+  rdfs:domain <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement-vlag#Locatieaanduiding>;
+  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement-vlag>;
+  rdfs:range <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement-vlag#DteGetypeerdeString> .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement-vlag#Locatieaanduiding.type> a owl:ObjectProperty;
+  rdfs:comment "Aard vd locatieaanduiding."@nl;
+  rdfs:domain <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement-vlag#Locatieaanduiding>;
+  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement-vlag>;
+  rdfs:range skos:Concept .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement-vlag#Locatienaam.type> a owl:ObjectProperty;
+  rdfs:comment "Aard vh geografisch object."@nl;
+  rdfs:domain <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement-vlag#Locatienaam>;
+  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement-vlag>;
+  rdfs:range skos:Concept .
+
 <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement-vlag#NaampadObject.naampad> a owl:DatatypeProperty;
   rdfs:comment "Een set van objecten (bv. collecties) die aanduiden waar het object zich bevindt in de objectenboom (EM-Infra)."@nl;
   rdfs:domain <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement-vlag#NaampadObject>;
@@ -1714,11 +1868,17 @@ schemas:Schedule a rdfs:Class;
 <http://data.europa.eu/eli/ontology#title_short> a rdf:Property;
   rdfs:label "korte titel"@nl .
 
+<http://data.europa.eu/m8g/currency> a rdf:Property;
+  rdfs:label "valuta"@nl .
+
 <http://data.europa.eu/m8g/endTime> a rdf:Property;
   rdfs:label "einde"@nl .
 
 <http://data.europa.eu/m8g/startTime> a rdf:Property;
   rdfs:label "begin"@nl .
+
+<http://data.europa.eu/m8g/value> a rdf:Property;
+  rdfs:label "waarde"@nl .
 
 dc:Agent\.agentId a rdf:Property;
   rdfs:label "agent identificatie"@nl .
@@ -1740,6 +1900,12 @@ dc:type a rdf:Property;
     "codelijst type"@nl,
     "classificatie"@nl .
 
+schema:closes a rdf:Property;
+  rdfs:label "sluit"@nl .
+
+schema:dayOfWeek a rdf:Property;
+  rdfs:label "dag van week"@nl .
+
 schema:email a rdf:Property;
   rdfs:label "email"@nl .
 
@@ -1747,13 +1913,30 @@ schema:eventSchedule a rdf:Property;
   rdfs:label "tijdschema"@nl .
 
 schema:faxNumber a rdf:Property;
-  rdfs:label "fax"@nl .
+  rdfs:label "faxnummer"@nl,
+    "fax"@nl .
 
 schema:hoursAvailable a rdf:Property;
-  rdfs:label "beschikbaarheid"@nl .
+  rdfs:label "uren beschikbaarheid"@nl,
+    "beschikbaarheid"@nl .
+
+schema:openingHours a rdf:Property;
+  rdfs:label "openingsuren"@nl .
+
+schema:opens a rdf:Property;
+  rdfs:label "opent"@nl .
 
 schema:telephone a rdf:Property;
   rdfs:label "telefoon"@nl .
+
+schema:validFrom a rdf:Property;
+  rdfs:label "geldig van"@nl .
+
+schema:validThrough a rdf:Property;
+  rdfs:label "geldig tot"@nl .
+
+<http://ww.w3.org/2006/vcard/ns#honorific-prefix> a rdf:Property;
+  rdfs:label "aanschrijfprefix"@nl .
 
 <http://www.opengis.net/ont/geosparql#asGML> a rdf:Property;
   rdfs:label "als GML"@nl .
@@ -1763,6 +1946,9 @@ schema:telephone a rdf:Property;
 
 rdf:value a rdf:Property;
   rdfs:label "waarde"@nl .
+
+rdfs:label a rdf:Property;
+  rdfs:label "label"@nl .
 
 skos:label a rdf:Property;
   rdfs:label "naam"@nl .
@@ -1779,19 +1965,79 @@ skos:prefSymbol a rdf:Property;
 <http://www.w3.org/ns/adms#status> a rdf:Property;
   rdfs:label "status"@nl .
 
+<http://www.w3.org/ns/locn#Address.busnummer> a rdf:Property;
+  rdfs:label "busnummer"@nl .
+
+<http://www.w3.org/ns/locn#Address.gemeentenaam> a rdf:Property;
+  rdfs:label "gemeentenaam"@nl .
+
+<http://www.w3.org/ns/locn#Address.huisnummer> a rdf:Property;
+  rdfs:label "huisnummer"@nl .
+
+<http://www.w3.org/ns/locn#Address.land> a rdf:Property;
+  rdfs:label "land"@nl .
+
 <http://www.w3.org/ns/locn#address> a rdf:Property;
   rdfs:label "adresvoorstelling"@nl,
     "adres"@nl .
 
+<http://www.w3.org/ns/locn#addressArea> a rdf:Property;
+  rdfs:label "adresgebied"@nl .
+
+<http://www.w3.org/ns/locn#adminUnitL1> a rdf:Property;
+  rdfs:label "administratieve eenheid niveau 1"@nl .
+
+<http://www.w3.org/ns/locn#adminUnitL2> a rdf:Property;
+  rdfs:label "administratieve eenheid niveau 2"@nl .
+
+<http://www.w3.org/ns/locn#fullAddress> a rdf:Property;
+  rdfs:label "volledig adres"@nl .
+
 <http://www.w3.org/ns/locn#geometry> a rdf:Property;
-  rdfs:label "locatie"@nl .
+  rdfs:label "locatie"@nl,
+    "geometrie"@nl .
+
+<http://www.w3.org/ns/locn#locatorDesignator> a rdf:Property;
+  rdfs:label "locatieaanduiding"@nl .
+
+<http://www.w3.org/ns/locn#locatorName> a rdf:Property;
+  rdfs:label "locatienaam"@nl .
+
+<http://www.w3.org/ns/locn#poBox> a rdf:Property;
+  rdfs:label "postbus"@nl .
+
+<http://www.w3.org/ns/locn#postCode> a rdf:Property;
+  rdfs:label "postcode"@nl .
+
+<http://www.w3.org/ns/locn#postName> a rdf:Property;
+  rdfs:label "postnaam"@nl .
+
+<http://www.w3.org/ns/locn#thoroughfare> a rdf:Property;
+  rdfs:label "straatnaam"@nl .
+
+prov:Activity\.bewerking a rdf:Property;
+  rdfs:label "bewerking"@nl .
+
+prov:activity a rdf:Property;
+  rdfs:label "activiteit"@nl .
+
+prov:atTime a rdf:Property;
+  rdfs:label "op tijdstip"@nl .
+
+prov:used a rdf:Property;
+  rdfs:label "gebruikt"@nl .
+
+prov:wasAssociatedWith a rdf:Property;
+  rdfs:label "was geassocieerd met"@nl .
 
 foaf:name a rdf:Property;
-  rdfs:label "contactnaam"@nl .
+  rdfs:label "naam"@nl,
+    "contactnaam"@nl .
 
 foaf:page a rdf:Property;
   rdfs:label "website URL"@nl,
-    "website"@nl .
+    "website"@nl,
+    "pagina"@nl .
 
 <https://data.vlaanderen.be/ns/besluit#Besluit.motivering> a rdf:Property;
   rdfs:label "motivering"@nl .
@@ -1891,10 +2137,12 @@ schemas:opens a rdf:Property;
   rdfs:label "openingstijd"@nl .
 
 schemas:repeatCount a rdf:Property;
-  rdfs:label "aantal"@nl .
+  rdfs:label "aantal herhalingen"@nl,
+    "aantal"@nl .
 
 schemas:repeatFrequency a rdf:Property;
-  rdfs:label "frequentie"@nl .
+  rdfs:label "frequentie van de herhalingen"@nl,
+    "frequentie"@nl .
 
 schemas:startDate a rdf:Property;
   rdfs:label "startdatum"@nl .
@@ -1923,6 +2171,9 @@ schemas:startTime a rdf:Property;
 
 <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement-vlag#DtcTemplate> a owl:Class;
   rdfs:comment "TODO"@nl;
+  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement-vlag> .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement-vlag#DteGetypeerdeString> a owl:Class;
   rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement-vlag> .
 
 <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement-vlag#DteIPv4Adres> a owl:Class;
@@ -2011,6 +2262,11 @@ schemas:startTime a rdf:Property;
   rdfs:comment "TODO"@nl;
   rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement-vlag>;
   rdfs:subClassOf <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten-vlag#AIMLinkObject> .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement-vlag#ContactinfoVolgensRol> a owl:Class;
+  rdfs:comment "Contactgegevens volgens een bepaalde rol (bv. veiligheidscoördinator)."@nl;
+  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement-vlag>;
+  rdfs:subClassOf schema:ContactPoint .
 
 <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement-vlag#DtcAfmetingBxhInM> a owl:Class;
   rdfs:comment "Complex datatype voor de afmeting van de breedte en hoogte in meter."@nl;
@@ -2240,8 +2496,17 @@ schemas:startTime a rdf:Property;
   rdfs:comment "Een kwantitatieve waarde die een getal in milliampere per uur uitdrukt."@nl;
   rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement-vlag> .
 
+<https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement-vlag#Locatienaam> a owl:Class;
+  <http://purl.org/vocab/vann/usageNote> "Bvb de naam ve gebouw of deel ve gebouw of de naam ve kamer in een gebouw."@nl;
+  rdfs:comment "Naam of omschrijving vh het geografisch object dat een adreslocator aanduidt."@nl;
+  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement-vlag> .
+
 <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement-vlag#VLAGAIMToestand> a owl:Class;
   rdfs:comment "Voegt een attribuut toe aan de subklasse dat de huidige stand in de levenscyclus van het object aangeeft."@nl;
+  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement-vlag> .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement-vlag#Adreslocator> a owl:Class;
+  rdfs:comment "Menselijk leesbare aanduiding of naam die een gebruiker of applicatie toelaat om het adres te onderscheiden van naburige adressen in de straat,de administratieve eenheid etc waarin het adres ligt."@nl;
   rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement-vlag> .
 
 <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement-vlag#DtcAfmetingBxlxhInCm> a owl:Class;
@@ -2277,6 +2542,14 @@ schemas:startTime a rdf:Property;
   rdfs:comment "Een tekst welke uit meerdere zinnen bestaat, en ook regeleindes kan bevatten. Een tekstblok bevat maximaal 65.000 karakters."@nl;
   rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement-vlag> .
 
+<https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement-vlag#Gebeurtenisdatum> a owl:Class;
+  rdfs:comment "Datum waarop een gebeurtenis plaatsvond evt op een alternatieve manier beschreven."@nl;
+  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement-vlag> .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement-vlag#GeografischePositie> a owl:Class;
+  rdfs:comment "Geografische positie aangegeven dmv een punt."@nl;
+  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement-vlag> .
+
 <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement-vlag#KwantWrdInDecimaleGraden> a owl:Class;
   rdfs:comment "Een kwantitatieve waarde die een getal in decimale graden uitdrukt."@nl;
   rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement-vlag> .
@@ -2291,6 +2564,14 @@ schemas:startTime a rdf:Property;
 
 <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement-vlag#KwantWrdInUur> a owl:Class;
   rdfs:comment "Een kwantitatieve waarde die een getal in uur uitdrukt."@nl;
+  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement-vlag> .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement-vlag#Locatieaanduiding> a owl:Class;
+  rdfs:comment "Alfanumerieke code die een adreslocator uniek identificeert binnen de straat,administratieve eenheid etc."@nl;
+  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement-vlag> .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement-vlag#2DGebouwgeometrie> a owl:Class;
+  rdfs:comment "Geometrie van het gebouw en metadata over welk deel van het gebouw door de geometrie wordt voorgesteld en hoe deze werd bepaald."@nl;
   rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement-vlag> .
 
 <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement-vlag#AIMVersie> a owl:Class;
@@ -3674,10 +3955,23 @@ schemas:startTime a rdf:Property;
     foaf:mbox <mailto:digitaalvlaanderen@vlaanderen.be>;
     foaf:name "Data Vlaanderen"
   ];
-  rdfs:seeAlso <http://data.europa.eu/m8g/PeriodOfTime>,
+  rdfs:seeAlso <http://data.europa.eu/m8g/Cost>,
+    <http://data.europa.eu/m8g/PeriodOfTime>,
     dc:Agent,
+    schema:ContactPoint,
+    schema:OpeningHoursSpecification,
+    <http://www.opengis.net/ont/sf#Point>,
+    <http://www.opengis.net/ont/sf#Polygon>,
+    rdf:langString,
     skos:Concept,
+    <http://www.w3.org/ns/locn#Address>,
     <http://www.w3.org/ns/locn#Geometry>,
+    prov:Activity,
+    prov:Agent,
+    prov:Entity,
+    prov:Generation,
+    prov:Invalidation,
+    prov:Location,
     <https://data.vlaanderen.be/ns/besluit#AanvullendReglement>,
     <https://data.vlaanderen.be/ns/besluit#Artikel>,
     <https://data.vlaanderen.be/ns/besluit#Besluit>,
@@ -3775,29 +4069,58 @@ schemas:startTime a rdf:Property;
     <https://data.vlaanderen.be/ns/besluit#Besluit.motivering>,
     foaf:page,
     foaf:name,
+    prov:wasAssociatedWith,
+    prov:used,
+    prov:atTime,
+    prov:activity,
+    prov:Activity\.bewerking,
+    <http://www.w3.org/ns/locn#thoroughfare>,
+    <http://www.w3.org/ns/locn#postName>,
+    <http://www.w3.org/ns/locn#postCode>,
+    <http://www.w3.org/ns/locn#poBox>,
+    <http://www.w3.org/ns/locn#locatorName>,
+    <http://www.w3.org/ns/locn#locatorDesignator>,
     <http://www.w3.org/ns/locn#geometry>,
+    <http://www.w3.org/ns/locn#fullAddress>,
+    <http://www.w3.org/ns/locn#adminUnitL2>,
+    <http://www.w3.org/ns/locn#adminUnitL1>,
+    <http://www.w3.org/ns/locn#addressArea>,
     <http://www.w3.org/ns/locn#address>,
+    <http://www.w3.org/ns/locn#Address.land>,
+    <http://www.w3.org/ns/locn#Address.huisnummer>,
+    <http://www.w3.org/ns/locn#Address.gemeentenaam>,
+    <http://www.w3.org/ns/locn#Address.busnummer>,
     <http://www.w3.org/ns/adms#status>,
     <http://www.w3.org/ns/adms#identifier>,
     skos:prefSymbol,
     skos:prefLabel,
     skos:label,
+    rdfs:label,
     rdf:value,
     <http://www.opengis.net/ont/geosparql#asWKT>,
     <http://www.opengis.net/ont/geosparql#asGML>,
+    <http://ww.w3.org/2006/vcard/ns#honorific-prefix>,
+    schema:validThrough,
+    schema:validFrom,
     schema:telephone,
+    schema:opens,
+    schema:openingHours,
     schema:hoursAvailable,
     schema:faxNumber,
     schema:eventSchedule,
     schema:email,
+    schema:dayOfWeek,
+    schema:closes,
     dc:type,
     dc:title,
     dc:description,
     dc:Agent\.naam,
     dc:Agent\.contactinfo,
     dc:Agent\.agentId,
+    <http://data.europa.eu/m8g/value>,
     <http://data.europa.eu/m8g/startTime>,
     <http://data.europa.eu/m8g/endTime>,
+    <http://data.europa.eu/m8g/currency>,
     <http://data.europa.eu/eli/ontology#title_short>,
     <http://data.europa.eu/eli/ontology#number>,
     <http://data.europa.eu/eli/ontology#description>,

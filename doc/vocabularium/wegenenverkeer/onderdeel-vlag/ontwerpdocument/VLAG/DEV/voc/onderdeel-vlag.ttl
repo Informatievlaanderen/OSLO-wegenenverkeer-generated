@@ -15,19 +15,25 @@ skos:Concept a rdfs:Class;
     "Grond hoofdnaamcode"@nl,
     "Grondbijmenging hoeveelheidscode"@nl,
     "Grondwerksoorten"@nl,
-    "Norm"@nl,
-    "Test type"@nl,
     "Trottoirband vorm"@nl,
     "Kantopsluiting bijkomende parameter"@nl,
     "Geluidskarakteristiek"@nl,
-    "Meet methode"@nl,
     "Materiaal geluidswerende constructie"@nl,
     "VerkeerstekenWettelijkeStatus"@nl,
+    "Figuratie soort"@nl,
+    "Overlangse markering type"@nl,
+    "Figuratie type"@nl,
+    "Figuratie code"@nl,
+    "Soort markeringsproduct"@nl,
+    "Dwarse markering soort"@nl,
     "markeringswaarborgperiode"@nl,
+    "Overlangse markering code"@nl,
     "Positie soort"@nl,
     "Signalisatie markering opvatting"@nl,
     "Fabricage type retroreflecterend verkeersbord"@nl,
     "Soort steun"@nl,
+    "Kleur markering"@nl,
+    "Dwarse markering code"@nl,
     "Folie type"@nl,
     "Vegetatie plantverband"@nl,
     "Vorm aanlevering houtige vegetatie"@nl,
@@ -636,11 +642,10 @@ skos:Concept a rdfs:Class;
   rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel-vlag>;
   rdfs:range <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement-vlag#KwantWrdInMicrogramPerKilogram> .
 
-<https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel-vlag#DtcSoortVervuiling.soortVervuiling> a owl:ObjectProperty;
+<https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel-vlag#DtcSoortVervuiling.soortVervuiling> a rdf:Property;
   rdfs:comment "Het soort vervuiling kan hiermee bepaalt worden."@nl;
   rdfs:domain <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel-vlag#DtcSoortVervuiling>;
-  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel-vlag>;
-  rdfs:range skos:Concept .
+  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel-vlag> .
 
 <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel-vlag#DtcSupplementenCBV.kleur> a owl:ObjectProperty;
   rdfs:comment "De kleur van de supplementen toegevoegd aan de verharding."@nl;
@@ -776,6 +781,48 @@ skos:Concept a rdfs:Class;
 <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel-vlag#DtuWvLichtmastBevsToestelMethode.standaardMethode> a owl:ObjectProperty;
   rdfs:comment "Bepaling van de standaardbevestigingen van verlichtingstoestellen aan lichtmasten."@nl;
   rdfs:domain <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel-vlag#DtuWvLichtmastBevsToestelMethode>;
+  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel-vlag>;
+  rdfs:range skos:Concept .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel-vlag#DwarseMarkering.code> a owl:ObjectProperty;
+  rdfs:comment "De (COPRO/BENOR) code van dwarse markering."@nl;
+  rdfs:domain <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel-vlag#DwarseMarkering>;
+  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel-vlag>;
+  rdfs:range skos:Concept .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel-vlag#DwarseMarkering.oppervlakte> a owl:ObjectProperty;
+  rdfs:comment "De oppervlakte van de dwarse markering in vierkante meter."@nl;
+  rdfs:domain <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel-vlag#DwarseMarkering>;
+  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel-vlag>;
+  rdfs:range <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement-vlag#KwantWrdInVierkanteMeter> .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel-vlag#DwarseMarkering.soortOmschrijving> a owl:ObjectProperty;
+  rdfs:comment "De soort en tevens de omschrijving van dwarse markering."@nl;
+  rdfs:domain <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel-vlag#DwarseMarkering>;
+  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel-vlag>;
+  rdfs:range skos:Concept .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel-vlag#FiguratieMarkering.code> a owl:ObjectProperty;
+  rdfs:comment "De code van de figuratie markering."@nl;
+  rdfs:domain <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel-vlag#FiguratieMarkering>;
+  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel-vlag>;
+  rdfs:range skos:Concept .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel-vlag#FiguratieMarkering.oppervlakte> a owl:ObjectProperty;
+  rdfs:comment "De oppervlakte van de markering zoals beschreven in de algemene omzendbrief."@nl;
+  rdfs:domain <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel-vlag#FiguratieMarkering>;
+  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel-vlag>;
+  rdfs:range <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement-vlag#KwantWrdInVierkanteMeter> .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel-vlag#FiguratieMarkering.soortOmschrijving> a owl:ObjectProperty;
+  rdfs:comment "De soort en tevens de omschrijving van de figuratie markering."@nl;
+  rdfs:domain <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel-vlag#FiguratieMarkering>;
+  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel-vlag>;
+  rdfs:range skos:Concept .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel-vlag#FiguratieMarkering.type> a owl:ObjectProperty;
+  rdfs:comment "Het type van figuratie markering."@nl;
+  rdfs:domain <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel-vlag#FiguratieMarkering>;
   rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel-vlag>;
   rdfs:range skos:Concept .
 
@@ -965,6 +1012,36 @@ skos:Concept a rdfs:Class;
   rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel-vlag>;
   rdfs:subClassOf <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement-vlag#DirectioneleRelatie> .
 
+<https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel-vlag#OverlangseMarkering.code> a owl:ObjectProperty;
+  rdfs:comment "De (COPRO/BENOR) code van de overlangse markering."@nl;
+  rdfs:domain <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel-vlag#OverlangseMarkering>;
+  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel-vlag>;
+  rdfs:range skos:Concept .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel-vlag#OverlangseMarkering.lengte> a owl:ObjectProperty;
+  rdfs:comment "De lengte van de markering in meter."@nl;
+  rdfs:domain <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel-vlag#OverlangseMarkering>;
+  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel-vlag>;
+  rdfs:range <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement-vlag#KwantWrdInMeter> .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel-vlag#OverlangseMarkering.oppervlakte> a owl:ObjectProperty;
+  rdfs:comment "De oppervlakte van de overlangse markering in vierkante meter."@nl;
+  rdfs:domain <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel-vlag#OverlangseMarkering>;
+  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel-vlag>;
+  rdfs:range <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement-vlag#KwantWrdInVierkanteMeter> .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel-vlag#OverlangseMarkering.positie> a owl:ObjectProperty;
+  rdfs:comment "Bepaling van het wegdeel van de overlangse markering."@nl;
+  rdfs:domain <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel-vlag#OverlangseMarkering>;
+  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel-vlag>;
+  rdfs:range skos:Concept .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel-vlag#OverlangseMarkering.type> a owl:ObjectProperty;
+  rdfs:comment "Het type van overlangse markering."@nl;
+  rdfs:domain <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel-vlag#OverlangseMarkering>;
+  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel-vlag>;
+  rdfs:range skos:Concept .
+
 <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel-vlag#Realiseert> a owl:Class;
   rdfs:comment "Verwijst naar een extern element in een extern vocabularium."@nl;
   rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel-vlag>;
@@ -979,6 +1056,9 @@ skos:Concept a rdfs:Class;
   rdfs:comment "Deze relatie geeft aan of er een of andere vorm van dataverkeer is tussen 2 onderdelen. Een wegverlichtingstoestel dat aan staat wordt ook als sturing beschouwd, in dit geval is het een lang ononderbroken elektrisch aan-signaal. Deze relatie heeft geen richting."@nl;
   rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel-vlag>;
   rdfs:subClassOf <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement-vlag#NietDirectioneleRelatie> .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel-vlag#Template> a owl:Class;
+  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel-vlag> .
 
 <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel-vlag#TrektIn> a owl:Class;
   rdfs:comment "Geeft aan dat een rechtsgrond of legale verschijningsvorm een andere intrekt."@nl;
@@ -1055,6 +1135,9 @@ skos:Concept a rdfs:Class;
 
 dc:type a rdf:Property;
   rdfs:label "type"@nl .
+
+rdf:value a rdf:Property;
+  rdfs:label "waarde"@nl .
 
 rdfs:value a rdf:Property;
   rdfs:label "waarde"@nl .
@@ -1212,6 +1295,11 @@ rdfs:value a rdf:Property;
   rdfs:comment "Datatype voor het bereik en de instelling van een zelfsluiter voor deuren, poorten etc."@nl;
   rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel-vlag> .
 
+<https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel-vlag#DwarseMarkering> a owl:Class;
+  rdfs:comment "Een markering dwars op de weg aangebracht om het verkeer te waarschuwen, informeren of regelen."@nl;
+  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel-vlag>;
+  rdfs:subClassOf <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten-vlag#DwarseMarkeringToegang> .
+
 <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel-vlag#DtcBeschermingVraatschade> a owl:Class;
   rdfs:comment "Complex datatype voor bescherming van de stam tegen knaagdieren."@nl;
   rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel-vlag> .
@@ -1224,6 +1312,11 @@ rdfs:value a rdf:Property;
   rdfs:comment "Complex datatype voor de soortnaam en code van een begroeiing."@nl;
   rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel-vlag> .
 
+<https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel-vlag#FiguratieMarkering> a owl:Class;
+  rdfs:comment "Een markering als figuratie op de weg aangebracht om het verkeer te waarschuwen, informeren of regelen."@nl;
+  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel-vlag>;
+  rdfs:subClassOf <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten-vlag#FiguratieMarkeringToegang> .
+
 <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel-vlag#DtcCompacteBatterij> a owl:Class;
   rdfs:comment "Complex datatype waarmee de informatie, zoals merk, modelnaam, spanning, enz..., van de compacte batterij wordt verzameld."@nl;
   rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel-vlag> .
@@ -1231,6 +1324,12 @@ rdfs:value a rdf:Property;
 <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel-vlag#DtcSierbeplAanleg> a owl:Class;
   rdfs:comment "Complex datatype voor dat de aanleg van sierbeplanting beschrijft."@nl;
   rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel-vlag> .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel-vlag#OverlangseMarkering> a owl:Class;
+  rdfs:comment "Een markering overlangs op de weg aangebracht om het verkeer te waarschuwen, informeren of regelen."@nl;
+  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel-vlag>;
+  rdfs:subClassOf <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten-vlag#Markering>,
+    <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten-vlag#AOWSType> .
 
 <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel-vlag#DtcOlieType> a owl:Class;
   rdfs:comment "Complex datatype om het type olie te beschrijven."@nl;
@@ -2550,6 +2649,7 @@ rdfs:value a rdf:Property;
     <https://wegenenverkeer.data.vlaanderen.be/ns/onderdeel#DtcExterneReferentie.externePartij>,
     <https://wegenenverkeer.data.vlaanderen.be/ns/onderdeel#DtcExterneReferentie.externReferentienummer>,
     rdfs:value,
+    rdf:value,
     dc:type;
   foaf:maker [
     a foaf:Person;

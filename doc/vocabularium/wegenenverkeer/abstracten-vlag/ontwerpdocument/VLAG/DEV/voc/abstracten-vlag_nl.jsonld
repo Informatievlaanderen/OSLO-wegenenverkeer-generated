@@ -1538,6 +1538,14 @@
       ]
     },
     {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten-vlag#AOWSType",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
+      "definition": {
+        "nl": "Abstracte om alle eigenschappen en relaties van AOWS type onder 1 noemer te houden."
+      },
+      "parents": []
+    },
+    {
       "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten-vlag#AbstracteAanvullendeGeometrie",
       "@type": "http://www.w3.org/2002/07/owl#Class",
       "definition": {
@@ -1547,6 +1555,39 @@
         "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement-vlag#AIMVersie",
         "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement-vlag#AIMDBStatus",
         "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#AIMToestand"
+      ]
+    },
+    {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten-vlag#DwarseMarkeringToegang",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
+      "definition": {
+        "nl": "Abstracte als toegang tot de verschillende soorten dwarse markeringen."
+      },
+      "parents": [
+        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten-vlag#Markering",
+        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten-vlag#AOWSType"
+      ]
+    },
+    {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten-vlag#FiguratieMarkeringToegang",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
+      "definition": {
+        "nl": "Abstracte als toegang tot de verschillende soorten figuratiemarkeringen."
+      },
+      "parents": [
+        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten-vlag#Markering",
+        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten-vlag#AOWSType"
+      ]
+    },
+    {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten-vlag#Markering",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
+      "definition": {
+        "nl": "Abstracte als noemer voor de verschillende types van markeringen."
+      },
+      "parents": [
+        "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#AIMObject",
+        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten-vlag#Signalisatie"
       ]
     },
     {
@@ -1575,6 +1616,90 @@
     }
   ],
   "properties": [
+    {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten-vlag#Markering.opvatting",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "definition": {
+        "nl": "De opvatting van de markering, zijnde middelenverbintenis of resultaatsverbintenis met een minimale levensduur."
+      },
+      "domain": [
+        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten-vlag#Markering"
+      ],
+      "range": [
+        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel-vlag#DtcMarkeringOpvatting"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten-vlag#Markering.markeringsysteemCopro",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "definition": {
+        "nl": "De product informatie van de markering via COPRO codes."
+      },
+      "domain": [
+        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten-vlag#Markering"
+      ],
+      "range": [
+        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement-vlag#DtcProductidentificatiecode"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten-vlag#Markering.markeringsoort",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "definition": {
+        "nl": "De soort van markering (verf, thermopast,...)."
+      },
+      "domain": [
+        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten-vlag#Markering"
+      ],
+      "range": [
+        "http://www.w3.org/2004/02/skos/core#Concept"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten-vlag#Markering.kleur",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "definition": {
+        "nl": "De kleur van de gebruikte markering."
+      },
+      "domain": [
+        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten-vlag#Markering"
+      ],
+      "range": [
+        "http://www.w3.org/2004/02/skos/core#Concept"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten-vlag#Markering.isTijdelijk",
+      "@type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
+      "definition": {
+        "nl": "Aanduiding of de wegmarkering al dan niet tot de werfsignalisatie behoort."
+      },
+      "domain": [
+        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten-vlag#Markering"
+      ],
+      "range": [
+        "http://www.w3.org/2001/XMLSchema#boolean"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten-vlag#Markering.isHandwerk",
+      "@type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
+      "definition": {
+        "nl": "Boolean om te bepalen of de markering machinaal of handmatig is aangebracht."
+      },
+      "domain": [
+        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten-vlag#Markering"
+      ],
+      "range": [
+        "http://www.w3.org/2001/XMLSchema#boolean"
+      ],
+      "generalization": []
+    },
     {
       "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten-vlag#AbstracteAanvullendeGeometrie.typeURI",
       "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
@@ -1642,6 +1767,34 @@
       ],
       "range": [
         "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#DtcIdentificator"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten-vlag#AOWSType.versieGoedgekeurd",
+      "@type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
+      "definition": {
+        "nl": "De versie van het standaardbestek 250 waar de goedkeuring is bepaald."
+      },
+      "domain": [
+        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten-vlag#AOWSType"
+      ],
+      "range": [
+        "http://www.w3.org/2001/XMLSchema#string"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten-vlag#AOWSType.isGoedgekeurd",
+      "@type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
+      "definition": {
+        "nl": "Bepaling van de goedkeuring van AOWS."
+      },
+      "domain": [
+        "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten-vlag#AOWSType"
+      ],
+      "range": [
+        "http://www.w3.org/2001/XMLSchema#boolean"
       ],
       "generalization": []
     }

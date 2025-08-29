@@ -410,16 +410,6 @@
       }
     },
     {
-      "EA-Guid": "{197872C6-24FF-449c-905D-FD4B699B1BED}",
-      "name": "Template",
-      "label": {
-        "nl": "Template"
-      },
-      "definition": {
-        "nl": "TODO"
-      }
-    },
-    {
       "EA-Guid": "{FD9A7475-425C-45d5-99A8-0C36FA5482CC}",
       "name": "Template",
       "label": {
@@ -466,7 +456,7 @@
         "nl": "Variabele"
       },
       "definition": {
-        "nl": "TODO"
+        "nl": "Complex datatype die de variabele bevat."
       }
     },
     {
@@ -484,6 +474,16 @@
       },
       "definition": {
         "nl": "TODO"
+      }
+    },
+    {
+      "EA-Guid": "{4F989871-3D88-4c8d-8A92-60BB23DD0FE1}",
+      "name": "Variabele waarden",
+      "label": {
+        "nl": "Variabele waarden"
+      },
+      "definition": {
+        "nl": "Complex datatype die de variabele waarden definieert."
       }
     },
     {
@@ -1131,9 +1131,39 @@
       "usage": {
         "nl": "Om een toegangspunt tot het object te verduidelijken, kan er een punt geometrie aangeleverd worden om het toegangspunt aan te geven."
       }
+    },
+    {
+      "EA-Guid": "{0761DCA2-FF79-430e-B756-47DE5018FA62}",
+      "name": "AIM object",
+      "label": {
+        "nl": "AIM object"
+      },
+      "definition": {
+        "nl": "Abstracte als de basisklasse voor alle uniek geïdentificeerde OTL objecten met de basiseigenschappen die elk OTL object minstens heeft."
+      }
+    },
+    {
+      "EA-Guid": "{8F4FFD0B-0972-4222-AE54-6D0D5B6CDA83}",
+      "name": "AIM Toestand",
+      "label": {
+        "nl": "AIM Toestand"
+      },
+      "definition": {
+        "nl": "Voegt een attribuut toe aan de subklasse dat de huidige stand in de levenscyclus van het object aangeeft."
+      }
     }
   ],
   "properties": [
+    {
+      "EA-Guid": "{BB9F5FAF-A316-466b-B0CE-BBE13C464366}",
+      "name": "AIM-toestand",
+      "label": {
+        "nl": "AIM-toestand"
+      },
+      "definition": {
+        "nl": "Geeft de actuele stand in de levenscyclus van het VLAG object."
+      }
+    },
     {
       "EA-Guid": "{466AC6A3-64D4-4928-979F-EB3059DB7EB9}",
       "name": "type URI",
@@ -2593,6 +2623,46 @@
       }
     },
     {
+      "EA-Guid": "{1D7D0065-8F3F-4089-BC9A-E06AA33885FB}",
+      "name": "tekst",
+      "label": {
+        "nl": "tekst"
+      },
+      "definition": {
+        "nl": "Bevat de waarde als tekst."
+      }
+    },
+    {
+      "EA-Guid": "{5F0BF008-6544-4b86-8174-9001E2D21CFA}",
+      "name": "getal",
+      "label": {
+        "nl": "getal"
+      },
+      "definition": {
+        "nl": "Bevat de waarde als getal."
+      }
+    },
+    {
+      "EA-Guid": "{F155980E-EF39-4f79-86C9-BAC9D3F1FEEC}",
+      "name": "datum",
+      "label": {
+        "nl": "datum"
+      },
+      "definition": {
+        "nl": "Bevat de waarde als datum."
+      }
+    },
+    {
+      "EA-Guid": "{6AE0AC64-D9BB-49f8-B37F-9B9DBC0AC755}",
+      "name": "codelijst",
+      "label": {
+        "nl": "codelijst"
+      },
+      "definition": {
+        "nl": "Bevat een optie uit de codelijst."
+      }
+    },
+    {
       "EA-Guid": "{41F724DA-EB48-40cb-994B-FA2D1A5BF83E}",
       "name": "waarde",
       "label": {
@@ -2731,69 +2801,20 @@
       }
     },
     {
-      "EA-Guid": "{E04207FA-ABC0-46ae-88D5-A8405A3B78EF}",
+      "EA-Guid": "{50D1039A-3C26-4478-8047-9570B72D4DB2}",
       "name": "waarde",
       "label": {
         "nl": "waarde"
       },
       "definition": {
-        "nl": "TODO"
-      },
-      "usage": {
-        "nl": "http://www.w3.org/2000/01/rdf-schema#value"
+        "nl": "De waarde van de variabele (getal, tekst, optie uit codelijst of datum)."
       }
     },
     {
-      "EA-Guid": "{F1BB8331-3FB3-4f2e-8734-0C0C8D1C5862}",
-      "name": "type",
+      "EA-Guid": "{A9D7F36D-7F54-4d2b-BCB5-2143391EF960}",
+      "name": "uri",
       "label": {
-        "nl": "type"
-      },
-      "definition": {
-        "nl": "TODO"
-      },
-      "usage": {
-        "nl": "http://purl.org/dc/terms/type"
-      }
-    },
-    {
-      "EA-Guid": "{68F12A98-D007-419b-AD70-8E085782AE94}",
-      "name": "template",
-      "label": {
-        "nl": "template"
-      },
-      "definition": {
-        "nl": "TODO"
-      }
-    },
-    {
-      "EA-Guid": "{F1198B7E-B6ED-4d7c-8D3E-C0A0C53D2951}",
-      "name": "standaardwaarde",
-      "label": {
-        "nl": "standaardwaarde"
-      },
-      "definition": {
-        "nl": "TODO"
-      }
-    },
-    {
-      "EA-Guid": "{C0709EAB-8751-40f2-A74E-2B02CE7DF280}",
-      "name": "label",
-      "label": {
-        "nl": "label"
-      },
-      "definition": {
-        "nl": "TODO"
-      },
-      "usage": {
-        "nl": "http://purl.org/dc/terms/title"
-      }
-    },
-    {
-      "EA-Guid": "{BA5E8DE6-1245-4515-AF67-A6E5218F0B4A}",
-      "name": "codelijst",
-      "label": {
-        "nl": "codelijst"
+        "nl": "uri"
       },
       "definition": {
         "nl": "TODO"
@@ -2881,16 +2902,6 @@
     },
     {
       "EA-Guid": "{E15C196E-C530-471a-80C1-715E639B30F9}",
-      "name": "variabele",
-      "label": {
-        "nl": "variabele"
-      },
-      "definition": {
-        "nl": "TODO"
-      }
-    },
-    {
-      "EA-Guid": "{8EBD3929-F842-4d04-AB1C-C327A1C583A9}",
       "name": "variabele",
       "label": {
         "nl": "variabele"
@@ -4093,6 +4104,16 @@
       }
     },
     {
+      "EA-Guid": "{9CD909B0-218C-47d9-B0FE-F83DE213FA35}",
+      "name": "VLAG AIM toestand",
+      "label": {
+        "nl": "VLAG AIM toestand"
+      },
+      "definition": {
+        "nl": "Keuzelijst met fasen uit de levenscyclus van een object om de toestand op een moment mee vast te leggen."
+      }
+    },
+    {
       "EA-Guid": "{E7A8225E-1EB3-4a8a-8F80-AA8E0A26DF17}",
       "name": "Type sleutel",
       "label": {
@@ -4120,46 +4141,6 @@
       },
       "definition": {
         "nl": "De mogelijke codes om de mate van corrosieve belasting in een bepaalde omgeving te beschrijven."
-      }
-    },
-    {
-      "EA-Guid": "{4D830116-865E-484d-A17E-70B72249A938}",
-      "name": "Schoorhoek",
-      "label": {
-        "nl": "Schoorhoek"
-      },
-      "definition": {
-        "nl": "De schoorhoek van het object, uitgedrukt in 1 op x (vb.: 1/4)."
-      }
-    },
-    {
-      "EA-Guid": "{52D928BC-EDB3-4ede-A14D-4F8E3D452F51}",
-      "name": "Duurzaamheidsklasse van hout",
-      "label": {
-        "nl": "Duurzaamheidsklasse van hout"
-      },
-      "definition": {
-        "nl": "De resistentie van het kernhout tegen ongunstige omstandigheden."
-      }
-    },
-    {
-      "EA-Guid": "{6B975780-FC1D-4a36-9F20-2F2CBCFF6412}",
-      "name": "Walsmethode",
-      "label": {
-        "nl": "Walsmethode"
-      },
-      "definition": {
-        "nl": "De manier waarop het staal is gewalst."
-      }
-    },
-    {
-      "EA-Guid": "{71C911FE-1709-4d9a-82C0-DA1B7BC8D440}",
-      "name": "Constructiestaalsoort",
-      "label": {
-        "nl": "Constructiestaalsoort"
-      },
-      "definition": {
-        "nl": "De soort van het constructiestaal."
       }
     },
     {
@@ -4193,6 +4174,36 @@
       }
     },
     {
+      "EA-Guid": "{6B975780-FC1D-4a36-9F20-2F2CBCFF6412}",
+      "name": "Walsmethode",
+      "label": {
+        "nl": "Walsmethode"
+      },
+      "definition": {
+        "nl": "De manier waarop het staal is gewalst."
+      }
+    },
+    {
+      "EA-Guid": "{71C911FE-1709-4d9a-82C0-DA1B7BC8D440}",
+      "name": "Constructiestaalsoort",
+      "label": {
+        "nl": "Constructiestaalsoort"
+      },
+      "definition": {
+        "nl": "De soort van het constructiestaal."
+      }
+    },
+    {
+      "EA-Guid": "{88E09DE7-5239-4b4f-9A28-D191BAC9F9B3}",
+      "name": "Organisaties",
+      "label": {
+        "nl": "Organisaties"
+      },
+      "definition": {
+        "nl": "De mogelijke organisaties."
+      }
+    },
+    {
       "EA-Guid": "{8B039287-4929-4439-B754-900715B43C46}",
       "name": "Betonsterkteklasse",
       "label": {
@@ -4220,6 +4231,26 @@
       },
       "definition": {
         "nl": "De omstandigheden waarin het beton gebruikt zal worden."
+      }
+    },
+    {
+      "EA-Guid": "{4D830116-865E-484d-A17E-70B72249A938}",
+      "name": "Schoorhoek",
+      "label": {
+        "nl": "Schoorhoek"
+      },
+      "definition": {
+        "nl": "De schoorhoek van het object, uitgedrukt in 1 op x (vb.: 1/4)."
+      }
+    },
+    {
+      "EA-Guid": "{52D928BC-EDB3-4ede-A14D-4F8E3D452F51}",
+      "name": "Duurzaamheidsklasse van hout",
+      "label": {
+        "nl": "Duurzaamheidsklasse van hout"
+      },
+      "definition": {
+        "nl": "De resistentie van het kernhout tegen ongunstige omstandigheden."
       }
     },
     {
@@ -4293,6 +4324,16 @@
       }
     },
     {
+      "EA-Guid": "{689A7850-A474-472c-B1D4-02057FE26890}",
+      "name": "Code",
+      "label": {
+        "nl": "Code"
+      },
+      "definition": {
+        "nl": "TODO"
+      }
+    },
+    {
       "EA-Guid": "{04B1A744-DB22-44e9-ABA7-EDDFC3D36FA3}",
       "name": "Codelijst type",
       "label": {
@@ -4301,10 +4342,6 @@
       "definition": {
         "nl": "Mogelijke opties voor types van codelijsten."
       }
-    },
-    {
-      "EA-Guid": "{689A7850-A474-472c-B1D4-02057FE26890}",
-      "name": ""
     },
     {
       "EA-Guid": "{5F30954A-8C4F-4869-AD89-D2E6B58BA5DD}",
@@ -4327,20 +4364,6 @@
       }
     },
     {
-      "EA-Guid": "{A676A5F7-83AF-4d3e-8D34-E58EE98DAE57}",
-      "name": ""
-    },
-    {
-      "EA-Guid": "{B115D8B7-8AB8-40ff-88AB-953A24B1AA77}",
-      "name": "Standaardeenheid",
-      "label": {
-        "nl": "Standaardeenheid"
-      },
-      "definition": {
-        "nl": "TODO"
-      }
-    },
-    {
       "EA-Guid": "{8E40F5ED-E30D-490b-8746-357BD03E01E7}",
       "name": "Verkeerstekenconcept status",
       "label": {
@@ -4355,6 +4378,36 @@
       "name": "Vorm type",
       "label": {
         "nl": "Vorm type"
+      },
+      "definition": {
+        "nl": "TODO"
+      }
+    },
+    {
+      "EA-Guid": "{A676A5F7-83AF-4d3e-8D34-E58EE98DAE57}",
+      "name": "type grootheid",
+      "label": {
+        "nl": "type grootheid"
+      },
+      "definition": {
+        "nl": "TODO"
+      }
+    },
+    {
+      "EA-Guid": "{B115D8B7-8AB8-40ff-88AB-953A24B1AA77}",
+      "name": "Standaardeenheid",
+      "label": {
+        "nl": "Standaardeenheid"
+      },
+      "definition": {
+        "nl": "TODO"
+      }
+    },
+    {
+      "EA-Guid": "{BB1CF3BC-828E-48a5-BF25-B5BD18F4CDAC}",
+      "name": "variabele waarden",
+      "label": {
+        "nl": "variabele waarden"
       },
       "definition": {
         "nl": "TODO"
@@ -4461,6 +4514,16 @@
       },
       "definition": {
         "nl": "Maatregel om de beweging en verplaatsing van de weggebruiker op het openbaar domein of privé domein met openbaar karakter te organiseren."
+      }
+    },
+    {
+      "EA-Guid": "{979B9C08-F68D-4945-AE8A-1EA717A2BB6F}",
+      "name": "Mobiliteitsmaatregel ontwerp",
+      "label": {
+        "nl": "Mobiliteitsmaatregel ontwerp"
+      },
+      "definition": {
+        "nl": "TODO"
       }
     },
     {
@@ -4634,6 +4697,46 @@
     }
   ],
   "externalproperties": [
+    {
+      "EA-Guid": "{BEF44E1D-213A-4252-A0E8-9E8A9105EA14}",
+      "name": "type URI",
+      "label": {
+        "nl": "type URI"
+      },
+      "definition": {
+        "nl": "De URI van het object volgens https://www.w3.org/2001/XMLSchema#anyURI ."
+      }
+    },
+    {
+      "EA-Guid": "{8CF3AF05-E829-4f2e-8937-A618B439A291}",
+      "name": "notitie",
+      "label": {
+        "nl": "notitie"
+      },
+      "definition": {
+        "nl": "Extra notitie voor het object."
+      }
+    },
+    {
+      "EA-Guid": "{65EBB3CA-96BE-4466-BCB8-E4B95961DAE4}",
+      "name": "datum oprichting object",
+      "label": {
+        "nl": "datum oprichting object"
+      },
+      "definition": {
+        "nl": "De datum waarop het object op het terrein is beginnen bestaan, bv. de datum van aanleg."
+      }
+    },
+    {
+      "EA-Guid": "{D6A7DA4C-342F-45f4-8858-85F971B4B962}",
+      "name": "asset-id",
+      "label": {
+        "nl": "asset-id"
+      },
+      "definition": {
+        "nl": "Unieke identificatie van de asset zoals toegekend door de assetbeheerder of n.a.v. eerste aanlevering door de leverancier."
+      }
+    },
     {
       "EA-Guid": "{0C2EFA80-971D-47b5-BB56-AD868923F9CB}",
       "name": "mogelijke vorm",
@@ -4890,6 +4993,16 @@
       }
     },
     {
+      "EA-Guid": "{FDAF0054-41C9-4a12-8F4F-9E78B4EE541F}",
+      "name": "contact organisatie",
+      "label": {
+        "nl": "contact organisatie"
+      },
+      "definition": {
+        "nl": "Organisatie die gecontacteerd kan worden hierover."
+      }
+    },
+    {
       "EA-Guid": "{3263FB07-C199-48dc-B280-468D07DB167C}",
       "name": "type",
       "label": {
@@ -4900,6 +5013,16 @@
       },
       "usage": {
         "nl": "Bijvoorbeeld: corridor, evenementzone"
+      }
+    },
+    {
+      "EA-Guid": "{948DAD4D-A87E-4d62-B471-2A6AE7482124}",
+      "name": "is AR plichtig",
+      "label": {
+        "nl": "is AR plichtig"
+      },
+      "definition": {
+        "nl": "Geeft aan of een aanvullend reglement dient opgesteld en goedgekeurd te worden om een vekeersteken te plaatsen dat gebaseerd is op dit concept."
       }
     },
     {
@@ -4920,16 +5043,6 @@
       },
       "definition": {
         "nl": "Wettelijke status van het verkeersteken."
-      }
-    },
-    {
-      "EA-Guid": "{AD31BB5C-A12A-4717-B9C6-56A9F3B7E112}",
-      "name": "variabele",
-      "label": {
-        "nl": "variabele"
-      },
-      "definition": {
-        "nl": "TODO"
       }
     },
     {
@@ -4986,10 +5099,30 @@
       }
     },
     {
+      "EA-Guid": "{A39AC062-D243-490e-A51E-C69009EF8664}",
+      "name": "status",
+      "label": {
+        "nl": "status"
+      },
+      "definition": {
+        "nl": "TODO"
+      }
+    },
+    {
       "EA-Guid": "{02BF0ECC-B736-4ad0-B379-9242D238CEB3}",
       "name": "datum",
       "label": {
         "nl": "datum"
+      },
+      "definition": {
+        "nl": "TODO"
+      }
+    },
+    {
+      "EA-Guid": "{30E7F1E7-32E7-4563-A2D6-0F51C2F28FEC}",
+      "name": "naam",
+      "label": {
+        "nl": "naam"
       },
       "definition": {
         "nl": "TODO"
@@ -5152,13 +5285,13 @@
       }
     },
     {
-      "EA-Guid": "{37525F86-8980-4103-9EE3-72AFEAD2359D}",
-      "name": "waarde",
+      "EA-Guid": "{24EBA35B-7C39-4f71-896C-187B3724324D}",
+      "name": "naam",
       "label": {
-        "nl": "waarde"
+        "nl": "naam"
       },
       "definition": {
-        "nl": "De inhoud van de template als HTML of gewone string."
+        "nl": "TODO"
       }
     },
     {
@@ -5296,6 +5429,16 @@
       "name": "naam",
       "label": {
         "nl": "naam"
+      },
+      "definition": {
+        "nl": "TODO"
+      }
+    },
+    {
+      "EA-Guid": "{2686FDEF-8F9B-46ef-B90F-4BE924DCBDB8}",
+      "name": "verantwoordelijke organisatie",
+      "label": {
+        "nl": "verantwoordelijke organisatie"
       },
       "definition": {
         "nl": "TODO"

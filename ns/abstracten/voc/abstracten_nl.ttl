@@ -8,9 +8,14 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 skos:Concept a rdfs:Class;
-  rdfs:label "Vegetatieelement standplaats"@nl,
+  rdfs:label "materiaal afdichting"@nl,
+    "materiaal bevestigingsbeugel"@nl,
+    "Vegetatieelement standplaats"@nl,
     "Plantwijze"@nl,
+    "type hars"@nl,
+    "type vezel"@nl,
     "Uitvoeringsmethode"@nl,
+    "KlProductieproces"@nl,
     "Type grondanker"@nl,
     "Hoofdtype"@nl,
     "Aanslagprofiel materiaal"@nl,
@@ -288,6 +293,10 @@ skos:Concept a rdfs:Class;
   rdfs:domain <https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#AxiaalDraagvermogenWand>;
   rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten>;
   rdfs:range <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInKiloNewtonPerMeter> .
+
+<https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#BVAfwateringKunstwerken> a owl:Class;
+  rdfs:comment "Abstratce om de bevestigingsrelaties van de afwatering te verzamelen."@nl;
+  rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten> .
 
 <https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#BalkGK.bovenpeil> a owl:ObjectProperty;
   rdfs:comment "Het peil in meter TAW van het bovenvlak van de balk."@nl;
@@ -1259,6 +1268,12 @@ skos:Concept a rdfs:Class;
   rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten>;
   rdfs:range skos:Concept .
 
+<https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#Kabel.gewicht> a owl:ObjectProperty;
+  rdfs:comment "Het gewicht van de kabel per meter."@nl;
+  rdfs:domain <https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#Kabel>;
+  rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten>;
+  rdfs:range <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInKilogramPerMeter> .
+
 <https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#Kabel.typeBescherming> a owl:ObjectProperty;
   rdfs:comment "Geeft aan of en hoe de leiding bijkomend mechanisch beschermd is."@nl;
   rdfs:domain <https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#Kabel>;
@@ -1359,6 +1374,30 @@ skos:Concept a rdfs:Class;
 <https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#Kokerruimte> a owl:Class;
   rdfs:comment "Een abstracte en overkoepelende klasse. Het is een ruimte van het kokercomplex die geen doorvoerende functie heeft."@nl;
   rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten> .
+
+<https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#KunststofConstructieElement.productieProces> a owl:ObjectProperty;
+  rdfs:comment "Het productieproces van het kunststof constructie element."@nl;
+  rdfs:domain <https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#KunststofConstructieElement>;
+  rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten>;
+  rdfs:range skos:Concept .
+
+<https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#KunststofConstructieElement.technischeFiche> a owl:ObjectProperty;
+  rdfs:comment "De technische fiche van het kunststof constructie element. Specifieke eigenschappen, zoals thermische uitzetting, UV- bestendigheid, type kunststof, etc, zijn hierin opgenomen."@nl;
+  rdfs:domain <https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#KunststofConstructieElement>;
+  rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten>;
+  rdfs:range <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcDocument> .
+
+<https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#KunststofConstructieElement.typeHars> a owl:ObjectProperty;
+  rdfs:comment "Het type hars gebruikt in het kunststof constructie element."@nl;
+  rdfs:domain <https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#KunststofConstructieElement>;
+  rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten>;
+  rdfs:range skos:Concept .
+
+<https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#KunststofConstructieElement.typeVezel> a owl:ObjectProperty;
+  rdfs:comment "Het type vezel gebruikt in het kunststof constructie element."@nl;
+  rdfs:domain <https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#KunststofConstructieElement>;
+  rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten>;
+  rdfs:range skos:Concept .
 
 <https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#LEDBord.aantalLichtsensoren> a owl:DatatypeProperty;
   rdfs:comment "Het aantal lichtsensoren waar het bord over beschikt die continu de intensiteit van het invallend licht meten."@nl;
@@ -2553,10 +2592,9 @@ skos:Concept a rdfs:Class;
   rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten>;
   rdfs:subClassOf <https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#BegroeidVoorkomen> .
 
-<https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#Kabel> a owl:Class;
-  rdfs:comment "Abstracte voor attributen en relaties van allerlei types kabels."@nl;
-  rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten>;
-  rdfs:subClassOf <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMNaamObject> .
+<https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#KunststofConstructieElement> a owl:Class;
+  rdfs:comment "Bundeling van gemeenschappelijke eigenschappen van kunststof constructie-elementen."@nl;
+  rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten> .
 
 <https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#LaagProductidentificatiecode> a owl:Class;
   rdfs:comment "Abstracte waarmee aan een laag de eigenschap productidentificatiecode wordt toegekend."@nl;
@@ -2623,6 +2661,11 @@ skos:Concept a rdfs:Class;
   rdfs:comment "Abstracte om de gemeenschappelijke eigenschappen van de verschillende types schermlementen te bundelen."@nl;
   rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten>;
   rdfs:subClassOf <https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#LijnvormigElement> .
+
+<https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#Kabel> a owl:Class;
+  rdfs:comment "Abstracte voor attributen en relaties van allerlei types kabels."@nl;
+  rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten>;
+  rdfs:subClassOf <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMNaamObject> .
 
 <https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#Kast> a owl:Class;
   rdfs:comment "Abstracte voor allerlei types kasten."@nl;

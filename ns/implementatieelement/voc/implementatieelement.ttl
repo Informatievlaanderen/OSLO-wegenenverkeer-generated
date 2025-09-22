@@ -15,31 +15,31 @@ skos:Concept a rdfs:Class;
   rdfs:label "AIM toestand"@nl,
     "Toegangsprocedure aandachtspunt"@nl,
     "Type badge"@nl,
+    "Type sleutel"@nl,
+    "Bijlage type"@nl,
     "Electricity appurtenance type"@nl,
     "Telecommunications appurtenance type"@nl,
     "Electricity subthema"@nl,
-    "Type sleutel"@nl,
-    "Bijlage type"@nl,
     "Pipe container type"@nl,
     "Datakabel materiaal"@nl,
     "Telecommunications subthema"@nl,
     "Corrosiebelastingscategorie"@nl,
-    "Krimpvoegvulling"@nl,
-    "Toegangsprocedure toegangstijden"@nl,
-    "Betonomgevingsklasse"@nl,
-    "Mimetype"@nl,
-    "Gebruiksdomein"@nl,
     "Schoorhoek"@nl,
     "Duurzaamheidsklasse van hout"@nl,
     "Walsmethode"@nl,
+    "Krimpvoegvulling"@nl,
+    "Toegangsprocedure toegangstijden"@nl,
+    "Betonomgevingsklasse"@nl,
     "Constructiestaalsoort"@nl,
     "Betonsterkteklasse"@nl,
     "Toegankelijkheid"@nl,
+    "Mimetype"@nl,
+    "Gebruiksdomein"@nl,
+    "Toeslagmiddel beton"@nl,
     "Provincie"@nl,
     "Gemeente"@nl,
     "Kwaliteitsklasse van hout"@nl,
     "Algemeen faalmodus type"@nl,
-    "Toeslagmiddel beton"@nl,
     "Sterkteklasse van hout"@nl,
     "Betonmilieuklasse"@nl,
     "Bijlagetype toegangsprocedure"@nl .
@@ -1142,6 +1142,18 @@ schemas:OpeningHoursSpecification a rdfs:Class;
   rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement>;
   rdfs:range xsd:decimal .
 
+<https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInKilogramPerMeter.standaardEenheid> a owl:DatatypeProperty;
+  rdfs:comment "De standaard eenheid bij dit datatype is uitgedrukt in kilogram per lopende meter."@nl;
+  rdfs:domain <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInKilogramPerMeter>;
+  rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement>;
+  rdfs:range rdfs:Literal .
+
+<https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInKilogramPerMeter.waarde> a owl:ObjectProperty;
+  rdfs:comment "Bevat een getal die bij het datatype hoort."@nl;
+  rdfs:domain <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInKilogramPerMeter>;
+  rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement>;
+  rdfs:range xsd:decimal .
+
 <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInKubiekeCentimeter.standaardEenheid> a owl:DatatypeProperty;
   <http://purl.org/vocab/vann/usageNote> "\"cm3\"^^cdt:ucumunit"@nl;
   rdfs:comment "De standaard eenheid bij dit datatype is uitgedrukt in kubieke centimeter."@nl;
@@ -1909,6 +1921,10 @@ schemas:opens a rdf:Property;
 
 <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInKilogramPerKubiekeMeter> a owl:Class;
   rdfs:comment "Een kwantitatieve waarde die een getal in kilogram per kubieke meter uitdrukt."@nl;
+  rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement> .
+
+<https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInKilogramPerMeter> a owl:Class;
+  rdfs:comment "Een kwantitatieve waarde die een getal in kilogram per lopende meter uitdrukt."@nl;
   rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement> .
 
 <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInKubiekeCentimeter> a owl:Class;

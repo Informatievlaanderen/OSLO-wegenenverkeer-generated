@@ -1522,10 +1522,10 @@
   "license": "https://data.vlaanderen.be/id/licentie/modellicentie-gratis-hergebruik/v1.0",
   "issued": "TODO",
   "navigation": {
-    "prev": "/doc/vocabularium/wegenenverkeer/abstracten/ontwerpdocument/2.14.0-RC2"
+    "prev": "/doc/vocabularium/wegenenverkeer/abstracten/ontwerpdocument/2.16.0-RC1"
   },
   "publication-state": "https://data.vlaanderen.be/doc/concept/StandaardStatus/KandidaatStandaard",
-  "publication-date": "17-06-2025",
+  "publication-date": "22-09-2025",
   "classes": [
     {
       "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#AOWSType",
@@ -1679,6 +1679,14 @@
       "@type": "http://www.w3.org/2002/07/owl#Class",
       "definition": {
         "nl": "Abstracte voor de bundeling van de axiale druk- en trekdraagvermogens van de totale wand,berekend volgens verschillende grenstoestanden."
+      },
+      "parents": []
+    },
+    {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#BVAfwateringKunstwerken",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
+      "definition": {
+        "nl": "Abstratce om de bevestigingsrelaties van de afwatering te verzamelen."
       },
       "parents": []
     },
@@ -2329,6 +2337,14 @@
       "parents": []
     },
     {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#KunststofConstructieElement",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
+      "definition": {
+        "nl": "Bundeling van gemeenschappelijke eigenschappen van kunststof constructie-elementen."
+      },
+      "parents": []
+    },
+    {
       "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#LEDBord",
       "@type": "http://www.w3.org/2002/07/owl#Class",
       "definition": {
@@ -2942,6 +2958,20 @@
   "externals": [
     {
       "name": {
+        "nl": "materiaal afdichting"
+      },
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
+      "@type": "rdfs:Class"
+    },
+    {
+      "name": {
+        "nl": "materiaal bevestigingsbeugel"
+      },
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
+      "@type": "rdfs:Class"
+    },
+    {
+      "name": {
         "nl": "Vegetatieelement standplaats"
       },
       "@id": "http://www.w3.org/2004/02/skos/core#Concept",
@@ -2956,7 +2986,28 @@
     },
     {
       "name": {
+        "nl": "type hars"
+      },
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
+      "@type": "rdfs:Class"
+    },
+    {
+      "name": {
+        "nl": "type vezel"
+      },
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
+      "@type": "rdfs:Class"
+    },
+    {
+      "name": {
         "nl": "Uitvoeringsmethode"
+      },
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
+      "@type": "rdfs:Class"
+    },
+    {
+      "name": {
+        "nl": "KlProductieproces"
       },
       "@id": "http://www.w3.org/2004/02/skos/core#Concept",
       "@type": "rdfs:Class"
@@ -5012,6 +5063,62 @@
       "generalization": []
     },
     {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#KunststofConstructieElement.typeVezel",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "definition": {
+        "nl": "Het type vezel gebruikt in het kunststof constructie element."
+      },
+      "domain": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#KunststofConstructieElement"
+      ],
+      "range": [
+        "http://www.w3.org/2004/02/skos/core#Concept"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#KunststofConstructieElement.typeHars",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "definition": {
+        "nl": "Het type hars gebruikt in het kunststof constructie element."
+      },
+      "domain": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#KunststofConstructieElement"
+      ],
+      "range": [
+        "http://www.w3.org/2004/02/skos/core#Concept"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#KunststofConstructieElement.technischeFiche",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "definition": {
+        "nl": "De technische fiche van het kunststof constructie element. Specifieke eigenschappen, zoals thermische uitzetting, UV- bestendigheid, type kunststof, etc, zijn hierin opgenomen."
+      },
+      "domain": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#KunststofConstructieElement"
+      ],
+      "range": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcDocument"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#KunststofConstructieElement.productieProces",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "definition": {
+        "nl": "Het productieproces van het kunststof constructie element."
+      },
+      "domain": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#KunststofConstructieElement"
+      ],
+      "range": [
+        "http://www.w3.org/2004/02/skos/core#Concept"
+      ],
+      "generalization": []
+    },
+    {
       "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#KlassiekeFundering.grondvlakAfmeting",
       "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "definition": {
@@ -5218,6 +5325,20 @@
       ],
       "range": [
         "http://www.w3.org/2004/02/skos/core#Concept"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#Kabel.gewicht",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "definition": {
+        "nl": "Het gewicht van de kabel per meter."
+      },
+      "domain": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#Kabel"
+      ],
+      "range": [
+        "https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInKilogramPerMeter"
       ],
       "generalization": []
     },

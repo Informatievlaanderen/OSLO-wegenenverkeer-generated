@@ -16,23 +16,23 @@ skos:Concept a rdfs:Class;
     "Type vakwerk-element"@nl,
     "Type brugligger"@nl,
     "Type windverband"@nl,
+    "Type horizontale plaat"@nl,
+    "Type hanger"@nl,
     "Primaire vorm combiwand"@nl,
     "Secundaire combiwand"@nl,
     "Type externe naspanning"@nl,
     "Materiaal tussenschot Berlinerwand"@nl,
-    "Type horizontale plaat"@nl,
-    "Type hanger"@nl,
-    "Vorm leuning"@nl,
-    "Type brandwerendheid"@nl,
     "Koker type fundering"@nl,
     "Afwerkingstype leuning"@nl,
     "type bouwmethode"@nl,
     "Type ondergrond"@nl,
     "Koker element gebruikers type"@nl,
     "Type materiaal"@nl,
-    "Graad van statische bepaaldheid"@nl,
+    "Vorm leuning"@nl,
+    "Type brandwerendheid"@nl,
     "Type brugdeel"@nl,
     "type doorsnede"@nl,
+    "Graad van statische bepaaldheid"@nl,
     "Type trekker"@nl,
     "Vast tegengewicht materiaal"@nl,
     "Regelbaar tegengewicht materiaal"@nl,
@@ -48,35 +48,36 @@ skos:Concept a rdfs:Class;
     "Beweegbaar deel"@nl,
     "Draagstructuur BWCTWC"@nl,
     "Droogzetbaarheidtypes"@nl,
-    "Positie kolk"@nl,
-    "Types geleidewerk"@nl,
     "type beweging"@nl,
     "Materiaal BWC TWC"@nl,
     "Keuzelijst materiaal toegangsluik"@nl,
     "Type tijdelijke waterkerende constructie"@nl,
     "Keuzelijst droogzetbaarheid omloopriool"@nl,
+    "Positie kolk"@nl,
+    "Types geleidewerk"@nl,
     "Wijze geleiding"@nl,
     "Type van aardingsinstallatie"@nl,
     "Aardingsinstallatie aardingsnet"@nl,
     "Aardingsinstallatie aardingsstelsel"@nl,
     "Type mechanisme"@nl,
-    "Pompgroep merk"@nl,
-    "Pompgroep modelnaam"@nl,
-    "Materiaal ventilatiekanaal"@nl,
-    "Kamer functie"@nl,
     "Meteo foto beschrijving"@nl,
     "Lokaal terreintype"@nl,
     "Z-pad type"@nl,
     "Pad netwerkprotectie"@nl,
+    "Pompgroep merk"@nl,
+    "Pompgroep modelnaam"@nl,
+    "Materiaal ventilatiekanaal"@nl,
+    "Kamer functie"@nl,
     "Radioheruitzendinstallatie modelnaam"@nl,
     "Radioheruitzendinstallatie merk"@nl,
+    "Binnenverlichting groep verlicht gebied"@nl,
     "MIV eenheid type"@nl,
     "MIV meetpuntgebied"@nl,
     "MIV meetpunt afmetingen"@nl,
     "Algemeen rijstrookcode"@nl,
-    "Type aanvaarbescherming"@nl,
     "Wegberm BIO"@nl,
-    "Wegberm type"@nl .
+    "Wegberm type"@nl,
+    "Type aanvaarbescherming"@nl .
 
 <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#ASTRIDInstallatie.certificaat> a owl:ObjectProperty;
   rdfs:comment "Documenten van interne of externe organisaties, die de installatie goedkeuren of opmerkingen geven."@nl;
@@ -131,6 +132,11 @@ skos:Concept a rdfs:Class;
   rdfs:domain <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Aardingsinstallatie>;
   rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
   rdfs:range <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInOhm> .
+
+<https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Asweger> a owl:Class;
+  rdfs:comment "Een asweger is een meetinstrument dat wordt gebruikt om de belasting van individuele assen van voertuigen te meten. De meting heeft tot doel te controleren of voertuigen voldoen aan wettelijke maxima voor aslast, om zo schade aan wegeninfrastructuur te vermijden. "@nl;
+  rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
+  rdfs:subClassOf <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#NaampadObject> .
 
 <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Aswegersite.afmetingAswegerZone> a owl:ObjectProperty;
   rdfs:comment "De afmeting van de zone voor en na de weegplaat, inclusief de weegplaat zelf, als een waarde uit een vaste lijst van standaard afmetingen."@nl;
@@ -318,6 +324,12 @@ skos:Concept a rdfs:Class;
   rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
   rdfs:subClassOf <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#NaampadObject> .
 
+<https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#BinnenverlichtingGroep.verlichtGebied> a owl:ObjectProperty;
+  rdfs:comment "Het gebied dat verlicht wordt door de binnenverlichtingstoestellen die deel uitmaken van de groep."@nl;
+  rdfs:domain <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#BinnenverlichtingGroep>;
+  rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
+  rdfs:range skos:Concept .
+
 <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#BlindePut.materiaal> a owl:ObjectProperty;
   rdfs:comment "Het materiaal waaruit de blinde put is vervaardigd."@nl;
   rdfs:domain <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#BlindePut>;
@@ -376,6 +388,11 @@ skos:Concept a rdfs:Class;
   rdfs:domain <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Bovenrolwagen>;
   rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
   rdfs:range xsd:boolean .
+
+<https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#BrandblusserGroep> a owl:Class;
+  rdfs:comment "Groep voor het groeperen van objecten van het type Brandblusser."@nl;
+  rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
+  rdfs:subClassOf <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#NaampadObject> .
 
 <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Breekbalk.isDemonteerbaar> a owl:DatatypeProperty;
   rdfs:comment "Geeft aan of de breekbalk demonteerbaar is."@nl;
@@ -525,9 +542,9 @@ skos:Concept a rdfs:Class;
   rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
   rdfs:range skos:Concept .
 
-<https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Buffer.karakteristiekeToelaatbareBelasting> a owl:ObjectProperty;
+<https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Bufferinstallatie.karakteristiekeToelaatbareBelasting> a owl:ObjectProperty;
   rdfs:comment "De karakteristieke maximale toelaatbare belasting van de buffer, uitgedrukt in kilonewton."@nl;
-  rdfs:domain <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Buffer>;
+  rdfs:domain <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Bufferinstallatie>;
   rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
   rdfs:range <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInKiloNewton> .
 
@@ -536,7 +553,7 @@ skos:Concept a rdfs:Class;
   rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
   rdfs:subClassOf <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#NaampadObject> .
 
-<https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Cameragroep> a owl:Class;
+<https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#CameraGroep> a owl:Class;
   rdfs:comment "Groepstype voor het groeperen van camera's."@nl;
   rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
   rdfs:subClassOf <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#NaampadObject> .
@@ -903,6 +920,11 @@ skos:Concept a rdfs:Class;
   rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
   rdfs:range <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcDocument> .
 
+<https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Gebouwuitrusting> a owl:Class;
+  rdfs:comment "Een generiek type dat alle zaken omvat waarmee een gebouw kan worden uitgerust (bijvoorbeeld meubilair, verwarming...)."@nl;
+  rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
+  rdfs:subClassOf <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#NaampadObject> .
+
 <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#GecombineerdePut> a owl:Class;
   rdfs:comment "Alle putrelaties."@nl;
   rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
@@ -1169,6 +1191,11 @@ skos:Concept a rdfs:Class;
   rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
   rdfs:subClassOf <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#NaampadObject> .
 
+<https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#HulppostGroep> a owl:Class;
+  rdfs:comment "Een groep voor het groeperen van objecten van het type Hulppost."@nl;
+  rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
+  rdfs:subClassOf <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#NaampadObject> .
+
 <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#HydraulischeCilinder.heeftHijsogen> a owl:DatatypeProperty;
   rdfs:comment "Geeft aan of de cilinder hijsogen heeft."@nl;
   rdfs:domain <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#HydraulischeCilinder>;
@@ -1339,7 +1366,7 @@ skos:Concept a rdfs:Class;
 <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Kokerafsluiting> a owl:Class;
   rdfs:comment "Het geheel van o.a. slagbomen,verkeerslichten en detectielussen in functie van de afsluiting van een koker."@nl;
   rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
-  rdfs:subClassOf <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMNaamObject> .
+  rdfs:subClassOf <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#NaampadObject> .
 
 <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Kokercomplex.ligtFunderingInOpRandWaterweg> a owl:DatatypeProperty;
   <http://purl.org/vocab/vann/usageNote> "Attribuut uit gebruik sinds versie 2.11.0-RC2"@nl;
@@ -1480,13 +1507,13 @@ skos:Concept a rdfs:Class;
   rdfs:range <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMeter> .
 
 <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#LEDRotondeafbakening.nominaalVermogen> a owl:ObjectProperty;
-  rdfs:comment "Nominale spanning (in volt) van de LED rotondeafbakening."@nl;
+  rdfs:comment "Nominaal vermogen (in watt) van de LED rotondeafbakening."@nl;
   rdfs:domain <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#LEDRotondeafbakening>;
   rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
   rdfs:range <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInWatt> .
 
 <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#LEDRotondeafbakening.nominaleSpanning> a owl:ObjectProperty;
-  rdfs:comment "Nominaal vermogen (in watt) van de LED rotondeafbakening."@nl;
+  rdfs:comment "Nominale spanning (in volt) van de LED rotondeafbakening."@nl;
   rdfs:domain <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#LEDRotondeafbakening>;
   rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
   rdfs:range <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInVolt> .
@@ -2060,7 +2087,7 @@ skos:Concept a rdfs:Class;
 <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Pompstation> a owl:Class;
   rdfs:comment "Inrichting voor het oppompen van grond- of oppervlaktewater."@nl;
   rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
-  rdfs:subClassOf <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMNaamObject> .
+  rdfs:subClassOf <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#NaampadObject> .
 
 <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Pyloon> a owl:Class;
   rdfs:comment "Een pyloon is een taps toelopende hoge constructie, als drager van kabels e.d. (bv. een hoogspanningmast of een mast van een brug)."@nl;
@@ -2141,7 +2168,8 @@ skos:Concept a rdfs:Class;
     <https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#Geleidingsmechanisme> .
 
 <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Scharnierpunt> a owl:Class;
-  rdfs:comment "Een vast draaipunt om een horizontale as van een beweegbare constructie, zoals sluisdeur (klepdeur en segmentdeur) of brug. Het scharnierpunt vormt de plaats waar de rotatie van een deur, paneel of ander bewegend deel plaatsvindt."@nl;
+  <http://purl.org/vocab/vann/usageNote> "Dient niet voor halsbeugel- of taatsmechanismen."@nl;
+  rdfs:comment "Een vast draaipunt waar de rotatie van een bewegend onderdeel plaatsvindt rond een as. Het scharnierpunt is samengesteld uit kleinere onderdelen zoals een as, ring, draagstoel, "@nl;
   rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
   rdfs:subClassOf <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMNaamObject>,
     <https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#Geleidingsmechanisme> .
@@ -2170,6 +2198,11 @@ skos:Concept a rdfs:Class;
   rdfs:domain <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Slagboom>;
   rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
   rdfs:range xsd:boolean .
+
+<https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#SlagboomGroep> a owl:Class;
+  rdfs:comment "Groep voor het groeperen van Slagboom."@nl;
+  rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
+  rdfs:subClassOf <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#NaampadObject> .
 
 <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Sluis.breedte> a owl:ObjectProperty;
   rdfs:comment "De afstand tussen de dagkanten van de vaste constructie, uitgedrukt in meter."@nl;
@@ -2471,7 +2504,7 @@ skos:Concept a rdfs:Class;
   rdfs:subClassOf <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#NaampadObject> .
 
 <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Tunnelverlichting> a owl:Class;
-  rdfs:comment "Het systeem van verlichtingselementen en armaturen, typisch ontworpen en geïnstalleerd in een tunnel, om aangepaste lichtniveaus volgens verschillende regimes te bieden voor veilig verkeer en zichtbaarheid binnenin een koker."@nl;
+  rdfs:comment "Het systeem van verlichtingselementen en armaturen,typisch ontworpen en geïnstalleerd in een tunnel,om aangepaste lichtniveaus volgens verschillende regimes te bieden voor veilig verkeer en zichtbaarheid binnenin een koker."@nl;
   rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
   rdfs:subClassOf <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#NaampadObject> .
 
@@ -2744,6 +2777,11 @@ skos:Concept a rdfs:Class;
   rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
   rdfs:subClassOf <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#NaampadObject> .
 
+<https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#WegverlichtingGroep> a owl:Class;
+  rdfs:comment "Groepstype voor het groeperen van WVLichtmast, WVConsole, WVBevestigd."@nl;
+  rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
+  rdfs:subClassOf <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#NaampadObject> .
+
 <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Wilddetectiezone.afmeting> a owl:ObjectProperty;
   rdfs:comment "De afmetingen van de wilddetectiezone."@nl;
   rdfs:domain <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Wilddetectiezone>;
@@ -2809,6 +2847,11 @@ skos:Concept a rdfs:Class;
     <https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#ConstructiefObject>,
     <https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#ConstructieElementAanvaarbeschermingGeleidewerk> .
 
+<https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#BinnenverlichtingGroep> a owl:Class;
+  rdfs:comment "Een groep voor het groeperen van objecten van het type Binnenverlichtingstoestel."@nl;
+  rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
+  rdfs:subClassOf <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#NaampadObject> .
+
 <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#BlindePut> a owl:Class;
   rdfs:comment "Een put waar de riolering op aangesloten is maar die niet meer zichtbaar is."@nl;
   rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
@@ -2820,8 +2863,8 @@ skos:Concept a rdfs:Class;
   rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
   rdfs:subClassOf <https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#ConstructiefObject> .
 
-<https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Buffer> a owl:Class;
-  rdfs:comment "Een absorberend element dat wordt gebruikt om krachten of schokken op te vangen en te dempen."@nl;
+<https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Bufferinstallatie> a owl:Class;
+  rdfs:comment "Een verzameling van elementen die gebruikt worden om krachten of schokken op te vangen en te dempen."@nl;
   rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
   rdfs:subClassOf <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMNaamObject>,
     <https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#Geleidingsmechanisme> .
@@ -3285,7 +3328,7 @@ skos:Concept a rdfs:Class;
 <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Aswegersite> a owl:Class;
   rdfs:comment "Het geheel van infrastructuurelementen en toestellen op één locatie voor de exploitatie van een asweger."@nl;
   rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie>;
-  rdfs:subClassOf <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMNaamObject> .
+  rdfs:subClassOf <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#NaampadObject> .
 
 <https://wegenenverkeer-test.data.vlaanderen.be/ns/installatie#Brugligger> a owl:Class;
   rdfs:comment "Ondersteunende balkstructuur van een brug onder,boven of aansluitend op het brugdek."@nl;

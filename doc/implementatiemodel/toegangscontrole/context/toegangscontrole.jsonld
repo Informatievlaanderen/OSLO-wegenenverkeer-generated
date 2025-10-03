@@ -322,6 +322,25 @@
       "@type": "@id"
     },
     "Bevestiging": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Bevestiging",
+    "BijlageToegangsprocedure": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcToegangsprocedureBijlage",
+    "BijlageToegangsprocedure.bijlageType": {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcToegangsprocedureBijlage.type",
+      "@type": "@id"
+    },
+    "BijlageToegangsprocedure.document": {
+      "@container": "@set",
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcToegangsprocedureBijlage.document",
+      "@type": "@id"
+    },
+    "BijlageToegangsprocedure.nota": {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcToegangsprocedureBijlage.nota",
+      "@type": "@id"
+    },
+    "BijlageToegangsprocedure.websiteUrl": {
+      "@id": "http://xmlns.com/foaf/0.1/page",
+      "@type": "@id"
+    },
+    "BijlagetypeToegangsprocedure": "http://www.w3.org/2004/02/skos/core#Concept",
     "Binnenverlichtingstoestel": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Binnenverlichtingstoestel",
     "Binnenverlichtingstoestel.schakelwijze": {
       "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Binnenverlichtingstoestel.schakelwijze",
@@ -465,6 +484,7 @@
     },
     "GeheelGetal": "http://www.w3.org/2001/XMLSchema#integer",
     "Gemeente": "http://www.w3.org/2004/02/skos/core#Concept",
+    "HeeftToegangsprocedure": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#HeeftToegangsprocedure",
     "IPv4Adres": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DteIPv4Adres",
     "IPv4Adres.waarde": {
       "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DteIPv4Adres.waarde",
@@ -706,6 +726,7 @@
     "MerknamenMagneetgrendels": "http://www.w3.org/2004/02/skos/core#Concept",
     "MerknamenSlotcilinders": "http://www.w3.org/2004/02/skos/core#Concept",
     "MerknamenSloten": "http://www.w3.org/2004/02/skos/core#Concept",
+    "MerknamenSpanningsomvormers": "http://www.w3.org/2004/02/skos/core#Concept",
     "MerknamenZuilenToegangscontrole": "http://www.w3.org/2004/02/skos/core#Concept",
     "Mimetype": "http://www.w3.org/2004/02/skos/core#Concept",
     "ModelnamenBadgelezers": "http://www.w3.org/2004/02/skos/core#Concept",
@@ -713,7 +734,13 @@
     "ModelnamenMagneetgrendels": "http://www.w3.org/2004/02/skos/core#Concept",
     "ModelnamenSlotcilinders": "http://www.w3.org/2004/02/skos/core#Concept",
     "ModelnamenSloten": "http://www.w3.org/2004/02/skos/core#Concept",
+    "ModelnamenSpanningsomvormers": "http://www.w3.org/2004/02/skos/core#Concept",
     "ModelnamenZuilenToegangscontrole": "http://www.w3.org/2004/02/skos/core#Concept",
+    "NaampadObject": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#NaampadObject",
+    "NaampadObject.naampad": {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#NaampadObject.naampad",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
     "NatuurlijkGetal": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
     "NetwerkTechnologie": "http://www.w3.org/2004/02/skos/core#Concept",
     "NetwerkelementMerk": "http://www.w3.org/2004/02/skos/core#Concept",
@@ -869,11 +896,59 @@
       "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Slotcilinder.modelnaam",
       "@type": "@id"
     },
-    "Slotcilinder.steutelplan": {
+    "Slotcilinder.sleutelplan": {
       "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Slotcilinder.sleutelplan",
       "@type": "@id"
     },
     "SlotcilinderBeveiligingsfactor": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Spanningsomvormer": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Spanningsomvormer",
+    "Spanningsomvormer.bevestiging": {
+      "@container": "@set",
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/toegangscontrole/#Bevestiging",
+      "@type": "@id"
+    },
+    "Spanningsomvormer.ingangsfrequentie": {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Spanningsomvormer.ingangsfrequentie",
+      "@type": "@id"
+    },
+    "Spanningsomvormer.ingangsspanning": {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Spanningsomvormer.ingangsspanning",
+      "@type": "@id"
+    },
+    "Spanningsomvormer.ingangsstroom": {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Spanningsomvormer.ingangsstroom",
+      "@type": "@id"
+    },
+    "Spanningsomvormer.merk": {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Spanningsomvormer.merk",
+      "@type": "@id"
+    },
+    "Spanningsomvormer.modelnaam": {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Spanningsomvormer.modelnaam",
+      "@type": "@id"
+    },
+    "Spanningsomvormer.technischeFiche": {
+      "@container": "@set",
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Spanningsomvormer.technischeFiche",
+      "@type": "@id"
+    },
+    "Spanningsomvormer.uitgangsfrequentie": {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Spanningsomvormer.uitgangsfrequentie",
+      "@type": "@id"
+    },
+    "Spanningsomvormer.uitgangsspanning": {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Spanningsomvormer.uitgangsspanning",
+      "@type": "@id"
+    },
+    "Spanningsomvormer.uitgangsstroom": {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Spanningsomvormer.uitgangsstroom",
+      "@type": "@id"
+    },
+    "Spanningsomvormer.voedt": {
+      "@container": "@set",
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/toegangscontrole/#Voedt",
+      "@type": "@id"
+    },
     "String": "http://www.w3.org/2001/XMLSchema#string",
     "Stroomkring": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Stroomkring",
     "Stroomkring.stroomkringnummer": {
@@ -894,6 +969,20 @@
     "TgcUitbreidingsmoduleMerk": "http://www.w3.org/2004/02/skos/core#Concept",
     "TgcUitbreidingsmoduleModelnaam": "http://www.w3.org/2004/02/skos/core#Concept",
     "TgcUitbreidingsmoduleType": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Toegangscontrole": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Toegangscontrole",
+    "Toegangscontrole.heeftBadgelezer": {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Toegangscontrole.heeftBadgelezer",
+      "@type": "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "Toegangscontrole.heeftSlotMetAfstandsbediening": {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Toegangscontrole.heeftSlotMetAfstandsbediening",
+      "@type": "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "Toegangscontrole.typeSleutel": {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Toegangscontrole.sleutelType",
+      "@type": "@id"
+    },
+    "ToegangscontroleSleuteltype": "http://www.w3.org/2004/02/skos/core#Concept",
     "Toegangscontroller": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Toegangscontroller",
     "Toegangscontroller.bevestiging": {
       "@container": "@set",
@@ -964,9 +1053,69 @@
     "ToegangspoortMerk": "http://www.w3.org/2004/02/skos/core#Concept",
     "ToegangspoortModelnaam": "http://www.w3.org/2004/02/skos/core#Concept",
     "ToegangspoortType": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Toegangsprocedure": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#Toegangsprocedure",
+    "Toegangsprocedure.aandachtspunt": {
+      "@container": "@set",
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#Toegangsprocedure.aandachtspunt",
+      "@type": "@id"
+    },
+    "Toegangsprocedure.bijlage": {
+      "@container": "@set",
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#Toegangsprocedure.bijlage",
+      "@type": "@id"
+    },
+    "Toegangsprocedure.id": {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#Toegangsprocedure.assetId",
+      "@type": "@id"
+    },
+    "Toegangsprocedure.naam": {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#Toegangsprocedure.naam",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "Toegangsprocedure.omschrijving": {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#Toegangsprocedure.omschrijving",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "Toegangsprocedure.toegangstijden": {
+      "@container": "@set",
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#Toegangsprocedure.toegangstijden",
+      "@type": "@id"
+    },
+    "Toegangsprocedure.typeBadge": {
+      "@container": "@set",
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#Toegangsprocedure.typeBadge",
+      "@type": "@id"
+    },
+    "Toegangsprocedure.typeSleutel": {
+      "@container": "@set",
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#Toegangsprocedure.typeSleutel",
+      "@type": "@id"
+    },
+    "Toegangsprocedure.typeUri": {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#Toegangsprocedure.typeURI",
+      "@type": "@id"
+    },
+    "ToegangsprocedureAandachtspunt": "http://www.w3.org/2004/02/skos/core#Concept",
+    "ToegangsprocedureToegangstijden": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Toegangstijden": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcToegangsprocedureToegangstijden",
+    "Toegangstijden.opmerking": {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcToegangsprocedureToegangstijden.opmerking",
+      "@type": "@id"
+    },
+    "Toegangstijden.toegangstijden": {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcToegangsprocedureToegangstijden.toegangstijden",
+      "@type": "@id"
+    },
+    "TypeBadge": "http://www.w3.org/2004/02/skos/core#Concept",
+    "TypeSleutel": "http://www.w3.org/2004/02/skos/core#Concept",
     "Ups": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#UPS",
     "Ups.autonomie": {
       "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#UPS.autonomie",
+      "@type": "@id"
+    },
+    "Ups.bevestiging": {
+      "@container": "@set",
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/toegangscontrole/#Bevestiging",
       "@type": "@id"
     },
     "Ups.maxPiekvermogen": {

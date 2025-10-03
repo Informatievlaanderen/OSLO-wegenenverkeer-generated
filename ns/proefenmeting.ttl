@@ -50,9 +50,742 @@
   rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting>;
   rdfs:range skos:Concept .
 
+<https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting#Keuring.datum> a owl:DatatypeProperty;
+  rdfs:comment "De datum waarop de keuring werd uitgevoerd."@nl;
+  rdfs:domain <https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting#Keuring>;
+  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting>;
+  rdfs:range xsd:date .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting#Keuring.geldigheidsDuur> a owl:ObjectProperty;
+  rdfs:comment "de periode (in jaar) waarbinnen de keuring geldig blijft."@nl;
+  rdfs:domain <https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting#Keuring>;
+  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting>;
+  rdfs:range <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInJaar> .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting#Keuring.verslag> a owl:ObjectProperty;
+  rdfs:comment "document met het verslag van de keuring."@nl;
+  rdfs:domain <https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting#Keuring>;
+  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting>;
+  rdfs:range <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcDocument> .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting#MeteropnameEnergiemeter.datumMeterstand> a owl:DatatypeProperty;
+  rdfs:comment "De datum van de laatste meteropname van de energiemeter."@nl;
+  rdfs:domain <https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting#MeteropnameEnergiemeter>;
+  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting>;
+  rdfs:range xsd:date .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting#MeteropnameEnergiemeter.meterstandDag> a owl:ObjectProperty;
+  rdfs:comment "De meterstand bij de laatste meteropname van de dag-energiemeter."@nl;
+  rdfs:domain <https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting#MeteropnameEnergiemeter>;
+  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting>;
+  rdfs:range <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInkWh> .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting#MeteropnameEnergiemeter.meterstandNacht> a owl:ObjectProperty;
+  rdfs:comment "De meterstand bij de laatste meteropname van de nacht-energiemeter."@nl;
+  rdfs:domain <https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting#MeteropnameEnergiemeter>;
+  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting>;
+  rdfs:range <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInkWh> .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting#MeteropnameEnergiemeterGecombineerd.meterstandPiek> a owl:ObjectProperty;
+  rdfs:comment "De stand van de energiemeter waarmee het piekvermogen gemeten wordt."@nl;
+  rdfs:domain <https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting#MeteropnameEnergiemeterGecombineerd>;
+  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting>;
+  rdfs:range <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInKiloWatt> .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting#MeteropnameEnergiemeterGecombineerd.meterstandReactiefVermogenDag> a owl:ObjectProperty;
+  rdfs:comment "De stand van de dag-energiemeter waarmee het reactief vermogen gemeten wordt."@nl;
+  rdfs:domain <https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting#MeteropnameEnergiemeterGecombineerd>;
+  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting>;
+  rdfs:range <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInkVARh> .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting#MeteropnameEnergiemeterGecombineerd.meterstandReactiefVermogenNacht> a owl:ObjectProperty;
+  rdfs:comment "De stand van de nacht-energiemeter waarmee het reactief vermogen gemeten wordt."@nl;
+  rdfs:domain <https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting#MeteropnameEnergiemeterGecombineerd>;
+  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting>;
+  rdfs:range <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInkVARh> .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting#ProefBindmiddeldosering.technischVerslagBindmiddeldosering> a owl:ObjectProperty;
+  rdfs:comment "Het technisch verslag van een aangewezen bindmiddeldosering."@nl;
+  rdfs:domain <https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting#ProefBindmiddeldosering>;
+  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting>;
+  rdfs:range <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcDocument> .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting#ProefBoomtoestand.basiswaarde> a owl:ObjectProperty;
+  <http://purl.org/vocab/vann/usageNote> "Klasse uit gebruik sinds versie 2.12.0-RC2"@nl;
+  rdfs:comment "Het schriftelijk verslag dat na onderzoek of visuele controle wordt opgemaakt."@nl;
+  rdfs:domain <https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting#ProefBoomtoestand>;
+  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting>;
+  rdfs:range <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInEuro> .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting#ProefBoomtoestand.conditiebeoordeling> a owl:ObjectProperty;
+  <http://purl.org/vocab/vann/usageNote> "Klasse uit gebruik sinds versie 2.12.0-RC2"@nl;
+  rdfs:comment "De conditie beoordeeld volgens de kronenstructuur van Dr. A. Roloff, gelet op de scheutlengte ontwikkeling en vorming van dood hout."@nl;
+  rdfs:domain <https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting#ProefBoomtoestand>;
+  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting>;
+  rdfs:range skos:Concept .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting#ProefBoomtoestand.conditiewaarde> a owl:ObjectProperty;
+  <http://purl.org/vocab/vann/usageNote> "Klasse uit gebruik sinds versie 2.12.0-RC2"@nl;
+  rdfs:comment "Een coëfficiënt die iets vertelt over de gezondheidstoestand (vitaliteit, conditie) en de levensverwachting van een boom."@nl;
+  rdfs:domain <https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting#ProefBoomtoestand>;
+  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting>;
+  rdfs:range skos:Concept .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting#ProefBoomtoestand.conflicten> a owl:ObjectProperty;
+  <http://purl.org/vocab/vann/usageNote> "Klasse uit gebruik sinds versie 2.12.0-RC2"@nl;
+  rdfs:comment "Mogelijke standplaatsconflicten die de condities of structuur van de boom negatief kunnen beïnvloeden."@nl;
+  rdfs:domain <https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting#ProefBoomtoestand>;
+  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting>;
+  rdfs:range skos:Concept .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting#ProefBoomtoestand.gebreken> a owl:ObjectProperty;
+  <http://purl.org/vocab/vann/usageNote> "Klasse uit gebruik sinds versie 2.12.0-RC2"@nl;
+  rdfs:comment "Een visueel defect aan een boom wat dient gemonitord te worden."@nl;
+  rdfs:domain <https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting#ProefBoomtoestand>;
+  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting>;
+  rdfs:range skos:Concept .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting#ProefBoomtoestand.kroonDiameter> a owl:ObjectProperty;
+  <http://purl.org/vocab/vann/usageNote> "Klasse uit gebruik sinds versie 2.12.0-RC2"@nl;
+  rdfs:comment "Diameter van de kroonprojectie in meter."@nl;
+  rdfs:domain <https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting#ProefBoomtoestand>;
+  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting>;
+  rdfs:range <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInMeter> .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting#ProefBoomtoestand.krooninspectie> a owl:ObjectProperty;
+  <http://purl.org/vocab/vann/usageNote> "Klasse uit gebruik sinds versie 2.12.0-RC2"@nl;
+  rdfs:comment "Controle van gebrekssymptomen in de kroon."@nl;
+  rdfs:domain <https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting#ProefBoomtoestand>;
+  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting>;
+  rdfs:range <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcDocument> .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting#ProefBoomtoestand.meerwaarde> a owl:ObjectProperty;
+  <http://purl.org/vocab/vann/usageNote> "Klasse uit gebruik sinds versie 2.12.0-RC2"@nl;
+  rdfs:comment "Mogelijkheid om de boom een waarde toe te kennen op basis van hun uitzonderlijke ecologische of erfgoedwaarde ."@nl;
+  rdfs:domain <https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting#ProefBoomtoestand>;
+  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting>;
+  rdfs:range skos:Concept .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting#ProefBoomtoestand.onderhoudstoestand> a owl:ObjectProperty;
+  <http://purl.org/vocab/vann/usageNote> "Klasse uit gebruik sinds versie 2.12.0-RC2"@nl;
+  rdfs:comment "De toestand van een boom die de eventuele snoeiachterstand aangeeft."@nl;
+  rdfs:domain <https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting#ProefBoomtoestand>;
+  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting>;
+  rdfs:range skos:Concept .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting#ProefBoomtoestand.onderzoekVisueleBoomcontrole> a owl:ObjectProperty;
+  <http://purl.org/vocab/vann/usageNote> "Klasse uit gebruik sinds versie 2.12.0-RC2"@nl;
+  rdfs:comment "Visueel bepalen van de veiligheid en conditie van een boom."@nl;
+  rdfs:domain <https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting#ProefBoomtoestand>;
+  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting>;
+  rdfs:range <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcDocument> .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting#ProefBoomtoestand.plantwijzewaarde> a owl:ObjectProperty;
+  <http://purl.org/vocab/vann/usageNote> "Klasse uit gebruik sinds versie 2.12.0-RC2"@nl;
+  rdfs:comment "Een factor die de ontwikkeling van het uiterlijk (de habitus) van een boom relateert met de manier waarop hij geplant wordt."@nl;
+  rdfs:domain <https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting#ProefBoomtoestand>;
+  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting>;
+  rdfs:range skos:Concept .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting#ProefBoomtoestand.rapportageOnderzoek> a owl:ObjectProperty;
+  <http://purl.org/vocab/vann/usageNote> "Klasse uit gebruik sinds versie 2.12.0-RC2"@nl;
+  rdfs:comment "Het schriftelijk verslag dat na onderzoek of visuele controle wordt opgemaakt."@nl;
+  rdfs:domain <https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting#ProefBoomtoestand>;
+  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting>;
+  rdfs:range <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcDocument> .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting#ProefBoomtoestand.soortwaarde> a owl:ObjectProperty;
+  <http://purl.org/vocab/vann/usageNote> "Klasse uit gebruik sinds versie 2.12.0-RC2"@nl;
+  rdfs:comment "Geeft voor een bepaalde boomsoort of -variëteit de verhouding weer tussen de prijs per cm² van die soort en de eenheidsprijs."@nl;
+  rdfs:domain <https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting#ProefBoomtoestand>;
+  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting>;
+  rdfs:range xsd:decimal .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting#ProefBoomtoestand.stamomtrek> a owl:ObjectProperty;
+  <http://purl.org/vocab/vann/usageNote> "Klasse uit gebruik sinds versie 2.12.0-RC2"@nl;
+  rdfs:comment "Omtrek van de stam van de boom in cm, gemeten op 1 meter boven de grond."@nl;
+  rdfs:domain <https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting#ProefBoomtoestand>;
+  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting>;
+  rdfs:range <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInCentimeter> .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting#ProefBoomtoestand.standplaatswaarde> a owl:ObjectProperty;
+  <http://purl.org/vocab/vann/usageNote> "Klasse uit gebruik sinds versie 2.12.0-RC2"@nl;
+  rdfs:comment "De waarde van de boom afhankelijk van de bebouwingsdichtheid en de aanplantingsmogelijkheden rondom en voor de boom."@nl;
+  rdfs:domain <https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting#ProefBoomtoestand>;
+  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting>;
+  rdfs:range skos:Concept .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting#ProefBoomtoestand.tijdstempelBoomtoestand> a owl:DatatypeProperty;
+  <http://purl.org/vocab/vann/usageNote> "Klasse uit gebruik sinds versie 2.12.0-RC2"@nl;
+  rdfs:comment "Datum van laatste snoeibeurt."@nl;
+  rdfs:domain <https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting#ProefBoomtoestand>;
+  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting>;
+  rdfs:range xsd:dateTime .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting#ProefBoomtoestand.uitgebreidPlaatsonderzoek> a owl:ObjectProperty;
+  <http://purl.org/vocab/vann/usageNote> "Klasse uit gebruik sinds versie 2.12.0-RC2"@nl;
+  rdfs:comment "Grondige beoordeling van de textuur en structuur van de bodem, met als doel een voorstel tot conditieverbeterende maatregelen."@nl;
+  rdfs:domain <https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting#ProefBoomtoestand>;
+  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting>;
+  rdfs:range <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcDocument> .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting#ProefBoomtoestand.wortelonderzoek> a owl:ObjectProperty;
+  <http://purl.org/vocab/vann/usageNote> "Klasse uit gebruik sinds versie 2.12.0-RC2"@nl;
+  rdfs:comment "Bepalen van de kwaliteit van de wortels (bv. aantasting door schimmels) of het bepalen van de reikwijdte van de wortels (bv. om een wortelbeschermingszone op te zetten in de buurt van werken van de bomen)."@nl;
+  rdfs:domain <https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting#ProefBoomtoestand>;
+  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting>;
+  rdfs:range <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcDocument> .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting#ProefConsistentie.consistentie> a owl:ObjectProperty;
+  rdfs:comment "Proefresultaten van de consistentie."@nl;
+  rdfs:domain <https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting#ProefConsistentie>;
+  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting>;
+  rdfs:range <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcDocument> .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting#ProefDoorlatendheid.doorlatendheid> a owl:ObjectProperty;
+  rdfs:comment "Proefresultaten van de waterdoorlatendheid."@nl;
+  rdfs:domain <https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting#ProefDoorlatendheid>;
+  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting>;
+  rdfs:range <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcDocument> .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting#ProefDraagvermogen.draagvermogen> a owl:ObjectProperty;
+  rdfs:comment "Proef die het draagvermogen van de laag bepaald."@nl;
+  rdfs:domain <https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting#ProefDraagvermogen>;
+  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting>;
+  rdfs:range <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcDocument> .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting#ProefDraineervermogen.draineervermogen> a owl:ObjectProperty;
+  rdfs:comment "Proefresultaten van het drainvermogen."@nl;
+  rdfs:domain <https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting#ProefDraineervermogen>;
+  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting>;
+  rdfs:range <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcDocument> .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting#ProefDruksterkte.druksterkte> a owl:ObjectProperty;
+  rdfs:comment "Proefresultaten van de druksterkte van de laag."@nl;
+  rdfs:domain <https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting#ProefDruksterkte>;
+  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting>;
+  rdfs:range <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcDocument> .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting#ProefDwarsvlakheid.dwarsvlakheid> a owl:ObjectProperty;
+  rdfs:comment "Proefresultaten van de dwarsvlakheid."@nl;
+  rdfs:domain <https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting#ProefDwarsvlakheid>;
+  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting>;
+  rdfs:range <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcDocument> .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting#ProefEffectiefBindmiddelgehalte.effectiefBindmiddelgehalte> a owl:ObjectProperty;
+  rdfs:comment "Het resultaat van de test van het gemeten effectief bindmiddelgehalte in de BV laag."@nl;
+  rdfs:domain <https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting#ProefEffectiefBindmiddelgehalte>;
+  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting>;
+  rdfs:range <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcDocument> .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting#ProefGaafheid.gaafheid> a owl:ObjectProperty;
+  rdfs:comment "De resultaten van de controle."@nl;
+  rdfs:domain <https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting#ProefGaafheid>;
+  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting>;
+  rdfs:range <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcDocument> .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting#ProefGeluidstest.geluidstestrapport> a owl:ObjectProperty;
+  rdfs:comment "Het resultaat geluidstest."@nl;
+  rdfs:domain <https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting#ProefGeluidstest>;
+  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting>;
+  rdfs:range <https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting#DtcGeluidstestRapport> .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting#ProefGemetenDikte.gemetenDikte> a owl:ObjectProperty;
+  rdfs:comment "De gemeten dikte van de laag in centimeter."@nl;
+  rdfs:domain <https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting#ProefGemetenDikte>;
+  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting>;
+  rdfs:range <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInCentimeter> .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting#ProefGrondkarakteristieken.bepalingGrondkarakteristieken> a owl:ObjectProperty;
+  rdfs:comment "Proef met de resultaten van de grondkarakteristieken."@nl;
+  rdfs:domain <https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting#ProefGrondkarakteristieken>;
+  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting>;
+  rdfs:range <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcDocument> .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting#ProefHechtsterkte.hechtsterkte> a owl:ObjectProperty;
+  rdfs:comment "Proef om de hechtsterkte van de laag te bepalen."@nl;
+  rdfs:domain <https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting#ProefHechtsterkte>;
+  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting>;
+  rdfs:range <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcDocument> .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting#ProefKerendVermogen.kerendVermogen> a owl:ObjectProperty;
+  <http://purl.org/vocab/vann/usageNote> "Klasse uit gebruik sinds versie 2.0.0-RC3"@nl;
+  rdfs:comment "Het vermogen van een voertuigkering om een doorbraak bij een bepaald type crash te voorkomen."@nl;
+  rdfs:domain <https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting#ProefKerendVermogen>;
+  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting>;
+  rdfs:range skos:Concept .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting#ProefKorrelverdeling.korrelverdeling> a owl:ObjectProperty;
+  rdfs:comment "Het resultaat van de test van de gemeten korrelverdeling in de BV laag."@nl;
+  rdfs:domain <https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting#ProefKorrelverdeling>;
+  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting>;
+  rdfs:range <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcDocument> .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting#ProefLangsvlakheid.langsvlakheid> a owl:ObjectProperty;
+  rdfs:comment "Het resultaat van de meting."@nl;
+  rdfs:domain <https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting#ProefLangsvlakheid>;
+  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting>;
+  rdfs:range <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcDocument> .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting#ProefLuchtdichtheid.luchtdichtheid> a owl:ObjectProperty;
+  rdfs:comment "Testresultaten van de opgemeten drukval van het beproefde leidingsvak."@nl;
+  rdfs:domain <https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting#ProefLuchtdichtheid>;
+  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting>;
+  rdfs:range <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcDocument> .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting#ProefLuchtgehalte.luchtgehalte> a owl:ObjectProperty;
+  rdfs:comment "Proefresultaten van het luchtgehalte."@nl;
+  rdfs:domain <https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting#ProefLuchtgehalte>;
+  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting>;
+  rdfs:range <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcDocument> .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting#ProefLuminantie.luminantiefactor> a owl:ObjectProperty;
+  rdfs:comment "Waarde om het contrast met het wegdek en bijgevolg de dagzichtbaarheid te bepalen."@nl;
+  rdfs:domain <https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting#ProefLuminantie>;
+  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting>;
+  rdfs:range xsd:decimal .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting#ProefMortelkwaliteit.mortelkwaliteit> a owl:ObjectProperty;
+  rdfs:comment "Een rapport van de mortelkwaliteit van de onderbouw laag."@nl;
+  rdfs:domain <https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting#ProefMortelkwaliteit>;
+  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting>;
+  rdfs:range <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcDocument> .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting#ProefNaderOnderzoekTomograaf.inclusiefElektrisch> a owl:DatatypeProperty;
+  rdfs:comment "Aanduiding of naast een geluidsweerstandstomografie ook een elektrische weerstandstomografie gebeurd is."@nl;
+  rdfs:domain <https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting#ProefNaderOnderzoekTomograaf>;
+  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting>;
+  rdfs:range xsd:boolean .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting#ProefNaderOnderzoekTomograaf.naderOnderzoekTomograaf> a owl:ObjectProperty;
+  rdfs:comment "Het resultaat van de tomograaf proef."@nl;
+  rdfs:domain <https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting#ProefNaderOnderzoekTomograaf>;
+  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting>;
+  rdfs:range <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcDocument> .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting#ProefPctHolleruimte.pctHolleruimte> a owl:ObjectProperty;
+  rdfs:comment "Het resultaat van het aantal percentage holleruimte meting aanwezig in de laag."@nl;
+  rdfs:domain <https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting#ProefPctHolleruimte>;
+  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting>;
+  rdfs:range <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcDocument> .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting#ProefPerformantieklasse.performantieklasse> a owl:ObjectProperty;
+  <http://purl.org/vocab/vann/usageNote> "Klasse uit gebruik sinds versie 2.0.0-RC3"@nl;
+  rdfs:comment "De aanduiding hoe (performantie) de beginconstructie is getest."@nl;
+  rdfs:domain <https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting#ProefPerformantieklasse>;
+  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting>;
+  rdfs:range skos:Concept .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting#ProefPerformantieniveau.performantieniveau> a owl:ObjectProperty;
+  <http://purl.org/vocab/vann/usageNote> "Klasse uit gebruik sinds versie 2.0.0-RC3"@nl;
+  rdfs:comment "Het niveau waarop de obstakelbeveiliger is getest."@nl;
+  rdfs:domain <https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting#ProefPerformantieniveau>;
+  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting>;
+  rdfs:range skos:Concept .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting#ProefRetroreflectie.retroreflectie> a owl:ObjectProperty;
+  rdfs:comment "Proef om de retroreflectie van een verkeersbord te bepalen."@nl;
+  rdfs:domain <https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting#ProefRetroreflectie>;
+  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting>;
+  rdfs:range <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcDocument> .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting#ProefRolgeluid.rolgeluid> a owl:ObjectProperty;
+  rdfs:comment "Proefresultaten van het rolgeluid van de toplaag."@nl;
+  rdfs:domain <https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting#ProefRolgeluid>;
+  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting>;
+  rdfs:range <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcDocument> .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting#ProefSchokindex.schokindex> a owl:ObjectProperty;
+  <http://purl.org/vocab/vann/usageNote> "Klasse uit gebruik sinds versie 2.0.0-RC3"@nl;
+  rdfs:comment "De parameter die weergeeft hoe groot de kans op ernstige letsels is van de inzittenden bij een aanrijding."@nl;
+  rdfs:domain <https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting#ProefSchokindex>;
+  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting>;
+  rdfs:range skos:Concept .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting#ProefSchokindexMVP.schokindexMvp> a owl:ObjectProperty;
+  <http://purl.org/vocab/vann/usageNote> "Klasse uit gebruik sinds versie 2.0.0-RC3"@nl;
+  rdfs:comment "Head Injury Criterium (HIC) van een motorvangplank."@nl;
+  rdfs:domain <https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting#ProefSchokindexMVP>;
+  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting>;
+  rdfs:range skos:Concept .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting#ProefStaalvezelgehalte.staalvezelgehalte> a owl:ObjectProperty;
+  rdfs:comment "Het resultaat van de test van het gemeten staalvezelgehalte in de BV laag."@nl;
+  rdfs:domain <https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting#ProefStaalvezelgehalte>;
+  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting>;
+  rdfs:range <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcDocument> .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting#ProefStroefheid.stroefheid> a owl:ObjectProperty;
+  rdfs:comment "Proefresultaten van de stroefheid."@nl;
+  rdfs:domain <https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting#ProefStroefheid>;
+  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting>;
+  rdfs:range <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcDocument> .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting#ProefTemperatuur.temperatuur> a owl:ObjectProperty;
+  rdfs:comment "De temperatuur van de BV laag in graden Celsius."@nl;
+  rdfs:domain <https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting#ProefTemperatuur>;
+  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting>;
+  rdfs:range <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInCelsius> .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting#ProefTextuurdiepte.textuurdiepte> a owl:ObjectProperty;
+  rdfs:comment "Proefresultaten van de textuurdiepte van de toplaag."@nl;
+  rdfs:domain <https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting#ProefTextuurdiepte>;
+  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting>;
+  rdfs:range <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcDocument> .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting#ProefVerankeringskracht.verankeringskracht> a owl:ObjectProperty;
+  rdfs:comment "Het resultaat van de test om de verankeringskracht in de BV laag."@nl;
+  rdfs:domain <https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting#ProefVerankeringskracht>;
+  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting>;
+  rdfs:range <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcDocument> .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting#ProefVerderOnderzoekTrekproef.verderOnderzoekTrekproef> a owl:ObjectProperty;
+  rdfs:comment "Een trekproef is een niet-destructieve methode om de stabiliteit (gevoeligheid voor windworp) van bomen te testen door een kunstmatige belasting op de stam te relateren met het kantelen van de stamvoet."@nl;
+  rdfs:domain <https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting#ProefVerderOnderzoekTrekproef>;
+  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting>;
+  rdfs:range <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcDocument> .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting#ProefVisueleBeoordeling.visueleBeoordeling> a owl:ObjectProperty;
+  rdfs:comment "Een rapport van de visuele beoordeling van de laag."@nl;
+  rdfs:domain <https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting#ProefVisueleBeoordeling>;
+  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting>;
+  rdfs:range <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcDocument> .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting#ProefVlakheid.vlakheid> a owl:ObjectProperty;
+  rdfs:comment "Proefresultaten van de vlakheid."@nl;
+  rdfs:domain <https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting#ProefVlakheid>;
+  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting>;
+  rdfs:range <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcDocument> .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting#ProefVoertuigOverhelling.voertuigOverhelling> a owl:ObjectProperty;
+  <http://purl.org/vocab/vann/usageNote> "Klasse uit gebruik sinds versie 2.0.0-RC3"@nl;
+  rdfs:comment "Naast het horizontaal verplaatsen van de veiligheidsafbakening bij een impact, kan een voertuig bij impact ook over de afbakening hellen.  De maximale overhelling wordt op basis van foto's en video-opnames van de test bepaald."@nl;
+  rdfs:domain <https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting#ProefVoertuigOverhelling>;
+  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting>;
+  rdfs:range skos:Concept .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting#ProefWaterdichtheid.waterdichtheid> a owl:ObjectProperty;
+  rdfs:comment "Testresultaten van het opgemeten waterverlies van het beproefde leidingsvak."@nl;
+  rdfs:domain <https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting#ProefWaterdichtheid>;
+  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting>;
+  rdfs:range <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcDocument> .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting#ProefWatergehalte.watergehalte> a owl:ObjectProperty;
+  rdfs:comment "Het resultaat van de test van het gemeten watergehalte in de BV laag."@nl;
+  rdfs:domain <https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting#ProefWatergehalte>;
+  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting>;
+  rdfs:range <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcDocument> .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting#ProefWateropslorping.wateropslorping> a owl:ObjectProperty;
+  rdfs:comment "Proef om de wateropslorping van de laag te bepalen."@nl;
+  rdfs:domain <https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting#ProefWateropslorping>;
+  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting>;
+  rdfs:range <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcDocument> .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting#ProefWeerstandAfschilfering.weerstandAfschilfering> a owl:ObjectProperty;
+  rdfs:comment "Proef om de weerstand/afschilfering van de laag te bepalen."@nl;
+  rdfs:domain <https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting#ProefWeerstandAfschilfering>;
+  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting>;
+  rdfs:range <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcDocument> .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting#ProefWerkingsbreedteGC> a owl:Class;
+  <http://purl.org/vocab/vann/usageNote> "Klasse uit gebruik sinds versie 2.0.0-RC3"@nl;
+  rdfs:comment "Proef om de afstand te bepalen tussen de voorkant van de geleideconstructie in normale positie en de plaats van het verst uitwijkend onderdeel aan de achterzijde van de geleideconstructie bij aanrijding. (gemeten op het voorvlak van een geleideconstructie en loodrecht op de as van de weg)"@nl;
+  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting>;
+  rdfs:subClassOf <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Proef> .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting#ProefWerkingsbreedteMVP> a owl:Class;
+  <http://purl.org/vocab/vann/usageNote> "Klasse uit gebruik sinds versie 2.0.0-RC3"@nl;
+  rdfs:comment "Proef om de afstand tussen de voorkant van het onvervormd systeem tot de maximale dynamische laterale positie van elk onderdeel van het systeem te bepalen."@nl;
+  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting>;
+  rdfs:subClassOf <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Proef> .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting#ProefZichtbaarheidBijDagOfWV.luminantiecoëfficiënt> a owl:ObjectProperty;
+  <http://purl.org/vocab/vann/usageNote> "uitgedrukt in mcd. m-2.lux-1"@nl;
+  rdfs:comment "De verhouding van de luminantie van het oppervlak in een gegeven richting en de verlichtingssterkte op het oppervlak."@nl;
+  rdfs:domain <https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting#ProefZichtbaarheidBijDagOfWV>;
+  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting>;
+  rdfs:range xsd:decimal .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting#ProefZichtbaarheidBijNacht.retrotreflectiecoëfficiënt> a owl:ObjectProperty;
+  <http://purl.org/vocab/vann/usageNote> "uitgedrukt in mcd. m-2.lux-1"@nl;
+  rdfs:comment "De maat voor het retroreflecterend vermogen van een markering bij nacht."@nl;
+  rdfs:domain <https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting#ProefZichtbaarheidBijNacht>;
+  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting>;
+  rdfs:range xsd:decimal .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting#ProefZichtbaarheidBijNachtNatWegdek.retrotreflectiecoëfficiënt> a owl:ObjectProperty;
+  <http://purl.org/vocab/vann/usageNote> "uitgedrukt in mcd. m-2.lux-1"@nl;
+  rdfs:comment "De maat voor het retroreflecterend vermogen van een markering bij nacht bij nat wegdek."@nl;
+  rdfs:domain <https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting#ProefZichtbaarheidBijNachtNatWegdek>;
+  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting>;
+  rdfs:range xsd:decimal .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting#ProefZichtbaarheidBijNachtRegenweer.retrotreflectiecoëfficiënt> a owl:ObjectProperty;
+  <http://purl.org/vocab/vann/usageNote> "uitgedrukt in mcd. m-2.lux-1"@nl;
+  rdfs:comment "De maat voor het retroreflecterend vermogen van een markering bij nacht bij nat weer (tijdens regenbui)."@nl;
+  rdfs:domain <https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting#ProefZichtbaarheidBijNachtRegenweer>;
+  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting>;
+  rdfs:range xsd:decimal .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting#ProefBindmiddeldosering> a owl:Class;
+  rdfs:comment "Proef om de hoeveelheid bindmiddel te bepalen die nodig is om de grond als funderingslaag te garanderen."@nl;
+  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting>;
+  rdfs:subClassOf <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Proef> .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting#ProefConsistentie> a owl:Class;
+  rdfs:comment "Zetmaat van betonspecie volgens NBN EN 12350-2 bij een cementbetonverharding of een lijnvormig element."@nl;
+  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting>;
+  rdfs:subClassOf <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Proef> .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting#ProefDoorlatendheid> a owl:Class;
+  rdfs:comment "De controle van de doorlatendheid van het oppervlak met behulp van de dubbele ringmethode."@nl;
+  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting>;
+  rdfs:subClassOf <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Proef> .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting#ProefDraagvermogen> a owl:Class;
+  rdfs:comment "Controle van de verdichting van de ondergrond of van een funderingslaag."@nl;
+  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting>;
+  rdfs:subClassOf <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Proef> .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting#ProefDraineervermogen> a owl:Class;
+  rdfs:comment "Controle van de waterdoorlatendheid van een open verharding."@nl;
+  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting>;
+  rdfs:subClassOf <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Proef> .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting#ProefDruksterkte> a owl:Class;
+  rdfs:comment "De spanning waarbij het materiaal van de laag onder invloed van (druk)belasting bezwijkt."@nl;
+  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting>;
+  rdfs:subClassOf <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Proef> .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting#ProefDwarsvlakheid> a owl:Class;
+  rdfs:comment "Controle van de spoorvorming via de latmethode."@nl;
+  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting>;
+  rdfs:subClassOf <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Proef> .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting#ProefEffectiefBindmiddelgehalte> a owl:Class;
+  rdfs:comment "Bepaling van de hoeveelheid bitumen, uitgedrukt t.o.v. het totale mengsel."@nl;
+  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting>;
+  rdfs:subClassOf <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Proef> .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting#ProefGaafheid> a owl:Class;
+  rdfs:comment "Controle van het lijnvormig element op de ongeschondenheid, volledigheid en zuiverheid."@nl;
+  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting>;
+  rdfs:subClassOf <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Proef> .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting#ProefGeluidstest> a owl:Class;
+  rdfs:comment "Test van het geluidsscherm op oa. luchtgeluidsisolatie, geluidsabsorptie, e.d."@nl;
+  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting>;
+  rdfs:subClassOf <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Proef> .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting#ProefGemetenDikte> a owl:Class;
+  rdfs:comment "De effectieve dikte van de laag."@nl;
+  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting>;
+  rdfs:subClassOf <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Proef> .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting#ProefGrondkarakteristieken> a owl:Class;
+  rdfs:comment "Bepaling van de grondeigenschappen."@nl;
+  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting>;
+  rdfs:subClassOf <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Proef> .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting#ProefHechtsterkte> a owl:Class;
+  rdfs:comment "Het resultaat van de trekproef waarbij een proefstuk wordt blootgesteld aan een stijgende spanning tot er een breuk optreedt."@nl;
+  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting>;
+  rdfs:subClassOf <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Proef> .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting#ProefKerendVermogen> a owl:Class;
+  <http://purl.org/vocab/vann/usageNote> "Klasse uit gebruik sinds versie 2.0.0-RC3"@nl;
+  rdfs:comment "Proef om het vermogen van een voertuigkering te bepalen om een doorbraak bij een bepaald type crash te voorkomen."@nl;
+  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting>;
+  rdfs:subClassOf <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Proef> .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting#ProefKorrelverdeling> a owl:Class;
+  rdfs:comment "Bepaling van de doorval door een reeks zeven van een granulaatmengsel volgens NBN EN 933-1."@nl;
+  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting>;
+  rdfs:subClassOf <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Proef> .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting#ProefLangsvlakheid> a owl:Class;
+  rdfs:comment "De controle van de langsvlakheid nieuwe verhardingen bij verschillende golflengten."@nl;
+  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting>;
+  rdfs:subClassOf <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Proef> .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting#ProefLuchtdichtheid> a owl:Class;
+  rdfs:comment "Testen van de drukval van het beproefde leidingsvak."@nl;
+  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting>;
+  rdfs:subClassOf <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Proef> .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting#ProefLuchtgehalte> a owl:Class;
+  rdfs:comment "Proef die de hoeveelheid lucht bepaalt in vers beton met de drukmethode volgens NBN EN 12350-7."@nl;
+  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting>;
+  rdfs:subClassOf <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Proef> .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting#ProefLuminantie> a owl:Class;
+  rdfs:comment "Bij gebrek aan Qd-meting kan de luminantiefactor ß van wegmarkeringen gebruikt worden om het contrast met het wegdek en bijgevolg de dagzichtbaarheid te bepalen."@nl;
+  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting>;
+  rdfs:subClassOf <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Proef> .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting#ProefMortelkwaliteit> a owl:Class;
+  rdfs:comment "Controle van de sterkte van voegmortel."@nl;
+  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting>;
+  rdfs:subClassOf <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Proef> .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting#ProefPctHolleruimte> a owl:Class;
+  rdfs:comment "Proef om het percentage holle ruimte in een bitumineuze laag te bepalen."@nl;
+  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting>;
+  rdfs:subClassOf <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Proef> .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting#ProefPerformantieklasse> a owl:Class;
+  <http://purl.org/vocab/vann/usageNote> "Klasse uit gebruik sinds versie 2.0.0-RC3"@nl;
+  rdfs:comment "Proef die de performantie (bij impact) bepaalt."@nl;
+  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting>;
+  rdfs:subClassOf <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Proef> .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting#ProefPerformantieniveau> a owl:Class;
+  <http://purl.org/vocab/vann/usageNote> "Klasse uit gebruik sinds versie 2.0.0-RC3"@nl;
+  rdfs:comment "Bepaling van het performantieniveau."@nl;
+  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting>;
+  rdfs:subClassOf <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Proef> .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting#ProefRetroreflectie> a owl:Class;
+  rdfs:comment "Het bepalen van de retroreflectiecoëfficiënt via een manuele retroreflectometer of via labotesten."@nl;
+  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting>;
+  rdfs:subClassOf <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Proef> .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting#ProefRolgeluid> a owl:Class;
+  rdfs:comment "Het rolgeluid wordt gemeten met de CPX-methode volgens ISO/CEN 11819-2."@nl;
+  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting>;
+  rdfs:subClassOf <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Proef> .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting#ProefSchokindex> a owl:Class;
+  <http://purl.org/vocab/vann/usageNote> "Klasse uit gebruik sinds versie 2.0.0-RC3"@nl;
+  rdfs:comment "Proef voor de bepaling van de schokindex parameter."@nl;
+  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting>;
+  rdfs:subClassOf <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Proef> .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting#ProefSchokindexMVP> a owl:Class;
+  <http://purl.org/vocab/vann/usageNote> "Klasse uit gebruik sinds versie 2.0.0-RC3"@nl;
+  rdfs:comment "Proef voor de bepaling van de schokindex parameter van de motorvangplank."@nl;
+  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting>;
+  rdfs:subClassOf <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Proef> .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting#ProefStaalvezelgehalte> a owl:Class;
+  rdfs:comment "Bepaling van de hoeveelheid staalvezels in de cementbetonverharding."@nl;
+  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting>;
+  rdfs:subClassOf <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Proef> .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting#ProefStroefheid> a owl:Class;
+  rdfs:comment "Het vermogen van een wegdek om door voertuigbanden tangentieel uitgeoefende krachten (bij het nemen van bochten, afremmen of optrekken) te compenseren door even grote wrijvingskrachten."@nl;
+  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting>;
+  rdfs:subClassOf <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Proef> .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting#ProefTemperatuur> a owl:Class;
+  rdfs:comment "Controle van de temperatuur van een asfaltmengsel."@nl;
+  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting>;
+  rdfs:subClassOf <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Proef> .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting#ProefTextuurdiepte> a owl:Class;
+  rdfs:comment "Bepaling van de uitwasdiepte van de verharding na een oppervlaktebehandeling volgens NBN EN ISO 13473-1."@nl;
+  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting>;
+  rdfs:subClassOf <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Proef> .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting#ProefVerankeringskracht> a owl:Class;
+  rdfs:comment "Een trekproef in situ om de verankering van de ankerstaven in een betonverharding te testen."@nl;
+  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting>;
+  rdfs:subClassOf <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Proef> .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting#ProefVerderOnderzoekTrekproef> a owl:Class;
+  rdfs:comment "Een trekproef is een manier om nader te onderzoeken hoe het met de veiligheid van een (aangetaste of beschadigde) boom gesteld is. Door met een lier effectief aan een boom te trekken wordt de belasting bij storm in een model gegoten en getest."@nl;
+  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting>;
+  rdfs:subClassOf <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Proef> .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting#ProefVisueleBeoordeling> a owl:Class;
+  rdfs:comment "Opsporen van de gebreken bij de definitieve oplevering."@nl;
+  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting>;
+  rdfs:subClassOf <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Proef> .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting#ProefVlakheid> a owl:Class;
+  rdfs:comment "Controle van de effenheid van het oppervlak met behulp van een 3 meter lange rei volgens NBN EN 13036-7."@nl;
+  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting>;
+  rdfs:subClassOf <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Proef> .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting#ProefVoertuigOverhelling> a owl:Class;
+  <http://purl.org/vocab/vann/usageNote> "Klasse uit gebruik sinds versie 2.0.0-RC3"@nl;
+  rdfs:comment "Proef om de overhelling over de bebakening van het voertuig te bepalen bij impact."@nl;
+  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting>;
+  rdfs:subClassOf <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Proef> .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting#ProefWaterdichtheid> a owl:Class;
+  rdfs:comment "Testen van het waterverlies van het beproefde leidingsvak."@nl;
+  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting>;
+  rdfs:subClassOf <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Proef> .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting#ProefWatergehalte> a owl:Class;
+  rdfs:comment "Bepaling van de hoeveelheid water die opgenomen kan worden in een betonverharding."@nl;
+  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting>;
+  rdfs:subClassOf <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Proef> .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting#ProefWateropslorping> a owl:Class;
+  rdfs:comment "Proef waarbij de compactheid of poreusheid van het proefstuk door onderdompeling wordt bepaald."@nl;
+  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting>;
+  rdfs:subClassOf <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Proef> .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting#ProefWeerstandAfschilfering> a owl:Class;
+  rdfs:comment "Controle van de vorst-dooiweerstand volgens CEN/TS 12390-9."@nl;
+  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting>;
+  rdfs:subClassOf <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Proef> .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting#ProefZichtbaarheidBijDagOfWV> a owl:Class;
+  rdfs:comment "Bepaling van de luminantiecoëfficiënt bij diffuse verlichting van een gemarkeerd oppervlak (Qd) bij daglicht of onder openbare verlichting."@nl;
+  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting>;
+  rdfs:subClassOf <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Proef> .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting#ProefZichtbaarheidBijNacht> a owl:Class;
+  rdfs:comment "Bepaling van het retroreflecterend vermogen van een markering bij nacht."@nl;
+  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting>;
+  rdfs:subClassOf <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Proef> .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting#ProefZichtbaarheidBijNachtNatWegdek> a owl:Class;
+  rdfs:comment "Bepaling van het retroreflecterend vermogen van een markering bij nacht bij nat wegdek."@nl;
+  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting>;
+  rdfs:subClassOf <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Proef> .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting#ProefZichtbaarheidBijNachtRegenweer> a owl:Class;
+  rdfs:comment "Bepaling van het retroreflecterend vermogen van een markering bij nacht bij nat weer (tijdens regenbui)."@nl;
+  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting>;
+  rdfs:subClassOf <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Proef> .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting#ProefNaderOnderzoekTomograaf> a owl:Class;
+  rdfs:comment "Een geluids- en/of elektrische weerstandstomografie is een niet-destructieve methode om rot en holtes in bomen op te sporen door gebruik van geluidsgolven en/of elektrische stroom."@nl;
+  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting>;
+  rdfs:subClassOf <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Proef> .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting#Keuring> a owl:Class;
+  <http://purl.org/vocab/vann/usageNote> "De asset hoeft geometrisch niet gelokaliseerd te worden."@nl;
+  rdfs:comment "Technische keuring uitgevoerd door een officiële keuringsinstantie."@nl;
+  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting>;
+  rdfs:subClassOf <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Proef> .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting#MeteropnameEnergiemeterGecombineerd> a owl:Class;
+  <http://purl.org/vocab/vann/usageNote> "De asset hoeft geometrisch niet gelokaliseerd te worden."@nl;
+  rdfs:comment "Resultaten van een meteropname van een gecombineerde energiemeter."@nl;
+  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting>;
+  rdfs:subClassOf <https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting#MeteropnameEnergiemeter> .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting#MeteropnameEnergiemeter> a owl:Class;
+  <http://purl.org/vocab/vann/usageNote> "De asset hoeft geometrisch niet gelokaliseerd te worden."@nl;
+  rdfs:comment "Resultaten van een meteropname van een energiemeter."@nl;
+  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting>;
+  rdfs:subClassOf <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMNaamObject> .
+
 <https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting#DtcGeluidstestRapport> a owl:Class;
   rdfs:comment "Complex datatype voor een verslag dat de resultaten van de geluidsmetingen weergeeft."@nl;
   rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting> .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting#ProefBoomtoestand> a owl:Class;
+  <http://purl.org/vocab/vann/usageNote> "Klasse uit gebruik sinds versie 2.12.0-RC2"@nl;
+  rdfs:comment "De toestand met waarnemingen per inspectie van een boom."@nl;
+  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting>;
+  rdfs:subClassOf <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Proef> .
 
 <https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting> a owl:Ontology;
   rdfs:label "proefenmeting"@en,
@@ -64,8 +797,7 @@
       foaf:name "AWV"
     ];
     foaf:firstName "Julien";
-    foaf:lastName "Wynants";
-    foaf:mbox <mailto:julien.wynants@mow.vlaanderen.be>
+    foaf:lastName "Wynants"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -73,8 +805,7 @@
       foaf:name "RealDolmen"
     ];
     foaf:firstName "Pim";
-    foaf:lastName "Wollants";
-    foaf:mbox <mailto:pim.wollants@realdolmen.com>
+    foaf:lastName "Wollants"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -82,8 +813,7 @@
       foaf:name "AWV"
     ];
     foaf:firstName "Wim";
-    foaf:lastName "Willaert";
-    foaf:mbox <mailto:Wim.Willaert@mow.vlaanderen.be>
+    foaf:lastName "Willaert"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -91,8 +821,7 @@
       foaf:name "AWV"
     ];
     foaf:firstName "Kristof";
-    foaf:lastName "Wieme";
-    foaf:mbox <mailto:kristof.wieme@mow.vlaanderen.be>
+    foaf:lastName "Wieme"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -100,8 +829,7 @@
       foaf:name "AWV"
     ];
     foaf:firstName "Bert";
-    foaf:lastName "Weyne";
-    foaf:mbox <mailto:bert.weyne@mow.vlaanderen.be>
+    foaf:lastName "Weyne"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -109,8 +837,7 @@
       foaf:name "AWV"
     ];
     foaf:firstName "Eli";
-    foaf:lastName "Weerts";
-    foaf:mbox <mailto:Eli.Weerts@mow.vlaanderen.be>
+    foaf:lastName "Weerts"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -118,8 +845,7 @@
       foaf:name "AWV"
     ];
     foaf:firstName "Koen";
-    foaf:lastName "Wardenier";
-    foaf:mbox <mailto:koen.wardenier@mow.vlaanderen.be>
+    foaf:lastName "Wardenier"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -127,8 +853,7 @@
       foaf:name "AWV"
     ];
     foaf:firstName "Pieter";
-    foaf:lastName "Vrijsen";
-    foaf:mbox <mailto:Pieter.Vrijsen@mow.vlaanderen.be>
+    foaf:lastName "Vrijsen"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -136,8 +861,7 @@
       foaf:name "AWV"
     ];
     foaf:firstName "David";
-    foaf:lastName "Vlaminck";
-    foaf:mbox <mailto:david.vlaminck@mow.vlaanderen.be>
+    foaf:lastName "Vlaminck"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -145,8 +869,7 @@
       foaf:name "Dynniq"
     ];
     foaf:firstName "Els";
-    foaf:lastName "Vivijs";
-    foaf:mbox <mailto:els.vivijs@dynniq.be>
+    foaf:lastName "Vivijs"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -154,8 +877,7 @@
       foaf:name "MOW afdeling Geotechniek"
     ];
     foaf:firstName "Leen";
-    foaf:lastName "Vincke";
-    foaf:mbox <mailto:leen.vincke@mow.vlaanderen.be>
+    foaf:lastName "Vincke"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -163,8 +885,7 @@
       foaf:name "AWV"
     ];
     foaf:firstName "Yoeri";
-    foaf:lastName "Vernelen";
-    foaf:mbox <mailto:Yoeri.Vernelen@mow.vlaanderen.be>
+    foaf:lastName "Vernelen"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -172,8 +893,7 @@
       foaf:name "Jidoka"
     ];
     foaf:firstName "Christopher";
-    foaf:lastName "Verhulst";
-    foaf:mbox <mailto:christopher.verhulst@jidoka.be>
+    foaf:lastName "Verhulst"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -181,8 +901,7 @@
       foaf:name "AWV"
     ];
     foaf:firstName "Tim";
-    foaf:lastName "Verhaeghe";
-    foaf:mbox <mailto:tim.verhaeghe@mow.vlaanderen.be>
+    foaf:lastName "Verhaeghe"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -190,8 +909,7 @@
       foaf:name "AWV"
     ];
     foaf:firstName "Frederick";
-    foaf:lastName "Verdonck";
-    foaf:mbox <mailto:frederick.verdonck@mow.vlaanderen.be>
+    foaf:lastName "Verdonck"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -199,8 +917,7 @@
       foaf:name "AWV"
     ];
     foaf:firstName "Arne";
-    foaf:lastName "Verburgh";
-    foaf:mbox <mailto:Arne.Verburgh@mow.vlaanderen.be>
+    foaf:lastName "Verburgh"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -208,8 +925,7 @@
       foaf:name "Geosolutions"
     ];
     foaf:firstName "Anouck";
-    foaf:lastName "Vanrykel";
-    foaf:mbox <mailto:anouck.vanrykel@geosolutions.be>
+    foaf:lastName "Vanrykel"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -217,8 +933,7 @@
       foaf:name "Bouwunie"
     ];
     foaf:firstName "Jerome";
-    foaf:lastName "Vanroye";
-    foaf:mbox <mailto:jerome.vanroye@telenet.be>
+    foaf:lastName "Vanroye"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -226,8 +941,7 @@
       foaf:name "INBO"
     ];
     foaf:firstName "Andy";
-    foaf:lastName "Vankerckvoorde";
-    foaf:mbox <mailto:andy.vankerckvoorde@inbo.be>
+    foaf:lastName "Vankerckvoorde"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -235,8 +949,7 @@
       foaf:name "AWV"
     ];
     foaf:firstName "Alvarez";
-    foaf:lastName "Vanhove";
-    foaf:mbox <mailto:Alvarez.Vanhove@mow.vlaanderen.be>
+    foaf:lastName "Vanhove"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -244,8 +957,7 @@
       foaf:name "AWV"
     ];
     foaf:firstName "Barbara";
-    foaf:lastName "Vanhooreweder";
-    foaf:mbox <mailto:Barbara.Vanhooreweder@mow.vlaanderen.be>
+    foaf:lastName "Vanhooreweder"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -253,8 +965,7 @@
       foaf:name "AWV"
     ];
     foaf:firstName "Peter";
-    foaf:lastName "Vandenhole";
-    foaf:mbox <mailto:peter.vandenhole@mow.vlaanderen.be>
+    foaf:lastName "Vandenhole"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -262,8 +973,7 @@
       foaf:name "AWV"
     ];
     foaf:firstName "Freek";
-    foaf:lastName "Vandenbussche";
-    foaf:mbox <mailto:Freek.Vandenbussche@mow.vlaanderen.be>
+    foaf:lastName "Vandenbussche"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -271,8 +981,7 @@
       foaf:name "AWV"
     ];
     foaf:firstName "Patrick";
-    foaf:lastName "Van den Heuvel";
-    foaf:mbox <mailto:patrick.vandenheuvel@mow.vlaanderen.be>
+    foaf:lastName "Van den Heuvel"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -280,8 +989,7 @@
       foaf:name "BAM NV"
     ];
     foaf:firstName "Maarten";
-    foaf:lastName "Van de poel";
-    foaf:mbox <mailto:maarten.vandepoel@bamnv.be>
+    foaf:lastName "Van de poel"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -289,8 +997,7 @@
       foaf:name "AWV"
     ];
     foaf:firstName "Bart";
-    foaf:lastName "Van Vaerenberg";
-    foaf:mbox <mailto:bart.vanvaerenberg@mow.vlaanderen.be>
+    foaf:lastName "Van Vaerenberg"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -298,8 +1005,7 @@
       foaf:name "AWV"
     ];
     foaf:firstName "Pieter";
-    foaf:lastName "Van Nieuwerburgh";
-    foaf:mbox <mailto:Pieter.VanNieuwerburgh@mow.vlaanderen.be>
+    foaf:lastName "Van Nieuwerburgh"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -307,8 +1013,7 @@
       foaf:name "AWV"
     ];
     foaf:firstName "Sam";
-    foaf:lastName "Van Nieuwenhuyse";
-    foaf:mbox <mailto:sam.vannieuwenhuyse@mow.vlaanderen.be>
+    foaf:lastName "Van Nieuwenhuyse"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -316,8 +1021,7 @@
       foaf:name "Arcadis"
     ];
     foaf:firstName "Ann";
-    foaf:lastName "Van Melkebeek";
-    foaf:mbox <mailto:ann.vanmelkebeek@arcadis.com>
+    foaf:lastName "Van Melkebeek"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -325,8 +1029,7 @@
       foaf:name "AWV"
     ];
     foaf:firstName "Annick";
-    foaf:lastName "Van Laere";
-    foaf:mbox <mailto:annick.vanlaere@mow.vlaanderen.be>
+    foaf:lastName "Van Laere"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -334,8 +1037,7 @@
       foaf:name "AWV"
     ];
     foaf:firstName "Stanny";
-    foaf:lastName "Van Herzeele";
-    foaf:mbox <mailto:stanny.vanherzeele@mow.vlaanderen.be>
+    foaf:lastName "Van Herzeele"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -343,8 +1045,7 @@
       foaf:name "AWV"
     ];
     foaf:firstName "Wouter";
-    foaf:lastName "Van Herck";
-    foaf:mbox <mailto:Wouter.VanHerck@mow.vlaanderen.be>
+    foaf:lastName "Van Herck"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -352,8 +1053,7 @@
       foaf:name "AWV"
     ];
     foaf:firstName "Jan";
-    foaf:lastName "Van Gestel";
-    foaf:mbox <mailto:Jan.VanGestel@mow.vlaanderen.be>
+    foaf:lastName "Van Gestel"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -361,8 +1061,7 @@
       foaf:name "AWV"
     ];
     foaf:firstName "Bert";
-    foaf:lastName "Van Gaver";
-    foaf:mbox <mailto:Bert.VanGaver@mow.vlaanderen.be>
+    foaf:lastName "Van Gaver"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -378,8 +1077,7 @@
       foaf:name "AWV"
     ];
     foaf:firstName "Karl";
-    foaf:lastName "Van Duppen";
-    foaf:mbox <mailto:karl.vanduppen@mow.vlaanderen.be>
+    foaf:lastName "Van Duppen"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -387,8 +1085,7 @@
       foaf:name "VMM"
     ];
     foaf:firstName "Koen";
-    foaf:lastName "Van Driessen";
-    foaf:mbox <mailto:k.vandriessen@vmm.be>
+    foaf:lastName "Van Driessen"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -396,8 +1093,7 @@
       foaf:name "Techlink"
     ];
     foaf:firstName "Kris";
-    foaf:lastName "Van Dingenen";
-    foaf:mbox <mailto:kris.vandingenen@techlink.be>
+    foaf:lastName "Van Dingenen"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -405,8 +1101,7 @@
       foaf:name "Departement Omgeving"
     ];
     foaf:firstName "Marleen";
-    foaf:lastName "Van Damme";
-    foaf:mbox <mailto:marleen.vandamme@vlaanderen.be>
+    foaf:lastName "Van Damme"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -414,8 +1109,7 @@
       foaf:name "AWV"
     ];
     foaf:firstName "Tine";
-    foaf:lastName "Van Damme";
-    foaf:mbox <mailto:tine.vandamme@mow.vlaanderen.be>
+    foaf:lastName "Van Damme"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -423,8 +1117,7 @@
       foaf:name "AWV"
     ];
     foaf:firstName "Liesbeth";
-    foaf:lastName "Van Camp";
-    foaf:mbox <mailto:Liesbeth.VanCamp@mow.vlaanderen.be>
+    foaf:lastName "Van Camp"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -432,8 +1125,7 @@
       foaf:name "AWV"
     ];
     foaf:firstName "Tom";
-    foaf:lastName "Van Calster";
-    foaf:mbox <mailto:tom.vancalster@mow.vlaanderen.be>
+    foaf:lastName "Van Calster"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -441,8 +1133,7 @@
       foaf:name "AWV"
     ];
     foaf:firstName "Bert";
-    foaf:lastName "Van Buyten";
-    foaf:mbox <mailto:Bert.VanBuyten@mow.vlaanderen.be>
+    foaf:lastName "Van Buyten"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -450,8 +1141,7 @@
       foaf:name "AWV"
     ];
     foaf:firstName "Jan";
-    foaf:lastName "Van Boxelaere";
-    foaf:mbox <mailto:jan.vanboxelaere@mow.vlaanderen.be>
+    foaf:lastName "Van Boxelaere"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -459,8 +1149,7 @@
       foaf:name "AWV"
     ];
     foaf:firstName "Patrick";
-    foaf:lastName "Van Acker";
-    foaf:mbox <mailto:patrick.vanacker@mow.vlaanderen.be>
+    foaf:lastName "Van Acker"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -468,8 +1157,7 @@
       foaf:name "Ixor"
     ];
     foaf:firstName "Christian";
-    foaf:lastName "Tytgat";
-    foaf:mbox <mailto:christian.tytgat@ixor.be>
+    foaf:lastName "Tytgat"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -477,8 +1165,7 @@
       foaf:name "Arcadis"
     ];
     foaf:firstName "Andrea";
-    foaf:lastName "Trincado Fernandez";
-    foaf:mbox <mailto:andrea.trincadofernandez@arcadis.com>
+    foaf:lastName "Trincado Fernandez"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -486,8 +1173,7 @@
       foaf:name "VMM"
     ];
     foaf:firstName "Philip";
-    foaf:lastName "Thomas";
-    foaf:mbox <mailto:P.Thomas@vmm.be>
+    foaf:lastName "Thomas"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -495,8 +1181,7 @@
       foaf:name "VMM"
     ];
     foaf:firstName "Ivo";
-    foaf:lastName "Terrens";
-    foaf:mbox <mailto:I.Terrens@vmm.be>
+    foaf:lastName "Terrens"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -504,8 +1189,7 @@
       foaf:name "Witas"
     ];
     foaf:firstName "Wim";
-    foaf:lastName "Tas";
-    foaf:mbox <mailto:wim@witas.be>
+    foaf:lastName "Tas"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -513,8 +1197,7 @@
       foaf:name "AWV"
     ];
     foaf:firstName "Immanuel";
-    foaf:lastName "Taets";
-    foaf:mbox <mailto:Immanuel.Taets@mow.vlaanderen.be>
+    foaf:lastName "Taets"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -522,8 +1205,7 @@
       foaf:name "AWV"
     ];
     foaf:firstName "Peter";
-    foaf:lastName "Stulens";
-    foaf:mbox <mailto:Peter.Stulens@mow.vlaanderen.be>
+    foaf:lastName "Stulens"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -531,8 +1213,7 @@
       foaf:name "AWV"
     ];
     foaf:firstName "Guy";
-    foaf:lastName "Sonck";
-    foaf:mbox <mailto:guy.sonck@mow.vlaanderen.be>
+    foaf:lastName "Sonck"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -540,8 +1221,7 @@
       foaf:name "AWV"
     ];
     foaf:firstName "Jeremy";
-    foaf:lastName "Soenens";
-    foaf:mbox <mailto:Jeremy.Soenens@mow.vlaanderen.be>
+    foaf:lastName "Soenens"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -549,8 +1229,7 @@
       foaf:name "AIV"
     ];
     foaf:firstName "Jens";
-    foaf:lastName "Scheerlinck";
-    foaf:mbox <mailto:Jens.Scheerlinck@kb.vlaanderen.be>
+    foaf:lastName "Scheerlinck"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -558,8 +1237,7 @@
       foaf:name "PWC"
     ];
     foaf:firstName "Jens";
-    foaf:lastName "Scheerlinck";
-    foaf:mbox <mailto:jens.scheerlinck@pwc.com>
+    foaf:lastName "Scheerlinck"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -567,8 +1245,7 @@
       foaf:name "BAM NV"
     ];
     foaf:firstName "Stephan";
-    foaf:lastName "Schaeffer";
-    foaf:mbox <mailto:stephan.schaeffer@bamnv.be>
+    foaf:lastName "Schaeffer"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -576,8 +1253,7 @@
       foaf:name "AIV"
     ];
     foaf:firstName "Liesbeth";
-    foaf:lastName "Rombouts";
-    foaf:mbox <mailto:Liesbeth.Rombouts@kb.vlaanderen.be>
+    foaf:lastName "Rombouts"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -585,8 +1261,7 @@
       foaf:name "AWV"
     ];
     foaf:firstName "Mathias";
-    foaf:lastName "Renders";
-    foaf:mbox <mailto:Mathias.Renders@mow.vlaanderen.be>
+    foaf:lastName "Renders"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -594,8 +1269,7 @@
       foaf:name "AWV"
     ];
     foaf:firstName "Kristof";
-    foaf:lastName "Ramaekers";
-    foaf:mbox <mailto:Kristof.Ramaekers@mow.vlaanderen.be>
+    foaf:lastName "Ramaekers"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -603,8 +1277,7 @@
       foaf:name "AWV"
     ];
     foaf:firstName "Thomas";
-    foaf:lastName "Plumet";
-    foaf:mbox <mailto:thomas.plumet@mow.vlaanderen.be>
+    foaf:lastName "Plumet"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -612,8 +1285,7 @@
       foaf:name "AWV"
     ];
     foaf:firstName "Mark";
-    foaf:lastName "Pissens";
-    foaf:mbox <mailto:Mark.Pissens@mow.vlaanderen.be>
+    foaf:lastName "Pissens"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -621,8 +1293,7 @@
       foaf:name "AWV"
     ];
     foaf:firstName "Isabelle";
-    foaf:lastName "Piette";
-    foaf:mbox <mailto:isabelle.piette@mow.vlaanderen.be>
+    foaf:lastName "Piette"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -630,8 +1301,7 @@
       foaf:name "AWV"
     ];
     foaf:firstName "Stephane";
-    foaf:lastName "Peeters";
-    foaf:mbox <mailto:stephane.peeters@mow.vlaanderen.be>
+    foaf:lastName "Peeters"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -639,8 +1309,7 @@
       foaf:name "AWV"
     ];
     foaf:firstName "Danny";
-    foaf:lastName "Peelaers";
-    foaf:mbox <mailto:Danny.Peelaers@mow.vlaanderen.be>
+    foaf:lastName "Peelaers"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -648,8 +1317,7 @@
       foaf:name "AWV"
     ];
     foaf:firstName "Willem";
-    foaf:lastName "Pauwels";
-    foaf:mbox <mailto:willem.pauwels@mow.vlaanderen.be>
+    foaf:lastName "Pauwels"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -657,8 +1325,7 @@
       foaf:name "AWV"
     ];
     foaf:firstName "Timothy";
-    foaf:lastName "Nuttens";
-    foaf:mbox <mailto:Timothy.Nuttens@mow.vlaanderen.be>
+    foaf:lastName "Nuttens"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -666,8 +1333,7 @@
       foaf:name "AWV"
     ];
     foaf:firstName "Bjorn";
-    foaf:lastName "Mortier";
-    foaf:mbox <mailto:Bjorn.Mortier@mow.vlaanderen.be>
+    foaf:lastName "Mortier"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -675,8 +1341,7 @@
       foaf:name "AWV"
     ];
     foaf:firstName "Marleen";
-    foaf:lastName "Moelants";
-    foaf:mbox <mailto:Marleen.Moelants@mow.vlaanderen.be>
+    foaf:lastName "Moelants"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -684,8 +1349,7 @@
       foaf:name "VMM"
     ];
     foaf:firstName "Katleen";
-    foaf:lastName "Miserez";
-    foaf:mbox <mailto:K.Miserez@vmm.be>
+    foaf:lastName "Miserez"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -693,8 +1357,7 @@
       foaf:name "AWV"
     ];
     foaf:firstName "Koen";
-    foaf:lastName "Meulemans";
-    foaf:mbox <mailto:koen.meulemans@mow.vlaanderen.be>
+    foaf:lastName "Meulemans"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -702,8 +1365,7 @@
       foaf:name "AWV"
     ];
     foaf:firstName "Alex";
-    foaf:lastName "Mettepenningen";
-    foaf:mbox <mailto:alex.mettepenningen@mow.vlaanderen.be>
+    foaf:lastName "Mettepenningen"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -711,8 +1373,7 @@
       foaf:name "AWV"
     ];
     foaf:firstName "Peter";
-    foaf:lastName "Merlevede";
-    foaf:mbox <mailto:Peter.Merlevede@mow.vlaanderen.be>
+    foaf:lastName "Merlevede"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -720,8 +1381,7 @@
       foaf:name "AWV"
     ];
     foaf:firstName "Bart";
-    foaf:lastName "Mergaerts";
-    foaf:mbox <mailto:Bart.Mergaerts@mow.vlaanderen.be>
+    foaf:lastName "Mergaerts"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -729,8 +1389,7 @@
       foaf:name "LNE"
     ];
     foaf:firstName "Jan";
-    foaf:lastName "Menschaert";
-    foaf:mbox <mailto:jan.menschaert@lne.vlaanderen.be>
+    foaf:lastName "Menschaert"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -738,8 +1397,7 @@
       foaf:name "AWV"
     ];
     foaf:firstName "Davy";
-    foaf:lastName "Meeus";
-    foaf:mbox <mailto:davy.meeus@mow.vlaanderen.be>
+    foaf:lastName "Meeus"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -747,8 +1405,7 @@
       foaf:name "AWV"
     ];
     foaf:firstName "Wim";
-    foaf:lastName "Meermans";
-    foaf:mbox <mailto:Wim.Meermans@mow.vlaanderen.be>
+    foaf:lastName "Meermans"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -756,14 +1413,12 @@
       foaf:name "VMM"
     ];
     foaf:firstName "Koen";
-    foaf:lastName "Martens";
-    foaf:mbox <mailto:k.martens@vmm.be>
+    foaf:lastName "Martens"
   ], [
     a foaf:Person;
     schema:affiliation [foaf:name "Geovise"];
     foaf:firstName "Karel";
-    foaf:lastName "Maesen";
-    foaf:mbox <mailto:karel@geovise.com>
+    foaf:lastName "Maesen"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -771,8 +1426,7 @@
       foaf:name "Pointfree"
     ];
     foaf:firstName "Joachim";
-    foaf:lastName "Maes";
-    foaf:mbox <mailto:joachim.maes@pointfree.be>
+    foaf:lastName "Maes"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -780,8 +1434,7 @@
       foaf:name "AWV"
     ];
     foaf:firstName "Rudi";
-    foaf:lastName "Luyten";
-    foaf:mbox <mailto:Rudi.Luyten@mow.vlaanderen.be>
+    foaf:lastName "Luyten"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -789,8 +1442,7 @@
       foaf:name "Infoflow"
     ];
     foaf:firstName "Christophe";
-    foaf:lastName "Luyckx";
-    foaf:mbox <mailto:christopheluyckx@infoflow.be>
+    foaf:lastName "Luyckx"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -798,8 +1450,7 @@
       foaf:name "VMM"
     ];
     foaf:firstName "Dries";
-    foaf:lastName "Luts";
-    foaf:mbox <mailto:D.Luts@vmm.be>
+    foaf:lastName "Luts"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -807,8 +1458,7 @@
       foaf:name "Aquafin"
     ];
     foaf:firstName "Pieter";
-    foaf:lastName "Lootens";
-    foaf:mbox <mailto:pieter.lootens@aquafin.be>
+    foaf:lastName "Lootens"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -816,8 +1466,7 @@
       foaf:name "AWV"
     ];
     foaf:firstName "Tim";
-    foaf:lastName "Lonneux";
-    foaf:mbox <mailto:tim.lonneux@mow.vlaanderen.be>
+    foaf:lastName "Lonneux"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -825,8 +1474,7 @@
       foaf:name "AWV"
     ];
     foaf:firstName "Herman";
-    foaf:lastName "Longueville";
-    foaf:mbox <mailto:herman.longueville@mow.vlaanderen.be>
+    foaf:lastName "Longueville"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -834,8 +1482,7 @@
       foaf:name "AWV"
     ];
     foaf:firstName "Peter";
-    foaf:lastName "Lewyllie";
-    foaf:mbox <mailto:peter.lewyllie@mow.vlaanderen.be>
+    foaf:lastName "Lewyllie"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -843,8 +1490,7 @@
       foaf:name "Aquafin"
     ];
     foaf:firstName "Mieke";
-    foaf:lastName "Lesage";
-    foaf:mbox <mailto:mieke.lesage@aquafin.be>
+    foaf:lastName "Lesage"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -852,8 +1498,7 @@
       foaf:name "AWV"
     ];
     foaf:firstName "Luc";
-    foaf:lastName "Laurys";
-    foaf:mbox <mailto:luc.laurys@mow.vlaanderen.be>
+    foaf:lastName "Laurys"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -861,8 +1506,7 @@
       foaf:name "AWV"
     ];
     foaf:firstName "Jurgen";
-    foaf:lastName "Latte";
-    foaf:mbox <mailto:jurgen.latte@mow.vlaanderen.be>
+    foaf:lastName "Latte"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -870,8 +1514,7 @@
       foaf:name "AWV"
     ];
     foaf:firstName "Yanick";
-    foaf:lastName "Lathuy";
-    foaf:mbox <mailto:yanick.lathuy@mow.vlaanderen.be>
+    foaf:lastName "Lathuy"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -879,8 +1522,7 @@
       foaf:name "AWV"
     ];
     foaf:firstName "Jo";
-    foaf:lastName "Laps";
-    foaf:mbox <mailto:Jo.Laps@mow.vlaanderen.be>
+    foaf:lastName "Laps"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -888,8 +1530,7 @@
       foaf:name "AWV"
     ];
     foaf:firstName "John";
-    foaf:lastName "Lammertyn";
-    foaf:mbox <mailto:john.lammertyn@mow.vlaanderen.be>
+    foaf:lastName "Lammertyn"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -897,8 +1538,7 @@
       foaf:name "AWV"
     ];
     foaf:firstName "Philip";
-    foaf:lastName "Lameire";
-    foaf:mbox <mailto:philip.lameire@mow.vlaanderen.be>
+    foaf:lastName "Lameire"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -906,8 +1546,7 @@
       foaf:name "AWV"
     ];
     foaf:firstName "Philippe";
-    foaf:lastName "Keppens";
-    foaf:mbox <mailto:Philippe.Keppens@mow.vlaanderen.be>
+    foaf:lastName "Keppens"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -915,8 +1554,7 @@
       foaf:name "AWV"
     ];
     foaf:firstName "Claudia";
-    foaf:lastName "Juvyns";
-    foaf:mbox <mailto:claudia.juvyns@mow.vlaanderen.be>
+    foaf:lastName "Juvyns"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -924,8 +1562,7 @@
       foaf:name "AWV"
     ];
     foaf:firstName "Bart";
-    foaf:lastName "Janssens";
-    foaf:mbox <mailto:Bart.Janssens@mow.vlaanderen.be>
+    foaf:lastName "Janssens"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -933,8 +1570,7 @@
       foaf:name "Autodesk"
     ];
     foaf:firstName "Peter";
-    foaf:lastName "Ingels";
-    foaf:mbox <mailto:peter.ingels@autodesk.com>
+    foaf:lastName "Ingels"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -942,8 +1578,7 @@
       foaf:name "AWV"
     ];
     foaf:firstName "Ruben";
-    foaf:lastName "Huylebroeck";
-    foaf:mbox <mailto:ruben.huylebroeck@mow.vlaanderen.be>
+    foaf:lastName "Huylebroeck"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -951,8 +1586,7 @@
       foaf:name "AWV"
     ];
     foaf:firstName "Kris";
-    foaf:lastName "Huygen";
-    foaf:mbox <mailto:Kris.Huygen@mow.vlaanderen.be>
+    foaf:lastName "Huygen"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -960,8 +1594,7 @@
       foaf:name "AWV"
     ];
     foaf:firstName "Peter";
-    foaf:lastName "Hooreweghe";
-    foaf:mbox <mailto:peter.hooreweghe@mow.vlaanderen.be>
+    foaf:lastName "Hooreweghe"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -969,8 +1602,7 @@
       foaf:name "Dynniq"
     ];
     foaf:firstName "Annick";
-    foaf:lastName "Hooge";
-    foaf:mbox <mailto:annick.hooge@dynniq.be>
+    foaf:lastName "Hooge"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -978,8 +1610,7 @@
       foaf:name "AWV"
     ];
     foaf:firstName "Josef";
-    foaf:lastName "Hennissen";
-    foaf:mbox <mailto:josef.hennissen@mow.vlaanderen.be>
+    foaf:lastName "Hennissen"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -987,8 +1618,7 @@
       foaf:name "AWV"
     ];
     foaf:firstName "Dirk";
-    foaf:lastName "Goelen";
-    foaf:mbox <mailto:dirk.goelen@mow.vlaanderen.be>
+    foaf:lastName "Goelen"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -996,8 +1626,7 @@
       foaf:name "GIM"
     ];
     foaf:firstName "Stijn";
-    foaf:lastName "Goedertier";
-    foaf:mbox <mailto:stijn.goedertier@gim.be>
+    foaf:lastName "Goedertier"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -1005,8 +1634,7 @@
       foaf:name "AWV"
     ];
     foaf:firstName "Nele";
-    foaf:lastName "Gheysen";
-    foaf:mbox <mailto:nele.gheysen@mow.vlaanderen.be>
+    foaf:lastName "Gheysen"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -1014,8 +1642,7 @@
       foaf:name "Pàu"
     ];
     foaf:firstName "Benoit";
-    foaf:lastName "Gevaert";
-    foaf:mbox <mailto:benoit@pau.be>
+    foaf:lastName "Gevaert"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -1023,8 +1650,7 @@
       foaf:name "AWV"
     ];
     foaf:firstName "Dave";
-    foaf:lastName "Geudens";
-    foaf:mbox <mailto:dave.geudens@mow.vlaanderen.be>
+    foaf:lastName "Geudens"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -1032,8 +1658,7 @@
       foaf:name "AWV"
     ];
     foaf:firstName "Ben";
-    foaf:lastName "Geerts";
-    foaf:mbox <mailto:ben.geerts@mow.vlaanderen.be>
+    foaf:lastName "Geerts"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -1041,8 +1666,7 @@
       foaf:name "AWV"
     ];
     foaf:firstName "Sofie";
-    foaf:lastName "Geens";
-    foaf:mbox <mailto:Sofie.Geens@mow.vlaanderen.be>
+    foaf:lastName "Geens"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -1050,8 +1674,7 @@
       foaf:name "Dynniq"
     ];
     foaf:firstName "Peter";
-    foaf:lastName "Gaublomme";
-    foaf:mbox <mailto:peter.gaublomme@dynniq.be>
+    foaf:lastName "Gaublomme"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -1059,8 +1682,7 @@
       foaf:name "Vlario"
     ];
     foaf:firstName "Wendy";
-    foaf:lastName "Francken";
-    foaf:mbox <mailto:wendy.francken@vlario.be>
+    foaf:lastName "Francken"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -1068,8 +1690,7 @@
       foaf:name "BAM NV"
     ];
     foaf:firstName "Yves";
-    foaf:lastName "Ferong";
-    foaf:mbox <mailto:yves.ferong@bamnv.be>
+    foaf:lastName "Ferong"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -1077,8 +1698,7 @@
       foaf:name "AWV"
     ];
     foaf:firstName "Dirk";
-    foaf:lastName "Eelen";
-    foaf:mbox <mailto:dirk.eelen@mow.vlaanderen.be>
+    foaf:lastName "Eelen"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -1086,8 +1706,7 @@
       foaf:name "AWV"
     ];
     foaf:firstName "Migäel";
-    foaf:lastName "Duro Gonzalez";
-    foaf:mbox <mailto:migäel.durogonzalez@mow.vlaanderen.be>
+    foaf:lastName "Duro Gonzalez"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -1095,8 +1714,7 @@
       foaf:name "AWV"
     ];
     foaf:firstName "Tony";
-    foaf:lastName "Durinck";
-    foaf:mbox <mailto:tony.durinck@mow.vlaanderen.be>
+    foaf:lastName "Durinck"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -1104,8 +1722,7 @@
       foaf:name "AWV"
     ];
     foaf:firstName "Mario";
-    foaf:lastName "Dumon";
-    foaf:mbox <mailto:Mario.Dumon@mow.vlaanderen.be>
+    foaf:lastName "Dumon"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -1113,8 +1730,7 @@
       foaf:name "Ixor"
     ];
     foaf:firstName "Vincent";
-    foaf:lastName "Ducheyne";
-    foaf:mbox <mailto:vincent.ducheyne@ixor.be>
+    foaf:lastName "Ducheyne"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -1122,8 +1738,7 @@
       foaf:name "AWV"
     ];
     foaf:firstName "Lieven";
-    foaf:lastName "Duchateau";
-    foaf:mbox <mailto:lieven.duchateau@mow.vlaanderen.be>
+    foaf:lastName "Duchateau"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -1131,8 +1746,7 @@
       foaf:name "AWV"
     ];
     foaf:firstName "Kris";
-    foaf:lastName "Dhondt";
-    foaf:mbox <mailto:kris.dhondt@mow.vlaanderen.be>
+    foaf:lastName "Dhondt"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -1140,8 +1754,7 @@
       foaf:name "Vlaanderen Connect"
     ];
     foaf:firstName "Anthony";
-    foaf:lastName "Dewulf";
-    foaf:mbox <mailto:anthony.dewulf@mow.vlaanderen.be>
+    foaf:lastName "Dewulf"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -1149,8 +1762,7 @@
       foaf:name "AWV"
     ];
     foaf:firstName "Bram";
-    foaf:lastName "Dewil";
-    foaf:mbox <mailto:Bram.Dewil@mow.vlaanderen.be>
+    foaf:lastName "Dewil"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -1158,8 +1770,7 @@
       foaf:name "VlaWeBo"
     ];
     foaf:firstName "Eli";
-    foaf:lastName "Desmedt";
-    foaf:mbox <mailto:eli.desmedt@confederatiebouw.be>
+    foaf:lastName "Desmedt"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -1167,8 +1778,7 @@
       foaf:name "AWV"
     ];
     foaf:firstName "Tom";
-    foaf:lastName "Deschilder";
-    foaf:mbox <mailto:Tom.Deschilder@mow.vlaanderen.be>
+    foaf:lastName "Deschilder"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -1176,8 +1786,7 @@
       foaf:name "AWV"
     ];
     foaf:firstName "Joachim";
-    foaf:lastName "Dero";
-    foaf:mbox <mailto:Joachim.Dero@mow.vlaanderen.be>
+    foaf:lastName "Dero"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -1185,8 +1794,7 @@
       foaf:name "AWV"
     ];
     foaf:firstName "Veerle";
-    foaf:lastName "Delcourt";
-    foaf:mbox <mailto:veerle.delcourt@mow.vlaanderen.be>
+    foaf:lastName "Delcourt"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -1194,8 +1802,7 @@
       foaf:name "AWV"
     ];
     foaf:firstName "Katrien";
-    foaf:lastName "Decock";
-    foaf:mbox <mailto:Katrien.Decock@mow.vlaanderen.be>
+    foaf:lastName "Decock"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -1203,8 +1810,7 @@
       foaf:name "AIV"
     ];
     foaf:firstName "Liesbet";
-    foaf:lastName "De wolf";
-    foaf:mbox <mailto:liesbet.dewolf@kb.vlaanderen.be>
+    foaf:lastName "De wolf"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -1212,8 +1818,7 @@
       foaf:name "VMM"
     ];
     foaf:firstName "Koen";
-    foaf:lastName "De Witte";
-    foaf:mbox <mailto:K.DeWitte@vmm.be>
+    foaf:lastName "De Witte"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -1221,8 +1826,7 @@
       foaf:name "AWV"
     ];
     foaf:firstName "Karen";
-    foaf:lastName "De Winne";
-    foaf:mbox <mailto:karen.dewinne@mow.vlaanderen.be>
+    foaf:lastName "De Winne"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -1230,8 +1834,7 @@
       foaf:name "VMSW"
     ];
     foaf:firstName "Theo";
-    foaf:lastName "De Vos";
-    foaf:mbox <mailto:theo.devos@vmsw.be>
+    foaf:lastName "De Vos"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -1239,8 +1842,7 @@
       foaf:name "Arcadis"
     ];
     foaf:firstName "Geert";
-    foaf:lastName "De Smedt";
-    foaf:mbox <mailto:geert.desmedt@arcadis.com>
+    foaf:lastName "De Smedt"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -1248,8 +1850,7 @@
       foaf:name "Natuur en Bos"
     ];
     foaf:firstName "Carl";
-    foaf:lastName "De Schepper";
-    foaf:mbox <mailto:carl.deschepper@vlaanderen.be>
+    foaf:lastName "De Schepper"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -1257,8 +1858,7 @@
       foaf:name "VMSW"
     ];
     foaf:firstName "Marcel";
-    foaf:lastName "De Brael";
-    foaf:mbox <mailto:marcel.debrael@vmsw.be>
+    foaf:lastName "De Brael"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -1266,8 +1866,7 @@
       foaf:name "AWV"
     ];
     foaf:firstName "Erik";
-    foaf:lastName "De Bisschop";
-    foaf:mbox <mailto:Erik.DeBisschop@mow.vlaanderen.be>
+    foaf:lastName "De Bisschop"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -1275,8 +1874,7 @@
       foaf:name "AWV"
     ];
     foaf:firstName "Wim";
-    foaf:lastName "Danheel";
-    foaf:mbox <mailto:Wim.Danheel@mow.vlaanderen.be>
+    foaf:lastName "Danheel"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -1284,8 +1882,7 @@
       foaf:name "AWV"
     ];
     foaf:firstName "Johan";
-    foaf:lastName "Dalins";
-    foaf:mbox <mailto:Johan.Dalins@mow.vlaanderen.be>
+    foaf:lastName "Dalins"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -1293,8 +1890,7 @@
       foaf:name "AWV"
     ];
     foaf:firstName "Sammy";
-    foaf:lastName "Dalewyn";
-    foaf:mbox <mailto:sammy.dalewyn@mow.vlaanderen.be>
+    foaf:lastName "Dalewyn"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -1302,8 +1898,7 @@
       foaf:name "VMSW"
     ];
     foaf:firstName "Johan";
-    foaf:lastName "Criquielion";
-    foaf:mbox <mailto:johan.criquielion@vmsw.be>
+    foaf:lastName "Criquielion"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -1311,8 +1906,7 @@
       foaf:name "AWV"
     ];
     foaf:firstName "Kathy";
-    foaf:lastName "Courtens";
-    foaf:mbox <mailto:kathy.courtens@mow.vlaanderen.be>
+    foaf:lastName "Courtens"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -1320,8 +1914,7 @@
       foaf:name "AWV"
     ];
     foaf:firstName "Jan";
-    foaf:lastName "Couck";
-    foaf:mbox <mailto:Jan.Couck@mow.vlaanderen.be>
+    foaf:lastName "Couck"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -1329,8 +1922,7 @@
       foaf:name "AWV"
     ];
     foaf:firstName "Kristof";
-    foaf:lastName "Coppens";
-    foaf:mbox <mailto:Kristof.Coppens@mow.vlaanderen.be>
+    foaf:lastName "Coppens"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -1338,8 +1930,7 @@
       foaf:name "Willemen Infra"
     ];
     foaf:firstName "Frank";
-    foaf:lastName "Christianen";
-    foaf:mbox <mailto:frank.christianen@willemeninfra.be>
+    foaf:lastName "Christianen"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -1347,8 +1938,7 @@
       foaf:name "AWV"
     ];
     foaf:firstName "Kurt";
-    foaf:lastName "Ceulemans";
-    foaf:mbox <mailto:kurt.ceulemans@mow.vlaanderen.be>
+    foaf:lastName "Ceulemans"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -1356,8 +1946,7 @@
       foaf:name "AWV"
     ];
     foaf:firstName "Ann";
-    foaf:lastName "Buytaert";
-    foaf:mbox <mailto:Ann.Buytaert@mow.vlaanderen.be>
+    foaf:lastName "Buytaert"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -1365,8 +1954,7 @@
       foaf:name "Geonius"
     ];
     foaf:firstName "Jordy";
-    foaf:lastName "Brouwers";
-    foaf:mbox <mailto:j.brouwers@geonius.nl>
+    foaf:lastName "Brouwers"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -1374,8 +1962,7 @@
       foaf:name "AWV"
     ];
     foaf:firstName "Boudewijn";
-    foaf:lastName "Broodcoorens";
-    foaf:mbox <mailto:Boudewijn.Broodcoorens@mow.vlaanderen.be>
+    foaf:lastName "Broodcoorens"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -1383,8 +1970,7 @@
       foaf:name "AWV"
     ];
     foaf:firstName "Margo";
-    foaf:lastName "Briessinck";
-    foaf:mbox <mailto:Margo.Briessinck@mow.vlaanderen.be>
+    foaf:lastName "Briessinck"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -1392,8 +1978,7 @@
       foaf:name "AWV"
     ];
     foaf:firstName "Jan";
-    foaf:lastName "Bosmans";
-    foaf:mbox <mailto:jan.bosmans@mow.vlaanderen.be>
+    foaf:lastName "Bosmans"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -1401,8 +1986,7 @@
       foaf:name "MOW"
     ];
     foaf:firstName "Sophie";
-    foaf:lastName "Bordere";
-    foaf:mbox <mailto:Sophie.Bordere@mow.vlaanderen.be>
+    foaf:lastName "Bordere"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -1410,8 +1994,7 @@
       foaf:name "AWV"
     ];
     foaf:firstName "Hans";
-    foaf:lastName "Bonte";
-    foaf:mbox <mailto:hans.bonte@mow.vlaanderen.be>
+    foaf:lastName "Bonte"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -1419,8 +2002,7 @@
       foaf:name "AWV"
     ];
     foaf:firstName "Natasha";
-    foaf:lastName "Blommaert";
-    foaf:mbox <mailto:Natasha.Blommaert@mow.vlaanderen.be>
+    foaf:lastName "Blommaert"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -1428,8 +2010,7 @@
       foaf:name "AWV"
     ];
     foaf:firstName "Koen";
-    foaf:lastName "Beuckels";
-    foaf:mbox <mailto:koen.beuckels@mow.vlaanderen.be>
+    foaf:lastName "Beuckels"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -1437,8 +2018,7 @@
       foaf:name "AWV"
     ];
     foaf:firstName "Carine";
-    foaf:lastName "Berre";
-    foaf:mbox <mailto:carine.berre@mow.vlaanderen.be>
+    foaf:lastName "Berre"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -1446,8 +2026,7 @@
       foaf:name "VMM"
     ];
     foaf:firstName "Katia";
-    foaf:lastName "Beringhs";
-    foaf:mbox <mailto:K.Beringhs@vmm.be>
+    foaf:lastName "Beringhs"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -1455,8 +2034,7 @@
       foaf:name "Geosolutions"
     ];
     foaf:firstName "Bernard";
-    foaf:lastName "Baetens";
-    foaf:mbox <mailto:bernard.baetens@geosolutions.be>
+    foaf:lastName "Baetens"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -1464,8 +2042,7 @@
       foaf:name "Dynniq"
     ];
     foaf:firstName "Danny";
-    foaf:lastName "Asselman";
-    foaf:mbox <mailto:danny.asselman@dynniq.be>
+    foaf:lastName "Asselman"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -1473,8 +2050,7 @@
       foaf:name "AWV"
     ];
     foaf:firstName "Mustafa";
-    foaf:lastName "Aktas";
-    foaf:mbox <mailto:Mustafa.Aktas@mow.vlaanderen.be>
+    foaf:lastName "Aktas"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -1482,8 +2058,7 @@
       foaf:name "AWV"
     ];
     foaf:firstName "Kris";
-    foaf:lastName "Aernout";
-    foaf:mbox <mailto:kris.aernout@mow.vlaanderen.be>
+    foaf:lastName "Aernout"
   ];
   dc:issued "TODO";
   dc:license "https://data.vlaanderen.be/id/licentie/modellicentie-gratis-hergebruik/v1.0",
@@ -1500,8 +2075,7 @@
       foaf:name "AWV"
     ];
     foaf:firstName "Raf";
-    foaf:lastName "Vanlathem";
-    foaf:mbox <mailto:raf.vanlathem@mow.vlaanderen.be>
+    foaf:lastName "Vanlathem"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -1509,8 +2083,7 @@
       foaf:name "2m@BIT"
     ];
     foaf:firstName "Davy";
-    foaf:lastName "Vanhoudt";
-    foaf:mbox <mailto:Davy.Vanhoudt@outlook.be>
+    foaf:lastName "Vanhoudt"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -1518,8 +2091,7 @@
       foaf:name "Swecobelgium"
     ];
     foaf:firstName "Arno";
-    foaf:lastName "VanDyck";
-    foaf:mbox <mailto:Arno.vandyck@swecobelgium.be>
+    foaf:lastName "VanDyck"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -1527,8 +2099,7 @@
       foaf:name "Swecobelgium"
     ];
     foaf:firstName "Ricardo";
-    foaf:lastName "Sousa";
-    foaf:mbox <mailto:Ricardo.Sousa@swecobelgium.be>
+    foaf:lastName "Sousa"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -1536,8 +2107,7 @@
       foaf:name "ACPartners"
     ];
     foaf:firstName "Joost";
-    foaf:lastName "De Weghe";
-    foaf:mbox <mailto:deweghejoost@gmail.com>
+    foaf:lastName "De Weghe"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -1545,8 +2115,7 @@
       foaf:name "Geonius"
     ];
     foaf:firstName "Jordy";
-    foaf:lastName "Brouwers";
-    foaf:mbox <mailto:j.brouwers@geonius.be>
+    foaf:lastName "Brouwers"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -1554,8 +2123,7 @@
       foaf:name "MB"
     ];
     foaf:firstName "Maxim";
-    foaf:lastName "Broos";
-    foaf:mbox <mailto:hello@maximbroos.com>
+    foaf:lastName "Broos"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -1563,6 +2131,5 @@
       foaf:name "Geosolutions"
     ];
     foaf:firstName "Simon";
-    foaf:lastName "Baert";
-    foaf:mbox <mailto:simon.baert@geosolutions.be>
+    foaf:lastName "Baert"
   ] .

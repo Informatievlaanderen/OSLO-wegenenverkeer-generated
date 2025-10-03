@@ -2,7 +2,7 @@
   "metadata": {
     "title": "Fundering",
     "uri": "http://fixme.com",
-    "issued": "18-12-2024",
+    "issued": "3-10-2025",
     "filename": "fundering",
     "navigation": {
       "prev": "",
@@ -13,9 +13,9 @@
     "documentconfig": {},
     "status": "https://data.vlaanderen.be/doc/concept/StandaardStatus/KandidaatStandaard",
     "statuslabel": "Onbekend",
-    "repositoryurl": "https://github.com/Informatievlaanderen/OSLOthema-wegenenverkeer/tree/cd54f35ed58706ea9fde55910810e93065d5851c",
-    "changelogurl": "https://github.com/Informatievlaanderen/OSLOthema-wegenenverkeer/blob/cd54f35ed58706ea9fde55910810e93065d5851c/CHANGELOG",
-    "feedbackurl": "https://docs.google.com/forms/d/e/1FAIpQLSeaxOnrCkcarNHWI21YfPJ7sZChHVzOB2-P9ptzxkD9YX69-g/viewform",
+    "repositoryurl": "https://github.com/Informatievlaanderen/OSLOthema-wegenenverkeer/tree/708f3ddd3a77b8c1bfa5c68743b8a7cf06d8c5df",
+    "changelogurl": "https://github.com/Informatievlaanderen/OSLOthema-wegenenverkeer/blob/708f3ddd3a77b8c1bfa5c68743b8a7cf06d8c5df/CHANGELOG",
+    "feedbackurl": "mailto:TeamBim@verzendlijst.wegenenverkeer.be",
     "standaardregisterurl": "https://data.vlaanderen.be/standaarden/",
     "dependencies": [],
     "usesVocs": [],
@@ -797,6 +797,41 @@
           "codelist_uri": "https://wegenenverkeer-test.data.vlaanderen.be/id/conceptscheme/KlUitvoeringsmethode"
         },
         {
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#BetonnenConstructieElement.technischeFicheBetonBescherming",
+          "name": "technische fiche betonbescherming",
+          "sort": "technische fiche betonbescherming",
+          "label": {
+            "nl": "technische fiche betonbescherming"
+          },
+          "description": {
+            "nl": "Technische fiche dat informatie bevat over de betonbescherming."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "BetonnenConstructieElement",
+              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#BetonnenConstructieElement"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "DtcDocument",
+              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcDocument"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Bestandsbijlage",
+              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcDocument",
+              "range_label": {
+                "nl": "Bestandsbijlage"
+              }
+            }
+          ],
+          "cardinality": "1",
+          "codelist_uri": ""
+        },
+        {
           "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#BetonnenConstructieElement.betonspecificaties",
           "name": "betonspecificaties",
           "sort": "betonspecificaties",
@@ -825,6 +860,41 @@
               "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcBetonspecificaties",
               "range_label": {
                 "nl": "Betonspecificaties"
+              }
+            }
+          ],
+          "cardinality": "1",
+          "codelist_uri": ""
+        },
+        {
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#BetonnenConstructieElement.bekistingsplan",
+          "name": "bekistingsplan",
+          "sort": "bekistingsplan",
+          "label": {
+            "nl": "bekistingsplan"
+          },
+          "description": {
+            "nl": "Een plan die bekistingsmaten bevat en ook alle maten van alle mogelijke uitsparingen die er kunnen zijn."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "BetonnenConstructieElement",
+              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#BetonnenConstructieElement"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "DtcDocument",
+              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcDocument"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Bestandsbijlage",
+              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcDocument",
+              "range_label": {
+                "nl": "Bestandsbijlage"
               }
             }
           ],
@@ -1105,7 +1175,7 @@
             "nl": "Bevestiging"
           },
           "description": {
-            "nl": "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Deze relatie heeft geen richting."
+            "nl": "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Daarnaast omvat deze relatie ook situaties waarin onderdelen niet direct, maar wel structureel of functioneel met elkaar verbonden zijn op een manier die bevestiging impliceert, bv. een trap die eindigt net onder een voetgangersbrug zonder fysieke bevestiging. Deze relatie heeft geen richting."
           },
           "usage": {},
           "domain": [
@@ -1140,7 +1210,7 @@
             "nl": "Bevestiging"
           },
           "description": {
-            "nl": "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Deze relatie heeft geen richting."
+            "nl": "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Daarnaast omvat deze relatie ook situaties waarin onderdelen niet direct, maar wel structureel of functioneel met elkaar verbonden zijn op een manier die bevestiging impliceert, bv. een trap die eindigt net onder een voetgangersbrug zonder fysieke bevestiging. Deze relatie heeft geen richting."
           },
           "usage": {},
           "domain": [
@@ -1426,16 +1496,16 @@
           ],
           "range": [
             {
-              "range_label": "Combiwand",
-              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Combiwand"
+              "range_label": "Funderingswand",
+              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Funderingswand"
             }
           ],
           "scopedrange": [
             {
-              "range_uri": "#Combiwand",
-              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Combiwand",
+              "range_uri": "#Funderingswand",
+              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Funderingswand",
               "range_label": {
-                "nl": "Combiwand"
+                "nl": "Funderingswand"
               }
             }
           ],
@@ -1461,16 +1531,16 @@
           ],
           "range": [
             {
-              "range_label": "Funderingswand",
-              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Funderingswand"
+              "range_label": "Combiwand",
+              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Combiwand"
             }
           ],
           "scopedrange": [
             {
-              "range_uri": "#Funderingswand",
-              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Funderingswand",
+              "range_uri": "#Combiwand",
+              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Combiwand",
               "range_label": {
-                "nl": "Funderingswand"
+                "nl": "Combiwand"
               }
             }
           ],
@@ -1485,7 +1555,7 @@
             "nl": "Bevestiging"
           },
           "description": {
-            "nl": "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Deze relatie heeft geen richting."
+            "nl": "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Daarnaast omvat deze relatie ook situaties waarin onderdelen niet direct, maar wel structureel of functioneel met elkaar verbonden zijn op een manier die bevestiging impliceert, bv. een trap die eindigt net onder een voetgangersbrug zonder fysieke bevestiging. Deze relatie heeft geen richting."
           },
           "usage": {},
           "domain": [
@@ -1520,7 +1590,7 @@
             "nl": "Bevestiging"
           },
           "description": {
-            "nl": "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Deze relatie heeft geen richting."
+            "nl": "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Daarnaast omvat deze relatie ook situaties waarin onderdelen niet direct, maar wel structureel of functioneel met elkaar verbonden zijn op een manier die bevestiging impliceert, bv. een trap die eindigt net onder een voetgangersbrug zonder fysieke bevestiging. Deze relatie heeft geen richting."
           },
           "usage": {},
           "domain": [
@@ -1570,7 +1640,7 @@
             "nl": "Bevestiging"
           },
           "description": {
-            "nl": "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Deze relatie heeft geen richting."
+            "nl": "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Daarnaast omvat deze relatie ook situaties waarin onderdelen niet direct, maar wel structureel of functioneel met elkaar verbonden zijn op een manier die bevestiging impliceert, bv. een trap die eindigt net onder een voetgangersbrug zonder fysieke bevestiging. Deze relatie heeft geen richting."
           },
           "usage": {},
           "domain": [
@@ -1605,7 +1675,7 @@
             "nl": "Bevestiging"
           },
           "description": {
-            "nl": "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Deze relatie heeft geen richting."
+            "nl": "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Daarnaast omvat deze relatie ook situaties waarin onderdelen niet direct, maar wel structureel of functioneel met elkaar verbonden zijn op een manier die bevestiging impliceert, bv. een trap die eindigt net onder een voetgangersbrug zonder fysieke bevestiging. Deze relatie heeft geen richting."
           },
           "usage": {},
           "domain": [
@@ -2164,7 +2234,9 @@
           "description": {
             "nl": "De mensleesbare naam van een asset zoals dit bv. ook terug te vinden is op een etiket op het object zelf. De assetbeheerder kent deze naam toe of geeft de opdracht om deze toe te kennen. Indien een object een algemeen gangbare naam heeft zoals bv. bij een waterloop dan wordt deze gebruikt."
           },
-          "usage": {},
+          "usage": {
+            "nl": "Dient leeg of consistent te zijn met het naampad indien het naampad attribuut aanwezig en gekend is."
+          },
           "domain": [
             {
               "EA-Name": "AIMNaamObject",
@@ -2888,6 +2960,28 @@
       ]
     },
     {
+      "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Grondverbetering",
+      "name": "Grondverbetering",
+      "label": {
+        "nl": "Grondverbetering"
+      },
+      "sort": "Grondverbetering",
+      "description": {
+        "nl": "Proces waarbij de fysieke eigenschappen van de grond worden aangepast om de draagkracht te verhogen, de samendrukbaarheid te verminderen, en de stabiliteit te verbeteren, door technieken zoals verdichting, chemische stabilisatie, het gebruik van geokunststoffen, en het aanbrengen van grindkernen."
+      },
+      "usage": {},
+      "parents": [
+        {
+          "label": "AIM naam object",
+          "name": "AIMNaamObject",
+          "package": "OSLO-Implementatieelement",
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMNaamObject",
+          "scoped_uri": "#AIM naam object"
+        }
+      ],
+      "properties": []
+    },
+    {
       "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#MVPaal",
       "name": "MV Paal",
       "label": {
@@ -2979,6 +3073,28 @@
           "codelist_uri": ""
         }
       ]
+    },
+    {
+      "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Paalmatras",
+      "name": "Paalmatras",
+      "label": {
+        "nl": "Paalmatras"
+      },
+      "sort": "Paalmatras",
+      "description": {
+        "nl": "Een funderingsconstructie die wordt gebruikt op slappe bodems, voornamelijk bij de aanleg van wegen en andere infrastructuur. Het combineert (funderings)palen met een dragende matras van gewapend geokunststof en grofkorrelig materiaal, om belastingen efficiënt naar de dieper gelegen stabiele grondlagen over te brengen. De palen dragen de matras, die op zijn beurt de belasting verdeelt en overdraagt aan de palen. Deze aanpak minimaliseert zettingen en verbetert de stabiliteit van de constructie."
+      },
+      "usage": {},
+      "parents": [
+        {
+          "label": "AIM naam object",
+          "name": "AIMNaamObject",
+          "package": "OSLO-Implementatieelement",
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMNaamObject",
+          "scoped_uri": "#AIM naam object"
+        }
+      ],
+      "properties": []
     },
     {
       "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#StalenFunderingsprofiel",
@@ -3650,7 +3766,7 @@
       },
       "sort": "Bevestiging",
       "description": {
-        "nl": "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Deze relatie heeft geen richting."
+        "nl": "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Daarnaast omvat deze relatie ook situaties waarin onderdelen niet direct, maar wel structureel of functioneel met elkaar verbonden zijn op een manier die bevestiging impliceert, bv. een trap die eindigt net onder een voetgangersbrug zonder fysieke bevestiging. Deze relatie heeft geen richting."
       },
       "usage": {},
       "parents": [
@@ -3898,7 +4014,7 @@
             "nl": "Bevestiging"
           },
           "description": {
-            "nl": "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Deze relatie heeft geen richting."
+            "nl": "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Daarnaast omvat deze relatie ook situaties waarin onderdelen niet direct, maar wel structureel of functioneel met elkaar verbonden zijn op een manier die bevestiging impliceert, bv. een trap die eindigt net onder een voetgangersbrug zonder fysieke bevestiging. Deze relatie heeft geen richting."
           },
           "usage": {},
           "domain": [
@@ -3933,7 +4049,7 @@
             "nl": "Bevestiging"
           },
           "description": {
-            "nl": "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Deze relatie heeft geen richting."
+            "nl": "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Daarnaast omvat deze relatie ook situaties waarin onderdelen niet direct, maar wel structureel of functioneel met elkaar verbonden zijn op een manier die bevestiging impliceert, bv. een trap die eindigt net onder een voetgangersbrug zonder fysieke bevestiging. Deze relatie heeft geen richting."
           },
           "usage": {},
           "domain": [
@@ -3982,7 +4098,43 @@
           "scoped_uri": "#Klassieke fundering"
         }
       ],
-      "properties": []
+      "properties": [
+        {
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/fundering/#Ligt op",
+          "name": "ligt op",
+          "sort": "Ligt op",
+          "label": {
+            "nl": "Ligt op"
+          },
+          "description": {
+            "nl": "Deze relatie geeft aan dat 2 onderdelen direct fysiek op elkaar liggen. Deze relatie heeft een richting en gaat van het bovenste naar het onderste onderdeel."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "FunderingOpStaal",
+              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#FunderingOpStaal"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "Werkvloer",
+              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Werkvloer"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Werkvloer",
+              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Werkvloer",
+              "range_label": {
+                "nl": "Werkvloer"
+              }
+            }
+          ],
+          "cardinality": "",
+          "codelist_uri": ""
+        }
+      ]
     },
     {
       "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Funderingspaal",
@@ -4151,6 +4303,41 @@
           ],
           "cardinality": "1",
           "codelist_uri": ""
+        },
+        {
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/fundering/#Hoort bij",
+          "name": "hoort bij",
+          "sort": "Hoort bij",
+          "label": {
+            "nl": "Hoort bij"
+          },
+          "description": {
+            "nl": "De relatie geeft aan dat een onderdeel of collectie behoort bij, deel van of lid van een (andere) groep of collectie is."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "Funderingspaal",
+              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Funderingspaal"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "Paalmatras",
+              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Paalmatras"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Paalmatras",
+              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Paalmatras",
+              "range_label": {
+                "nl": "Paalmatras"
+              }
+            }
+          ],
+          "cardinality": "",
+          "codelist_uri": ""
         }
       ]
     },
@@ -4181,7 +4368,43 @@
           "scoped_uri": "#Klassieke fundering"
         }
       ],
-      "properties": []
+      "properties": [
+        {
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/fundering/#Ligt op",
+          "name": "ligt op",
+          "sort": "Ligt op",
+          "label": {
+            "nl": "Ligt op"
+          },
+          "description": {
+            "nl": "Deze relatie geeft aan dat 2 onderdelen direct fysiek op elkaar liggen. Deze relatie heeft een richting en gaat van het bovenste naar het onderste onderdeel."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "Funderingsplaat",
+              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Funderingsplaat"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "Werkvloer",
+              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Werkvloer"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Werkvloer",
+              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Werkvloer",
+              "range_label": {
+                "nl": "Werkvloer"
+              }
+            }
+          ],
+          "cardinality": "",
+          "codelist_uri": ""
+        }
+      ]
     },
     {
       "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Funderingsput",
@@ -4382,6 +4605,41 @@
           "codelist_uri": ""
         },
         {
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/fundering/#Ligt op",
+          "name": "ligt op",
+          "sort": "Ligt op",
+          "label": {
+            "nl": "Ligt op"
+          },
+          "description": {
+            "nl": "Deze relatie geeft aan dat 2 onderdelen direct fysiek op elkaar liggen. Deze relatie heeft een richting en gaat van het bovenste naar het onderste onderdeel."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "Funderingszool",
+              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Funderingszool"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "Werkvloer",
+              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Werkvloer"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Werkvloer",
+              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Werkvloer",
+              "range_label": {
+                "nl": "Werkvloer"
+              }
+            }
+          ],
+          "cardinality": "",
+          "codelist_uri": ""
+        },
+        {
           "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/fundering/#Bevestiging",
           "name": "bevestiging",
           "sort": "Bevestiging",
@@ -4389,7 +4647,7 @@
             "nl": "Bevestiging"
           },
           "description": {
-            "nl": "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Deze relatie heeft geen richting."
+            "nl": "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Daarnaast omvat deze relatie ook situaties waarin onderdelen niet direct, maar wel structureel of functioneel met elkaar verbonden zijn op een manier die bevestiging impliceert, bv. een trap die eindigt net onder een voetgangersbrug zonder fysieke bevestiging. Deze relatie heeft geen richting."
           },
           "usage": {},
           "domain": [
@@ -4424,7 +4682,7 @@
             "nl": "Bevestiging"
           },
           "description": {
-            "nl": "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Deze relatie heeft geen richting."
+            "nl": "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Daarnaast omvat deze relatie ook situaties waarin onderdelen niet direct, maar wel structureel of functioneel met elkaar verbonden zijn op een manier die bevestiging impliceert, bv. een trap die eindigt net onder een voetgangersbrug zonder fysieke bevestiging. Deze relatie heeft geen richting."
           },
           "usage": {},
           "domain": [
@@ -4471,9 +4729,58 @@
           "package": "OSLO-Onderdeel",
           "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Funderingspaal",
           "scoped_uri": "#Funderingspaal"
+        },
+        {
+          "label": "Fundering",
+          "name": "Fundering",
+          "package": "OSLO-Abstracten",
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Fundering",
+          "scoped_uri": "#Fundering"
+        },
+        {
+          "label": "Axiaal draagvermogen",
+          "name": "AxiaalDraagvermogen",
+          "package": "OSLO-Abstracten",
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#AxiaalDraagvermogen",
+          "scoped_uri": "#Axiaal draagvermogen"
         }
       ],
       "properties": [
+        {
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Grindkern.technischeFicheGrind",
+          "name": "technische fiche grind",
+          "sort": "technische fiche grind",
+          "label": {
+            "nl": "technische fiche grind"
+          },
+          "description": {
+            "nl": "Technische fiche van het materiaal grind dat in de grindkern zit."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "Grindkern",
+              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Grindkern"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "DtcDocument",
+              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcDocument"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Bestandsbijlage",
+              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcDocument",
+              "range_label": {
+                "nl": "Bestandsbijlage"
+              }
+            }
+          ],
+          "cardinality": "1",
+          "codelist_uri": ""
+        },
         {
           "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Grindkern.nuttigeLengte",
           "name": "nuttige lengte",
@@ -4612,6 +4919,76 @@
             }
           ],
           "cardinality": "1",
+          "codelist_uri": ""
+        },
+        {
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Grindkern.dwarsafmetingDiameter",
+          "name": "dwarsafmeting diameter",
+          "sort": "dwarsafmeting diameter",
+          "label": {
+            "nl": "dwarsafmeting diameter"
+          },
+          "description": {
+            "nl": "De dwarsafmeting (diameter) van de grindkern in millimeter."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "Grindkern",
+              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Grindkern"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "KwantWrdInMillimeter",
+              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInMillimeter"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Kwantitatieve waarde in millimeter",
+              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInMillimeter",
+              "range_label": {
+                "nl": "Kwantitatieve waarde in millimeter"
+              }
+            }
+          ],
+          "cardinality": "1",
+          "codelist_uri": ""
+        },
+        {
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/fundering/#Hoort bij",
+          "name": "hoort bij",
+          "sort": "Hoort bij",
+          "label": {
+            "nl": "Hoort bij"
+          },
+          "description": {
+            "nl": "De relatie geeft aan dat een onderdeel of collectie behoort bij, deel van of lid van een (andere) groep of collectie is."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "Grindkern",
+              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Grindkern"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "Grondverbetering",
+              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Grondverbetering"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Grondverbetering",
+              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Grondverbetering",
+              "range_label": {
+                "nl": "Grondverbetering"
+              }
+            }
+          ],
+          "cardinality": "",
           "codelist_uri": ""
         }
       ]
@@ -4983,6 +5360,41 @@
           "codelist_uri": "https://wegenenverkeer-test.data.vlaanderen.be/id/conceptscheme/KlGroutankerInjectie"
         },
         {
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Groutanker.hellingshoekGroutanker",
+          "name": "hellingshoek groutanker",
+          "sort": "hellingshoek groutanker",
+          "label": {
+            "nl": "hellingshoek groutanker"
+          },
+          "description": {
+            "nl": "Hoek van het ingebrachte anker in decimale graden alsook de richting."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "Groutanker",
+              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Groutanker"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "DtcHellingshoek",
+              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#DtcHellingshoek"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Complex datatype hellingshoek",
+              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#DtcHellingshoek",
+              "range_label": {
+                "nl": "Complex datatype hellingshoek"
+              }
+            }
+          ],
+          "cardinality": "1",
+          "codelist_uri": ""
+        },
+        {
           "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Groutanker.hellingshoek",
           "name": "hellingshoek",
           "sort": "hellingshoek",
@@ -4992,7 +5404,9 @@
           "description": {
             "nl": "Hoek van het ingebrachte anker in decimale graden."
           },
-          "usage": {},
+          "usage": {
+            "nl": "Attribuut uit gebruik sinds versie 2.14.0-RC1"
+          },
           "domain": [
             {
               "EA-Name": "Groutanker",
@@ -5728,7 +6142,7 @@
             "nl": "Bevestiging"
           },
           "description": {
-            "nl": "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Deze relatie heeft geen richting."
+            "nl": "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Daarnaast omvat deze relatie ook situaties waarin onderdelen niet direct, maar wel structureel of functioneel met elkaar verbonden zijn op een manier die bevestiging impliceert, bv. een trap die eindigt net onder een voetgangersbrug zonder fysieke bevestiging. Deze relatie heeft geen richting."
           },
           "usage": {},
           "domain": [
@@ -5763,7 +6177,7 @@
             "nl": "Bevestiging"
           },
           "description": {
-            "nl": "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Deze relatie heeft geen richting."
+            "nl": "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Daarnaast omvat deze relatie ook situaties waarin onderdelen niet direct, maar wel structureel of functioneel met elkaar verbonden zijn op een manier die bevestiging impliceert, bv. een trap die eindigt net onder een voetgangersbrug zonder fysieke bevestiging. Deze relatie heeft geen richting."
           },
           "usage": {},
           "domain": [
@@ -6361,7 +6775,7 @@
             "nl": "Bevestiging"
           },
           "description": {
-            "nl": "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Deze relatie heeft geen richting."
+            "nl": "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Daarnaast omvat deze relatie ook situaties waarin onderdelen niet direct, maar wel structureel of functioneel met elkaar verbonden zijn op een manier die bevestiging impliceert, bv. een trap die eindigt net onder een voetgangersbrug zonder fysieke bevestiging. Deze relatie heeft geen richting."
           },
           "usage": {},
           "domain": [
@@ -6396,7 +6810,7 @@
             "nl": "Bevestiging"
           },
           "description": {
-            "nl": "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Deze relatie heeft geen richting."
+            "nl": "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Daarnaast omvat deze relatie ook situaties waarin onderdelen niet direct, maar wel structureel of functioneel met elkaar verbonden zijn op een manier die bevestiging impliceert, bv. een trap die eindigt net onder een voetgangersbrug zonder fysieke bevestiging. Deze relatie heeft geen richting."
           },
           "usage": {},
           "domain": [
@@ -7351,6 +7765,169 @@
               "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcAfmetingBxlxhInCm",
               "range_label": {
                 "nl": "Afmeting bxlxh in centimeter"
+              }
+            }
+          ],
+          "cardinality": "1",
+          "codelist_uri": ""
+        }
+      ]
+    },
+    {
+      "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Werkvloer",
+      "name": "Werkvloer",
+      "label": {
+        "nl": "Werkvloer"
+      },
+      "sort": "Werkvloer",
+      "description": {
+        "nl": "Bij betonwerken is de werkvloer een stabiele betonlaag waarop de betonwerken kunnen starten, met als voornaamste functie er voor te zorgen dat er geen negatieve interactie is tussen de ondergrond (onder de werkvloer) en het beton, de wapening en de bekisting."
+      },
+      "usage": {},
+      "parents": [
+        {
+          "label": "AIM naam object",
+          "name": "AIMNaamObject",
+          "package": "OSLO-Implementatieelement",
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMNaamObject",
+          "scoped_uri": "#AIM naam object"
+        }
+      ],
+      "properties": [
+        {
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Werkvloer.volume",
+          "name": "volume",
+          "sort": "volume",
+          "label": {
+            "nl": "volume"
+          },
+          "description": {
+            "nl": "Het volume van de werkvloer uitgedrukt in kubieke meter."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "Werkvloer",
+              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Werkvloer"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "KwantWrdInKubiekeMeter",
+              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInKubiekeMeter"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Kwantitatieve waarde in kubieke meter",
+              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInKubiekeMeter",
+              "range_label": {
+                "nl": "Kwantitatieve waarde in kubieke meter"
+              }
+            }
+          ],
+          "cardinality": "1",
+          "codelist_uri": ""
+        },
+        {
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Werkvloer.uitvoeringsmethode",
+          "name": "uitvoeringsmethode",
+          "sort": "uitvoeringsmethode",
+          "label": {
+            "nl": "uitvoeringsmethode"
+          },
+          "description": {
+            "nl": "De manier waarop het beton wordt aangebracht."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "Werkvloer",
+              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Werkvloer"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "KlUitvoeringsmethode",
+              "range_uri": "http://www.w3.org/2004/02/skos/core#Concept"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Uitvoeringsmethode",
+              "range_puri": "http://www.w3.org/2004/02/skos/core#Concept",
+              "range_label": {
+                "nl": "Uitvoeringsmethode"
+              }
+            }
+          ],
+          "cardinality": "1",
+          "codelist_uri": "https://wegenenverkeer-test.data.vlaanderen.be/id/conceptscheme/KlUitvoeringsmethode"
+        },
+        {
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Werkvloer.technischeFiche",
+          "name": "technische fiche",
+          "sort": "technische fiche",
+          "label": {
+            "nl": "technische fiche"
+          },
+          "description": {
+            "nl": "De technische fiche van de werkvloer. Specifieke afmetingen, doorsnedes en/of plannen zijn hierin opgenomen."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "Werkvloer",
+              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Werkvloer"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "DtcDocument",
+              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcDocument"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Bestandsbijlage",
+              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcDocument",
+              "range_label": {
+                "nl": "Bestandsbijlage"
+              }
+            }
+          ],
+          "cardinality": "1",
+          "codelist_uri": ""
+        },
+        {
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Werkvloer.betonspecificaties",
+          "name": "betonspecificaties",
+          "sort": "betonspecificaties",
+          "label": {
+            "nl": "betonspecificaties"
+          },
+          "description": {
+            "nl": "De eigenschappen van het gebruikte beton."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "Werkvloer",
+              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Werkvloer"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "DtcBetonspecificaties",
+              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcBetonspecificaties"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Betonspecificaties",
+              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcBetonspecificaties",
+              "range_label": {
+                "nl": "Betonspecificaties"
               }
             }
           ],
@@ -10838,7 +11415,7 @@
             "nl": "schoorhoek"
           },
           "description": {
-            "nl": "Hoek die het object maakt ten opzichte van de verticale, uitgedrukt in 1 op x (vb.: 1/4)."
+            "nl": "Hoek die het object maakt ten opzichte van de verticale, uitgedrukt als een verhouding (1 op x), bijvoorbeeld 1 op 4. Bij verticale palen is er geen sprake van een schoorhoek in verhouding, omdat er geen horizontale afwijking is. In dat geval dient de hoek expliciet als 0 graden aangegeven te worden bij het attribuut Hellingshoek."
           },
           "usage": {},
           "domain": [
@@ -12286,6 +12863,165 @@
               "range_puri": "http://www.w3.org/2000/01/rdf-schema#Literal",
               "range_label": {
                 "nl": "Literal"
+              }
+            }
+          ],
+          "cardinality": "1",
+          "codelist_uri": ""
+        }
+      ]
+    },
+    {
+      "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#DtcHellingshoek",
+      "name": "Complex datatype hellingshoek",
+      "label": {
+        "nl": "Complex datatype hellingshoek"
+      },
+      "sort": "Complex datatype hellingshoek",
+      "description": {
+        "nl": "Complex datatype dat informatie bevat over de helling van de hoek alsook de richitng t.o.v. de as."
+      },
+      "usage": {},
+      "parents": [],
+      "properties": [
+        {
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#DtcHellingshoek.richtingHellingshoek",
+          "name": "richting hellingshoek",
+          "sort": "richting hellingshoek",
+          "label": {
+            "nl": "richting hellingshoek"
+          },
+          "description": {
+            "nl": "Geeft de richting van de hoek t.o.v. de as aan."
+          },
+          "usage": {
+            "nl": "Attribuut uit gebruik sinds versie 2.16.0-RC1"
+          },
+          "domain": [
+            {
+              "EA-Name": "DtcHellingshoek",
+              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#DtcHellingshoek"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "KlRichtingHellingshoek",
+              "range_uri": "http://www.w3.org/2004/02/skos/core#Concept"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#keuzelijst richting hellingshoek",
+              "range_puri": "http://www.w3.org/2004/02/skos/core#Concept",
+              "range_label": {
+                "nl": "keuzelijst richting hellingshoek"
+              }
+            }
+          ],
+          "cardinality": "1",
+          "codelist_uri": "https://wegenenverkeer-test.data.vlaanderen.be/id/conceptscheme/KlRichtingHellingshoek"
+        },
+        {
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#DtcHellingshoek.hoekVerticaleAs",
+          "name": "hoek t.o.v. verticale as",
+          "sort": "hoek t.o.v. verticale as",
+          "label": {
+            "nl": "hoek t.o.v. verticale as"
+          },
+          "description": {
+            "nl": "De hellingshoek die wordt gemeten ten opzichte van een verticale as."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "DtcHellingshoek",
+              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#DtcHellingshoek"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "KwantWrdInDecimaleGraden",
+              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInDecimaleGraden"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Kwantitatieve waarde in decimale graden",
+              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInDecimaleGraden",
+              "range_label": {
+                "nl": "Kwantitatieve waarde in decimale graden"
+              }
+            }
+          ],
+          "cardinality": "1",
+          "codelist_uri": ""
+        },
+        {
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#DtcHellingshoek.hoekHorizontaleAs",
+          "name": "hoek t.o.v. horizontale as",
+          "sort": "hoek t.o.v. horizontale as",
+          "label": {
+            "nl": "hoek t.o.v. horizontale as"
+          },
+          "description": {
+            "nl": "De hellingshoek die wordt gemeten ten opzichte van een horizontale as."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "DtcHellingshoek",
+              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#DtcHellingshoek"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "KwantWrdInDecimaleGraden",
+              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInDecimaleGraden"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Kwantitatieve waarde in decimale graden",
+              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInDecimaleGraden",
+              "range_label": {
+                "nl": "Kwantitatieve waarde in decimale graden"
+              }
+            }
+          ],
+          "cardinality": "1",
+          "codelist_uri": ""
+        },
+        {
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#DtcHellingshoek.hoek",
+          "name": "hoek",
+          "sort": "hoek",
+          "label": {
+            "nl": "hoek"
+          },
+          "description": {
+            "nl": "Hoek van het ingebrachte anker in decimale graden."
+          },
+          "usage": {
+            "nl": "Attribuut uit gebruik sinds versie 2.16.0-RC1"
+          },
+          "domain": [
+            {
+              "EA-Name": "DtcHellingshoek",
+              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#DtcHellingshoek"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "KwantWrdInDecimaleGraden",
+              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInDecimaleGraden"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Kwantitatieve waarde in decimale graden",
+              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInDecimaleGraden",
+              "range_label": {
+                "nl": "Kwantitatieve waarde in decimale graden"
               }
             }
           ],

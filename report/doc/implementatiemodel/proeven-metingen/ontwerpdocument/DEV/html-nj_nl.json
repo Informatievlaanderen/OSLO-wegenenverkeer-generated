@@ -2,7 +2,7 @@
   "metadata": {
     "title": "Proeven en metingen",
     "uri": "http://fixme.com",
-    "issued": "18-12-2024",
+    "issued": "3-10-2025",
     "filename": "proeven-metingen",
     "navigation": {
       "prev": "",
@@ -13,9 +13,9 @@
     "documentconfig": {},
     "status": "https://data.vlaanderen.be/doc/concept/StandaardStatus/KandidaatStandaard",
     "statuslabel": "Onbekend",
-    "repositoryurl": "https://github.com/Informatievlaanderen/OSLOthema-wegenenverkeer/tree/91064f6b7bcd31ce225056c3186a583679bc8f91",
-    "changelogurl": "https://github.com/Informatievlaanderen/OSLOthema-wegenenverkeer/blob/91064f6b7bcd31ce225056c3186a583679bc8f91/CHANGELOG",
-    "feedbackurl": "https://docs.google.com/forms/d/e/1FAIpQLSeaxOnrCkcarNHWI21YfPJ7sZChHVzOB2-P9ptzxkD9YX69-g/viewform",
+    "repositoryurl": "https://github.com/Informatievlaanderen/OSLOthema-wegenenverkeer/tree/708f3ddd3a77b8c1bfa5c68743b8a7cf06d8c5df",
+    "changelogurl": "https://github.com/Informatievlaanderen/OSLOthema-wegenenverkeer/blob/708f3ddd3a77b8c1bfa5c68743b8a7cf06d8c5df/CHANGELOG",
+    "feedbackurl": "mailto:TeamBim@verzendlijst.wegenenverkeer.be",
     "standaardregisterurl": "https://data.vlaanderen.be/standaarden/",
     "dependencies": [],
     "usesVocs": [],
@@ -2960,7 +2960,9 @@
           "description": {
             "nl": "De mensleesbare naam van een asset zoals dit bv. ook terug te vinden is op een etiket op het object zelf. De assetbeheerder kent deze naam toe of geeft de opdracht om deze toe te kennen. Indien een object een algemeen gangbare naam heeft zoals bv. bij een waterloop dan wordt deze gebruikt."
           },
-          "usage": {},
+          "usage": {
+            "nl": "Dient leeg of consistent te zijn met het naampad indien het naampad attribuut aanwezig en gekend is."
+          },
           "domain": [
             {
               "EA-Name": "AIMNaamObject",
@@ -3568,6 +3570,41 @@
           "codelist_uri": ""
         },
         {
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#GeluidwerendeConstructie.minMaxSchermhoogte",
+          "name": "minimale maximale schermhoogte",
+          "sort": "minimale maximale schermhoogte",
+          "label": {
+            "nl": "minimale maximale schermhoogte"
+          },
+          "description": {
+            "nl": "De waarde uitgedrukt in centimeter van het laagste en het hoogste schermelement in de constructie."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "GeluidwerendeConstructie",
+              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#GeluidwerendeConstructie"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "DtcMinMaxHoogteSchermelement",
+              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#DtcMinMaxHoogteSchermelement"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#min max hoogte schermelement",
+              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#DtcMinMaxHoogteSchermelement",
+              "range_label": {
+                "nl": "min max hoogte schermelement"
+              }
+            }
+          ],
+          "cardinality": "1",
+          "codelist_uri": ""
+        },
+        {
           "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#GeluidwerendeConstructie.horizontaalRuimtebeslag",
           "name": "horizontaal ruimtebeslag",
           "sort": "horizontaal ruimtebeslag",
@@ -3940,7 +3977,7 @@
       },
       "sort": "Bevestiging",
       "description": {
-        "nl": "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Deze relatie heeft geen richting."
+        "nl": "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Daarnaast omvat deze relatie ook situaties waarin onderdelen niet direct, maar wel structureel of functioneel met elkaar verbonden zijn op een manier die bevestiging impliceert, bv. een trap die eindigt net onder een voetgangersbrug zonder fysieke bevestiging. Deze relatie heeft geen richting."
       },
       "usage": {},
       "parents": [
@@ -4148,7 +4185,9 @@
           "description": {
             "nl": "Vrij te houden hoogte in meter, voor het doorrijden van verkeer toe te laten."
           },
-          "usage": {},
+          "usage": {
+            "nl": "Attribuut uit gebruik sinds versie 2.16.0-RC1"
+          },
           "domain": [
             {
               "EA-Name": "Boom",
@@ -4218,7 +4257,9 @@
           "description": {
             "nl": "Tot aan de hoogte van de gewenste takvrije stamlengte wordt de boom zodanig gesnoeid dat er één doorgaande stam is."
           },
-          "usage": {},
+          "usage": {
+            "nl": "Attribuut uit gebruik sinds versie 2.16.0-RC1"
+          },
           "domain": [
             {
               "EA-Name": "Boom",
@@ -4242,6 +4283,41 @@
           ],
           "cardinality": "1",
           "codelist_uri": ""
+        },
+        {
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Boom.takvrijeHoogte",
+          "name": "takvrije hoogte",
+          "sort": "takvrije hoogte",
+          "label": {
+            "nl": "takvrije hoogte"
+          },
+          "description": {
+            "nl": "Tot aan de hoogte van de gewenste takvrije stamlengte wordt de boom zodanig gesnoeid dat er één doorgaande stam is."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "Boom",
+              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Boom"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "KlTakvrijeHoogte",
+              "range_uri": "http://www.w3.org/2004/02/skos/core#Concept"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Takvrije hoogte",
+              "range_puri": "http://www.w3.org/2004/02/skos/core#Concept",
+              "range_label": {
+                "nl": "Takvrije hoogte"
+              }
+            }
+          ],
+          "cardinality": "1",
+          "codelist_uri": "https://wegenenverkeer-test.data.vlaanderen.be/id/conceptscheme/KlTakvrijeHoogte"
         },
         {
           "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Boom.kroonDiameter",
@@ -4526,6 +4602,41 @@
           ],
           "cardinality": "1",
           "codelist_uri": ""
+        },
+        {
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Boom.doorrijhoogte",
+          "name": "doorrijhoogte",
+          "sort": "doorrijhoogte",
+          "label": {
+            "nl": "doorrijhoogte"
+          },
+          "description": {
+            "nl": "Vrij te houden hoogte in meter, voor het doorrijden van verkeer toe te laten."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "Boom",
+              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Boom"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "KlDoorrijhoogte",
+              "range_uri": "http://www.w3.org/2004/02/skos/core#Concept"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Doorrijhoogte",
+              "range_puri": "http://www.w3.org/2004/02/skos/core#Concept",
+              "range_label": {
+                "nl": "Doorrijhoogte"
+              }
+            }
+          ],
+          "cardinality": "1",
+          "codelist_uri": "https://wegenenverkeer-test.data.vlaanderen.be/id/conceptscheme/KlDoorrijhoogte"
         },
         {
           "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Boom.boomverankeringszone",
@@ -4968,7 +5079,7 @@
       },
       "sort": "Dunne overlaging",
       "description": {
-        "nl": "Een dunne overlaging kan bestaan uit een SME overlaging of een antisliplaag."
+        "nl": "Een dunne overlaging kan bestaan uit een SME overlaging, een antisliplaag, waterdichte toplaag, ...."
       },
       "usage": {},
       "parents": [
@@ -5015,6 +5126,41 @@
           ],
           "cardinality": "1",
           "codelist_uri": "https://wegenenverkeer-test.data.vlaanderen.be/id/conceptscheme/KlDunneOverlagingType"
+        },
+        {
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#DunneOverlaging.technischeFiche",
+          "name": "technische fiche",
+          "sort": "technische fiche",
+          "label": {
+            "nl": "technische fiche"
+          },
+          "description": {
+            "nl": "De technische fiche van de dunne overlaging"
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "DunneOverlaging",
+              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#DunneOverlaging"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "DtcDocument",
+              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcDocument"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Bestandsbijlage",
+              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcDocument",
+              "range_label": {
+                "nl": "Bestandsbijlage"
+              }
+            }
+          ],
+          "cardinality": "1",
+          "codelist_uri": ""
         },
         {
           "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#DunneOverlaging.kleur",
@@ -5085,6 +5231,41 @@
           ],
           "cardinality": "1",
           "codelist_uri": ""
+        },
+        {
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#DunneOverlaging.bouwklasse",
+          "name": "bouwklasse",
+          "sort": "bouwklasse",
+          "label": {
+            "nl": "bouwklasse"
+          },
+          "description": {
+            "nl": "Een maat voor de verkeersbelasting over de volledige levensduur van de laag. De laag is ontworpen volgens de aangeduide bouwklasse."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "DunneOverlaging",
+              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#DunneOverlaging"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "KlAlgBouwklassegroep",
+              "range_uri": "http://www.w3.org/2004/02/skos/core#Concept"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Alg bouwklassegroep",
+              "range_puri": "http://www.w3.org/2004/02/skos/core#Concept",
+              "range_label": {
+                "nl": "Alg bouwklassegroep"
+              }
+            }
+          ],
+          "cardinality": "1",
+          "codelist_uri": "https://wegenenverkeer-test.data.vlaanderen.be/id/conceptscheme/KlAlgBouwklassegroep"
         }
       ]
     },
@@ -5836,6 +6017,20 @@
           "scoped_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DirectioneleRelatie"
         }
       ],
+      "properties": []
+    },
+    {
+      "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#IsOntwerpVan",
+      "name": "Is ontwerp van",
+      "label": {
+        "nl": "Is ontwerp van"
+      },
+      "sort": "Is ontwerp van",
+      "description": {
+        "nl": "TODO"
+      },
+      "usage": {},
+      "parents": [],
       "properties": []
     },
     {
@@ -6773,76 +6968,6 @@
           "codelist_uri": ""
         },
         {
-          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#RetroreflecterendVerkeersbord.kaartvoorstelling",
-          "name": "kaartvoorstelling",
-          "sort": "kaartvoorstelling",
-          "label": {
-            "nl": "kaartvoorstelling"
-          },
-          "description": {
-            "nl": "TODO"
-          },
-          "usage": {},
-          "domain": [
-            {
-              "EA-Name": "RetroreflecterendVerkeersbord",
-              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#RetroreflecterendVerkeersbord"
-            }
-          ],
-          "range": [
-            {
-              "range_label": "DtcDocument",
-              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcDocument"
-            }
-          ],
-          "scopedrange": [
-            {
-              "range_uri": "#Bestandsbijlage",
-              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcDocument",
-              "range_label": {
-                "nl": "Bestandsbijlage"
-              }
-            }
-          ],
-          "cardinality": "1",
-          "codelist_uri": ""
-        },
-        {
-          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#RetroreflecterendVerkeersbord.horizontaleVerschuiving",
-          "name": "horizontale verschuiving",
-          "sort": "horizontale verschuiving",
-          "label": {
-            "nl": "horizontale verschuiving"
-          },
-          "description": {
-            "nl": "De verschuiving van het bord, gemeten van het midden van het bord tot de centrale as van de opstelling. Een positieve waarde duidt op een verschuiving naar rechts, een negatieve waarde op een verschuiving naar links"
-          },
-          "usage": {},
-          "domain": [
-            {
-              "EA-Name": "RetroreflecterendVerkeersbord",
-              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#RetroreflecterendVerkeersbord"
-            }
-          ],
-          "range": [
-            {
-              "range_label": "KwantWrdInMillimeter",
-              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInMillimeter"
-            }
-          ],
-          "scopedrange": [
-            {
-              "range_uri": "#Kwantitatieve waarde in millimeter",
-              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInMillimeter",
-              "range_label": {
-                "nl": "Kwantitatieve waarde in millimeter"
-              }
-            }
-          ],
-          "cardinality": "1",
-          "codelist_uri": ""
-        },
-        {
           "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#RetroreflecterendVerkeersbord.grootteorde",
           "name": "grootteorde",
           "sort": "grootteorde",
@@ -6876,76 +7001,6 @@
           ],
           "cardinality": "0..1",
           "codelist_uri": "https://wegenenverkeer-test.data.vlaanderen.be/id/conceptscheme/KlRetroreflecterendVerkeersbordGrootteorde"
-        },
-        {
-          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#RetroreflecterendVerkeersbord.fabricageType",
-          "name": "fabricage type",
-          "sort": "fabricage type",
-          "label": {
-            "nl": "fabricage type"
-          },
-          "description": {
-            "nl": "Genormaliseerde referentie waaraan het verkeersbord voldoet."
-          },
-          "usage": {},
-          "domain": [
-            {
-              "EA-Name": "RetroreflecterendVerkeersbord",
-              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#RetroreflecterendVerkeersbord"
-            }
-          ],
-          "range": [
-            {
-              "range_label": "KlFabricageTypeRetroreflecterendVerkeersbord",
-              "range_uri": "http://www.w3.org/2004/02/skos/core#Concept"
-            }
-          ],
-          "scopedrange": [
-            {
-              "range_uri": "#Fabricage type retroreflecterend verkeersbord",
-              "range_puri": "http://www.w3.org/2004/02/skos/core#Concept",
-              "range_label": {
-                "nl": "Fabricage type retroreflecterend verkeersbord"
-              }
-            }
-          ],
-          "cardinality": "1",
-          "codelist_uri": "https://wegenenverkeer-test.data.vlaanderen.be/id/conceptscheme/KlFabricageTypeRetroreflecterendVerkeersbord"
-        },
-        {
-          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#RetroreflecterendVerkeersbord.fabricageDatum",
-          "name": "fabricage datum",
-          "sort": "fabricage datum",
-          "label": {
-            "nl": "fabricage datum"
-          },
-          "description": {
-            "nl": "De datum waarop het bord werd gebouwd."
-          },
-          "usage": {},
-          "domain": [
-            {
-              "EA-Name": "RetroreflecterendVerkeersbord",
-              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#RetroreflecterendVerkeersbord"
-            }
-          ],
-          "range": [
-            {
-              "range_label": "Date",
-              "range_uri": "http://www.w3.org/2001/XMLSchema#date"
-            }
-          ],
-          "scopedrange": [
-            {
-              "range_uri": "#Datum",
-              "range_puri": "http://www.w3.org/2001/XMLSchema#date",
-              "range_label": {
-                "nl": "Datum"
-              }
-            }
-          ],
-          "cardinality": "1",
-          "codelist_uri": ""
         },
         {
           "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#RetroreflecterendVerkeersbord.afwerkingsgraad",
@@ -8095,16 +8150,16 @@
           ],
           "range": [
             {
-              "range_label": "Cementbetonverharding",
-              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Cementbetonverharding"
+              "range_label": "Kantopsluiting",
+              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Kantopsluiting"
             }
           ],
           "scopedrange": [
             {
-              "range_uri": "#Cementbetonverharding",
-              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Cementbetonverharding",
+              "range_uri": "#Kantopsluiting",
+              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Kantopsluiting",
               "range_label": {
-                "nl": "Cementbetonverharding"
+                "nl": "Kantopsluiting"
               }
             }
           ],
@@ -8130,16 +8185,16 @@
           ],
           "range": [
             {
-              "range_label": "Kantopsluiting",
-              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Kantopsluiting"
+              "range_label": "Cementbetonverharding",
+              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Cementbetonverharding"
             }
           ],
           "scopedrange": [
             {
-              "range_uri": "#Kantopsluiting",
-              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Kantopsluiting",
+              "range_uri": "#Cementbetonverharding",
+              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Cementbetonverharding",
               "range_label": {
-                "nl": "Kantopsluiting"
+                "nl": "Cementbetonverharding"
               }
             }
           ],
@@ -8316,16 +8371,16 @@
           ],
           "range": [
             {
-              "range_label": "Steenslagverharding",
-              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Steenslagverharding"
+              "range_label": "Ternairmengselverharding",
+              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Ternairmengselverharding"
             }
           ],
           "scopedrange": [
             {
-              "range_uri": "#Steenslagverharding",
-              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Steenslagverharding",
+              "range_uri": "#Ternairmengselverharding",
+              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Ternairmengselverharding",
               "range_label": {
-                "nl": "Steenslagverharding"
+                "nl": "Ternairmengselverharding"
               }
             }
           ],
@@ -8386,16 +8441,16 @@
           ],
           "range": [
             {
-              "range_label": "Onderbouw",
-              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Onderbouw"
+              "range_label": "Steenslagverharding",
+              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Steenslagverharding"
             }
           ],
           "scopedrange": [
             {
-              "range_uri": "#Onderbouw",
-              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Onderbouw",
+              "range_uri": "#Steenslagverharding",
+              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Steenslagverharding",
               "range_label": {
-                "nl": "Onderbouw"
+                "nl": "Steenslagverharding"
               }
             }
           ],
@@ -8421,16 +8476,16 @@
           ],
           "range": [
             {
-              "range_label": "Ternairmengselverharding",
-              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Ternairmengselverharding"
+              "range_label": "Onderbouw",
+              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Onderbouw"
             }
           ],
           "scopedrange": [
             {
-              "range_uri": "#Ternairmengselverharding",
-              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Ternairmengselverharding",
+              "range_uri": "#Onderbouw",
+              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Onderbouw",
               "range_label": {
-                "nl": "Ternairmengselverharding"
+                "nl": "Onderbouw"
               }
             }
           ],
@@ -8607,16 +8662,16 @@
           ],
           "range": [
             {
-              "range_label": "Kantopsluiting",
-              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Kantopsluiting"
+              "range_label": "Cementbetonverharding",
+              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Cementbetonverharding"
             }
           ],
           "scopedrange": [
             {
-              "range_uri": "#Kantopsluiting",
-              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Kantopsluiting",
+              "range_uri": "#Cementbetonverharding",
+              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Cementbetonverharding",
               "range_label": {
-                "nl": "Kantopsluiting"
+                "nl": "Cementbetonverharding"
               }
             }
           ],
@@ -8677,16 +8732,16 @@
           ],
           "range": [
             {
-              "range_label": "Cementbetonverharding",
-              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Cementbetonverharding"
+              "range_label": "Kantopsluiting",
+              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Kantopsluiting"
             }
           ],
           "scopedrange": [
             {
-              "range_uri": "#Cementbetonverharding",
-              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Cementbetonverharding",
+              "range_uri": "#Kantopsluiting",
+              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Kantopsluiting",
               "range_label": {
-                "nl": "Cementbetonverharding"
+                "nl": "Kantopsluiting"
               }
             }
           ],
@@ -8898,16 +8953,16 @@
           ],
           "range": [
             {
-              "range_label": "BitumineuzeLaag",
-              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#BitumineuzeLaag"
+              "range_label": "DunneOverlaging",
+              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#DunneOverlaging"
             }
           ],
           "scopedrange": [
             {
-              "range_uri": "#Bitumineuze laag",
-              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#BitumineuzeLaag",
+              "range_uri": "#Dunne overlaging",
+              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#DunneOverlaging",
               "range_label": {
-                "nl": "Bitumineuze laag"
+                "nl": "Dunne overlaging"
               }
             }
           ],
@@ -8933,16 +8988,16 @@
           ],
           "range": [
             {
-              "range_label": "DunneOverlaging",
-              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#DunneOverlaging"
+              "range_label": "BitumineuzeLaag",
+              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#BitumineuzeLaag"
             }
           ],
           "scopedrange": [
             {
-              "range_uri": "#Dunne overlaging",
-              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#DunneOverlaging",
+              "range_uri": "#Bitumineuze laag",
+              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#BitumineuzeLaag",
               "range_label": {
-                "nl": "Dunne overlaging"
+                "nl": "Bitumineuze laag"
               }
             }
           ],
@@ -9247,16 +9302,16 @@
           ],
           "range": [
             {
-              "range_label": "Cementbetonverharding",
-              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Cementbetonverharding"
+              "range_label": "Onderbouw",
+              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Onderbouw"
             }
           ],
           "scopedrange": [
             {
-              "range_uri": "#Cementbetonverharding",
-              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Cementbetonverharding",
+              "range_uri": "#Onderbouw",
+              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Onderbouw",
               "range_label": {
-                "nl": "Cementbetonverharding"
+                "nl": "Onderbouw"
               }
             }
           ],
@@ -9352,76 +9407,6 @@
           ],
           "range": [
             {
-              "range_label": "Dolomietverharding",
-              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Dolomietverharding"
-            }
-          ],
-          "scopedrange": [
-            {
-              "range_uri": "#Dolomietverharding",
-              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Dolomietverharding",
-              "range_label": {
-                "nl": "Dolomietverharding"
-              }
-            }
-          ],
-          "cardinality": "",
-          "codelist_uri": ""
-        },
-        {
-          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/proeven-metingen/#Is inspectie van",
-          "name": "is inspectie van",
-          "sort": "Is inspectie van",
-          "label": {
-            "nl": "Is inspectie van"
-          },
-          "description": {
-            "nl": "De relatie geeft aan dat er een inspectie, proef of meting gedaan kan worden op een onderdeel of installatie. De bron van de relatie is de inspectie, het doel het onderdeel of de installatie waarbij de inspectie hoort."
-          },
-          "usage": {},
-          "domain": [
-            {
-              "EA-Name": "ProefGemetenDikte",
-              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting#ProefGemetenDikte"
-            }
-          ],
-          "range": [
-            {
-              "range_label": "Onderbouw",
-              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Onderbouw"
-            }
-          ],
-          "scopedrange": [
-            {
-              "range_uri": "#Onderbouw",
-              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Onderbouw",
-              "range_label": {
-                "nl": "Onderbouw"
-              }
-            }
-          ],
-          "cardinality": "",
-          "codelist_uri": ""
-        },
-        {
-          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/proeven-metingen/#Is inspectie van",
-          "name": "is inspectie van",
-          "sort": "Is inspectie van",
-          "label": {
-            "nl": "Is inspectie van"
-          },
-          "description": {
-            "nl": "De relatie geeft aan dat er een inspectie, proef of meting gedaan kan worden op een onderdeel of installatie. De bron van de relatie is de inspectie, het doel het onderdeel of de installatie waarbij de inspectie hoort."
-          },
-          "usage": {},
-          "domain": [
-            {
-              "EA-Name": "ProefGemetenDikte",
-              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting#ProefGemetenDikte"
-            }
-          ],
-          "range": [
-            {
               "range_label": "Walsbetonverharding",
               "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Walsbetonverharding"
             }
@@ -9432,6 +9417,76 @@
               "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Walsbetonverharding",
               "range_label": {
                 "nl": "Walsbetonverharding"
+              }
+            }
+          ],
+          "cardinality": "",
+          "codelist_uri": ""
+        },
+        {
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/proeven-metingen/#Is inspectie van",
+          "name": "is inspectie van",
+          "sort": "Is inspectie van",
+          "label": {
+            "nl": "Is inspectie van"
+          },
+          "description": {
+            "nl": "De relatie geeft aan dat er een inspectie, proef of meting gedaan kan worden op een onderdeel of installatie. De bron van de relatie is de inspectie, het doel het onderdeel of de installatie waarbij de inspectie hoort."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "ProefGemetenDikte",
+              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting#ProefGemetenDikte"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "Cementbetonverharding",
+              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Cementbetonverharding"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Cementbetonverharding",
+              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Cementbetonverharding",
+              "range_label": {
+                "nl": "Cementbetonverharding"
+              }
+            }
+          ],
+          "cardinality": "",
+          "codelist_uri": ""
+        },
+        {
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/proeven-metingen/#Is inspectie van",
+          "name": "is inspectie van",
+          "sort": "Is inspectie van",
+          "label": {
+            "nl": "Is inspectie van"
+          },
+          "description": {
+            "nl": "De relatie geeft aan dat er een inspectie, proef of meting gedaan kan worden op een onderdeel of installatie. De bron van de relatie is de inspectie, het doel het onderdeel of de installatie waarbij de inspectie hoort."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "ProefGemetenDikte",
+              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting#ProefGemetenDikte"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "Dolomietverharding",
+              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Dolomietverharding"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Dolomietverharding",
+              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Dolomietverharding",
+              "range_label": {
+                "nl": "Dolomietverharding"
               }
             }
           ],
@@ -10019,16 +10074,16 @@
           ],
           "range": [
             {
-              "range_label": "Buis",
-              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Buis"
+              "range_label": "Put",
+              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Put"
             }
           ],
           "scopedrange": [
             {
-              "range_uri": "#Buis",
-              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Buis",
+              "range_uri": "#Put",
+              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Put",
               "range_label": {
-                "nl": "Buis"
+                "nl": "Put"
               }
             }
           ],
@@ -10054,16 +10109,16 @@
           ],
           "range": [
             {
-              "range_label": "Put",
-              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Put"
+              "range_label": "Buis",
+              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Buis"
             }
           ],
           "scopedrange": [
             {
-              "range_uri": "#Put",
-              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Put",
+              "range_uri": "#Buis",
+              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Buis",
               "range_label": {
-                "nl": "Put"
+                "nl": "Buis"
               }
             }
           ],
@@ -10589,16 +10644,16 @@
           ],
           "range": [
             {
-              "range_label": "Onderbouw",
-              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Onderbouw"
+              "range_label": "BitumineuzeLaag",
+              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#BitumineuzeLaag"
             }
           ],
           "scopedrange": [
             {
-              "range_uri": "#Onderbouw",
-              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Onderbouw",
+              "range_uri": "#Bitumineuze laag",
+              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#BitumineuzeLaag",
               "range_label": {
-                "nl": "Onderbouw"
+                "nl": "Bitumineuze laag"
               }
             }
           ],
@@ -10624,16 +10679,16 @@
           ],
           "range": [
             {
-              "range_label": "BitumineuzeLaag",
-              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#BitumineuzeLaag"
+              "range_label": "Onderbouw",
+              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Onderbouw"
             }
           ],
           "scopedrange": [
             {
-              "range_uri": "#Bitumineuze laag",
-              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#BitumineuzeLaag",
+              "range_uri": "#Onderbouw",
+              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Onderbouw",
               "range_label": {
-                "nl": "Bitumineuze laag"
+                "nl": "Onderbouw"
               }
             }
           ],
@@ -11279,16 +11334,51 @@
           ],
           "range": [
             {
-              "range_label": "Cementbetonverharding",
-              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Cementbetonverharding"
+              "range_label": "Markering",
+              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Markering"
             }
           ],
           "scopedrange": [
             {
-              "range_uri": "#Cementbetonverharding",
-              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Cementbetonverharding",
+              "range_uri": "#Markering",
+              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Markering",
               "range_label": {
-                "nl": "Cementbetonverharding"
+                "nl": "Markering"
+              }
+            }
+          ],
+          "cardinality": "",
+          "codelist_uri": ""
+        },
+        {
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/proeven-metingen/#Is inspectie van",
+          "name": "is inspectie van",
+          "sort": "Is inspectie van",
+          "label": {
+            "nl": "Is inspectie van"
+          },
+          "description": {
+            "nl": "De relatie geeft aan dat er een inspectie, proef of meting gedaan kan worden op een onderdeel of installatie. De bron van de relatie is de inspectie, het doel het onderdeel of de installatie waarbij de inspectie hoort."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "ProefStroefheid",
+              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting#ProefStroefheid"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "Bestrijking",
+              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Bestrijking"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Bestrijking",
+              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Bestrijking",
+              "range_label": {
+                "nl": "Bestrijking"
               }
             }
           ],
@@ -11384,51 +11474,16 @@
           ],
           "range": [
             {
-              "range_label": "Markering",
-              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Markering"
+              "range_label": "Cementbetonverharding",
+              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Cementbetonverharding"
             }
           ],
           "scopedrange": [
             {
-              "range_uri": "#Markering",
-              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Markering",
+              "range_uri": "#Cementbetonverharding",
+              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Cementbetonverharding",
               "range_label": {
-                "nl": "Markering"
-              }
-            }
-          ],
-          "cardinality": "",
-          "codelist_uri": ""
-        },
-        {
-          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/proeven-metingen/#Is inspectie van",
-          "name": "is inspectie van",
-          "sort": "Is inspectie van",
-          "label": {
-            "nl": "Is inspectie van"
-          },
-          "description": {
-            "nl": "De relatie geeft aan dat er een inspectie, proef of meting gedaan kan worden op een onderdeel of installatie. De bron van de relatie is de inspectie, het doel het onderdeel of de installatie waarbij de inspectie hoort."
-          },
-          "usage": {},
-          "domain": [
-            {
-              "EA-Name": "ProefStroefheid",
-              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting#ProefStroefheid"
-            }
-          ],
-          "range": [
-            {
-              "range_label": "Bestrijking",
-              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Bestrijking"
-            }
-          ],
-          "scopedrange": [
-            {
-              "range_uri": "#Bestrijking",
-              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Bestrijking",
-              "range_label": {
-                "nl": "Bestrijking"
+                "nl": "Cementbetonverharding"
               }
             }
           ],
@@ -11989,16 +12044,16 @@
           ],
           "range": [
             {
-              "range_label": "Bestrijking",
-              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Bestrijking"
+              "range_label": "DunneOverlaging",
+              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#DunneOverlaging"
             }
           ],
           "scopedrange": [
             {
-              "range_uri": "#Bestrijking",
-              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Bestrijking",
+              "range_uri": "#Dunne overlaging",
+              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#DunneOverlaging",
               "range_label": {
-                "nl": "Bestrijking"
+                "nl": "Dunne overlaging"
               }
             }
           ],
@@ -12024,16 +12079,16 @@
           ],
           "range": [
             {
-              "range_label": "DunneOverlaging",
-              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#DunneOverlaging"
+              "range_label": "Bestrijking",
+              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Bestrijking"
             }
           ],
           "scopedrange": [
             {
-              "range_uri": "#Dunne overlaging",
-              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#DunneOverlaging",
+              "range_uri": "#Bestrijking",
+              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Bestrijking",
               "range_label": {
-                "nl": "Dunne overlaging"
+                "nl": "Bestrijking"
               }
             }
           ],
@@ -12096,6 +12151,146 @@
             }
           ],
           "cardinality": "1",
+          "codelist_uri": ""
+        },
+        {
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/proeven-metingen/#Is inspectie van",
+          "name": "is inspectie van",
+          "sort": "Is inspectie van",
+          "label": {
+            "nl": "Is inspectie van"
+          },
+          "description": {
+            "nl": "De relatie geeft aan dat er een inspectie, proef of meting gedaan kan worden op een onderdeel of installatie. De bron van de relatie is de inspectie, het doel het onderdeel of de installatie waarbij de inspectie hoort."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "ProefVlakheid",
+              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting#ProefVlakheid"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "Kantopsluiting",
+              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Kantopsluiting"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Kantopsluiting",
+              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Kantopsluiting",
+              "range_label": {
+                "nl": "Kantopsluiting"
+              }
+            }
+          ],
+          "cardinality": "",
+          "codelist_uri": ""
+        },
+        {
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/proeven-metingen/#Is inspectie van",
+          "name": "is inspectie van",
+          "sort": "Is inspectie van",
+          "label": {
+            "nl": "Is inspectie van"
+          },
+          "description": {
+            "nl": "De relatie geeft aan dat er een inspectie, proef of meting gedaan kan worden op een onderdeel of installatie. De bron van de relatie is de inspectie, het doel het onderdeel of de installatie waarbij de inspectie hoort."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "ProefVlakheid",
+              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting#ProefVlakheid"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "Cementbetonverharding",
+              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Cementbetonverharding"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Cementbetonverharding",
+              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Cementbetonverharding",
+              "range_label": {
+                "nl": "Cementbetonverharding"
+              }
+            }
+          ],
+          "cardinality": "",
+          "codelist_uri": ""
+        },
+        {
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/proeven-metingen/#Is inspectie van",
+          "name": "is inspectie van",
+          "sort": "Is inspectie van",
+          "label": {
+            "nl": "Is inspectie van"
+          },
+          "description": {
+            "nl": "De relatie geeft aan dat er een inspectie, proef of meting gedaan kan worden op een onderdeel of installatie. De bron van de relatie is de inspectie, het doel het onderdeel of de installatie waarbij de inspectie hoort."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "ProefVlakheid",
+              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting#ProefVlakheid"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "BitumineuzeLaag",
+              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#BitumineuzeLaag"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Bitumineuze laag",
+              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#BitumineuzeLaag",
+              "range_label": {
+                "nl": "Bitumineuze laag"
+              }
+            }
+          ],
+          "cardinality": "",
+          "codelist_uri": ""
+        },
+        {
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/proeven-metingen/#Is inspectie van",
+          "name": "is inspectie van",
+          "sort": "Is inspectie van",
+          "label": {
+            "nl": "Is inspectie van"
+          },
+          "description": {
+            "nl": "De relatie geeft aan dat er een inspectie, proef of meting gedaan kan worden op een onderdeel of installatie. De bron van de relatie is de inspectie, het doel het onderdeel of de installatie waarbij de inspectie hoort."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "ProefVlakheid",
+              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting#ProefVlakheid"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "Dolomietverharding",
+              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Dolomietverharding"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Dolomietverharding",
+              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Dolomietverharding",
+              "range_label": {
+                "nl": "Dolomietverharding"
+              }
+            }
+          ],
+          "cardinality": "",
           "codelist_uri": ""
         },
         {
@@ -12187,146 +12382,6 @@
           ],
           "range": [
             {
-              "range_label": "Onderbouw",
-              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Onderbouw"
-            }
-          ],
-          "scopedrange": [
-            {
-              "range_uri": "#Onderbouw",
-              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Onderbouw",
-              "range_label": {
-                "nl": "Onderbouw"
-              }
-            }
-          ],
-          "cardinality": "",
-          "codelist_uri": ""
-        },
-        {
-          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/proeven-metingen/#Is inspectie van",
-          "name": "is inspectie van",
-          "sort": "Is inspectie van",
-          "label": {
-            "nl": "Is inspectie van"
-          },
-          "description": {
-            "nl": "De relatie geeft aan dat er een inspectie, proef of meting gedaan kan worden op een onderdeel of installatie. De bron van de relatie is de inspectie, het doel het onderdeel of de installatie waarbij de inspectie hoort."
-          },
-          "usage": {},
-          "domain": [
-            {
-              "EA-Name": "ProefVlakheid",
-              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting#ProefVlakheid"
-            }
-          ],
-          "range": [
-            {
-              "range_label": "Dolomietverharding",
-              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Dolomietverharding"
-            }
-          ],
-          "scopedrange": [
-            {
-              "range_uri": "#Dolomietverharding",
-              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Dolomietverharding",
-              "range_label": {
-                "nl": "Dolomietverharding"
-              }
-            }
-          ],
-          "cardinality": "",
-          "codelist_uri": ""
-        },
-        {
-          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/proeven-metingen/#Is inspectie van",
-          "name": "is inspectie van",
-          "sort": "Is inspectie van",
-          "label": {
-            "nl": "Is inspectie van"
-          },
-          "description": {
-            "nl": "De relatie geeft aan dat er een inspectie, proef of meting gedaan kan worden op een onderdeel of installatie. De bron van de relatie is de inspectie, het doel het onderdeel of de installatie waarbij de inspectie hoort."
-          },
-          "usage": {},
-          "domain": [
-            {
-              "EA-Name": "ProefVlakheid",
-              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting#ProefVlakheid"
-            }
-          ],
-          "range": [
-            {
-              "range_label": "Ternairmengselverharding",
-              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Ternairmengselverharding"
-            }
-          ],
-          "scopedrange": [
-            {
-              "range_uri": "#Ternairmengselverharding",
-              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Ternairmengselverharding",
-              "range_label": {
-                "nl": "Ternairmengselverharding"
-              }
-            }
-          ],
-          "cardinality": "",
-          "codelist_uri": ""
-        },
-        {
-          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/proeven-metingen/#Is inspectie van",
-          "name": "is inspectie van",
-          "sort": "Is inspectie van",
-          "label": {
-            "nl": "Is inspectie van"
-          },
-          "description": {
-            "nl": "De relatie geeft aan dat er een inspectie, proef of meting gedaan kan worden op een onderdeel of installatie. De bron van de relatie is de inspectie, het doel het onderdeel of de installatie waarbij de inspectie hoort."
-          },
-          "usage": {},
-          "domain": [
-            {
-              "EA-Name": "ProefVlakheid",
-              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting#ProefVlakheid"
-            }
-          ],
-          "range": [
-            {
-              "range_label": "Kantopsluiting",
-              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Kantopsluiting"
-            }
-          ],
-          "scopedrange": [
-            {
-              "range_uri": "#Kantopsluiting",
-              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Kantopsluiting",
-              "range_label": {
-                "nl": "Kantopsluiting"
-              }
-            }
-          ],
-          "cardinality": "",
-          "codelist_uri": ""
-        },
-        {
-          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/proeven-metingen/#Is inspectie van",
-          "name": "is inspectie van",
-          "sort": "Is inspectie van",
-          "label": {
-            "nl": "Is inspectie van"
-          },
-          "description": {
-            "nl": "De relatie geeft aan dat er een inspectie, proef of meting gedaan kan worden op een onderdeel of installatie. De bron van de relatie is de inspectie, het doel het onderdeel of de installatie waarbij de inspectie hoort."
-          },
-          "usage": {},
-          "domain": [
-            {
-              "EA-Name": "ProefVlakheid",
-              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/proefenmeting#ProefVlakheid"
-            }
-          ],
-          "range": [
-            {
               "range_label": "Steenslagverharding",
               "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Steenslagverharding"
             }
@@ -12362,16 +12417,16 @@
           ],
           "range": [
             {
-              "range_label": "BitumineuzeLaag",
-              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#BitumineuzeLaag"
+              "range_label": "Onderbouw",
+              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Onderbouw"
             }
           ],
           "scopedrange": [
             {
-              "range_uri": "#Bitumineuze laag",
-              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#BitumineuzeLaag",
+              "range_uri": "#Onderbouw",
+              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Onderbouw",
               "range_label": {
-                "nl": "Bitumineuze laag"
+                "nl": "Onderbouw"
               }
             }
           ],
@@ -12397,16 +12452,16 @@
           ],
           "range": [
             {
-              "range_label": "Cementbetonverharding",
-              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Cementbetonverharding"
+              "range_label": "Ternairmengselverharding",
+              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Ternairmengselverharding"
             }
           ],
           "scopedrange": [
             {
-              "range_uri": "#Cementbetonverharding",
-              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Cementbetonverharding",
+              "range_uri": "#Ternairmengselverharding",
+              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Ternairmengselverharding",
               "range_label": {
-                "nl": "Cementbetonverharding"
+                "nl": "Ternairmengselverharding"
               }
             }
           ],
@@ -12552,16 +12607,16 @@
           ],
           "range": [
             {
-              "range_label": "Buis",
-              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Buis"
+              "range_label": "Put",
+              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Put"
             }
           ],
           "scopedrange": [
             {
-              "range_uri": "#Buis",
-              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Buis",
+              "range_uri": "#Put",
+              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Put",
               "range_label": {
-                "nl": "Buis"
+                "nl": "Put"
               }
             }
           ],
@@ -12587,16 +12642,16 @@
           ],
           "range": [
             {
-              "range_label": "Put",
-              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Put"
+              "range_label": "Buis",
+              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Buis"
             }
           ],
           "scopedrange": [
             {
-              "range_uri": "#Put",
-              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Put",
+              "range_uri": "#Buis",
+              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Buis",
               "range_label": {
-                "nl": "Put"
+                "nl": "Buis"
               }
             }
           ],
@@ -12773,16 +12828,16 @@
           ],
           "range": [
             {
-              "range_label": "Kantopsluiting",
-              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Kantopsluiting"
+              "range_label": "Cementbetonverharding",
+              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Cementbetonverharding"
             }
           ],
           "scopedrange": [
             {
-              "range_uri": "#Kantopsluiting",
-              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Kantopsluiting",
+              "range_uri": "#Cementbetonverharding",
+              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Cementbetonverharding",
               "range_label": {
-                "nl": "Kantopsluiting"
+                "nl": "Cementbetonverharding"
               }
             }
           ],
@@ -12808,16 +12863,16 @@
           ],
           "range": [
             {
-              "range_label": "Cementbetonverharding",
-              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Cementbetonverharding"
+              "range_label": "Kantopsluiting",
+              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Kantopsluiting"
             }
           ],
           "scopedrange": [
             {
-              "range_uri": "#Cementbetonverharding",
-              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Cementbetonverharding",
+              "range_uri": "#Kantopsluiting",
+              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Kantopsluiting",
               "range_label": {
-                "nl": "Cementbetonverharding"
+                "nl": "Kantopsluiting"
               }
             }
           ],
@@ -13357,8 +13412,7 @@
       "affiliation": {
         "name": "AWV",
         "website": "http://wegenenverkeer.be/"
-      },
-      "email": "raf.vanlathem@mow.vlaanderen.be"
+      }
     },
     {
       "role": "A",
@@ -13367,8 +13421,7 @@
       "affiliation": {
         "name": "2m@BIT",
         "website": "https://www.linkedin.com/in/davy-vanhoudt-447082138/?originalSubdomain=be"
-      },
-      "email": "Davy.Vanhoudt@outlook.be"
+      }
     },
     {
       "role": "A",
@@ -13377,8 +13430,7 @@
       "affiliation": {
         "name": "Swecobelgium",
         "website": "http://swecobelgium.be/"
-      },
-      "email": "Arno.vandyck@swecobelgium.be"
+      }
     },
     {
       "role": "A",
@@ -13387,8 +13439,7 @@
       "affiliation": {
         "name": "Swecobelgium",
         "website": "http://swecobelgium.be/"
-      },
-      "email": "Ricardo.Sousa@swecobelgium.be"
+      }
     },
     {
       "role": "A",
@@ -13397,8 +13448,7 @@
       "affiliation": {
         "name": "ACPartners",
         "website": "http://www.acpartners.be/"
-      },
-      "email": "deweghejoost@gmail.com"
+      }
     },
     {
       "role": "A",
@@ -13407,8 +13457,7 @@
       "affiliation": {
         "name": "Geonius",
         "website": "https://www.geonius.be/"
-      },
-      "email": "j.brouwers@geonius.be"
+      }
     },
     {
       "role": "A",
@@ -13417,8 +13466,7 @@
       "affiliation": {
         "name": "MB",
         "website": "http://maximbroos.com/"
-      },
-      "email": "hello@maximbroos.com"
+      }
     },
     {
       "role": "A",
@@ -13427,8 +13475,7 @@
       "affiliation": {
         "name": "Geosolutions",
         "website": "http://wegenenverkeer.be/"
-      },
-      "email": "simon.baert@geosolutions.be"
+      }
     },
     {
       "role": "C",
@@ -13437,8 +13484,7 @@
       "affiliation": {
         "name": "AWV",
         "website": "http://wegenenverkeer.be/"
-      },
-      "email": "julien.wynants@mow.vlaanderen.be"
+      }
     },
     {
       "role": "C",
@@ -13447,8 +13493,7 @@
       "affiliation": {
         "name": "RealDolmen",
         "website": "https://www.realdolmen.com"
-      },
-      "email": "pim.wollants@realdolmen.com"
+      }
     },
     {
       "role": "C",
@@ -13457,8 +13502,7 @@
       "affiliation": {
         "name": "AWV",
         "website": "http://wegenenverkeer.be/"
-      },
-      "email": "Wim.Willaert@mow.vlaanderen.be"
+      }
     },
     {
       "role": "C",
@@ -13467,8 +13511,7 @@
       "affiliation": {
         "name": "AWV",
         "website": "http://wegenenverkeer.be/"
-      },
-      "email": "kristof.wieme@mow.vlaanderen.be"
+      }
     },
     {
       "role": "C",
@@ -13477,8 +13520,7 @@
       "affiliation": {
         "name": "AWV",
         "website": "http://wegenenverkeer.be/"
-      },
-      "email": "bert.weyne@mow.vlaanderen.be"
+      }
     },
     {
       "role": "C",
@@ -13487,8 +13529,7 @@
       "affiliation": {
         "name": "AWV",
         "website": "http://wegenenverkeer.be/"
-      },
-      "email": "Eli.Weerts@mow.vlaanderen.be"
+      }
     },
     {
       "role": "C",
@@ -13497,8 +13538,7 @@
       "affiliation": {
         "name": "AWV",
         "website": "http://wegenenverkeer.be/"
-      },
-      "email": "koen.wardenier@mow.vlaanderen.be"
+      }
     },
     {
       "role": "C",
@@ -13507,8 +13547,7 @@
       "affiliation": {
         "name": "AWV",
         "website": "http://wegenenverkeer.be/"
-      },
-      "email": "Pieter.Vrijsen@mow.vlaanderen.be"
+      }
     },
     {
       "role": "C",
@@ -13517,8 +13556,7 @@
       "affiliation": {
         "name": "AWV",
         "website": "http://wegenenverkeer.be/"
-      },
-      "email": "david.vlaminck@mow.vlaanderen.be"
+      }
     },
     {
       "role": "C",
@@ -13527,8 +13565,7 @@
       "affiliation": {
         "name": "Dynniq",
         "website": "https://dynniq.com/"
-      },
-      "email": "els.vivijs@dynniq.be"
+      }
     },
     {
       "role": "C",
@@ -13537,8 +13574,7 @@
       "affiliation": {
         "name": "MOW afdeling Geotechniek",
         "website": "https://departement-mow.vlaanderen.be/nl/afdelingen/geotechniek"
-      },
-      "email": "leen.vincke@mow.vlaanderen.be"
+      }
     },
     {
       "role": "C",
@@ -13547,8 +13583,7 @@
       "affiliation": {
         "name": "AWV",
         "website": "http://wegenenverkeer.be/"
-      },
-      "email": "Yoeri.Vernelen@mow.vlaanderen.be"
+      }
     },
     {
       "role": "C",
@@ -13557,8 +13592,7 @@
       "affiliation": {
         "name": "Jidoka",
         "website": "https://www.jidoka.be/"
-      },
-      "email": "christopher.verhulst@jidoka.be"
+      }
     },
     {
       "role": "C",
@@ -13567,8 +13601,7 @@
       "affiliation": {
         "name": "AWV",
         "website": "http://wegenenverkeer.be/"
-      },
-      "email": "tim.verhaeghe@mow.vlaanderen.be"
+      }
     },
     {
       "role": "C",
@@ -13577,8 +13610,7 @@
       "affiliation": {
         "name": "AWV",
         "website": "http://wegenenverkeer.be/"
-      },
-      "email": "frederick.verdonck@mow.vlaanderen.be"
+      }
     },
     {
       "role": "C",
@@ -13587,8 +13619,7 @@
       "affiliation": {
         "name": "AWV",
         "website": "http://wegenenverkeer.be/"
-      },
-      "email": "Arne.Verburgh@mow.vlaanderen.be"
+      }
     },
     {
       "role": "C",
@@ -13597,8 +13628,7 @@
       "affiliation": {
         "name": "Geosolutions",
         "website": "https://geosolutions.be/"
-      },
-      "email": "anouck.vanrykel@geosolutions.be"
+      }
     },
     {
       "role": "C",
@@ -13607,8 +13637,7 @@
       "affiliation": {
         "name": "Bouwunie",
         "website": "https://www.bouwunie.be/nl/"
-      },
-      "email": "jerome.vanroye@telenet.be"
+      }
     },
     {
       "role": "C",
@@ -13617,8 +13646,7 @@
       "affiliation": {
         "name": "INBO",
         "website": "https://pureportal.inbo.be/"
-      },
-      "email": "andy.vankerckvoorde@inbo.be"
+      }
     },
     {
       "role": "C",
@@ -13627,8 +13655,7 @@
       "affiliation": {
         "name": "AWV",
         "website": "http://wegenenverkeer.be/"
-      },
-      "email": "Alvarez.Vanhove@mow.vlaanderen.be"
+      }
     },
     {
       "role": "C",
@@ -13637,8 +13664,7 @@
       "affiliation": {
         "name": "AWV",
         "website": "http://wegenenverkeer.be/"
-      },
-      "email": "Barbara.Vanhooreweder@mow.vlaanderen.be"
+      }
     },
     {
       "role": "C",
@@ -13647,8 +13673,7 @@
       "affiliation": {
         "name": "AWV",
         "website": "http://wegenenverkeer.be/"
-      },
-      "email": "peter.vandenhole@mow.vlaanderen.be"
+      }
     },
     {
       "role": "C",
@@ -13657,8 +13682,7 @@
       "affiliation": {
         "name": "AWV",
         "website": "http://wegenenverkeer.be/"
-      },
-      "email": "Freek.Vandenbussche@mow.vlaanderen.be"
+      }
     },
     {
       "role": "C",
@@ -13667,8 +13691,7 @@
       "affiliation": {
         "name": "AWV",
         "website": "http://wegenenverkeer.be/"
-      },
-      "email": "patrick.vandenheuvel@mow.vlaanderen.be"
+      }
     },
     {
       "role": "C",
@@ -13677,8 +13700,7 @@
       "affiliation": {
         "name": "BAM NV",
         "website": "https://lantis.be/"
-      },
-      "email": "maarten.vandepoel@bamnv.be"
+      }
     },
     {
       "role": "C",
@@ -13687,8 +13709,7 @@
       "affiliation": {
         "name": "AWV",
         "website": "http://wegenenverkeer.be/"
-      },
-      "email": "bart.vanvaerenberg@mow.vlaanderen.be"
+      }
     },
     {
       "role": "C",
@@ -13697,8 +13718,7 @@
       "affiliation": {
         "name": "AWV",
         "website": "http://wegenenverkeer.be/"
-      },
-      "email": "Pieter.VanNieuwerburgh@mow.vlaanderen.be"
+      }
     },
     {
       "role": "C",
@@ -13707,8 +13727,7 @@
       "affiliation": {
         "name": "AWV",
         "website": "http://wegenenverkeer.be/"
-      },
-      "email": "sam.vannieuwenhuyse@mow.vlaanderen.be"
+      }
     },
     {
       "role": "C",
@@ -13717,8 +13736,7 @@
       "affiliation": {
         "name": "Arcadis",
         "website": "https://www.arcadis.com/en/global/"
-      },
-      "email": "ann.vanmelkebeek@arcadis.com"
+      }
     },
     {
       "role": "C",
@@ -13727,8 +13745,7 @@
       "affiliation": {
         "name": "AWV",
         "website": "http://wegenenverkeer.be/"
-      },
-      "email": "annick.vanlaere@mow.vlaanderen.be"
+      }
     },
     {
       "role": "C",
@@ -13737,8 +13754,7 @@
       "affiliation": {
         "name": "AWV",
         "website": "http://wegenenverkeer.be/"
-      },
-      "email": "stanny.vanherzeele@mow.vlaanderen.be"
+      }
     },
     {
       "role": "C",
@@ -13747,8 +13763,7 @@
       "affiliation": {
         "name": "AWV",
         "website": "http://wegenenverkeer.be/"
-      },
-      "email": "Wouter.VanHerck@mow.vlaanderen.be"
+      }
     },
     {
       "role": "C",
@@ -13757,8 +13772,7 @@
       "affiliation": {
         "name": "AWV",
         "website": "http://wegenenverkeer.be/"
-      },
-      "email": "Jan.VanGestel@mow.vlaanderen.be"
+      }
     },
     {
       "role": "C",
@@ -13767,8 +13781,7 @@
       "affiliation": {
         "name": "AWV",
         "website": "http://wegenenverkeer.be/"
-      },
-      "email": "Bert.VanGaver@mow.vlaanderen.be"
+      }
     },
     {
       "role": "C",
@@ -13777,8 +13790,7 @@
       "affiliation": {
         "name": "AWV",
         "website": "http://wegenenverkeer.be/"
-      },
-      "email": "Geert.Van Gaever@mow.vlaanderen.be"
+      }
     },
     {
       "role": "C",
@@ -13787,8 +13799,7 @@
       "affiliation": {
         "name": "AWV",
         "website": "http://wegenenverkeer.be/"
-      },
-      "email": "karl.vanduppen@mow.vlaanderen.be"
+      }
     },
     {
       "role": "C",
@@ -13797,8 +13808,7 @@
       "affiliation": {
         "name": "VMM",
         "website": "https://www.vmm.be"
-      },
-      "email": "k.vandriessen@vmm.be"
+      }
     },
     {
       "role": "C",
@@ -13807,8 +13817,7 @@
       "affiliation": {
         "name": "Techlink",
         "website": "https://www.techlink.be/nl/home"
-      },
-      "email": "kris.vandingenen@techlink.be"
+      }
     },
     {
       "role": "C",
@@ -13817,8 +13826,7 @@
       "affiliation": {
         "name": "Departement Omgeving",
         "website": "https://www.dov.vlaanderen.be/"
-      },
-      "email": "marleen.vandamme@vlaanderen.be"
+      }
     },
     {
       "role": "C",
@@ -13827,8 +13835,7 @@
       "affiliation": {
         "name": "AWV",
         "website": "http://wegenenverkeer.be/"
-      },
-      "email": "tine.vandamme@mow.vlaanderen.be"
+      }
     },
     {
       "role": "C",
@@ -13837,8 +13844,7 @@
       "affiliation": {
         "name": "AWV",
         "website": "http://wegenenverkeer.be/"
-      },
-      "email": "Liesbeth.VanCamp@mow.vlaanderen.be"
+      }
     },
     {
       "role": "C",
@@ -13847,8 +13853,7 @@
       "affiliation": {
         "name": "AWV",
         "website": "http://wegenenverkeer.be/"
-      },
-      "email": "tom.vancalster@mow.vlaanderen.be"
+      }
     },
     {
       "role": "C",
@@ -13857,8 +13862,7 @@
       "affiliation": {
         "name": "AWV",
         "website": "http://wegenenverkeer.be/"
-      },
-      "email": "Bert.VanBuyten@mow.vlaanderen.be"
+      }
     },
     {
       "role": "C",
@@ -13867,8 +13871,7 @@
       "affiliation": {
         "name": "AWV",
         "website": "http://wegenenverkeer.be/"
-      },
-      "email": "jan.vanboxelaere@mow.vlaanderen.be"
+      }
     },
     {
       "role": "C",
@@ -13877,8 +13880,7 @@
       "affiliation": {
         "name": "AWV",
         "website": "http://wegenenverkeer.be/"
-      },
-      "email": "patrick.vanacker@mow.vlaanderen.be"
+      }
     },
     {
       "role": "C",
@@ -13887,8 +13889,7 @@
       "affiliation": {
         "name": "Ixor",
         "website": "https://ixor.be/"
-      },
-      "email": "christian.tytgat@ixor.be"
+      }
     },
     {
       "role": "C",
@@ -13897,8 +13898,7 @@
       "affiliation": {
         "name": "Arcadis",
         "website": "https://www.arcadis.com/en/global/"
-      },
-      "email": "andrea.trincadofernandez@arcadis.com"
+      }
     },
     {
       "role": "C",
@@ -13907,8 +13907,7 @@
       "affiliation": {
         "name": "VMM",
         "website": "https://www.vmm.be/"
-      },
-      "email": "P.Thomas@vmm.be"
+      }
     },
     {
       "role": "C",
@@ -13917,8 +13916,7 @@
       "affiliation": {
         "name": "VMM",
         "website": "https://www.vmm.be/"
-      },
-      "email": "I.Terrens@vmm.be"
+      }
     },
     {
       "role": "C",
@@ -13927,8 +13925,7 @@
       "affiliation": {
         "name": "Witas",
         "website": "https://www.witas.be/nl/"
-      },
-      "email": "wim@witas.be"
+      }
     },
     {
       "role": "C",
@@ -13937,8 +13934,7 @@
       "affiliation": {
         "name": "AWV",
         "website": "http://wegenenverkeer.be/"
-      },
-      "email": "Immanuel.Taets@mow.vlaanderen.be"
+      }
     },
     {
       "role": "C",
@@ -13947,8 +13943,7 @@
       "affiliation": {
         "name": "AWV",
         "website": "http://wegenenverkeer.be/"
-      },
-      "email": "Peter.Stulens@mow.vlaanderen.be"
+      }
     },
     {
       "role": "C",
@@ -13957,8 +13952,7 @@
       "affiliation": {
         "name": "AWV",
         "website": "http://wegenenverkeer.be/"
-      },
-      "email": "guy.sonck@mow.vlaanderen.be"
+      }
     },
     {
       "role": "C",
@@ -13967,8 +13961,7 @@
       "affiliation": {
         "name": "AWV",
         "website": "http://wegenenverkeer.be/"
-      },
-      "email": "Jeremy.Soenens@mow.vlaanderen.be"
+      }
     },
     {
       "role": "C",
@@ -13977,8 +13970,7 @@
       "affiliation": {
         "name": "AIV",
         "website": "https://data.vlaanderen.be/"
-      },
-      "email": "Jens.Scheerlinck@kb.vlaanderen.be"
+      }
     },
     {
       "role": "C",
@@ -13987,8 +13979,7 @@
       "affiliation": {
         "name": "PWC",
         "website": "https://www.pwc.com/"
-      },
-      "email": "jens.scheerlinck@pwc.com"
+      }
     },
     {
       "role": "C",
@@ -13997,8 +13988,7 @@
       "affiliation": {
         "name": "BAM NV",
         "website": "https://lantis.be/"
-      },
-      "email": "stephan.schaeffer@bamnv.be"
+      }
     },
     {
       "role": "C",
@@ -14007,8 +13997,7 @@
       "affiliation": {
         "name": "AIV",
         "website": "https://data.vlaanderen.be/"
-      },
-      "email": "Liesbeth.Rombouts@kb.vlaanderen.be"
+      }
     },
     {
       "role": "C",
@@ -14017,8 +14006,7 @@
       "affiliation": {
         "name": "AWV",
         "website": "http://wegenenverkeer.be/"
-      },
-      "email": "Mathias.Renders@mow.vlaanderen.be"
+      }
     },
     {
       "role": "C",
@@ -14027,8 +14015,7 @@
       "affiliation": {
         "name": "AWV",
         "website": "http://wegenenverkeer.be/"
-      },
-      "email": "Kristof.Ramaekers@mow.vlaanderen.be"
+      }
     },
     {
       "role": "C",
@@ -14037,8 +14024,7 @@
       "affiliation": {
         "name": "AWV",
         "website": "http://wegenenverkeer.be/"
-      },
-      "email": "thomas.plumet@mow.vlaanderen.be"
+      }
     },
     {
       "role": "C",
@@ -14047,8 +14033,7 @@
       "affiliation": {
         "name": "AWV",
         "website": "http://wegenenverkeer.be/"
-      },
-      "email": "Mark.Pissens@mow.vlaanderen.be"
+      }
     },
     {
       "role": "C",
@@ -14057,8 +14042,7 @@
       "affiliation": {
         "name": "AWV",
         "website": "http://wegenenverkeer.be/"
-      },
-      "email": "isabelle.piette@mow.vlaanderen.be"
+      }
     },
     {
       "role": "C",
@@ -14067,8 +14051,7 @@
       "affiliation": {
         "name": "AWV",
         "website": "http://wegenenverkeer.be/"
-      },
-      "email": "stephane.peeters@mow.vlaanderen.be"
+      }
     },
     {
       "role": "C",
@@ -14077,8 +14060,7 @@
       "affiliation": {
         "name": "AWV",
         "website": "http://wegenenverkeer.be/"
-      },
-      "email": "Danny.Peelaers@mow.vlaanderen.be"
+      }
     },
     {
       "role": "C",
@@ -14087,8 +14069,7 @@
       "affiliation": {
         "name": "AWV",
         "website": "http://wegenenverkeer.be/"
-      },
-      "email": "willem.pauwels@mow.vlaanderen.be"
+      }
     },
     {
       "role": "C",
@@ -14097,8 +14078,7 @@
       "affiliation": {
         "name": "AWV",
         "website": "http://wegenenverkeer.be/"
-      },
-      "email": "Timothy.Nuttens@mow.vlaanderen.be"
+      }
     },
     {
       "role": "C",
@@ -14107,8 +14087,7 @@
       "affiliation": {
         "name": "AWV",
         "website": "http://wegenenverkeer.be/"
-      },
-      "email": "Bjorn.Mortier@mow.vlaanderen.be"
+      }
     },
     {
       "role": "C",
@@ -14117,8 +14096,7 @@
       "affiliation": {
         "name": "AWV",
         "website": "http://wegenenverkeer.be/"
-      },
-      "email": "Marleen.Moelants@mow.vlaanderen.be"
+      }
     },
     {
       "role": "C",
@@ -14127,8 +14105,7 @@
       "affiliation": {
         "name": "VMM",
         "website": "https://www.vmm.be/"
-      },
-      "email": "K.Miserez@vmm.be"
+      }
     },
     {
       "role": "C",
@@ -14137,8 +14114,7 @@
       "affiliation": {
         "name": "AWV",
         "website": "http://wegenenverkeer.be/"
-      },
-      "email": "koen.meulemans@mow.vlaanderen.be"
+      }
     },
     {
       "role": "C",
@@ -14147,8 +14123,7 @@
       "affiliation": {
         "name": "AWV",
         "website": "http://wegenenverkeer.be/"
-      },
-      "email": "alex.mettepenningen@mow.vlaanderen.be"
+      }
     },
     {
       "role": "C",
@@ -14157,8 +14132,7 @@
       "affiliation": {
         "name": "AWV",
         "website": "http://wegenenverkeer.be/"
-      },
-      "email": "Peter.Merlevede@mow.vlaanderen.be"
+      }
     },
     {
       "role": "C",
@@ -14167,8 +14141,7 @@
       "affiliation": {
         "name": "AWV",
         "website": "http://wegenenverkeer.be/"
-      },
-      "email": "Bart.Mergaerts@mow.vlaanderen.be"
+      }
     },
     {
       "role": "C",
@@ -14177,8 +14150,7 @@
       "affiliation": {
         "name": "LNE",
         "website": "https://www.lne.be/"
-      },
-      "email": "jan.menschaert@lne.vlaanderen.be"
+      }
     },
     {
       "role": "C",
@@ -14187,8 +14159,7 @@
       "affiliation": {
         "name": "AWV",
         "website": "http://wegenenverkeer.be/"
-      },
-      "email": "davy.meeus@mow.vlaanderen.be"
+      }
     },
     {
       "role": "C",
@@ -14197,8 +14168,7 @@
       "affiliation": {
         "name": "AWV",
         "website": "http://wegenenverkeer.be/"
-      },
-      "email": "Wim.Meermans@mow.vlaanderen.be"
+      }
     },
     {
       "role": "C",
@@ -14207,8 +14177,7 @@
       "affiliation": {
         "name": "VMM",
         "website": "https://www.vmm.be/"
-      },
-      "email": "k.martens@vmm.be"
+      }
     },
     {
       "role": "C",
@@ -14217,8 +14186,7 @@
       "affiliation": {
         "name": "Geovise",
         "website": "www.geovise.com"
-      },
-      "email": "karel@geovise.com"
+      }
     },
     {
       "role": "C",
@@ -14227,8 +14195,7 @@
       "affiliation": {
         "name": "Pointfree",
         "website": "https://www.pointfree.be"
-      },
-      "email": "joachim.maes@pointfree.be"
+      }
     },
     {
       "role": "C",
@@ -14237,8 +14204,7 @@
       "affiliation": {
         "name": "AWV",
         "website": "http://wegenenverkeer.be/"
-      },
-      "email": "Rudi.Luyten@mow.vlaanderen.be"
+      }
     },
     {
       "role": "C",
@@ -14247,8 +14213,7 @@
       "affiliation": {
         "name": "Infoflow",
         "website": "https://www.linkedin.com/company/infoflow_2/about/"
-      },
-      "email": "christopheluyckx@infoflow.be"
+      }
     },
     {
       "role": "C",
@@ -14257,8 +14222,7 @@
       "affiliation": {
         "name": "VMM",
         "website": "https://www.vmm.be/"
-      },
-      "email": "D.Luts@vmm.be"
+      }
     },
     {
       "role": "C",
@@ -14267,8 +14231,7 @@
       "affiliation": {
         "name": "Aquafin",
         "website": "https://www.aquafin.be/"
-      },
-      "email": "pieter.lootens@aquafin.be"
+      }
     },
     {
       "role": "C",
@@ -14277,8 +14240,7 @@
       "affiliation": {
         "name": "AWV",
         "website": "http://wegenenverkeer.be/"
-      },
-      "email": "tim.lonneux@mow.vlaanderen.be"
+      }
     },
     {
       "role": "C",
@@ -14287,8 +14249,7 @@
       "affiliation": {
         "name": "AWV",
         "website": "http://wegenenverkeer.be/"
-      },
-      "email": "herman.longueville@mow.vlaanderen.be"
+      }
     },
     {
       "role": "C",
@@ -14297,8 +14258,7 @@
       "affiliation": {
         "name": "AWV",
         "website": "http://wegenenverkeer.be/"
-      },
-      "email": "peter.lewyllie@mow.vlaanderen.be"
+      }
     },
     {
       "role": "C",
@@ -14307,8 +14267,7 @@
       "affiliation": {
         "name": "Aquafin",
         "website": "https://www.aquafin.be/"
-      },
-      "email": "mieke.lesage@aquafin.be"
+      }
     },
     {
       "role": "C",
@@ -14317,8 +14276,7 @@
       "affiliation": {
         "name": "AWV",
         "website": "http://wegenenverkeer.be/"
-      },
-      "email": "luc.laurys@mow.vlaanderen.be"
+      }
     },
     {
       "role": "C",
@@ -14327,8 +14285,7 @@
       "affiliation": {
         "name": "AWV",
         "website": "http://wegenenverkeer.be/"
-      },
-      "email": "jurgen.latte@mow.vlaanderen.be"
+      }
     },
     {
       "role": "C",
@@ -14337,8 +14294,7 @@
       "affiliation": {
         "name": "AWV",
         "website": "http://wegenenverkeer.be/"
-      },
-      "email": "yanick.lathuy@mow.vlaanderen.be"
+      }
     },
     {
       "role": "C",
@@ -14347,8 +14303,7 @@
       "affiliation": {
         "name": "AWV",
         "website": "http://wegenenverkeer.be/"
-      },
-      "email": "Jo.Laps@mow.vlaanderen.be"
+      }
     },
     {
       "role": "C",
@@ -14357,8 +14312,7 @@
       "affiliation": {
         "name": "AWV",
         "website": "http://wegenenverkeer.be/"
-      },
-      "email": "john.lammertyn@mow.vlaanderen.be"
+      }
     },
     {
       "role": "C",
@@ -14367,8 +14321,7 @@
       "affiliation": {
         "name": "AWV",
         "website": "http://wegenenverkeer.be/"
-      },
-      "email": "philip.lameire@mow.vlaanderen.be"
+      }
     },
     {
       "role": "C",
@@ -14377,8 +14330,7 @@
       "affiliation": {
         "name": "AWV",
         "website": "http://wegenenverkeer.be/"
-      },
-      "email": "Philippe.Keppens@mow.vlaanderen.be"
+      }
     },
     {
       "role": "C",
@@ -14387,8 +14339,7 @@
       "affiliation": {
         "name": "AWV",
         "website": "http://wegenenverkeer.be/"
-      },
-      "email": "claudia.juvyns@mow.vlaanderen.be"
+      }
     },
     {
       "role": "C",
@@ -14397,8 +14348,7 @@
       "affiliation": {
         "name": "AWV",
         "website": "http://wegenenverkeer.be/"
-      },
-      "email": "Bart.Janssens@mow.vlaanderen.be"
+      }
     },
     {
       "role": "C",
@@ -14407,8 +14357,7 @@
       "affiliation": {
         "name": "Autodesk",
         "website": "https://www.autodesk.com/"
-      },
-      "email": "peter.ingels@autodesk.com"
+      }
     },
     {
       "role": "C",
@@ -14417,8 +14366,7 @@
       "affiliation": {
         "name": "AWV",
         "website": "http://wegenenverkeer.be/"
-      },
-      "email": "ruben.huylebroeck@mow.vlaanderen.be"
+      }
     },
     {
       "role": "C",
@@ -14427,8 +14375,7 @@
       "affiliation": {
         "name": "AWV",
         "website": "http://wegenenverkeer.be/"
-      },
-      "email": "Kris.Huygen@mow.vlaanderen.be"
+      }
     },
     {
       "role": "C",
@@ -14437,8 +14384,7 @@
       "affiliation": {
         "name": "AWV",
         "website": "http://wegenenverkeer.be/"
-      },
-      "email": "peter.hooreweghe@mow.vlaanderen.be"
+      }
     },
     {
       "role": "C",
@@ -14447,8 +14393,7 @@
       "affiliation": {
         "name": "Dynniq",
         "website": "https://dynniq.com/"
-      },
-      "email": "annick.hooge@dynniq.be"
+      }
     },
     {
       "role": "C",
@@ -14457,8 +14402,7 @@
       "affiliation": {
         "name": "AWV",
         "website": "http://wegenenverkeer.be/"
-      },
-      "email": "josef.hennissen@mow.vlaanderen.be"
+      }
     },
     {
       "role": "C",
@@ -14467,8 +14411,7 @@
       "affiliation": {
         "name": "AWV",
         "website": "http://wegenenverkeer.be/"
-      },
-      "email": "dirk.goelen@mow.vlaanderen.be"
+      }
     },
     {
       "role": "C",
@@ -14477,8 +14420,7 @@
       "affiliation": {
         "name": "GIM",
         "website": "https://www.gim.be"
-      },
-      "email": "stijn.goedertier@gim.be"
+      }
     },
     {
       "role": "C",
@@ -14487,8 +14429,7 @@
       "affiliation": {
         "name": "AWV",
         "website": "http://wegenenverkeer.be/"
-      },
-      "email": "nele.gheysen@mow.vlaanderen.be"
+      }
     },
     {
       "role": "C",
@@ -14497,8 +14438,7 @@
       "affiliation": {
         "name": "Pàu",
         "website": "https://pau.be/"
-      },
-      "email": "benoit@pau.be"
+      }
     },
     {
       "role": "C",
@@ -14507,8 +14447,7 @@
       "affiliation": {
         "name": "AWV",
         "website": "http://wegenenverkeer.be/"
-      },
-      "email": "dave.geudens@mow.vlaanderen.be"
+      }
     },
     {
       "role": "C",
@@ -14517,8 +14456,7 @@
       "affiliation": {
         "name": "AWV",
         "website": "http://wegenenverkeer.be/"
-      },
-      "email": "ben.geerts@mow.vlaanderen.be"
+      }
     },
     {
       "role": "C",
@@ -14527,8 +14465,7 @@
       "affiliation": {
         "name": "AWV",
         "website": "http://wegenenverkeer.be/"
-      },
-      "email": "Sofie.Geens@mow.vlaanderen.be"
+      }
     },
     {
       "role": "C",
@@ -14537,8 +14474,7 @@
       "affiliation": {
         "name": "Dynniq",
         "website": "https://dynniq.com/"
-      },
-      "email": "peter.gaublomme@dynniq.be"
+      }
     },
     {
       "role": "C",
@@ -14547,8 +14483,7 @@
       "affiliation": {
         "name": "Vlario",
         "website": "https://www.vlario.be/"
-      },
-      "email": "wendy.francken@vlario.be"
+      }
     },
     {
       "role": "C",
@@ -14557,8 +14492,7 @@
       "affiliation": {
         "name": "BAM NV",
         "website": "https://lantis.be/"
-      },
-      "email": "yves.ferong@bamnv.be"
+      }
     },
     {
       "role": "C",
@@ -14567,8 +14501,7 @@
       "affiliation": {
         "name": "AWV",
         "website": "http://wegenenverkeer.be/"
-      },
-      "email": "dirk.eelen@mow.vlaanderen.be"
+      }
     },
     {
       "role": "C",
@@ -14577,8 +14510,7 @@
       "affiliation": {
         "name": "AWV",
         "website": "http://wegenenverkeer.be/"
-      },
-      "email": "migäel.durogonzalez@mow.vlaanderen.be"
+      }
     },
     {
       "role": "C",
@@ -14587,8 +14519,7 @@
       "affiliation": {
         "name": "AWV",
         "website": "http://wegenenverkeer.be/"
-      },
-      "email": "tony.durinck@mow.vlaanderen.be"
+      }
     },
     {
       "role": "C",
@@ -14597,8 +14528,7 @@
       "affiliation": {
         "name": "AWV",
         "website": "http://wegenenverkeer.be/"
-      },
-      "email": "Mario.Dumon@mow.vlaanderen.be"
+      }
     },
     {
       "role": "C",
@@ -14607,8 +14537,7 @@
       "affiliation": {
         "name": "Ixor",
         "website": "https://ixor.be/"
-      },
-      "email": "vincent.ducheyne@ixor.be"
+      }
     },
     {
       "role": "C",
@@ -14617,8 +14546,7 @@
       "affiliation": {
         "name": "AWV",
         "website": "http://wegenenverkeer.be/"
-      },
-      "email": "lieven.duchateau@mow.vlaanderen.be"
+      }
     },
     {
       "role": "C",
@@ -14627,8 +14555,7 @@
       "affiliation": {
         "name": "AWV",
         "website": "http://wegenenverkeer.be/"
-      },
-      "email": "kris.dhondt@mow.vlaanderen.be"
+      }
     },
     {
       "role": "C",
@@ -14637,8 +14564,7 @@
       "affiliation": {
         "name": "Vlaanderen Connect",
         "website": "http://wegenenverkeer.be/"
-      },
-      "email": "anthony.dewulf@mow.vlaanderen.be"
+      }
     },
     {
       "role": "C",
@@ -14647,8 +14573,7 @@
       "affiliation": {
         "name": "AWV",
         "website": "http://wegenenverkeer.be/"
-      },
-      "email": "Bram.Dewil@mow.vlaanderen.be"
+      }
     },
     {
       "role": "C",
@@ -14657,8 +14582,7 @@
       "affiliation": {
         "name": "VlaWeBo",
         "website": "http://www.confederatiebouw.be/newhome/index.html"
-      },
-      "email": "eli.desmedt@confederatiebouw.be"
+      }
     },
     {
       "role": "C",
@@ -14667,8 +14591,7 @@
       "affiliation": {
         "name": "AWV",
         "website": "http://wegenenverkeer.be/"
-      },
-      "email": "Tom.Deschilder@mow.vlaanderen.be"
+      }
     },
     {
       "role": "C",
@@ -14677,8 +14600,7 @@
       "affiliation": {
         "name": "AWV",
         "website": "http://wegenenverkeer.be/"
-      },
-      "email": "Joachim.Dero@mow.vlaanderen.be"
+      }
     },
     {
       "role": "C",
@@ -14687,8 +14609,7 @@
       "affiliation": {
         "name": "AWV",
         "website": "http://wegenenverkeer.be/"
-      },
-      "email": "veerle.delcourt@mow.vlaanderen.be"
+      }
     },
     {
       "role": "C",
@@ -14697,8 +14618,7 @@
       "affiliation": {
         "name": "AWV",
         "website": "http://wegenenverkeer.be/"
-      },
-      "email": "Katrien.Decock@mow.vlaanderen.be"
+      }
     },
     {
       "role": "C",
@@ -14707,8 +14627,7 @@
       "affiliation": {
         "name": "AIV",
         "website": "https://data.vlaanderen.be/"
-      },
-      "email": "liesbet.dewolf@kb.vlaanderen.be"
+      }
     },
     {
       "role": "C",
@@ -14717,8 +14636,7 @@
       "affiliation": {
         "name": "VMM",
         "website": "https://www.vmm.be/"
-      },
-      "email": "K.DeWitte@vmm.be"
+      }
     },
     {
       "role": "C",
@@ -14727,8 +14645,7 @@
       "affiliation": {
         "name": "AWV",
         "website": "http://wegenenverkeer.be/"
-      },
-      "email": "karen.dewinne@mow.vlaanderen.be"
+      }
     },
     {
       "role": "C",
@@ -14737,8 +14654,7 @@
       "affiliation": {
         "name": "VMSW",
         "website": "https://www.vmsw.be/"
-      },
-      "email": "theo.devos@vmsw.be"
+      }
     },
     {
       "role": "C",
@@ -14747,8 +14663,7 @@
       "affiliation": {
         "name": "Arcadis",
         "website": "https://www.arcadis.com/en/global/"
-      },
-      "email": "geert.desmedt@arcadis.com"
+      }
     },
     {
       "role": "C",
@@ -14757,8 +14672,7 @@
       "affiliation": {
         "name": "Natuur en Bos",
         "website": "https://www.natuurenbos.be"
-      },
-      "email": "carl.deschepper@vlaanderen.be"
+      }
     },
     {
       "role": "C",
@@ -14767,8 +14681,7 @@
       "affiliation": {
         "name": "VMSW",
         "website": "https://www.vmsw.be/"
-      },
-      "email": "marcel.debrael@vmsw.be"
+      }
     },
     {
       "role": "C",
@@ -14777,8 +14690,7 @@
       "affiliation": {
         "name": "AWV",
         "website": "http://wegenenverkeer.be/"
-      },
-      "email": "Erik.DeBisschop@mow.vlaanderen.be"
+      }
     },
     {
       "role": "C",
@@ -14787,8 +14699,7 @@
       "affiliation": {
         "name": "AWV",
         "website": "http://wegenenverkeer.be/"
-      },
-      "email": "Wim.Danheel@mow.vlaanderen.be"
+      }
     },
     {
       "role": "C",
@@ -14797,8 +14708,7 @@
       "affiliation": {
         "name": "AWV",
         "website": "http://wegenenverkeer.be/"
-      },
-      "email": "Johan.Dalins@mow.vlaanderen.be"
+      }
     },
     {
       "role": "C",
@@ -14807,8 +14717,7 @@
       "affiliation": {
         "name": "AWV",
         "website": "http://wegenenverkeer.be/"
-      },
-      "email": "sammy.dalewyn@mow.vlaanderen.be"
+      }
     },
     {
       "role": "C",
@@ -14817,8 +14726,7 @@
       "affiliation": {
         "name": "VMSW",
         "website": "https://www.vmsw.be/"
-      },
-      "email": "johan.criquielion@vmsw.be"
+      }
     },
     {
       "role": "C",
@@ -14827,8 +14735,7 @@
       "affiliation": {
         "name": "AWV",
         "website": "http://wegenenverkeer.be/"
-      },
-      "email": "kathy.courtens@mow.vlaanderen.be"
+      }
     },
     {
       "role": "C",
@@ -14837,8 +14744,7 @@
       "affiliation": {
         "name": "AWV",
         "website": "http://wegenenverkeer.be/"
-      },
-      "email": "Jan.Couck@mow.vlaanderen.be"
+      }
     },
     {
       "role": "C",
@@ -14847,8 +14753,7 @@
       "affiliation": {
         "name": "AWV",
         "website": "http://wegenenverkeer.be/"
-      },
-      "email": "Kristof.Coppens@mow.vlaanderen.be"
+      }
     },
     {
       "role": "C",
@@ -14857,8 +14762,7 @@
       "affiliation": {
         "name": "Willemen Infra",
         "website": "https://www.willemen.be/nl/aannemer/willemen-infra"
-      },
-      "email": "frank.christianen@willemeninfra.be"
+      }
     },
     {
       "role": "C",
@@ -14867,8 +14771,7 @@
       "affiliation": {
         "name": "AWV",
         "website": "http://wegenenverkeer.be/"
-      },
-      "email": "kurt.ceulemans@mow.vlaanderen.be"
+      }
     },
     {
       "role": "C",
@@ -14877,8 +14780,7 @@
       "affiliation": {
         "name": "AWV",
         "website": "http://wegenenverkeer.be/"
-      },
-      "email": "Ann.Buytaert@mow.vlaanderen.be"
+      }
     },
     {
       "role": "C",
@@ -14887,8 +14789,7 @@
       "affiliation": {
         "name": "Geonius",
         "website": "https://geonius.nl/"
-      },
-      "email": "j.brouwers@geonius.nl"
+      }
     },
     {
       "role": "C",
@@ -14897,8 +14798,7 @@
       "affiliation": {
         "name": "AWV",
         "website": "http://wegenenverkeer.be/"
-      },
-      "email": "Boudewijn.Broodcoorens@mow.vlaanderen.be"
+      }
     },
     {
       "role": "C",
@@ -14907,8 +14807,7 @@
       "affiliation": {
         "name": "AWV",
         "website": "http://wegenenverkeer.be/"
-      },
-      "email": "Margo.Briessinck@mow.vlaanderen.be"
+      }
     },
     {
       "role": "C",
@@ -14917,8 +14816,7 @@
       "affiliation": {
         "name": "AWV",
         "website": "http://wegenenverkeer.be/"
-      },
-      "email": "jan.bosmans@mow.vlaanderen.be"
+      }
     },
     {
       "role": "C",
@@ -14927,8 +14825,7 @@
       "affiliation": {
         "name": "MOW",
         "website": "https://departement-mow.vlaanderen.be/nl"
-      },
-      "email": "Sophie.Bordere@mow.vlaanderen.be"
+      }
     },
     {
       "role": "C",
@@ -14937,8 +14834,7 @@
       "affiliation": {
         "name": "AWV",
         "website": "http://wegenenverkeer.be/"
-      },
-      "email": "hans.bonte@mow.vlaanderen.be"
+      }
     },
     {
       "role": "C",
@@ -14947,8 +14843,7 @@
       "affiliation": {
         "name": "AWV",
         "website": "http://wegenenverkeer.be/"
-      },
-      "email": "Natasha.Blommaert@mow.vlaanderen.be"
+      }
     },
     {
       "role": "C",
@@ -14957,8 +14852,7 @@
       "affiliation": {
         "name": "AWV",
         "website": "http://wegenenverkeer.be/"
-      },
-      "email": "koen.beuckels@mow.vlaanderen.be"
+      }
     },
     {
       "role": "C",
@@ -14967,8 +14861,7 @@
       "affiliation": {
         "name": "AWV",
         "website": "http://wegenenverkeer.be/"
-      },
-      "email": "carine.berre@mow.vlaanderen.be"
+      }
     },
     {
       "role": "C",
@@ -14977,8 +14870,7 @@
       "affiliation": {
         "name": "VMM",
         "website": "https://www.vmm.be/"
-      },
-      "email": "K.Beringhs@vmm.be"
+      }
     },
     {
       "role": "C",
@@ -14987,8 +14879,7 @@
       "affiliation": {
         "name": "Geosolutions",
         "website": "https://geosolutions.be/"
-      },
-      "email": "bernard.baetens@geosolutions.be"
+      }
     },
     {
       "role": "C",
@@ -14997,8 +14888,7 @@
       "affiliation": {
         "name": "Dynniq",
         "website": "https://dynniq.com/"
-      },
-      "email": "danny.asselman@dynniq.be"
+      }
     },
     {
       "role": "C",
@@ -15007,8 +14897,7 @@
       "affiliation": {
         "name": "AWV",
         "website": "http://wegenenverkeer.be/"
-      },
-      "email": "Mustafa.Aktas@mow.vlaanderen.be"
+      }
     },
     {
       "role": "C",
@@ -15017,8 +14906,7 @@
       "affiliation": {
         "name": "AWV",
         "website": "http://wegenenverkeer.be/"
-      },
-      "email": "kris.aernout@mow.vlaanderen.be"
+      }
     }
   ],
   "datatypes": [
@@ -17445,6 +17333,91 @@
       ]
     },
     {
+      "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#DtcMinMaxHoogteSchermelement",
+      "name": "min max hoogte schermelement",
+      "label": {
+        "nl": "min max hoogte schermelement"
+      },
+      "sort": "min max hoogte schermelement",
+      "description": {
+        "nl": "Complex datatype voor de hoogte in centimeter van het laagste element en van het hoogste element."
+      },
+      "usage": {},
+      "parents": [],
+      "properties": [
+        {
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#DtcMinMaxHoogteSchermelement.minSchermhoogte",
+          "name": "minimale schermhoogte",
+          "sort": "minimale schermhoogte",
+          "label": {
+            "nl": "minimale schermhoogte"
+          },
+          "description": {
+            "nl": "De waarde die de hoogte in centimeter weergeeft van het laagste element in de constructie."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "DtcMinMaxHoogteSchermelement",
+              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#DtcMinMaxHoogteSchermelement"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "KwantWrdInCentimeter",
+              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInCentimeter"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Kwantitatieve waarde in centimeter",
+              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInCentimeter",
+              "range_label": {
+                "nl": "Kwantitatieve waarde in centimeter"
+              }
+            }
+          ],
+          "cardinality": "1",
+          "codelist_uri": ""
+        },
+        {
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#DtcMinMaxHoogteSchermelement.maxSchermhoogte",
+          "name": "maximale schermhoogte",
+          "sort": "maximale schermhoogte",
+          "label": {
+            "nl": "maximale schermhoogte"
+          },
+          "description": {
+            "nl": "De waarde die de hoogte in centimeter weergeeft van het hoogste element in de constructie."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "DtcMinMaxHoogteSchermelement",
+              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#DtcMinMaxHoogteSchermelement"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "KwantWrdInCentimeter",
+              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInCentimeter"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Kwantitatieve waarde in centimeter",
+              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInCentimeter",
+              "range_label": {
+                "nl": "Kwantitatieve waarde in centimeter"
+              }
+            }
+          ],
+          "cardinality": "1",
+          "codelist_uri": ""
+        }
+      ]
+    },
+    {
       "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#DtcAanlegBoomvorm",
       "name": "aanleg boomvorm",
       "label": {
@@ -17874,7 +17847,7 @@
               }
             }
           ],
-          "cardinality": "1",
+          "cardinality": "1..*",
           "codelist_uri": "https://wegenenverkeer-test.data.vlaanderen.be/id/conceptscheme/KlGroeiplaatsverbetering"
         },
         {
@@ -18821,6 +18794,41 @@
             }
           ],
           "cardinality": "0..1",
+          "codelist_uri": ""
+        },
+        {
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#DtuAfmetingVerkeersbord.ruit",
+          "name": "ruit",
+          "sort": "ruit",
+          "label": {
+            "nl": "ruit"
+          },
+          "description": {
+            "nl": "De afmeting voor een ruitvormig verkeersbord (zijde in millimeter)."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "DtuAfmetingVerkeersbord",
+              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#DtuAfmetingVerkeersbord"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "DtcAfmetingZijdeInMm",
+              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcAfmetingZijdeInMm"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Afmeting zijde in millimeter",
+              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcAfmetingZijdeInMm",
+              "range_label": {
+                "nl": "Afmeting zijde in millimeter"
+              }
+            }
+          ],
+          "cardinality": "1",
           "codelist_uri": ""
         },
         {

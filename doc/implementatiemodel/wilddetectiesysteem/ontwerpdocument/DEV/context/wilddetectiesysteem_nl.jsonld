@@ -87,6 +87,10 @@
       "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#DtuAfmetingVerkeersbord.rond",
       "@type": "@id"
     },
+    "AfmetingVerkeersbord.ruit": {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#DtuAfmetingVerkeersbord.ruit",
+      "@type": "@id"
+    },
     "AfmetingVerkeersbord.vierhoekig": {
       "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#DtuAfmetingVerkeersbord.vierhoekig",
       "@type": "@id"
@@ -223,6 +227,15 @@
     "Bevestigingsbeugel.isVerzegeld": {
       "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Bevestigingsbeugel.isVerzegeld",
       "@type": "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "Bevestigingsbeugel.materiaalBevestigingsbeugel": {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Bevestigingsbeugel.materiaalBevestigingsbeugel",
+      "@type": "@id"
+    },
+    "Bevestigingsbeugel.technischeFiche": {
+      "@container": "@set",
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Bevestigingsbeugel.technischeFiche",
+      "@type": "@id"
     },
     "Bevestigingsbeugel.type": {
       "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Bevestigingsbeugel.type",
@@ -410,7 +423,6 @@
       "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Ecoraster.typeMazen",
       "@type": "@id"
     },
-    "FabricageTypeRetroreflecterendVerkeersbord": "http://www.w3.org/2004/02/skos/core#Concept",
     "Fundering": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Fundering",
     "Fundering.aanzetpeil": {
       "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Fundering.aanzetpeil",
@@ -515,9 +527,15 @@
       "@type": "http://www.w3.org/2001/XMLSchema#string"
     },
     "IsNetwerkEcc": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#IsNetwerkECC",
+    "IsOntwerpVan": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#IsOntwerpVan",
     "Kast": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Kast",
     "Kast.afmeting": {
       "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Kast.afmeting",
+      "@type": "@id"
+    },
+    "Kast.bevestiging": {
+      "@container": "@set",
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/wilddetectiesysteem/#Bevestiging",
       "@type": "@id"
     },
     "Kast.heeftVerlichting": {
@@ -657,6 +675,7 @@
     },
     "LigtOp": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#LigtOp",
     "Literal": "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "MateriaalBevestigingsbeugel": "http://www.w3.org/2004/02/skos/core#Concept",
     "MateriaalSoorten": "http://www.w3.org/2004/02/skos/core#Concept",
     "Mimetype": "http://www.w3.org/2004/02/skos/core#Concept",
     "NaampadObject": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#NaampadObject",
@@ -830,24 +849,8 @@
       "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#RetroreflecterendVerkeersbord.afwerkingsgraad",
       "@type": "@id"
     },
-    "RetroreflecterendVerkeersbord.fabricageDatum": {
-      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#RetroreflecterendVerkeersbord.fabricageDatum",
-      "@type": "http://www.w3.org/2001/XMLSchema#date"
-    },
-    "RetroreflecterendVerkeersbord.fabricageType": {
-      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#RetroreflecterendVerkeersbord.fabricageType",
-      "@type": "@id"
-    },
     "RetroreflecterendVerkeersbord.grootteorde": {
       "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#RetroreflecterendVerkeersbord.grootteorde",
-      "@type": "@id"
-    },
-    "RetroreflecterendVerkeersbord.horizontaleVerschuiving": {
-      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#RetroreflecterendVerkeersbord.horizontaleVerschuiving",
-      "@type": "@id"
-    },
-    "RetroreflecterendVerkeersbord.kaartvoorstelling": {
-      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#RetroreflecterendVerkeersbord.kaartvoorstelling",
       "@type": "@id"
     },
     "RetroreflecterendVerkeersbord.kleurAchterkant": {
@@ -909,6 +912,11 @@
     "Verkeersbord.fabricagevoorschrift": {
       "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Verkeersbord.fabricagevoorschrift",
       "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "Verkeersbord.isOntwerpVan": {
+      "@container": "@set",
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/wilddetectiesysteem/#Is ontwerp van",
+      "@type": "@id"
     },
     "Verkeersbord.operationeleStatus": {
       "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Verkeersbord.operationeleStatus",

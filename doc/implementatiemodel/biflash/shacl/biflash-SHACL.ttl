@@ -20,9 +20,11 @@
     <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#KlOperationeleStatusShape>,
     <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#KlEnergiemeterDNBMeteropnameFrequentieShape>,
     <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#KlEnergiemeterMetertypeShape>,
+    <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#KlAlgProvincieShape>,
+    <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#KlAlgGemeenteShape>,
+    <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#KlNominaleSpanningShape>,
     <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#KlTijdschakelaarUitvoeringShape>,
     <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#KlFolieTypeShape>,
-    <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#KlFabricageTypeRetroreflecterendVerkeersbordShape>,
     <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#KlRetroreflecterendVerkeersbordMerkShape>,
     <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#KlRetroreflecterendVerkeersbordAfwerkingsgraadShape>,
     <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#KlRetroreflecterendVerkeersbordGrootteordeShape>,
@@ -47,6 +49,7 @@
     <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#AIMObjectShape>,
     <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#AIMToestandShape>,
     <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#AIMVersieShape>,
+    <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#DtcAdresShape>,
     <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#DtcAfmetingBxhInMmShape>,
     <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#DtcAfmetingDiameterInMmShape>,
     <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#DtcAfmetingZijdeInMmShape>,
@@ -71,6 +74,7 @@
     <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#DynBordExternePUShape>,
     <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#ForfaitaireAansluitingShape>,
     <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#HoortBijShape>,
+    <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#IsOntwerpVanShape>,
     <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#RechteSteunShape>,
     <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#RetroreflecterendVerkeersbordShape>,
     <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#RetroreflecterendeFolieShape>,
@@ -717,7 +721,7 @@
   shacl:targetClass <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Draagconstructie> .
 
 <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#DraagconstructieShape/440f3b063a60b3d33ddb75dd42f14247c90dc8ae> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#Draagconstructie%3ABevestiging";
-  shacl:description "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Deze relatie heeft geen richting."@nl;
+  shacl:description "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Daarnaast omvat deze relatie ook situaties waarin onderdelen niet direct, maar wel structureel of functioneel met elkaar verbonden zijn op een manier die bevestiging impliceert, bv. een trap die eindigt net onder een voetgangersbrug zonder fysieke bevestiging. Deze relatie heeft geen richting."@nl;
   shacl:name "Bevestiging"@nl;
   shacl:nodekind "sh:BlankNodeOrIRI";
   shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/biflash/#Bevestiging>;
@@ -726,10 +730,230 @@
 
 <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#DraagconstructieShape/eef3aa764ce7a367564c223be90c380bc3898a27> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#Draagconstructie%3ABevestiging";
   shacl:class <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#BiFlash>;
-  shacl:description "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Deze relatie heeft geen richting."@nl;
+  shacl:description "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Daarnaast omvat deze relatie ook situaties waarin onderdelen niet direct, maar wel structureel of functioneel met elkaar verbonden zijn op een manier die bevestiging impliceert, bv. een trap die eindigt net onder een voetgangersbrug zonder fysieke bevestiging. Deze relatie heeft geen richting."@nl;
   shacl:name "Bevestiging"@nl;
   shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/biflash/#Bevestiging>;
   <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEVnl> "De range van Bevestiging moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#BiFlash> zijn."], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEVnl> "De range van Bevestiging moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#BiFlash> zijn."];
+  <https://data.vlaanderen.be/ns/shacl#rule> "" .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#DtcAdresShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#DtcAdresShape/5c7b07954d6f9d3aa5753e1dea1d19500886466e>,
+    <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#DtcAdresShape/6639490b4d7a9ec06989b25b9006d499283e0ad3>,
+    <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#DtcAdresShape/91d7516f8e96440c0e2a96be8be6ad73aebdf298>,
+    <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#DtcAdresShape/f28b820b24c8570c847008b5844f1a09a253a816>,
+    <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#DtcAdresShape/4df7b904e4b58542870e86f8bdcb0110c3876533>,
+    <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#DtcAdresShape/6cbad86991562839ae477358776e49459193e6f9>,
+    <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#DtcAdresShape/e6ecafc0c082c0affde56ddb162f227f330208d7>,
+    <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#DtcAdresShape/e93b7dcff87357ba687f91c6569aaa2fa7ed76a6>,
+    <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#DtcAdresShape/133ddf2f2dface49550bac70c2d3c0e1cbcc1814>,
+    <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#DtcAdresShape/4377bdb4b159b2d102367c80a69ddb81c3b07d5c>,
+    <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#DtcAdresShape/e56b86df1b96559db9ef713b95b81b2f2719e9db>,
+    <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#DtcAdresShape/f6479512f6ac8ce687b436f1fce2e6624055f7c3>,
+    <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#DtcAdresShape/37246edbcb4a7afcd798b2cb2c36c3c01062c58d>,
+    <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#DtcAdresShape/7b214e9f64dd2d8953451bbb197ed2487c31e03b>,
+    <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#DtcAdresShape/a5dc410fc15e90c98bcfa80de12bb9ed0c53d325>,
+    <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#DtcAdresShape/aea26a3b0033f853532d33c9e8c7ca0e90846ba5>,
+    <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#DtcAdresShape/84fab5aadcd8ae90fe45f636317c8133e8ed9a99>,
+    <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#DtcAdresShape/8a67dc84088fccba7831641807af781e76075136>,
+    <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#DtcAdresShape/9c25499297e8947f260a4a7d694de84fdbe184f4>,
+    <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#DtcAdresShape/c25641bf9eada4cc1fcfd1998a1eb45212fe3fcc>,
+    <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#DtcAdresShape/2103236135b575bb2057a19f136d1cb64b980632>,
+    <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#DtcAdresShape/616718c1e32ca05fef2798f755da77ea3dc306bf>,
+    <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#DtcAdresShape/66b53707d4d92cacc0ec66c150d6ea0125aee989>,
+    <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#DtcAdresShape/7f4efc74153cf8a6da7109603ab5eb853cc7c89f>;
+  shacl:targetClass <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcAdres> .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#DtcAdresShape/133ddf2f2dface49550bac70c2d3c0e1cbcc1814> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#DtcAdres%3Ahuisnummer";
+  shacl:description "Een nummer dat door de gemeente aan bv. een huis wordt toegekend."@nl;
+  shacl:maxCount 1;
+  shacl:name "huisnummer"@nl;
+  shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcAdres.huisnummer>;
+  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEVnl> "Maximaal 1 waarden toegelaten voor huisnummer"];
+  <https://data.vlaanderen.be/ns/shacl#rule> "" .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#DtcAdresShape/2103236135b575bb2057a19f136d1cb64b980632> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#DtcAdres%3Astraatnaam";
+  shacl:description "De naam van de straat."@nl;
+  shacl:minCount 1;
+  shacl:name "straatnaam"@nl;
+  shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcAdres.straatnaam>;
+  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEVnl> "Minimaal 1 waarden verwacht voor straatnaam"];
+  <https://data.vlaanderen.be/ns/shacl#rule> "" .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#DtcAdresShape/37246edbcb4a7afcd798b2cb2c36c3c01062c58d> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#DtcAdres%3Apostcode";
+  shacl:datatype xsd:string;
+  shacl:description "Een korte reeks tekens die in het postadres wordt opgenomen."@nl;
+  shacl:name "postcode"@nl;
+  shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcAdres.postcode>;
+  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEVnl> "De range van postcode moet van het type <http://www.w3.org/2001/XMLSchema#string> zijn."];
+  <https://data.vlaanderen.be/ns/shacl#rule> "" .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#DtcAdresShape/4377bdb4b159b2d102367c80a69ddb81c3b07d5c> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#DtcAdres%3Ahuisnummer";
+  shacl:datatype xsd:string;
+  shacl:description "Een nummer dat door de gemeente aan bv. een huis wordt toegekend."@nl;
+  shacl:name "huisnummer"@nl;
+  shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcAdres.huisnummer>;
+  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEVnl> "De range van huisnummer moet van het type <http://www.w3.org/2001/XMLSchema#string> zijn."];
+  <https://data.vlaanderen.be/ns/shacl#rule> "" .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#DtcAdresShape/4df7b904e4b58542870e86f8bdcb0110c3876533> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#DtcAdres%3Agemeente";
+  shacl:description "De bestuurlijke eenheid waarin het adres gelegen is."@nl;
+  shacl:name "gemeente"@nl;
+  shacl:nodekind "sh:BlankNodeOrIRI";
+  shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcAdres.gemeente>;
+  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEVnl> "De verwachte waarde voor gemeente is een rdfs:Resource (URI of blank node)"];
+  <https://data.vlaanderen.be/ns/shacl#rule> "" .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#DtcAdresShape/5c7b07954d6f9d3aa5753e1dea1d19500886466e> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#DtcAdres%3Abus";
+  shacl:datatype xsd:string;
+  shacl:description "Een nummer dat de postbus aanduidt."@nl;
+  shacl:name "bus"@nl;
+  shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcAdres.bus>;
+  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEVnl> "De range van bus moet van het type <http://www.w3.org/2001/XMLSchema#string> zijn."];
+  <https://data.vlaanderen.be/ns/shacl#rule> "" .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#DtcAdresShape/616718c1e32ca05fef2798f755da77ea3dc306bf> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#DtcAdres%3Astraatnaam";
+  shacl:datatype xsd:string;
+  shacl:description "De naam van de straat."@nl;
+  shacl:name "straatnaam"@nl;
+  shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcAdres.straatnaam>;
+  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEVnl> "De range van straatnaam moet van het type <http://www.w3.org/2001/XMLSchema#string> zijn."];
+  <https://data.vlaanderen.be/ns/shacl#rule> "" .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#DtcAdresShape/6639490b4d7a9ec06989b25b9006d499283e0ad3> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#DtcAdres%3Abus";
+  shacl:description "Een nummer dat de postbus aanduidt."@nl;
+  shacl:name "bus"@nl;
+  shacl:nodekind "sh:Literal";
+  shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcAdres.bus>;
+  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEVnl> "De verwachte waarde voor bus is een Literal"];
+  <https://data.vlaanderen.be/ns/shacl#rule> "" .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#DtcAdresShape/66b53707d4d92cacc0ec66c150d6ea0125aee989> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#DtcAdres%3Astraatnaam";
+  shacl:description "De naam van de straat."@nl;
+  shacl:maxCount 1;
+  shacl:name "straatnaam"@nl;
+  shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcAdres.straatnaam>;
+  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEVnl> "Maximaal 1 waarden toegelaten voor straatnaam"];
+  <https://data.vlaanderen.be/ns/shacl#rule> "" .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#DtcAdresShape/6cbad86991562839ae477358776e49459193e6f9> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#DtcAdres%3Agemeente";
+  shacl:description "De bestuurlijke eenheid waarin het adres gelegen is."@nl;
+  shacl:minCount 1;
+  shacl:name "gemeente"@nl;
+  shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcAdres.gemeente>;
+  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEVnl> "Minimaal 1 waarden verwacht voor gemeente"];
+  <https://data.vlaanderen.be/ns/shacl#rule> "" .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#DtcAdresShape/7b214e9f64dd2d8953451bbb197ed2487c31e03b> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#DtcAdres%3Apostcode";
+  shacl:description "Een korte reeks tekens die in het postadres wordt opgenomen."@nl;
+  shacl:name "postcode"@nl;
+  shacl:nodekind "sh:Literal";
+  shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcAdres.postcode>;
+  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEVnl> "De verwachte waarde voor postcode is een Literal"];
+  <https://data.vlaanderen.be/ns/shacl#rule> "" .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#DtcAdresShape/7f4efc74153cf8a6da7109603ab5eb853cc7c89f> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#DtcAdres%3Astraatnaam";
+  shacl:description "De naam van de straat."@nl;
+  shacl:name "straatnaam"@nl;
+  shacl:nodekind "sh:Literal";
+  shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcAdres.straatnaam>;
+  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEVnl> "De verwachte waarde voor straatnaam is een Literal"];
+  <https://data.vlaanderen.be/ns/shacl#rule> "" .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#DtcAdresShape/84fab5aadcd8ae90fe45f636317c8133e8ed9a99> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#DtcAdres%3Aprovincie";
+  shacl:class skos:Concept;
+  shacl:description "Het deelgebied waarin het adres gelegen is."@nl;
+  shacl:name "provincie"@nl;
+  shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcAdres.provincie>;
+  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEVnl> "De range van provincie moet van het type <http://www.w3.org/2004/02/skos/core#Concept> zijn."];
+  <https://data.vlaanderen.be/ns/shacl#rule> "" .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#DtcAdresShape/8a67dc84088fccba7831641807af781e76075136> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#DtcAdres%3Aprovincie";
+  shacl:description "Het deelgebied waarin het adres gelegen is."@nl;
+  shacl:minCount 1;
+  shacl:name "provincie"@nl;
+  shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcAdres.provincie>;
+  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEVnl> "Minimaal 1 waarden verwacht voor provincie"];
+  <https://data.vlaanderen.be/ns/shacl#rule> "" .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#DtcAdresShape/91d7516f8e96440c0e2a96be8be6ad73aebdf298> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#DtcAdres%3Abus";
+  shacl:description "Een nummer dat de postbus aanduidt."@nl;
+  shacl:minCount 1;
+  shacl:name "bus"@nl;
+  shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcAdres.bus>;
+  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEVnl> "Minimaal 1 waarden verwacht voor bus"];
+  <https://data.vlaanderen.be/ns/shacl#rule> "" .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#DtcAdresShape/9c25499297e8947f260a4a7d694de84fdbe184f4> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#DtcAdres%3Aprovincie";
+  shacl:description "Het deelgebied waarin het adres gelegen is."@nl;
+  shacl:maxCount 1;
+  shacl:name "provincie"@nl;
+  shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcAdres.provincie>;
+  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEVnl> "Maximaal 1 waarden toegelaten voor provincie"];
+  <https://data.vlaanderen.be/ns/shacl#rule> "" .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#DtcAdresShape/a5dc410fc15e90c98bcfa80de12bb9ed0c53d325> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#DtcAdres%3Apostcode";
+  shacl:description "Een korte reeks tekens die in het postadres wordt opgenomen."@nl;
+  shacl:maxCount 1;
+  shacl:name "postcode"@nl;
+  shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcAdres.postcode>;
+  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEVnl> "Maximaal 1 waarden toegelaten voor postcode"];
+  <https://data.vlaanderen.be/ns/shacl#rule> "" .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#DtcAdresShape/aea26a3b0033f853532d33c9e8c7ca0e90846ba5> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#DtcAdres%3Apostcode";
+  shacl:description "Een korte reeks tekens die in het postadres wordt opgenomen."@nl;
+  shacl:minCount 1;
+  shacl:name "postcode"@nl;
+  shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcAdres.postcode>;
+  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEVnl> "Minimaal 1 waarden verwacht voor postcode"];
+  <https://data.vlaanderen.be/ns/shacl#rule> "" .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#DtcAdresShape/c25641bf9eada4cc1fcfd1998a1eb45212fe3fcc> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#DtcAdres%3Aprovincie";
+  shacl:description "Het deelgebied waarin het adres gelegen is."@nl;
+  shacl:name "provincie"@nl;
+  shacl:nodekind "sh:BlankNodeOrIRI";
+  shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcAdres.provincie>;
+  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEVnl> "De verwachte waarde voor provincie is een rdfs:Resource (URI of blank node)"];
+  <https://data.vlaanderen.be/ns/shacl#rule> "" .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#DtcAdresShape/e56b86df1b96559db9ef713b95b81b2f2719e9db> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#DtcAdres%3Ahuisnummer";
+  shacl:description "Een nummer dat door de gemeente aan bv. een huis wordt toegekend."@nl;
+  shacl:minCount 1;
+  shacl:name "huisnummer"@nl;
+  shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcAdres.huisnummer>;
+  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEVnl> "Minimaal 1 waarden verwacht voor huisnummer"];
+  <https://data.vlaanderen.be/ns/shacl#rule> "" .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#DtcAdresShape/e6ecafc0c082c0affde56ddb162f227f330208d7> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#DtcAdres%3Agemeente";
+  shacl:description "De bestuurlijke eenheid waarin het adres gelegen is."@nl;
+  shacl:maxCount 1;
+  shacl:name "gemeente"@nl;
+  shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcAdres.gemeente>;
+  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEVnl> "Maximaal 1 waarden toegelaten voor gemeente"];
+  <https://data.vlaanderen.be/ns/shacl#rule> "" .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#DtcAdresShape/e93b7dcff87357ba687f91c6569aaa2fa7ed76a6> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#DtcAdres%3Agemeente";
+  shacl:class skos:Concept;
+  shacl:description "De bestuurlijke eenheid waarin het adres gelegen is."@nl;
+  shacl:name "gemeente"@nl;
+  shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcAdres.gemeente>;
+  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEVnl> "De range van gemeente moet van het type <http://www.w3.org/2004/02/skos/core#Concept> zijn."];
+  <https://data.vlaanderen.be/ns/shacl#rule> "" .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#DtcAdresShape/f28b820b24c8570c847008b5844f1a09a253a816> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#DtcAdres%3Abus";
+  shacl:description "Een nummer dat de postbus aanduidt."@nl;
+  shacl:maxCount 1;
+  shacl:name "bus"@nl;
+  shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcAdres.bus>;
+  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEVnl> "Maximaal 1 waarden toegelaten voor bus"];
+  <https://data.vlaanderen.be/ns/shacl#rule> "" .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#DtcAdresShape/f6479512f6ac8ce687b436f1fce2e6624055f7c3> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#DtcAdres%3Ahuisnummer";
+  shacl:description "Een nummer dat door de gemeente aan bv. een huis wordt toegekend."@nl;
+  shacl:name "huisnummer"@nl;
+  shacl:nodekind "sh:Literal";
+  shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcAdres.huisnummer>;
+  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEVnl> "De verwachte waarde voor huisnummer is een Literal"];
   <https://data.vlaanderen.be/ns/shacl#rule> "" .
 
 <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#DtcAfmetingBxhInMmShape> a shacl:NodeShape;
@@ -1467,6 +1691,10 @@
     <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#DtuAfmetingVerkeersbordShape/ab567ea9d8dc2ec86f39193a370aab59ecf74603>,
     <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#DtuAfmetingVerkeersbordShape/b36fb0243e8c6bea6be3e6f6cb9a65286529a49c>,
     <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#DtuAfmetingVerkeersbordShape/b670a0edd0906c1ae37644efe09fb0ae230672fd>,
+    <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#DtuAfmetingVerkeersbordShape/021d5d4fe4ac264501b6c76413cc586284836e02>,
+    <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#DtuAfmetingVerkeersbordShape/4e2076f6af648b55d3bc875aec5b69a8a3bd1967>,
+    <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#DtuAfmetingVerkeersbordShape/a939418082aea52c9d344f64c493c645361aad25>,
+    <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#DtuAfmetingVerkeersbordShape/f70acf9041e40959f44d96b451bbe7f2d493da58>,
     <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#DtuAfmetingVerkeersbordShape/5b41c0db7fcc42d6ad66d0a1a9c4f4f2c3c6d058>,
     <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#DtuAfmetingVerkeersbordShape/5e89b87438baef77b67ae7ea7e2063c6aa200df0>,
     <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#DtuAfmetingVerkeersbordShape/9223d9aa5c7cd877c4e07a3674d10ba295d5aa67>,
@@ -1474,6 +1702,14 @@
     <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#DtuAfmetingVerkeersbordShape/4ffecc43ba22aed93c0de6d5062146f26ef6c1df>,
     <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#DtuAfmetingVerkeersbordShape/548235473b69257b888ce4e1597f543293aa001c>;
   shacl:targetClass <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#DtuAfmetingVerkeersbord> .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#DtuAfmetingVerkeersbordShape/021d5d4fe4ac264501b6c76413cc586284836e02> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#DtuAfmetingVerkeersbord%3Aruit";
+  shacl:class <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcAfmetingZijdeInMm>;
+  shacl:description "De afmeting voor een ruitvormig verkeersbord (zijde in millimeter)."@nl;
+  shacl:name "ruit"@nl;
+  shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#DtuAfmetingVerkeersbord.ruit>;
+  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEVnl> "De range van ruit moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcAfmetingZijdeInMm> zijn."];
+  <https://data.vlaanderen.be/ns/shacl#rule> "" .
 
 <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#DtuAfmetingVerkeersbordShape/1749c156caa00ff4edb147e4a098818646e23a1b> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#DtuAfmetingVerkeersbord%3Azeshoekig";
   shacl:description "De afmeting voor een zeshoekig verkeersbord (zijde in millimeter)."@nl;
@@ -1489,6 +1725,14 @@
   shacl:nodekind "sh:BlankNodeOrIRI";
   shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#DtuAfmetingVerkeersbord.driehoekig>;
   <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEVnl> "De verwachte waarde voor driehoekig is een rdfs:Resource (URI of blank node)"];
+  <https://data.vlaanderen.be/ns/shacl#rule> "" .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#DtuAfmetingVerkeersbordShape/4e2076f6af648b55d3bc875aec5b69a8a3bd1967> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#DtuAfmetingVerkeersbord%3Aruit";
+  shacl:description "De afmeting voor een ruitvormig verkeersbord (zijde in millimeter)."@nl;
+  shacl:minCount 1;
+  shacl:name "ruit"@nl;
+  shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#DtuAfmetingVerkeersbord.ruit>;
+  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEVnl> "Minimaal 1 waarden verwacht voor ruit"];
   <https://data.vlaanderen.be/ns/shacl#rule> "" .
 
 <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#DtuAfmetingVerkeersbordShape/4ffecc43ba22aed93c0de6d5062146f26ef6c1df> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#DtuAfmetingVerkeersbord%3Azeshoekig";
@@ -1547,6 +1791,14 @@
   <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEVnl> "De range van vierhoekig moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcAfmetingBxhInMm> zijn."];
   <https://data.vlaanderen.be/ns/shacl#rule> "" .
 
+<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#DtuAfmetingVerkeersbordShape/a939418082aea52c9d344f64c493c645361aad25> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#DtuAfmetingVerkeersbord%3Aruit";
+  shacl:description "De afmeting voor een ruitvormig verkeersbord (zijde in millimeter)."@nl;
+  shacl:name "ruit"@nl;
+  shacl:nodekind "sh:BlankNodeOrIRI";
+  shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#DtuAfmetingVerkeersbord.ruit>;
+  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEVnl> "De verwachte waarde voor ruit is een rdfs:Resource (URI of blank node)"];
+  <https://data.vlaanderen.be/ns/shacl#rule> "" .
+
 <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#DtuAfmetingVerkeersbordShape/ab567ea9d8dc2ec86f39193a370aab59ecf74603> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#DtuAfmetingVerkeersbord%3Arond";
   shacl:class <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcAfmetingDiameterInMm>;
   shacl:description "De afmeting voor een rond verkeersbord (diameter in millimeter)."@nl;
@@ -1593,6 +1845,14 @@
   shacl:name "driehoekig"@nl;
   shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#DtuAfmetingVerkeersbord.driehoekig>;
   <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEVnl> "De range van driehoekig moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcAfmetingZijdeInMm> zijn."];
+  <https://data.vlaanderen.be/ns/shacl#rule> "" .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#DtuAfmetingVerkeersbordShape/f70acf9041e40959f44d96b451bbe7f2d493da58> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#DtuAfmetingVerkeersbord%3Aruit";
+  shacl:description "De afmeting voor een ruitvormig verkeersbord (zijde in millimeter)."@nl;
+  shacl:maxCount 1;
+  shacl:name "ruit"@nl;
+  shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#DtuAfmetingVerkeersbord.ruit>;
+  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEVnl> "Maximaal 1 waarden toegelaten voor ruit"];
   <https://data.vlaanderen.be/ns/shacl#rule> "" .
 
 <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#DynBordExternePUShape> a shacl:NodeShape;
@@ -1898,8 +2158,112 @@
 <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#ForfaitaireAansluitingShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:property <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#ForfaitaireAansluitingShape/d15f714b2ed6b96e1b3f73a18a0eadabb5873da6>,
-    <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#ForfaitaireAansluitingShape/d465ae7eed35aca3207ca502ba10814f215d1ab5>;
+    <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#ForfaitaireAansluitingShape/d465ae7eed35aca3207ca502ba10814f215d1ab5>,
+    <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#ForfaitaireAansluitingShape/1ca1ddab47d4e66ba4e1f738c5812eec0557ec92>,
+    <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#ForfaitaireAansluitingShape/5adca4271d2a3fc38000ddd749998e9de5ed3640>,
+    <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#ForfaitaireAansluitingShape/8d01a3d1a24c7b1c3993aa64679dc9dfbfc336dc>,
+    <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#ForfaitaireAansluitingShape/8e9b38fd9c8c56d9d9f4d5d213310353fd6b9e6e>,
+    <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#ForfaitaireAansluitingShape/03a68f6d18c8be484e7fefa28100102307f392e3>,
+    <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#ForfaitaireAansluitingShape/2f8554c149df7505fd2260c375934ce4dac38b60>,
+    <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#ForfaitaireAansluitingShape/6636bf75e44dcea48112b777b09e06cfcf863d93>,
+    <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#ForfaitaireAansluitingShape/a43e4857ca45bfa5e00cebe680bb178fa317b42f>,
+    <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#ForfaitaireAansluitingShape/60bf4420c79e958c7afd8f8f49646bac772ba034>,
+    <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#ForfaitaireAansluitingShape/d72f01520d9e6dbc5f4d72231c2d34bb4a9a72a1>,
+    <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#ForfaitaireAansluitingShape/ecda6f87b3c50bbb936b5a23a653530f655cc195>,
+    <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#ForfaitaireAansluitingShape/f5ac96fdd02e7e21b6a665387cb1f63ee8679856>,
+    <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#ForfaitaireAansluitingShape/2274187d156f9f5d41595f74ad2e00c5c9a76407>,
+    <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#ForfaitaireAansluitingShape/a26718d3f273c9247be5d59744e5f1c5c3eed0eb>,
+    <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#ForfaitaireAansluitingShape/d30ab49dd30742394d2f2577a5ec315b3119ea48>,
+    <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#ForfaitaireAansluitingShape/e5d3672d841bd1fca06e899136f8d464eac424d0>;
   shacl:targetClass <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#ForfaitaireAansluiting> .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#ForfaitaireAansluitingShape/03a68f6d18c8be484e7fefa28100102307f392e3> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#ForfaitaireAansluiting%3Aean%20nummer";
+  shacl:description "Uniek identificatienummer van de elektrische aansluiting, bestaande uit 18 cijfers."@nl;
+  shacl:maxCount 1;
+  shacl:name "ean nummer"@nl;
+  shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#ForfaitaireAansluiting.eanNummer>;
+  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEVnl> "Maximaal 1 waarden toegelaten voor ean nummer"];
+  <https://data.vlaanderen.be/ns/shacl#rule> "" .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#ForfaitaireAansluitingShape/1ca1ddab47d4e66ba4e1f738c5812eec0557ec92> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#ForfaitaireAansluiting%3Aadres%20volgens%20DNB";
+  shacl:description "Het adres van de aansluiting volgens de distributienetbeheerder."@nl;
+  shacl:maxCount 1;
+  shacl:name "adres volgens DNB"@nl;
+  shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#ForfaitaireAansluiting.adresVolgensDNB>;
+  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEVnl> "Maximaal 1 waarden toegelaten voor adres volgens DNB"];
+  <https://data.vlaanderen.be/ns/shacl#rule> "" .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#ForfaitaireAansluitingShape/2274187d156f9f5d41595f74ad2e00c5c9a76407> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#ForfaitaireAansluiting%3Areferentie%20distributienetbeheerder";
+  shacl:datatype xsd:string;
+  shacl:description "De wijze waarop, de referentie waarmee de aansluiting gekend is bij de distributienetbeheerder."@nl;
+  shacl:name "referentie distributienetbeheerder"@nl;
+  shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#ForfaitaireAansluiting.referentieDNB>;
+  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEVnl> "De range van referentie distributienetbeheerder moet van het type <http://www.w3.org/2001/XMLSchema#string> zijn."];
+  <https://data.vlaanderen.be/ns/shacl#rule> "" .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#ForfaitaireAansluitingShape/2f8554c149df7505fd2260c375934ce4dac38b60> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#ForfaitaireAansluiting%3Aean%20nummer";
+  shacl:description "Uniek identificatienummer van de elektrische aansluiting, bestaande uit 18 cijfers."@nl;
+  shacl:name "ean nummer"@nl;
+  shacl:nodekind "sh:Literal";
+  shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#ForfaitaireAansluiting.eanNummer>;
+  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEVnl> "De verwachte waarde voor ean nummer is een Literal"];
+  <https://data.vlaanderen.be/ns/shacl#rule> "" .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#ForfaitaireAansluitingShape/5adca4271d2a3fc38000ddd749998e9de5ed3640> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#ForfaitaireAansluiting%3Aadres%20volgens%20DNB";
+  shacl:description "Het adres van de aansluiting volgens de distributienetbeheerder."@nl;
+  shacl:minCount 1;
+  shacl:name "adres volgens DNB"@nl;
+  shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#ForfaitaireAansluiting.adresVolgensDNB>;
+  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEVnl> "Minimaal 1 waarden verwacht voor adres volgens DNB"];
+  <https://data.vlaanderen.be/ns/shacl#rule> "" .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#ForfaitaireAansluitingShape/60bf4420c79e958c7afd8f8f49646bac772ba034> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#ForfaitaireAansluiting%3Anominale%20spanning";
+  shacl:description "De nominale spanning van de forfaitaire aansluiting."@nl;
+  shacl:name "nominale spanning"@nl;
+  shacl:nodekind "sh:BlankNodeOrIRI";
+  shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#ForfaitaireAansluiting.nominaleSpanning>;
+  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEVnl> "De verwachte waarde voor nominale spanning is een rdfs:Resource (URI of blank node)"];
+  <https://data.vlaanderen.be/ns/shacl#rule> "" .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#ForfaitaireAansluitingShape/6636bf75e44dcea48112b777b09e06cfcf863d93> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#ForfaitaireAansluiting%3Aean%20nummer";
+  shacl:description "Uniek identificatienummer van de elektrische aansluiting, bestaande uit 18 cijfers."@nl;
+  shacl:minCount 1;
+  shacl:name "ean nummer"@nl;
+  shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#ForfaitaireAansluiting.eanNummer>;
+  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEVnl> "Minimaal 1 waarden verwacht voor ean nummer"];
+  <https://data.vlaanderen.be/ns/shacl#rule> "" .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#ForfaitaireAansluitingShape/8d01a3d1a24c7b1c3993aa64679dc9dfbfc336dc> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#ForfaitaireAansluiting%3Aadres%20volgens%20DNB";
+  shacl:description "Het adres van de aansluiting volgens de distributienetbeheerder."@nl;
+  shacl:name "adres volgens DNB"@nl;
+  shacl:nodekind "sh:BlankNodeOrIRI";
+  shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#ForfaitaireAansluiting.adresVolgensDNB>;
+  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEVnl> "De verwachte waarde voor adres volgens DNB is een rdfs:Resource (URI of blank node)"];
+  <https://data.vlaanderen.be/ns/shacl#rule> "" .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#ForfaitaireAansluitingShape/8e9b38fd9c8c56d9d9f4d5d213310353fd6b9e6e> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#ForfaitaireAansluiting%3Aadres%20volgens%20DNB";
+  shacl:class <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcAdres>;
+  shacl:description "Het adres van de aansluiting volgens de distributienetbeheerder."@nl;
+  shacl:name "adres volgens DNB"@nl;
+  shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#ForfaitaireAansluiting.adresVolgensDNB>;
+  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEVnl> "De range van adres volgens DNB moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcAdres> zijn."];
+  <https://data.vlaanderen.be/ns/shacl#rule> "" .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#ForfaitaireAansluitingShape/a26718d3f273c9247be5d59744e5f1c5c3eed0eb> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#ForfaitaireAansluiting%3Areferentie%20distributienetbeheerder";
+  shacl:description "De wijze waarop, de referentie waarmee de aansluiting gekend is bij de distributienetbeheerder."@nl;
+  shacl:maxCount 1;
+  shacl:name "referentie distributienetbeheerder"@nl;
+  shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#ForfaitaireAansluiting.referentieDNB>;
+  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEVnl> "Maximaal 1 waarden toegelaten voor referentie distributienetbeheerder"];
+  <https://data.vlaanderen.be/ns/shacl#rule> "" .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#ForfaitaireAansluitingShape/a43e4857ca45bfa5e00cebe680bb178fa317b42f> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#ForfaitaireAansluiting%3Aean%20nummer";
+  shacl:datatype xsd:string;
+  shacl:description "Uniek identificatienummer van de elektrische aansluiting, bestaande uit 18 cijfers."@nl;
+  shacl:name "ean nummer"@nl;
+  shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#ForfaitaireAansluiting.eanNummer>;
+  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEVnl> "De range van ean nummer moet van het type <http://www.w3.org/2001/XMLSchema#string> zijn."];
+  <https://data.vlaanderen.be/ns/shacl#rule> "" .
 
 <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#ForfaitaireAansluitingShape/d15f714b2ed6b96e1b3f73a18a0eadabb5873da6> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#ForfaitaireAansluiting%3AVoedt";
   shacl:class <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Stroomkring>;
@@ -1907,6 +2271,14 @@
   shacl:name "Voedt"@nl;
   shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/biflash/#Voedt>;
   <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEVnl> "De range van Voedt moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Stroomkring> zijn."];
+  <https://data.vlaanderen.be/ns/shacl#rule> "" .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#ForfaitaireAansluitingShape/d30ab49dd30742394d2f2577a5ec315b3119ea48> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#ForfaitaireAansluiting%3Areferentie%20distributienetbeheerder";
+  shacl:description "De wijze waarop, de referentie waarmee de aansluiting gekend is bij de distributienetbeheerder."@nl;
+  shacl:minCount 1;
+  shacl:name "referentie distributienetbeheerder"@nl;
+  shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#ForfaitaireAansluiting.referentieDNB>;
+  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEVnl> "Minimaal 1 waarden verwacht voor referentie distributienetbeheerder"];
   <https://data.vlaanderen.be/ns/shacl#rule> "" .
 
 <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#ForfaitaireAansluitingShape/d465ae7eed35aca3207ca502ba10814f215d1ab5> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#ForfaitaireAansluiting%3AVoedt";
@@ -1917,6 +2289,38 @@
   <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEVnl> "De verwachte waarde voor Voedt is een rdfs:Resource (URI of blank node)"];
   <https://data.vlaanderen.be/ns/shacl#rule> "" .
 
+<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#ForfaitaireAansluitingShape/d72f01520d9e6dbc5f4d72231c2d34bb4a9a72a1> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#ForfaitaireAansluiting%3Anominale%20spanning";
+  shacl:description "De nominale spanning van de forfaitaire aansluiting."@nl;
+  shacl:minCount 1;
+  shacl:name "nominale spanning"@nl;
+  shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#ForfaitaireAansluiting.nominaleSpanning>;
+  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEVnl> "Minimaal 1 waarden verwacht voor nominale spanning"];
+  <https://data.vlaanderen.be/ns/shacl#rule> "" .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#ForfaitaireAansluitingShape/e5d3672d841bd1fca06e899136f8d464eac424d0> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#ForfaitaireAansluiting%3Areferentie%20distributienetbeheerder";
+  shacl:description "De wijze waarop, de referentie waarmee de aansluiting gekend is bij de distributienetbeheerder."@nl;
+  shacl:name "referentie distributienetbeheerder"@nl;
+  shacl:nodekind "sh:Literal";
+  shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#ForfaitaireAansluiting.referentieDNB>;
+  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEVnl> "De verwachte waarde voor referentie distributienetbeheerder is een Literal"];
+  <https://data.vlaanderen.be/ns/shacl#rule> "" .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#ForfaitaireAansluitingShape/ecda6f87b3c50bbb936b5a23a653530f655cc195> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#ForfaitaireAansluiting%3Anominale%20spanning";
+  shacl:class skos:Concept;
+  shacl:description "De nominale spanning van de forfaitaire aansluiting."@nl;
+  shacl:name "nominale spanning"@nl;
+  shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#ForfaitaireAansluiting.nominaleSpanning>;
+  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEVnl> "De range van nominale spanning moet van het type <http://www.w3.org/2004/02/skos/core#Concept> zijn."];
+  <https://data.vlaanderen.be/ns/shacl#rule> "" .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#ForfaitaireAansluitingShape/f5ac96fdd02e7e21b6a665387cb1f63ee8679856> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#ForfaitaireAansluiting%3Anominale%20spanning";
+  shacl:description "De nominale spanning van de forfaitaire aansluiting."@nl;
+  shacl:maxCount 1;
+  shacl:name "nominale spanning"@nl;
+  shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#ForfaitaireAansluiting.nominaleSpanning>;
+  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEVnl> "Maximaal 1 waarden toegelaten voor nominale spanning"];
+  <https://data.vlaanderen.be/ns/shacl#rule> "" .
+
 <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#HoortBijShape> a shacl:NodeShape;
   shacl:closed false .
 
@@ -1924,11 +2328,23 @@
   shacl:closed false;
   shacl:targetClass xsd:integer .
 
+<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#IsOntwerpVanShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#IsOntwerpVan> .
+
 <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#KlAIMToestandShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:targetClass skos:Concept .
 
+<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#KlAlgGemeenteShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass skos:Concept .
+
 <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#KlAlgMimeTypeShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass skos:Concept .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#KlAlgProvincieShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:targetClass skos:Concept .
 
@@ -1964,15 +2380,15 @@
   shacl:closed false;
   shacl:targetClass skos:Concept .
 
-<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#KlFabricageTypeRetroreflecterendVerkeersbordShape> a shacl:NodeShape;
-  shacl:closed false;
-  shacl:targetClass skos:Concept .
-
 <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#KlFolieTypeShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:targetClass skos:Concept .
 
 <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#KlLantaarnLamptypeShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass skos:Concept .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#KlNominaleSpanningShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:targetClass skos:Concept .
 
@@ -2519,13 +2935,13 @@
   <https://data.vlaanderen.be/ns/shacl#rule> "" .
 
 <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#LEDBordShape/21ce6fcad83046517b6d5d09e55727da8bd55fce> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#LEDBord%3ASturing";
-  shacl:class <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#DynBordExternePU>,
+  shacl:class <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#BiFlash>,
     <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#SoftwareToegang>,
-    <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#BiFlash>;
+    <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#DynBordExternePU>;
   shacl:description "Deze relatie geeft aan of er een of andere vorm van dataverkeer is tussen 2 onderdelen. Een wegverlichtingstoestel dat aan staat wordt ook als sturing beschouwd, in dit geval is het een lang ononderbroken elektrisch aan-signaal. Deze relatie heeft geen richting."@nl;
   shacl:name "Sturing"@nl;
   shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/biflash/#Sturing>;
-  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEVnl> "De range van Sturing moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#DynBordExternePU> zijn."], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEVnl> "De range van Sturing moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#DynBordExternePU> zijn."], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEVnl> "De range van Sturing moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#SoftwareToegang> zijn."], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEVnl> "De range van Sturing moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#SoftwareToegang> zijn."], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEVnl> "De range van Sturing moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#BiFlash> zijn."], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEVnl> "De range van Sturing moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#BiFlash> zijn."];
+  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEVnl> "De range van Sturing moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#BiFlash> zijn."], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEVnl> "De range van Sturing moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#BiFlash> zijn."], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEVnl> "De range van Sturing moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#SoftwareToegang> zijn."], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEVnl> "De range van Sturing moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#SoftwareToegang> zijn."], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEVnl> "De range van Sturing moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#DynBordExternePU> zijn."], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEVnl> "De range van Sturing moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#DynBordExternePU> zijn."];
   <https://data.vlaanderen.be/ns/shacl#rule> "" .
 
 <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#LEDBordShape/2f568ff2423abc277ae592cb203c53c425c7883e> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#LEDBord%3Aaantal%20lichtsensoren";
@@ -2826,6 +3242,10 @@
     <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#RechteSteunShape/eef3aa764ce7a367564c223be90c380bc3898a27>,
     <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#RechteSteunShape/8f120cad8fcd990b3b239beab82e34601f02f57e>,
     <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#RechteSteunShape/f7248aceb7f88bc80137f911d7a37032f76cf426>,
+    <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#RechteSteunShape/3bf7689ef46d9797b43fb5f015c60b42197a00ae>,
+    <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#RechteSteunShape/9a8628d35be89dfed48ead0aa7605e783cf8f3a4>,
+    <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#RechteSteunShape/b42c2fc3298b93e7be3027ddd6bc4a84a6de4389>,
+    <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#RechteSteunShape/e8f191bb991ef06035a491e8737ca89e1787513d>,
     <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#RechteSteunShape/236f0210baaf149903750c43bbe7012c21debb2a>,
     <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#RechteSteunShape/322371a77364a50f049d46180f6192532eea26dc>,
     <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#RechteSteunShape/4f381639bb6e021939f65b4f41409d1edaeade9b>,
@@ -2848,8 +3268,16 @@
   <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEVnl> "De range van type moet van het type <http://www.w3.org/2004/02/skos/core#Concept> zijn."];
   <https://data.vlaanderen.be/ns/shacl#rule> "" .
 
+<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#RechteSteunShape/3bf7689ef46d9797b43fb5f015c60b42197a00ae> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#RechteSteun%3Atechnische%20fiche";
+  shacl:description "De technische fiche van de rechte steun."@nl;
+  shacl:minCount 1;
+  shacl:name "technische fiche"@nl;
+  shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#RechteSteun.technischeFiche>;
+  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEVnl> "Minimaal 1 waarden verwacht voor technische fiche"];
+  <https://data.vlaanderen.be/ns/shacl#rule> "" .
+
 <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#RechteSteunShape/440f3b063a60b3d33ddb75dd42f14247c90dc8ae> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#RechteSteun%3ABevestiging";
-  shacl:description "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Deze relatie heeft geen richting."@nl;
+  shacl:description "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Daarnaast omvat deze relatie ook situaties waarin onderdelen niet direct, maar wel structureel of functioneel met elkaar verbonden zijn op een manier die bevestiging impliceert, bv. een trap die eindigt net onder een voetgangersbrug zonder fysieke bevestiging. Deze relatie heeft geen richting."@nl;
   shacl:name "Bevestiging"@nl;
   shacl:nodekind "sh:BlankNodeOrIRI";
   shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/biflash/#Bevestiging>;
@@ -2879,9 +3307,33 @@
   <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEVnl> "De range van Hoort bij moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#BiFlashInstallatie> zijn."];
   <https://data.vlaanderen.be/ns/shacl#rule> "" .
 
+<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#RechteSteunShape/9a8628d35be89dfed48ead0aa7605e783cf8f3a4> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#RechteSteun%3Atechnische%20fiche";
+  shacl:class <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcDocument>;
+  shacl:description "De technische fiche van de rechte steun."@nl;
+  shacl:name "technische fiche"@nl;
+  shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#RechteSteun.technischeFiche>;
+  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEVnl> "De range van technische fiche moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcDocument> zijn."];
+  <https://data.vlaanderen.be/ns/shacl#rule> "" .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#RechteSteunShape/b42c2fc3298b93e7be3027ddd6bc4a84a6de4389> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#RechteSteun%3Atechnische%20fiche";
+  shacl:description "De technische fiche van de rechte steun."@nl;
+  shacl:maxCount 1;
+  shacl:name "technische fiche"@nl;
+  shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#RechteSteun.technischeFiche>;
+  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEVnl> "Maximaal 1 waarden toegelaten voor technische fiche"];
+  <https://data.vlaanderen.be/ns/shacl#rule> "" .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#RechteSteunShape/e8f191bb991ef06035a491e8737ca89e1787513d> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#RechteSteun%3Atechnische%20fiche";
+  shacl:description "De technische fiche van de rechte steun."@nl;
+  shacl:name "technische fiche"@nl;
+  shacl:nodekind "sh:BlankNodeOrIRI";
+  shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#RechteSteun.technischeFiche>;
+  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEVnl> "De verwachte waarde voor technische fiche is een rdfs:Resource (URI of blank node)"];
+  <https://data.vlaanderen.be/ns/shacl#rule> "" .
+
 <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#RechteSteunShape/eef3aa764ce7a367564c223be90c380bc3898a27> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#RechteSteun%3ABevestiging";
   shacl:class <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#ForfaitaireAansluiting>;
-  shacl:description "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Deze relatie heeft geen richting."@nl;
+  shacl:description "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Daarnaast omvat deze relatie ook situaties waarin onderdelen niet direct, maar wel structureel of functioneel met elkaar verbonden zijn op een manier die bevestiging impliceert, bv. een trap die eindigt net onder een voetgangersbrug zonder fysieke bevestiging. Deze relatie heeft geen richting."@nl;
   shacl:name "Bevestiging"@nl;
   shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/biflash/#Bevestiging>;
   <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEVnl> "De range van Bevestiging moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#ForfaitaireAansluiting> zijn."], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEVnl> "De range van Bevestiging moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#ForfaitaireAansluiting> zijn."];
@@ -2902,25 +3354,9 @@
     <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#RetroreflecterendVerkeersbordShape/75d1cacfacd9676cbe4f5d5b8b7ce77ec883559d>,
     <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#RetroreflecterendVerkeersbordShape/9d877dbc58068ba2c7e0da7c928c4df31e1519b9>,
     <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#RetroreflecterendVerkeersbordShape/df13ed1d9546e18c5e8fd173f9a7cb983911e99f>,
-    <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#RetroreflecterendVerkeersbordShape/6fdb48d0eafb0e408713b617272b920b2095238c>,
-    <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#RetroreflecterendVerkeersbordShape/847b674d3e7e1f1b70d26d2748cabf57582fa36d>,
-    <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#RetroreflecterendVerkeersbordShape/8b48c670e59de3c4d9bc68da6db42f2f72535234>,
-    <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#RetroreflecterendVerkeersbordShape/e7221521e0f1533295a8fa9c4bfc992a042515b4>,
-    <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#RetroreflecterendVerkeersbordShape/2ab2348109cfea22918eb4821bc4b8ec1baa8ae8>,
-    <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#RetroreflecterendVerkeersbordShape/3eb82604fbd59939d646873da2dc841cceab0723>,
-    <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#RetroreflecterendVerkeersbordShape/83fa6c760a00333316c9c58653f9e0fb5d1ebcbb>,
-    <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#RetroreflecterendVerkeersbordShape/a0565de8721bb4f59c296e10625be1ad996780c9>,
     <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#RetroreflecterendVerkeersbordShape/4e9a5fd40fcc1ac84ef88d4aa5d8366169ac9ae0>,
     <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#RetroreflecterendVerkeersbordShape/7def29c8d361e5ef95d4d16cde1f3b0ba7d33403>,
     <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#RetroreflecterendVerkeersbordShape/8c4a3dfc655ba461f0fd227722438c754a606f10>,
-    <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#RetroreflecterendVerkeersbordShape/2e0c33333174e07cbf17ac823c69e90bec790772>,
-    <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#RetroreflecterendVerkeersbordShape/33a3a454c02a37662631f4b79932749d3a8f72af>,
-    <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#RetroreflecterendVerkeersbordShape/c2872df0f24a6224198c83f2266cae7db1c123f0>,
-    <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#RetroreflecterendVerkeersbordShape/feeb866c56b99d6da804f754c312a73ab30d825e>,
-    <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#RetroreflecterendVerkeersbordShape/005a9c9d8d49d425c3062992abb12a5f00c0f089>,
-    <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#RetroreflecterendVerkeersbordShape/262e92329429281b1886a5b2f9426692a8050919>,
-    <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#RetroreflecterendVerkeersbordShape/36e767652db53ee995dcc3b3aaed25fa398b20e0>,
-    <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#RetroreflecterendVerkeersbordShape/9e87fcf0759d18fdbd4544b96a08337d2543c541>,
     <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#RetroreflecterendVerkeersbordShape/2b172a5b793f9ecc14ba3561b40c280a49fb0814>,
     <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#RetroreflecterendVerkeersbordShape/3e14d2731ecbf03f063421c256cc7f01c8721d3d>,
     <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#RetroreflecterendVerkeersbordShape/7fc22954620c6a7d6fb8a1a97bea5f0fe145b808>,
@@ -2934,36 +3370,12 @@
     <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#RetroreflecterendVerkeersbordShape/864cdc326c1157097b7cc41cd71094247fdc96b6>;
   shacl:targetClass <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#RetroreflecterendVerkeersbord> .
 
-<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#RetroreflecterendVerkeersbordShape/005a9c9d8d49d425c3062992abb12a5f00c0f089> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#RetroreflecterendVerkeersbord%3Akaartvoorstelling";
-  shacl:description "TODO"@nl;
-  shacl:maxCount 1;
-  shacl:name "kaartvoorstelling"@nl;
-  shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#RetroreflecterendVerkeersbord.kaartvoorstelling>;
-  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEVnl> "Maximaal 1 waarden toegelaten voor kaartvoorstelling"];
-  <https://data.vlaanderen.be/ns/shacl#rule> "" .
-
 <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#RetroreflecterendVerkeersbordShape/060637c6c234c6dc732b293ea64d150f8cc3d912> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#RetroreflecterendVerkeersbord%3Aoppervlakte";
   shacl:description "De oppervlakte van het beeldvlak van een verkeersbord."@nl;
   shacl:maxCount 1;
   shacl:name "oppervlakte"@nl;
   shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#RetroreflecterendVerkeersbord.oppervlakte>;
   <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEVnl> "Maximaal 1 waarden toegelaten voor oppervlakte"];
-  <https://data.vlaanderen.be/ns/shacl#rule> "" .
-
-<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#RetroreflecterendVerkeersbordShape/262e92329429281b1886a5b2f9426692a8050919> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#RetroreflecterendVerkeersbord%3Akaartvoorstelling";
-  shacl:description "TODO"@nl;
-  shacl:minCount 1;
-  shacl:name "kaartvoorstelling"@nl;
-  shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#RetroreflecterendVerkeersbord.kaartvoorstelling>;
-  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEVnl> "Minimaal 1 waarden verwacht voor kaartvoorstelling"];
-  <https://data.vlaanderen.be/ns/shacl#rule> "" .
-
-<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#RetroreflecterendVerkeersbordShape/2ab2348109cfea22918eb4821bc4b8ec1baa8ae8> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#RetroreflecterendVerkeersbord%3Afabricage%20type";
-  shacl:class skos:Concept;
-  shacl:description "Genormaliseerde referentie waaraan het verkeersbord voldoet."@nl;
-  shacl:name "fabricage type"@nl;
-  shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#RetroreflecterendVerkeersbord.fabricageType>;
-  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEVnl> "De range van fabricage type moet van het type <http://www.w3.org/2004/02/skos/core#Concept> zijn."];
   <https://data.vlaanderen.be/ns/shacl#rule> "" .
 
 <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#RetroreflecterendVerkeersbordShape/2b172a5b793f9ecc14ba3561b40c280a49fb0814> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#RetroreflecterendVerkeersbord%3Akleur%20achterkant";
@@ -2974,22 +3386,6 @@
   <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEVnl> "De range van kleur achterkant moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DteKleurRAL> zijn."];
   <https://data.vlaanderen.be/ns/shacl#rule> "" .
 
-<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#RetroreflecterendVerkeersbordShape/2e0c33333174e07cbf17ac823c69e90bec790772> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#RetroreflecterendVerkeersbord%3Ahorizontale%20verschuiving";
-  shacl:class <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInMillimeter>;
-  shacl:description "De verschuiving van het bord, gemeten van het midden van het bord tot de centrale as van de opstelling. Een positieve waarde duidt op een verschuiving naar rechts, een negatieve waarde op een verschuiving naar links"@nl;
-  shacl:name "horizontale verschuiving"@nl;
-  shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#RetroreflecterendVerkeersbord.horizontaleVerschuiving>;
-  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEVnl> "De range van horizontale verschuiving moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInMillimeter> zijn."];
-  <https://data.vlaanderen.be/ns/shacl#rule> "" .
-
-<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#RetroreflecterendVerkeersbordShape/33a3a454c02a37662631f4b79932749d3a8f72af> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#RetroreflecterendVerkeersbord%3Ahorizontale%20verschuiving";
-  shacl:description "De verschuiving van het bord, gemeten van het midden van het bord tot de centrale as van de opstelling. Een positieve waarde duidt op een verschuiving naar rechts, een negatieve waarde op een verschuiving naar links"@nl;
-  shacl:minCount 1;
-  shacl:name "horizontale verschuiving"@nl;
-  shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#RetroreflecterendVerkeersbord.horizontaleVerschuiving>;
-  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEVnl> "Minimaal 1 waarden verwacht voor horizontale verschuiving"];
-  <https://data.vlaanderen.be/ns/shacl#rule> "" .
-
 <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#RetroreflecterendVerkeersbordShape/3432bf4f40c4cd264bde0f0ea446c424d6f8d43e> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#RetroreflecterendVerkeersbord%3Amerk";
   shacl:description "De merknaam van het verkeersbord; duidt op de leverancier of producent van het verkeersbord."@nl;
   shacl:minCount 1;
@@ -2998,28 +3394,12 @@
   <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEVnl> "Minimaal 1 waarden verwacht voor merk"];
   <https://data.vlaanderen.be/ns/shacl#rule> "" .
 
-<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#RetroreflecterendVerkeersbordShape/36e767652db53ee995dcc3b3aaed25fa398b20e0> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#RetroreflecterendVerkeersbord%3Akaartvoorstelling";
-  shacl:class <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcDocument>;
-  shacl:description "TODO"@nl;
-  shacl:name "kaartvoorstelling"@nl;
-  shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#RetroreflecterendVerkeersbord.kaartvoorstelling>;
-  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEVnl> "De range van kaartvoorstelling moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcDocument> zijn."];
-  <https://data.vlaanderen.be/ns/shacl#rule> "" .
-
 <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#RetroreflecterendVerkeersbordShape/3e14d2731ecbf03f063421c256cc7f01c8721d3d> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#RetroreflecterendVerkeersbord%3Akleur%20achterkant";
   shacl:description "De kleur van de achterkant van het retroreflecterend verkeersbord."@nl;
   shacl:maxCount 1;
   shacl:name "kleur achterkant"@nl;
   shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#RetroreflecterendVerkeersbord.kleurAchterkant>;
   <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEVnl> "Maximaal 1 waarden toegelaten voor kleur achterkant"];
-  <https://data.vlaanderen.be/ns/shacl#rule> "" .
-
-<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#RetroreflecterendVerkeersbordShape/3eb82604fbd59939d646873da2dc841cceab0723> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#RetroreflecterendVerkeersbord%3Afabricage%20type";
-  shacl:description "Genormaliseerde referentie waaraan het verkeersbord voldoet."@nl;
-  shacl:maxCount 1;
-  shacl:name "fabricage type"@nl;
-  shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#RetroreflecterendVerkeersbord.fabricageType>;
-  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEVnl> "Maximaal 1 waarden toegelaten voor fabricage type"];
   <https://data.vlaanderen.be/ns/shacl#rule> "" .
 
 <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#RetroreflecterendVerkeersbordShape/4e9a5fd40fcc1ac84ef88d4aa5d8366169ac9ae0> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#RetroreflecterendVerkeersbord%3Agrootteorde";
@@ -3044,14 +3424,6 @@
   shacl:name "afwerkingsgraad"@nl;
   shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#RetroreflecterendVerkeersbord.afwerkingsgraad>;
   <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEVnl> "Maximaal 1 waarden toegelaten voor afwerkingsgraad"];
-  <https://data.vlaanderen.be/ns/shacl#rule> "" .
-
-<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#RetroreflecterendVerkeersbordShape/6fdb48d0eafb0e408713b617272b920b2095238c> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#RetroreflecterendVerkeersbord%3Afabricage%20datum";
-  shacl:datatype xsd:date;
-  shacl:description "De datum waarop het bord werd gebouwd."@nl;
-  shacl:name "fabricage datum"@nl;
-  shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#RetroreflecterendVerkeersbord.fabricageDatum>;
-  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEVnl> "De range van fabricage datum moet van het type <http://www.w3.org/2001/XMLSchema#date> zijn."];
   <https://data.vlaanderen.be/ns/shacl#rule> "" .
 
 <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#RetroreflecterendVerkeersbordShape/73033950f62e71f057baeb616946cd651652d7b7> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#RetroreflecterendVerkeersbord%3Aoppervlakte";
@@ -3094,36 +3466,12 @@
   <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEVnl> "De verwachte waarde voor kleur achterkant is een rdfs:Resource (URI of blank node)"];
   <https://data.vlaanderen.be/ns/shacl#rule> "" .
 
-<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#RetroreflecterendVerkeersbordShape/83fa6c760a00333316c9c58653f9e0fb5d1ebcbb> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#RetroreflecterendVerkeersbord%3Afabricage%20type";
-  shacl:description "Genormaliseerde referentie waaraan het verkeersbord voldoet."@nl;
-  shacl:minCount 1;
-  shacl:name "fabricage type"@nl;
-  shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#RetroreflecterendVerkeersbord.fabricageType>;
-  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEVnl> "Minimaal 1 waarden verwacht voor fabricage type"];
-  <https://data.vlaanderen.be/ns/shacl#rule> "" .
-
-<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#RetroreflecterendVerkeersbordShape/847b674d3e7e1f1b70d26d2748cabf57582fa36d> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#RetroreflecterendVerkeersbord%3Afabricage%20datum";
-  shacl:description "De datum waarop het bord werd gebouwd."@nl;
-  shacl:maxCount 1;
-  shacl:name "fabricage datum"@nl;
-  shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#RetroreflecterendVerkeersbord.fabricageDatum>;
-  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEVnl> "Maximaal 1 waarden toegelaten voor fabricage datum"];
-  <https://data.vlaanderen.be/ns/shacl#rule> "" .
-
 <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#RetroreflecterendVerkeersbordShape/864cdc326c1157097b7cc41cd71094247fdc96b6> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#RetroreflecterendVerkeersbord%3Aoppervlakte";
   shacl:class <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInVierkanteMeter>;
   shacl:description "De oppervlakte van het beeldvlak van een verkeersbord."@nl;
   shacl:name "oppervlakte"@nl;
   shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#RetroreflecterendVerkeersbord.oppervlakte>;
   <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEVnl> "De range van oppervlakte moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInVierkanteMeter> zijn."];
-  <https://data.vlaanderen.be/ns/shacl#rule> "" .
-
-<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#RetroreflecterendVerkeersbordShape/8b48c670e59de3c4d9bc68da6db42f2f72535234> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#RetroreflecterendVerkeersbord%3Afabricage%20datum";
-  shacl:description "De datum waarop het bord werd gebouwd."@nl;
-  shacl:minCount 1;
-  shacl:name "fabricage datum"@nl;
-  shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#RetroreflecterendVerkeersbord.fabricageDatum>;
-  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEVnl> "Minimaal 1 waarden verwacht voor fabricage datum"];
   <https://data.vlaanderen.be/ns/shacl#rule> "" .
 
 <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#RetroreflecterendVerkeersbordShape/8c4a3dfc655ba461f0fd227722438c754a606f10> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#RetroreflecterendVerkeersbord%3Agrootteorde";
@@ -3149,36 +3497,12 @@
   <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEVnl> "De range van afwerkingsgraad moet van het type <http://www.w3.org/2004/02/skos/core#Concept> zijn."];
   <https://data.vlaanderen.be/ns/shacl#rule> "" .
 
-<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#RetroreflecterendVerkeersbordShape/9e87fcf0759d18fdbd4544b96a08337d2543c541> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#RetroreflecterendVerkeersbord%3Akaartvoorstelling";
-  shacl:description "TODO"@nl;
-  shacl:name "kaartvoorstelling"@nl;
-  shacl:nodekind "sh:BlankNodeOrIRI";
-  shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#RetroreflecterendVerkeersbord.kaartvoorstelling>;
-  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEVnl> "De verwachte waarde voor kaartvoorstelling is een rdfs:Resource (URI of blank node)"];
-  <https://data.vlaanderen.be/ns/shacl#rule> "" .
-
-<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#RetroreflecterendVerkeersbordShape/a0565de8721bb4f59c296e10625be1ad996780c9> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#RetroreflecterendVerkeersbord%3Afabricage%20type";
-  shacl:description "Genormaliseerde referentie waaraan het verkeersbord voldoet."@nl;
-  shacl:name "fabricage type"@nl;
-  shacl:nodekind "sh:BlankNodeOrIRI";
-  shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#RetroreflecterendVerkeersbord.fabricageType>;
-  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEVnl> "De verwachte waarde voor fabricage type is een rdfs:Resource (URI of blank node)"];
-  <https://data.vlaanderen.be/ns/shacl#rule> "" .
-
 <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#RetroreflecterendVerkeersbordShape/bac433ec0dc21ecb75d980ef80259e206a4bd73a> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#RetroreflecterendVerkeersbord%3Amerk";
   shacl:class skos:Concept;
   shacl:description "De merknaam van het verkeersbord; duidt op de leverancier of producent van het verkeersbord."@nl;
   shacl:name "merk"@nl;
   shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#RetroreflecterendVerkeersbord.merk>;
   <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEVnl> "De range van merk moet van het type <http://www.w3.org/2004/02/skos/core#Concept> zijn."];
-  <https://data.vlaanderen.be/ns/shacl#rule> "" .
-
-<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#RetroreflecterendVerkeersbordShape/c2872df0f24a6224198c83f2266cae7db1c123f0> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#RetroreflecterendVerkeersbord%3Ahorizontale%20verschuiving";
-  shacl:description "De verschuiving van het bord, gemeten van het midden van het bord tot de centrale as van de opstelling. Een positieve waarde duidt op een verschuiving naar rechts, een negatieve waarde op een verschuiving naar links"@nl;
-  shacl:name "horizontale verschuiving"@nl;
-  shacl:nodekind "sh:BlankNodeOrIRI";
-  shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#RetroreflecterendVerkeersbord.horizontaleVerschuiving>;
-  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEVnl> "De verwachte waarde voor horizontale verschuiving is een rdfs:Resource (URI of blank node)"];
   <https://data.vlaanderen.be/ns/shacl#rule> "" .
 
 <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#RetroreflecterendVerkeersbordShape/df13ed1d9546e18c5e8fd173f9a7cb983911e99f> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#RetroreflecterendVerkeersbord%3Aafwerkingsgraad";
@@ -3197,27 +3521,11 @@
   <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEVnl> "Minimaal 1 waarden verwacht voor kleur achterkant"];
   <https://data.vlaanderen.be/ns/shacl#rule> "" .
 
-<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#RetroreflecterendVerkeersbordShape/e7221521e0f1533295a8fa9c4bfc992a042515b4> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#RetroreflecterendVerkeersbord%3Afabricage%20datum";
-  shacl:description "De datum waarop het bord werd gebouwd."@nl;
-  shacl:name "fabricage datum"@nl;
-  shacl:nodekind "sh:Literal";
-  shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#RetroreflecterendVerkeersbord.fabricageDatum>;
-  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEVnl> "De verwachte waarde voor fabricage datum is een Literal"];
-  <https://data.vlaanderen.be/ns/shacl#rule> "" .
-
 <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#RetroreflecterendVerkeersbordShape/f7248aceb7f88bc80137f911d7a37032f76cf426> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#RetroreflecterendVerkeersbord%3AHoort%20bij";
   shacl:description "De relatie geeft aan dat een onderdeel of collectie behoort bij, deel van of lid van een (andere) groep of collectie is."@nl;
   shacl:name "Hoort bij"@nl;
   shacl:nodekind "sh:BlankNodeOrIRI";
   <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEVnl> "De verwachte waarde voor Hoort bij is een rdfs:Resource (URI of blank node)"];
-  <https://data.vlaanderen.be/ns/shacl#rule> "" .
-
-<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#RetroreflecterendVerkeersbordShape/feeb866c56b99d6da804f754c312a73ab30d825e> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#RetroreflecterendVerkeersbord%3Ahorizontale%20verschuiving";
-  shacl:description "De verschuiving van het bord, gemeten van het midden van het bord tot de centrale as van de opstelling. Een positieve waarde duidt op een verschuiving naar rechts, een negatieve waarde op een verschuiving naar links"@nl;
-  shacl:maxCount 1;
-  shacl:name "horizontale verschuiving"@nl;
-  shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#RetroreflecterendVerkeersbord.horizontaleVerschuiving>;
-  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEVnl> "Maximaal 1 waarden toegelaten voor horizontale verschuiving"];
   <https://data.vlaanderen.be/ns/shacl#rule> "" .
 
 <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#RetroreflecterendeFolieShape> a shacl:NodeShape;
@@ -3255,7 +3563,7 @@
   <https://data.vlaanderen.be/ns/shacl#rule> "" .
 
 <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#RetroreflecterendeFolieShape/440f3b063a60b3d33ddb75dd42f14247c90dc8ae> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#RetroreflecterendeFolie%3ABevestiging";
-  shacl:description "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Deze relatie heeft geen richting."@nl;
+  shacl:description "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Daarnaast omvat deze relatie ook situaties waarin onderdelen niet direct, maar wel structureel of functioneel met elkaar verbonden zijn op een manier die bevestiging impliceert, bv. een trap die eindigt net onder een voetgangersbrug zonder fysieke bevestiging. Deze relatie heeft geen richting."@nl;
   shacl:name "Bevestiging"@nl;
   shacl:nodekind "sh:BlankNodeOrIRI";
   shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/biflash/#Bevestiging>;
@@ -3272,7 +3580,7 @@
 
 <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#RetroreflecterendeFolieShape/eef3aa764ce7a367564c223be90c380bc3898a27> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEV#RetroreflecterendeFolie%3ABevestiging";
   shacl:class <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#RetroreflecterendVerkeersbord>;
-  shacl:description "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Deze relatie heeft geen richting."@nl;
+  shacl:description "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Daarnaast omvat deze relatie ook situaties waarin onderdelen niet direct, maar wel structureel of functioneel met elkaar verbonden zijn op een manier die bevestiging impliceert, bv. een trap die eindigt net onder een voetgangersbrug zonder fysieke bevestiging. Deze relatie heeft geen richting."@nl;
   shacl:name "Bevestiging"@nl;
   shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/biflash/#Bevestiging>;
   <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEVnl> "De range van Bevestiging moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#RetroreflecterendVerkeersbord> zijn."], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/biflash/ontwerpdocument/DEVnl> "De range van Bevestiging moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#RetroreflecterendVerkeersbord> zijn."];

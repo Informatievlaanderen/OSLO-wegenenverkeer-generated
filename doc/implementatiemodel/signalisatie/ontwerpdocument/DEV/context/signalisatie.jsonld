@@ -1,29 +1,22 @@
 {
   "@context": {
-    "Adres": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcAdres",
-    "Adres.bus": {
-      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcAdres.bus",
-      "@type": "http://www.w3.org/2001/XMLSchema#string"
-    },
-    "Adres.gemeente": {
-      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcAdres.gemeente",
+    "AantalLampenInwendigVerlichtSignalisatiebord": "http://www.w3.org/2004/02/skos/core#Concept",
+    "AanzichtVerkeersbordopstelling": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#AanzichtVerkeersbordopstelling",
+    "AanzichtVerkeersbordopstelling.foto": {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#AanzichtVerkeersbordopstelling.foto",
       "@type": "@id"
     },
-    "Adres.huisnummer": {
-      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcAdres.huisnummer",
-      "@type": "http://www.w3.org/2001/XMLSchema#string"
-    },
-    "Adres.postcode": {
-      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcAdres.postcode",
-      "@type": "http://www.w3.org/2001/XMLSchema#string"
-    },
-    "Adres.provincie": {
-      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcAdres.provincie",
+    "AanzichtVerkeersbordopstelling.hoek": {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#AanzichtVerkeersbordopstelling.hoek",
       "@type": "@id"
     },
-    "Adres.straatnaam": {
-      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcAdres.straatnaam",
-      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    "AanzichtVerkeersbordopstelling.kaartvoorstelling": {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#AanzichtVerkeersbordopstelling.kaartvoorstelling",
+      "@type": "@id"
+    },
+    "AanzichtVerkeersbordopstelling.technischeVoorstelling": {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#AanzichtVerkeersbordopstelling.technischeVoorstelling",
+      "@type": "@id"
     },
     "AfmetingBxhInMillimeter": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcAfmetingBxhInMm",
     "AfmetingBxhInMillimeter.breedte": {
@@ -73,6 +66,10 @@
     },
     "AfmetingVerkeersbord.rond": {
       "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#DtuAfmetingVerkeersbord.rond",
+      "@type": "@id"
+    },
+    "AfmetingVerkeersbord.ruit": {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#DtuAfmetingVerkeersbord.ruit",
       "@type": "@id"
     },
     "AfmetingVerkeersbord.vierhoekig": {
@@ -147,9 +144,27 @@
       "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMObject.assetId",
       "@type": "@id"
     },
+    "AimObject.bestekpostnummer": {
+      "@container": "@set",
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMObject.bestekPostNummer",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "AimObject.datumOprichtingObject": {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMObject.datumOprichtingObject",
+      "@type": "http://www.w3.org/2001/XMLSchema#date"
+    },
     "AimObject.notitie": {
       "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMObject.notitie",
       "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "AimObject.standaardbestekpostnummer": {
+      "@container": "@set",
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMObject.standaardBestekPostNummer",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "AimObject.theoretischeLevensduur": {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMObject.theoretischeLevensduur",
+      "@type": "@id"
     },
     "AimObject.typeUri": {
       "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMObject.typeURI",
@@ -272,6 +287,15 @@
     "Bevestigingsbeugel.isVerzegeld": {
       "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Bevestigingsbeugel.isVerzegeld",
       "@type": "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "Bevestigingsbeugel.materiaalBevestigingsbeugel": {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Bevestigingsbeugel.materiaalBevestigingsbeugel",
+      "@type": "@id"
+    },
+    "Bevestigingsbeugel.technischeFiche": {
+      "@container": "@set",
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Bevestigingsbeugel.technischeFiche",
+      "@type": "@id"
     },
     "Bevestigingsbeugel.type": {
       "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Bevestigingsbeugel.type",
@@ -437,7 +461,6 @@
       "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#DtcExterneReferentie.externePartij",
       "@type": "http://www.w3.org/2001/XMLSchema#string"
     },
-    "FabricageTypeRetroreflecterendVerkeersbord": "http://www.w3.org/2004/02/skos/core#Concept",
     "FiguratieCode": "http://www.w3.org/2004/02/skos/core#Concept",
     "FiguratieCodeVerschuind": "http://www.w3.org/2004/02/skos/core#Concept",
     "FiguratieMarkeringVerschuind": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#FiguratieMarkeringVerschuind",
@@ -561,7 +584,6 @@
     },
     "GekleurdWvCode": "http://www.w3.org/2004/02/skos/core#Concept",
     "GekleurdWvType": "http://www.w3.org/2004/02/skos/core#Concept",
-    "Gemeente": "http://www.w3.org/2004/02/skos/core#Concept",
     "GroepDwarseEnFiguratiemarkering": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#GroepDwarseMarkeringEnFiguratie",
     "GroepDwarseEnFiguratiemarkering.hoortBij": {
       "@container": "@set",
@@ -586,6 +608,7 @@
       "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#GroepMarkering.totaleGroepOppervlakte",
       "@type": "@id"
     },
+    "HeeftAanzicht": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#HeeftAanzicht",
     "HoortBij": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#HoortBij",
     "IPv4Adres": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DteIPv4Adres",
     "IPv4Adres.waarde": {
@@ -602,10 +625,29 @@
       "@type": "http://www.w3.org/2001/XMLSchema#string"
     },
     "InwendigVerlichtSignalisatiebord": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#IVSB",
+    "InwendigVerlichtSignalisatiebord.aantalLampen": {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#IVSB.aantalLampen",
+      "@type": "@id"
+    },
+    "InwendigVerlichtSignalisatiebord.hoortBij": {
+      "@container": "@set",
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/signalisatie/#Hoort bij",
+      "@type": "@id"
+    },
+    "InwendigVerlichtSignalisatiebord.lampType": {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#IVSB.lampType",
+      "@type": "@id"
+    },
+    "InwendigVerlichtSignalisatiebord.opschrift": {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#IVSB.opschrift",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
     "InwendigVerlichtSignalisatiebord.type": {
       "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#IVSB.type",
       "@type": "@id"
     },
+    "IsOntwerpVan": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#IsOntwerpVan",
+    "IvsbGroep": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#IVSBGroep",
     "Kantopsluiting": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Kantopsluiting",
     "Kantopsluiting.isGeprefabriceerd": {
       "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Kantopsluiting.isGeprefabriceerd",
@@ -639,6 +681,7 @@
     },
     "KantopsluitingKleur": "http://www.w3.org/2004/02/skos/core#Concept",
     "KantopsluitingSoort": "http://www.w3.org/2004/02/skos/core#Concept",
+    "KeuzelijstAfwerkingsgraadRetroreflecterendVerkeersbord": "http://www.w3.org/2004/02/skos/core#Concept",
     "KeuzelijstOperationeleStatus": "http://www.w3.org/2004/02/skos/core#Concept",
     "KleurMarkering": "http://www.w3.org/2004/02/skos/core#Concept",
     "KleurPlooibaken": "http://www.w3.org/2004/02/skos/core#Concept",
@@ -692,6 +735,15 @@
     },
     "KwantitatieveWaardeInKubiekeMeter.waarde": {
       "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInKubiekeMeter.waarde",
+      "@type": "@id"
+    },
+    "KwantitatieveWaardeInMaand": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInMaand",
+    "KwantitatieveWaardeInMaand.standaardEenheid": {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInMaand.standaardEenheid",
+      "@type": "http://www.w3.org/2000/01/rdf-schema#Literal"
+    },
+    "KwantitatieveWaardeInMaand.waarde": {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInMaand.waarde",
       "@type": "@id"
     },
     "KwantitatieveWaardeInMeter": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInMeter",
@@ -809,6 +861,7 @@
       "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#DtuBVLaagtypes.profileerlaag",
       "@type": "@id"
     },
+    "LampTypeInwendigVerlichtSignalisatiebord": "http://www.w3.org/2004/02/skos/core#Concept",
     "LedBord": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#LEDBord",
     "LedBord.aantalLichtsensoren": {
       "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#LEDBord.aantalLichtsensoren",
@@ -929,8 +982,14 @@
     },
     "Markeringswaarborgperiode": "http://www.w3.org/2004/02/skos/core#Concept",
     "MateriaalAfschermendeConstructie": "http://www.w3.org/2004/02/skos/core#Concept",
+    "MateriaalBevestigingsbeugel": "http://www.w3.org/2004/02/skos/core#Concept",
     "MateriaalSoorten": "http://www.w3.org/2004/02/skos/core#Concept",
     "Mimetype": "http://www.w3.org/2004/02/skos/core#Concept",
+    "NaampadObject": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#NaampadObject",
+    "NaampadObject.naampad": {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#NaampadObject.naampad",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
     "NatuurlijkGetal": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
     "OmegaElement": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#OmegaElement",
     "OmegaElement.materiaal": {
@@ -1028,7 +1087,11 @@
       "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#DtcProfileerlaag.laagtype",
       "@type": "@id"
     },
-    "Provincie": "http://www.w3.org/2004/02/skos/core#Concept",
+    "RalKleur": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DteKleurRAL",
+    "RalKleur.waarde": {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DteKleurRAL.waarde",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
     "Referentiepunt": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Referentiepunt",
     "Referentiepunt.bevestiging": {
       "@container": "@set",
@@ -1056,22 +1119,33 @@
       "@type": "@id"
     },
     "RetroreflecterendVerkeersbord": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#RetroreflecterendVerkeersbord",
-    "RetroreflecterendVerkeersbord.fabricageDatum": {
-      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#RetroreflecterendVerkeersbord.fabricageDatum",
-      "@type": "http://www.w3.org/2001/XMLSchema#date"
-    },
-    "RetroreflecterendVerkeersbord.fabricageType": {
-      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#RetroreflecterendVerkeersbord.fabricageType",
+    "RetroreflecterendVerkeersbord.afwerkingsgraad": {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#RetroreflecterendVerkeersbord.afwerkingsgraad",
       "@type": "@id"
     },
-    "RetroreflecterendVerkeersbord.horizontaleVerschuiving": {
-      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#RetroreflecterendVerkeersbord.horizontaleVerschuiving",
+    "RetroreflecterendVerkeersbord.grootteorde": {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#RetroreflecterendVerkeersbord.grootteorde",
       "@type": "@id"
     },
-    "RetroreflecterendVerkeersbord.kaartvoorstelling": {
-      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#RetroreflecterendVerkeersbord.kaartvoorstelling",
+    "RetroreflecterendVerkeersbord.hoortBij": {
+      "@container": "@set",
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/signalisatie/#Hoort bij",
       "@type": "@id"
     },
+    "RetroreflecterendVerkeersbord.kleurAchterkant": {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#RetroreflecterendVerkeersbord.kleurAchterkant",
+      "@type": "@id"
+    },
+    "RetroreflecterendVerkeersbord.merk": {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#RetroreflecterendVerkeersbord.merk",
+      "@type": "@id"
+    },
+    "RetroreflecterendVerkeersbord.oppervlakte": {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#RetroreflecterendVerkeersbord.oppervlakte",
+      "@type": "@id"
+    },
+    "RetroreflecterendVerkeersbordGrootteorde": "http://www.w3.org/2004/02/skos/core#Concept",
+    "RetroreflecterendVerkeersbordMerk": "http://www.w3.org/2004/02/skos/core#Concept",
     "RetroreflecterendeFolie": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#RetroreflecterendeFolie",
     "RetroreflecterendeFolie.bevestiging": {
       "@container": "@set",
@@ -1094,7 +1168,6 @@
     "SluitAanOp": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#SluitAanOp",
     "SoortMarkeringVanLijnvormigElement": "http://www.w3.org/2004/02/skos/core#Concept",
     "SoortMarkeringsproduct": "http://www.w3.org/2004/02/skos/core#Concept",
-    "SoortSteun": "http://www.w3.org/2004/02/skos/core#Concept",
     "Straatmeubilair": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Straatmeubilair",
     "String": "http://www.w3.org/2001/XMLSchema#string",
     "Stroomkring": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Stroomkring",
@@ -1132,42 +1205,42 @@
     "TypeVanDeVerschaaldeLetter": "http://www.w3.org/2004/02/skos/core#Concept",
     "Uri": "http://www.w3.org/2001/XMLSchema#anyURI",
     "Verkeersbord": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Verkeersbord",
+    "Verkeersbord.aanzicht": {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Verkeersbord.aanzicht",
+      "@type": "@id"
+    },
+    "Verkeersbord.afbeelding": {
+      "@container": "@set",
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Verkeersbord.afbeelding",
+      "@type": "@id"
+    },
     "Verkeersbord.afmeting": {
       "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Verkeersbord.afmeting",
       "@type": "@id"
+    },
+    "Verkeersbord.fabricagevoorschrift": {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Verkeersbord.fabricagevoorschrift",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
     },
     "Verkeersbord.hoortBij": {
       "@container": "@set",
       "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/signalisatie/#Hoort bij",
       "@type": "@id"
     },
-    "Verkeersbord.kaartVoorstelling": {
-      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Verkeersbord.kaartVoorstelling",
+    "Verkeersbord.isOntwerpVan": {
+      "@container": "@set",
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/signalisatie/#Is ontwerp van",
+      "@type": "@id"
+    },
+    "Verkeersbord.operationeleStatus": {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Verkeersbord.operationeleStatus",
       "@type": "@id"
     },
     "Verkeersbord.opstelhoogte": {
       "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Verkeersbord.opstelhoogte",
       "@type": "@id"
     },
-    "Verkeersbord.soortSteun": {
-      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Verkeersbord.soortSteun",
-      "@type": "@id"
-    },
     "VerkeersbordCategorie": "http://www.w3.org/2004/02/skos/core#Concept",
-    "VerkeersbordVerkeersteken": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#VerkeersbordVerkeersteken",
-    "VerkeersbordVerkeersteken.hoortBij": {
-      "@container": "@set",
-      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/signalisatie/#Hoort bij",
-      "@type": "@id"
-    },
-    "VerkeersbordVerkeersteken.isBeginVanEenZone": {
-      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#VerkeersbordVerkeersteken.isBeginZone",
-      "@type": "http://www.w3.org/2001/XMLSchema#boolean"
-    },
-    "VerkeersbordVerkeersteken.isEindeVanEenZone": {
-      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#VerkeersbordVerkeersteken.isEindeZone",
-      "@type": "http://www.w3.org/2001/XMLSchema#boolean"
-    },
     "Verkeersbordcode": "http://www.w3.org/2004/02/skos/core#Concept",
     "Verkeersbordconcept": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#VerkeersbordConcept",
     "Verkeersbordconcept.afbeelding": {
@@ -1197,6 +1270,29 @@
     },
     "VerkeersbordconceptStatus": "http://www.w3.org/2004/02/skos/core#Concept",
     "Verkeersbordopstelling": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Verkeersbordopstelling",
+    "Verkeersbordopstelling.afbeelding": {
+      "@container": "@set",
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Verkeersbordopstelling.afbeelding",
+      "@type": "@id"
+    },
+    "Verkeersbordopstelling.heeftAanzicht": {
+      "@container": "@set",
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/signalisatie/#Heeft aanzicht",
+      "@type": "@id"
+    },
+    "Verkeersbordopstelling.isBotsvriendelijk": {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Verkeersbordopstelling.isBotsvriendelijk",
+      "@type": "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "Verkeersbordopstelling.isOntwerpVan": {
+      "@container": "@set",
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/signalisatie/#Is ontwerp van",
+      "@type": "@id"
+    },
+    "Verkeersbordopstelling.operationeleStatus": {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Verkeersbordopstelling.operationeleStatus",
+      "@type": "@id"
+    },
     "Verkeersbordopstelling.positieTenOpzichteVanDeRijweg": {
       "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Verkeersbordopstelling.positieTovRijweg",
       "@type": "@id"
@@ -1264,39 +1360,6 @@
       "@type": "@id"
     },
     "VerkeersspiegelVorm": "http://www.w3.org/2004/02/skos/core#Concept",
-    "Verkeersteken": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Verkeersteken",
-    "Verkeersteken.adres": {
-      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Verkeersteken.adres",
-      "@type": "@id"
-    },
-    "Verkeersteken.afbeelding": {
-      "@container": "@set",
-      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Verkeersteken.afbeelding",
-      "@type": "@id"
-    },
-    "Verkeersteken.mobiliteitsmaatregel": {
-      "@container": "@set",
-      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Verkeersteken.mobiliteitsMaatregel",
-      "@type": "@id"
-    },
-    "Verkeersteken.plaatsbeschrijving": {
-      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Verkeersteken.plaatsbeschrijving",
-      "@type": "http://www.w3.org/2001/XMLSchema#string"
-    },
-    "Verkeersteken.signalisatievergunning": {
-      "@container": "@set",
-      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Verkeersteken.signalisatieVergunning",
-      "@type": "@id"
-    },
-    "Verkeersteken.variabelOpschrift": {
-      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Verkeersteken.variabelOpschrift",
-      "@type": "http://www.w3.org/2001/XMLSchema#string"
-    },
-    "Verkeersteken.wettelijkeStatus": {
-      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Verkeersteken.wettelijkeStatus",
-      "@type": "@id"
-    },
-    "VerkeerstekenWettelijkeStatus": "http://www.w3.org/2004/02/skos/core#Concept",
     "VerschaaldeLetterMarkering": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#LetterMarkeringVerschaald",
     "VerschaaldeLetterMarkering.basisoppervlakte": {
       "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#LetterMarkeringVerschaald.basisOppervlakte",

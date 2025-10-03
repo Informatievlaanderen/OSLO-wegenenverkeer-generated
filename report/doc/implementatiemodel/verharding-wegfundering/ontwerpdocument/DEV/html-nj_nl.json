@@ -2,7 +2,7 @@
   "metadata": {
     "title": "Verharding en Wegfundering",
     "uri": "http://fixme.com",
-    "issued": "18-12-2024",
+    "issued": "3-10-2025",
     "filename": "verharding-wegfundering",
     "navigation": {
       "prev": "",
@@ -13,9 +13,9 @@
     "documentconfig": {},
     "status": "https://data.vlaanderen.be/doc/concept/StandaardStatus/KandidaatStandaard",
     "statuslabel": "Onbekend",
-    "repositoryurl": "https://github.com/Informatievlaanderen/OSLOthema-wegenenverkeer/tree/cd54f35ed58706ea9fde55910810e93065d5851c",
-    "changelogurl": "https://github.com/Informatievlaanderen/OSLOthema-wegenenverkeer/blob/cd54f35ed58706ea9fde55910810e93065d5851c/CHANGELOG",
-    "feedbackurl": "https://docs.google.com/forms/d/e/1FAIpQLSeaxOnrCkcarNHWI21YfPJ7sZChHVzOB2-P9ptzxkD9YX69-g/viewform",
+    "repositoryurl": "https://github.com/Informatievlaanderen/OSLOthema-wegenenverkeer/tree/708f3ddd3a77b8c1bfa5c68743b8a7cf06d8c5df",
+    "changelogurl": "https://github.com/Informatievlaanderen/OSLOthema-wegenenverkeer/blob/708f3ddd3a77b8c1bfa5c68743b8a7cf06d8c5df/CHANGELOG",
+    "feedbackurl": "mailto:TeamBim@verzendlijst.wegenenverkeer.be",
     "standaardregisterurl": "https://data.vlaanderen.be/standaarden/",
     "dependencies": [],
     "usesVocs": [],
@@ -278,7 +278,7 @@
             "nl": "Bevestiging"
           },
           "description": {
-            "nl": "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Deze relatie heeft geen richting."
+            "nl": "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Daarnaast omvat deze relatie ook situaties waarin onderdelen niet direct, maar wel structureel of functioneel met elkaar verbonden zijn op een manier die bevestiging impliceert, bv. een trap die eindigt net onder een voetgangersbrug zonder fysieke bevestiging. Deze relatie heeft geen richting."
           },
           "usage": {},
           "domain": [
@@ -313,7 +313,7 @@
             "nl": "Bevestiging"
           },
           "description": {
-            "nl": "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Deze relatie heeft geen richting."
+            "nl": "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Daarnaast omvat deze relatie ook situaties waarin onderdelen niet direct, maar wel structureel of functioneel met elkaar verbonden zijn op een manier die bevestiging impliceert, bv. een trap die eindigt net onder een voetgangersbrug zonder fysieke bevestiging. Deze relatie heeft geen richting."
           },
           "usage": {},
           "domain": [
@@ -426,6 +426,41 @@
           "codelist_uri": "https://wegenenverkeer-test.data.vlaanderen.be/id/conceptscheme/KlUitvoeringsmethode"
         },
         {
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#BetonnenConstructieElement.technischeFicheBetonBescherming",
+          "name": "technische fiche betonbescherming",
+          "sort": "technische fiche betonbescherming",
+          "label": {
+            "nl": "technische fiche betonbescherming"
+          },
+          "description": {
+            "nl": "Technische fiche dat informatie bevat over de betonbescherming."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "BetonnenConstructieElement",
+              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#BetonnenConstructieElement"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "DtcDocument",
+              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcDocument"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Bestandsbijlage",
+              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcDocument",
+              "range_label": {
+                "nl": "Bestandsbijlage"
+              }
+            }
+          ],
+          "cardinality": "1",
+          "codelist_uri": ""
+        },
+        {
           "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#BetonnenConstructieElement.betonspecificaties",
           "name": "betonspecificaties",
           "sort": "betonspecificaties",
@@ -454,6 +489,41 @@
               "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcBetonspecificaties",
               "range_label": {
                 "nl": "Betonspecificaties"
+              }
+            }
+          ],
+          "cardinality": "1",
+          "codelist_uri": ""
+        },
+        {
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#BetonnenConstructieElement.bekistingsplan",
+          "name": "bekistingsplan",
+          "sort": "bekistingsplan",
+          "label": {
+            "nl": "bekistingsplan"
+          },
+          "description": {
+            "nl": "Een plan die bekistingsmaten bevat en ook alle maten van alle mogelijke uitsparingen die er kunnen zijn."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "BetonnenConstructieElement",
+              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#BetonnenConstructieElement"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "DtcDocument",
+              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcDocument"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Bestandsbijlage",
+              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcDocument",
+              "range_label": {
+                "nl": "Bestandsbijlage"
               }
             }
           ],
@@ -1516,7 +1586,7 @@
       },
       "sort": "Afdichting",
       "description": {
-        "nl": "Een specifieke laag in de wegdekopbouw die voorkomt dat water tot op de betonplaat doordringt."
+        "nl": "Een specifieke laag in de wegdekopbouw die voorkomt dat water tot op de constructieplaat doordringt."
       },
       "usage": {},
       "parents": [
@@ -1526,6 +1596,13 @@
           "package": "OSLO-Abstracten",
           "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#AndereLaag",
           "scoped_uri": "#Andere laag"
+        },
+        {
+          "label": "Laagdikte",
+          "name": "LaagDikte",
+          "package": "OSLO-Abstracten",
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#LaagDikte",
+          "scoped_uri": "#Laagdikte"
         }
       ],
       "properties": [
@@ -1563,6 +1640,76 @@
           ],
           "cardinality": "1",
           "codelist_uri": "https://wegenenverkeer-test.data.vlaanderen.be/id/conceptscheme/KlAfdichtingType"
+        },
+        {
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Afdichting.technischeFiche",
+          "name": "technische fiche",
+          "sort": "technische fiche",
+          "label": {
+            "nl": "technische fiche"
+          },
+          "description": {
+            "nl": "De technische fiche van de afdichting."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "Afdichting",
+              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Afdichting"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "DtcDocument",
+              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcDocument"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Bestandsbijlage",
+              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcDocument",
+              "range_label": {
+                "nl": "Bestandsbijlage"
+              }
+            }
+          ],
+          "cardinality": "1",
+          "codelist_uri": ""
+        },
+        {
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Afdichting.materiaalAfdichting",
+          "name": "materiaal afdichting",
+          "sort": "materiaal afdichting",
+          "label": {
+            "nl": "materiaal afdichting"
+          },
+          "description": {
+            "nl": "Het materiaal van de afdichting."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "Afdichting",
+              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Afdichting"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "KlMateriaalAfdichting",
+              "range_uri": "http://www.w3.org/2004/02/skos/core#Concept"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#materiaal afdichting",
+              "range_puri": "http://www.w3.org/2004/02/skos/core#Concept",
+              "range_label": {
+                "nl": "materiaal afdichting"
+              }
+            }
+          ],
+          "cardinality": "1",
+          "codelist_uri": "https://wegenenverkeer-test.data.vlaanderen.be/id/conceptscheme/KlMateriaalAfdichting"
         }
       ]
     },
@@ -1742,6 +1889,13 @@
           "package": "OSLO-Abstracten",
           "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#AndereLaag",
           "scoped_uri": "#Andere laag"
+        },
+        {
+          "label": "Laagdikte",
+          "name": "LaagDikte",
+          "package": "OSLO-Abstracten",
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#LaagDikte",
+          "scoped_uri": "#Laagdikte"
         }
       ],
       "properties": []
@@ -2733,7 +2887,7 @@
       },
       "sort": "Bevestiging",
       "description": {
-        "nl": "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Deze relatie heeft geen richting."
+        "nl": "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Daarnaast omvat deze relatie ook situaties waarin onderdelen niet direct, maar wel structureel of functioneel met elkaar verbonden zijn op een manier die bevestiging impliceert, bv. een trap die eindigt net onder een voetgangersbrug zonder fysieke bevestiging. Deze relatie heeft geen richting."
       },
       "usage": {},
       "parents": [
@@ -3184,77 +3338,7 @@
             "nl": "Bevestiging"
           },
           "description": {
-            "nl": "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Deze relatie heeft geen richting."
-          },
-          "usage": {},
-          "domain": [
-            {
-              "EA-Name": "Cementbetonverharding",
-              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Cementbetonverharding"
-            }
-          ],
-          "range": [
-            {
-              "range_label": "Verankeringslandhoofd",
-              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Verankeringslandhoofd"
-            }
-          ],
-          "scopedrange": [
-            {
-              "range_uri": "#Verankeringslandhoofd",
-              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Verankeringslandhoofd",
-              "range_label": {
-                "nl": "Verankeringslandhoofd"
-              }
-            }
-          ],
-          "cardinality": "",
-          "codelist_uri": ""
-        },
-        {
-          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/verharding-wegfundering/#Bevestiging",
-          "name": "bevestiging",
-          "sort": "Bevestiging",
-          "label": {
-            "nl": "Bevestiging"
-          },
-          "description": {
-            "nl": "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Deze relatie heeft geen richting."
-          },
-          "usage": {},
-          "domain": [
-            {
-              "EA-Name": "Cementbetonverharding",
-              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Cementbetonverharding"
-            }
-          ],
-          "range": [
-            {
-              "range_label": "Verankeringslandhoofd",
-              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Verankeringslandhoofd"
-            }
-          ],
-          "scopedrange": [
-            {
-              "range_uri": "#Verankeringslandhoofd",
-              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Verankeringslandhoofd",
-              "range_label": {
-                "nl": "Verankeringslandhoofd"
-              }
-            }
-          ],
-          "cardinality": "",
-          "codelist_uri": ""
-        },
-        {
-          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/verharding-wegfundering/#Bevestiging",
-          "name": "bevestiging",
-          "sort": "Bevestiging",
-          "label": {
-            "nl": "Bevestiging"
-          },
-          "description": {
-            "nl": "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Deze relatie heeft geen richting."
+            "nl": "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Daarnaast omvat deze relatie ook situaties waarin onderdelen niet direct, maar wel structureel of functioneel met elkaar verbonden zijn op een manier die bevestiging impliceert, bv. een trap die eindigt net onder een voetgangersbrug zonder fysieke bevestiging. Deze relatie heeft geen richting."
           },
           "usage": {},
           "domain": [
@@ -3289,7 +3373,7 @@
             "nl": "Bevestiging"
           },
           "description": {
-            "nl": "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Deze relatie heeft geen richting."
+            "nl": "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Daarnaast omvat deze relatie ook situaties waarin onderdelen niet direct, maar wel structureel of functioneel met elkaar verbonden zijn op een manier die bevestiging impliceert, bv. een trap die eindigt net onder een voetgangersbrug zonder fysieke bevestiging. Deze relatie heeft geen richting."
           },
           "usage": {},
           "domain": [
@@ -3310,6 +3394,76 @@
               "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Wegdekvoeg",
               "range_label": {
                 "nl": "Wegdekvoeg"
+              }
+            }
+          ],
+          "cardinality": "",
+          "codelist_uri": ""
+        },
+        {
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/verharding-wegfundering/#Bevestiging",
+          "name": "bevestiging",
+          "sort": "Bevestiging",
+          "label": {
+            "nl": "Bevestiging"
+          },
+          "description": {
+            "nl": "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Daarnaast omvat deze relatie ook situaties waarin onderdelen niet direct, maar wel structureel of functioneel met elkaar verbonden zijn op een manier die bevestiging impliceert, bv. een trap die eindigt net onder een voetgangersbrug zonder fysieke bevestiging. Deze relatie heeft geen richting."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "Cementbetonverharding",
+              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Cementbetonverharding"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "Verankeringslandhoofd",
+              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Verankeringslandhoofd"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Verankeringslandhoofd",
+              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Verankeringslandhoofd",
+              "range_label": {
+                "nl": "Verankeringslandhoofd"
+              }
+            }
+          ],
+          "cardinality": "",
+          "codelist_uri": ""
+        },
+        {
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/verharding-wegfundering/#Bevestiging",
+          "name": "bevestiging",
+          "sort": "Bevestiging",
+          "label": {
+            "nl": "Bevestiging"
+          },
+          "description": {
+            "nl": "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Daarnaast omvat deze relatie ook situaties waarin onderdelen niet direct, maar wel structureel of functioneel met elkaar verbonden zijn op een manier die bevestiging impliceert, bv. een trap die eindigt net onder een voetgangersbrug zonder fysieke bevestiging. Deze relatie heeft geen richting."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "Cementbetonverharding",
+              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Cementbetonverharding"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "Verankeringslandhoofd",
+              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Verankeringslandhoofd"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Verankeringslandhoofd",
+              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Verankeringslandhoofd",
+              "range_label": {
+                "nl": "Verankeringslandhoofd"
               }
             }
           ],
@@ -3484,7 +3638,7 @@
       },
       "sort": "Draineerlaag",
       "description": {
-        "nl": "Materiaal onder constructies om overdrukken of water af te voeren."
+        "nl": "Materiaal rond constructies om overdrukken of water af te voeren."
       },
       "usage": {},
       "parents": [
@@ -3504,6 +3658,41 @@
         }
       ],
       "properties": [
+        {
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Draineerlaag.technischeFiche",
+          "name": "technische fiche",
+          "sort": "technische fiche",
+          "label": {
+            "nl": "technische fiche"
+          },
+          "description": {
+            "nl": "De technische fiche van de draineerlaag"
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "Draineerlaag",
+              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Draineerlaag"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "DtcDocument",
+              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcDocument"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Bestandsbijlage",
+              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcDocument",
+              "range_label": {
+                "nl": "Bestandsbijlage"
+              }
+            }
+          ],
+          "cardinality": "1",
+          "codelist_uri": ""
+        },
         {
           "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Draineerlaag.materiaalDraineerlaag",
           "name": "materiaal draineerlaag",
@@ -3549,7 +3738,7 @@
       },
       "sort": "Dunne overlaging",
       "description": {
-        "nl": "Een dunne overlaging kan bestaan uit een SME overlaging of een antisliplaag."
+        "nl": "Een dunne overlaging kan bestaan uit een SME overlaging, een antisliplaag, waterdichte toplaag, ...."
       },
       "usage": {},
       "parents": [
@@ -3596,6 +3785,41 @@
           ],
           "cardinality": "1",
           "codelist_uri": "https://wegenenverkeer-test.data.vlaanderen.be/id/conceptscheme/KlDunneOverlagingType"
+        },
+        {
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#DunneOverlaging.technischeFiche",
+          "name": "technische fiche",
+          "sort": "technische fiche",
+          "label": {
+            "nl": "technische fiche"
+          },
+          "description": {
+            "nl": "De technische fiche van de dunne overlaging"
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "DunneOverlaging",
+              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#DunneOverlaging"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "DtcDocument",
+              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcDocument"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Bestandsbijlage",
+              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcDocument",
+              "range_label": {
+                "nl": "Bestandsbijlage"
+              }
+            }
+          ],
+          "cardinality": "1",
+          "codelist_uri": ""
         },
         {
           "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#DunneOverlaging.kleur",
@@ -3666,6 +3890,41 @@
           ],
           "cardinality": "1",
           "codelist_uri": ""
+        },
+        {
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#DunneOverlaging.bouwklasse",
+          "name": "bouwklasse",
+          "sort": "bouwklasse",
+          "label": {
+            "nl": "bouwklasse"
+          },
+          "description": {
+            "nl": "Een maat voor de verkeersbelasting over de volledige levensduur van de laag. De laag is ontworpen volgens de aangeduide bouwklasse."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "DunneOverlaging",
+              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#DunneOverlaging"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "KlAlgBouwklassegroep",
+              "range_uri": "http://www.w3.org/2004/02/skos/core#Concept"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Alg bouwklassegroep",
+              "range_puri": "http://www.w3.org/2004/02/skos/core#Concept",
+              "range_label": {
+                "nl": "Alg bouwklassegroep"
+              }
+            }
+          ],
+          "cardinality": "1",
+          "codelist_uri": "https://wegenenverkeer-test.data.vlaanderen.be/id/conceptscheme/KlAlgBouwklassegroep"
         }
       ]
     },
@@ -5110,7 +5369,7 @@
             "nl": "Bevestiging"
           },
           "description": {
-            "nl": "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Deze relatie heeft geen richting."
+            "nl": "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Daarnaast omvat deze relatie ook situaties waarin onderdelen niet direct, maar wel structureel of functioneel met elkaar verbonden zijn op een manier die bevestiging impliceert, bv. een trap die eindigt net onder een voetgangersbrug zonder fysieke bevestiging. Deze relatie heeft geen richting."
           },
           "usage": {},
           "domain": [
@@ -5145,7 +5404,7 @@
             "nl": "Bevestiging"
           },
           "description": {
-            "nl": "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Deze relatie heeft geen richting."
+            "nl": "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Daarnaast omvat deze relatie ook situaties waarin onderdelen niet direct, maar wel structureel of functioneel met elkaar verbonden zijn op een manier die bevestiging impliceert, bv. een trap die eindigt net onder een voetgangersbrug zonder fysieke bevestiging. Deze relatie heeft geen richting."
           },
           "usage": {},
           "domain": [
@@ -5701,7 +5960,7 @@
             "nl": "Bevestiging"
           },
           "description": {
-            "nl": "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Deze relatie heeft geen richting."
+            "nl": "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Daarnaast omvat deze relatie ook situaties waarin onderdelen niet direct, maar wel structureel of functioneel met elkaar verbonden zijn op een manier die bevestiging impliceert, bv. een trap die eindigt net onder een voetgangersbrug zonder fysieke bevestiging. Deze relatie heeft geen richting."
           },
           "usage": {},
           "domain": [
@@ -5736,7 +5995,7 @@
             "nl": "Bevestiging"
           },
           "description": {
-            "nl": "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Deze relatie heeft geen richting."
+            "nl": "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Daarnaast omvat deze relatie ook situaties waarin onderdelen niet direct, maar wel structureel of functioneel met elkaar verbonden zijn op een manier die bevestiging impliceert, bv. een trap die eindigt net onder een voetgangersbrug zonder fysieke bevestiging. Deze relatie heeft geen richting."
           },
           "usage": {},
           "domain": [

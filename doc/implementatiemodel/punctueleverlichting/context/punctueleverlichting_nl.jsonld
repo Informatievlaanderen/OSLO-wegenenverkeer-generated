@@ -66,6 +66,10 @@
       "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#DtuAfmetingVerkeersbord.rond",
       "@type": "@id"
     },
+    "AfmetingVerkeersbord.ruit": {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#DtuAfmetingVerkeersbord.ruit",
+      "@type": "@id"
+    },
     "AfmetingVerkeersbord.vierhoekig": {
       "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#DtuAfmetingVerkeersbord.vierhoekig",
       "@type": "@id"
@@ -146,6 +150,10 @@
     "Armatuurcontroller.modelnaam": {
       "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Armatuurcontroller.modelnaam",
       "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "Armatuurcontroller.netwerkconfiguratieWegverlichting": {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Armatuurcontroller.netwerkconfiguratieWV",
+      "@type": "@id"
     },
     "Armatuurcontroller.serienummer": {
       "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Armatuurcontroller.serienummer",
@@ -240,6 +248,10 @@
       "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Buitenkast.keuringsfrequentie",
       "@type": "@id"
     },
+    "Buitenkast.laatsteKeuringsdatum": {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Buitenkast.laatsteKeuringsdatum",
+      "@type": "http://www.w3.org/2001/XMLSchema#date"
+    },
     "Buitenkast.verfraaid": {
       "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Buitenkast.verfraaid",
       "@type": "@id"
@@ -256,13 +268,13 @@
       "@type": "@id"
     },
     "EmDraagconstructieElektrischeBeveiliging": "http://www.w3.org/2004/02/skos/core#Concept",
-    "FabricageTypeRetroreflecterendVerkeersbord": "http://www.w3.org/2004/02/skos/core#Concept",
     "FirmwareObject": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#FirmwareObject",
     "FirmwareObject.firmwareversie": {
       "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#FirmwareObject.firmwareversie",
       "@type": "http://www.w3.org/2001/XMLSchema#string"
     },
     "Gemeente": "http://www.w3.org/2004/02/skos/core#Concept",
+    "HoortBij": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#HoortBij",
     "IPv4Adres": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DteIPv4Adres",
     "IPv4Adres.waarde": {
       "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DteIPv4Adres.waarde",
@@ -278,6 +290,7 @@
       "@type": "http://www.w3.org/2001/XMLSchema#string"
     },
     "IngressProtectionCodering": "http://www.w3.org/2004/02/skos/core#Concept",
+    "IsOntwerpVan": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#IsOntwerpVan",
     "Kast": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Kast",
     "Kast.afmeting": {
       "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Kast.afmeting",
@@ -485,7 +498,13 @@
       "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/punctuele-verlichting/#Voedt aangestuurd",
       "@type": "@id"
     },
+    "NaampadObject": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#NaampadObject",
+    "NaampadObject.naampad": {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#NaampadObject.naampad",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
     "NatuurlijkGetal": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "NetwerkconfiguratieWegverlichting": "http://www.w3.org/2004/02/skos/core#Concept",
     "Provincie": "http://www.w3.org/2004/02/skos/core#Concept",
     "PunctueleVerlichtingsmast": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#PunctueleVerlichtingsmast",
     "PunctueleVerlichtingsmast.aantalArmen": {
@@ -502,6 +521,11 @@
     },
     "PunctueleVerlichtingsmast.dwarsdoorsnede": {
       "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#PunctueleVerlichtingsmast.dwarsdoorsnede",
+      "@type": "@id"
+    },
+    "PunctueleVerlichtingsmast.hoortBij": {
+      "@container": "@set",
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/punctuele-verlichting/#Hoort bij",
       "@type": "@id"
     },
     "PunctueleVerlichtingsmast.isDraaibaar": {
@@ -534,24 +558,8 @@
       "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#RetroreflecterendVerkeersbord.afwerkingsgraad",
       "@type": "@id"
     },
-    "RetroreflecterendVerkeersbord.fabricageDatum": {
-      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#RetroreflecterendVerkeersbord.fabricageDatum",
-      "@type": "http://www.w3.org/2001/XMLSchema#date"
-    },
-    "RetroreflecterendVerkeersbord.fabricageType": {
-      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#RetroreflecterendVerkeersbord.fabricageType",
-      "@type": "@id"
-    },
     "RetroreflecterendVerkeersbord.grootteorde": {
       "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#RetroreflecterendVerkeersbord.grootteorde",
-      "@type": "@id"
-    },
-    "RetroreflecterendVerkeersbord.horizontaleVerschuiving": {
-      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#RetroreflecterendVerkeersbord.horizontaleVerschuiving",
-      "@type": "@id"
-    },
-    "RetroreflecterendVerkeersbord.kaartvoorstelling": {
-      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#RetroreflecterendVerkeersbord.kaartvoorstelling",
       "@type": "@id"
     },
     "RetroreflecterendVerkeersbord.kleurAchterkant": {
@@ -628,6 +636,7 @@
       "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Verkeersbord.opstelhoogte",
       "@type": "@id"
     },
+    "VerlichteOversteekplaatsGroep": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#VerlichteOversteekplaatsGroep",
     "Verlichtingstoestel": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Verlichtingstoestel",
     "Verlichtingstoestel.bevestiging": {
       "@container": "@set",

@@ -2,7 +2,7 @@
   "metadata": {
     "title": "Vegetatie",
     "uri": "http://fixme.com",
-    "issued": "18-12-2024",
+    "issued": "3-10-2025",
     "filename": "vegetatie",
     "navigation": {
       "prev": "",
@@ -13,9 +13,9 @@
     "documentconfig": {},
     "status": "https://data.vlaanderen.be/doc/concept/StandaardStatus/KandidaatStandaard",
     "statuslabel": "Onbekend",
-    "repositoryurl": "https://github.com/Informatievlaanderen/OSLOthema-wegenenverkeer/tree/cd54f35ed58706ea9fde55910810e93065d5851c",
-    "changelogurl": "https://github.com/Informatievlaanderen/OSLOthema-wegenenverkeer/blob/cd54f35ed58706ea9fde55910810e93065d5851c/CHANGELOG",
-    "feedbackurl": "https://docs.google.com/forms/d/e/1FAIpQLSeaxOnrCkcarNHWI21YfPJ7sZChHVzOB2-P9ptzxkD9YX69-g/viewform",
+    "repositoryurl": "https://github.com/Informatievlaanderen/OSLOthema-wegenenverkeer/tree/708f3ddd3a77b8c1bfa5c68743b8a7cf06d8c5df",
+    "changelogurl": "https://github.com/Informatievlaanderen/OSLOthema-wegenenverkeer/blob/708f3ddd3a77b8c1bfa5c68743b8a7cf06d8c5df/CHANGELOG",
+    "feedbackurl": "mailto:TeamBim@verzendlijst.wegenenverkeer.be",
     "standaardregisterurl": "https://data.vlaanderen.be/standaarden/",
     "dependencies": [],
     "usesVocs": [],
@@ -777,7 +777,7 @@
             "nl": "Bevestiging"
           },
           "description": {
-            "nl": "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Deze relatie heeft geen richting."
+            "nl": "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Daarnaast omvat deze relatie ook situaties waarin onderdelen niet direct, maar wel structureel of functioneel met elkaar verbonden zijn op een manier die bevestiging impliceert, bv. een trap die eindigt net onder een voetgangersbrug zonder fysieke bevestiging. Deze relatie heeft geen richting."
           },
           "usage": {},
           "domain": [
@@ -812,7 +812,7 @@
             "nl": "Bevestiging"
           },
           "description": {
-            "nl": "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Deze relatie heeft geen richting."
+            "nl": "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Daarnaast omvat deze relatie ook situaties waarin onderdelen niet direct, maar wel structureel of functioneel met elkaar verbonden zijn op een manier die bevestiging impliceert, bv. een trap die eindigt net onder een voetgangersbrug zonder fysieke bevestiging. Deze relatie heeft geen richting."
           },
           "usage": {},
           "domain": [
@@ -1085,7 +1085,9 @@
           "description": {
             "nl": "De mensleesbare naam van een asset zoals dit bv. ook terug te vinden is op een etiket op het object zelf. De assetbeheerder kent deze naam toe of geeft de opdracht om deze toe te kennen. Indien een object een algemeen gangbare naam heeft zoals bv. bij een waterloop dan wordt deze gebruikt."
           },
-          "usage": {},
+          "usage": {
+            "nl": "Dient leeg of consistent te zijn met het naampad indien het naampad attribuut aanwezig en gekend is."
+          },
           "domain": [
             {
               "EA-Name": "AIMNaamObject",
@@ -2320,7 +2322,7 @@
       },
       "sort": "Bevestiging",
       "description": {
-        "nl": "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Deze relatie heeft geen richting."
+        "nl": "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Daarnaast omvat deze relatie ook situaties waarin onderdelen niet direct, maar wel structureel of functioneel met elkaar verbonden zijn op een manier die bevestiging impliceert, bv. een trap die eindigt net onder een voetgangersbrug zonder fysieke bevestiging. Deze relatie heeft geen richting."
       },
       "usage": {},
       "parents": [
@@ -2497,7 +2499,9 @@
           "description": {
             "nl": "Vrij te houden hoogte in meter, voor het doorrijden van verkeer toe te laten."
           },
-          "usage": {},
+          "usage": {
+            "nl": "Attribuut uit gebruik sinds versie 2.16.0-RC1"
+          },
           "domain": [
             {
               "EA-Name": "Boom",
@@ -2567,7 +2571,9 @@
           "description": {
             "nl": "Tot aan de hoogte van de gewenste takvrije stamlengte wordt de boom zodanig gesnoeid dat er één doorgaande stam is."
           },
-          "usage": {},
+          "usage": {
+            "nl": "Attribuut uit gebruik sinds versie 2.16.0-RC1"
+          },
           "domain": [
             {
               "EA-Name": "Boom",
@@ -2591,6 +2597,41 @@
           ],
           "cardinality": "1",
           "codelist_uri": ""
+        },
+        {
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Boom.takvrijeHoogte",
+          "name": "takvrije hoogte",
+          "sort": "takvrije hoogte",
+          "label": {
+            "nl": "takvrije hoogte"
+          },
+          "description": {
+            "nl": "Tot aan de hoogte van de gewenste takvrije stamlengte wordt de boom zodanig gesnoeid dat er één doorgaande stam is."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "Boom",
+              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Boom"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "KlTakvrijeHoogte",
+              "range_uri": "http://www.w3.org/2004/02/skos/core#Concept"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Takvrije hoogte",
+              "range_puri": "http://www.w3.org/2004/02/skos/core#Concept",
+              "range_label": {
+                "nl": "Takvrije hoogte"
+              }
+            }
+          ],
+          "cardinality": "1",
+          "codelist_uri": "https://wegenenverkeer-test.data.vlaanderen.be/id/conceptscheme/KlTakvrijeHoogte"
         },
         {
           "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Boom.kroonDiameter",
@@ -2875,6 +2916,41 @@
           ],
           "cardinality": "1",
           "codelist_uri": ""
+        },
+        {
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Boom.doorrijhoogte",
+          "name": "doorrijhoogte",
+          "sort": "doorrijhoogte",
+          "label": {
+            "nl": "doorrijhoogte"
+          },
+          "description": {
+            "nl": "Vrij te houden hoogte in meter, voor het doorrijden van verkeer toe te laten."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "Boom",
+              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Boom"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "KlDoorrijhoogte",
+              "range_uri": "http://www.w3.org/2004/02/skos/core#Concept"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Doorrijhoogte",
+              "range_puri": "http://www.w3.org/2004/02/skos/core#Concept",
+              "range_label": {
+                "nl": "Doorrijhoogte"
+              }
+            }
+          ],
+          "cardinality": "1",
+          "codelist_uri": "https://wegenenverkeer-test.data.vlaanderen.be/id/conceptscheme/KlDoorrijhoogte"
         },
         {
           "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Boom.boomverankeringszone",
@@ -8650,7 +8726,7 @@
               }
             }
           ],
-          "cardinality": "1",
+          "cardinality": "1..*",
           "codelist_uri": "https://wegenenverkeer-test.data.vlaanderen.be/id/conceptscheme/KlGroeiplaatsverbetering"
         },
         {

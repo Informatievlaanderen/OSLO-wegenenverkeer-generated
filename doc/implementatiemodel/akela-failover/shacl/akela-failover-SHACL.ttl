@@ -45,6 +45,7 @@
     <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/akela-failover/ontwerpdocument/DEV#ElectricityAppurtenanceShape>,
     <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/akela-failover/ontwerpdocument/DEV#ElectricityCableShape>,
     <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/akela-failover/ontwerpdocument/DEV#KwantWrdInEuroShape>,
+    <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/akela-failover/ontwerpdocument/DEV#KwantWrdInKilogramPerMeterShape>,
     <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/akela-failover/ontwerpdocument/DEV#KwantWrdInMaandShape>,
     <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/akela-failover/ontwerpdocument/DEV#KwantWrdInMeterShape>,
     <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/akela-failover/ontwerpdocument/DEV#KwantWrdInMillimeterShape>,
@@ -1358,6 +1359,10 @@
     <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/akela-failover/ontwerpdocument/DEV#KabelShape/7873e2fa1ec35037464bf764232db080762544c0>,
     <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/akela-failover/ontwerpdocument/DEV#KabelShape/d8f805e6c5c397d77cbc6b12d228677a97f0d4b8>,
     <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/akela-failover/ontwerpdocument/DEV#KabelShape/daea0c1e57b337e62d527de8f848e02214fbe025>,
+    <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/akela-failover/ontwerpdocument/DEV#KabelShape/3ecd73527771e081514b3e806b0a7fd76a576d4e>,
+    <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/akela-failover/ontwerpdocument/DEV#KabelShape/699c9186095ff849421fdd82c15f8eb00bceaf4a>,
+    <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/akela-failover/ontwerpdocument/DEV#KabelShape/c4cc2c4f4476cc2deafac63e63d001d51f0731d7>,
+    <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/akela-failover/ontwerpdocument/DEV#KabelShape/df8af188a6828ec8c8868d3e397809ba1071d0ff>,
     <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/akela-failover/ontwerpdocument/DEV#KabelShape/404f42b2d3c53aad908be61850d6e6affe840aa3>,
     <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/akela-failover/ontwerpdocument/DEV#KabelShape/50b26fb13ec61482ddbb153538d90dba21d9fbc0>,
     <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/akela-failover/ontwerpdocument/DEV#KabelShape/7e7f985e40429737fe851ae66711f38cc5a1889c>,
@@ -1371,6 +1376,14 @@
   <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/akela-failover/ontwerpdocument/DEVnl> "De verwachte waarde voor Heeft aanvullende geometrie is een rdfs:Resource (URI of blank node)"], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/akela-failover/ontwerpdocument/DEVnl> "De verwachte waarde voor Heeft aanvullende geometrie is een rdfs:Resource (URI of blank node)"];
   <https://data.vlaanderen.be/ns/shacl#rule> "" .
 
+<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/akela-failover/ontwerpdocument/DEV#KabelShape/3ecd73527771e081514b3e806b0a7fd76a576d4e> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/akela-failover/ontwerpdocument/DEV#Kabel%3Agewicht";
+  shacl:description "Het gewicht van de kabel per meter."@nl;
+  shacl:minCount 1;
+  shacl:name "gewicht"@nl;
+  shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Kabel.gewicht>;
+  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/akela-failover/ontwerpdocument/DEVnl> "Minimaal 1 waarden verwacht voor gewicht"];
+  <https://data.vlaanderen.be/ns/shacl#rule> "" .
+
 <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/akela-failover/ontwerpdocument/DEV#KabelShape/3f0f7a31447e51aaaabf9cc40c3f2e9cfd4e31ab> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/akela-failover/ontwerpdocument/DEV#Kabel%3Afabrikant";
   shacl:description "De naam van de producent van de kabel."@nl;
   shacl:maxCount 1;
@@ -1380,7 +1393,7 @@
   <https://data.vlaanderen.be/ns/shacl#rule> "" .
 
 <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/akela-failover/ontwerpdocument/DEV#KabelShape/404f42b2d3c53aad908be61850d6e6affe840aa3> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/akela-failover/ontwerpdocument/DEV#Kabel%3Atype%20bescherming";
-  shacl:description "Geeft aan of en hoe de leiding bijkomend mechanisch beschermd nadat ze in de sleuf gelegd is."@nl;
+  shacl:description "Geeft aan of en hoe de leiding bijkomend mechanisch beschermd is."@nl;
   shacl:minCount 1;
   shacl:name "type bescherming"@nl;
   shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Kabel.typeBescherming>;
@@ -1388,7 +1401,7 @@
   <https://data.vlaanderen.be/ns/shacl#rule> "" .
 
 <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/akela-failover/ontwerpdocument/DEV#KabelShape/50b26fb13ec61482ddbb153538d90dba21d9fbc0> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/akela-failover/ontwerpdocument/DEV#Kabel%3Atype%20bescherming";
-  shacl:description "Geeft aan of en hoe de leiding bijkomend mechanisch beschermd nadat ze in de sleuf gelegd is."@nl;
+  shacl:description "Geeft aan of en hoe de leiding bijkomend mechanisch beschermd is."@nl;
   shacl:maxCount 1;
   shacl:name "type bescherming"@nl;
   shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Kabel.typeBescherming>;
@@ -1411,12 +1424,20 @@
   <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/akela-failover/ontwerpdocument/DEVnl> "De verwachte waarde voor buitenmantel diameter is een rdfs:Resource (URI of blank node)"];
   <https://data.vlaanderen.be/ns/shacl#rule> "" .
 
+<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/akela-failover/ontwerpdocument/DEV#KabelShape/699c9186095ff849421fdd82c15f8eb00bceaf4a> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/akela-failover/ontwerpdocument/DEV#Kabel%3Agewicht";
+  shacl:description "Het gewicht van de kabel per meter."@nl;
+  shacl:maxCount 1;
+  shacl:name "gewicht"@nl;
+  shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Kabel.gewicht>;
+  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/akela-failover/ontwerpdocument/DEVnl> "Maximaal 1 waarden toegelaten voor gewicht"];
+  <https://data.vlaanderen.be/ns/shacl#rule> "" .
+
 <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/akela-failover/ontwerpdocument/DEV#KabelShape/741b710e4a50b4597597eaa435a44d3509f29018> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/akela-failover/ontwerpdocument/DEV#Kabel%3AHeeft%20aanvullende%20geometrie";
-  shacl:class <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Onderdoorboring>,
-    <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Onderwaterkruising>;
+  shacl:class <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Onderwaterkruising>,
+    <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Onderdoorboring>;
   shacl:description "Deze relatie legt een link tussen een object/onderdeel/installatie en een (bestands)bijlage waar een geometrie aan toegekend is. De richting loopt vanuit het fysiek object naar de bijlage met geometrie."@nl;
   shacl:name "Heeft aanvullende geometrie"@nl;
-  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/akela-failover/ontwerpdocument/DEVnl> "De range van Heeft aanvullende geometrie moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Onderdoorboring> zijn."], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/akela-failover/ontwerpdocument/DEVnl> "De range van Heeft aanvullende geometrie moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Onderwaterkruising> zijn."];
+  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/akela-failover/ontwerpdocument/DEVnl> "De range van Heeft aanvullende geometrie moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Onderwaterkruising> zijn."], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/akela-failover/ontwerpdocument/DEVnl> "De range van Heeft aanvullende geometrie moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Onderdoorboring> zijn."];
   <https://data.vlaanderen.be/ns/shacl#rule> "" .
 
 <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/akela-failover/ontwerpdocument/DEV#KabelShape/7688f361be2b5d790053d56eb66f8dc8e4214d14> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/akela-failover/ontwerpdocument/DEV#Kabel%3Abuitenmantel%20diameter";
@@ -1437,7 +1458,7 @@
 
 <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/akela-failover/ontwerpdocument/DEV#KabelShape/7e7f985e40429737fe851ae66711f38cc5a1889c> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/akela-failover/ontwerpdocument/DEV#Kabel%3Atype%20bescherming";
   shacl:class skos:Concept;
-  shacl:description "Geeft aan of en hoe de leiding bijkomend mechanisch beschermd nadat ze in de sleuf gelegd is."@nl;
+  shacl:description "Geeft aan of en hoe de leiding bijkomend mechanisch beschermd is."@nl;
   shacl:name "type bescherming"@nl;
   shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Kabel.typeBescherming>;
   <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/akela-failover/ontwerpdocument/DEVnl> "De range van type bescherming moet van het type <http://www.w3.org/2004/02/skos/core#Concept> zijn."];
@@ -1467,6 +1488,14 @@
   <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/akela-failover/ontwerpdocument/DEVnl> "De range van buitenmantel diameter moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInMillimeter> zijn."];
   <https://data.vlaanderen.be/ns/shacl#rule> "" .
 
+<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/akela-failover/ontwerpdocument/DEV#KabelShape/c4cc2c4f4476cc2deafac63e63d001d51f0731d7> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/akela-failover/ontwerpdocument/DEV#Kabel%3Agewicht";
+  shacl:description "Het gewicht van de kabel per meter."@nl;
+  shacl:name "gewicht"@nl;
+  shacl:nodekind "sh:BlankNodeOrIRI";
+  shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Kabel.gewicht>;
+  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/akela-failover/ontwerpdocument/DEVnl> "De verwachte waarde voor gewicht is een rdfs:Resource (URI of blank node)"];
+  <https://data.vlaanderen.be/ns/shacl#rule> "" .
+
 <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/akela-failover/ontwerpdocument/DEV#KabelShape/c76b252ab2659ecdb4817f6de999c14fd785dce1> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/akela-failover/ontwerpdocument/DEV#Kabel%3Abuitenmantel%20kleur";
   shacl:class skos:Concept;
   shacl:description "De hoofdkleur(en) die voor een waarnemer onmiddellijk zichtbaar is (zijn) zonder de kabel te ontmantelen, de kleur van de markeringen op die buitenste mantel buiten beschouwing gelaten."@nl;
@@ -1484,7 +1513,7 @@
   <https://data.vlaanderen.be/ns/shacl#rule> "" .
 
 <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/akela-failover/ontwerpdocument/DEV#KabelShape/d444d359b23c9bae3fce679558e69b93a7977b7d> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/akela-failover/ontwerpdocument/DEV#Kabel%3Atype%20bescherming";
-  shacl:description "Geeft aan of en hoe de leiding bijkomend mechanisch beschermd nadat ze in de sleuf gelegd is."@nl;
+  shacl:description "Geeft aan of en hoe de leiding bijkomend mechanisch beschermd is."@nl;
   shacl:name "type bescherming"@nl;
   shacl:nodekind "sh:BlankNodeOrIRI";
   shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Kabel.typeBescherming>;
@@ -1505,6 +1534,14 @@
   shacl:name "fabrikant"@nl;
   shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Kabel.fabrikant>;
   <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/akela-failover/ontwerpdocument/DEVnl> "Minimaal 1 waarden verwacht voor fabrikant"];
+  <https://data.vlaanderen.be/ns/shacl#rule> "" .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/akela-failover/ontwerpdocument/DEV#KabelShape/df8af188a6828ec8c8868d3e397809ba1071d0ff> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/akela-failover/ontwerpdocument/DEV#Kabel%3Agewicht";
+  shacl:class <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInKilogramPerMeter>;
+  shacl:description "Het gewicht van de kabel per meter."@nl;
+  shacl:name "gewicht"@nl;
+  shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Kabel.gewicht>;
+  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/akela-failover/ontwerpdocument/DEVnl> "De range van gewicht moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInKilogramPerMeter> zijn."];
   <https://data.vlaanderen.be/ns/shacl#rule> "" .
 
 <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/akela-failover/ontwerpdocument/DEV#KabelgeleidingEnLeidingBevestigingShape> a shacl:NodeShape;
@@ -1640,6 +1677,82 @@
   shacl:description "De standaard eenheid bij dit datatype is uitgedrukt in Euro."@nl;
   shacl:name "standaard eenheid"@nl;
   shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInEuro.standaardEenheid>;
+  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/akela-failover/ontwerpdocument/DEVnl> "De range van standaard eenheid moet van het type <http://www.w3.org/2000/01/rdf-schema#Literal> zijn."];
+  <https://data.vlaanderen.be/ns/shacl#rule> "" .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/akela-failover/ontwerpdocument/DEV#KwantWrdInKilogramPerMeterShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/akela-failover/ontwerpdocument/DEV#KwantWrdInKilogramPerMeterShape/40e231f5d868ed5c50ced19a74262d103b28e261>,
+    <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/akela-failover/ontwerpdocument/DEV#KwantWrdInKilogramPerMeterShape/449e0c069cb2ccd0286a751eae9607fdfdaba8bb>,
+    <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/akela-failover/ontwerpdocument/DEV#KwantWrdInKilogramPerMeterShape/db2555457b897a2e792d884a673aab52e0a72c28>,
+    <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/akela-failover/ontwerpdocument/DEV#KwantWrdInKilogramPerMeterShape/dcf18241c7695eee6abe5c99b390387f700ef44c>,
+    <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/akela-failover/ontwerpdocument/DEV#KwantWrdInKilogramPerMeterShape/09b9910c25556782aaecc7a4c636d19c1ffcf8a6>,
+    <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/akela-failover/ontwerpdocument/DEV#KwantWrdInKilogramPerMeterShape/162c171cbd4bc7d0de1ce10a2b30b128b5333889>,
+    <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/akela-failover/ontwerpdocument/DEV#KwantWrdInKilogramPerMeterShape/762f5094731b213d88d8a29332598749ea0eaa46>,
+    <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/akela-failover/ontwerpdocument/DEV#KwantWrdInKilogramPerMeterShape/ca4892872b345b4fe994128b7c31877979275399>;
+  shacl:targetClass <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInKilogramPerMeter> .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/akela-failover/ontwerpdocument/DEV#KwantWrdInKilogramPerMeterShape/09b9910c25556782aaecc7a4c636d19c1ffcf8a6> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/akela-failover/ontwerpdocument/DEV#KwantWrdInKilogramPerMeter%3Awaarde";
+  shacl:class xsd:decimal;
+  shacl:description "Bevat een getal die bij het datatype hoort."@nl;
+  shacl:name "waarde"@nl;
+  shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInKilogramPerMeter.waarde>;
+  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/akela-failover/ontwerpdocument/DEVnl> "De range van waarde moet van het type <http://www.w3.org/2001/XMLSchema#decimal> zijn."];
+  <https://data.vlaanderen.be/ns/shacl#rule> "" .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/akela-failover/ontwerpdocument/DEV#KwantWrdInKilogramPerMeterShape/162c171cbd4bc7d0de1ce10a2b30b128b5333889> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/akela-failover/ontwerpdocument/DEV#KwantWrdInKilogramPerMeter%3Awaarde";
+  shacl:description "Bevat een getal die bij het datatype hoort."@nl;
+  shacl:name "waarde"@nl;
+  shacl:nodekind "sh:BlankNodeOrIRI";
+  shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInKilogramPerMeter.waarde>;
+  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/akela-failover/ontwerpdocument/DEVnl> "De verwachte waarde voor waarde is een rdfs:Resource (URI of blank node)"];
+  <https://data.vlaanderen.be/ns/shacl#rule> "" .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/akela-failover/ontwerpdocument/DEV#KwantWrdInKilogramPerMeterShape/40e231f5d868ed5c50ced19a74262d103b28e261> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/akela-failover/ontwerpdocument/DEV#KwantWrdInKilogramPerMeter%3Astandaard%20eenheid";
+  shacl:description "De standaard eenheid bij dit datatype is uitgedrukt in kilogram per lopende meter."@nl;
+  shacl:minCount 1;
+  shacl:name "standaard eenheid"@nl;
+  shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInKilogramPerMeter.standaardEenheid>;
+  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/akela-failover/ontwerpdocument/DEVnl> "Minimaal 1 waarden verwacht voor standaard eenheid"];
+  <https://data.vlaanderen.be/ns/shacl#rule> "" .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/akela-failover/ontwerpdocument/DEV#KwantWrdInKilogramPerMeterShape/449e0c069cb2ccd0286a751eae9607fdfdaba8bb> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/akela-failover/ontwerpdocument/DEV#KwantWrdInKilogramPerMeter%3Astandaard%20eenheid";
+  shacl:description "De standaard eenheid bij dit datatype is uitgedrukt in kilogram per lopende meter."@nl;
+  shacl:name "standaard eenheid"@nl;
+  shacl:nodekind "sh:Literal";
+  shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInKilogramPerMeter.standaardEenheid>;
+  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/akela-failover/ontwerpdocument/DEVnl> "De verwachte waarde voor standaard eenheid is een Literal"];
+  <https://data.vlaanderen.be/ns/shacl#rule> "" .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/akela-failover/ontwerpdocument/DEV#KwantWrdInKilogramPerMeterShape/762f5094731b213d88d8a29332598749ea0eaa46> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/akela-failover/ontwerpdocument/DEV#KwantWrdInKilogramPerMeter%3Awaarde";
+  shacl:description "Bevat een getal die bij het datatype hoort."@nl;
+  shacl:maxCount 1;
+  shacl:name "waarde"@nl;
+  shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInKilogramPerMeter.waarde>;
+  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/akela-failover/ontwerpdocument/DEVnl> "Maximaal 1 waarden toegelaten voor waarde"];
+  <https://data.vlaanderen.be/ns/shacl#rule> "" .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/akela-failover/ontwerpdocument/DEV#KwantWrdInKilogramPerMeterShape/ca4892872b345b4fe994128b7c31877979275399> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/akela-failover/ontwerpdocument/DEV#KwantWrdInKilogramPerMeter%3Awaarde";
+  shacl:description "Bevat een getal die bij het datatype hoort."@nl;
+  shacl:minCount 1;
+  shacl:name "waarde"@nl;
+  shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInKilogramPerMeter.waarde>;
+  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/akela-failover/ontwerpdocument/DEVnl> "Minimaal 1 waarden verwacht voor waarde"];
+  <https://data.vlaanderen.be/ns/shacl#rule> "" .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/akela-failover/ontwerpdocument/DEV#KwantWrdInKilogramPerMeterShape/db2555457b897a2e792d884a673aab52e0a72c28> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/akela-failover/ontwerpdocument/DEV#KwantWrdInKilogramPerMeter%3Astandaard%20eenheid";
+  shacl:description "De standaard eenheid bij dit datatype is uitgedrukt in kilogram per lopende meter."@nl;
+  shacl:maxCount 1;
+  shacl:name "standaard eenheid"@nl;
+  shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInKilogramPerMeter.standaardEenheid>;
+  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/akela-failover/ontwerpdocument/DEVnl> "Maximaal 1 waarden toegelaten voor standaard eenheid"];
+  <https://data.vlaanderen.be/ns/shacl#rule> "" .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/akela-failover/ontwerpdocument/DEV#KwantWrdInKilogramPerMeterShape/dcf18241c7695eee6abe5c99b390387f700ef44c> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/akela-failover/ontwerpdocument/DEV#KwantWrdInKilogramPerMeter%3Astandaard%20eenheid";
+  shacl:datatype rdfs:Literal;
+  shacl:description "De standaard eenheid bij dit datatype is uitgedrukt in kilogram per lopende meter."@nl;
+  shacl:name "standaard eenheid"@nl;
+  shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInKilogramPerMeter.standaardEenheid>;
   <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/akela-failover/ontwerpdocument/DEVnl> "De range van standaard eenheid moet van het type <http://www.w3.org/2000/01/rdf-schema#Literal> zijn."];
   <https://data.vlaanderen.be/ns/shacl#rule> "" .
 

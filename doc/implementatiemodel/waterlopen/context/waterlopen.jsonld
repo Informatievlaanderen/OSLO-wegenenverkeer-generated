@@ -1,5 +1,8 @@
 {
   "@context": {
+    "AanhorighedenBrug": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#AanhorighedenBrug",
+    "AanhorighedenKoker": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#AanhorigheidKoker",
+    "AanhorigheidSluisEnStuw": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#AanhorigheidSluisStuw",
     "AanvullendeMiddellijn": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#AanvullendeMiddellijn",
     "AbstracteAanvullendeGeometrie": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#AbstracteAanvullendeGeometrie",
     "AbstracteAanvullendeGeometrie.assetId": {
@@ -60,6 +63,7 @@
       "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcAfmetingBxlxhInMm.lengte",
       "@type": "@id"
     },
+    "AfwerkingstypeLeuning": "http://www.w3.org/2004/02/skos/core#Concept",
     "AimDatabankStatus": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMDBStatus",
     "AimDatabankStatus.isActief": {
       "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMDBStatus.isActief",
@@ -146,6 +150,7 @@
       "@type": "@id"
     },
     "Bevestiging": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Bevestiging",
+    "BevestigingAfwateringKunstwerken": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#BVAfwateringKunstwerken",
     "Boolean": "http://www.w3.org/2001/XMLSchema#boolean",
     "Buis": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Buis",
     "Buis.bokAfwaarts": {
@@ -231,9 +236,28 @@
     "Datum": "http://www.w3.org/2001/XMLSchema#date",
     "Datumtijd": "http://www.w3.org/2001/XMLSchema#dateTime",
     "DecimaalGetal": "http://www.w3.org/2001/XMLSchema#decimal",
+    "DetailplanObject": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#DetaiplanObject",
+    "DetailplanObject.detailplan": {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#DetaiplanObject.detailplan",
+      "@type": "@id"
+    },
     "FunctieVanRioleringsstelsel": "http://www.w3.org/2004/02/skos/core#Concept",
     "GeheelGetal": "http://www.w3.org/2001/XMLSchema#integer",
     "Gemeente": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Golfplaat": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Golfplaat",
+    "Golfplaat.hoortBij": {
+      "@container": "@set",
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/waterlopen/#Hoort bij",
+      "@type": "@id"
+    },
+    "Golfplaat.materiaal": {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Golfplaat.materiaal",
+      "@type": "@id"
+    },
+    "Golfplaat.vorm": {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Golfplaat.vorm",
+      "@type": "@id"
+    },
     "Gracht": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Gracht",
     "Gracht.doorsnede": {
       "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Gracht.doorsnede",
@@ -252,6 +276,10 @@
       "@container": "@set",
       "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/waterlopen/#Hoort bij",
       "@type": "@id"
+    },
+    "Gracht.isBekleed": {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Gracht.isBekleed",
+      "@type": "http://www.w3.org/2001/XMLSchema#boolean"
     },
     "Gracht.sluitAanOp": {
       "@container": "@set",
@@ -273,6 +301,11 @@
       "@type": "http://www.w3.org/2001/XMLSchema#string"
     },
     "Kopmuur": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Kopmuur",
+    "Kopmuur.bevestiging": {
+      "@container": "@set",
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/waterlopen/#Bevestiging",
+      "@type": "@id"
+    },
     "Kopmuur.hellingshoek": {
       "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Kopmuur.hellingshoek",
       "@type": "@id"
@@ -332,6 +365,36 @@
       "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInPromille.waarde",
       "@type": "@id"
     },
+    "Leuning": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Leuning",
+    "Leuning.afwerkingstype": {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Leuning.afwerkingstype",
+      "@type": "@id"
+    },
+    "Leuning.hoogte": {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Leuning.hoogte",
+      "@type": "@id"
+    },
+    "Leuning.lengte": {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Leuning.lengte",
+      "@type": "@id"
+    },
+    "Leuning.materiaal": {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Leuning.materiaal",
+      "@type": "@id"
+    },
+    "Leuning.professioneelGebruik": {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Leuning.professioneelGebruik",
+      "@type": "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "Leuning.technischeFiche": {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Leuning.technischeFiche",
+      "@type": "@id"
+    },
+    "Leuning.vorm": {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Leuning.vorm",
+      "@type": "@id"
+    },
+    "LigtOp": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#LigtOp",
     "LinkendElement": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#LinkendElement",
     "LinkendElement.sluitAanOp": {
       "@container": "@set",
@@ -344,6 +407,8 @@
       "@type": "@id"
     },
     "Literal": "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "MateriaalGolfplaat": "http://www.w3.org/2004/02/skos/core#Concept",
+    "MateriaalSoorten": "http://www.w3.org/2004/02/skos/core#Concept",
     "Mimetype": "http://www.w3.org/2004/02/skos/core#Concept",
     "NatuurlijkGetal": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
     "Omhult": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Omhult",
@@ -400,6 +465,11 @@
       "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Rioleringsbuis.aantalAfgedichteAansluitingen",
       "@type": "http://www.w3.org/2001/XMLSchema#integer"
     },
+    "Rioleringsbuis.bevestiging": {
+      "@container": "@set",
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/waterlopen/#Bevestiging",
+      "@type": "@id"
+    },
     "Rioleringsbuis.functie": {
       "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Rioleringsbuis.functie",
       "@type": "@id"
@@ -407,6 +477,11 @@
     "Rioleringsbuis.hoortBij": {
       "@container": "@set",
       "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/waterlopen/#Hoort bij",
+      "@type": "@id"
+    },
+    "Rioleringsbuis.ligtOp": {
+      "@container": "@set",
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/waterlopen/#Ligt op",
       "@type": "@id"
     },
     "Rioleringsbuis.materiaal": {
@@ -474,6 +549,10 @@
     "Straatkolk.baktype": {
       "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Straatkolk.bakType",
       "@type": "@id"
+    },
+    "Straatkolk.fungeertAlsSpuier": {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Straatkolk.fungeertAlsSpuier",
+      "@type": "http://www.w3.org/2001/XMLSchema#boolean"
     },
     "Straatkolk.heeftAfdekplaatReukafsluiter": {
       "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Straatkolk.heeftAfdekplaatReukafsluiter",
@@ -583,6 +662,8 @@
     "TerugslagklepType": "http://www.w3.org/2004/02/skos/core#Concept",
     "UitlaatType": "http://www.w3.org/2004/02/skos/core#Concept",
     "Uri": "http://www.w3.org/2001/XMLSchema#anyURI",
+    "VormGolfplaat": "http://www.w3.org/2004/02/skos/core#Concept",
+    "VormLeuning": "http://www.w3.org/2004/02/skos/core#Concept",
     "VormTerugslagklep": "http://www.w3.org/2004/02/skos/core#Concept",
     "WaterdoorvoerendeDuiker": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#WaterdoorvoerendeDuiker",
     "Waterloop": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Waterloop",

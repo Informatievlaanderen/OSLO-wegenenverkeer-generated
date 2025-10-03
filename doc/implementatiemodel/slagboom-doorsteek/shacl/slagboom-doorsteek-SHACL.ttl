@@ -36,11 +36,11 @@
     <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#KlContactorTypeShape>,
     <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#KlContactorMerkShape>,
     <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#KlContactorModelnaamShape>,
-    <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#KlFabricageTypeRetroreflecterendVerkeersbordShape>,
     <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#KlRetroreflecterendVerkeersbordMerkShape>,
     <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#KlRetroreflecterendVerkeersbordAfwerkingsgraadShape>,
     <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#KlRetroreflecterendVerkeersbordGrootteordeShape>,
     <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#KlOperationeleStatusShape>,
+    <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#KlMateriaalBevestigingsbeugelShape>,
     <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#KlBevestigingsbeugelTypeShape>,
     <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#KlVriLusSoortvoertuigShape>,
     <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#KlVriLusFunctieShape>,
@@ -136,8 +136,10 @@
     <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#KwantWrdInVoltShape>,
     <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#KwantWrdInWattShape>,
     <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#NaampadObjectShape>,
+    <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#CalamiteitendoorsteekGroepShape>,
     <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#KokerafsluitingShape>,
     <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#SlagboomShape>,
+    <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#SlagboomGroepShape>,
     <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#BelShape>,
     <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#BevestigingShape>,
     <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#BevestigingsbeugelShape>,
@@ -150,6 +152,7 @@
     <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#HeeftBetrokkeneShape>,
     <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#HoortBijShape>,
     <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#IOKaartShape>,
+    <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#IsOntwerpVanShape>,
     <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#LigtOpShape>,
     <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#MontagekastShape>,
     <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#NietSelectieveDetectielusShape>,
@@ -1185,7 +1188,7 @@
   shacl:targetClass <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#BekledingComponent> .
 
 <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#BekledingComponentShape/440f3b063a60b3d33ddb75dd42f14247c90dc8ae> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#BekledingComponent%3ABevestiging";
-  shacl:description "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Deze relatie heeft geen richting."@nl;
+  shacl:description "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Daarnaast omvat deze relatie ook situaties waarin onderdelen niet direct, maar wel structureel of functioneel met elkaar verbonden zijn op een manier die bevestiging impliceert, bv. een trap die eindigt net onder een voetgangersbrug zonder fysieke bevestiging. Deze relatie heeft geen richting."@nl;
   shacl:name "Bevestiging"@nl;
   shacl:nodekind "sh:BlankNodeOrIRI";
   shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/slagboom-doorsteek/#Bevestiging>;
@@ -1195,7 +1198,7 @@
 <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#BekledingComponentShape/eef3aa764ce7a367564c223be90c380bc3898a27> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#BekledingComponent%3ABevestiging";
   shacl:class <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Bel>,
     <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Codeklavier>;
-  shacl:description "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Deze relatie heeft geen richting."@nl;
+  shacl:description "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Daarnaast omvat deze relatie ook situaties waarin onderdelen niet direct, maar wel structureel of functioneel met elkaar verbonden zijn op een manier die bevestiging impliceert, bv. een trap die eindigt net onder een voetgangersbrug zonder fysieke bevestiging. Deze relatie heeft geen richting."@nl;
   shacl:name "Bevestiging"@nl;
   shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/slagboom-doorsteek/#Bevestiging>;
   <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEVnl> "De range van Bevestiging moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Bel> zijn."], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEVnl> "De range van Bevestiging moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Bel> zijn."], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEVnl> "De range van Bevestiging moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Codeklavier> zijn."], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEVnl> "De range van Bevestiging moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Codeklavier> zijn."];
@@ -1285,6 +1288,13 @@
     <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#BevestigingsbeugelShape/4b7de97234af64e53418b6566fed2469aebad3ac>,
     <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#BevestigingsbeugelShape/d49a08b3e00c16c26aa8b9ee3bf7e458a463dbaa>,
     <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#BevestigingsbeugelShape/eb2f3ec749ae403ac0776a26dfd385d2cf1e920f>,
+    <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#BevestigingsbeugelShape/54e9bfd693c4880312b01c36ef88f501ac8339c5>,
+    <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#BevestigingsbeugelShape/5b79192d8937b44c85bd282a32c0fe1f3950cde1>,
+    <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#BevestigingsbeugelShape/a543ab8c7c3e99e7aebd3744259b8e45b4ebf8fd>,
+    <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#BevestigingsbeugelShape/bc5d8884650861fce0a3e7b91498ae26db806768>,
+    <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#BevestigingsbeugelShape/3bf7689ef46d9797b43fb5f015c60b42197a00ae>,
+    <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#BevestigingsbeugelShape/9a8628d35be89dfed48ead0aa7605e783cf8f3a4>,
+    <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#BevestigingsbeugelShape/e8f191bb991ef06035a491e8737ca89e1787513d>,
     <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#BevestigingsbeugelShape/236f0210baaf149903750c43bbe7012c21debb2a>,
     <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#BevestigingsbeugelShape/322371a77364a50f049d46180f6192532eea26dc>,
     <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#BevestigingsbeugelShape/4f381639bb6e021939f65b4f41409d1edaeade9b>,
@@ -1347,8 +1357,16 @@
   <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEVnl> "De range van type moet van het type <http://www.w3.org/2004/02/skos/core#Concept> zijn."];
   <https://data.vlaanderen.be/ns/shacl#rule> "" .
 
+<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#BevestigingsbeugelShape/3bf7689ef46d9797b43fb5f015c60b42197a00ae> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#Bevestigingsbeugel%3Atechnische%20fiche";
+  shacl:description "De technische fiche van de bevestigingsbeugel."@nl;
+  shacl:minCount 1;
+  shacl:name "technische fiche"@nl;
+  shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Bevestigingsbeugel.technischeFiche>;
+  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEVnl> "Minimaal 1 waarden verwacht voor technische fiche"];
+  <https://data.vlaanderen.be/ns/shacl#rule> "" .
+
 <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#BevestigingsbeugelShape/440f3b063a60b3d33ddb75dd42f14247c90dc8ae> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#Bevestigingsbeugel%3ABevestiging";
-  shacl:description "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Deze relatie heeft geen richting."@nl;
+  shacl:description "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Daarnaast omvat deze relatie ook situaties waarin onderdelen niet direct, maar wel structureel of functioneel met elkaar verbonden zijn op een manier die bevestiging impliceert, bv. een trap die eindigt net onder een voetgangersbrug zonder fysieke bevestiging. Deze relatie heeft geen richting."@nl;
   shacl:name "Bevestiging"@nl;
   shacl:nodekind "sh:BlankNodeOrIRI";
   shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/slagboom-doorsteek/#Bevestiging>;
@@ -1369,6 +1387,22 @@
   shacl:nodekind "sh:BlankNodeOrIRI";
   shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Bevestigingsbeugel.type>;
   <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEVnl> "De verwachte waarde voor type is een rdfs:Resource (URI of blank node)"];
+  <https://data.vlaanderen.be/ns/shacl#rule> "" .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#BevestigingsbeugelShape/54e9bfd693c4880312b01c36ef88f501ac8339c5> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#Bevestigingsbeugel%3Amateriaal%20bevestigingsbeugel";
+  shacl:description "Het materiaal waaruit de bevestigingsbeugel bestaat."@nl;
+  shacl:name "materiaal bevestigingsbeugel"@nl;
+  shacl:nodekind "sh:BlankNodeOrIRI";
+  shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Bevestigingsbeugel.materiaalBevestigingsbeugel>;
+  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEVnl> "De verwachte waarde voor materiaal bevestigingsbeugel is een rdfs:Resource (URI of blank node)"];
+  <https://data.vlaanderen.be/ns/shacl#rule> "" .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#BevestigingsbeugelShape/5b79192d8937b44c85bd282a32c0fe1f3950cde1> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#Bevestigingsbeugel%3Amateriaal%20bevestigingsbeugel";
+  shacl:description "Het materiaal waaruit de bevestigingsbeugel bestaat."@nl;
+  shacl:minCount 1;
+  shacl:name "materiaal bevestigingsbeugel"@nl;
+  shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Bevestigingsbeugel.materiaalBevestigingsbeugel>;
+  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEVnl> "Minimaal 1 waarden verwacht voor materiaal bevestigingsbeugel"];
   <https://data.vlaanderen.be/ns/shacl#rule> "" .
 
 <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#BevestigingsbeugelShape/658872dba60962ed83db0cf3b768cb2f0451e674> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#Bevestigingsbeugel%3Aconstructie%20en%20montageplan";
@@ -1411,6 +1445,30 @@
   <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEVnl> "Minimaal 1 waarden verwacht voor heeft veiligheidsstrip"];
   <https://data.vlaanderen.be/ns/shacl#rule> "" .
 
+<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#BevestigingsbeugelShape/9a8628d35be89dfed48ead0aa7605e783cf8f3a4> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#Bevestigingsbeugel%3Atechnische%20fiche";
+  shacl:class <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcDocument>;
+  shacl:description "De technische fiche van de bevestigingsbeugel."@nl;
+  shacl:name "technische fiche"@nl;
+  shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Bevestigingsbeugel.technischeFiche>;
+  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEVnl> "De range van technische fiche moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcDocument> zijn."];
+  <https://data.vlaanderen.be/ns/shacl#rule> "" .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#BevestigingsbeugelShape/a543ab8c7c3e99e7aebd3744259b8e45b4ebf8fd> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#Bevestigingsbeugel%3Amateriaal%20bevestigingsbeugel";
+  shacl:description "Het materiaal waaruit de bevestigingsbeugel bestaat."@nl;
+  shacl:maxCount 1;
+  shacl:name "materiaal bevestigingsbeugel"@nl;
+  shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Bevestigingsbeugel.materiaalBevestigingsbeugel>;
+  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEVnl> "Maximaal 1 waarden toegelaten voor materiaal bevestigingsbeugel"];
+  <https://data.vlaanderen.be/ns/shacl#rule> "" .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#BevestigingsbeugelShape/bc5d8884650861fce0a3e7b91498ae26db806768> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#Bevestigingsbeugel%3Amateriaal%20bevestigingsbeugel";
+  shacl:class skos:Concept;
+  shacl:description "Het materiaal waaruit de bevestigingsbeugel bestaat."@nl;
+  shacl:name "materiaal bevestigingsbeugel"@nl;
+  shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Bevestigingsbeugel.materiaalBevestigingsbeugel>;
+  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEVnl> "De range van materiaal bevestigingsbeugel moet van het type <http://www.w3.org/2004/02/skos/core#Concept> zijn."];
+  <https://data.vlaanderen.be/ns/shacl#rule> "" .
+
 <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#BevestigingsbeugelShape/c87bce28d9dde6b75b7feb65c3a46d22467027a7> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#Bevestigingsbeugel%3Aheeft%20veiligheidsstrip";
   shacl:datatype xsd:boolean;
   shacl:description "Metalen strip in de beugel, die verhinderd dat het bevestigd onderdeel naar beneden zou komen (bijvoorbeeld bij brand)."@nl;
@@ -1435,6 +1493,14 @@
   <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEVnl> "Maximaal 1 waarden toegelaten voor is verzegeld"];
   <https://data.vlaanderen.be/ns/shacl#rule> "" .
 
+<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#BevestigingsbeugelShape/e8f191bb991ef06035a491e8737ca89e1787513d> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#Bevestigingsbeugel%3Atechnische%20fiche";
+  shacl:description "De technische fiche van de bevestigingsbeugel."@nl;
+  shacl:name "technische fiche"@nl;
+  shacl:nodekind "sh:BlankNodeOrIRI";
+  shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Bevestigingsbeugel.technischeFiche>;
+  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEVnl> "De verwachte waarde voor technische fiche is een rdfs:Resource (URI of blank node)"];
+  <https://data.vlaanderen.be/ns/shacl#rule> "" .
+
 <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#BevestigingsbeugelShape/eb2f3ec749ae403ac0776a26dfd385d2cf1e920f> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#Bevestigingsbeugel%3Ais%20verzegeld";
   shacl:description "Geeft aan of de bevestigingsbeugel verzegeld is tegen het ongemerkt losmaken ervan."@nl;
   shacl:minCount 1;
@@ -1445,7 +1511,7 @@
 
 <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#BevestigingsbeugelShape/eef3aa764ce7a367564c223be90c380bc3898a27> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#Bevestigingsbeugel%3ABevestiging";
   shacl:class <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Verkeersbord>;
-  shacl:description "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Deze relatie heeft geen richting."@nl;
+  shacl:description "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Daarnaast omvat deze relatie ook situaties waarin onderdelen niet direct, maar wel structureel of functioneel met elkaar verbonden zijn op een manier die bevestiging impliceert, bv. een trap die eindigt net onder een voetgangersbrug zonder fysieke bevestiging. Deze relatie heeft geen richting."@nl;
   shacl:name "Bevestiging"@nl;
   shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/slagboom-doorsteek/#Bevestiging>;
   <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEVnl> "De range van Bevestiging moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Verkeersbord> zijn."], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEVnl> "De range van Bevestiging moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Verkeersbord> zijn."];
@@ -1523,6 +1589,10 @@
     <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#BuitenkastShape/81c1995dcd0356f47494f93e397b042a03be1cb0>,
     <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#BuitenkastShape/978ddff125d32672a21f90a381238279561efbab>,
     <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#BuitenkastShape/e555f03449871d614a8d6c504af0e9d15eac4849>,
+    <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#BuitenkastShape/13b69a9e09a3813c8652390c024b8fa6369a81ef>,
+    <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#BuitenkastShape/2e82d83105c8ec240097fc710fe8a88f090134a0>,
+    <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#BuitenkastShape/cb0d906c368c5886783ec16b69a172b2f1ee8569>,
+    <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#BuitenkastShape/ce018eab734426f08a40adc7d7bc7b03b4efe9de>,
     <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#BuitenkastShape/0f2344a630e1a0e8c7245fa454d750987ac4ea16>,
     <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#BuitenkastShape/2df087ff629a5ebef1c80831f2734724ab3946a5>,
     <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#BuitenkastShape/5355a06b87621a3b44b1cad0f03b6fe88163cc0e>,
@@ -1537,12 +1607,28 @@
   <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEVnl> "De range van verfraaid moet van het type <http://www.w3.org/2004/02/skos/core#Concept> zijn."];
   <https://data.vlaanderen.be/ns/shacl#rule> "" .
 
+<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#BuitenkastShape/13b69a9e09a3813c8652390c024b8fa6369a81ef> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#Buitenkast%3Alaatste%20keuringsdatum";
+  shacl:description "Deze datum geeft aan wanneer de laatste keuring plaatsvond en kan gebruikt worden om te bepalen wanneer een volgende keuring nodig is."@nl;
+  shacl:maxCount 1;
+  shacl:name "laatste keuringsdatum"@nl;
+  shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Buitenkast.laatsteKeuringsdatum>;
+  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEVnl> "Maximaal 1 waarden toegelaten voor laatste keuringsdatum"];
+  <https://data.vlaanderen.be/ns/shacl#rule> "" .
+
 <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#BuitenkastShape/2df087ff629a5ebef1c80831f2734724ab3946a5> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#Buitenkast%3Averfraaid";
   shacl:description "Geeft aan of de wegkantkast voorzien van verfraaiing en of die al dan niet vergund is."@nl;
   shacl:name "verfraaid"@nl;
   shacl:nodekind "sh:BlankNodeOrIRI";
   shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Buitenkast.verfraaid>;
   <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEVnl> "De verwachte waarde voor verfraaid is een rdfs:Resource (URI of blank node)"];
+  <https://data.vlaanderen.be/ns/shacl#rule> "" .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#BuitenkastShape/2e82d83105c8ec240097fc710fe8a88f090134a0> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#Buitenkast%3Alaatste%20keuringsdatum";
+  shacl:description "Deze datum geeft aan wanneer de laatste keuring plaatsvond en kan gebruikt worden om te bepalen wanneer een volgende keuring nodig is."@nl;
+  shacl:name "laatste keuringsdatum"@nl;
+  shacl:nodekind "sh:Literal";
+  shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Buitenkast.laatsteKeuringsdatum>;
+  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEVnl> "De verwachte waarde voor laatste keuringsdatum is een Literal"];
   <https://data.vlaanderen.be/ns/shacl#rule> "" .
 
 <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#BuitenkastShape/3cc15287b9ca534d8a5a2496599870e474db83e9> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#Buitenkast%3Akeuringsfrequentie";
@@ -1585,6 +1671,22 @@
   <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEVnl> "Minimaal 1 waarden verwacht voor keuringsfrequentie"];
   <https://data.vlaanderen.be/ns/shacl#rule> "" .
 
+<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#BuitenkastShape/cb0d906c368c5886783ec16b69a172b2f1ee8569> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#Buitenkast%3Alaatste%20keuringsdatum";
+  shacl:datatype xsd:date;
+  shacl:description "Deze datum geeft aan wanneer de laatste keuring plaatsvond en kan gebruikt worden om te bepalen wanneer een volgende keuring nodig is."@nl;
+  shacl:name "laatste keuringsdatum"@nl;
+  shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Buitenkast.laatsteKeuringsdatum>;
+  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEVnl> "De range van laatste keuringsdatum moet van het type <http://www.w3.org/2001/XMLSchema#date> zijn."];
+  <https://data.vlaanderen.be/ns/shacl#rule> "" .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#BuitenkastShape/ce018eab734426f08a40adc7d7bc7b03b4efe9de> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#Buitenkast%3Alaatste%20keuringsdatum";
+  shacl:description "Deze datum geeft aan wanneer de laatste keuring plaatsvond en kan gebruikt worden om te bepalen wanneer een volgende keuring nodig is."@nl;
+  shacl:minCount 1;
+  shacl:name "laatste keuringsdatum"@nl;
+  shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Buitenkast.laatsteKeuringsdatum>;
+  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEVnl> "Minimaal 1 waarden verwacht voor laatste keuringsdatum"];
+  <https://data.vlaanderen.be/ns/shacl#rule> "" .
+
 <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#BuitenkastShape/d7649e15eafd7e143ae7f4fd4efc9d65cd1f841e> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#Buitenkast%3Aingress%20protection%20klasse";
   shacl:description "De IP-codering als een aanduiding voor de mate van beveiliging van de constructie van elektrische of elektronische apparatuur tegen eigen schade door gebruik in \"vijandige omgevingen\" en tegen eventueel gevaar voor de gebruiker volgens IEC 60529."@nl;
   shacl:minCount 1;
@@ -1625,9 +1727,15 @@
   <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEVnl> "De verwachte waarde voor ingress protection klasse is een rdfs:Resource (URI of blank node)"];
   <https://data.vlaanderen.be/ns/shacl#rule> "" .
 
+<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#CalamiteitendoorsteekGroepShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#CalamiteitendoorsteekGroep> .
+
 <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#CalamiteitendoorsteekShape> a shacl:NodeShape;
   shacl:closed false;
-  shacl:property <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#CalamiteitendoorsteekShape/21f219edbc3aebd4d4f3c8de99d8a1e420faf466>,
+  shacl:property <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#CalamiteitendoorsteekShape/8f120cad8fcd990b3b239beab82e34601f02f57e>,
+    <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#CalamiteitendoorsteekShape/f7248aceb7f88bc80137f911d7a37032f76cf426>,
+    <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#CalamiteitendoorsteekShape/21f219edbc3aebd4d4f3c8de99d8a1e420faf466>,
     <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#CalamiteitendoorsteekShape/5a08e493ecdeab33b32fbf22eecec84e5b1a4f2d>,
     <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#CalamiteitendoorsteekShape/21ce6fcad83046517b6d5d09e55727da8bd55fce>,
     <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#CalamiteitendoorsteekShape/755808daa6cf29bd43264e941b0ae9392279ec89>,
@@ -1747,6 +1855,13 @@
   <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEVnl> "De verwachte waarde voor merk is een rdfs:Resource (URI of blank node)"];
   <https://data.vlaanderen.be/ns/shacl#rule> "" .
 
+<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#CalamiteitendoorsteekShape/8f120cad8fcd990b3b239beab82e34601f02f57e> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#Calamiteitendoorsteek%3AHoort%20bij";
+  shacl:class <https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#CalamiteitendoorsteekGroep>;
+  shacl:description "De relatie geeft aan dat een onderdeel of collectie behoort bij, deel van of lid van een (andere) groep of collectie is."@nl;
+  shacl:name "Hoort bij"@nl;
+  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEVnl> "De range van Hoort bij moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#CalamiteitendoorsteekGroep> zijn."];
+  <https://data.vlaanderen.be/ns/shacl#rule> "" .
+
 <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#CalamiteitendoorsteekShape/95ff0e8100aa6d15ab3e80aca3d420eb272d5256> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#Calamiteitendoorsteek%3Amodelnaam";
   shacl:description "De modelnaam van de calamiteitendoorsteek."@nl;
   shacl:minCount 1;
@@ -1825,6 +1940,13 @@
   shacl:name "lengte"@nl;
   shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Calamiteitendoorsteek.lengte>;
   <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEVnl> "Maximaal 1 waarden toegelaten voor lengte"];
+  <https://data.vlaanderen.be/ns/shacl#rule> "" .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#CalamiteitendoorsteekShape/f7248aceb7f88bc80137f911d7a37032f76cf426> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#Calamiteitendoorsteek%3AHoort%20bij";
+  shacl:description "De relatie geeft aan dat een onderdeel of collectie behoort bij, deel van of lid van een (andere) groep of collectie is."@nl;
+  shacl:name "Hoort bij"@nl;
+  shacl:nodekind "sh:BlankNodeOrIRI";
+  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEVnl> "De verwachte waarde voor Hoort bij is een rdfs:Resource (URI of blank node)"];
   <https://data.vlaanderen.be/ns/shacl#rule> "" .
 
 <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#CalamiteitendoorsteekShape/fbfecf1015f279714d73cf922215e888887d3793> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#Calamiteitendoorsteek%3Alengte";
@@ -2014,7 +2136,7 @@
   shacl:targetClass <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#ConstructieElement> .
 
 <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#ConstructieElementShape/440f3b063a60b3d33ddb75dd42f14247c90dc8ae> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#ConstructieElement%3ABevestiging";
-  shacl:description "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Deze relatie heeft geen richting."@nl;
+  shacl:description "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Daarnaast omvat deze relatie ook situaties waarin onderdelen niet direct, maar wel structureel of functioneel met elkaar verbonden zijn op een manier die bevestiging impliceert, bv. een trap die eindigt net onder een voetgangersbrug zonder fysieke bevestiging. Deze relatie heeft geen richting."@nl;
   shacl:name "Bevestiging"@nl;
   shacl:nodekind "sh:BlankNodeOrIRI";
   shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/slagboom-doorsteek/#Bevestiging>;
@@ -2023,13 +2145,13 @@
 
 <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#ConstructieElementShape/eef3aa764ce7a367564c223be90c380bc3898a27> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#ConstructieElement%3ABevestiging";
   shacl:class <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Montagekast>,
+    <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Codeklavier>,
     <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Bel>,
-    <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#BekledingComponent>,
-    <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Codeklavier>;
-  shacl:description "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Deze relatie heeft geen richting."@nl;
+    <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#BekledingComponent>;
+  shacl:description "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Daarnaast omvat deze relatie ook situaties waarin onderdelen niet direct, maar wel structureel of functioneel met elkaar verbonden zijn op een manier die bevestiging impliceert, bv. een trap die eindigt net onder een voetgangersbrug zonder fysieke bevestiging. Deze relatie heeft geen richting."@nl;
   shacl:name "Bevestiging"@nl;
   shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/slagboom-doorsteek/#Bevestiging>;
-  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEVnl> "De range van Bevestiging moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Montagekast> zijn."], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEVnl> "De range van Bevestiging moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Montagekast> zijn."], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEVnl> "De range van Bevestiging moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Bel> zijn."], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEVnl> "De range van Bevestiging moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Bel> zijn."], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEVnl> "De range van Bevestiging moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#BekledingComponent> zijn."], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEVnl> "De range van Bevestiging moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#BekledingComponent> zijn."], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEVnl> "De range van Bevestiging moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Codeklavier> zijn."], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEVnl> "De range van Bevestiging moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Codeklavier> zijn."];
+  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEVnl> "De range van Bevestiging moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Montagekast> zijn."], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEVnl> "De range van Bevestiging moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Montagekast> zijn."], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEVnl> "De range van Bevestiging moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Codeklavier> zijn."], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEVnl> "De range van Bevestiging moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Codeklavier> zijn."], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEVnl> "De range van Bevestiging moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Bel> zijn."], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEVnl> "De range van Bevestiging moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Bel> zijn."], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEVnl> "De range van Bevestiging moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#BekledingComponent> zijn."], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEVnl> "De range van Bevestiging moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#BekledingComponent> zijn."];
   <https://data.vlaanderen.be/ns/shacl#rule> "" .
 
 <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#ContactorShape> a shacl:NodeShape;
@@ -2055,12 +2177,12 @@
   shacl:targetClass <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Contactor> .
 
 <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#ContactorShape/13c0b9e93496b6e11a2dd598e93274f6d4669d0c> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#Contactor%3AVoedt%20aangestuurd";
-  shacl:class <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#SlagboomarmVerlichting>,
-    <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Slagboomkolom>,
-    <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Calamiteitendoorsteek>;
+  shacl:class <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Slagboomkolom>,
+    <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Calamiteitendoorsteek>,
+    <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#SlagboomarmVerlichting>;
   shacl:description "Deze relatie wordt enkel gelegd naar objecttypes die typisch een groot vermogen vereisen en onder spanning komen nadat het voedend element aangestuurd is om die spanning door te sturen."@nl;
   shacl:name "Voedt aangestuurd"@nl;
-  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEVnl> "De range van Voedt aangestuurd moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#SlagboomarmVerlichting> zijn."], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEVnl> "De range van Voedt aangestuurd moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Slagboomkolom> zijn."], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEVnl> "De range van Voedt aangestuurd moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Calamiteitendoorsteek> zijn."];
+  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEVnl> "De range van Voedt aangestuurd moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Slagboomkolom> zijn."], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEVnl> "De range van Voedt aangestuurd moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Calamiteitendoorsteek> zijn."], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEVnl> "De range van Voedt aangestuurd moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#SlagboomarmVerlichting> zijn."];
   <https://data.vlaanderen.be/ns/shacl#rule> "" .
 
 <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#ContactorShape/21ce6fcad83046517b6d5d09e55727da8bd55fce> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#Contactor%3ASturing";
@@ -2517,7 +2639,7 @@
   shacl:targetClass <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Draagconstructie> .
 
 <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#DraagconstructieShape/440f3b063a60b3d33ddb75dd42f14247c90dc8ae> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#Draagconstructie%3ABevestiging";
-  shacl:description "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Deze relatie heeft geen richting."@nl;
+  shacl:description "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Daarnaast omvat deze relatie ook situaties waarin onderdelen niet direct, maar wel structureel of functioneel met elkaar verbonden zijn op een manier die bevestiging impliceert, bv. een trap die eindigt net onder een voetgangersbrug zonder fysieke bevestiging. Deze relatie heeft geen richting."@nl;
   shacl:name "Bevestiging"@nl;
   shacl:nodekind "sh:BlankNodeOrIRI";
   shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/slagboom-doorsteek/#Bevestiging>;
@@ -2527,7 +2649,7 @@
 <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#DraagconstructieShape/eef3aa764ce7a367564c223be90c380bc3898a27> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#Draagconstructie%3ABevestiging";
   shacl:class <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Bel>,
     <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Codeklavier>;
-  shacl:description "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Deze relatie heeft geen richting."@nl;
+  shacl:description "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Daarnaast omvat deze relatie ook situaties waarin onderdelen niet direct, maar wel structureel of functioneel met elkaar verbonden zijn op een manier die bevestiging impliceert, bv. een trap die eindigt net onder een voetgangersbrug zonder fysieke bevestiging. Deze relatie heeft geen richting."@nl;
   shacl:name "Bevestiging"@nl;
   shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/slagboom-doorsteek/#Bevestiging>;
   <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEVnl> "De range van Bevestiging moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Bel> zijn."], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEVnl> "De range van Bevestiging moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Bel> zijn."], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEVnl> "De range van Bevestiging moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Codeklavier> zijn."], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEVnl> "De range van Bevestiging moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Codeklavier> zijn."];
@@ -4433,6 +4555,10 @@
     <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#DtuAfmetingVerkeersbordShape/ab567ea9d8dc2ec86f39193a370aab59ecf74603>,
     <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#DtuAfmetingVerkeersbordShape/b36fb0243e8c6bea6be3e6f6cb9a65286529a49c>,
     <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#DtuAfmetingVerkeersbordShape/b670a0edd0906c1ae37644efe09fb0ae230672fd>,
+    <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#DtuAfmetingVerkeersbordShape/021d5d4fe4ac264501b6c76413cc586284836e02>,
+    <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#DtuAfmetingVerkeersbordShape/4e2076f6af648b55d3bc875aec5b69a8a3bd1967>,
+    <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#DtuAfmetingVerkeersbordShape/a939418082aea52c9d344f64c493c645361aad25>,
+    <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#DtuAfmetingVerkeersbordShape/f70acf9041e40959f44d96b451bbe7f2d493da58>,
     <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#DtuAfmetingVerkeersbordShape/5b41c0db7fcc42d6ad66d0a1a9c4f4f2c3c6d058>,
     <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#DtuAfmetingVerkeersbordShape/5e89b87438baef77b67ae7ea7e2063c6aa200df0>,
     <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#DtuAfmetingVerkeersbordShape/9223d9aa5c7cd877c4e07a3674d10ba295d5aa67>,
@@ -4440,6 +4566,14 @@
     <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#DtuAfmetingVerkeersbordShape/4ffecc43ba22aed93c0de6d5062146f26ef6c1df>,
     <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#DtuAfmetingVerkeersbordShape/548235473b69257b888ce4e1597f543293aa001c>;
   shacl:targetClass <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#DtuAfmetingVerkeersbord> .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#DtuAfmetingVerkeersbordShape/021d5d4fe4ac264501b6c76413cc586284836e02> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#DtuAfmetingVerkeersbord%3Aruit";
+  shacl:class <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcAfmetingZijdeInMm>;
+  shacl:description "De afmeting voor een ruitvormig verkeersbord (zijde in millimeter)."@nl;
+  shacl:name "ruit"@nl;
+  shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#DtuAfmetingVerkeersbord.ruit>;
+  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEVnl> "De range van ruit moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcAfmetingZijdeInMm> zijn."];
+  <https://data.vlaanderen.be/ns/shacl#rule> "" .
 
 <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#DtuAfmetingVerkeersbordShape/1749c156caa00ff4edb147e4a098818646e23a1b> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#DtuAfmetingVerkeersbord%3Azeshoekig";
   shacl:description "De afmeting voor een zeshoekig verkeersbord (zijde in millimeter)."@nl;
@@ -4455,6 +4589,14 @@
   shacl:nodekind "sh:BlankNodeOrIRI";
   shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#DtuAfmetingVerkeersbord.driehoekig>;
   <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEVnl> "De verwachte waarde voor driehoekig is een rdfs:Resource (URI of blank node)"];
+  <https://data.vlaanderen.be/ns/shacl#rule> "" .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#DtuAfmetingVerkeersbordShape/4e2076f6af648b55d3bc875aec5b69a8a3bd1967> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#DtuAfmetingVerkeersbord%3Aruit";
+  shacl:description "De afmeting voor een ruitvormig verkeersbord (zijde in millimeter)."@nl;
+  shacl:minCount 1;
+  shacl:name "ruit"@nl;
+  shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#DtuAfmetingVerkeersbord.ruit>;
+  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEVnl> "Minimaal 1 waarden verwacht voor ruit"];
   <https://data.vlaanderen.be/ns/shacl#rule> "" .
 
 <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#DtuAfmetingVerkeersbordShape/4ffecc43ba22aed93c0de6d5062146f26ef6c1df> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#DtuAfmetingVerkeersbord%3Azeshoekig";
@@ -4513,6 +4655,14 @@
   <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEVnl> "De range van vierhoekig moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcAfmetingBxhInMm> zijn."];
   <https://data.vlaanderen.be/ns/shacl#rule> "" .
 
+<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#DtuAfmetingVerkeersbordShape/a939418082aea52c9d344f64c493c645361aad25> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#DtuAfmetingVerkeersbord%3Aruit";
+  shacl:description "De afmeting voor een ruitvormig verkeersbord (zijde in millimeter)."@nl;
+  shacl:name "ruit"@nl;
+  shacl:nodekind "sh:BlankNodeOrIRI";
+  shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#DtuAfmetingVerkeersbord.ruit>;
+  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEVnl> "De verwachte waarde voor ruit is een rdfs:Resource (URI of blank node)"];
+  <https://data.vlaanderen.be/ns/shacl#rule> "" .
+
 <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#DtuAfmetingVerkeersbordShape/ab567ea9d8dc2ec86f39193a370aab59ecf74603> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#DtuAfmetingVerkeersbord%3Arond";
   shacl:class <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcAfmetingDiameterInMm>;
   shacl:description "De afmeting voor een rond verkeersbord (diameter in millimeter)."@nl;
@@ -4559,6 +4709,14 @@
   shacl:name "driehoekig"@nl;
   shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#DtuAfmetingVerkeersbord.driehoekig>;
   <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEVnl> "De range van driehoekig moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcAfmetingZijdeInMm> zijn."];
+  <https://data.vlaanderen.be/ns/shacl#rule> "" .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#DtuAfmetingVerkeersbordShape/f70acf9041e40959f44d96b451bbe7f2d493da58> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#DtuAfmetingVerkeersbord%3Aruit";
+  shacl:description "De afmeting voor een ruitvormig verkeersbord (zijde in millimeter)."@nl;
+  shacl:maxCount 1;
+  shacl:name "ruit"@nl;
+  shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#DtuAfmetingVerkeersbord.ruit>;
+  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEVnl> "Maximaal 1 waarden toegelaten voor ruit"];
   <https://data.vlaanderen.be/ns/shacl#rule> "" .
 
 <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#EMDraagconstructieShape> a shacl:NodeShape;
@@ -4672,7 +4830,7 @@
   <https://data.vlaanderen.be/ns/shacl#rule> "" .
 
 <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#FunderingShape/440f3b063a60b3d33ddb75dd42f14247c90dc8ae> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#Fundering%3ABevestiging";
-  shacl:description "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Deze relatie heeft geen richting."@nl;
+  shacl:description "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Daarnaast omvat deze relatie ook situaties waarin onderdelen niet direct, maar wel structureel of functioneel met elkaar verbonden zijn op een manier die bevestiging impliceert, bv. een trap die eindigt net onder een voetgangersbrug zonder fysieke bevestiging. Deze relatie heeft geen richting."@nl;
   shacl:name "Bevestiging"@nl;
   shacl:nodekind "sh:BlankNodeOrIRI";
   shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/slagboom-doorsteek/#Bevestiging>;
@@ -4720,12 +4878,12 @@
   <https://data.vlaanderen.be/ns/shacl#rule> "" .
 
 <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#FunderingShape/eef3aa764ce7a367564c223be90c380bc3898a27> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#Fundering%3ABevestiging";
-  shacl:class <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Sokkel>,
-    <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Calamiteitendoorsteek>;
-  shacl:description "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Deze relatie heeft geen richting."@nl;
+  shacl:class <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Calamiteitendoorsteek>,
+    <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Sokkel>;
+  shacl:description "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Daarnaast omvat deze relatie ook situaties waarin onderdelen niet direct, maar wel structureel of functioneel met elkaar verbonden zijn op een manier die bevestiging impliceert, bv. een trap die eindigt net onder een voetgangersbrug zonder fysieke bevestiging. Deze relatie heeft geen richting."@nl;
   shacl:name "Bevestiging"@nl;
   shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/slagboom-doorsteek/#Bevestiging>;
-  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEVnl> "De range van Bevestiging moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Sokkel> zijn."], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEVnl> "De range van Bevestiging moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Sokkel> zijn."], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEVnl> "De range van Bevestiging moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Calamiteitendoorsteek> zijn."], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEVnl> "De range van Bevestiging moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Calamiteitendoorsteek> zijn."];
+  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEVnl> "De range van Bevestiging moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Calamiteitendoorsteek> zijn."], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEVnl> "De range van Bevestiging moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Calamiteitendoorsteek> zijn."], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEVnl> "De range van Bevestiging moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Sokkel> zijn."], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEVnl> "De range van Bevestiging moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Sokkel> zijn."];
   <https://data.vlaanderen.be/ns/shacl#rule> "" .
 
 <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#FunderingShape/f00131312e3ad71addc5d6dd24915e41e9e8a080> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#Fundering%3Ahoogte";
@@ -4759,7 +4917,11 @@
     <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#GalgpaalShape/3bf7689ef46d9797b43fb5f015c60b42197a00ae>,
     <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#GalgpaalShape/9a8628d35be89dfed48ead0aa7605e783cf8f3a4>,
     <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#GalgpaalShape/b42c2fc3298b93e7be3027ddd6bc4a84a6de4389>,
-    <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#GalgpaalShape/e8f191bb991ef06035a491e8737ca89e1787513d>;
+    <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#GalgpaalShape/e8f191bb991ef06035a491e8737ca89e1787513d>,
+    <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#GalgpaalShape/09da0b21a68f76bdd41f55da33b2d48a6b99533f>,
+    <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#GalgpaalShape/3467dd91d0cf96d50046408ce47c9daeb9818a4e>,
+    <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#GalgpaalShape/75ce8cfd9a0da14c6a8a6fac45d228ce951a2926>,
+    <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#GalgpaalShape/b1aa363ac7cf0143197b8009328aa2526ee264ef>;
   shacl:targetClass <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Galgpaal> .
 
 <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#GalgpaalShape/025381ddc8c6c1287d23dacdfaca903f39c01552> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#Galgpaal%3Aberekeningsnota";
@@ -4776,6 +4938,14 @@
   shacl:nodekind "sh:BlankNodeOrIRI";
   shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Galgpaal.berekeningsnota>;
   <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEVnl> "De verwachte waarde voor berekeningsnota is een rdfs:Resource (URI of blank node)"];
+  <https://data.vlaanderen.be/ns/shacl#rule> "" .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#GalgpaalShape/09da0b21a68f76bdd41f55da33b2d48a6b99533f> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#Galgpaal%3Avrije%20hoogte";
+  shacl:description "De verticale afstand (in meter) tussen de bovenkant van het wegdek en de onderkant van het laagste, daarboven gelegen constructiedeel van de galgpaal."@nl;
+  shacl:maxCount 1;
+  shacl:name "vrije hoogte"@nl;
+  shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Galgpaal.vrijeHoogte>;
+  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEVnl> "Maximaal 1 waarden toegelaten voor vrije hoogte"];
   <https://data.vlaanderen.be/ns/shacl#rule> "" .
 
 <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#GalgpaalShape/0a806abdd09534644fece8ec0dd621fe6a40c936> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#Galgpaal%3Aaantal%20liggers";
@@ -4818,6 +4988,14 @@
   <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEVnl> "Maximaal 1 waarden toegelaten voor berekeningsnota"];
   <https://data.vlaanderen.be/ns/shacl#rule> "" .
 
+<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#GalgpaalShape/3467dd91d0cf96d50046408ce47c9daeb9818a4e> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#Galgpaal%3Avrije%20hoogte";
+  shacl:class <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInMeter>;
+  shacl:description "De verticale afstand (in meter) tussen de bovenkant van het wegdek en de onderkant van het laagste, daarboven gelegen constructiedeel van de galgpaal."@nl;
+  shacl:name "vrije hoogte"@nl;
+  shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Galgpaal.vrijeHoogte>;
+  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEVnl> "De range van vrije hoogte moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInMeter> zijn."];
+  <https://data.vlaanderen.be/ns/shacl#rule> "" .
+
 <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#GalgpaalShape/3bf7689ef46d9797b43fb5f015c60b42197a00ae> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#Galgpaal%3Atechnische%20fiche";
   shacl:description "Een bijlage waarin de detailtekeningen van de galgpaal zijn opgenomen."@nl;
   shacl:minCount 1;
@@ -4840,6 +5018,14 @@
   shacl:name "armlengte"@nl;
   shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Galgpaal.armlengte>;
   <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEVnl> "Maximaal 1 waarden toegelaten voor armlengte"];
+  <https://data.vlaanderen.be/ns/shacl#rule> "" .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#GalgpaalShape/75ce8cfd9a0da14c6a8a6fac45d228ce951a2926> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#Galgpaal%3Avrije%20hoogte";
+  shacl:description "De verticale afstand (in meter) tussen de bovenkant van het wegdek en de onderkant van het laagste, daarboven gelegen constructiedeel van de galgpaal."@nl;
+  shacl:name "vrije hoogte"@nl;
+  shacl:nodekind "sh:BlankNodeOrIRI";
+  shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Galgpaal.vrijeHoogte>;
+  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEVnl> "De verwachte waarde voor vrije hoogte is een rdfs:Resource (URI of blank node)"];
   <https://data.vlaanderen.be/ns/shacl#rule> "" .
 
 <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#GalgpaalShape/8f120cad8fcd990b3b239beab82e34601f02f57e> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#Galgpaal%3AHoort%20bij";
@@ -4871,6 +5057,14 @@
   shacl:nodekind "sh:BlankNodeOrIRI";
   shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Galgpaal.dwarsdoorsnede>;
   <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEVnl> "De verwachte waarde voor dwarsdoorsnede is een rdfs:Resource (URI of blank node)"];
+  <https://data.vlaanderen.be/ns/shacl#rule> "" .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#GalgpaalShape/b1aa363ac7cf0143197b8009328aa2526ee264ef> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#Galgpaal%3Avrije%20hoogte";
+  shacl:description "De verticale afstand (in meter) tussen de bovenkant van het wegdek en de onderkant van het laagste, daarboven gelegen constructiedeel van de galgpaal."@nl;
+  shacl:minCount 1;
+  shacl:name "vrije hoogte"@nl;
+  shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Galgpaal.vrijeHoogte>;
+  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEVnl> "Minimaal 1 waarden verwacht voor vrije hoogte"];
   <https://data.vlaanderen.be/ns/shacl#rule> "" .
 
 <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#GalgpaalShape/b42c2fc3298b93e7be3027ddd6bc4a84a6de4389> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#Galgpaal%3Atechnische%20fiche";
@@ -5099,7 +5293,10 @@
     <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#IOKaartShape/5024ed9e35e6d1e3ab51de28f923feeb240ee3ba>,
     <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#IOKaartShape/665003c665f41134656db4624bd8dddf411e5b29>,
     <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#IOKaartShape/835be63f4051b80461d900a01bc7b0c68ee4a104>,
-    <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#IOKaartShape/8e18ceec84715080cef56ac278663cfd75888d45>;
+    <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#IOKaartShape/8e18ceec84715080cef56ac278663cfd75888d45>,
+    <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#IOKaartShape/3bf7689ef46d9797b43fb5f015c60b42197a00ae>,
+    <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#IOKaartShape/9a8628d35be89dfed48ead0aa7605e783cf8f3a4>,
+    <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#IOKaartShape/e8f191bb991ef06035a491e8737ca89e1787513d>;
   shacl:targetClass <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#IOKaart> .
 
 <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#IOKaartShape/041e6c69ec0f3824e5cf4fcb91314c90d7c93879> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#IOKaart%3Arichting";
@@ -5133,6 +5330,14 @@
   shacl:name "merk"@nl;
   shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#IOKaart.merk>;
   <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEVnl> "Minimaal 1 waarden verwacht voor merk"];
+  <https://data.vlaanderen.be/ns/shacl#rule> "" .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#IOKaartShape/3bf7689ef46d9797b43fb5f015c60b42197a00ae> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#IOKaart%3Atechnische%20fiche";
+  shacl:description "De technische fiches als bijlage."@nl;
+  shacl:minCount 1;
+  shacl:name "technische fiche"@nl;
+  shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#IOKaart.technischeFiche>;
+  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEVnl> "Minimaal 1 waarden verwacht voor technische fiche"];
   <https://data.vlaanderen.be/ns/shacl#rule> "" .
 
 <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#IOKaartShape/453308b1d63ecd339664dd0c1ea07955b8a66f27> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#IOKaart%3Apoortadres";
@@ -5263,6 +5468,14 @@
   <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEVnl> "Minimaal 1 waarden verwacht voor modelnaam"];
   <https://data.vlaanderen.be/ns/shacl#rule> "" .
 
+<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#IOKaartShape/9a8628d35be89dfed48ead0aa7605e783cf8f3a4> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#IOKaart%3Atechnische%20fiche";
+  shacl:class <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcDocument>;
+  shacl:description "De technische fiches als bijlage."@nl;
+  shacl:name "technische fiche"@nl;
+  shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#IOKaart.technischeFiche>;
+  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEVnl> "De range van technische fiche moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcDocument> zijn."];
+  <https://data.vlaanderen.be/ns/shacl#rule> "" .
+
 <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#IOKaartShape/9c40b7fc69631559af0f97c716550d996bacf346> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#IOKaart%3Abitsnelheid";
   shacl:description "De snelheid (hoeveel bits per seconde) waarmee data doorgestuurd kan worden."@nl;
   shacl:minCount 1;
@@ -5311,6 +5524,14 @@
   <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEVnl> "Maximaal 1 waarden toegelaten voor modelnaam"];
   <https://data.vlaanderen.be/ns/shacl#rule> "" .
 
+<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#IOKaartShape/e8f191bb991ef06035a491e8737ca89e1787513d> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#IOKaart%3Atechnische%20fiche";
+  shacl:description "De technische fiches als bijlage."@nl;
+  shacl:name "technische fiche"@nl;
+  shacl:nodekind "sh:BlankNodeOrIRI";
+  shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#IOKaart.technischeFiche>;
+  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEVnl> "De verwachte waarde voor technische fiche is een rdfs:Resource (URI of blank node)"];
+  <https://data.vlaanderen.be/ns/shacl#rule> "" .
+
 <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#IOKaartShape/ea1c89ff94e305d8cdbb02e5a5d11e6a957e1ca0> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#IOKaart%3Afirmwareversie";
   shacl:datatype xsd:string;
   shacl:description "Versie van de firmware."@nl;
@@ -5342,6 +5563,9 @@
   shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#IOKaart.richting>;
   <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEVnl> "De verwachte waarde voor richting is een rdfs:Resource (URI of blank node)"];
   <https://data.vlaanderen.be/ns/shacl#rule> "" .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#IsOntwerpVanShape> a shacl:NodeShape;
+  shacl:closed false .
 
 <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#KastShape> a shacl:NodeShape;
   shacl:closed false;
@@ -5583,10 +5807,6 @@
   shacl:closed false;
   shacl:targetClass skos:Concept .
 
-<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#KlFabricageTypeRetroreflecterendVerkeersbordShape> a shacl:NodeShape;
-  shacl:closed false;
-  shacl:targetClass skos:Concept .
-
 <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#KlIOBitSnelheidShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:targetClass skos:Concept .
@@ -5616,6 +5836,10 @@
   shacl:targetClass skos:Concept .
 
 <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#KlLantaarnVormgevingShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass skos:Concept .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#KlMateriaalBevestigingsbeugelShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:targetClass skos:Concept .
 
@@ -6762,7 +6986,7 @@
   <https://data.vlaanderen.be/ns/shacl#rule> "" .
 
 <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#LaagShape/440f3b063a60b3d33ddb75dd42f14247c90dc8ae> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#Laag%3ABevestiging";
-  shacl:description "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Deze relatie heeft geen richting."@nl;
+  shacl:description "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Daarnaast omvat deze relatie ook situaties waarin onderdelen niet direct, maar wel structureel of functioneel met elkaar verbonden zijn op een manier die bevestiging impliceert, bv. een trap die eindigt net onder een voetgangersbrug zonder fysieke bevestiging. Deze relatie heeft geen richting."@nl;
   shacl:name "Bevestiging"@nl;
   shacl:nodekind "sh:BlankNodeOrIRI";
   shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/slagboom-doorsteek/#Bevestiging>;
@@ -6826,13 +7050,13 @@
   <https://data.vlaanderen.be/ns/shacl#rule> "" .
 
 <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#LaagShape/eef3aa764ce7a367564c223be90c380bc3898a27> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#Laag%3ABevestiging";
-  shacl:class <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Sokkel>,
-    <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Slagboomkolom>,
-    <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Fundering>;
-  shacl:description "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Deze relatie heeft geen richting."@nl;
+  shacl:class <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Fundering>,
+    <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Sokkel>,
+    <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Slagboomkolom>;
+  shacl:description "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Daarnaast omvat deze relatie ook situaties waarin onderdelen niet direct, maar wel structureel of functioneel met elkaar verbonden zijn op een manier die bevestiging impliceert, bv. een trap die eindigt net onder een voetgangersbrug zonder fysieke bevestiging. Deze relatie heeft geen richting."@nl;
   shacl:name "Bevestiging"@nl;
   shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/slagboom-doorsteek/#Bevestiging>;
-  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEVnl> "De range van Bevestiging moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Sokkel> zijn."], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEVnl> "De range van Bevestiging moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Sokkel> zijn."], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEVnl> "De range van Bevestiging moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Slagboomkolom> zijn."], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEVnl> "De range van Bevestiging moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Slagboomkolom> zijn."], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEVnl> "De range van Bevestiging moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Fundering> zijn."], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEVnl> "De range van Bevestiging moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Fundering> zijn."];
+  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEVnl> "De range van Bevestiging moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Fundering> zijn."], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEVnl> "De range van Bevestiging moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Fundering> zijn."], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEVnl> "De range van Bevestiging moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Sokkel> zijn."], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEVnl> "De range van Bevestiging moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Sokkel> zijn."], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEVnl> "De range van Bevestiging moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Slagboomkolom> zijn."], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEVnl> "De range van Bevestiging moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Slagboomkolom> zijn."];
   <https://data.vlaanderen.be/ns/shacl#rule> "" .
 
 <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#LaagShape/f4c0df2ffe7e21c62e2c7f5f322c4c64829315d4> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#Laag%3Alengte";
@@ -6947,7 +7171,7 @@
   <https://data.vlaanderen.be/ns/shacl#rule> "" .
 
 <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#MontagekastShape/440f3b063a60b3d33ddb75dd42f14247c90dc8ae> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#Montagekast%3ABevestiging";
-  shacl:description "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Deze relatie heeft geen richting."@nl;
+  shacl:description "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Daarnaast omvat deze relatie ook situaties waarin onderdelen niet direct, maar wel structureel of functioneel met elkaar verbonden zijn op een manier die bevestiging impliceert, bv. een trap die eindigt net onder een voetgangersbrug zonder fysieke bevestiging. Deze relatie heeft geen richting."@nl;
   shacl:name "Bevestiging"@nl;
   shacl:nodekind "sh:BlankNodeOrIRI";
   shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/slagboom-doorsteek/#Bevestiging>;
@@ -7004,7 +7228,7 @@
 
 <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#MontagekastShape/eef3aa764ce7a367564c223be90c380bc3898a27> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#Montagekast%3ABevestiging";
   shacl:class <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Codeklavier>;
-  shacl:description "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Deze relatie heeft geen richting."@nl;
+  shacl:description "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Daarnaast omvat deze relatie ook situaties waarin onderdelen niet direct, maar wel structureel of functioneel met elkaar verbonden zijn op een manier die bevestiging impliceert, bv. een trap die eindigt net onder een voetgangersbrug zonder fysieke bevestiging. Deze relatie heeft geen richting."@nl;
   shacl:name "Bevestiging"@nl;
   shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/slagboom-doorsteek/#Bevestiging>;
   <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEVnl> "De range van Bevestiging moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Codeklavier> zijn."], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEVnl> "De range van Bevestiging moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Codeklavier> zijn."];
@@ -7156,10 +7380,11 @@
   <https://data.vlaanderen.be/ns/shacl#rule> "" .
 
 <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#NietSelectieveDetectielusShape/8f120cad8fcd990b3b239beab82e34601f02f57e> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#NietSelectieveDetectielus%3AHoort%20bij";
-  shacl:class <https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Kokerafsluiting>;
+  shacl:class <https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Slagboom>,
+    <https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Kokerafsluiting>;
   shacl:description "De relatie geeft aan dat een onderdeel of collectie behoort bij, deel van of lid van een (andere) groep of collectie is."@nl;
   shacl:name "Hoort bij"@nl;
-  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEVnl> "De range van Hoort bij moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Kokerafsluiting> zijn."];
+  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEVnl> "De range van Hoort bij moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Slagboom> zijn."], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEVnl> "De range van Hoort bij moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Kokerafsluiting> zijn."];
   <https://data.vlaanderen.be/ns/shacl#rule> "" .
 
 <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#NietSelectieveDetectielusShape/94d4baca160989fc98979388e49985059a26a859> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#NietSelectieveDetectielus%3Asoort%20voertuig";
@@ -7198,7 +7423,7 @@
   shacl:description "De relatie geeft aan dat een onderdeel of collectie behoort bij, deel van of lid van een (andere) groep of collectie is."@nl;
   shacl:name "Hoort bij"@nl;
   shacl:nodekind "sh:BlankNodeOrIRI";
-  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEVnl> "De verwachte waarde voor Hoort bij is een rdfs:Resource (URI of blank node)"];
+  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEVnl> "De verwachte waarde voor Hoort bij is een rdfs:Resource (URI of blank node)"], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEVnl> "De verwachte waarde voor Hoort bij is een rdfs:Resource (URI of blank node)"];
   <https://data.vlaanderen.be/ns/shacl#rule> "" .
 
 <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#NietSelectieveDetectielusShape/f769b0da3e1a3f7c3a2b15f7f50f3b348cdb1977> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#NietSelectieveDetectielus%3Ais%20motorgevoelig";
@@ -7221,6 +7446,8 @@
     <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#PLCShape/f7248aceb7f88bc80137f911d7a37032f76cf426>,
     <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#PLCShape/21ce6fcad83046517b6d5d09e55727da8bd55fce>,
     <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#PLCShape/755808daa6cf29bd43264e941b0ae9392279ec89>,
+    <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#PLCShape/d15f714b2ed6b96e1b3f73a18a0eadabb5873da6>,
+    <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#PLCShape/d465ae7eed35aca3207ca502ba10814f215d1ab5>,
     <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#PLCShape/3432bf4f40c4cd264bde0f0ea446c424d6f8d43e>,
     <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#PLCShape/5a79880fdd6cc7ad898f8954aa6b37efdf11891e>,
     <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#PLCShape/777bf72d83efb4748f41dfdb0562a087933325fd>,
@@ -7268,7 +7495,7 @@
   <https://data.vlaanderen.be/ns/shacl#rule> "" .
 
 <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#PLCShape/440f3b063a60b3d33ddb75dd42f14247c90dc8ae> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#PLC%3ABevestiging";
-  shacl:description "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Deze relatie heeft geen richting."@nl;
+  shacl:description "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Daarnaast omvat deze relatie ook situaties waarin onderdelen niet direct, maar wel structureel of functioneel met elkaar verbonden zijn op een manier die bevestiging impliceert, bv. een trap die eindigt net onder een voetgangersbrug zonder fysieke bevestiging. Deze relatie heeft geen richting."@nl;
   shacl:name "Bevestiging"@nl;
   shacl:nodekind "sh:BlankNodeOrIRI";
   shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/slagboom-doorsteek/#Bevestiging>;
@@ -7346,6 +7573,22 @@
   <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEVnl> "De range van merk moet van het type <http://www.w3.org/2004/02/skos/core#Concept> zijn."];
   <https://data.vlaanderen.be/ns/shacl#rule> "" .
 
+<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#PLCShape/d15f714b2ed6b96e1b3f73a18a0eadabb5873da6> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#PLC%3AVoedt";
+  shacl:class <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#IOKaart>;
+  shacl:description "Deze relatie wordt enkel gelegd naar onderdelen die permanent onder spanning staan in normaal bedrijf. Aan deze relatie wordt steeds een richting toegekend van de voedinggever naar de ontvanger."@nl;
+  shacl:name "Voedt"@nl;
+  shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/slagboom-doorsteek/#Voedt>;
+  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEVnl> "De range van Voedt moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#IOKaart> zijn."];
+  <https://data.vlaanderen.be/ns/shacl#rule> "" .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#PLCShape/d465ae7eed35aca3207ca502ba10814f215d1ab5> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#PLC%3AVoedt";
+  shacl:description "Deze relatie wordt enkel gelegd naar onderdelen die permanent onder spanning staan in normaal bedrijf. Aan deze relatie wordt steeds een richting toegekend van de voedinggever naar de ontvanger."@nl;
+  shacl:name "Voedt"@nl;
+  shacl:nodekind "sh:BlankNodeOrIRI";
+  shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/slagboom-doorsteek/#Voedt>;
+  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEVnl> "De verwachte waarde voor Voedt is een rdfs:Resource (URI of blank node)"];
+  <https://data.vlaanderen.be/ns/shacl#rule> "" .
+
 <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#PLCShape/e2da45937a32c889a23cb6b41b31c50d94d31d9f> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#PLC%3Amodelnaam";
   shacl:description "De modelnaam van de PLC."@nl;
   shacl:maxCount 1;
@@ -7364,7 +7607,7 @@
 
 <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#PLCShape/eef3aa764ce7a367564c223be90c380bc3898a27> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#PLC%3ABevestiging";
   shacl:class <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#IOKaart>;
-  shacl:description "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Deze relatie heeft geen richting."@nl;
+  shacl:description "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Daarnaast omvat deze relatie ook situaties waarin onderdelen niet direct, maar wel structureel of functioneel met elkaar verbonden zijn op een manier die bevestiging impliceert, bv. een trap die eindigt net onder een voetgangersbrug zonder fysieke bevestiging. Deze relatie heeft geen richting."@nl;
   shacl:name "Bevestiging"@nl;
   shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/slagboom-doorsteek/#Bevestiging>;
   <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEVnl> "De range van Bevestiging moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#IOKaart> zijn."], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEVnl> "De range van Bevestiging moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#IOKaart> zijn."];
@@ -7381,6 +7624,10 @@
   shacl:closed false;
   shacl:property <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#RechteSteunShape/8f120cad8fcd990b3b239beab82e34601f02f57e>,
     <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#RechteSteunShape/f7248aceb7f88bc80137f911d7a37032f76cf426>,
+    <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#RechteSteunShape/3bf7689ef46d9797b43fb5f015c60b42197a00ae>,
+    <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#RechteSteunShape/9a8628d35be89dfed48ead0aa7605e783cf8f3a4>,
+    <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#RechteSteunShape/b42c2fc3298b93e7be3027ddd6bc4a84a6de4389>,
+    <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#RechteSteunShape/e8f191bb991ef06035a491e8737ca89e1787513d>,
     <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#RechteSteunShape/236f0210baaf149903750c43bbe7012c21debb2a>,
     <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#RechteSteunShape/322371a77364a50f049d46180f6192532eea26dc>,
     <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#RechteSteunShape/4f381639bb6e021939f65b4f41409d1edaeade9b>,
@@ -7401,6 +7648,14 @@
   shacl:name "type"@nl;
   shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#RechteSteun.type>;
   <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEVnl> "De range van type moet van het type <http://www.w3.org/2004/02/skos/core#Concept> zijn."];
+  <https://data.vlaanderen.be/ns/shacl#rule> "" .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#RechteSteunShape/3bf7689ef46d9797b43fb5f015c60b42197a00ae> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#RechteSteun%3Atechnische%20fiche";
+  shacl:description "De technische fiche van de rechte steun."@nl;
+  shacl:minCount 1;
+  shacl:name "technische fiche"@nl;
+  shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#RechteSteun.technischeFiche>;
+  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEVnl> "Minimaal 1 waarden verwacht voor technische fiche"];
   <https://data.vlaanderen.be/ns/shacl#rule> "" .
 
 <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#RechteSteunShape/4f381639bb6e021939f65b4f41409d1edaeade9b> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#RechteSteun%3Atype";
@@ -7426,6 +7681,30 @@
   <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEVnl> "De range van Hoort bij moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Kokerafsluiting> zijn."];
   <https://data.vlaanderen.be/ns/shacl#rule> "" .
 
+<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#RechteSteunShape/9a8628d35be89dfed48ead0aa7605e783cf8f3a4> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#RechteSteun%3Atechnische%20fiche";
+  shacl:class <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcDocument>;
+  shacl:description "De technische fiche van de rechte steun."@nl;
+  shacl:name "technische fiche"@nl;
+  shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#RechteSteun.technischeFiche>;
+  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEVnl> "De range van technische fiche moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcDocument> zijn."];
+  <https://data.vlaanderen.be/ns/shacl#rule> "" .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#RechteSteunShape/b42c2fc3298b93e7be3027ddd6bc4a84a6de4389> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#RechteSteun%3Atechnische%20fiche";
+  shacl:description "De technische fiche van de rechte steun."@nl;
+  shacl:maxCount 1;
+  shacl:name "technische fiche"@nl;
+  shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#RechteSteun.technischeFiche>;
+  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEVnl> "Maximaal 1 waarden toegelaten voor technische fiche"];
+  <https://data.vlaanderen.be/ns/shacl#rule> "" .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#RechteSteunShape/e8f191bb991ef06035a491e8737ca89e1787513d> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#RechteSteun%3Atechnische%20fiche";
+  shacl:description "De technische fiche van de rechte steun."@nl;
+  shacl:name "technische fiche"@nl;
+  shacl:nodekind "sh:BlankNodeOrIRI";
+  shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#RechteSteun.technischeFiche>;
+  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEVnl> "De verwachte waarde voor technische fiche is een rdfs:Resource (URI of blank node)"];
+  <https://data.vlaanderen.be/ns/shacl#rule> "" .
+
 <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#RechteSteunShape/f7248aceb7f88bc80137f911d7a37032f76cf426> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#RechteSteun%3AHoort%20bij";
   shacl:description "De relatie geeft aan dat een onderdeel of collectie behoort bij, deel van of lid van een (andere) groep of collectie is."@nl;
   shacl:name "Hoort bij"@nl;
@@ -7441,25 +7720,9 @@
     <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#RetroreflecterendVerkeersbordShape/75d1cacfacd9676cbe4f5d5b8b7ce77ec883559d>,
     <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#RetroreflecterendVerkeersbordShape/9d877dbc58068ba2c7e0da7c928c4df31e1519b9>,
     <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#RetroreflecterendVerkeersbordShape/df13ed1d9546e18c5e8fd173f9a7cb983911e99f>,
-    <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#RetroreflecterendVerkeersbordShape/6fdb48d0eafb0e408713b617272b920b2095238c>,
-    <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#RetroreflecterendVerkeersbordShape/847b674d3e7e1f1b70d26d2748cabf57582fa36d>,
-    <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#RetroreflecterendVerkeersbordShape/8b48c670e59de3c4d9bc68da6db42f2f72535234>,
-    <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#RetroreflecterendVerkeersbordShape/e7221521e0f1533295a8fa9c4bfc992a042515b4>,
-    <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#RetroreflecterendVerkeersbordShape/2ab2348109cfea22918eb4821bc4b8ec1baa8ae8>,
-    <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#RetroreflecterendVerkeersbordShape/3eb82604fbd59939d646873da2dc841cceab0723>,
-    <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#RetroreflecterendVerkeersbordShape/83fa6c760a00333316c9c58653f9e0fb5d1ebcbb>,
-    <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#RetroreflecterendVerkeersbordShape/a0565de8721bb4f59c296e10625be1ad996780c9>,
     <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#RetroreflecterendVerkeersbordShape/4e9a5fd40fcc1ac84ef88d4aa5d8366169ac9ae0>,
     <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#RetroreflecterendVerkeersbordShape/7def29c8d361e5ef95d4d16cde1f3b0ba7d33403>,
     <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#RetroreflecterendVerkeersbordShape/8c4a3dfc655ba461f0fd227722438c754a606f10>,
-    <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#RetroreflecterendVerkeersbordShape/2e0c33333174e07cbf17ac823c69e90bec790772>,
-    <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#RetroreflecterendVerkeersbordShape/33a3a454c02a37662631f4b79932749d3a8f72af>,
-    <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#RetroreflecterendVerkeersbordShape/c2872df0f24a6224198c83f2266cae7db1c123f0>,
-    <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#RetroreflecterendVerkeersbordShape/feeb866c56b99d6da804f754c312a73ab30d825e>,
-    <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#RetroreflecterendVerkeersbordShape/005a9c9d8d49d425c3062992abb12a5f00c0f089>,
-    <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#RetroreflecterendVerkeersbordShape/262e92329429281b1886a5b2f9426692a8050919>,
-    <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#RetroreflecterendVerkeersbordShape/36e767652db53ee995dcc3b3aaed25fa398b20e0>,
-    <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#RetroreflecterendVerkeersbordShape/9e87fcf0759d18fdbd4544b96a08337d2543c541>,
     <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#RetroreflecterendVerkeersbordShape/2b172a5b793f9ecc14ba3561b40c280a49fb0814>,
     <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#RetroreflecterendVerkeersbordShape/3e14d2731ecbf03f063421c256cc7f01c8721d3d>,
     <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#RetroreflecterendVerkeersbordShape/7fc22954620c6a7d6fb8a1a97bea5f0fe145b808>,
@@ -7473,36 +7736,12 @@
     <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#RetroreflecterendVerkeersbordShape/864cdc326c1157097b7cc41cd71094247fdc96b6>;
   shacl:targetClass <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#RetroreflecterendVerkeersbord> .
 
-<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#RetroreflecterendVerkeersbordShape/005a9c9d8d49d425c3062992abb12a5f00c0f089> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#RetroreflecterendVerkeersbord%3Akaartvoorstelling";
-  shacl:description "TODO"@nl;
-  shacl:maxCount 1;
-  shacl:name "kaartvoorstelling"@nl;
-  shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#RetroreflecterendVerkeersbord.kaartvoorstelling>;
-  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEVnl> "Maximaal 1 waarden toegelaten voor kaartvoorstelling"];
-  <https://data.vlaanderen.be/ns/shacl#rule> "" .
-
 <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#RetroreflecterendVerkeersbordShape/060637c6c234c6dc732b293ea64d150f8cc3d912> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#RetroreflecterendVerkeersbord%3Aoppervlakte";
   shacl:description "De oppervlakte van het beeldvlak van een verkeersbord."@nl;
   shacl:maxCount 1;
   shacl:name "oppervlakte"@nl;
   shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#RetroreflecterendVerkeersbord.oppervlakte>;
   <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEVnl> "Maximaal 1 waarden toegelaten voor oppervlakte"];
-  <https://data.vlaanderen.be/ns/shacl#rule> "" .
-
-<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#RetroreflecterendVerkeersbordShape/262e92329429281b1886a5b2f9426692a8050919> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#RetroreflecterendVerkeersbord%3Akaartvoorstelling";
-  shacl:description "TODO"@nl;
-  shacl:minCount 1;
-  shacl:name "kaartvoorstelling"@nl;
-  shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#RetroreflecterendVerkeersbord.kaartvoorstelling>;
-  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEVnl> "Minimaal 1 waarden verwacht voor kaartvoorstelling"];
-  <https://data.vlaanderen.be/ns/shacl#rule> "" .
-
-<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#RetroreflecterendVerkeersbordShape/2ab2348109cfea22918eb4821bc4b8ec1baa8ae8> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#RetroreflecterendVerkeersbord%3Afabricage%20type";
-  shacl:class skos:Concept;
-  shacl:description "Genormaliseerde referentie waaraan het verkeersbord voldoet."@nl;
-  shacl:name "fabricage type"@nl;
-  shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#RetroreflecterendVerkeersbord.fabricageType>;
-  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEVnl> "De range van fabricage type moet van het type <http://www.w3.org/2004/02/skos/core#Concept> zijn."];
   <https://data.vlaanderen.be/ns/shacl#rule> "" .
 
 <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#RetroreflecterendVerkeersbordShape/2b172a5b793f9ecc14ba3561b40c280a49fb0814> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#RetroreflecterendVerkeersbord%3Akleur%20achterkant";
@@ -7513,36 +7752,12 @@
   <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEVnl> "De range van kleur achterkant moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DteKleurRAL> zijn."];
   <https://data.vlaanderen.be/ns/shacl#rule> "" .
 
-<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#RetroreflecterendVerkeersbordShape/2e0c33333174e07cbf17ac823c69e90bec790772> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#RetroreflecterendVerkeersbord%3Ahorizontale%20verschuiving";
-  shacl:class <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInMillimeter>;
-  shacl:description "De verschuiving van het bord, gemeten van het midden van het bord tot de centrale as van de opstelling. Een positieve waarde duidt op een verschuiving naar rechts, een negatieve waarde op een verschuiving naar links"@nl;
-  shacl:name "horizontale verschuiving"@nl;
-  shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#RetroreflecterendVerkeersbord.horizontaleVerschuiving>;
-  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEVnl> "De range van horizontale verschuiving moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInMillimeter> zijn."];
-  <https://data.vlaanderen.be/ns/shacl#rule> "" .
-
-<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#RetroreflecterendVerkeersbordShape/33a3a454c02a37662631f4b79932749d3a8f72af> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#RetroreflecterendVerkeersbord%3Ahorizontale%20verschuiving";
-  shacl:description "De verschuiving van het bord, gemeten van het midden van het bord tot de centrale as van de opstelling. Een positieve waarde duidt op een verschuiving naar rechts, een negatieve waarde op een verschuiving naar links"@nl;
-  shacl:minCount 1;
-  shacl:name "horizontale verschuiving"@nl;
-  shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#RetroreflecterendVerkeersbord.horizontaleVerschuiving>;
-  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEVnl> "Minimaal 1 waarden verwacht voor horizontale verschuiving"];
-  <https://data.vlaanderen.be/ns/shacl#rule> "" .
-
 <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#RetroreflecterendVerkeersbordShape/3432bf4f40c4cd264bde0f0ea446c424d6f8d43e> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#RetroreflecterendVerkeersbord%3Amerk";
   shacl:description "De merknaam van het verkeersbord; duidt op de leverancier of producent van het verkeersbord."@nl;
   shacl:minCount 1;
   shacl:name "merk"@nl;
   shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#RetroreflecterendVerkeersbord.merk>;
   <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEVnl> "Minimaal 1 waarden verwacht voor merk"];
-  <https://data.vlaanderen.be/ns/shacl#rule> "" .
-
-<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#RetroreflecterendVerkeersbordShape/36e767652db53ee995dcc3b3aaed25fa398b20e0> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#RetroreflecterendVerkeersbord%3Akaartvoorstelling";
-  shacl:class <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcDocument>;
-  shacl:description "TODO"@nl;
-  shacl:name "kaartvoorstelling"@nl;
-  shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#RetroreflecterendVerkeersbord.kaartvoorstelling>;
-  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEVnl> "De range van kaartvoorstelling moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcDocument> zijn."];
   <https://data.vlaanderen.be/ns/shacl#rule> "" .
 
 <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#RetroreflecterendVerkeersbordShape/3e14d2731ecbf03f063421c256cc7f01c8721d3d> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#RetroreflecterendVerkeersbord%3Akleur%20achterkant";
@@ -7553,16 +7768,8 @@
   <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEVnl> "Maximaal 1 waarden toegelaten voor kleur achterkant"];
   <https://data.vlaanderen.be/ns/shacl#rule> "" .
 
-<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#RetroreflecterendVerkeersbordShape/3eb82604fbd59939d646873da2dc841cceab0723> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#RetroreflecterendVerkeersbord%3Afabricage%20type";
-  shacl:description "Genormaliseerde referentie waaraan het verkeersbord voldoet."@nl;
-  shacl:maxCount 1;
-  shacl:name "fabricage type"@nl;
-  shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#RetroreflecterendVerkeersbord.fabricageType>;
-  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEVnl> "Maximaal 1 waarden toegelaten voor fabricage type"];
-  <https://data.vlaanderen.be/ns/shacl#rule> "" .
-
 <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#RetroreflecterendVerkeersbordShape/440f3b063a60b3d33ddb75dd42f14247c90dc8ae> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#RetroreflecterendVerkeersbord%3ABevestiging";
-  shacl:description "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Deze relatie heeft geen richting."@nl;
+  shacl:description "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Daarnaast omvat deze relatie ook situaties waarin onderdelen niet direct, maar wel structureel of functioneel met elkaar verbonden zijn op een manier die bevestiging impliceert, bv. een trap die eindigt net onder een voetgangersbrug zonder fysieke bevestiging. Deze relatie heeft geen richting."@nl;
   shacl:name "Bevestiging"@nl;
   shacl:nodekind "sh:BlankNodeOrIRI";
   shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/slagboom-doorsteek/#Bevestiging>;
@@ -7591,14 +7798,6 @@
   shacl:name "afwerkingsgraad"@nl;
   shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#RetroreflecterendVerkeersbord.afwerkingsgraad>;
   <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEVnl> "Maximaal 1 waarden toegelaten voor afwerkingsgraad"];
-  <https://data.vlaanderen.be/ns/shacl#rule> "" .
-
-<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#RetroreflecterendVerkeersbordShape/6fdb48d0eafb0e408713b617272b920b2095238c> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#RetroreflecterendVerkeersbord%3Afabricage%20datum";
-  shacl:datatype xsd:date;
-  shacl:description "De datum waarop het bord werd gebouwd."@nl;
-  shacl:name "fabricage datum"@nl;
-  shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#RetroreflecterendVerkeersbord.fabricageDatum>;
-  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEVnl> "De range van fabricage datum moet van het type <http://www.w3.org/2001/XMLSchema#date> zijn."];
   <https://data.vlaanderen.be/ns/shacl#rule> "" .
 
 <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#RetroreflecterendVerkeersbordShape/73033950f62e71f057baeb616946cd651652d7b7> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#RetroreflecterendVerkeersbord%3Aoppervlakte";
@@ -7641,36 +7840,12 @@
   <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEVnl> "De verwachte waarde voor kleur achterkant is een rdfs:Resource (URI of blank node)"];
   <https://data.vlaanderen.be/ns/shacl#rule> "" .
 
-<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#RetroreflecterendVerkeersbordShape/83fa6c760a00333316c9c58653f9e0fb5d1ebcbb> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#RetroreflecterendVerkeersbord%3Afabricage%20type";
-  shacl:description "Genormaliseerde referentie waaraan het verkeersbord voldoet."@nl;
-  shacl:minCount 1;
-  shacl:name "fabricage type"@nl;
-  shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#RetroreflecterendVerkeersbord.fabricageType>;
-  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEVnl> "Minimaal 1 waarden verwacht voor fabricage type"];
-  <https://data.vlaanderen.be/ns/shacl#rule> "" .
-
-<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#RetroreflecterendVerkeersbordShape/847b674d3e7e1f1b70d26d2748cabf57582fa36d> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#RetroreflecterendVerkeersbord%3Afabricage%20datum";
-  shacl:description "De datum waarop het bord werd gebouwd."@nl;
-  shacl:maxCount 1;
-  shacl:name "fabricage datum"@nl;
-  shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#RetroreflecterendVerkeersbord.fabricageDatum>;
-  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEVnl> "Maximaal 1 waarden toegelaten voor fabricage datum"];
-  <https://data.vlaanderen.be/ns/shacl#rule> "" .
-
 <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#RetroreflecterendVerkeersbordShape/864cdc326c1157097b7cc41cd71094247fdc96b6> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#RetroreflecterendVerkeersbord%3Aoppervlakte";
   shacl:class <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInVierkanteMeter>;
   shacl:description "De oppervlakte van het beeldvlak van een verkeersbord."@nl;
   shacl:name "oppervlakte"@nl;
   shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#RetroreflecterendVerkeersbord.oppervlakte>;
   <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEVnl> "De range van oppervlakte moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInVierkanteMeter> zijn."];
-  <https://data.vlaanderen.be/ns/shacl#rule> "" .
-
-<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#RetroreflecterendVerkeersbordShape/8b48c670e59de3c4d9bc68da6db42f2f72535234> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#RetroreflecterendVerkeersbord%3Afabricage%20datum";
-  shacl:description "De datum waarop het bord werd gebouwd."@nl;
-  shacl:minCount 1;
-  shacl:name "fabricage datum"@nl;
-  shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#RetroreflecterendVerkeersbord.fabricageDatum>;
-  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEVnl> "Minimaal 1 waarden verwacht voor fabricage datum"];
   <https://data.vlaanderen.be/ns/shacl#rule> "" .
 
 <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#RetroreflecterendVerkeersbordShape/8c4a3dfc655ba461f0fd227722438c754a606f10> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#RetroreflecterendVerkeersbord%3Agrootteorde";
@@ -7689,36 +7864,12 @@
   <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEVnl> "De range van afwerkingsgraad moet van het type <http://www.w3.org/2004/02/skos/core#Concept> zijn."];
   <https://data.vlaanderen.be/ns/shacl#rule> "" .
 
-<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#RetroreflecterendVerkeersbordShape/9e87fcf0759d18fdbd4544b96a08337d2543c541> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#RetroreflecterendVerkeersbord%3Akaartvoorstelling";
-  shacl:description "TODO"@nl;
-  shacl:name "kaartvoorstelling"@nl;
-  shacl:nodekind "sh:BlankNodeOrIRI";
-  shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#RetroreflecterendVerkeersbord.kaartvoorstelling>;
-  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEVnl> "De verwachte waarde voor kaartvoorstelling is een rdfs:Resource (URI of blank node)"];
-  <https://data.vlaanderen.be/ns/shacl#rule> "" .
-
-<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#RetroreflecterendVerkeersbordShape/a0565de8721bb4f59c296e10625be1ad996780c9> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#RetroreflecterendVerkeersbord%3Afabricage%20type";
-  shacl:description "Genormaliseerde referentie waaraan het verkeersbord voldoet."@nl;
-  shacl:name "fabricage type"@nl;
-  shacl:nodekind "sh:BlankNodeOrIRI";
-  shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#RetroreflecterendVerkeersbord.fabricageType>;
-  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEVnl> "De verwachte waarde voor fabricage type is een rdfs:Resource (URI of blank node)"];
-  <https://data.vlaanderen.be/ns/shacl#rule> "" .
-
 <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#RetroreflecterendVerkeersbordShape/bac433ec0dc21ecb75d980ef80259e206a4bd73a> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#RetroreflecterendVerkeersbord%3Amerk";
   shacl:class skos:Concept;
   shacl:description "De merknaam van het verkeersbord; duidt op de leverancier of producent van het verkeersbord."@nl;
   shacl:name "merk"@nl;
   shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#RetroreflecterendVerkeersbord.merk>;
   <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEVnl> "De range van merk moet van het type <http://www.w3.org/2004/02/skos/core#Concept> zijn."];
-  <https://data.vlaanderen.be/ns/shacl#rule> "" .
-
-<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#RetroreflecterendVerkeersbordShape/c2872df0f24a6224198c83f2266cae7db1c123f0> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#RetroreflecterendVerkeersbord%3Ahorizontale%20verschuiving";
-  shacl:description "De verschuiving van het bord, gemeten van het midden van het bord tot de centrale as van de opstelling. Een positieve waarde duidt op een verschuiving naar rechts, een negatieve waarde op een verschuiving naar links"@nl;
-  shacl:name "horizontale verschuiving"@nl;
-  shacl:nodekind "sh:BlankNodeOrIRI";
-  shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#RetroreflecterendVerkeersbord.horizontaleVerschuiving>;
-  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEVnl> "De verwachte waarde voor horizontale verschuiving is een rdfs:Resource (URI of blank node)"];
   <https://data.vlaanderen.be/ns/shacl#rule> "" .
 
 <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#RetroreflecterendVerkeersbordShape/df13ed1d9546e18c5e8fd173f9a7cb983911e99f> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#RetroreflecterendVerkeersbord%3Aafwerkingsgraad";
@@ -7737,28 +7888,12 @@
   <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEVnl> "Minimaal 1 waarden verwacht voor kleur achterkant"];
   <https://data.vlaanderen.be/ns/shacl#rule> "" .
 
-<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#RetroreflecterendVerkeersbordShape/e7221521e0f1533295a8fa9c4bfc992a042515b4> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#RetroreflecterendVerkeersbord%3Afabricage%20datum";
-  shacl:description "De datum waarop het bord werd gebouwd."@nl;
-  shacl:name "fabricage datum"@nl;
-  shacl:nodekind "sh:Literal";
-  shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#RetroreflecterendVerkeersbord.fabricageDatum>;
-  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEVnl> "De verwachte waarde voor fabricage datum is een Literal"];
-  <https://data.vlaanderen.be/ns/shacl#rule> "" .
-
 <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#RetroreflecterendVerkeersbordShape/eef3aa764ce7a367564c223be90c380bc3898a27> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#RetroreflecterendVerkeersbord%3ABevestiging";
   shacl:class <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Slagboomarm>;
-  shacl:description "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Deze relatie heeft geen richting."@nl;
+  shacl:description "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Daarnaast omvat deze relatie ook situaties waarin onderdelen niet direct, maar wel structureel of functioneel met elkaar verbonden zijn op een manier die bevestiging impliceert, bv. een trap die eindigt net onder een voetgangersbrug zonder fysieke bevestiging. Deze relatie heeft geen richting."@nl;
   shacl:name "Bevestiging"@nl;
   shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/slagboom-doorsteek/#Bevestiging>;
   <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEVnl> "De range van Bevestiging moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Slagboomarm> zijn."], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEVnl> "De range van Bevestiging moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Slagboomarm> zijn."];
-  <https://data.vlaanderen.be/ns/shacl#rule> "" .
-
-<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#RetroreflecterendVerkeersbordShape/feeb866c56b99d6da804f754c312a73ab30d825e> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#RetroreflecterendVerkeersbord%3Ahorizontale%20verschuiving";
-  shacl:description "De verschuiving van het bord, gemeten van het midden van het bord tot de centrale as van de opstelling. Een positieve waarde duidt op een verschuiving naar rechts, een negatieve waarde op een verschuiving naar links"@nl;
-  shacl:maxCount 1;
-  shacl:name "horizontale verschuiving"@nl;
-  shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#RetroreflecterendVerkeersbord.horizontaleVerschuiving>;
-  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEVnl> "Maximaal 1 waarden toegelaten voor horizontale verschuiving"];
   <https://data.vlaanderen.be/ns/shacl#rule> "" .
 
 <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#SeinlantaarnShape> a shacl:NodeShape;
@@ -8061,6 +8196,10 @@
   <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEVnl> "Maximaal 1 waarden toegelaten voor serienummer"];
   <https://data.vlaanderen.be/ns/shacl#rule> "" .
 
+<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#SlagboomGroepShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#SlagboomGroep> .
+
 <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#SlagboomShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:property <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#SlagboomShape/8f120cad8fcd990b3b239beab82e34601f02f57e>,
@@ -8104,17 +8243,18 @@
   <https://data.vlaanderen.be/ns/shacl#rule> "" .
 
 <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#SlagboomShape/8f120cad8fcd990b3b239beab82e34601f02f57e> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#Slagboom%3AHoort%20bij";
-  shacl:class <https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Kokerafsluiting>;
+  shacl:class <https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#SlagboomGroep>,
+    <https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Kokerafsluiting>;
   shacl:description "De relatie geeft aan dat een onderdeel of collectie behoort bij, deel van of lid van een (andere) groep of collectie is."@nl;
   shacl:name "Hoort bij"@nl;
-  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEVnl> "De range van Hoort bij moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Kokerafsluiting> zijn."];
+  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEVnl> "De range van Hoort bij moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#SlagboomGroep> zijn."], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEVnl> "De range van Hoort bij moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Kokerafsluiting> zijn."];
   <https://data.vlaanderen.be/ns/shacl#rule> "" .
 
 <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#SlagboomShape/f7248aceb7f88bc80137f911d7a37032f76cf426> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#Slagboom%3AHoort%20bij";
   shacl:description "De relatie geeft aan dat een onderdeel of collectie behoort bij, deel van of lid van een (andere) groep of collectie is."@nl;
   shacl:name "Hoort bij"@nl;
   shacl:nodekind "sh:BlankNodeOrIRI";
-  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEVnl> "De verwachte waarde voor Hoort bij is een rdfs:Resource (URI of blank node)"];
+  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEVnl> "De verwachte waarde voor Hoort bij is een rdfs:Resource (URI of blank node)"], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEVnl> "De verwachte waarde voor Hoort bij is een rdfs:Resource (URI of blank node)"];
   <https://data.vlaanderen.be/ns/shacl#rule> "" .
 
 <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#SlagboomarmShape> a shacl:NodeShape;
@@ -8182,7 +8322,7 @@
   <https://data.vlaanderen.be/ns/shacl#rule> "" .
 
 <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#SlagboomarmShape/440f3b063a60b3d33ddb75dd42f14247c90dc8ae> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#Slagboomarm%3ABevestiging";
-  shacl:description "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Deze relatie heeft geen richting."@nl;
+  shacl:description "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Daarnaast omvat deze relatie ook situaties waarin onderdelen niet direct, maar wel structureel of functioneel met elkaar verbonden zijn op een manier die bevestiging impliceert, bv. een trap die eindigt net onder een voetgangersbrug zonder fysieke bevestiging. Deze relatie heeft geen richting."@nl;
   shacl:name "Bevestiging"@nl;
   shacl:nodekind "sh:BlankNodeOrIRI";
   shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/slagboom-doorsteek/#Bevestiging>;
@@ -8285,13 +8425,13 @@
   <https://data.vlaanderen.be/ns/shacl#rule> "" .
 
 <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#SlagboomarmShape/eef3aa764ce7a367564c223be90c380bc3898a27> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#Slagboomarm%3ABevestiging";
-  shacl:class <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#SlagboomarmVerlichting>,
-    <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Bevestigingsbeugel>,
-    <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Bel>;
-  shacl:description "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Deze relatie heeft geen richting."@nl;
+  shacl:class <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Bevestigingsbeugel>,
+    <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Bel>,
+    <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#SlagboomarmVerlichting>;
+  shacl:description "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Daarnaast omvat deze relatie ook situaties waarin onderdelen niet direct, maar wel structureel of functioneel met elkaar verbonden zijn op een manier die bevestiging impliceert, bv. een trap die eindigt net onder een voetgangersbrug zonder fysieke bevestiging. Deze relatie heeft geen richting."@nl;
   shacl:name "Bevestiging"@nl;
   shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/slagboom-doorsteek/#Bevestiging>;
-  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEVnl> "De range van Bevestiging moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#SlagboomarmVerlichting> zijn."], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEVnl> "De range van Bevestiging moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#SlagboomarmVerlichting> zijn."], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEVnl> "De range van Bevestiging moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Bevestigingsbeugel> zijn."], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEVnl> "De range van Bevestiging moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Bevestigingsbeugel> zijn."], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEVnl> "De range van Bevestiging moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Bel> zijn."], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEVnl> "De range van Bevestiging moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Bel> zijn."];
+  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEVnl> "De range van Bevestiging moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Bevestigingsbeugel> zijn."], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEVnl> "De range van Bevestiging moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Bevestigingsbeugel> zijn."], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEVnl> "De range van Bevestiging moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Bel> zijn."], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEVnl> "De range van Bevestiging moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Bel> zijn."], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEVnl> "De range van Bevestiging moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#SlagboomarmVerlichting> zijn."], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEVnl> "De range van Bevestiging moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#SlagboomarmVerlichting> zijn."];
   <https://data.vlaanderen.be/ns/shacl#rule> "" .
 
 <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#SlagboomarmShape/f7248aceb7f88bc80137f911d7a37032f76cf426> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#Slagboomarm%3AHoort%20bij";
@@ -8382,7 +8522,7 @@
   <https://data.vlaanderen.be/ns/shacl#rule> "" .
 
 <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#SlagboomkolomShape/440f3b063a60b3d33ddb75dd42f14247c90dc8ae> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#Slagboomkolom%3ABevestiging";
-  shacl:description "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Deze relatie heeft geen richting."@nl;
+  shacl:description "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Daarnaast omvat deze relatie ook situaties waarin onderdelen niet direct, maar wel structureel of functioneel met elkaar verbonden zijn op een manier die bevestiging impliceert, bv. een trap die eindigt net onder een voetgangersbrug zonder fysieke bevestiging. Deze relatie heeft geen richting."@nl;
   shacl:name "Bevestiging"@nl;
   shacl:nodekind "sh:BlankNodeOrIRI";
   shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/slagboom-doorsteek/#Bevestiging>;
@@ -8509,12 +8649,12 @@
   <https://data.vlaanderen.be/ns/shacl#rule> "" .
 
 <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#SlagboomkolomShape/eef3aa764ce7a367564c223be90c380bc3898a27> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#Slagboomkolom%3ABevestiging";
-  shacl:class <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Bel>,
-    <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Slagboomarm>;
-  shacl:description "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Deze relatie heeft geen richting."@nl;
+  shacl:class <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Slagboomarm>,
+    <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Bel>;
+  shacl:description "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Daarnaast omvat deze relatie ook situaties waarin onderdelen niet direct, maar wel structureel of functioneel met elkaar verbonden zijn op een manier die bevestiging impliceert, bv. een trap die eindigt net onder een voetgangersbrug zonder fysieke bevestiging. Deze relatie heeft geen richting."@nl;
   shacl:name "Bevestiging"@nl;
   shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/slagboom-doorsteek/#Bevestiging>;
-  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEVnl> "De range van Bevestiging moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Bel> zijn."], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEVnl> "De range van Bevestiging moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Bel> zijn."], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEVnl> "De range van Bevestiging moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Slagboomarm> zijn."], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEVnl> "De range van Bevestiging moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Slagboomarm> zijn."];
+  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEVnl> "De range van Bevestiging moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Slagboomarm> zijn."], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEVnl> "De range van Bevestiging moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Slagboomarm> zijn."], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEVnl> "De range van Bevestiging moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Bel> zijn."], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEVnl> "De range van Bevestiging moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Bel> zijn."];
   <https://data.vlaanderen.be/ns/shacl#rule> "" .
 
 <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#SlagboomkolomShape/f7248aceb7f88bc80137f911d7a37032f76cf426> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#Slagboomkolom%3AHoort%20bij";
@@ -8599,7 +8739,7 @@
   <https://data.vlaanderen.be/ns/shacl#rule> "" .
 
 <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#SokkelShape/440f3b063a60b3d33ddb75dd42f14247c90dc8ae> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#Sokkel%3ABevestiging";
-  shacl:description "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Deze relatie heeft geen richting."@nl;
+  shacl:description "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Daarnaast omvat deze relatie ook situaties waarin onderdelen niet direct, maar wel structureel of functioneel met elkaar verbonden zijn op een manier die bevestiging impliceert, bv. een trap die eindigt net onder een voetgangersbrug zonder fysieke bevestiging. Deze relatie heeft geen richting."@nl;
   shacl:name "Bevestiging"@nl;
   shacl:nodekind "sh:BlankNodeOrIRI";
   shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/slagboom-doorsteek/#Bevestiging>;
@@ -8607,7 +8747,7 @@
   <https://data.vlaanderen.be/ns/shacl#rule> "" .
 
 <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#SokkelShape/49f36b168dfd8d372dd964a17ca93fcf51d5d515> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#Sokkel%3ABevestiging%20(target)";
-  shacl:description "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Deze relatie heeft geen richting."@nl;
+  shacl:description "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Daarnaast omvat deze relatie ook situaties waarin onderdelen niet direct, maar wel structureel of functioneel met elkaar verbonden zijn op een manier die bevestiging impliceert, bv. een trap die eindigt net onder een voetgangersbrug zonder fysieke bevestiging. Deze relatie heeft geen richting."@nl;
   shacl:name "Bevestiging (target)"@nl;
   shacl:nodekind "sh:BlankNodeOrIRI";
   shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/slagboom-doorsteek/#Bevestiging>;
@@ -8671,7 +8811,7 @@
   <https://data.vlaanderen.be/ns/shacl#rule> "" .
 
 <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#SokkelShape/93f5b3603ab653f80be75bbdad3d3495fa9e5872> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#Sokkel%3ABevestiging%20(source)";
-  shacl:description "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Deze relatie heeft geen richting."@nl;
+  shacl:description "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Daarnaast omvat deze relatie ook situaties waarin onderdelen niet direct, maar wel structureel of functioneel met elkaar verbonden zijn op een manier die bevestiging impliceert, bv. een trap die eindigt net onder een voetgangersbrug zonder fysieke bevestiging. Deze relatie heeft geen richting."@nl;
   shacl:name "Bevestiging (source)"@nl;
   shacl:nodekind "sh:BlankNodeOrIRI";
   shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/slagboom-doorsteek/#Bevestiging>;
@@ -8740,7 +8880,7 @@
 
 <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#SokkelShape/d34de33d28e2492d813948dbd02d4ee8bdd328f5> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#Sokkel%3ABevestiging%20(target)";
   shacl:class <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Sokkel>;
-  shacl:description "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Deze relatie heeft geen richting."@nl;
+  shacl:description "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Daarnaast omvat deze relatie ook situaties waarin onderdelen niet direct, maar wel structureel of functioneel met elkaar verbonden zijn op een manier die bevestiging impliceert, bv. een trap die eindigt net onder een voetgangersbrug zonder fysieke bevestiging. Deze relatie heeft geen richting."@nl;
   shacl:name "Bevestiging (target)"@nl;
   shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/slagboom-doorsteek/#Bevestiging>;
   <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEVnl> "De range van Bevestiging (target) moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Sokkel> zijn."];
@@ -8748,7 +8888,7 @@
 
 <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#SokkelShape/eef3aa764ce7a367564c223be90c380bc3898a27> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#Sokkel%3ABevestiging";
   shacl:class <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Slagboomkolom>;
-  shacl:description "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Deze relatie heeft geen richting."@nl;
+  shacl:description "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Daarnaast omvat deze relatie ook situaties waarin onderdelen niet direct, maar wel structureel of functioneel met elkaar verbonden zijn op een manier die bevestiging impliceert, bv. een trap die eindigt net onder een voetgangersbrug zonder fysieke bevestiging. Deze relatie heeft geen richting."@nl;
   shacl:name "Bevestiging"@nl;
   shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/slagboom-doorsteek/#Bevestiging>;
   <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEVnl> "De range van Bevestiging moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Slagboomkolom> zijn."], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEVnl> "De range van Bevestiging moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Slagboomkolom> zijn."];
@@ -8764,7 +8904,7 @@
 
 <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#SokkelShape/fdaf0749d31093b0ec3b34ed143cb6550c64324f> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#Sokkel%3ABevestiging%20(source)";
   shacl:class <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Sokkel>;
-  shacl:description "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Deze relatie heeft geen richting."@nl;
+  shacl:description "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Daarnaast omvat deze relatie ook situaties waarin onderdelen niet direct, maar wel structureel of functioneel met elkaar verbonden zijn op een manier die bevestiging impliceert, bv. een trap die eindigt net onder een voetgangersbrug zonder fysieke bevestiging. Deze relatie heeft geen richting."@nl;
   shacl:name "Bevestiging (source)"@nl;
   shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/slagboom-doorsteek/#Bevestiging>;
   <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEVnl> "De range van Bevestiging (source) moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Sokkel> zijn."];
@@ -9037,13 +9177,14 @@
   <https://data.vlaanderen.be/ns/shacl#rule> "" .
 
 <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#StroomkringShape/d15f714b2ed6b96e1b3f73a18a0eadabb5873da6> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#Stroomkring%3AVoedt";
-  shacl:class <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Montagekast>,
+  shacl:class <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Contactor>,
     <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Bel>,
-    <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Contactor>;
+    <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#IOKaart>,
+    <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Montagekast>;
   shacl:description "Deze relatie wordt enkel gelegd naar onderdelen die permanent onder spanning staan in normaal bedrijf. Aan deze relatie wordt steeds een richting toegekend van de voedinggever naar de ontvanger."@nl;
   shacl:name "Voedt"@nl;
   shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/slagboom-doorsteek/#Voedt>;
-  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEVnl> "De range van Voedt moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Montagekast> zijn."], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEVnl> "De range van Voedt moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Bel> zijn."], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEVnl> "De range van Voedt moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Contactor> zijn."];
+  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEVnl> "De range van Voedt moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Contactor> zijn."], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEVnl> "De range van Voedt moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Bel> zijn."], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEVnl> "De range van Voedt moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#IOKaart> zijn."], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEVnl> "De range van Voedt moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Montagekast> zijn."];
   <https://data.vlaanderen.be/ns/shacl#rule> "" .
 
 <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#StroomkringShape/d465ae7eed35aca3207ca502ba10814f215d1ab5> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#Stroomkring%3AVoedt";
@@ -9051,7 +9192,7 @@
   shacl:name "Voedt"@nl;
   shacl:nodekind "sh:BlankNodeOrIRI";
   shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/slagboom-doorsteek/#Voedt>;
-  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEVnl> "De verwachte waarde voor Voedt is een rdfs:Resource (URI of blank node)"], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEVnl> "De verwachte waarde voor Voedt is een rdfs:Resource (URI of blank node)"], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEVnl> "De verwachte waarde voor Voedt is een rdfs:Resource (URI of blank node)"];
+  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEVnl> "De verwachte waarde voor Voedt is een rdfs:Resource (URI of blank node)"], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEVnl> "De verwachte waarde voor Voedt is een rdfs:Resource (URI of blank node)"], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEVnl> "De verwachte waarde voor Voedt is een rdfs:Resource (URI of blank node)"], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEVnl> "De verwachte waarde voor Voedt is een rdfs:Resource (URI of blank node)"];
   <https://data.vlaanderen.be/ns/shacl#rule> "" .
 
 <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#SturingShape> a shacl:NodeShape;
@@ -9068,7 +9209,9 @@
 
 <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#VerkeersbordShape> a shacl:NodeShape;
   shacl:closed false;
-  shacl:property <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#VerkeersbordShape/130d5e51505e137f3acea67906a27f54ef80d5ca>,
+  shacl:property <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#VerkeersbordShape/0cdb7a14f1fd69541abb199dec3dcf42ef089a9f>,
+    <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#VerkeersbordShape/c31c12c7b7d8a36cd718c597eb6ab1af00d7095a>,
+    <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#VerkeersbordShape/130d5e51505e137f3acea67906a27f54ef80d5ca>,
     <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#VerkeersbordShape/1e69ffdee8b1b3c100b9cf2b5df55adf26ee7d56>,
     <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#VerkeersbordShape/dd43842154023bd60275e1ef744c27638b47c57a>,
     <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#VerkeersbordShape/fb6e288b40316fb97a88181df5ee0e605222c6ef>,
@@ -9099,6 +9242,13 @@
   shacl:name "operationele status"@nl;
   shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Verkeersbord.operationeleStatus>;
   <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEVnl> "Maximaal 1 waarden toegelaten voor operationele status"];
+  <https://data.vlaanderen.be/ns/shacl#rule> "" .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#VerkeersbordShape/0cdb7a14f1fd69541abb199dec3dcf42ef089a9f> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#Verkeersbord%3AIs%20ontwerp%20van";
+  shacl:description "TODO"@nl;
+  shacl:name "Is ontwerp van"@nl;
+  shacl:nodekind "sh:BlankNodeOrIRI";
+  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEVnl> "De verwachte waarde voor Is ontwerp van is een rdfs:Resource (URI of blank node)"];
   <https://data.vlaanderen.be/ns/shacl#rule> "" .
 
 <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#VerkeersbordShape/130d5e51505e137f3acea67906a27f54ef80d5ca> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#Verkeersbord%3Aaanzicht";
@@ -9235,6 +9385,13 @@
   shacl:name "fabricagevoorschrift"@nl;
   shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Verkeersbord.fabricagevoorschrift>;
   <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEVnl> "De range van fabricagevoorschrift moet van het type <http://www.w3.org/2001/XMLSchema#string> zijn."];
+  <https://data.vlaanderen.be/ns/shacl#rule> "" .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#VerkeersbordShape/c31c12c7b7d8a36cd718c597eb6ab1af00d7095a> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#Verkeersbord%3AIs%20ontwerp%20van";
+  shacl:class <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Verkeersbord>;
+  shacl:description "TODO"@nl;
+  shacl:name "Is ontwerp van"@nl;
+  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEVnl> "De range van Is ontwerp van moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Verkeersbord> zijn."];
   <https://data.vlaanderen.be/ns/shacl#rule> "" .
 
 <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#VerkeersbordShape/d67e26d8c4673afec0d98900b2a199ef09f82c4e> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#Verkeersbord%3Aafmeting";
@@ -9390,7 +9547,7 @@
   <https://data.vlaanderen.be/ns/shacl#rule> "" .
 
 <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#VerkeerslichtShape/440f3b063a60b3d33ddb75dd42f14247c90dc8ae> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#Verkeerslicht%3ABevestiging";
-  shacl:description "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Deze relatie heeft geen richting."@nl;
+  shacl:description "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Daarnaast omvat deze relatie ook situaties waarin onderdelen niet direct, maar wel structureel of functioneel met elkaar verbonden zijn op een manier die bevestiging impliceert, bv. een trap die eindigt net onder een voetgangersbrug zonder fysieke bevestiging. Deze relatie heeft geen richting."@nl;
   shacl:name "Bevestiging"@nl;
   shacl:nodekind "sh:BlankNodeOrIRI";
   shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/slagboom-doorsteek/#Bevestiging>;
@@ -9494,7 +9651,7 @@
 
 <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#VerkeerslichtShape/eef3aa764ce7a367564c223be90c380bc3898a27> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEV#Verkeerslicht%3ABevestiging";
   shacl:class <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Seinlantaarn>;
-  shacl:description "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Deze relatie heeft geen richting."@nl;
+  shacl:description "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Daarnaast omvat deze relatie ook situaties waarin onderdelen niet direct, maar wel structureel of functioneel met elkaar verbonden zijn op een manier die bevestiging impliceert, bv. een trap die eindigt net onder een voetgangersbrug zonder fysieke bevestiging. Deze relatie heeft geen richting."@nl;
   shacl:name "Bevestiging"@nl;
   shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/slagboom-doorsteek/#Bevestiging>;
   <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEVnl> "De range van Bevestiging moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Seinlantaarn> zijn."], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/slagboom-doorsteek/ontwerpdocument/DEVnl> "De range van Bevestiging moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Seinlantaarn> zijn."];

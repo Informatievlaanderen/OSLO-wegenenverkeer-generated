@@ -2,7 +2,7 @@
   "metadata": {
     "title": "Waterlopen",
     "uri": "http://fixme.com",
-    "issued": "18-12-2024",
+    "issued": "3-10-2025",
     "filename": "waterlopen",
     "navigation": {
       "prev": "",
@@ -13,15 +13,57 @@
     "documentconfig": {},
     "status": "https://data.vlaanderen.be/doc/concept/StandaardStatus/KandidaatStandaard",
     "statuslabel": "Onbekend",
-    "repositoryurl": "https://github.com/Informatievlaanderen/OSLOthema-wegenenverkeer/tree/cd54f35ed58706ea9fde55910810e93065d5851c",
-    "changelogurl": "https://github.com/Informatievlaanderen/OSLOthema-wegenenverkeer/blob/cd54f35ed58706ea9fde55910810e93065d5851c/CHANGELOG",
-    "feedbackurl": "https://docs.google.com/forms/d/e/1FAIpQLSeaxOnrCkcarNHWI21YfPJ7sZChHVzOB2-P9ptzxkD9YX69-g/viewform",
+    "repositoryurl": "https://github.com/Informatievlaanderen/OSLOthema-wegenenverkeer/tree/708f3ddd3a77b8c1bfa5c68743b8a7cf06d8c5df",
+    "changelogurl": "https://github.com/Informatievlaanderen/OSLOthema-wegenenverkeer/blob/708f3ddd3a77b8c1bfa5c68743b8a7cf06d8c5df/CHANGELOG",
+    "feedbackurl": "mailto:TeamBim@verzendlijst.wegenenverkeer.be",
     "standaardregisterurl": "https://data.vlaanderen.be/standaarden/",
     "dependencies": [],
     "usesVocs": [],
     "usesAPs": []
   },
   "classes": [
+    {
+      "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#AanhorighedenBrug",
+      "name": "Aanhorigheden brug",
+      "label": {
+        "nl": "Aanhorigheden brug"
+      },
+      "sort": "Aanhorigheden brug",
+      "description": {
+        "nl": "Een bundeling van aanhorigheden die bij een brug kunnen horen."
+      },
+      "usage": {},
+      "parents": [],
+      "properties": []
+    },
+    {
+      "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#AanhorigheidKoker",
+      "name": "Aanhorigheden koker",
+      "label": {
+        "nl": "Aanhorigheden koker"
+      },
+      "sort": "Aanhorigheden koker",
+      "description": {
+        "nl": "Een abstracte klasse die de aanhorigheden bundelt die in een koker kunnen voorkomen zodat de overerving van de bevestigingsrelatie kan plaatsvinden."
+      },
+      "usage": {},
+      "parents": [],
+      "properties": []
+    },
+    {
+      "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#AanhorigheidSluisStuw",
+      "name": "Aanhorigheid sluis en stuw",
+      "label": {
+        "nl": "Aanhorigheid sluis en stuw"
+      },
+      "sort": "Aanhorigheid sluis en stuw",
+      "description": {
+        "nl": "Een bundeling van aanhorigheden die bij een Sluis en/of Stuw kunnen horen."
+      },
+      "usage": {},
+      "parents": [],
+      "properties": []
+    },
     {
       "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#AbstracteAanvullendeGeometrie",
       "name": "Abstracte aanvullende geometrie",
@@ -233,6 +275,20 @@
           "codelist_uri": ""
         }
       ]
+    },
+    {
+      "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#BVAfwateringKunstwerken",
+      "name": "Bevestiging afwatering kunstwerken",
+      "label": {
+        "nl": "Bevestiging afwatering kunstwerken"
+      },
+      "sort": "Bevestiging afwatering kunstwerken",
+      "description": {
+        "nl": "Abstratce om de bevestigingsrelaties van de afwatering te verzamelen."
+      },
+      "usage": {},
+      "parents": [],
+      "properties": []
     },
     {
       "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Buis",
@@ -838,51 +894,16 @@
           ],
           "range": [
             {
-              "range_label": "PutRelatie",
-              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#PutRelatie"
+              "range_label": "Spaarbekken",
+              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Spaarbekken"
             }
           ],
           "scopedrange": [
             {
-              "range_uri": "#Put relatie",
-              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#PutRelatie",
+              "range_uri": "#Spaarbekken",
+              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Spaarbekken",
               "range_label": {
-                "nl": "Put relatie"
-              }
-            }
-          ],
-          "cardinality": "",
-          "codelist_uri": ""
-        },
-        {
-          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/waterlopen/#Sluit aan op",
-          "name": "sluit aan op",
-          "sort": "Sluit aan op",
-          "label": {
-            "nl": "Sluit aan op"
-          },
-          "description": {
-            "nl": "Deze relatie geeft aan hoe 2 onderdelen in horizontale zin elkaar opvolgen. Dit wordt gebruikt om een topologisch netwerk op te bouwen. Enkel in gebruik bij afschermende constructies en riolering/waterlopen. Deze relatie heeft steeds een richting van het opwaartse naar het afwaartse onderdeel."
-          },
-          "usage": {},
-          "domain": [
-            {
-              "EA-Name": "Buis",
-              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Buis"
-            }
-          ],
-          "range": [
-            {
-              "range_label": "Taludgoot",
-              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Taludgoot"
-            }
-          ],
-          "scopedrange": [
-            {
-              "range_uri": "#Taludgoot",
-              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Taludgoot",
-              "range_label": {
-                "nl": "Taludgoot"
+                "nl": "Spaarbekken"
               }
             }
           ],
@@ -943,16 +964,86 @@
           ],
           "range": [
             {
-              "range_label": "Spaarbekken",
-              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Spaarbekken"
+              "range_label": "PutRelatie",
+              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#PutRelatie"
             }
           ],
           "scopedrange": [
             {
-              "range_uri": "#Spaarbekken",
-              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Spaarbekken",
+              "range_uri": "#Put relatie",
+              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#PutRelatie",
               "range_label": {
-                "nl": "Spaarbekken"
+                "nl": "Put relatie"
+              }
+            }
+          ],
+          "cardinality": "",
+          "codelist_uri": ""
+        },
+        {
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/waterlopen/#Sluit aan op",
+          "name": "sluit aan op",
+          "sort": "Sluit aan op",
+          "label": {
+            "nl": "Sluit aan op"
+          },
+          "description": {
+            "nl": "Deze relatie geeft aan hoe 2 onderdelen in horizontale zin elkaar opvolgen. Dit wordt gebruikt om een topologisch netwerk op te bouwen. Enkel in gebruik bij afschermende constructies en riolering/waterlopen. Deze relatie heeft steeds een richting van het opwaartse naar het afwaartse onderdeel."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "Buis",
+              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Buis"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "WaterloopRelatie",
+              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#WaterloopRelatie"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Waterloop relatie",
+              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#WaterloopRelatie",
+              "range_label": {
+                "nl": "Waterloop relatie"
+              }
+            }
+          ],
+          "cardinality": "",
+          "codelist_uri": ""
+        },
+        {
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/waterlopen/#Sluit aan op",
+          "name": "sluit aan op",
+          "sort": "Sluit aan op",
+          "label": {
+            "nl": "Sluit aan op"
+          },
+          "description": {
+            "nl": "Deze relatie geeft aan hoe 2 onderdelen in horizontale zin elkaar opvolgen. Dit wordt gebruikt om een topologisch netwerk op te bouwen. Enkel in gebruik bij afschermende constructies en riolering/waterlopen. Deze relatie heeft steeds een richting van het opwaartse naar het afwaartse onderdeel."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "Buis",
+              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Buis"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "Taludgoot",
+              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Taludgoot"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Taludgoot",
+              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Taludgoot",
+              "range_label": {
+                "nl": "Taludgoot"
               }
             }
           ],
@@ -1069,6 +1160,56 @@
       ]
     },
     {
+      "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#DetaiplanObject",
+      "name": "detailplan object",
+      "label": {
+        "nl": "detailplan object"
+      },
+      "sort": "detailplan object",
+      "description": {
+        "nl": "Abstracte dat het attribuut detailplan bevat."
+      },
+      "usage": {},
+      "parents": [],
+      "properties": [
+        {
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#DetaiplanObject.detailplan",
+          "name": "detailplan",
+          "sort": "detailplan",
+          "label": {
+            "nl": "detailplan"
+          },
+          "description": {
+            "nl": "Dit plan bevat o.a. informatie over de materiaalkwaliteit, conservering en het verankeringssysteem."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "DetaiplanObject",
+              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#DetaiplanObject"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "DtcDocument",
+              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcDocument"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Bestandsbijlage",
+              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcDocument",
+              "range_label": {
+                "nl": "Bestandsbijlage"
+              }
+            }
+          ],
+          "cardinality": "1",
+          "codelist_uri": ""
+        }
+      ]
+    },
+    {
       "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#LinkendElement",
       "name": "Linkend element",
       "label": {
@@ -1143,41 +1284,6 @@
           ],
           "range": [
             {
-              "range_label": "WaterloopRelatie",
-              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#WaterloopRelatie"
-            }
-          ],
-          "scopedrange": [
-            {
-              "range_uri": "#Waterloop relatie",
-              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#WaterloopRelatie",
-              "range_label": {
-                "nl": "Waterloop relatie"
-              }
-            }
-          ],
-          "cardinality": "",
-          "codelist_uri": ""
-        },
-        {
-          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/waterlopen/#Sluit aan op",
-          "name": "sluit aan op",
-          "sort": "Sluit aan op",
-          "label": {
-            "nl": "Sluit aan op"
-          },
-          "description": {
-            "nl": "Deze relatie geeft aan hoe 2 onderdelen in horizontale zin elkaar opvolgen. Dit wordt gebruikt om een topologisch netwerk op te bouwen. Enkel in gebruik bij afschermende constructies en riolering/waterlopen. Deze relatie heeft steeds een richting van het opwaartse naar het afwaartse onderdeel."
-          },
-          "usage": {},
-          "domain": [
-            {
-              "EA-Name": "LinkendElement",
-              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#LinkendElement"
-            }
-          ],
-          "range": [
-            {
               "range_label": "OpenInfiltratievoorziening",
               "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#OpenInfiltratievoorziening"
             }
@@ -1223,6 +1329,41 @@
               "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Spaarbekken",
               "range_label": {
                 "nl": "Spaarbekken"
+              }
+            }
+          ],
+          "cardinality": "",
+          "codelist_uri": ""
+        },
+        {
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/waterlopen/#Sluit aan op",
+          "name": "sluit aan op",
+          "sort": "Sluit aan op",
+          "label": {
+            "nl": "Sluit aan op"
+          },
+          "description": {
+            "nl": "Deze relatie geeft aan hoe 2 onderdelen in horizontale zin elkaar opvolgen. Dit wordt gebruikt om een topologisch netwerk op te bouwen. Enkel in gebruik bij afschermende constructies en riolering/waterlopen. Deze relatie heeft steeds een richting van het opwaartse naar het afwaartse onderdeel."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "LinkendElement",
+              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#LinkendElement"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "WaterloopRelatie",
+              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#WaterloopRelatie"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Waterloop relatie",
+              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#WaterloopRelatie",
+              "range_label": {
+                "nl": "Waterloop relatie"
               }
             }
           ],
@@ -1461,16 +1602,16 @@
           ],
           "range": [
             {
-              "range_label": "WaterloopRelatie",
-              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#WaterloopRelatie"
+              "range_label": "Buis",
+              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Buis"
             }
           ],
           "scopedrange": [
             {
-              "range_uri": "#Waterloop relatie",
-              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#WaterloopRelatie",
+              "range_uri": "#Buis",
+              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Buis",
               "range_label": {
-                "nl": "Waterloop relatie"
+                "nl": "Buis"
               }
             }
           ],
@@ -1496,16 +1637,16 @@
           ],
           "range": [
             {
-              "range_label": "Buis",
-              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Buis"
+              "range_label": "WaterloopRelatie",
+              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#WaterloopRelatie"
             }
           ],
           "scopedrange": [
             {
-              "range_uri": "#Buis",
-              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Buis",
+              "range_uri": "#Waterloop relatie",
+              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#WaterloopRelatie",
               "range_label": {
-                "nl": "Buis"
+                "nl": "Waterloop relatie"
               }
             }
           ],
@@ -1624,16 +1765,16 @@
           ],
           "range": [
             {
-              "range_label": "Riooltoegang",
-              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Riooltoegang"
+              "range_label": "LinkendElement",
+              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#LinkendElement"
             }
           ],
           "scopedrange": [
             {
-              "range_uri": "#Riooltoegang",
-              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Riooltoegang",
+              "range_uri": "#Linkend element",
+              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#LinkendElement",
               "range_label": {
-                "nl": "Riooltoegang"
+                "nl": "Linkend element"
               }
             }
           ],
@@ -1659,51 +1800,16 @@
           ],
           "range": [
             {
-              "range_label": "Buis",
-              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Buis"
+              "range_label": "WaterloopRelatie",
+              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#WaterloopRelatie"
             }
           ],
           "scopedrange": [
             {
-              "range_uri": "#Buis",
-              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Buis",
+              "range_uri": "#Waterloop relatie",
+              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#WaterloopRelatie",
               "range_label": {
-                "nl": "Buis"
-              }
-            }
-          ],
-          "cardinality": "",
-          "codelist_uri": ""
-        },
-        {
-          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/waterlopen/#Sluit aan op",
-          "name": "sluit aan op",
-          "sort": "Sluit aan op",
-          "label": {
-            "nl": "Sluit aan op"
-          },
-          "description": {
-            "nl": "Deze relatie geeft aan hoe 2 onderdelen in horizontale zin elkaar opvolgen. Dit wordt gebruikt om een topologisch netwerk op te bouwen. Enkel in gebruik bij afschermende constructies en riolering/waterlopen. Deze relatie heeft steeds een richting van het opwaartse naar het afwaartse onderdeel."
-          },
-          "usage": {},
-          "domain": [
-            {
-              "EA-Name": "WaterloopRelatie",
-              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#WaterloopRelatie"
-            }
-          ],
-          "range": [
-            {
-              "range_label": "PutRelatie",
-              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#PutRelatie"
-            }
-          ],
-          "scopedrange": [
-            {
-              "range_uri": "#Put relatie",
-              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#PutRelatie",
-              "range_label": {
-                "nl": "Put relatie"
+                "nl": "Waterloop relatie"
               }
             }
           ],
@@ -1764,41 +1870,6 @@
           ],
           "range": [
             {
-              "range_label": "LinkendElement",
-              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#LinkendElement"
-            }
-          ],
-          "scopedrange": [
-            {
-              "range_uri": "#Linkend element",
-              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#LinkendElement",
-              "range_label": {
-                "nl": "Linkend element"
-              }
-            }
-          ],
-          "cardinality": "",
-          "codelist_uri": ""
-        },
-        {
-          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/waterlopen/#Sluit aan op",
-          "name": "sluit aan op",
-          "sort": "Sluit aan op",
-          "label": {
-            "nl": "Sluit aan op"
-          },
-          "description": {
-            "nl": "Deze relatie geeft aan hoe 2 onderdelen in horizontale zin elkaar opvolgen. Dit wordt gebruikt om een topologisch netwerk op te bouwen. Enkel in gebruik bij afschermende constructies en riolering/waterlopen. Deze relatie heeft steeds een richting van het opwaartse naar het afwaartse onderdeel."
-          },
-          "usage": {},
-          "domain": [
-            {
-              "EA-Name": "WaterloopRelatie",
-              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#WaterloopRelatie"
-            }
-          ],
-          "range": [
-            {
               "range_label": "Stuwconstructie",
               "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Stuwconstructie"
             }
@@ -1834,16 +1905,86 @@
           ],
           "range": [
             {
-              "range_label": "WaterloopRelatie",
-              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#WaterloopRelatie"
+              "range_label": "Riooltoegang",
+              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Riooltoegang"
             }
           ],
           "scopedrange": [
             {
-              "range_uri": "#Waterloop relatie",
-              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#WaterloopRelatie",
+              "range_uri": "#Riooltoegang",
+              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Riooltoegang",
               "range_label": {
-                "nl": "Waterloop relatie"
+                "nl": "Riooltoegang"
+              }
+            }
+          ],
+          "cardinality": "",
+          "codelist_uri": ""
+        },
+        {
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/waterlopen/#Sluit aan op",
+          "name": "sluit aan op",
+          "sort": "Sluit aan op",
+          "label": {
+            "nl": "Sluit aan op"
+          },
+          "description": {
+            "nl": "Deze relatie geeft aan hoe 2 onderdelen in horizontale zin elkaar opvolgen. Dit wordt gebruikt om een topologisch netwerk op te bouwen. Enkel in gebruik bij afschermende constructies en riolering/waterlopen. Deze relatie heeft steeds een richting van het opwaartse naar het afwaartse onderdeel."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "WaterloopRelatie",
+              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#WaterloopRelatie"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "PutRelatie",
+              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#PutRelatie"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Put relatie",
+              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#PutRelatie",
+              "range_label": {
+                "nl": "Put relatie"
+              }
+            }
+          ],
+          "cardinality": "",
+          "codelist_uri": ""
+        },
+        {
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/waterlopen/#Sluit aan op",
+          "name": "sluit aan op",
+          "sort": "Sluit aan op",
+          "label": {
+            "nl": "Sluit aan op"
+          },
+          "description": {
+            "nl": "Deze relatie geeft aan hoe 2 onderdelen in horizontale zin elkaar opvolgen. Dit wordt gebruikt om een topologisch netwerk op te bouwen. Enkel in gebruik bij afschermende constructies en riolering/waterlopen. Deze relatie heeft steeds een richting van het opwaartse naar het afwaartse onderdeel."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "WaterloopRelatie",
+              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#WaterloopRelatie"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "Buis",
+              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Buis"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Buis",
+              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Buis",
+              "range_label": {
+                "nl": "Buis"
               }
             }
           ],
@@ -1933,7 +2074,9 @@
           "description": {
             "nl": "De mensleesbare naam van een asset zoals dit bv. ook terug te vinden is op een etiket op het object zelf. De assetbeheerder kent deze naam toe of geeft de opdracht om deze toe te kennen. Indien een object een algemeen gangbare naam heeft zoals bv. bij een waterloop dan wordt deze gebruikt."
           },
-          "usage": {},
+          "usage": {
+            "nl": "Dient leeg of consistent te zijn met het naampad indien het naampad attribuut aanwezig en gekend is."
+          },
           "domain": [
             {
               "EA-Name": "AIMNaamObject",
@@ -2345,6 +2488,302 @@
       ]
     },
     {
+      "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Leuning",
+      "name": "Leuning",
+      "label": {
+        "nl": "Leuning"
+      },
+      "sort": "Leuning",
+      "description": {
+        "nl": "Een leuning is een constructie waaraan men met een hand steun of stabiliteit kan vinden om niet in de diepte te vallen. Ze kan bestaan uit een stevige balk, strip of touw maar ook uit een boven- en onderregel en stijlen."
+      },
+      "usage": {},
+      "parents": [
+        {
+          "label": "AIM naam object",
+          "name": "AIMNaamObject",
+          "package": "OSLO-Implementatieelement",
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMNaamObject",
+          "scoped_uri": "#AIM naam object"
+        },
+        {
+          "label": "Aanhorigheden brug",
+          "name": "AanhorighedenBrug",
+          "package": "OSLO-Abstracten",
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#AanhorighedenBrug",
+          "scoped_uri": "#Aanhorigheden brug"
+        },
+        {
+          "label": "Aanhorigheid sluis en stuw",
+          "name": "AanhorigheidSluisStuw",
+          "package": "OSLO-Abstracten",
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#AanhorigheidSluisStuw",
+          "scoped_uri": "#Aanhorigheid sluis en stuw"
+        },
+        {
+          "label": "Aanhorigheden koker",
+          "name": "AanhorigheidKoker",
+          "package": "OSLO-Abstracten",
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#AanhorigheidKoker",
+          "scoped_uri": "#Aanhorigheden koker"
+        },
+        {
+          "label": "detailplan object",
+          "name": "DetaiplanObject",
+          "package": "OSLO-Abstracten",
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#DetaiplanObject",
+          "scoped_uri": "#detailplan object"
+        }
+      ],
+      "properties": [
+        {
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Leuning.vorm",
+          "name": "vorm",
+          "sort": "vorm",
+          "label": {
+            "nl": "vorm"
+          },
+          "description": {
+            "nl": "De vorm van de leuning"
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "Leuning",
+              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Leuning"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "KlVormLeuning",
+              "range_uri": "http://www.w3.org/2004/02/skos/core#Concept"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Vorm leuning",
+              "range_puri": "http://www.w3.org/2004/02/skos/core#Concept",
+              "range_label": {
+                "nl": "Vorm leuning"
+              }
+            }
+          ],
+          "cardinality": "1",
+          "codelist_uri": "https://wegenenverkeer-test.data.vlaanderen.be/id/conceptscheme/KlVormLeuning"
+        },
+        {
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Leuning.technischeFiche",
+          "name": "technische fiche",
+          "sort": "technische fiche",
+          "label": {
+            "nl": "technische fiche"
+          },
+          "description": {
+            "nl": "De technische fiche van de leuning."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "Leuning",
+              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Leuning"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "DtcDocument",
+              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcDocument"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Bestandsbijlage",
+              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcDocument",
+              "range_label": {
+                "nl": "Bestandsbijlage"
+              }
+            }
+          ],
+          "cardinality": "1",
+          "codelist_uri": ""
+        },
+        {
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Leuning.professioneelGebruik",
+          "name": "professioneel gebruik",
+          "sort": "professioneel gebruik",
+          "label": {
+            "nl": "professioneel gebruik"
+          },
+          "description": {
+            "nl": "Geeft aan of het gebruik enkel voor professionelen is of ook publiekeliGeeft aan of het gebruik enkel voor professionelen is of ook publiekelijk gebruikt wordt."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "Leuning",
+              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Leuning"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "Boolean",
+              "range_uri": "http://www.w3.org/2001/XMLSchema#boolean"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Boolean",
+              "range_puri": "http://www.w3.org/2001/XMLSchema#boolean",
+              "range_label": {
+                "nl": "Boolean"
+              }
+            }
+          ],
+          "cardinality": "1",
+          "codelist_uri": ""
+        },
+        {
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Leuning.materiaal",
+          "name": "materiaal",
+          "sort": "materiaal",
+          "label": {
+            "nl": "materiaal"
+          },
+          "description": {
+            "nl": "Het materiaal waaruit de leuning is vervaardigd."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "Leuning",
+              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Leuning"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "KlAlgMateriaal",
+              "range_uri": "http://www.w3.org/2004/02/skos/core#Concept"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Materiaal soorten",
+              "range_puri": "http://www.w3.org/2004/02/skos/core#Concept",
+              "range_label": {
+                "nl": "Materiaal soorten"
+              }
+            }
+          ],
+          "cardinality": "1",
+          "codelist_uri": "https://wegenenverkeer-test.data.vlaanderen.be/id/conceptscheme/KlAlgMateriaal"
+        },
+        {
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Leuning.lengte",
+          "name": "lengte",
+          "sort": "lengte",
+          "label": {
+            "nl": "lengte"
+          },
+          "description": {
+            "nl": "De lengte van de leuning."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "Leuning",
+              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Leuning"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "KwantWrdInMeter",
+              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInMeter"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Kwantitatieve waarde in meter",
+              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInMeter",
+              "range_label": {
+                "nl": "Kwantitatieve waarde in meter"
+              }
+            }
+          ],
+          "cardinality": "1",
+          "codelist_uri": ""
+        },
+        {
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Leuning.hoogte",
+          "name": "hoogte",
+          "sort": "hoogte",
+          "label": {
+            "nl": "hoogte"
+          },
+          "description": {
+            "nl": "De hoogte van de leuning."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "Leuning",
+              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Leuning"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "KwantWrdInMeter",
+              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInMeter"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Kwantitatieve waarde in meter",
+              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInMeter",
+              "range_label": {
+                "nl": "Kwantitatieve waarde in meter"
+              }
+            }
+          ],
+          "cardinality": "1",
+          "codelist_uri": ""
+        },
+        {
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Leuning.afwerkingstype",
+          "name": "afwerkingstype",
+          "sort": "afwerkingstype",
+          "label": {
+            "nl": "afwerkingstype"
+          },
+          "description": {
+            "nl": "Het type afwerking van de leuning."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "Leuning",
+              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Leuning"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "KlAfwerkingstypeLeuning",
+              "range_uri": "http://www.w3.org/2004/02/skos/core#Concept"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Afwerkingstype leuning",
+              "range_puri": "http://www.w3.org/2004/02/skos/core#Concept",
+              "range_label": {
+                "nl": "Afwerkingstype leuning"
+              }
+            }
+          ],
+          "cardinality": "1",
+          "codelist_uri": "https://wegenenverkeer-test.data.vlaanderen.be/id/conceptscheme/KlAfwerkingstypeLeuning"
+        }
+      ]
+    },
+    {
       "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Rioleringsstelsel",
       "name": "Rioleringsstelsel",
       "label": {
@@ -2548,7 +2987,7 @@
       },
       "sort": "Bevestiging",
       "description": {
-        "nl": "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Deze relatie heeft geen richting."
+        "nl": "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Daarnaast omvat deze relatie ook situaties waarin onderdelen niet direct, maar wel structureel of functioneel met elkaar verbonden zijn op een manier die bevestiging impliceert, bv. een trap die eindigt net onder een voetgangersbrug zonder fysieke bevestiging. Deze relatie heeft geen richting."
       },
       "usage": {},
       "parents": [
@@ -2561,6 +3000,134 @@
         }
       ],
       "properties": []
+    },
+    {
+      "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Golfplaat",
+      "name": "Golfplaat",
+      "label": {
+        "nl": "Golfplaat"
+      },
+      "sort": "Golfplaat",
+      "description": {
+        "nl": "Dit is een gegolfd constructie-element van metaal of kunststof,gebruikt in bouw- en infrastructuurprojecten zoals tunnels en duikers. Het biedt verhoogde stijfheid en sterkte en verdeelt belastingen en spanningen efficiënt."
+      },
+      "usage": {},
+      "parents": [
+        {
+          "label": "AIM naam object",
+          "name": "AIMNaamObject",
+          "package": "OSLO-Implementatieelement",
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMNaamObject",
+          "scoped_uri": "#AIM naam object"
+        }
+      ],
+      "properties": [
+        {
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Golfplaat.vorm",
+          "name": "vorm",
+          "sort": "vorm",
+          "label": {
+            "nl": "vorm"
+          },
+          "description": {
+            "nl": "De verschillende mogelijke vormen van de golfplaat."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "Golfplaat",
+              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Golfplaat"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "KlVormGolfplaat",
+              "range_uri": "http://www.w3.org/2004/02/skos/core#Concept"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#vorm golfplaat",
+              "range_puri": "http://www.w3.org/2004/02/skos/core#Concept",
+              "range_label": {
+                "nl": "vorm golfplaat"
+              }
+            }
+          ],
+          "cardinality": "1",
+          "codelist_uri": "https://wegenenverkeer-test.data.vlaanderen.be/id/conceptscheme/KlVormGolfplaat"
+        },
+        {
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Golfplaat.materiaal",
+          "name": "materiaal",
+          "sort": "materiaal",
+          "label": {
+            "nl": "materiaal"
+          },
+          "description": {
+            "nl": "Het materiaal van de golfplaat."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "Golfplaat",
+              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Golfplaat"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "KlMateriaalGolfplaat",
+              "range_uri": "http://www.w3.org/2004/02/skos/core#Concept"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#materiaal golfplaat",
+              "range_puri": "http://www.w3.org/2004/02/skos/core#Concept",
+              "range_label": {
+                "nl": "materiaal golfplaat"
+              }
+            }
+          ],
+          "cardinality": "1",
+          "codelist_uri": "https://wegenenverkeer-test.data.vlaanderen.be/id/conceptscheme/KlMateriaalGolfplaat"
+        },
+        {
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/waterlopen/#Hoort bij",
+          "name": "hoort bij",
+          "sort": "Hoort bij",
+          "label": {
+            "nl": "Hoort bij"
+          },
+          "description": {
+            "nl": "De relatie geeft aan dat een onderdeel of collectie behoort bij, deel van of lid van een (andere) groep of collectie is."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "Golfplaat",
+              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Golfplaat"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "WaterdoorvoerendeDuiker",
+              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#WaterdoorvoerendeDuiker"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Waterdoorvoerende duiker",
+              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#WaterdoorvoerendeDuiker",
+              "range_label": {
+                "nl": "Waterdoorvoerende duiker"
+              }
+            }
+          ],
+          "cardinality": "",
+          "codelist_uri": ""
+        }
+      ]
     },
     {
       "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Gracht",
@@ -2583,6 +3150,41 @@
         }
       ],
       "properties": [
+        {
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Gracht.isBekleed",
+          "name": "is bekleed",
+          "sort": "is bekleed",
+          "label": {
+            "nl": "is bekleed"
+          },
+          "description": {
+            "nl": "Geeft aan of de oever en/of bodem van de gracht is voorzien van een kunstmatige bekleding (zoals beton, metselwerk, of kunststof), met het doel om de gracht te verstevigen, erosie te voorkomen, of het onderhoud te vergemakkelijken."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "Gracht",
+              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Gracht"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "Boolean",
+              "range_uri": "http://www.w3.org/2001/XMLSchema#boolean"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Boolean",
+              "range_puri": "http://www.w3.org/2001/XMLSchema#boolean",
+              "range_label": {
+                "nl": "Boolean"
+              }
+            }
+          ],
+          "cardinality": "1",
+          "codelist_uri": ""
+        },
         {
           "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Gracht.functie",
           "name": "functie",
@@ -2672,16 +3274,16 @@
           ],
           "range": [
             {
-              "range_label": "OpenInfiltratievoorziening",
-              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#OpenInfiltratievoorziening"
+              "range_label": "Spaarbekken",
+              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Spaarbekken"
             }
           ],
           "scopedrange": [
             {
-              "range_uri": "#Open infiltratievoorziening",
-              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#OpenInfiltratievoorziening",
+              "range_uri": "#Spaarbekken",
+              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Spaarbekken",
               "range_label": {
-                "nl": "Open infiltratievoorziening"
+                "nl": "Spaarbekken"
               }
             }
           ],
@@ -2707,16 +3309,16 @@
           ],
           "range": [
             {
-              "range_label": "Spaarbekken",
-              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Spaarbekken"
+              "range_label": "OpenInfiltratievoorziening",
+              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#OpenInfiltratievoorziening"
             }
           ],
           "scopedrange": [
             {
-              "range_uri": "#Spaarbekken",
-              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Spaarbekken",
+              "range_uri": "#Open infiltratievoorziening",
+              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#OpenInfiltratievoorziening",
               "range_label": {
-                "nl": "Spaarbekken"
+                "nl": "Open infiltratievoorziening"
               }
             }
           ],
@@ -2964,8 +3566,100 @@
           ],
           "cardinality": "",
           "codelist_uri": ""
+        },
+        {
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/waterlopen/#Bevestiging",
+          "name": "bevestiging",
+          "sort": "Bevestiging",
+          "label": {
+            "nl": "Bevestiging"
+          },
+          "description": {
+            "nl": "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Daarnaast omvat deze relatie ook situaties waarin onderdelen niet direct, maar wel structureel of functioneel met elkaar verbonden zijn op een manier die bevestiging impliceert, bv. een trap die eindigt net onder een voetgangersbrug zonder fysieke bevestiging. Deze relatie heeft geen richting."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "Kopmuur",
+              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Kopmuur"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "Leuning",
+              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Leuning"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Leuning",
+              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Leuning",
+              "range_label": {
+                "nl": "Leuning"
+              }
+            }
+          ],
+          "cardinality": "",
+          "codelist_uri": ""
+        },
+        {
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/waterlopen/#Bevestiging",
+          "name": "bevestiging",
+          "sort": "Bevestiging",
+          "label": {
+            "nl": "Bevestiging"
+          },
+          "description": {
+            "nl": "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Daarnaast omvat deze relatie ook situaties waarin onderdelen niet direct, maar wel structureel of functioneel met elkaar verbonden zijn op een manier die bevestiging impliceert, bv. een trap die eindigt net onder een voetgangersbrug zonder fysieke bevestiging. Deze relatie heeft geen richting."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "Kopmuur",
+              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Kopmuur"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "Leuning",
+              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Leuning"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Leuning",
+              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Leuning",
+              "range_label": {
+                "nl": "Leuning"
+              }
+            }
+          ],
+          "cardinality": "",
+          "codelist_uri": ""
         }
       ]
+    },
+    {
+      "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#LigtOp",
+      "name": "Ligt op",
+      "label": {
+        "nl": "Ligt op"
+      },
+      "sort": "Ligt op",
+      "description": {
+        "nl": "Deze relatie geeft aan dat 2 onderdelen direct fysiek op elkaar liggen. Deze relatie heeft een richting en gaat van het bovenste naar het onderste onderdeel."
+      },
+      "usage": {},
+      "parents": [
+        {
+          "label": "Directionele relatie",
+          "name": "DirectioneleRelatie",
+          "package": "OSLO-Implementatieelement",
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DirectioneleRelatie",
+          "scoped_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DirectioneleRelatie"
+        }
+      ],
+      "properties": []
     },
     {
       "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Omhult",
@@ -3064,41 +3758,6 @@
           ],
           "range": [
             {
-              "range_label": "Gracht",
-              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Gracht"
-            }
-          ],
-          "scopedrange": [
-            {
-              "range_uri": "#Gracht",
-              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Gracht",
-              "range_label": {
-                "nl": "Gracht"
-              }
-            }
-          ],
-          "cardinality": "",
-          "codelist_uri": ""
-        },
-        {
-          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/waterlopen/#Sluit aan op",
-          "name": "sluit aan op",
-          "sort": "Sluit aan op",
-          "label": {
-            "nl": "Sluit aan op"
-          },
-          "description": {
-            "nl": "Deze relatie geeft aan hoe 2 onderdelen in horizontale zin elkaar opvolgen. Dit wordt gebruikt om een topologisch netwerk op te bouwen. Enkel in gebruik bij afschermende constructies en riolering/waterlopen. Deze relatie heeft steeds een richting van het opwaartse naar het afwaartse onderdeel."
-          },
-          "usage": {},
-          "domain": [
-            {
-              "EA-Name": "OpenInfiltratievoorziening",
-              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#OpenInfiltratievoorziening"
-            }
-          ],
-          "range": [
-            {
               "range_label": "Buis",
               "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Buis"
             }
@@ -3149,6 +3808,41 @@
           ],
           "cardinality": "",
           "codelist_uri": ""
+        },
+        {
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/waterlopen/#Sluit aan op",
+          "name": "sluit aan op",
+          "sort": "Sluit aan op",
+          "label": {
+            "nl": "Sluit aan op"
+          },
+          "description": {
+            "nl": "Deze relatie geeft aan hoe 2 onderdelen in horizontale zin elkaar opvolgen. Dit wordt gebruikt om een topologisch netwerk op te bouwen. Enkel in gebruik bij afschermende constructies en riolering/waterlopen. Deze relatie heeft steeds een richting van het opwaartse naar het afwaartse onderdeel."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "OpenInfiltratievoorziening",
+              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#OpenInfiltratievoorziening"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "Gracht",
+              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Gracht"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Gracht",
+              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Gracht",
+              "range_label": {
+                "nl": "Gracht"
+              }
+            }
+          ],
+          "cardinality": "",
+          "codelist_uri": ""
         }
       ]
     },
@@ -3160,10 +3854,17 @@
       },
       "sort": "Rioleringsbuis",
       "description": {
-        "nl": "Ondergronds kanaal of pijp voor gravitaire afvoer van water."
+        "nl": "Een kanaal of pijp voor gravitaire afvoer van water."
       },
       "usage": {},
       "parents": [
+        {
+          "label": "Bevestiging afwatering kunstwerken",
+          "name": "BVAfwateringKunstwerken",
+          "package": "OSLO-Abstracten",
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#BVAfwateringKunstwerken",
+          "scoped_uri": "#Bevestiging afwatering kunstwerken"
+        },
         {
           "label": "Buis",
           "name": "Buis",
@@ -3314,6 +4015,41 @@
           "codelist_uri": ""
         },
         {
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/waterlopen/#Ligt op",
+          "name": "ligt op",
+          "sort": "Ligt op",
+          "label": {
+            "nl": "Ligt op"
+          },
+          "description": {
+            "nl": "Deze relatie geeft aan dat 2 onderdelen direct fysiek op elkaar liggen. Deze relatie heeft een richting en gaat van het bovenste naar het onderste onderdeel."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "Rioleringsbuis",
+              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Rioleringsbuis"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "Taludgoot",
+              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Taludgoot"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Taludgoot",
+              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Taludgoot",
+              "range_label": {
+                "nl": "Taludgoot"
+              }
+            }
+          ],
+          "cardinality": "",
+          "codelist_uri": ""
+        },
+        {
           "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/waterlopen/#Hoort bij",
           "name": "hoort bij",
           "sort": "Hoort bij",
@@ -3342,6 +4078,76 @@
               "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#WaterdoorvoerendeDuiker",
               "range_label": {
                 "nl": "Waterdoorvoerende duiker"
+              }
+            }
+          ],
+          "cardinality": "",
+          "codelist_uri": ""
+        },
+        {
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/waterlopen/#Bevestiging",
+          "name": "bevestiging",
+          "sort": "Bevestiging",
+          "label": {
+            "nl": "Bevestiging"
+          },
+          "description": {
+            "nl": "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Daarnaast omvat deze relatie ook situaties waarin onderdelen niet direct, maar wel structureel of functioneel met elkaar verbonden zijn op een manier die bevestiging impliceert, bv. een trap die eindigt net onder een voetgangersbrug zonder fysieke bevestiging. Deze relatie heeft geen richting."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "Rioleringsbuis",
+              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Rioleringsbuis"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "Leuning",
+              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Leuning"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Leuning",
+              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Leuning",
+              "range_label": {
+                "nl": "Leuning"
+              }
+            }
+          ],
+          "cardinality": "",
+          "codelist_uri": ""
+        },
+        {
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/waterlopen/#Bevestiging",
+          "name": "bevestiging",
+          "sort": "Bevestiging",
+          "label": {
+            "nl": "Bevestiging"
+          },
+          "description": {
+            "nl": "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Daarnaast omvat deze relatie ook situaties waarin onderdelen niet direct, maar wel structureel of functioneel met elkaar verbonden zijn op een manier die bevestiging impliceert, bv. een trap die eindigt net onder een voetgangersbrug zonder fysieke bevestiging. Deze relatie heeft geen richting."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "Rioleringsbuis",
+              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Rioleringsbuis"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "Leuning",
+              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Leuning"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Leuning",
+              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Leuning",
+              "range_label": {
+                "nl": "Leuning"
               }
             }
           ],
@@ -3491,7 +4297,7 @@
             "nl": "Bevestiging"
           },
           "description": {
-            "nl": "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Deze relatie heeft geen richting."
+            "nl": "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Daarnaast omvat deze relatie ook situaties waarin onderdelen niet direct, maar wel structureel of functioneel met elkaar verbonden zijn op een manier die bevestiging impliceert, bv. een trap die eindigt net onder een voetgangersbrug zonder fysieke bevestiging. Deze relatie heeft geen richting."
           },
           "usage": {},
           "domain": [
@@ -3526,7 +4332,7 @@
             "nl": "Bevestiging"
           },
           "description": {
-            "nl": "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Deze relatie heeft geen richting."
+            "nl": "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Daarnaast omvat deze relatie ook situaties waarin onderdelen niet direct, maar wel structureel of functioneel met elkaar verbonden zijn op een manier die bevestiging impliceert, bv. een trap die eindigt net onder een voetgangersbrug zonder fysieke bevestiging. Deze relatie heeft geen richting."
           },
           "usage": {},
           "domain": [
@@ -3617,16 +4423,16 @@
           ],
           "range": [
             {
-              "range_label": "Gracht",
-              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Gracht"
+              "range_label": "LinkendElement",
+              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#LinkendElement"
             }
           ],
           "scopedrange": [
             {
-              "range_uri": "#Gracht",
-              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Gracht",
+              "range_uri": "#Linkend element",
+              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#LinkendElement",
               "range_label": {
-                "nl": "Gracht"
+                "nl": "Linkend element"
               }
             }
           ],
@@ -3652,16 +4458,16 @@
           ],
           "range": [
             {
-              "range_label": "LinkendElement",
-              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#LinkendElement"
+              "range_label": "Gracht",
+              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Gracht"
             }
           ],
           "scopedrange": [
             {
-              "range_uri": "#Linkend element",
-              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#LinkendElement",
+              "range_uri": "#Gracht",
+              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Gracht",
               "range_label": {
-                "nl": "Linkend element"
+                "nl": "Gracht"
               }
             }
           ],
@@ -3954,6 +4760,41 @@
           },
           "description": {
             "nl": "Dit attribuut geeft aan of de straatkolk een afdekplaat als reukafsluiter heeft."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "Straatkolk",
+              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Straatkolk"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "Boolean",
+              "range_uri": "http://www.w3.org/2001/XMLSchema#boolean"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Boolean",
+              "range_puri": "http://www.w3.org/2001/XMLSchema#boolean",
+              "range_label": {
+                "nl": "Boolean"
+              }
+            }
+          ],
+          "cardinality": "1",
+          "codelist_uri": ""
+        },
+        {
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Straatkolk.fungeertAlsSpuier",
+          "name": "fungeert als spuier",
+          "sort": "fungeert als spuier",
+          "label": {
+            "nl": "fungeert als spuier"
+          },
+          "description": {
+            "nl": "Geeft aan of de straatkolk als spuier fungeert."
           },
           "usage": {},
           "domain": [
@@ -4360,16 +5201,16 @@
           ],
           "range": [
             {
-              "range_label": "WaterloopRelatie",
-              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#WaterloopRelatie"
+              "range_label": "Buis",
+              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Buis"
             }
           ],
           "scopedrange": [
             {
-              "range_uri": "#Waterloop relatie",
-              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#WaterloopRelatie",
+              "range_uri": "#Buis",
+              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Buis",
               "range_label": {
-                "nl": "Waterloop relatie"
+                "nl": "Buis"
               }
             }
           ],
@@ -4395,16 +5236,16 @@
           ],
           "range": [
             {
-              "range_label": "Buis",
-              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Buis"
+              "range_label": "WaterloopRelatie",
+              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#WaterloopRelatie"
             }
           ],
           "scopedrange": [
             {
-              "range_uri": "#Buis",
-              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Buis",
+              "range_uri": "#Waterloop relatie",
+              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#WaterloopRelatie",
               "range_label": {
-                "nl": "Buis"
+                "nl": "Waterloop relatie"
               }
             }
           ],

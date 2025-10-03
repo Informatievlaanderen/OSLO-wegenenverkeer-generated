@@ -2,7 +2,7 @@
   "metadata": {
     "title": "AIM Object",
     "uri": "http://fixme.com",
-    "issued": "15-12-2023",
+    "issued": "3-10-2025",
     "filename": "aim-object",
     "navigation": {
       "prev": "",
@@ -13,9 +13,9 @@
     "documentconfig": {},
     "status": "https://data.vlaanderen.be/doc/concept/StandaardStatus/KandidaatStandaard",
     "statuslabel": "Onbekend",
-    "repositoryurl": "https://github.com/Informatievlaanderen/OSLOthema-wegenenverkeer/tree/6380b25da6106e3ce2c02dc376c103a202208f9a",
-    "changelogurl": "https://github.com/Informatievlaanderen/OSLOthema-wegenenverkeer/blob/6380b25da6106e3ce2c02dc376c103a202208f9a/CHANGELOG",
-    "feedbackurl": "https://docs.google.com/forms/d/e/1FAIpQLSeaxOnrCkcarNHWI21YfPJ7sZChHVzOB2-P9ptzxkD9YX69-g/viewform",
+    "repositoryurl": "https://github.com/Informatievlaanderen/OSLOthema-wegenenverkeer/tree/708f3ddd3a77b8c1bfa5c68743b8a7cf06d8c5df",
+    "changelogurl": "https://github.com/Informatievlaanderen/OSLOthema-wegenenverkeer/blob/708f3ddd3a77b8c1bfa5c68743b8a7cf06d8c5df/CHANGELOG",
+    "feedbackurl": "mailto:TeamBim@verzendlijst.wegenenverkeer.be",
     "standaardregisterurl": "https://data.vlaanderen.be/standaarden/",
     "dependencies": [],
     "usesVocs": [],
@@ -34,6 +34,13 @@
       },
       "usage": {},
       "parents": [
+        {
+          "label": "AIM versie",
+          "name": "AIMVersie",
+          "package": "OSLO-Implementatieelement",
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMVersie",
+          "scoped_uri": "#AIM versie"
+        },
         {
           "label": "AIM databank status",
           "name": "AIMDBStatus",
@@ -513,7 +520,9 @@
           "description": {
             "nl": "De mensleesbare naam van een asset zoals dit bv. ook terug te vinden is op een etiket op het object zelf. De assetbeheerder kent deze naam toe of geeft de opdracht om deze toe te kennen. Indien een object een algemeen gangbare naam heeft zoals bv. bij een waterloop dan wordt deze gebruikt."
           },
-          "usage": {},
+          "usage": {
+            "nl": "Dient leeg of consistent te zijn met het naampad indien het naampad attribuut aanwezig en gekend is."
+          },
           "domain": [
             {
               "EA-Name": "AIMNaamObject",
@@ -611,6 +620,76 @@
           "codelist_uri": ""
         },
         {
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMObject.theoretischeLevensduur",
+          "name": "theoretische levensduur",
+          "sort": "theoretische levensduur",
+          "label": {
+            "nl": "theoretische levensduur"
+          },
+          "description": {
+            "nl": "De levensduur in aantal maanden die theoretisch mag verwacht worden voor een object."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "AIMObject",
+              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMObject"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "KwantWrdInMaand",
+              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInMaand"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Kwantitatieve waarde in maand",
+              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInMaand",
+              "range_label": {
+                "nl": "Kwantitatieve waarde in maand"
+              }
+            }
+          ],
+          "cardinality": "1",
+          "codelist_uri": ""
+        },
+        {
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMObject.standaardBestekPostNummer",
+          "name": "standaardbestekpostnummer",
+          "sort": "standaardbestekpostnummer",
+          "label": {
+            "nl": "standaardbestekpostnummer"
+          },
+          "description": {
+            "nl": "Een verwijzing naar een postnummer uit het standaardbestek waar het object mee verband houdt. De notatie van het postnummer moet overeenkomen met de notatie die gebruikt is in de catalogi van standaardbestekken, bijvoorbeeld postnummer 0701.20404G."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "AIMObject",
+              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMObject"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "String",
+              "range_uri": "http://www.w3.org/2001/XMLSchema#string"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#String",
+              "range_puri": "http://www.w3.org/2001/XMLSchema#string",
+              "range_label": {
+                "nl": "String"
+              }
+            }
+          ],
+          "cardinality": "1..*",
+          "codelist_uri": ""
+        },
+        {
           "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMObject.notitie",
           "name": "notitie",
           "sort": "notitie",
@@ -678,6 +757,43 @@
             }
           ],
           "cardinality": "1",
+          "codelist_uri": ""
+        },
+        {
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMObject.bestekPostNummer",
+          "name": "bestekpostnummer",
+          "sort": "bestekpostnummer",
+          "label": {
+            "nl": "bestekpostnummer"
+          },
+          "description": {
+            "nl": "Een verwijzing naar een postnummer uit het specifieke bestek waar het object mee verband houdt."
+          },
+          "usage": {
+            "nl": "Bevat de specifieke identificatie binnen een bestek van een post in de meetstaat. De notatie kan eender welke codering aannemen, bv. in de vorm van een nummer, id of tekst naargelang de notatie in het specifieke bestek."
+          },
+          "domain": [
+            {
+              "EA-Name": "AIMObject",
+              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMObject"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "String",
+              "range_uri": "http://www.w3.org/2001/XMLSchema#string"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#String",
+              "range_puri": "http://www.w3.org/2001/XMLSchema#string",
+              "range_label": {
+                "nl": "String"
+              }
+            }
+          ],
+          "cardinality": "1..*",
           "codelist_uri": ""
         },
         {
@@ -1038,7 +1154,7 @@
             "nl": "Bevestiging"
           },
           "description": {
-            "nl": "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Deze relatie heeft geen richting."
+            "nl": "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Daarnaast omvat deze relatie ook situaties waarin onderdelen niet direct, maar wel structureel of functioneel met elkaar verbonden zijn op een manier die bevestiging impliceert, bv. een trap die eindigt net onder een voetgangersbrug zonder fysieke bevestiging. Deze relatie heeft geen richting."
           },
           "usage": {},
           "domain": [
@@ -1073,7 +1189,7 @@
             "nl": "Bevestiging"
           },
           "description": {
-            "nl": "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Deze relatie heeft geen richting."
+            "nl": "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Daarnaast omvat deze relatie ook situaties waarin onderdelen niet direct, maar wel structureel of functioneel met elkaar verbonden zijn op een manier die bevestiging impliceert, bv. een trap die eindigt net onder een voetgangersbrug zonder fysieke bevestiging. Deze relatie heeft geen richting."
           },
           "usage": {},
           "domain": [
@@ -1225,6 +1341,41 @@
         }
       ],
       "properties": [
+        {
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Bijlage.type",
+          "name": "type",
+          "sort": "type",
+          "label": {
+            "nl": "type"
+          },
+          "description": {
+            "nl": "De typering of categorie van de bijlage."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "Bijlage",
+              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Bijlage"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "KlBijlageType",
+              "range_uri": "http://www.w3.org/2004/02/skos/core#Concept"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Bijlage type",
+              "range_puri": "http://www.w3.org/2004/02/skos/core#Concept",
+              "range_label": {
+                "nl": "Bijlage type"
+              }
+            }
+          ],
+          "cardinality": "1..*",
+          "codelist_uri": "https://wegenenverkeer-test.data.vlaanderen.be/id/conceptscheme/KlBijlageType"
+        },
         {
           "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#Bijlage.type",
           "name": "type",
@@ -1721,7 +1872,9 @@
           "description": {
             "nl": "Een set van objecten (bv. collecties) die aanduiden waar het object zich bevindt in de objectenboom (EM-Infra)."
           },
-          "usage": {},
+          "usage": {
+            "nl": "Dient consistent te zijn met de naam."
+          },
           "domain": [
             {
               "EA-Name": "NaampadObject",
@@ -1762,6 +1915,13 @@
         "nl": "Om een toegangspunt tot het object te verduidelijken, kan er een punt geometrie aangeleverd worden om het toegangspunt aan te geven."
       },
       "parents": [
+        {
+          "label": "AIM versie",
+          "name": "AIMVersie",
+          "package": "OSLO-Implementatieelement",
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMVersie",
+          "scoped_uri": "#AIM versie"
+        },
         {
           "label": "AIM Toestand",
           "name": "AIMToestand",
@@ -2196,7 +2356,7 @@
       },
       "sort": "Bevestiging",
       "description": {
-        "nl": "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Deze relatie heeft geen richting."
+        "nl": "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Daarnaast omvat deze relatie ook situaties waarin onderdelen niet direct, maar wel structureel of functioneel met elkaar verbonden zijn op een manier die bevestiging impliceert, bv. een trap die eindigt net onder een voetgangersbrug zonder fysieke bevestiging. Deze relatie heeft geen richting."
       },
       "usage": {},
       "parents": [
@@ -2233,6 +2393,41 @@
         }
       ],
       "properties": [
+        {
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Bijlage.type",
+          "name": "type",
+          "sort": "type",
+          "label": {
+            "nl": "type"
+          },
+          "description": {
+            "nl": "De typering of categorie van de bijlage."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "Bijlage",
+              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Bijlage"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "KlBijlageType",
+              "range_uri": "http://www.w3.org/2004/02/skos/core#Concept"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Bijlage type",
+              "range_puri": "http://www.w3.org/2004/02/skos/core#Concept",
+              "range_label": {
+                "nl": "Bijlage type"
+              }
+            }
+          ],
+          "cardinality": "1..*",
+          "codelist_uri": "https://wegenenverkeer-test.data.vlaanderen.be/id/conceptscheme/KlBijlageType"
+        },
         {
           "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#Bijlage.type",
           "name": "type",
@@ -5631,6 +5826,93 @@
               "range_puri": "http://www.w3.org/2001/XMLSchema#string",
               "range_label": {
                 "nl": "String"
+              }
+            }
+          ],
+          "cardinality": "1",
+          "codelist_uri": ""
+        }
+      ]
+    },
+    {
+      "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInMaand",
+      "name": "Kwantitatieve waarde in maand",
+      "label": {
+        "nl": "Kwantitatieve waarde in maand"
+      },
+      "sort": "Kwantitatieve waarde in maand",
+      "description": {
+        "nl": "Een kwantitatieve waarde die een getal in aantal maanden uitdrukt."
+      },
+      "usage": {},
+      "parents": [],
+      "properties": [
+        {
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInMaand.waarde",
+          "name": "waarde",
+          "sort": "waarde",
+          "label": {
+            "nl": "waarde"
+          },
+          "description": {
+            "nl": "Bevat een getal die bij het datatype hoort."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "KwantWrdInMaand",
+              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInMaand"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "NonNegativeInteger",
+              "range_uri": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Natuurlijk getal",
+              "range_puri": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+              "range_label": {
+                "nl": "Natuurlijk getal"
+              }
+            }
+          ],
+          "cardinality": "1",
+          "codelist_uri": ""
+        },
+        {
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInMaand.standaardEenheid",
+          "name": "standaard eenheid",
+          "sort": "standaard eenheid",
+          "label": {
+            "nl": "standaard eenheid"
+          },
+          "description": {
+            "nl": "De standaard eenheid bij dit datatype is uitgedrukt in maand."
+          },
+          "usage": {
+            "nl": "\"mo\"^^cdt:ucumunit"
+          },
+          "domain": [
+            {
+              "EA-Name": "KwantWrdInMaand",
+              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInMaand"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "Literal",
+              "range_uri": "http://www.w3.org/2000/01/rdf-schema#Literal"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Literal",
+              "range_puri": "http://www.w3.org/2000/01/rdf-schema#Literal",
+              "range_label": {
+                "nl": "Literal"
               }
             }
           ],

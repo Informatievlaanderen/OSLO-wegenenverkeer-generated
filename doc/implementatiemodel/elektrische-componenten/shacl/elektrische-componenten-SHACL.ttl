@@ -23,9 +23,10 @@
     <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#KlAlgProvincieShape>,
     <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#KlAlgGemeenteShape>,
     <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#KlCabineStandaardtypeShape>,
+    <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#KlNetwerklocatieShape>,
     <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#KlCabineAardingsstelselShape>,
-    <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#KlCabineMerkShape>,
     <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#KlCabineModelnaamShape>,
+    <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#KlCabineMerkShape>,
     <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#KlRackModelnaamShape>,
     <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#KlRackMerkShape>,
     <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#KlRackTypeShape>,
@@ -42,6 +43,7 @@
     <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#KlEnergiemeterDNBMeteropnameFrequentieShape>,
     <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#KlEnergiemeterMetertypeShape>,
     <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#KlAardingAardingsnetShape>,
+    <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#KlNominaleSpanningShape>,
     <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#KlMeetcelNauwkeurigheidsvermogenShape>,
     <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#KlMeetcelNauwkeurigheidsklasseShape>,
     <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#KlMeetcelVeiligheidsfactorShape>,
@@ -109,6 +111,7 @@
     <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#KwantWrdInWattShape>,
     <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#KwantWrdInkVARhShape>,
     <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#KwantWrdInkWhShape>,
+    <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#NaampadObjectShape>,
     <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#AftakkingShape>,
     <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#BatterijShape>,
     <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#BevestigingShape>,
@@ -552,7 +555,7 @@
   shacl:targetClass <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Aftakking> .
 
 <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#AftakkingShape/440f3b063a60b3d33ddb75dd42f14247c90dc8ae> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#Aftakking%3ABevestiging";
-  shacl:description "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Deze relatie heeft geen richting."@nl;
+  shacl:description "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Daarnaast omvat deze relatie ook situaties waarin onderdelen niet direct, maar wel structureel of functioneel met elkaar verbonden zijn op een manier die bevestiging impliceert, bv. een trap die eindigt net onder een voetgangersbrug zonder fysieke bevestiging. Deze relatie heeft geen richting."@nl;
   shacl:name "Bevestiging"@nl;
   shacl:nodekind "sh:BlankNodeOrIRI";
   shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/elektrische-componenten/#Bevestiging>;
@@ -577,7 +580,7 @@
 
 <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#AftakkingShape/eef3aa764ce7a367564c223be90c380bc3898a27> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#Aftakking%3ABevestiging";
   shacl:class <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Laagspanningsbord>;
-  shacl:description "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Deze relatie heeft geen richting."@nl;
+  shacl:description "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Daarnaast omvat deze relatie ook situaties waarin onderdelen niet direct, maar wel structureel of functioneel met elkaar verbonden zijn op een manier die bevestiging impliceert, bv. een trap die eindigt net onder een voetgangersbrug zonder fysieke bevestiging. Deze relatie heeft geen richting."@nl;
   shacl:name "Bevestiging"@nl;
   shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/elektrische-componenten/#Bevestiging>;
   <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "De range van Bevestiging moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Laagspanningsbord> zijn."], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "De range van Bevestiging moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Laagspanningsbord> zijn."];
@@ -814,13 +817,13 @@
   <https://data.vlaanderen.be/ns/shacl#rule> "" .
 
 <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#BatterijShape/d15f714b2ed6b96e1b3f73a18a0eadabb5873da6> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#Batterij%3AVoedt";
-  shacl:class <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#UPS>,
+  shacl:class <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Stroomkring>,
     <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Laagspanningsbord>,
-    <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Stroomkring>;
+    <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#UPS>;
   shacl:description "Deze relatie wordt enkel gelegd naar onderdelen die permanent onder spanning staan in normaal bedrijf. Aan deze relatie wordt steeds een richting toegekend van de voedinggever naar de ontvanger."@nl;
   shacl:name "Voedt"@nl;
   shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/elektrische-componenten/#Voedt>;
-  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "De range van Voedt moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#UPS> zijn."], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "De range van Voedt moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Laagspanningsbord> zijn."], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "De range van Voedt moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Stroomkring> zijn."];
+  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "De range van Voedt moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Stroomkring> zijn."], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "De range van Voedt moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Laagspanningsbord> zijn."], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "De range van Voedt moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#UPS> zijn."];
   <https://data.vlaanderen.be/ns/shacl#rule> "" .
 
 <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#BatterijShape/d465ae7eed35aca3207ca502ba10814f215d1ab5> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#Batterij%3AVoedt";
@@ -906,7 +909,7 @@
   <https://data.vlaanderen.be/ns/shacl#rule> "" .
 
 <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#BehuizingShape/440f3b063a60b3d33ddb75dd42f14247c90dc8ae> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#Behuizing%3ABevestiging";
-  shacl:description "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Deze relatie heeft geen richting."@nl;
+  shacl:description "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Daarnaast omvat deze relatie ook situaties waarin onderdelen niet direct, maar wel structureel of functioneel met elkaar verbonden zijn op een manier die bevestiging impliceert, bv. een trap die eindigt net onder een voetgangersbrug zonder fysieke bevestiging. Deze relatie heeft geen richting."@nl;
   shacl:name "Bevestiging"@nl;
   shacl:nodekind "sh:BlankNodeOrIRI";
   shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/elektrische-componenten/#Bevestiging>;
@@ -988,7 +991,7 @@
 <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#BehuizingShape/eef3aa764ce7a367564c223be90c380bc3898a27> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#Behuizing%3ABevestiging";
   shacl:class <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Contactor>,
     <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Laagspanningsbord>;
-  shacl:description "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Deze relatie heeft geen richting."@nl;
+  shacl:description "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Daarnaast omvat deze relatie ook situaties waarin onderdelen niet direct, maar wel structureel of functioneel met elkaar verbonden zijn op een manier die bevestiging impliceert, bv. een trap die eindigt net onder een voetgangersbrug zonder fysieke bevestiging. Deze relatie heeft geen richting."@nl;
   shacl:name "Bevestiging"@nl;
   shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/elektrische-componenten/#Bevestiging>;
   <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "De range van Bevestiging moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Contactor> zijn."], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "De range van Bevestiging moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Contactor> zijn."], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "De range van Bevestiging moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Laagspanningsbord> zijn."], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "De range van Bevestiging moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Laagspanningsbord> zijn."];
@@ -1016,6 +1019,10 @@
     <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#BuitenkastShape/81c1995dcd0356f47494f93e397b042a03be1cb0>,
     <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#BuitenkastShape/978ddff125d32672a21f90a381238279561efbab>,
     <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#BuitenkastShape/e555f03449871d614a8d6c504af0e9d15eac4849>,
+    <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#BuitenkastShape/13b69a9e09a3813c8652390c024b8fa6369a81ef>,
+    <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#BuitenkastShape/2e82d83105c8ec240097fc710fe8a88f090134a0>,
+    <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#BuitenkastShape/cb0d906c368c5886783ec16b69a172b2f1ee8569>,
+    <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#BuitenkastShape/ce018eab734426f08a40adc7d7bc7b03b4efe9de>,
     <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#BuitenkastShape/0f2344a630e1a0e8c7245fa454d750987ac4ea16>,
     <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#BuitenkastShape/2df087ff629a5ebef1c80831f2734724ab3946a5>,
     <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#BuitenkastShape/5355a06b87621a3b44b1cad0f03b6fe88163cc0e>,
@@ -1030,12 +1037,28 @@
   <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "De range van verfraaid moet van het type <http://www.w3.org/2004/02/skos/core#Concept> zijn."];
   <https://data.vlaanderen.be/ns/shacl#rule> "" .
 
+<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#BuitenkastShape/13b69a9e09a3813c8652390c024b8fa6369a81ef> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#Buitenkast%3Alaatste%20keuringsdatum";
+  shacl:description "Deze datum geeft aan wanneer de laatste keuring plaatsvond en kan gebruikt worden om te bepalen wanneer een volgende keuring nodig is."@nl;
+  shacl:maxCount 1;
+  shacl:name "laatste keuringsdatum"@nl;
+  shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Buitenkast.laatsteKeuringsdatum>;
+  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "Maximaal 1 waarden toegelaten voor laatste keuringsdatum"];
+  <https://data.vlaanderen.be/ns/shacl#rule> "" .
+
 <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#BuitenkastShape/2df087ff629a5ebef1c80831f2734724ab3946a5> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#Buitenkast%3Averfraaid";
   shacl:description "Geeft aan of de wegkantkast voorzien van verfraaiing en of die al dan niet vergund is."@nl;
   shacl:name "verfraaid"@nl;
   shacl:nodekind "sh:BlankNodeOrIRI";
   shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Buitenkast.verfraaid>;
   <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "De verwachte waarde voor verfraaid is een rdfs:Resource (URI of blank node)"];
+  <https://data.vlaanderen.be/ns/shacl#rule> "" .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#BuitenkastShape/2e82d83105c8ec240097fc710fe8a88f090134a0> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#Buitenkast%3Alaatste%20keuringsdatum";
+  shacl:description "Deze datum geeft aan wanneer de laatste keuring plaatsvond en kan gebruikt worden om te bepalen wanneer een volgende keuring nodig is."@nl;
+  shacl:name "laatste keuringsdatum"@nl;
+  shacl:nodekind "sh:Literal";
+  shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Buitenkast.laatsteKeuringsdatum>;
+  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "De verwachte waarde voor laatste keuringsdatum is een Literal"];
   <https://data.vlaanderen.be/ns/shacl#rule> "" .
 
 <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#BuitenkastShape/3cc15287b9ca534d8a5a2496599870e474db83e9> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#Buitenkast%3Akeuringsfrequentie";
@@ -1076,6 +1099,22 @@
   shacl:name "keuringsfrequentie"@nl;
   shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Buitenkast.keuringsfrequentie>;
   <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "Minimaal 1 waarden verwacht voor keuringsfrequentie"];
+  <https://data.vlaanderen.be/ns/shacl#rule> "" .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#BuitenkastShape/cb0d906c368c5886783ec16b69a172b2f1ee8569> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#Buitenkast%3Alaatste%20keuringsdatum";
+  shacl:datatype xsd:date;
+  shacl:description "Deze datum geeft aan wanneer de laatste keuring plaatsvond en kan gebruikt worden om te bepalen wanneer een volgende keuring nodig is."@nl;
+  shacl:name "laatste keuringsdatum"@nl;
+  shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Buitenkast.laatsteKeuringsdatum>;
+  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "De range van laatste keuringsdatum moet van het type <http://www.w3.org/2001/XMLSchema#date> zijn."];
+  <https://data.vlaanderen.be/ns/shacl#rule> "" .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#BuitenkastShape/ce018eab734426f08a40adc7d7bc7b03b4efe9de> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#Buitenkast%3Alaatste%20keuringsdatum";
+  shacl:description "Deze datum geeft aan wanneer de laatste keuring plaatsvond en kan gebruikt worden om te bepalen wanneer een volgende keuring nodig is."@nl;
+  shacl:minCount 1;
+  shacl:name "laatste keuringsdatum"@nl;
+  shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Buitenkast.laatsteKeuringsdatum>;
+  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "Minimaal 1 waarden verwacht voor laatste keuringsdatum"];
   <https://data.vlaanderen.be/ns/shacl#rule> "" .
 
 <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#BuitenkastShape/d7649e15eafd7e143ae7f4fd4efc9d65cd1f841e> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#Buitenkast%3Aingress%20protection%20klasse";
@@ -1126,10 +1165,18 @@
     <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#CabineShape/500b943d794055c8f680934966a3e72c6ab21938>,
     <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#CabineShape/699a80d09d00c3b1e1ac121bcb5dd8fdd8dda83e>,
     <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#CabineShape/9acd50f32b55b7abb40483eecab16e67a87a18a3>,
+    <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#CabineShape/12810258750cedc652d98fdba4d13bd6a76cdb44>,
+    <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#CabineShape/4436fcb5cbe47d9ba7e2b473a4f0082b3606b892>,
+    <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#CabineShape/5ffbe5423fbee65f65ba27dafbceb0e91aef8c5b>,
+    <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#CabineShape/886ae4354c80f4cd8383971a5901000b9d6b9f51>,
     <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#CabineShape/0ccc8ed25d5ad8c08323ea0c694305dd023c0380>,
     <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#CabineShape/2f68c0198fda2821b83bee9b7b129912806ea1e1>,
     <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#CabineShape/37fc6ec43a4b0ca273fb322136010a26793207b6>,
     <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#CabineShape/6c99418fdd9a4d781685d36bb14b234a3122838d>,
+    <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#CabineShape/22f00132926aa44fd2c7f2ad15a7e517017ceb1a>,
+    <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#CabineShape/c10336a8d4a00205f77d4c0c26ad510a3f47f12b>,
+    <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#CabineShape/ed8671e8680e921c9c1fb20d7b938517a187ca57>,
+    <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#CabineShape/ed9929114544eaec32939445802087013dbce317>,
     <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#CabineShape/0a510bb9f8fb9e85ba3aae2f2b261c5150480a52>,
     <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#CabineShape/32bf3b96c8a26174f091758ce4c7ebc153d836e9>,
     <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#CabineShape/cd4b45a9c9150b17353d2dc6caef046c2a269760>,
@@ -1160,6 +1207,22 @@
   <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "Maximaal 1 waarden toegelaten voor kelderdiepte"];
   <https://data.vlaanderen.be/ns/shacl#rule> "" .
 
+<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#CabineShape/12810258750cedc652d98fdba4d13bd6a76cdb44> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#Cabine%3Aheeft%20isolatie";
+  shacl:description "Geeft aan of de cabine is voorzien van isolatie."@nl;
+  shacl:name "heeft isolatie"@nl;
+  shacl:nodekind "sh:Literal";
+  shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Cabine.heeftIsolatie>;
+  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "De verwachte waarde voor heeft isolatie is een Literal"];
+  <https://data.vlaanderen.be/ns/shacl#rule> "" .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#CabineShape/22f00132926aa44fd2c7f2ad15a7e517017ceb1a> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#Cabine%3Akeuzelijst%20netwerklocaties";
+  shacl:class skos:Concept;
+  shacl:description "De verschillende opties netwerklocatie."@nl;
+  shacl:name "keuzelijst netwerklocaties"@nl;
+  shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Cabine.typeNetwerklocatie>;
+  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "De range van keuzelijst netwerklocaties moet van het type <http://www.w3.org/2004/02/skos/core#Concept> zijn."];
+  <https://data.vlaanderen.be/ns/shacl#rule> "" .
+
 <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#CabineShape/2f68c0198fda2821b83bee9b7b129912806ea1e1> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#Cabine%3Akelderdiepte";
   shacl:class <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInMeter>;
   shacl:description "Binnenhoogte in meter van de kabelkelder onder de cabine."@nl;
@@ -1185,11 +1248,19 @@
   <https://data.vlaanderen.be/ns/shacl#rule> "" .
 
 <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#CabineShape/440f3b063a60b3d33ddb75dd42f14247c90dc8ae> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#Cabine%3ABevestiging";
-  shacl:description "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Deze relatie heeft geen richting."@nl;
+  shacl:description "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Daarnaast omvat deze relatie ook situaties waarin onderdelen niet direct, maar wel structureel of functioneel met elkaar verbonden zijn op een manier die bevestiging impliceert, bv. een trap die eindigt net onder een voetgangersbrug zonder fysieke bevestiging. Deze relatie heeft geen richting."@nl;
   shacl:name "Bevestiging"@nl;
   shacl:nodekind "sh:BlankNodeOrIRI";
   shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/elektrische-componenten/#Bevestiging>;
   <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "De verwachte waarde voor Bevestiging is een rdfs:Resource (URI of blank node)"], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "De verwachte waarde voor Bevestiging is een rdfs:Resource (URI of blank node)"], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "De verwachte waarde voor Bevestiging is een rdfs:Resource (URI of blank node)"], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "De verwachte waarde voor Bevestiging is een rdfs:Resource (URI of blank node)"], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "De verwachte waarde voor Bevestiging is een rdfs:Resource (URI of blank node)"], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "De verwachte waarde voor Bevestiging is een rdfs:Resource (URI of blank node)"];
+  <https://data.vlaanderen.be/ns/shacl#rule> "" .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#CabineShape/4436fcb5cbe47d9ba7e2b473a4f0082b3606b892> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#Cabine%3Aheeft%20isolatie";
+  shacl:datatype xsd:boolean;
+  shacl:description "Geeft aan of de cabine is voorzien van isolatie."@nl;
+  shacl:name "heeft isolatie"@nl;
+  shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Cabine.heeftIsolatie>;
+  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "De range van heeft isolatie moet van het type <http://www.w3.org/2001/XMLSchema#boolean> zijn."];
   <https://data.vlaanderen.be/ns/shacl#rule> "" .
 
 <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#CabineShape/500b943d794055c8f680934966a3e72c6ab21938> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#Cabine%3Aaardingsstelsel";
@@ -1198,6 +1269,14 @@
   shacl:name "aardingsstelsel"@nl;
   shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Cabine.aardingsstelsel>;
   <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "Minimaal 1 waarden verwacht voor aardingsstelsel"];
+  <https://data.vlaanderen.be/ns/shacl#rule> "" .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#CabineShape/5ffbe5423fbee65f65ba27dafbceb0e91aef8c5b> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#Cabine%3Aheeft%20isolatie";
+  shacl:description "Geeft aan of de cabine is voorzien van isolatie."@nl;
+  shacl:minCount 1;
+  shacl:name "heeft isolatie"@nl;
+  shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Cabine.heeftIsolatie>;
+  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "Minimaal 1 waarden verwacht voor heeft isolatie"];
   <https://data.vlaanderen.be/ns/shacl#rule> "" .
 
 <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#CabineShape/699a80d09d00c3b1e1ac121bcb5dd8fdd8dda83e> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#Cabine%3Aaardingsstelsel";
@@ -1216,12 +1295,28 @@
   <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "De verwachte waarde voor kelderdiepte is een rdfs:Resource (URI of blank node)"];
   <https://data.vlaanderen.be/ns/shacl#rule> "" .
 
+<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#CabineShape/886ae4354c80f4cd8383971a5901000b9d6b9f51> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#Cabine%3Aheeft%20isolatie";
+  shacl:description "Geeft aan of de cabine is voorzien van isolatie."@nl;
+  shacl:maxCount 1;
+  shacl:name "heeft isolatie"@nl;
+  shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Cabine.heeftIsolatie>;
+  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "Maximaal 1 waarden toegelaten voor heeft isolatie"];
+  <https://data.vlaanderen.be/ns/shacl#rule> "" .
+
 <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#CabineShape/9acd50f32b55b7abb40483eecab16e67a87a18a3> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#Cabine%3Aaardingsstelsel";
   shacl:description "Keuze tussen verschillende types voor het gebruikte aardingsstelsel."@nl;
   shacl:maxCount 1;
   shacl:name "aardingsstelsel"@nl;
   shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Cabine.aardingsstelsel>;
   <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "Maximaal 1 waarden toegelaten voor aardingsstelsel"];
+  <https://data.vlaanderen.be/ns/shacl#rule> "" .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#CabineShape/c10336a8d4a00205f77d4c0c26ad510a3f47f12b> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#Cabine%3Akeuzelijst%20netwerklocaties";
+  shacl:description "De verschillende opties netwerklocatie."@nl;
+  shacl:maxCount 1;
+  shacl:name "keuzelijst netwerklocaties"@nl;
+  shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Cabine.typeNetwerklocatie>;
+  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "Maximaal 1 waarden toegelaten voor keuzelijst netwerklocaties"];
   <https://data.vlaanderen.be/ns/shacl#rule> "" .
 
 <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#CabineShape/cd4b45a9c9150b17353d2dc6caef046c2a269760> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#Cabine%3Astandaardtype";
@@ -1240,14 +1335,30 @@
   <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "De verwachte waarde voor standaardtype is een rdfs:Resource (URI of blank node)"];
   <https://data.vlaanderen.be/ns/shacl#rule> "" .
 
+<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#CabineShape/ed8671e8680e921c9c1fb20d7b938517a187ca57> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#Cabine%3Akeuzelijst%20netwerklocaties";
+  shacl:description "De verschillende opties netwerklocatie."@nl;
+  shacl:name "keuzelijst netwerklocaties"@nl;
+  shacl:nodekind "sh:BlankNodeOrIRI";
+  shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Cabine.typeNetwerklocatie>;
+  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "De verwachte waarde voor keuzelijst netwerklocaties is een rdfs:Resource (URI of blank node)"];
+  <https://data.vlaanderen.be/ns/shacl#rule> "" .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#CabineShape/ed9929114544eaec32939445802087013dbce317> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#Cabine%3Akeuzelijst%20netwerklocaties";
+  shacl:description "De verschillende opties netwerklocatie."@nl;
+  shacl:minCount 1;
+  shacl:name "keuzelijst netwerklocaties"@nl;
+  shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Cabine.typeNetwerklocatie>;
+  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "Minimaal 1 waarden verwacht voor keuzelijst netwerklocaties"];
+  <https://data.vlaanderen.be/ns/shacl#rule> "" .
+
 <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#CabineShape/eef3aa764ce7a367564c223be90c380bc3898a27> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#Cabine%3ABevestiging";
-  shacl:class <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#HSBeveiligingscel>,
+  shacl:class <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Transformator>,
     <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#EnergiemeterDNB>,
-    <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Transformator>;
-  shacl:description "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Deze relatie heeft geen richting."@nl;
+    <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#HSBeveiligingscel>;
+  shacl:description "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Daarnaast omvat deze relatie ook situaties waarin onderdelen niet direct, maar wel structureel of functioneel met elkaar verbonden zijn op een manier die bevestiging impliceert, bv. een trap die eindigt net onder een voetgangersbrug zonder fysieke bevestiging. Deze relatie heeft geen richting."@nl;
   shacl:name "Bevestiging"@nl;
   shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/elektrische-componenten/#Bevestiging>;
-  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "De range van Bevestiging moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#HSBeveiligingscel> zijn."], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "De range van Bevestiging moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#HSBeveiligingscel> zijn."], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "De range van Bevestiging moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#EnergiemeterDNB> zijn."], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "De range van Bevestiging moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#EnergiemeterDNB> zijn."], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "De range van Bevestiging moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Transformator> zijn."], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "De range van Bevestiging moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Transformator> zijn."];
+  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "De range van Bevestiging moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Transformator> zijn."], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "De range van Bevestiging moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Transformator> zijn."], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "De range van Bevestiging moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#EnergiemeterDNB> zijn."], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "De range van Bevestiging moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#EnergiemeterDNB> zijn."], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "De range van Bevestiging moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#HSBeveiligingscel> zijn."], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "De range van Bevestiging moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#HSBeveiligingscel> zijn."];
   <https://data.vlaanderen.be/ns/shacl#rule> "" .
 
 <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#ContactorShape> a shacl:NodeShape;
@@ -1611,13 +1722,13 @@
   shacl:targetClass <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#DNBLaagspanning> .
 
 <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#DNBLaagspanningShape/d15f714b2ed6b96e1b3f73a18a0eadabb5873da6> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#DNBLaagspanning%3AVoedt";
-  shacl:class <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#EnergiemeterDNB>,
-    <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Laagspanningsbord>,
+  shacl:class <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Laagspanningsbord>,
+    <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#EnergiemeterDNB>,
     <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#ForfaitaireAansluiting>;
   shacl:description "Deze relatie wordt enkel gelegd naar onderdelen die permanent onder spanning staan in normaal bedrijf. Aan deze relatie wordt steeds een richting toegekend van de voedinggever naar de ontvanger."@nl;
   shacl:name "Voedt"@nl;
   shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/elektrische-componenten/#Voedt>;
-  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "De range van Voedt moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#EnergiemeterDNB> zijn."], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "De range van Voedt moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Laagspanningsbord> zijn."], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "De range van Voedt moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#ForfaitaireAansluiting> zijn."];
+  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "De range van Voedt moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Laagspanningsbord> zijn."], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "De range van Voedt moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#EnergiemeterDNB> zijn."], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "De range van Voedt moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#ForfaitaireAansluiting> zijn."];
   <https://data.vlaanderen.be/ns/shacl#rule> "" .
 
 <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#DNBLaagspanningShape/d465ae7eed35aca3207ca502ba10814f215d1ab5> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#DNBLaagspanning%3AVoedt";
@@ -3598,8 +3709,112 @@
 <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#ForfaitaireAansluitingShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:property <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#ForfaitaireAansluitingShape/d15f714b2ed6b96e1b3f73a18a0eadabb5873da6>,
-    <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#ForfaitaireAansluitingShape/d465ae7eed35aca3207ca502ba10814f215d1ab5>;
+    <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#ForfaitaireAansluitingShape/d465ae7eed35aca3207ca502ba10814f215d1ab5>,
+    <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#ForfaitaireAansluitingShape/1ca1ddab47d4e66ba4e1f738c5812eec0557ec92>,
+    <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#ForfaitaireAansluitingShape/5adca4271d2a3fc38000ddd749998e9de5ed3640>,
+    <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#ForfaitaireAansluitingShape/8d01a3d1a24c7b1c3993aa64679dc9dfbfc336dc>,
+    <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#ForfaitaireAansluitingShape/8e9b38fd9c8c56d9d9f4d5d213310353fd6b9e6e>,
+    <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#ForfaitaireAansluitingShape/03a68f6d18c8be484e7fefa28100102307f392e3>,
+    <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#ForfaitaireAansluitingShape/2f8554c149df7505fd2260c375934ce4dac38b60>,
+    <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#ForfaitaireAansluitingShape/6636bf75e44dcea48112b777b09e06cfcf863d93>,
+    <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#ForfaitaireAansluitingShape/a43e4857ca45bfa5e00cebe680bb178fa317b42f>,
+    <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#ForfaitaireAansluitingShape/60bf4420c79e958c7afd8f8f49646bac772ba034>,
+    <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#ForfaitaireAansluitingShape/d72f01520d9e6dbc5f4d72231c2d34bb4a9a72a1>,
+    <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#ForfaitaireAansluitingShape/ecda6f87b3c50bbb936b5a23a653530f655cc195>,
+    <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#ForfaitaireAansluitingShape/f5ac96fdd02e7e21b6a665387cb1f63ee8679856>,
+    <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#ForfaitaireAansluitingShape/2274187d156f9f5d41595f74ad2e00c5c9a76407>,
+    <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#ForfaitaireAansluitingShape/a26718d3f273c9247be5d59744e5f1c5c3eed0eb>,
+    <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#ForfaitaireAansluitingShape/d30ab49dd30742394d2f2577a5ec315b3119ea48>,
+    <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#ForfaitaireAansluitingShape/e5d3672d841bd1fca06e899136f8d464eac424d0>;
   shacl:targetClass <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#ForfaitaireAansluiting> .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#ForfaitaireAansluitingShape/03a68f6d18c8be484e7fefa28100102307f392e3> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#ForfaitaireAansluiting%3Aean%20nummer";
+  shacl:description "Uniek identificatienummer van de elektrische aansluiting, bestaande uit 18 cijfers."@nl;
+  shacl:maxCount 1;
+  shacl:name "ean nummer"@nl;
+  shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#ForfaitaireAansluiting.eanNummer>;
+  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "Maximaal 1 waarden toegelaten voor ean nummer"];
+  <https://data.vlaanderen.be/ns/shacl#rule> "" .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#ForfaitaireAansluitingShape/1ca1ddab47d4e66ba4e1f738c5812eec0557ec92> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#ForfaitaireAansluiting%3Aadres%20volgens%20DNB";
+  shacl:description "Het adres van de aansluiting volgens de distributienetbeheerder."@nl;
+  shacl:maxCount 1;
+  shacl:name "adres volgens DNB"@nl;
+  shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#ForfaitaireAansluiting.adresVolgensDNB>;
+  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "Maximaal 1 waarden toegelaten voor adres volgens DNB"];
+  <https://data.vlaanderen.be/ns/shacl#rule> "" .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#ForfaitaireAansluitingShape/2274187d156f9f5d41595f74ad2e00c5c9a76407> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#ForfaitaireAansluiting%3Areferentie%20distributienetbeheerder";
+  shacl:datatype xsd:string;
+  shacl:description "De wijze waarop, de referentie waarmee de aansluiting gekend is bij de distributienetbeheerder."@nl;
+  shacl:name "referentie distributienetbeheerder"@nl;
+  shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#ForfaitaireAansluiting.referentieDNB>;
+  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "De range van referentie distributienetbeheerder moet van het type <http://www.w3.org/2001/XMLSchema#string> zijn."];
+  <https://data.vlaanderen.be/ns/shacl#rule> "" .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#ForfaitaireAansluitingShape/2f8554c149df7505fd2260c375934ce4dac38b60> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#ForfaitaireAansluiting%3Aean%20nummer";
+  shacl:description "Uniek identificatienummer van de elektrische aansluiting, bestaande uit 18 cijfers."@nl;
+  shacl:name "ean nummer"@nl;
+  shacl:nodekind "sh:Literal";
+  shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#ForfaitaireAansluiting.eanNummer>;
+  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "De verwachte waarde voor ean nummer is een Literal"];
+  <https://data.vlaanderen.be/ns/shacl#rule> "" .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#ForfaitaireAansluitingShape/5adca4271d2a3fc38000ddd749998e9de5ed3640> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#ForfaitaireAansluiting%3Aadres%20volgens%20DNB";
+  shacl:description "Het adres van de aansluiting volgens de distributienetbeheerder."@nl;
+  shacl:minCount 1;
+  shacl:name "adres volgens DNB"@nl;
+  shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#ForfaitaireAansluiting.adresVolgensDNB>;
+  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "Minimaal 1 waarden verwacht voor adres volgens DNB"];
+  <https://data.vlaanderen.be/ns/shacl#rule> "" .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#ForfaitaireAansluitingShape/60bf4420c79e958c7afd8f8f49646bac772ba034> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#ForfaitaireAansluiting%3Anominale%20spanning";
+  shacl:description "De nominale spanning van de forfaitaire aansluiting."@nl;
+  shacl:name "nominale spanning"@nl;
+  shacl:nodekind "sh:BlankNodeOrIRI";
+  shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#ForfaitaireAansluiting.nominaleSpanning>;
+  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "De verwachte waarde voor nominale spanning is een rdfs:Resource (URI of blank node)"];
+  <https://data.vlaanderen.be/ns/shacl#rule> "" .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#ForfaitaireAansluitingShape/6636bf75e44dcea48112b777b09e06cfcf863d93> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#ForfaitaireAansluiting%3Aean%20nummer";
+  shacl:description "Uniek identificatienummer van de elektrische aansluiting, bestaande uit 18 cijfers."@nl;
+  shacl:minCount 1;
+  shacl:name "ean nummer"@nl;
+  shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#ForfaitaireAansluiting.eanNummer>;
+  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "Minimaal 1 waarden verwacht voor ean nummer"];
+  <https://data.vlaanderen.be/ns/shacl#rule> "" .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#ForfaitaireAansluitingShape/8d01a3d1a24c7b1c3993aa64679dc9dfbfc336dc> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#ForfaitaireAansluiting%3Aadres%20volgens%20DNB";
+  shacl:description "Het adres van de aansluiting volgens de distributienetbeheerder."@nl;
+  shacl:name "adres volgens DNB"@nl;
+  shacl:nodekind "sh:BlankNodeOrIRI";
+  shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#ForfaitaireAansluiting.adresVolgensDNB>;
+  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "De verwachte waarde voor adres volgens DNB is een rdfs:Resource (URI of blank node)"];
+  <https://data.vlaanderen.be/ns/shacl#rule> "" .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#ForfaitaireAansluitingShape/8e9b38fd9c8c56d9d9f4d5d213310353fd6b9e6e> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#ForfaitaireAansluiting%3Aadres%20volgens%20DNB";
+  shacl:class <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcAdres>;
+  shacl:description "Het adres van de aansluiting volgens de distributienetbeheerder."@nl;
+  shacl:name "adres volgens DNB"@nl;
+  shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#ForfaitaireAansluiting.adresVolgensDNB>;
+  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "De range van adres volgens DNB moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcAdres> zijn."];
+  <https://data.vlaanderen.be/ns/shacl#rule> "" .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#ForfaitaireAansluitingShape/a26718d3f273c9247be5d59744e5f1c5c3eed0eb> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#ForfaitaireAansluiting%3Areferentie%20distributienetbeheerder";
+  shacl:description "De wijze waarop, de referentie waarmee de aansluiting gekend is bij de distributienetbeheerder."@nl;
+  shacl:maxCount 1;
+  shacl:name "referentie distributienetbeheerder"@nl;
+  shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#ForfaitaireAansluiting.referentieDNB>;
+  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "Maximaal 1 waarden toegelaten voor referentie distributienetbeheerder"];
+  <https://data.vlaanderen.be/ns/shacl#rule> "" .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#ForfaitaireAansluitingShape/a43e4857ca45bfa5e00cebe680bb178fa317b42f> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#ForfaitaireAansluiting%3Aean%20nummer";
+  shacl:datatype xsd:string;
+  shacl:description "Uniek identificatienummer van de elektrische aansluiting, bestaande uit 18 cijfers."@nl;
+  shacl:name "ean nummer"@nl;
+  shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#ForfaitaireAansluiting.eanNummer>;
+  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "De range van ean nummer moet van het type <http://www.w3.org/2001/XMLSchema#string> zijn."];
+  <https://data.vlaanderen.be/ns/shacl#rule> "" .
 
 <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#ForfaitaireAansluitingShape/d15f714b2ed6b96e1b3f73a18a0eadabb5873da6> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#ForfaitaireAansluiting%3AVoedt";
   shacl:class <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Stroomkring>;
@@ -3609,12 +3824,52 @@
   <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "De range van Voedt moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Stroomkring> zijn."];
   <https://data.vlaanderen.be/ns/shacl#rule> "" .
 
+<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#ForfaitaireAansluitingShape/d30ab49dd30742394d2f2577a5ec315b3119ea48> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#ForfaitaireAansluiting%3Areferentie%20distributienetbeheerder";
+  shacl:description "De wijze waarop, de referentie waarmee de aansluiting gekend is bij de distributienetbeheerder."@nl;
+  shacl:minCount 1;
+  shacl:name "referentie distributienetbeheerder"@nl;
+  shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#ForfaitaireAansluiting.referentieDNB>;
+  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "Minimaal 1 waarden verwacht voor referentie distributienetbeheerder"];
+  <https://data.vlaanderen.be/ns/shacl#rule> "" .
+
 <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#ForfaitaireAansluitingShape/d465ae7eed35aca3207ca502ba10814f215d1ab5> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#ForfaitaireAansluiting%3AVoedt";
   shacl:description "Deze relatie wordt enkel gelegd naar onderdelen die permanent onder spanning staan in normaal bedrijf. Aan deze relatie wordt steeds een richting toegekend van de voedinggever naar de ontvanger."@nl;
   shacl:name "Voedt"@nl;
   shacl:nodekind "sh:BlankNodeOrIRI";
   shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/elektrische-componenten/#Voedt>;
   <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "De verwachte waarde voor Voedt is een rdfs:Resource (URI of blank node)"];
+  <https://data.vlaanderen.be/ns/shacl#rule> "" .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#ForfaitaireAansluitingShape/d72f01520d9e6dbc5f4d72231c2d34bb4a9a72a1> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#ForfaitaireAansluiting%3Anominale%20spanning";
+  shacl:description "De nominale spanning van de forfaitaire aansluiting."@nl;
+  shacl:minCount 1;
+  shacl:name "nominale spanning"@nl;
+  shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#ForfaitaireAansluiting.nominaleSpanning>;
+  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "Minimaal 1 waarden verwacht voor nominale spanning"];
+  <https://data.vlaanderen.be/ns/shacl#rule> "" .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#ForfaitaireAansluitingShape/e5d3672d841bd1fca06e899136f8d464eac424d0> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#ForfaitaireAansluiting%3Areferentie%20distributienetbeheerder";
+  shacl:description "De wijze waarop, de referentie waarmee de aansluiting gekend is bij de distributienetbeheerder."@nl;
+  shacl:name "referentie distributienetbeheerder"@nl;
+  shacl:nodekind "sh:Literal";
+  shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#ForfaitaireAansluiting.referentieDNB>;
+  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "De verwachte waarde voor referentie distributienetbeheerder is een Literal"];
+  <https://data.vlaanderen.be/ns/shacl#rule> "" .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#ForfaitaireAansluitingShape/ecda6f87b3c50bbb936b5a23a653530f655cc195> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#ForfaitaireAansluiting%3Anominale%20spanning";
+  shacl:class skos:Concept;
+  shacl:description "De nominale spanning van de forfaitaire aansluiting."@nl;
+  shacl:name "nominale spanning"@nl;
+  shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#ForfaitaireAansluiting.nominaleSpanning>;
+  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "De range van nominale spanning moet van het type <http://www.w3.org/2004/02/skos/core#Concept> zijn."];
+  <https://data.vlaanderen.be/ns/shacl#rule> "" .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#ForfaitaireAansluitingShape/f5ac96fdd02e7e21b6a665387cb1f63ee8679856> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#ForfaitaireAansluiting%3Anominale%20spanning";
+  shacl:description "De nominale spanning van de forfaitaire aansluiting."@nl;
+  shacl:maxCount 1;
+  shacl:name "nominale spanning"@nl;
+  shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#ForfaitaireAansluiting.nominaleSpanning>;
+  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "Maximaal 1 waarden toegelaten voor nominale spanning"];
   <https://data.vlaanderen.be/ns/shacl#rule> "" .
 
 <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#HSBeveiligingscelShape> a shacl:NodeShape;
@@ -4153,7 +4408,7 @@
   shacl:targetClass <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Hoofdschakelaar> .
 
 <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#HoofdschakelaarShape/440f3b063a60b3d33ddb75dd42f14247c90dc8ae> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#Hoofdschakelaar%3ABevestiging";
-  shacl:description "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Deze relatie heeft geen richting."@nl;
+  shacl:description "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Daarnaast omvat deze relatie ook situaties waarin onderdelen niet direct, maar wel structureel of functioneel met elkaar verbonden zijn op een manier die bevestiging impliceert, bv. een trap die eindigt net onder een voetgangersbrug zonder fysieke bevestiging. Deze relatie heeft geen richting."@nl;
   shacl:name "Bevestiging"@nl;
   shacl:nodekind "sh:BlankNodeOrIRI";
   shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/elektrische-componenten/#Bevestiging>;
@@ -4161,14 +4416,14 @@
   <https://data.vlaanderen.be/ns/shacl#rule> "" .
 
 <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#HoofdschakelaarShape/d15f714b2ed6b96e1b3f73a18a0eadabb5873da6> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#Hoofdschakelaar%3AVoedt";
-  shacl:class <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Aftakking>,
-    <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Laagspanningsbord>,
-    <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#EnergiemeterAWV>,
-    <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Stroomkring>;
+  shacl:class <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Laagspanningsbord>,
+    <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Stroomkring>,
+    <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Aftakking>,
+    <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#EnergiemeterAWV>;
   shacl:description "Deze relatie wordt enkel gelegd naar onderdelen die permanent onder spanning staan in normaal bedrijf. Aan deze relatie wordt steeds een richting toegekend van de voedinggever naar de ontvanger."@nl;
   shacl:name "Voedt"@nl;
   shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/elektrische-componenten/#Voedt>;
-  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "De range van Voedt moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Aftakking> zijn."], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "De range van Voedt moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Laagspanningsbord> zijn."], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "De range van Voedt moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#EnergiemeterAWV> zijn."], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "De range van Voedt moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Stroomkring> zijn."];
+  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "De range van Voedt moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Laagspanningsbord> zijn."], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "De range van Voedt moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Stroomkring> zijn."], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "De range van Voedt moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Aftakking> zijn."], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "De range van Voedt moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#EnergiemeterAWV> zijn."];
   <https://data.vlaanderen.be/ns/shacl#rule> "" .
 
 <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#HoofdschakelaarShape/d465ae7eed35aca3207ca502ba10814f215d1ab5> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#Hoofdschakelaar%3AVoedt";
@@ -4181,7 +4436,7 @@
 
 <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#HoofdschakelaarShape/eef3aa764ce7a367564c223be90c380bc3898a27> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#Hoofdschakelaar%3ABevestiging";
   shacl:class <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Laagspanningsbord>;
-  shacl:description "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Deze relatie heeft geen richting."@nl;
+  shacl:description "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Daarnaast omvat deze relatie ook situaties waarin onderdelen niet direct, maar wel structureel of functioneel met elkaar verbonden zijn op een manier die bevestiging impliceert, bv. een trap die eindigt net onder een voetgangersbrug zonder fysieke bevestiging. Deze relatie heeft geen richting."@nl;
   shacl:name "Bevestiging"@nl;
   shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/elektrische-componenten/#Bevestiging>;
   <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "De range van Bevestiging moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Laagspanningsbord> zijn."], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "De range van Bevestiging moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Laagspanningsbord> zijn."];
@@ -4216,7 +4471,10 @@
     <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#IOKaartShape/5024ed9e35e6d1e3ab51de28f923feeb240ee3ba>,
     <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#IOKaartShape/665003c665f41134656db4624bd8dddf411e5b29>,
     <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#IOKaartShape/835be63f4051b80461d900a01bc7b0c68ee4a104>,
-    <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#IOKaartShape/8e18ceec84715080cef56ac278663cfd75888d45>;
+    <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#IOKaartShape/8e18ceec84715080cef56ac278663cfd75888d45>,
+    <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#IOKaartShape/3bf7689ef46d9797b43fb5f015c60b42197a00ae>,
+    <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#IOKaartShape/9a8628d35be89dfed48ead0aa7605e783cf8f3a4>,
+    <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#IOKaartShape/e8f191bb991ef06035a491e8737ca89e1787513d>;
   shacl:targetClass <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#IOKaart> .
 
 <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#IOKaartShape/041e6c69ec0f3824e5cf4fcb91314c90d7c93879> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#IOKaart%3Arichting";
@@ -4241,6 +4499,14 @@
   shacl:name "merk"@nl;
   shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#IOKaart.merk>;
   <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "Minimaal 1 waarden verwacht voor merk"];
+  <https://data.vlaanderen.be/ns/shacl#rule> "" .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#IOKaartShape/3bf7689ef46d9797b43fb5f015c60b42197a00ae> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#IOKaart%3Atechnische%20fiche";
+  shacl:description "De technische fiches als bijlage."@nl;
+  shacl:minCount 1;
+  shacl:name "technische fiche"@nl;
+  shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#IOKaart.technischeFiche>;
+  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "Minimaal 1 waarden verwacht voor technische fiche"];
   <https://data.vlaanderen.be/ns/shacl#rule> "" .
 
 <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#IOKaartShape/453308b1d63ecd339664dd0c1ea07955b8a66f27> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#IOKaart%3Apoortadres";
@@ -4363,6 +4629,14 @@
   <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "Minimaal 1 waarden verwacht voor modelnaam"];
   <https://data.vlaanderen.be/ns/shacl#rule> "" .
 
+<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#IOKaartShape/9a8628d35be89dfed48ead0aa7605e783cf8f3a4> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#IOKaart%3Atechnische%20fiche";
+  shacl:class <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcDocument>;
+  shacl:description "De technische fiches als bijlage."@nl;
+  shacl:name "technische fiche"@nl;
+  shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#IOKaart.technischeFiche>;
+  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "De range van technische fiche moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcDocument> zijn."];
+  <https://data.vlaanderen.be/ns/shacl#rule> "" .
+
 <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#IOKaartShape/9c40b7fc69631559af0f97c716550d996bacf346> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#IOKaart%3Abitsnelheid";
   shacl:description "De snelheid (hoeveel bits per seconde) waarmee data doorgestuurd kan worden."@nl;
   shacl:minCount 1;
@@ -4409,6 +4683,14 @@
   shacl:name "modelnaam"@nl;
   shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#IOKaart.modelnaam>;
   <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "Maximaal 1 waarden toegelaten voor modelnaam"];
+  <https://data.vlaanderen.be/ns/shacl#rule> "" .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#IOKaartShape/e8f191bb991ef06035a491e8737ca89e1787513d> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#IOKaart%3Atechnische%20fiche";
+  shacl:description "De technische fiches als bijlage."@nl;
+  shacl:name "technische fiche"@nl;
+  shacl:nodekind "sh:BlankNodeOrIRI";
+  shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#IOKaart.technischeFiche>;
+  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "De verwachte waarde voor technische fiche is een rdfs:Resource (URI of blank node)"];
   <https://data.vlaanderen.be/ns/shacl#rule> "" .
 
 <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#IOKaartShape/ea1c89ff94e305d8cdbb02e5a5d11e6a957e1ca0> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#IOKaart%3Afirmwareversie";
@@ -4672,7 +4954,9 @@
 
 <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#KastShape> a shacl:NodeShape;
   shacl:closed false;
-  shacl:property <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#KastShape/20457340657d8dd350917f53bcff5ae8313f4a53>,
+  shacl:property <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#KastShape/440f3b063a60b3d33ddb75dd42f14247c90dc8ae>,
+    <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#KastShape/eef3aa764ce7a367564c223be90c380bc3898a27>,
+    <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#KastShape/20457340657d8dd350917f53bcff5ae8313f4a53>,
     <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#KastShape/3908a756c440f2f2f71911f3e8def06fac271731>,
     <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#KastShape/8714a396e395bc874cda72747499c7b75bdc4af5>,
     <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#KastShape/d67e26d8c4673afec0d98900b2a199ef09f82c4e>,
@@ -4728,6 +5012,14 @@
   shacl:name "heeft verlichting"@nl;
   shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Kast.heeftVerlichting>;
   <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "Maximaal 1 waarden toegelaten voor heeft verlichting"];
+  <https://data.vlaanderen.be/ns/shacl#rule> "" .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#KastShape/440f3b063a60b3d33ddb75dd42f14247c90dc8ae> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#Kast%3ABevestiging";
+  shacl:description "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Daarnaast omvat deze relatie ook situaties waarin onderdelen niet direct, maar wel structureel of functioneel met elkaar verbonden zijn op een manier die bevestiging impliceert, bv. een trap die eindigt net onder een voetgangersbrug zonder fysieke bevestiging. Deze relatie heeft geen richting."@nl;
+  shacl:name "Bevestiging"@nl;
+  shacl:nodekind "sh:BlankNodeOrIRI";
+  shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/elektrische-componenten/#Bevestiging>;
+  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "De verwachte waarde voor Bevestiging is een rdfs:Resource (URI of blank node)"], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "De verwachte waarde voor Bevestiging is een rdfs:Resource (URI of blank node)"], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "De verwachte waarde voor Bevestiging is een rdfs:Resource (URI of blank node)"], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "De verwachte waarde voor Bevestiging is een rdfs:Resource (URI of blank node)"];
   <https://data.vlaanderen.be/ns/shacl#rule> "" .
 
 <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#KastShape/4add4e413a310790700e6f12d586f6d31b904661> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#Kast%3Aheeft%20verlichting";
@@ -4800,6 +5092,15 @@
   shacl:name "kastmateriaal"@nl;
   shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Kast.kastmateriaal>;
   <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "Minimaal 1 waarden verwacht voor kastmateriaal"];
+  <https://data.vlaanderen.be/ns/shacl#rule> "" .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#KastShape/eef3aa764ce7a367564c223be90c380bc3898a27> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#Kast%3ABevestiging";
+  shacl:class <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Stroomkring>,
+    <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#IOKaart>;
+  shacl:description "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Daarnaast omvat deze relatie ook situaties waarin onderdelen niet direct, maar wel structureel of functioneel met elkaar verbonden zijn op een manier die bevestiging impliceert, bv. een trap die eindigt net onder een voetgangersbrug zonder fysieke bevestiging. Deze relatie heeft geen richting."@nl;
+  shacl:name "Bevestiging"@nl;
+  shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/elektrische-componenten/#Bevestiging>;
+  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "De range van Bevestiging moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Stroomkring> zijn."], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "De range van Bevestiging moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Stroomkring> zijn."], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "De range van Bevestiging moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#IOKaart> zijn."], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "De range van Bevestiging moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#IOKaart> zijn."];
   <https://data.vlaanderen.be/ns/shacl#rule> "" .
 
 <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#KastShape/efae0f2779607ac4d40bc817199254920e5a44c1> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#Kast%3Akastmateriaal";
@@ -4959,6 +5260,14 @@
   shacl:targetClass skos:Concept .
 
 <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#KlMeetcelVeiligheidsfactorShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass skos:Concept .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#KlNetwerklocatieShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass skos:Concept .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#KlNominaleSpanningShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:targetClass skos:Concept .
 
@@ -5275,7 +5584,7 @@
   <https://data.vlaanderen.be/ns/shacl#rule> "" .
 
 <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#KwantWrdInHerzShape/40e231f5d868ed5c50ced19a74262d103b28e261> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#KwantWrdInHerz%3Astandaard%20eenheid";
-  shacl:description "De standaard eenheid bij dit datatype is uitgedrukt in seconde."@nl;
+  shacl:description "De standaard eenheid bij dit datatype is uitgedrukt in hertz."@nl;
   shacl:minCount 1;
   shacl:name "standaard eenheid"@nl;
   shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInHerz.standaardEenheid>;
@@ -5283,7 +5592,7 @@
   <https://data.vlaanderen.be/ns/shacl#rule> "" .
 
 <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#KwantWrdInHerzShape/449e0c069cb2ccd0286a751eae9607fdfdaba8bb> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#KwantWrdInHerz%3Astandaard%20eenheid";
-  shacl:description "De standaard eenheid bij dit datatype is uitgedrukt in seconde."@nl;
+  shacl:description "De standaard eenheid bij dit datatype is uitgedrukt in hertz."@nl;
   shacl:name "standaard eenheid"@nl;
   shacl:nodekind "sh:Literal";
   shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInHerz.standaardEenheid>;
@@ -5307,7 +5616,7 @@
   <https://data.vlaanderen.be/ns/shacl#rule> "" .
 
 <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#KwantWrdInHerzShape/db2555457b897a2e792d884a673aab52e0a72c28> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#KwantWrdInHerz%3Astandaard%20eenheid";
-  shacl:description "De standaard eenheid bij dit datatype is uitgedrukt in seconde."@nl;
+  shacl:description "De standaard eenheid bij dit datatype is uitgedrukt in hertz."@nl;
   shacl:maxCount 1;
   shacl:name "standaard eenheid"@nl;
   shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInHerz.standaardEenheid>;
@@ -5316,7 +5625,7 @@
 
 <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#KwantWrdInHerzShape/dcf18241c7695eee6abe5c99b390387f700ef44c> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#KwantWrdInHerz%3Astandaard%20eenheid";
   shacl:datatype rdfs:Literal;
-  shacl:description "De standaard eenheid bij dit datatype is uitgedrukt in seconde."@nl;
+  shacl:description "De standaard eenheid bij dit datatype is uitgedrukt in hertz."@nl;
   shacl:name "standaard eenheid"@nl;
   shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInHerz.standaardEenheid>;
   <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "De range van standaard eenheid moet van het type <http://www.w3.org/2000/01/rdf-schema#Literal> zijn."];
@@ -6407,7 +6716,7 @@
   <https://data.vlaanderen.be/ns/shacl#rule> "" .
 
 <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#LaagspanningsbordShape/440f3b063a60b3d33ddb75dd42f14247c90dc8ae> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#Laagspanningsbord%3ABevestiging";
-  shacl:description "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Deze relatie heeft geen richting."@nl;
+  shacl:description "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Daarnaast omvat deze relatie ook situaties waarin onderdelen niet direct, maar wel structureel of functioneel met elkaar verbonden zijn op een manier die bevestiging impliceert, bv. een trap die eindigt net onder een voetgangersbrug zonder fysieke bevestiging. Deze relatie heeft geen richting."@nl;
   shacl:name "Bevestiging"@nl;
   shacl:nodekind "sh:BlankNodeOrIRI";
   shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/elektrische-componenten/#Bevestiging>;
@@ -6519,15 +6828,16 @@
   <https://data.vlaanderen.be/ns/shacl#rule> "" .
 
 <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#LaagspanningsbordShape/d15f714b2ed6b96e1b3f73a18a0eadabb5873da6> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#Laagspanningsbord%3AVoedt";
-  shacl:class <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Laagspanningsbord>,
-    <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Rack>,
-    <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Contactor>,
+  shacl:class <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Contactor>,
+    <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Laagspanningsbord>,
+    <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#UPS>,
     <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Batterij>,
+    <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Rack>,
     <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#EnergiemeterAWV>;
   shacl:description "Deze relatie wordt enkel gelegd naar onderdelen die permanent onder spanning staan in normaal bedrijf. Aan deze relatie wordt steeds een richting toegekend van de voedinggever naar de ontvanger."@nl;
   shacl:name "Voedt"@nl;
   shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/elektrische-componenten/#Voedt>;
-  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "De range van Voedt moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Laagspanningsbord> zijn."], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "De range van Voedt moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Rack> zijn."], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "De range van Voedt moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Contactor> zijn."], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "De range van Voedt moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Batterij> zijn."], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "De range van Voedt moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#EnergiemeterAWV> zijn."];
+  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "De range van Voedt moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Contactor> zijn."], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "De range van Voedt moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Laagspanningsbord> zijn."], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "De range van Voedt moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#UPS> zijn."], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "De range van Voedt moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Batterij> zijn."], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "De range van Voedt moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Rack> zijn."], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "De range van Voedt moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#EnergiemeterAWV> zijn."];
   <https://data.vlaanderen.be/ns/shacl#rule> "" .
 
 <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#LaagspanningsbordShape/d465ae7eed35aca3207ca502ba10814f215d1ab5> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#Laagspanningsbord%3AVoedt";
@@ -6535,7 +6845,7 @@
   shacl:name "Voedt"@nl;
   shacl:nodekind "sh:BlankNodeOrIRI";
   shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/elektrische-componenten/#Voedt>;
-  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "De verwachte waarde voor Voedt is een rdfs:Resource (URI of blank node)"], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "De verwachte waarde voor Voedt is een rdfs:Resource (URI of blank node)"], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "De verwachte waarde voor Voedt is een rdfs:Resource (URI of blank node)"], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "De verwachte waarde voor Voedt is een rdfs:Resource (URI of blank node)"], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "De verwachte waarde voor Voedt is een rdfs:Resource (URI of blank node)"];
+  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "De verwachte waarde voor Voedt is een rdfs:Resource (URI of blank node)"], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "De verwachte waarde voor Voedt is een rdfs:Resource (URI of blank node)"], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "De verwachte waarde voor Voedt is een rdfs:Resource (URI of blank node)"], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "De verwachte waarde voor Voedt is een rdfs:Resource (URI of blank node)"], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "De verwachte waarde voor Voedt is een rdfs:Resource (URI of blank node)"], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "De verwachte waarde voor Voedt is een rdfs:Resource (URI of blank node)"];
   <https://data.vlaanderen.be/ns/shacl#rule> "" .
 
 <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#LaagspanningsbordShape/d8fc6b3a25c3f72373a401e26ab6a175ee979558> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#Laagspanningsbord%3Aelektrisch%20schema";
@@ -6555,17 +6865,17 @@
   <https://data.vlaanderen.be/ns/shacl#rule> "" .
 
 <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#LaagspanningsbordShape/eef3aa764ce7a367564c223be90c380bc3898a27> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#Laagspanningsbord%3ABevestiging";
-  shacl:class <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Voedingskeuzeschakelaar>,
-    <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Contactor>,
-    <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#DNBMeter>,
-    <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#EnergiemeterDerden>,
-    <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Wegkantkast>,
+  shacl:class <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#EnergiemeterDerden>,
     <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#PLC>,
+    <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Contactor>,
+    <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Wegkantkast>,
+    <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#DNBMeter>,
+    <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Voedingskeuzeschakelaar>,
     <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#IOKaart>;
-  shacl:description "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Deze relatie heeft geen richting."@nl;
+  shacl:description "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Daarnaast omvat deze relatie ook situaties waarin onderdelen niet direct, maar wel structureel of functioneel met elkaar verbonden zijn op een manier die bevestiging impliceert, bv. een trap die eindigt net onder een voetgangersbrug zonder fysieke bevestiging. Deze relatie heeft geen richting."@nl;
   shacl:name "Bevestiging"@nl;
   shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/elektrische-componenten/#Bevestiging>;
-  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "De range van Bevestiging moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Voedingskeuzeschakelaar> zijn."], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "De range van Bevestiging moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Voedingskeuzeschakelaar> zijn."], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "De range van Bevestiging moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Contactor> zijn."], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "De range van Bevestiging moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Contactor> zijn."], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "De range van Bevestiging moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#DNBMeter> zijn."], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "De range van Bevestiging moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#DNBMeter> zijn."], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "De range van Bevestiging moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#EnergiemeterDerden> zijn."], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "De range van Bevestiging moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#EnergiemeterDerden> zijn."], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "De range van Bevestiging moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Wegkantkast> zijn."], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "De range van Bevestiging moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Wegkantkast> zijn."], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "De range van Bevestiging moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#PLC> zijn."], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "De range van Bevestiging moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#PLC> zijn."], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "De range van Bevestiging moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#IOKaart> zijn."], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "De range van Bevestiging moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#IOKaart> zijn."];
+  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "De range van Bevestiging moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#EnergiemeterDerden> zijn."], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "De range van Bevestiging moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#EnergiemeterDerden> zijn."], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "De range van Bevestiging moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#PLC> zijn."], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "De range van Bevestiging moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#PLC> zijn."], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "De range van Bevestiging moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Contactor> zijn."], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "De range van Bevestiging moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Contactor> zijn."], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "De range van Bevestiging moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Wegkantkast> zijn."], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "De range van Bevestiging moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Wegkantkast> zijn."], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "De range van Bevestiging moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#DNBMeter> zijn."], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "De range van Bevestiging moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#DNBMeter> zijn."], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "De range van Bevestiging moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Voedingskeuzeschakelaar> zijn."], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "De range van Bevestiging moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Voedingskeuzeschakelaar> zijn."], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "De range van Bevestiging moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#IOKaart> zijn."], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "De range van Bevestiging moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#IOKaart> zijn."];
   <https://data.vlaanderen.be/ns/shacl#rule> "" .
 
 <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#LaagspanningsbordShape/f829d450c94ad020cf253aa95bcdd13e603af21a> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#Laagspanningsbord%3Anominale%20stroom";
@@ -6723,13 +7033,13 @@
   <https://data.vlaanderen.be/ns/shacl#rule> "" .
 
 <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#MeetcelShape/d15f714b2ed6b96e1b3f73a18a0eadabb5873da6> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#Meetcel%3AVoedt";
-  shacl:class <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Hoofdschakelaar>,
-    <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Transformator>,
-    <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#HSBeveiligingscel>;
+  shacl:class <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Transformator>,
+    <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#HSBeveiligingscel>,
+    <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Hoofdschakelaar>;
   shacl:description "Deze relatie wordt enkel gelegd naar onderdelen die permanent onder spanning staan in normaal bedrijf. Aan deze relatie wordt steeds een richting toegekend van de voedinggever naar de ontvanger."@nl;
   shacl:name "Voedt"@nl;
   shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/elektrische-componenten/#Voedt>;
-  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "De range van Voedt moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Hoofdschakelaar> zijn."], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "De range van Voedt moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Transformator> zijn."], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "De range van Voedt moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#HSBeveiligingscel> zijn."];
+  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "De range van Voedt moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Transformator> zijn."], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "De range van Voedt moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#HSBeveiligingscel> zijn."], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "De range van Voedt moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Hoofdschakelaar> zijn."];
   <https://data.vlaanderen.be/ns/shacl#rule> "" .
 
 <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#MeetcelShape/d465ae7eed35aca3207ca502ba10814f215d1ab5> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#Meetcel%3AVoedt";
@@ -6992,6 +7302,46 @@
   shacl:closed false;
   shacl:targetClass <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#MotorVermogenskring> .
 
+<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#NaampadObjectShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#NaampadObjectShape/03d07944da87ceddaab1e6d5b0ec56569a597b19>,
+    <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#NaampadObjectShape/1f7529ddd7da0ce9017811d42cc0b44954c161e4>,
+    <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#NaampadObjectShape/4a8a5dba7ea0e97c40c98fb1ec527ea025b37e3d>,
+    <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#NaampadObjectShape/65f3f6be1bbf1433686fc59efb4c6a5574d474cf>;
+  shacl:targetClass <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#NaampadObject> .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#NaampadObjectShape/03d07944da87ceddaab1e6d5b0ec56569a597b19> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#NaampadObject%3Anaampad";
+  shacl:datatype xsd:string;
+  shacl:description "Een set van objecten (bv. collecties) die aanduiden waar het object zich bevindt in de objectenboom (EM-Infra)."@nl;
+  shacl:name "naampad"@nl;
+  shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#NaampadObject.naampad>;
+  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "De range van naampad moet van het type <http://www.w3.org/2001/XMLSchema#string> zijn."];
+  <https://data.vlaanderen.be/ns/shacl#rule> "" .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#NaampadObjectShape/1f7529ddd7da0ce9017811d42cc0b44954c161e4> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#NaampadObject%3Anaampad";
+  shacl:description "Een set van objecten (bv. collecties) die aanduiden waar het object zich bevindt in de objectenboom (EM-Infra)."@nl;
+  shacl:minCount 1;
+  shacl:name "naampad"@nl;
+  shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#NaampadObject.naampad>;
+  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "Minimaal 1 waarden verwacht voor naampad"];
+  <https://data.vlaanderen.be/ns/shacl#rule> "" .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#NaampadObjectShape/4a8a5dba7ea0e97c40c98fb1ec527ea025b37e3d> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#NaampadObject%3Anaampad";
+  shacl:description "Een set van objecten (bv. collecties) die aanduiden waar het object zich bevindt in de objectenboom (EM-Infra)."@nl;
+  shacl:maxCount 1;
+  shacl:name "naampad"@nl;
+  shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#NaampadObject.naampad>;
+  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "Maximaal 1 waarden toegelaten voor naampad"];
+  <https://data.vlaanderen.be/ns/shacl#rule> "" .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#NaampadObjectShape/65f3f6be1bbf1433686fc59efb4c6a5574d474cf> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#NaampadObject%3Anaampad";
+  shacl:description "Een set van objecten (bv. collecties) die aanduiden waar het object zich bevindt in de objectenboom (EM-Infra)."@nl;
+  shacl:name "naampad"@nl;
+  shacl:nodekind "sh:Literal";
+  shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#NaampadObject.naampad>;
+  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "De verwachte waarde voor naampad is een Literal"];
+  <https://data.vlaanderen.be/ns/shacl#rule> "" .
+
 <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#NonNegativeIntegerShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:targetClass xsd:nonNegativeInteger .
@@ -7002,6 +7352,8 @@
     <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#PLCShape/eef3aa764ce7a367564c223be90c380bc3898a27>,
     <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#PLCShape/21ce6fcad83046517b6d5d09e55727da8bd55fce>,
     <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#PLCShape/755808daa6cf29bd43264e941b0ae9392279ec89>,
+    <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#PLCShape/d15f714b2ed6b96e1b3f73a18a0eadabb5873da6>,
+    <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#PLCShape/d465ae7eed35aca3207ca502ba10814f215d1ab5>,
     <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#PLCShape/3432bf4f40c4cd264bde0f0ea446c424d6f8d43e>,
     <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#PLCShape/5a79880fdd6cc7ad898f8954aa6b37efdf11891e>,
     <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#PLCShape/777bf72d83efb4748f41dfdb0562a087933325fd>,
@@ -7049,7 +7401,7 @@
   <https://data.vlaanderen.be/ns/shacl#rule> "" .
 
 <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#PLCShape/440f3b063a60b3d33ddb75dd42f14247c90dc8ae> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#PLC%3ABevestiging";
-  shacl:description "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Deze relatie heeft geen richting."@nl;
+  shacl:description "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Daarnaast omvat deze relatie ook situaties waarin onderdelen niet direct, maar wel structureel of functioneel met elkaar verbonden zijn op een manier die bevestiging impliceert, bv. een trap die eindigt net onder een voetgangersbrug zonder fysieke bevestiging. Deze relatie heeft geen richting."@nl;
   shacl:name "Bevestiging"@nl;
   shacl:nodekind "sh:BlankNodeOrIRI";
   shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/elektrische-componenten/#Bevestiging>;
@@ -7120,6 +7472,22 @@
   <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "De range van merk moet van het type <http://www.w3.org/2004/02/skos/core#Concept> zijn."];
   <https://data.vlaanderen.be/ns/shacl#rule> "" .
 
+<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#PLCShape/d15f714b2ed6b96e1b3f73a18a0eadabb5873da6> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#PLC%3AVoedt";
+  shacl:class <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#IOKaart>;
+  shacl:description "Deze relatie wordt enkel gelegd naar onderdelen die permanent onder spanning staan in normaal bedrijf. Aan deze relatie wordt steeds een richting toegekend van de voedinggever naar de ontvanger."@nl;
+  shacl:name "Voedt"@nl;
+  shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/elektrische-componenten/#Voedt>;
+  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "De range van Voedt moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#IOKaart> zijn."];
+  <https://data.vlaanderen.be/ns/shacl#rule> "" .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#PLCShape/d465ae7eed35aca3207ca502ba10814f215d1ab5> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#PLC%3AVoedt";
+  shacl:description "Deze relatie wordt enkel gelegd naar onderdelen die permanent onder spanning staan in normaal bedrijf. Aan deze relatie wordt steeds een richting toegekend van de voedinggever naar de ontvanger."@nl;
+  shacl:name "Voedt"@nl;
+  shacl:nodekind "sh:BlankNodeOrIRI";
+  shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/elektrische-componenten/#Voedt>;
+  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "De verwachte waarde voor Voedt is een rdfs:Resource (URI of blank node)"];
+  <https://data.vlaanderen.be/ns/shacl#rule> "" .
+
 <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#PLCShape/e2da45937a32c889a23cb6b41b31c50d94d31d9f> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#PLC%3Amodelnaam";
   shacl:description "De modelnaam van de PLC."@nl;
   shacl:maxCount 1;
@@ -7138,7 +7506,7 @@
 
 <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#PLCShape/eef3aa764ce7a367564c223be90c380bc3898a27> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#PLC%3ABevestiging";
   shacl:class <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#IOKaart>;
-  shacl:description "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Deze relatie heeft geen richting."@nl;
+  shacl:description "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Daarnaast omvat deze relatie ook situaties waarin onderdelen niet direct, maar wel structureel of functioneel met elkaar verbonden zijn op een manier die bevestiging impliceert, bv. een trap die eindigt net onder een voetgangersbrug zonder fysieke bevestiging. Deze relatie heeft geen richting."@nl;
   shacl:name "Bevestiging"@nl;
   shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/elektrische-componenten/#Bevestiging>;
   <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "De range van Bevestiging moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#IOKaart> zijn."], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "De range van Bevestiging moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#IOKaart> zijn."];
@@ -7261,7 +7629,7 @@
   <https://data.vlaanderen.be/ns/shacl#rule> "" .
 
 <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#RackShape/440f3b063a60b3d33ddb75dd42f14247c90dc8ae> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#Rack%3ABevestiging";
-  shacl:description "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Deze relatie heeft geen richting."@nl;
+  shacl:description "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Daarnaast omvat deze relatie ook situaties waarin onderdelen niet direct, maar wel structureel of functioneel met elkaar verbonden zijn op een manier die bevestiging impliceert, bv. een trap die eindigt net onder een voetgangersbrug zonder fysieke bevestiging. Deze relatie heeft geen richting."@nl;
   shacl:name "Bevestiging"@nl;
   shacl:nodekind "sh:BlankNodeOrIRI";
   shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/elektrische-componenten/#Bevestiging>;
@@ -7400,7 +7768,7 @@
 <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#RackShape/eef3aa764ce7a367564c223be90c380bc3898a27> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#Rack%3ABevestiging";
   shacl:class <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#PLC>,
     <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Kast>;
-  shacl:description "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Deze relatie heeft geen richting."@nl;
+  shacl:description "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Daarnaast omvat deze relatie ook situaties waarin onderdelen niet direct, maar wel structureel of functioneel met elkaar verbonden zijn op een manier die bevestiging impliceert, bv. een trap die eindigt net onder een voetgangersbrug zonder fysieke bevestiging. Deze relatie heeft geen richting."@nl;
   shacl:name "Bevestiging"@nl;
   shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/elektrische-componenten/#Bevestiging>;
   <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "De range van Bevestiging moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#PLC> zijn."], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "De range van Bevestiging moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#PLC> zijn."], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "De range van Bevestiging moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Kast> zijn."], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "De range van Bevestiging moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Kast> zijn."];
@@ -7585,7 +7953,7 @@
   <https://data.vlaanderen.be/ns/shacl#rule> "" .
 
 <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#StroomkringShape/440f3b063a60b3d33ddb75dd42f14247c90dc8ae> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#Stroomkring%3ABevestiging";
-  shacl:description "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Deze relatie heeft geen richting."@nl;
+  shacl:description "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Daarnaast omvat deze relatie ook situaties waarin onderdelen niet direct, maar wel structureel of functioneel met elkaar verbonden zijn op een manier die bevestiging impliceert, bv. een trap die eindigt net onder een voetgangersbrug zonder fysieke bevestiging. Deze relatie heeft geen richting."@nl;
   shacl:name "Bevestiging"@nl;
   shacl:nodekind "sh:BlankNodeOrIRI";
   shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/elektrische-componenten/#Bevestiging>;
@@ -7633,17 +8001,18 @@
   <https://data.vlaanderen.be/ns/shacl#rule> "" .
 
 <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#StroomkringShape/d15f714b2ed6b96e1b3f73a18a0eadabb5873da6> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#Stroomkring%3AVoedt";
-  shacl:class <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Batterij>,
-    <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#UPS>,
-    <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Stroomkring>,
-    <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Stopcontact>,
-    <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#EnergiemeterAWV>,
+  shacl:class <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Stroomkring>,
+    <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Rack>,
     <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Contactor>,
-    <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Rack>;
+    <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Stopcontact>,
+    <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Batterij>,
+    <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#IOKaart>,
+    <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#EnergiemeterAWV>,
+    <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#UPS>;
   shacl:description "Deze relatie wordt enkel gelegd naar onderdelen die permanent onder spanning staan in normaal bedrijf. Aan deze relatie wordt steeds een richting toegekend van de voedinggever naar de ontvanger."@nl;
   shacl:name "Voedt"@nl;
   shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/elektrische-componenten/#Voedt>;
-  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "De range van Voedt moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Batterij> zijn."], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "De range van Voedt moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#UPS> zijn."], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "De range van Voedt moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Stroomkring> zijn."], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "De range van Voedt moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Stopcontact> zijn."], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "De range van Voedt moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#EnergiemeterAWV> zijn."], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "De range van Voedt moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Contactor> zijn."], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "De range van Voedt moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Rack> zijn."];
+  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "De range van Voedt moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Stroomkring> zijn."], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "De range van Voedt moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Rack> zijn."], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "De range van Voedt moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Contactor> zijn."], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "De range van Voedt moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Stopcontact> zijn."], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "De range van Voedt moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Batterij> zijn."], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "De range van Voedt moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#IOKaart> zijn."], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "De range van Voedt moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#EnergiemeterAWV> zijn."], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "De range van Voedt moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#UPS> zijn."];
   <https://data.vlaanderen.be/ns/shacl#rule> "" .
 
 <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#StroomkringShape/d465ae7eed35aca3207ca502ba10814f215d1ab5> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#Stroomkring%3AVoedt";
@@ -7651,12 +8020,12 @@
   shacl:name "Voedt"@nl;
   shacl:nodekind "sh:BlankNodeOrIRI";
   shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/elektrische-componenten/#Voedt>;
-  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "De verwachte waarde voor Voedt is een rdfs:Resource (URI of blank node)"], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "De verwachte waarde voor Voedt is een rdfs:Resource (URI of blank node)"], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "De verwachte waarde voor Voedt is een rdfs:Resource (URI of blank node)"], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "De verwachte waarde voor Voedt is een rdfs:Resource (URI of blank node)"], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "De verwachte waarde voor Voedt is een rdfs:Resource (URI of blank node)"], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "De verwachte waarde voor Voedt is een rdfs:Resource (URI of blank node)"], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "De verwachte waarde voor Voedt is een rdfs:Resource (URI of blank node)"];
+  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "De verwachte waarde voor Voedt is een rdfs:Resource (URI of blank node)"], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "De verwachte waarde voor Voedt is een rdfs:Resource (URI of blank node)"], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "De verwachte waarde voor Voedt is een rdfs:Resource (URI of blank node)"], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "De verwachte waarde voor Voedt is een rdfs:Resource (URI of blank node)"], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "De verwachte waarde voor Voedt is een rdfs:Resource (URI of blank node)"], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "De verwachte waarde voor Voedt is een rdfs:Resource (URI of blank node)"], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "De verwachte waarde voor Voedt is een rdfs:Resource (URI of blank node)"], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "De verwachte waarde voor Voedt is een rdfs:Resource (URI of blank node)"];
   <https://data.vlaanderen.be/ns/shacl#rule> "" .
 
 <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#StroomkringShape/eef3aa764ce7a367564c223be90c380bc3898a27> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#Stroomkring%3ABevestiging";
   shacl:class <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Laagspanningsbord>;
-  shacl:description "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Deze relatie heeft geen richting."@nl;
+  shacl:description "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Daarnaast omvat deze relatie ook situaties waarin onderdelen niet direct, maar wel structureel of functioneel met elkaar verbonden zijn op een manier die bevestiging impliceert, bv. een trap die eindigt net onder een voetgangersbrug zonder fysieke bevestiging. Deze relatie heeft geen richting."@nl;
   shacl:name "Bevestiging"@nl;
   shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/elektrische-componenten/#Bevestiging>;
   <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "De range van Bevestiging moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Laagspanningsbord> zijn."], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "De range van Bevestiging moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Laagspanningsbord> zijn."];
@@ -7674,6 +8043,10 @@
     <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#TransformatorShape/853656f231c6875d58a65be5f156822b94229e8b>,
     <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#TransformatorShape/e96569f7e2476eec485a743a17563b3e09edffec>,
     <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#TransformatorShape/f1cb89ca21998dcdf160a5f4a3d301b4d9cf68ef>,
+    <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#TransformatorShape/150e91e6cdfff3eee34b547205a1e78785b75743>,
+    <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#TransformatorShape/3a9bb24611f60c1ca38a8950e43ef484b06f4368>,
+    <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#TransformatorShape/71a4edb6f1ac731cdff3318a92b7ff9454a073fb>,
+    <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#TransformatorShape/7d00d6b3f6b060e425e38088e5441d5f1f67fca6>,
     <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#TransformatorShape/07bbda3cfb6cce6512e4883ec9a7b382f1799454>,
     <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#TransformatorShape/5144da3ebd223af705a3b3203b81bfd383cc1148>,
     <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#TransformatorShape/54ae14f92f7ffbb99f3fbc369d06c2648e4a9d3c>,
@@ -7740,6 +8113,14 @@
   <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "De verwachte waarde voor schakelgroep is een Literal"];
   <https://data.vlaanderen.be/ns/shacl#rule> "" .
 
+<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#TransformatorShape/150e91e6cdfff3eee34b547205a1e78785b75743> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#Transformator%3Ais%20olie%20gevuld";
+  shacl:description "Duidt aan of de transformator al dan niet gevuld is met olie. Het andere is van het droge type, meestal harsgevuld."@nl;
+  shacl:name "is olie gevuld"@nl;
+  shacl:nodekind "sh:Literal";
+  shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Transformator.isOlieGevuld>;
+  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "De verwachte waarde voor is olie gevuld is een Literal"];
+  <https://data.vlaanderen.be/ns/shacl#rule> "" .
+
 <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#TransformatorShape/2b7ede215a340db3376c05ad3877819e4b18f929> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#Transformator%3Atype%20beveiliging";
   shacl:description "Type transformatorbeveiliging."@nl;
   shacl:maxCount 1;
@@ -7786,6 +8167,14 @@
   shacl:nodekind "sh:BlankNodeOrIRI";
   shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Transformator.typeBeveiliging>;
   <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "De verwachte waarde voor type beveiliging is een rdfs:Resource (URI of blank node)"];
+  <https://data.vlaanderen.be/ns/shacl#rule> "" .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#TransformatorShape/3a9bb24611f60c1ca38a8950e43ef484b06f4368> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#Transformator%3Ais%20olie%20gevuld";
+  shacl:datatype xsd:boolean;
+  shacl:description "Duidt aan of de transformator al dan niet gevuld is met olie. Het andere is van het droge type, meestal harsgevuld."@nl;
+  shacl:name "is olie gevuld"@nl;
+  shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Transformator.isOlieGevuld>;
+  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "De range van is olie gevuld moet van het type <http://www.w3.org/2001/XMLSchema#boolean> zijn."];
   <https://data.vlaanderen.be/ns/shacl#rule> "" .
 
 <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#TransformatorShape/41eccffc6bb507d571be9d79e31cbd2d163ed9f3> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#Transformator%3Anominale%20secundaire%20spanning";
@@ -7852,6 +8241,14 @@
   <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "De verwachte waarde voor kortsluitspanning is een rdfs:Resource (URI of blank node)"];
   <https://data.vlaanderen.be/ns/shacl#rule> "" .
 
+<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#TransformatorShape/71a4edb6f1ac731cdff3318a92b7ff9454a073fb> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#Transformator%3Ais%20olie%20gevuld";
+  shacl:description "Duidt aan of de transformator al dan niet gevuld is met olie. Het andere is van het droge type, meestal harsgevuld."@nl;
+  shacl:maxCount 1;
+  shacl:name "is olie gevuld"@nl;
+  shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Transformator.isOlieGevuld>;
+  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "Maximaal 1 waarden toegelaten voor is olie gevuld"];
+  <https://data.vlaanderen.be/ns/shacl#rule> "" .
+
 <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#TransformatorShape/75acd56ccbbcd5e6eb6dcd503fbf73d8e2a6c667> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#Transformator%3Anominaal%20vermogen";
   shacl:description "nominale vermogen van de transformator."@nl;
   shacl:maxCount 1;
@@ -7882,6 +8279,14 @@
   shacl:name "nominaal vermogen"@nl;
   shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Transformator.nominaalVermogen>;
   <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "Minimaal 1 waarden verwacht voor nominaal vermogen"];
+  <https://data.vlaanderen.be/ns/shacl#rule> "" .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#TransformatorShape/7d00d6b3f6b060e425e38088e5441d5f1f67fca6> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#Transformator%3Ais%20olie%20gevuld";
+  shacl:description "Duidt aan of de transformator al dan niet gevuld is met olie. Het andere is van het droge type, meestal harsgevuld."@nl;
+  shacl:minCount 1;
+  shacl:name "is olie gevuld"@nl;
+  shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Transformator.isOlieGevuld>;
+  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "Minimaal 1 waarden verwacht voor is olie gevuld"];
   <https://data.vlaanderen.be/ns/shacl#rule> "" .
 
 <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#TransformatorShape/7fb5d090af13ec9b7ed7e7880cba27011ed078aa> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#Transformator%3Anominale%20primaire%20spanning";
@@ -7925,15 +8330,15 @@
   <https://data.vlaanderen.be/ns/shacl#rule> "" .
 
 <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#TransformatorShape/d15f714b2ed6b96e1b3f73a18a0eadabb5873da6> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#Transformator%3AVoedt";
-  shacl:class <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Laagspanningsbord>,
-    <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Hoofdschakelaar>,
-    <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Meetcel>,
+  shacl:class <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#DNBMeter>,
     <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Stroomkring>,
-    <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#DNBMeter>;
+    <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Meetcel>,
+    <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Laagspanningsbord>,
+    <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Hoofdschakelaar>;
   shacl:description "Deze relatie wordt enkel gelegd naar onderdelen die permanent onder spanning staan in normaal bedrijf. Aan deze relatie wordt steeds een richting toegekend van de voedinggever naar de ontvanger."@nl;
   shacl:name "Voedt"@nl;
   shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/elektrische-componenten/#Voedt>;
-  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "De range van Voedt moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Laagspanningsbord> zijn."], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "De range van Voedt moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Hoofdschakelaar> zijn."], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "De range van Voedt moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Meetcel> zijn."], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "De range van Voedt moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Stroomkring> zijn."], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "De range van Voedt moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#DNBMeter> zijn."];
+  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "De range van Voedt moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#DNBMeter> zijn."], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "De range van Voedt moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Stroomkring> zijn."], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "De range van Voedt moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Meetcel> zijn."], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "De range van Voedt moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Laagspanningsbord> zijn."], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "De range van Voedt moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Hoofdschakelaar> zijn."];
   <https://data.vlaanderen.be/ns/shacl#rule> "" .
 
 <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#TransformatorShape/d465ae7eed35aca3207ca502ba10814f215d1ab5> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#Transformator%3AVoedt";
@@ -8018,7 +8423,9 @@
 
 <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#UPSShape> a shacl:NodeShape;
   shacl:closed false;
-  shacl:property <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#UPSShape/d15f714b2ed6b96e1b3f73a18a0eadabb5873da6>,
+  shacl:property <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#UPSShape/440f3b063a60b3d33ddb75dd42f14247c90dc8ae>,
+    <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#UPSShape/eef3aa764ce7a367564c223be90c380bc3898a27>,
+    <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#UPSShape/d15f714b2ed6b96e1b3f73a18a0eadabb5873da6>,
     <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#UPSShape/d465ae7eed35aca3207ca502ba10814f215d1ab5>,
     <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#UPSShape/0b1e6982118723308d8db746b8cd4179e4bf0432>,
     <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#UPSShape/6a948d6bc027c65a22791b9bccfd5f866d8d318b>,
@@ -8084,6 +8491,14 @@
   shacl:name "merk"@nl;
   shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#UPS.merk>;
   <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "Minimaal 1 waarden verwacht voor merk"];
+  <https://data.vlaanderen.be/ns/shacl#rule> "" .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#UPSShape/440f3b063a60b3d33ddb75dd42f14247c90dc8ae> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#UPS%3ABevestiging";
+  shacl:description "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Daarnaast omvat deze relatie ook situaties waarin onderdelen niet direct, maar wel structureel of functioneel met elkaar verbonden zijn op een manier die bevestiging impliceert, bv. een trap die eindigt net onder een voetgangersbrug zonder fysieke bevestiging. Deze relatie heeft geen richting."@nl;
+  shacl:name "Bevestiging"@nl;
+  shacl:nodekind "sh:BlankNodeOrIRI";
+  shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/elektrische-componenten/#Bevestiging>;
+  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "De verwachte waarde voor Bevestiging is een rdfs:Resource (URI of blank node)"], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "De verwachte waarde voor Bevestiging is een rdfs:Resource (URI of blank node)"];
   <https://data.vlaanderen.be/ns/shacl#rule> "" .
 
 <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#UPSShape/450ad1171eddf5dce700cb1952e88fe8c49e05c0> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#UPS%3Auitgangsfrequentie";
@@ -8271,13 +8686,13 @@
   <https://data.vlaanderen.be/ns/shacl#rule> "" .
 
 <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#UPSShape/d15f714b2ed6b96e1b3f73a18a0eadabb5873da6> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#UPS%3AVoedt";
-  shacl:class <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Rack>,
-    <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Stroomkring>,
-    <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Laagspanningsbord>;
+  shacl:class <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Stroomkring>,
+    <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Rack>,
+    <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Batterij>;
   shacl:description "Deze relatie wordt enkel gelegd naar onderdelen die permanent onder spanning staan in normaal bedrijf. Aan deze relatie wordt steeds een richting toegekend van de voedinggever naar de ontvanger."@nl;
   shacl:name "Voedt"@nl;
   shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/elektrische-componenten/#Voedt>;
-  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "De range van Voedt moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Rack> zijn."], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "De range van Voedt moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Stroomkring> zijn."], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "De range van Voedt moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Laagspanningsbord> zijn."];
+  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "De range van Voedt moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Stroomkring> zijn."], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "De range van Voedt moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Rack> zijn."], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "De range van Voedt moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Batterij> zijn."];
   <https://data.vlaanderen.be/ns/shacl#rule> "" .
 
 <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#UPSShape/d465ae7eed35aca3207ca502ba10814f215d1ab5> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#UPS%3AVoedt";
@@ -8318,6 +8733,14 @@
   shacl:name "maximaal continu vermogen"@nl;
   shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#UPS.maxContinuVermogen>;
   <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "De range van maximaal continu vermogen moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInWatt> zijn."];
+  <https://data.vlaanderen.be/ns/shacl#rule> "" .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#UPSShape/eef3aa764ce7a367564c223be90c380bc3898a27> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#UPS%3ABevestiging";
+  shacl:class <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Batterij>;
+  shacl:description "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Daarnaast omvat deze relatie ook situaties waarin onderdelen niet direct, maar wel structureel of functioneel met elkaar verbonden zijn op een manier die bevestiging impliceert, bv. een trap die eindigt net onder een voetgangersbrug zonder fysieke bevestiging. Deze relatie heeft geen richting."@nl;
+  shacl:name "Bevestiging"@nl;
+  shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/elektrische-componenten/#Bevestiging>;
+  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "De range van Bevestiging moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Batterij> zijn."], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "De range van Bevestiging moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Batterij> zijn."];
   <https://data.vlaanderen.be/ns/shacl#rule> "" .
 
 <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#UPSShape/ffd3cebcb17008b9e8df339087160bd0693a2629> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#UPS%3Aserienummer";
@@ -8364,13 +8787,13 @@
 
 <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#VoedingDerdenLaagspanningShape/d15f714b2ed6b96e1b3f73a18a0eadabb5873da6> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#VoedingDerdenLaagspanning%3AVoedt";
   shacl:class <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Laagspanningsbord>,
-    <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Stroomkring>,
     <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#EnergiemeterDerden>,
-    <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Hoofdschakelaar>;
+    <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Hoofdschakelaar>,
+    <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Stroomkring>;
   shacl:description "Deze relatie wordt enkel gelegd naar onderdelen die permanent onder spanning staan in normaal bedrijf. Aan deze relatie wordt steeds een richting toegekend van de voedinggever naar de ontvanger."@nl;
   shacl:name "Voedt"@nl;
   shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/elektrische-componenten/#Voedt>;
-  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "De range van Voedt moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Laagspanningsbord> zijn."], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "De range van Voedt moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Stroomkring> zijn."], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "De range van Voedt moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#EnergiemeterDerden> zijn."], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "De range van Voedt moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Hoofdschakelaar> zijn."];
+  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "De range van Voedt moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Laagspanningsbord> zijn."], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "De range van Voedt moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#EnergiemeterDerden> zijn."], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "De range van Voedt moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Hoofdschakelaar> zijn."], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "De range van Voedt moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Stroomkring> zijn."];
   <https://data.vlaanderen.be/ns/shacl#rule> "" .
 
 <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#VoedingDerdenLaagspanningShape/d465ae7eed35aca3207ca502ba10814f215d1ab5> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#VoedingDerdenLaagspanning%3AVoedt";
@@ -8400,7 +8823,7 @@
   shacl:targetClass <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Voedingspunt> .
 
 <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#VoedingspuntShape/440f3b063a60b3d33ddb75dd42f14247c90dc8ae> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#Voedingspunt%3ABevestiging";
-  shacl:description "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Deze relatie heeft geen richting."@nl;
+  shacl:description "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Daarnaast omvat deze relatie ook situaties waarin onderdelen niet direct, maar wel structureel of functioneel met elkaar verbonden zijn op een manier die bevestiging impliceert, bv. een trap die eindigt net onder een voetgangersbrug zonder fysieke bevestiging. Deze relatie heeft geen richting."@nl;
   shacl:name "Bevestiging"@nl;
   shacl:nodekind "sh:BlankNodeOrIRI";
   shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/elektrische-componenten/#Bevestiging>;
@@ -8409,7 +8832,7 @@
 
 <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#VoedingspuntShape/eef3aa764ce7a367564c223be90c380bc3898a27> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#Voedingspunt%3ABevestiging";
   shacl:class <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Kast>;
-  shacl:description "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Deze relatie heeft geen richting."@nl;
+  shacl:description "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Daarnaast omvat deze relatie ook situaties waarin onderdelen niet direct, maar wel structureel of functioneel met elkaar verbonden zijn op een manier die bevestiging impliceert, bv. een trap die eindigt net onder een voetgangersbrug zonder fysieke bevestiging. Deze relatie heeft geen richting."@nl;
   shacl:name "Bevestiging"@nl;
   shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/elektrische-componenten/#Bevestiging>;
   <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "De range van Bevestiging moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Kast> zijn."], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "De range van Bevestiging moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Kast> zijn."];
@@ -8752,12 +9175,13 @@
 
 <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#ZonnepaneelShape/d15f714b2ed6b96e1b3f73a18a0eadabb5873da6> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#Zonnepaneel%3AVoedt";
   shacl:class <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Laagspanningsbord>,
+    <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Stroomkring>,
     <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Batterij>,
-    <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Stroomkring>;
+    <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#UPS>;
   shacl:description "Deze relatie wordt enkel gelegd naar onderdelen die permanent onder spanning staan in normaal bedrijf. Aan deze relatie wordt steeds een richting toegekend van de voedinggever naar de ontvanger."@nl;
   shacl:name "Voedt"@nl;
   shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/elektrische-componenten/#Voedt>;
-  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "De range van Voedt moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Laagspanningsbord> zijn."], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "De range van Voedt moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Batterij> zijn."], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "De range van Voedt moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Stroomkring> zijn."];
+  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "De range van Voedt moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Laagspanningsbord> zijn."], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "De range van Voedt moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Stroomkring> zijn."], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "De range van Voedt moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Batterij> zijn."], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "De range van Voedt moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#UPS> zijn."];
   <https://data.vlaanderen.be/ns/shacl#rule> "" .
 
 <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#ZonnepaneelShape/d465ae7eed35aca3207ca502ba10814f215d1ab5> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#Zonnepaneel%3AVoedt";
@@ -8765,7 +9189,7 @@
   shacl:name "Voedt"@nl;
   shacl:nodekind "sh:BlankNodeOrIRI";
   shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/elektrische-componenten/#Voedt>;
-  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "De verwachte waarde voor Voedt is een rdfs:Resource (URI of blank node)"], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "De verwachte waarde voor Voedt is een rdfs:Resource (URI of blank node)"], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "De verwachte waarde voor Voedt is een rdfs:Resource (URI of blank node)"];
+  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "De verwachte waarde voor Voedt is een rdfs:Resource (URI of blank node)"], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "De verwachte waarde voor Voedt is een rdfs:Resource (URI of blank node)"], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "De verwachte waarde voor Voedt is een rdfs:Resource (URI of blank node)"], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEVnl> "De verwachte waarde voor Voedt is een rdfs:Resource (URI of blank node)"];
   <https://data.vlaanderen.be/ns/shacl#rule> "" .
 
 <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#ZonnepaneelShape/e2da45937a32c889a23cb6b41b31c50d94d31d9f> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/elektrische-componenten/ontwerpdocument/DEV#Zonnepaneel%3Amodelnaam";

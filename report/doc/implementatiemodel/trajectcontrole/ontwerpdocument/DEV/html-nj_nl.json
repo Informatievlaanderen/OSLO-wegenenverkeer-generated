@@ -2,7 +2,7 @@
   "metadata": {
     "title": "Trajectcontrole",
     "uri": "http://fixme.com",
-    "issued": "18-12-2024",
+    "issued": "3-10-2025",
     "filename": "trajectcontrole",
     "navigation": {
       "prev": "",
@@ -13,9 +13,9 @@
     "documentconfig": {},
     "status": "https://data.vlaanderen.be/doc/concept/StandaardStatus/KandidaatStandaard",
     "statuslabel": "Onbekend",
-    "repositoryurl": "https://github.com/Informatievlaanderen/OSLOthema-wegenenverkeer/tree/cd54f35ed58706ea9fde55910810e93065d5851c",
-    "changelogurl": "https://github.com/Informatievlaanderen/OSLOthema-wegenenverkeer/blob/cd54f35ed58706ea9fde55910810e93065d5851c/CHANGELOG",
-    "feedbackurl": "https://docs.google.com/forms/d/e/1FAIpQLSeaxOnrCkcarNHWI21YfPJ7sZChHVzOB2-P9ptzxkD9YX69-g/viewform",
+    "repositoryurl": "https://github.com/Informatievlaanderen/OSLOthema-wegenenverkeer/tree/708f3ddd3a77b8c1bfa5c68743b8a7cf06d8c5df",
+    "changelogurl": "https://github.com/Informatievlaanderen/OSLOthema-wegenenverkeer/blob/708f3ddd3a77b8c1bfa5c68743b8a7cf06d8c5df/CHANGELOG",
+    "feedbackurl": "mailto:TeamBim@verzendlijst.wegenenverkeer.be",
     "standaardregisterurl": "https://data.vlaanderen.be/standaarden/",
     "dependencies": [],
     "usesVocs": [],
@@ -372,7 +372,7 @@
             "nl": "Bevestiging"
           },
           "description": {
-            "nl": "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Deze relatie heeft geen richting."
+            "nl": "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Daarnaast omvat deze relatie ook situaties waarin onderdelen niet direct, maar wel structureel of functioneel met elkaar verbonden zijn op een manier die bevestiging impliceert, bv. een trap die eindigt net onder een voetgangersbrug zonder fysieke bevestiging. Deze relatie heeft geen richting."
           },
           "usage": {},
           "domain": [
@@ -407,7 +407,7 @@
             "nl": "Bevestiging"
           },
           "description": {
-            "nl": "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Deze relatie heeft geen richting."
+            "nl": "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Daarnaast omvat deze relatie ook situaties waarin onderdelen niet direct, maar wel structureel of functioneel met elkaar verbonden zijn op een manier die bevestiging impliceert, bv. een trap die eindigt net onder een voetgangersbrug zonder fysieke bevestiging. Deze relatie heeft geen richting."
           },
           "usage": {},
           "domain": [
@@ -505,6 +505,41 @@
           ],
           "cardinality": "1",
           "codelist_uri": "https://wegenenverkeer-test.data.vlaanderen.be/id/conceptscheme/KlBuitenkastVerfraaid"
+        },
+        {
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Buitenkast.laatsteKeuringsdatum",
+          "name": "laatste keuringsdatum",
+          "sort": "laatste keuringsdatum",
+          "label": {
+            "nl": "laatste keuringsdatum"
+          },
+          "description": {
+            "nl": "Deze datum geeft aan wanneer de laatste keuring plaatsvond en kan gebruikt worden om te bepalen wanneer een volgende keuring nodig is."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "Buitenkast",
+              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Buitenkast"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "Date",
+              "range_uri": "http://www.w3.org/2001/XMLSchema#date"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Datum",
+              "range_puri": "http://www.w3.org/2001/XMLSchema#date",
+              "range_label": {
+                "nl": "Datum"
+              }
+            }
+          ],
+          "cardinality": "1",
+          "codelist_uri": ""
         },
         {
           "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Buitenkast.keuringsfrequentie",
@@ -634,77 +669,7 @@
             "nl": "Bevestiging"
           },
           "description": {
-            "nl": "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Deze relatie heeft geen richting."
-          },
-          "usage": {},
-          "domain": [
-            {
-              "EA-Name": "Draagconstructie",
-              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Draagconstructie"
-            }
-          ],
-          "range": [
-            {
-              "range_label": "Camera",
-              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Camera"
-            }
-          ],
-          "scopedrange": [
-            {
-              "range_uri": "#Camera",
-              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Camera",
-              "range_label": {
-                "nl": "Camera"
-              }
-            }
-          ],
-          "cardinality": "",
-          "codelist_uri": ""
-        },
-        {
-          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/trajectcontrole/#Bevestiging",
-          "name": "bevestiging",
-          "sort": "Bevestiging",
-          "label": {
-            "nl": "Bevestiging"
-          },
-          "description": {
-            "nl": "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Deze relatie heeft geen richting."
-          },
-          "usage": {},
-          "domain": [
-            {
-              "EA-Name": "Draagconstructie",
-              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Draagconstructie"
-            }
-          ],
-          "range": [
-            {
-              "range_label": "Camera",
-              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Camera"
-            }
-          ],
-          "scopedrange": [
-            {
-              "range_uri": "#Camera",
-              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Camera",
-              "range_label": {
-                "nl": "Camera"
-              }
-            }
-          ],
-          "cardinality": "",
-          "codelist_uri": ""
-        },
-        {
-          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/trajectcontrole/#Bevestiging",
-          "name": "bevestiging",
-          "sort": "Bevestiging",
-          "label": {
-            "nl": "Bevestiging"
-          },
-          "description": {
-            "nl": "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Deze relatie heeft geen richting."
+            "nl": "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Daarnaast omvat deze relatie ook situaties waarin onderdelen niet direct, maar wel structureel of functioneel met elkaar verbonden zijn op een manier die bevestiging impliceert, bv. een trap die eindigt net onder een voetgangersbrug zonder fysieke bevestiging. Deze relatie heeft geen richting."
           },
           "usage": {},
           "domain": [
@@ -739,7 +704,7 @@
             "nl": "Bevestiging"
           },
           "description": {
-            "nl": "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Deze relatie heeft geen richting."
+            "nl": "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Daarnaast omvat deze relatie ook situaties waarin onderdelen niet direct, maar wel structureel of functioneel met elkaar verbonden zijn op een manier die bevestiging impliceert, bv. een trap die eindigt net onder een voetgangersbrug zonder fysieke bevestiging. Deze relatie heeft geen richting."
           },
           "usage": {},
           "domain": [
@@ -760,6 +725,76 @@
               "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Bevestigingsbeugel",
               "range_label": {
                 "nl": "Bevestigingsbeugel"
+              }
+            }
+          ],
+          "cardinality": "",
+          "codelist_uri": ""
+        },
+        {
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/trajectcontrole/#Bevestiging",
+          "name": "bevestiging",
+          "sort": "Bevestiging",
+          "label": {
+            "nl": "Bevestiging"
+          },
+          "description": {
+            "nl": "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Daarnaast omvat deze relatie ook situaties waarin onderdelen niet direct, maar wel structureel of functioneel met elkaar verbonden zijn op een manier die bevestiging impliceert, bv. een trap die eindigt net onder een voetgangersbrug zonder fysieke bevestiging. Deze relatie heeft geen richting."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "Draagconstructie",
+              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Draagconstructie"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "Camera",
+              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Camera"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Camera",
+              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Camera",
+              "range_label": {
+                "nl": "Camera"
+              }
+            }
+          ],
+          "cardinality": "",
+          "codelist_uri": ""
+        },
+        {
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/trajectcontrole/#Bevestiging",
+          "name": "bevestiging",
+          "sort": "Bevestiging",
+          "label": {
+            "nl": "Bevestiging"
+          },
+          "description": {
+            "nl": "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Daarnaast omvat deze relatie ook situaties waarin onderdelen niet direct, maar wel structureel of functioneel met elkaar verbonden zijn op een manier die bevestiging impliceert, bv. een trap die eindigt net onder een voetgangersbrug zonder fysieke bevestiging. Deze relatie heeft geen richting."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "Draagconstructie",
+              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Draagconstructie"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "Camera",
+              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Camera"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Camera",
+              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Camera",
+              "range_label": {
+                "nl": "Camera"
               }
             }
           ],
@@ -937,7 +972,77 @@
             "nl": "Bevestiging"
           },
           "description": {
-            "nl": "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Deze relatie heeft geen richting."
+            "nl": "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Daarnaast omvat deze relatie ook situaties waarin onderdelen niet direct, maar wel structureel of functioneel met elkaar verbonden zijn op een manier die bevestiging impliceert, bv. een trap die eindigt net onder een voetgangersbrug zonder fysieke bevestiging. Deze relatie heeft geen richting."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "Kast",
+              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Kast"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "Stroomkring",
+              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Stroomkring"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Stroomkring",
+              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Stroomkring",
+              "range_label": {
+                "nl": "Stroomkring"
+              }
+            }
+          ],
+          "cardinality": "",
+          "codelist_uri": ""
+        },
+        {
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/trajectcontrole/#Bevestiging",
+          "name": "bevestiging",
+          "sort": "Bevestiging",
+          "label": {
+            "nl": "Bevestiging"
+          },
+          "description": {
+            "nl": "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Daarnaast omvat deze relatie ook situaties waarin onderdelen niet direct, maar wel structureel of functioneel met elkaar verbonden zijn op een manier die bevestiging impliceert, bv. een trap die eindigt net onder een voetgangersbrug zonder fysieke bevestiging. Deze relatie heeft geen richting."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "Kast",
+              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Kast"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "Stroomkring",
+              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Stroomkring"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Stroomkring",
+              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Stroomkring",
+              "range_label": {
+                "nl": "Stroomkring"
+              }
+            }
+          ],
+          "cardinality": "",
+          "codelist_uri": ""
+        },
+        {
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/trajectcontrole/#Bevestiging",
+          "name": "bevestiging",
+          "sort": "Bevestiging",
+          "label": {
+            "nl": "Bevestiging"
+          },
+          "description": {
+            "nl": "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Daarnaast omvat deze relatie ook situaties waarin onderdelen niet direct, maar wel structureel of functioneel met elkaar verbonden zijn op een manier die bevestiging impliceert, bv. een trap die eindigt net onder een voetgangersbrug zonder fysieke bevestiging. Deze relatie heeft geen richting."
           },
           "usage": {},
           "domain": [
@@ -972,7 +1077,7 @@
             "nl": "Bevestiging"
           },
           "description": {
-            "nl": "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Deze relatie heeft geen richting."
+            "nl": "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Daarnaast omvat deze relatie ook situaties waarin onderdelen niet direct, maar wel structureel of functioneel met elkaar verbonden zijn op een manier die bevestiging impliceert, bv. een trap die eindigt net onder een voetgangersbrug zonder fysieke bevestiging. Deze relatie heeft geen richting."
           },
           "usage": {},
           "domain": [
@@ -1204,7 +1309,9 @@
           "description": {
             "nl": "De mensleesbare naam van een asset zoals dit bv. ook terug te vinden is op een etiket op het object zelf. De assetbeheerder kent deze naam toe of geeft de opdracht om deze toe te kennen. Indien een object een algemeen gangbare naam heeft zoals bv. bij een waterloop dan wordt deze gebruikt."
           },
-          "usage": {},
+          "usage": {
+            "nl": "Dient leeg of consistent te zijn met het naampad indien het naampad attribuut aanwezig en gekend is."
+          },
           "domain": [
             {
               "EA-Name": "AIMNaamObject",
@@ -1646,7 +1753,9 @@
           "description": {
             "nl": "Een set van objecten (bv. collecties) die aanduiden waar het object zich bevindt in de objectenboom (EM-Infra)."
           },
-          "usage": {},
+          "usage": {
+            "nl": "Dient consistent te zijn met de naam."
+          },
           "domain": [
             {
               "EA-Name": "NaampadObject",
@@ -2048,6 +2157,41 @@
           ],
           "cardinality": "1..*",
           "codelist_uri": ""
+        },
+        {
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/trajectcontrole/#Is ontwerp van",
+          "name": "is ontwerp van",
+          "sort": "Is ontwerp van",
+          "label": {
+            "nl": "Is ontwerp van"
+          },
+          "description": {
+            "nl": "TODO"
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "Verkeersbordopstelling",
+              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Verkeersbordopstelling"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "Verkeersbordopstelling",
+              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Verkeersbordopstelling"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Verkeersbordopstelling",
+              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Verkeersbordopstelling",
+              "range_label": {
+                "nl": "Verkeersbordopstelling"
+              }
+            }
+          ],
+          "cardinality": "",
+          "codelist_uri": ""
         }
       ]
     },
@@ -2438,7 +2582,7 @@
       },
       "sort": "Bevestiging",
       "description": {
-        "nl": "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Deze relatie heeft geen richting."
+        "nl": "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Daarnaast omvat deze relatie ook situaties waarin onderdelen niet direct, maar wel structureel of functioneel met elkaar verbonden zijn op een manier die bevestiging impliceert, bv. een trap die eindigt net onder een voetgangersbrug zonder fysieke bevestiging. Deze relatie heeft geen richting."
       },
       "usage": {},
       "parents": [
@@ -2514,6 +2658,78 @@
           ],
           "cardinality": "1",
           "codelist_uri": "https://wegenenverkeer-test.data.vlaanderen.be/id/conceptscheme/KlBevestigingsbeugelType"
+        },
+        {
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Bevestigingsbeugel.technischeFiche",
+          "name": "technische fiche",
+          "sort": "technische fiche",
+          "label": {
+            "nl": "technische fiche"
+          },
+          "description": {
+            "nl": "De technische fiche van de bevestigingsbeugel."
+          },
+          "usage": {
+            "nl": "Bestanden van het type xlsx, dwg of pdf."
+          },
+          "domain": [
+            {
+              "EA-Name": "Bevestigingsbeugel",
+              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Bevestigingsbeugel"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "DtcDocument",
+              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcDocument"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Bestandsbijlage",
+              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcDocument",
+              "range_label": {
+                "nl": "Bestandsbijlage"
+              }
+            }
+          ],
+          "cardinality": "1..*",
+          "codelist_uri": ""
+        },
+        {
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Bevestigingsbeugel.materiaalBevestigingsbeugel",
+          "name": "materiaal bevestigingsbeugel",
+          "sort": "materiaal bevestigingsbeugel",
+          "label": {
+            "nl": "materiaal bevestigingsbeugel"
+          },
+          "description": {
+            "nl": "Het materiaal waaruit de bevestigingsbeugel bestaat."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "Bevestigingsbeugel",
+              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Bevestigingsbeugel"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "KlMateriaalBevestigingsbeugel",
+              "range_uri": "http://www.w3.org/2004/02/skos/core#Concept"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#materiaal bevestigingsbeugel",
+              "range_puri": "http://www.w3.org/2004/02/skos/core#Concept",
+              "range_label": {
+                "nl": "materiaal bevestigingsbeugel"
+              }
+            }
+          ],
+          "cardinality": "1",
+          "codelist_uri": "https://wegenenverkeer-test.data.vlaanderen.be/id/conceptscheme/KlMateriaalBevestigingsbeugel"
         },
         {
           "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Bevestigingsbeugel.isVerzegeld",
@@ -2667,7 +2883,7 @@
             "nl": "Bevestiging"
           },
           "description": {
-            "nl": "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Deze relatie heeft geen richting."
+            "nl": "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Daarnaast omvat deze relatie ook situaties waarin onderdelen niet direct, maar wel structureel of functioneel met elkaar verbonden zijn op een manier die bevestiging impliceert, bv. een trap die eindigt net onder een voetgangersbrug zonder fysieke bevestiging. Deze relatie heeft geen richting."
           },
           "usage": {},
           "domain": [
@@ -2702,7 +2918,7 @@
             "nl": "Bevestiging"
           },
           "description": {
-            "nl": "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Deze relatie heeft geen richting."
+            "nl": "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Daarnaast omvat deze relatie ook situaties waarin onderdelen niet direct, maar wel structureel of functioneel met elkaar verbonden zijn op een manier die bevestiging impliceert, bv. een trap die eindigt net onder een voetgangersbrug zonder fysieke bevestiging. Deze relatie heeft geen richting."
           },
           "usage": {},
           "domain": [
@@ -2744,11 +2960,11 @@
       "usage": {},
       "parents": [
         {
-          "label": "AIM naam object",
-          "name": "AIMNaamObject",
+          "label": "Naampad object",
+          "name": "NaampadObject",
           "package": "OSLO-Implementatieelement",
-          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMNaamObject",
-          "scoped_uri": "#AIM naam object"
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#NaampadObject",
+          "scoped_uri": "#Naampad object"
         },
         {
           "label": "Serienummerobject",
@@ -2874,7 +3090,7 @@
             "nl": "rijrichting"
           },
           "description": {
-            "nl": "De rijrichting van de voertuigen die door de camera geregistreerd worden."
+            "nl": "De effectieve rijrichting van de voertuigen aan de hand van de km-punten die door de camera geregistreerd worden."
           },
           "usage": {},
           "domain": [
@@ -3513,16 +3729,16 @@
           ],
           "range": [
             {
-              "range_label": "Laagspanningsbord",
-              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Laagspanningsbord"
+              "range_label": "Stroomkring",
+              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Stroomkring"
             }
           ],
           "scopedrange": [
             {
-              "range_uri": "#Laagspanningsbord",
-              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Laagspanningsbord",
+              "range_uri": "#Stroomkring",
+              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Stroomkring",
               "range_label": {
-                "nl": "Laagspanningsbord"
+                "nl": "Stroomkring"
               }
             }
           ],
@@ -3548,16 +3764,16 @@
           ],
           "range": [
             {
-              "range_label": "Stroomkring",
-              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Stroomkring"
+              "range_label": "Laagspanningsbord",
+              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Laagspanningsbord"
             }
           ],
           "scopedrange": [
             {
-              "range_uri": "#Stroomkring",
-              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Stroomkring",
+              "range_uri": "#Laagspanningsbord",
+              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Laagspanningsbord",
               "range_label": {
-                "nl": "Stroomkring"
+                "nl": "Laagspanningsbord"
               }
             }
           ],
@@ -3894,6 +4110,20 @@
       "properties": []
     },
     {
+      "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#IsOntwerpVan",
+      "name": "Is ontwerp van",
+      "label": {
+        "nl": "Is ontwerp van"
+      },
+      "sort": "Is ontwerp van",
+      "description": {
+        "nl": "TODO"
+      },
+      "usage": {},
+      "parents": [],
+      "properties": []
+    },
+    {
       "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Laagspanningsbord",
       "name": "Laagspanningsbord",
       "label": {
@@ -4164,6 +4394,41 @@
           "codelist_uri": ""
         },
         {
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/trajectcontrole/#Voedt",
+          "name": "voedt",
+          "sort": "Voedt",
+          "label": {
+            "nl": "Voedt"
+          },
+          "description": {
+            "nl": "Deze relatie wordt enkel gelegd naar onderdelen die permanent onder spanning staan in normaal bedrijf. Aan deze relatie wordt steeds een richting toegekend van de voedinggever naar de ontvanger."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "Laagspanningsbord",
+              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Laagspanningsbord"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "UPS",
+              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#UPS"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#UPS",
+              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#UPS",
+              "range_label": {
+                "nl": "UPS"
+              }
+            }
+          ],
+          "cardinality": "",
+          "codelist_uri": ""
+        },
+        {
           "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/trajectcontrole/#Bevestiging",
           "name": "bevestiging",
           "sort": "Bevestiging",
@@ -4171,7 +4436,7 @@
             "nl": "Bevestiging"
           },
           "description": {
-            "nl": "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Deze relatie heeft geen richting."
+            "nl": "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Daarnaast omvat deze relatie ook situaties waarin onderdelen niet direct, maar wel structureel of functioneel met elkaar verbonden zijn op een manier die bevestiging impliceert, bv. een trap die eindigt net onder een voetgangersbrug zonder fysieke bevestiging. Deze relatie heeft geen richting."
           },
           "usage": {
             "nl": "Relatie uit gebruik sinds versie 2.1.0-RC2. De directe relatie werd uit gebruik genomen. De relatie bestaat nog wel via abstracte klasse Kast."
@@ -4208,7 +4473,7 @@
             "nl": "Bevestiging"
           },
           "description": {
-            "nl": "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Deze relatie heeft geen richting."
+            "nl": "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Daarnaast omvat deze relatie ook situaties waarin onderdelen niet direct, maar wel structureel of functioneel met elkaar verbonden zijn op een manier die bevestiging impliceert, bv. een trap die eindigt net onder een voetgangersbrug zonder fysieke bevestiging. Deze relatie heeft geen richting."
           },
           "usage": {
             "nl": "Relatie uit gebruik sinds versie 2.1.0-RC2. De directe relatie werd uit gebruik genomen. De relatie bestaat nog wel via abstracte klasse Kast."
@@ -4708,16 +4973,16 @@
           ],
           "range": [
             {
-              "range_label": "Netwerkelement",
-              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Netwerkelement"
+              "range_label": "Netwerkpoort",
+              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Netwerkpoort"
             }
           ],
           "scopedrange": [
             {
-              "range_uri": "#Netwerkelement",
-              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Netwerkelement",
+              "range_uri": "#Netwerkpoort",
+              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Netwerkpoort",
               "range_label": {
-                "nl": "Netwerkelement"
+                "nl": "Netwerkpoort"
               }
             }
           ],
@@ -4743,16 +5008,16 @@
           ],
           "range": [
             {
-              "range_label": "Netwerkpoort",
-              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Netwerkpoort"
+              "range_label": "Netwerkelement",
+              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Netwerkelement"
             }
           ],
           "scopedrange": [
             {
-              "range_uri": "#Netwerkpoort",
-              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Netwerkpoort",
+              "range_uri": "#Netwerkelement",
+              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Netwerkelement",
               "range_label": {
-                "nl": "Netwerkpoort"
+                "nl": "Netwerkelement"
               }
             }
           ],
@@ -4872,7 +5137,7 @@
             "nl": "Bevestiging"
           },
           "description": {
-            "nl": "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Deze relatie heeft geen richting."
+            "nl": "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Daarnaast omvat deze relatie ook situaties waarin onderdelen niet direct, maar wel structureel of functioneel met elkaar verbonden zijn op een manier die bevestiging impliceert, bv. een trap die eindigt net onder een voetgangersbrug zonder fysieke bevestiging. Deze relatie heeft geen richting."
           },
           "usage": {},
           "domain": [
@@ -4907,7 +5172,7 @@
             "nl": "Bevestiging"
           },
           "description": {
-            "nl": "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Deze relatie heeft geen richting."
+            "nl": "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Daarnaast omvat deze relatie ook situaties waarin onderdelen niet direct, maar wel structureel of functioneel met elkaar verbonden zijn op een manier die bevestiging impliceert, bv. een trap die eindigt net onder een voetgangersbrug zonder fysieke bevestiging. Deze relatie heeft geen richting."
           },
           "usage": {},
           "domain": [
@@ -5513,7 +5778,7 @@
             "nl": "Bevestiging"
           },
           "description": {
-            "nl": "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Deze relatie heeft geen richting."
+            "nl": "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Daarnaast omvat deze relatie ook situaties waarin onderdelen niet direct, maar wel structureel of functioneel met elkaar verbonden zijn op een manier die bevestiging impliceert, bv. een trap die eindigt net onder een voetgangersbrug zonder fysieke bevestiging. Deze relatie heeft geen richting."
           },
           "usage": {},
           "domain": [
@@ -5548,7 +5813,7 @@
             "nl": "Bevestiging"
           },
           "description": {
-            "nl": "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Deze relatie heeft geen richting."
+            "nl": "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Daarnaast omvat deze relatie ook situaties waarin onderdelen niet direct, maar wel structureel of functioneel met elkaar verbonden zijn op een manier die bevestiging impliceert, bv. een trap die eindigt net onder een voetgangersbrug zonder fysieke bevestiging. Deze relatie heeft geen richting."
           },
           "usage": {},
           "domain": [
@@ -5926,41 +6191,6 @@
           ],
           "range": [
             {
-              "range_label": "Camera",
-              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Camera"
-            }
-          ],
-          "scopedrange": [
-            {
-              "range_uri": "#Camera",
-              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Camera",
-              "range_label": {
-                "nl": "Camera"
-              }
-            }
-          ],
-          "cardinality": "",
-          "codelist_uri": ""
-        },
-        {
-          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/trajectcontrole/#Voedt",
-          "name": "voedt",
-          "sort": "Voedt",
-          "label": {
-            "nl": "Voedt"
-          },
-          "description": {
-            "nl": "Deze relatie wordt enkel gelegd naar onderdelen die permanent onder spanning staan in normaal bedrijf. Aan deze relatie wordt steeds een richting toegekend van de voedinggever naar de ontvanger."
-          },
-          "usage": {},
-          "domain": [
-            {
-              "EA-Name": "UPS",
-              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#UPS"
-            }
-          ],
-          "range": [
-            {
               "range_label": "Netwerkelement",
               "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Netwerkelement"
             }
@@ -5996,16 +6226,16 @@
           ],
           "range": [
             {
-              "range_label": "Laagspanningsbord",
-              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Laagspanningsbord"
+              "range_label": "Stroomkring",
+              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Stroomkring"
             }
           ],
           "scopedrange": [
             {
-              "range_uri": "#Laagspanningsbord",
-              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Laagspanningsbord",
+              "range_uri": "#Stroomkring",
+              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Stroomkring",
               "range_label": {
-                "nl": "Laagspanningsbord"
+                "nl": "Stroomkring"
               }
             }
           ],
@@ -6031,16 +6261,16 @@
           ],
           "range": [
             {
-              "range_label": "Stroomkring",
-              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Stroomkring"
+              "range_label": "Camera",
+              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Camera"
             }
           ],
           "scopedrange": [
             {
-              "range_uri": "#Stroomkring",
-              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Stroomkring",
+              "range_uri": "#Camera",
+              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Camera",
               "range_label": {
-                "nl": "Stroomkring"
+                "nl": "Camera"
               }
             }
           ],
@@ -6377,6 +6607,41 @@
             }
           ],
           "cardinality": "1..*",
+          "codelist_uri": ""
+        },
+        {
+          "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/trajectcontrole/#Hoort bij",
+          "name": "hoort bij",
+          "sort": "Hoort bij",
+          "label": {
+            "nl": "Hoort bij"
+          },
+          "description": {
+            "nl": "De relatie geeft aan dat een onderdeel of collectie behoort bij, deel van of lid van een (andere) groep of collectie is."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "Wegkantkast",
+              "uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Wegkantkast"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "Camera",
+              "range_uri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Camera"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Camera",
+              "range_puri": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Camera",
+              "range_label": {
+                "nl": "Camera"
+              }
+            }
+          ],
+          "cardinality": "",
           "codelist_uri": ""
         }
       ]
@@ -9192,7 +9457,7 @@
             "nl": "standaard eenheid"
           },
           "description": {
-            "nl": "De standaard eenheid bij dit datatype is uitgedrukt in seconde."
+            "nl": "De standaard eenheid bij dit datatype is uitgedrukt in hertz."
           },
           "usage": {
             "nl": "\"s\"^^cdt:ucumunit"

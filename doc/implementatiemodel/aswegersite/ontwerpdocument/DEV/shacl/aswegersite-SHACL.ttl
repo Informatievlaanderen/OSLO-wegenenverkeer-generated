@@ -40,8 +40,8 @@
     <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#KlAfsluitingMateriaalShape>,
     <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#KlWeegcelModelnaamShape>,
     <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#KlWeegcelMerkShape>,
-    <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#KlAswegersiteTypeMarkeringShape>,
     <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#KlAfmetingAswegerzoneShape>,
+    <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#KlAswegersiteTypeMarkeringShape>,
     <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#BehuizingShape>,
     <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#KastShape>,
     <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#KokerruimteShape>,
@@ -74,8 +74,10 @@
     <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#KwantWrdInVoltShape>,
     <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#KwantWrdInWattShape>,
     <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#NaampadObjectShape>,
+    <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#AswegerShape>,
     <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#AswegersiteShape>,
     <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#GebouwShape>,
+    <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#GebouwuitrustingShape>,
     <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#LokaalShape>,
     <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#SlagboomShape>,
     <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#AfsluitingShape>,
@@ -732,6 +734,26 @@
   shacl:closed false;
   shacl:targetClass xsd:anyURI .
 
+<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#AswegerShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#AswegerShape/8f120cad8fcd990b3b239beab82e34601f02f57e>,
+    <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#AswegerShape/f7248aceb7f88bc80137f911d7a37032f76cf426>;
+  shacl:targetClass <https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Asweger> .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#AswegerShape/8f120cad8fcd990b3b239beab82e34601f02f57e> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#Asweger%3AHoort%20bij";
+  shacl:class <https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Aswegersite>;
+  shacl:description "De relatie geeft aan dat een onderdeel of collectie behoort bij, deel van of lid van een (andere) groep of collectie is."@nl;
+  shacl:name "Hoort bij"@nl;
+  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/aswegersite/ontwerpdocument/DEVnl> "De range van Hoort bij moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Aswegersite> zijn."];
+  <https://data.vlaanderen.be/ns/shacl#rule> "" .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#AswegerShape/f7248aceb7f88bc80137f911d7a37032f76cf426> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#Asweger%3AHoort%20bij";
+  shacl:description "De relatie geeft aan dat een onderdeel of collectie behoort bij, deel van of lid van een (andere) groep of collectie is."@nl;
+  shacl:name "Hoort bij"@nl;
+  shacl:nodekind "sh:BlankNodeOrIRI";
+  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/aswegersite/ontwerpdocument/DEVnl> "De verwachte waarde voor Hoort bij is een rdfs:Resource (URI of blank node)"];
+  <https://data.vlaanderen.be/ns/shacl#rule> "" .
+
 <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#AswegerputShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:property <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#AswegerputShape/440f3b063a60b3d33ddb75dd42f14247c90dc8ae>,
@@ -753,7 +775,7 @@
   <https://data.vlaanderen.be/ns/shacl#rule> "" .
 
 <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#AswegerputShape/440f3b063a60b3d33ddb75dd42f14247c90dc8ae> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#Aswegerput%3ABevestiging";
-  shacl:description "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Deze relatie heeft geen richting."@nl;
+  shacl:description "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Daarnaast omvat deze relatie ook situaties waarin onderdelen niet direct, maar wel structureel of functioneel met elkaar verbonden zijn op een manier die bevestiging impliceert, bv. een trap die eindigt net onder een voetgangersbrug zonder fysieke bevestiging. Deze relatie heeft geen richting."@nl;
   shacl:name "Bevestiging"@nl;
   shacl:nodekind "sh:BlankNodeOrIRI";
   shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/#Bevestiging>;
@@ -785,7 +807,7 @@
 
 <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#AswegerputShape/eef3aa764ce7a367564c223be90c380bc3898a27> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#Aswegerput%3ABevestiging";
   shacl:class <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Weegcel>;
-  shacl:description "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Deze relatie heeft geen richting."@nl;
+  shacl:description "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Daarnaast omvat deze relatie ook situaties waarin onderdelen niet direct, maar wel structureel of functioneel met elkaar verbonden zijn op een manier die bevestiging impliceert, bv. een trap die eindigt net onder een voetgangersbrug zonder fysieke bevestiging. Deze relatie heeft geen richting."@nl;
   shacl:name "Bevestiging"@nl;
   shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/#Bevestiging>;
   <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/aswegersite/ontwerpdocument/DEVnl> "De range van Bevestiging moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Weegcel> zijn."], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/aswegersite/ontwerpdocument/DEVnl> "De range van Bevestiging moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Weegcel> zijn."];
@@ -1007,7 +1029,7 @@
   <https://data.vlaanderen.be/ns/shacl#rule> "" .
 
 <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#BehuizingShape/49f36b168dfd8d372dd964a17ca93fcf51d5d515> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#Behuizing%3ABevestiging%20(target)";
-  shacl:description "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Deze relatie heeft geen richting."@nl;
+  shacl:description "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Daarnaast omvat deze relatie ook situaties waarin onderdelen niet direct, maar wel structureel of functioneel met elkaar verbonden zijn op een manier die bevestiging impliceert, bv. een trap die eindigt net onder een voetgangersbrug zonder fysieke bevestiging. Deze relatie heeft geen richting."@nl;
   shacl:name "Bevestiging (target)"@nl;
   shacl:nodekind "sh:BlankNodeOrIRI";
   shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/#Bevestiging>;
@@ -1055,7 +1077,7 @@
   <https://data.vlaanderen.be/ns/shacl#rule> "" .
 
 <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#BehuizingShape/93f5b3603ab653f80be75bbdad3d3495fa9e5872> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#Behuizing%3ABevestiging%20(source)";
-  shacl:description "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Deze relatie heeft geen richting."@nl;
+  shacl:description "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Daarnaast omvat deze relatie ook situaties waarin onderdelen niet direct, maar wel structureel of functioneel met elkaar verbonden zijn op een manier die bevestiging impliceert, bv. een trap die eindigt net onder een voetgangersbrug zonder fysieke bevestiging. Deze relatie heeft geen richting."@nl;
   shacl:name "Bevestiging (source)"@nl;
   shacl:nodekind "sh:BlankNodeOrIRI";
   shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/#Bevestiging>;
@@ -1072,7 +1094,7 @@
 
 <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#BehuizingShape/d34de33d28e2492d813948dbd02d4ee8bdd328f5> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#Behuizing%3ABevestiging%20(target)";
   shacl:class <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Behuizing>;
-  shacl:description "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Deze relatie heeft geen richting."@nl;
+  shacl:description "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Daarnaast omvat deze relatie ook situaties waarin onderdelen niet direct, maar wel structureel of functioneel met elkaar verbonden zijn op een manier die bevestiging impliceert, bv. een trap die eindigt net onder een voetgangersbrug zonder fysieke bevestiging. Deze relatie heeft geen richting."@nl;
   shacl:name "Bevestiging (target)"@nl;
   shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/#Bevestiging>;
   <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/aswegersite/ontwerpdocument/DEVnl> "De range van Bevestiging (target) moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Behuizing> zijn."];
@@ -1096,7 +1118,7 @@
 
 <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#BehuizingShape/fdaf0749d31093b0ec3b34ed143cb6550c64324f> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#Behuizing%3ABevestiging%20(source)";
   shacl:class <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Behuizing>;
-  shacl:description "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Deze relatie heeft geen richting."@nl;
+  shacl:description "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Daarnaast omvat deze relatie ook situaties waarin onderdelen niet direct, maar wel structureel of functioneel met elkaar verbonden zijn op een manier die bevestiging impliceert, bv. een trap die eindigt net onder een voetgangersbrug zonder fysieke bevestiging. Deze relatie heeft geen richting."@nl;
   shacl:name "Bevestiging (source)"@nl;
   shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/#Bevestiging>;
   <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/aswegersite/ontwerpdocument/DEVnl> "De range van Bevestiging (source) moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Behuizing> zijn."];
@@ -2327,7 +2349,7 @@
   shacl:targetClass <https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Gebouw> .
 
 <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#GebouwShape/440f3b063a60b3d33ddb75dd42f14247c90dc8ae> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#Gebouw%3ABevestiging";
-  shacl:description "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Deze relatie heeft geen richting."@nl;
+  shacl:description "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Daarnaast omvat deze relatie ook situaties waarin onderdelen niet direct, maar wel structureel of functioneel met elkaar verbonden zijn op een manier die bevestiging impliceert, bv. een trap die eindigt net onder een voetgangersbrug zonder fysieke bevestiging. Deze relatie heeft geen richting."@nl;
   shacl:name "Bevestiging"@nl;
   shacl:nodekind "sh:BlankNodeOrIRI";
   shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/#Bevestiging>;
@@ -2367,7 +2389,7 @@
 
 <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#GebouwShape/eef3aa764ce7a367564c223be90c380bc3898a27> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#Gebouw%3ABevestiging";
   shacl:class <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Brandblusser>;
-  shacl:description "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Deze relatie heeft geen richting."@nl;
+  shacl:description "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Daarnaast omvat deze relatie ook situaties waarin onderdelen niet direct, maar wel structureel of functioneel met elkaar verbonden zijn op een manier die bevestiging impliceert, bv. een trap die eindigt net onder een voetgangersbrug zonder fysieke bevestiging. Deze relatie heeft geen richting."@nl;
   shacl:name "Bevestiging"@nl;
   shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/#Bevestiging>;
   <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/aswegersite/ontwerpdocument/DEVnl> "De range van Bevestiging moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Brandblusser> zijn."], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/aswegersite/ontwerpdocument/DEVnl> "De range van Bevestiging moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Brandblusser> zijn."];
@@ -2387,6 +2409,10 @@
   shacl:nodekind "sh:BlankNodeOrIRI";
   <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/aswegersite/ontwerpdocument/DEVnl> "De verwachte waarde voor Hoort bij is een rdfs:Resource (URI of blank node)"];
   <https://data.vlaanderen.be/ns/shacl#rule> "" .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#GebouwuitrustingShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Gebouwuitrusting> .
 
 <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#HoortBijShape> a shacl:NodeShape;
   shacl:closed false .
@@ -3458,7 +3484,7 @@
   <https://data.vlaanderen.be/ns/shacl#rule> "" .
 
 <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#LaagShape/440f3b063a60b3d33ddb75dd42f14247c90dc8ae> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#Laag%3ABevestiging";
-  shacl:description "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Deze relatie heeft geen richting."@nl;
+  shacl:description "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Daarnaast omvat deze relatie ook situaties waarin onderdelen niet direct, maar wel structureel of functioneel met elkaar verbonden zijn op een manier die bevestiging impliceert, bv. een trap die eindigt net onder een voetgangersbrug zonder fysieke bevestiging. Deze relatie heeft geen richting."@nl;
   shacl:name "Bevestiging"@nl;
   shacl:nodekind "sh:BlankNodeOrIRI";
   shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/#Bevestiging>;
@@ -3530,7 +3556,7 @@
 
 <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#LaagShape/eef3aa764ce7a367564c223be90c380bc3898a27> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#Laag%3ABevestiging";
   shacl:class <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Aswegerput>;
-  shacl:description "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Deze relatie heeft geen richting."@nl;
+  shacl:description "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Daarnaast omvat deze relatie ook situaties waarin onderdelen niet direct, maar wel structureel of functioneel met elkaar verbonden zijn op een manier die bevestiging impliceert, bv. een trap die eindigt net onder een voetgangersbrug zonder fysieke bevestiging. Deze relatie heeft geen richting."@nl;
   shacl:name "Bevestiging"@nl;
   shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/#Bevestiging>;
   <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/aswegersite/ontwerpdocument/DEVnl> "De range van Bevestiging moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Aswegerput> zijn."], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/aswegersite/ontwerpdocument/DEVnl> "De range van Bevestiging moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Aswegerput> zijn."];
@@ -3580,7 +3606,7 @@
   shacl:targetClass <https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Lokaal> .
 
 <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#LokaalShape/440f3b063a60b3d33ddb75dd42f14247c90dc8ae> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#Lokaal%3ABevestiging";
-  shacl:description "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Deze relatie heeft geen richting."@nl;
+  shacl:description "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Daarnaast omvat deze relatie ook situaties waarin onderdelen niet direct, maar wel structureel of functioneel met elkaar verbonden zijn op een manier die bevestiging impliceert, bv. een trap die eindigt net onder een voetgangersbrug zonder fysieke bevestiging. Deze relatie heeft geen richting."@nl;
   shacl:name "Bevestiging"@nl;
   shacl:nodekind "sh:BlankNodeOrIRI";
   shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/#Bevestiging>;
@@ -3620,7 +3646,7 @@
 
 <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#LokaalShape/eef3aa764ce7a367564c223be90c380bc3898a27> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#Lokaal%3ABevestiging";
   shacl:class <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Brandblusser>;
-  shacl:description "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Deze relatie heeft geen richting."@nl;
+  shacl:description "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Daarnaast omvat deze relatie ook situaties waarin onderdelen niet direct, maar wel structureel of functioneel met elkaar verbonden zijn op een manier die bevestiging impliceert, bv. een trap die eindigt net onder een voetgangersbrug zonder fysieke bevestiging. Deze relatie heeft geen richting."@nl;
   shacl:name "Bevestiging"@nl;
   shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/#Bevestiging>;
   <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/aswegersite/ontwerpdocument/DEVnl> "De range van Bevestiging moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Brandblusser> zijn."], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/aswegersite/ontwerpdocument/DEVnl> "De range van Bevestiging moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#Brandblusser> zijn."];
@@ -4874,10 +4900,11 @@
   <https://data.vlaanderen.be/ns/shacl#rule> "" .
 
 <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#WeegcelShape/8f120cad8fcd990b3b239beab82e34601f02f57e> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#Weegcel%3AHoort%20bij";
-  shacl:class <https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Aswegersite>;
+  shacl:class <https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Aswegersite>,
+    <https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Asweger>;
   shacl:description "De relatie geeft aan dat een onderdeel of collectie behoort bij, deel van of lid van een (andere) groep of collectie is."@nl;
   shacl:name "Hoort bij"@nl;
-  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/aswegersite/ontwerpdocument/DEVnl> "De range van Hoort bij moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Aswegersite> zijn."];
+  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/aswegersite/ontwerpdocument/DEVnl> "De range van Hoort bij moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Aswegersite> zijn."], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/aswegersite/ontwerpdocument/DEVnl> "De range van Hoort bij moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Asweger> zijn."];
   <https://data.vlaanderen.be/ns/shacl#rule> "" .
 
 <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#WeegcelShape/95ff0e8100aa6d15ab3e80aca3d420eb272d5256> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#Weegcel%3Amodelnaam";
@@ -4948,7 +4975,7 @@
   shacl:description "De relatie geeft aan dat een onderdeel of collectie behoort bij, deel van of lid van een (andere) groep of collectie is."@nl;
   shacl:name "Hoort bij"@nl;
   shacl:nodekind "sh:BlankNodeOrIRI";
-  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/aswegersite/ontwerpdocument/DEVnl> "De verwachte waarde voor Hoort bij is een rdfs:Resource (URI of blank node)"];
+  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/aswegersite/ontwerpdocument/DEVnl> "De verwachte waarde voor Hoort bij is een rdfs:Resource (URI of blank node)"], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/aswegersite/ontwerpdocument/DEVnl> "De verwachte waarde voor Hoort bij is een rdfs:Resource (URI of blank node)"];
   <https://data.vlaanderen.be/ns/shacl#rule> "" .
 
 <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#WeegcelShape/ffd3cebcb17008b9e8df339087160bd0693a2629> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#Weegcel%3Aserienummer";
@@ -4963,6 +4990,8 @@
   shacl:closed false;
   shacl:property <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#WeegcomputerShape/440f3b063a60b3d33ddb75dd42f14247c90dc8ae>,
     <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#WeegcomputerShape/eef3aa764ce7a367564c223be90c380bc3898a27>,
+    <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#WeegcomputerShape/8f120cad8fcd990b3b239beab82e34601f02f57e>,
+    <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#WeegcomputerShape/f7248aceb7f88bc80137f911d7a37032f76cf426>,
     <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#WeegcomputerShape/21ce6fcad83046517b6d5d09e55727da8bd55fce>,
     <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#WeegcomputerShape/755808daa6cf29bd43264e941b0ae9392279ec89>,
     <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#WeegcomputerShape/4c11880d162d14486e32dc3d0fc1f90ed3cf9d1c>,
@@ -5009,7 +5038,7 @@
   <https://data.vlaanderen.be/ns/shacl#rule> "" .
 
 <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#WeegcomputerShape/440f3b063a60b3d33ddb75dd42f14247c90dc8ae> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#Weegcomputer%3ABevestiging";
-  shacl:description "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Deze relatie heeft geen richting."@nl;
+  shacl:description "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Daarnaast omvat deze relatie ook situaties waarin onderdelen niet direct, maar wel structureel of functioneel met elkaar verbonden zijn op een manier die bevestiging impliceert, bv. een trap die eindigt net onder een voetgangersbrug zonder fysieke bevestiging. Deze relatie heeft geen richting."@nl;
   shacl:name "Bevestiging"@nl;
   shacl:nodekind "sh:BlankNodeOrIRI";
   shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/#Bevestiging>;
@@ -5080,6 +5109,13 @@
   <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/aswegersite/ontwerpdocument/DEVnl> "De verwachte waarde voor serienummer is een Literal"];
   <https://data.vlaanderen.be/ns/shacl#rule> "" .
 
+<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#WeegcomputerShape/8f120cad8fcd990b3b239beab82e34601f02f57e> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#Weegcomputer%3AHoort%20bij";
+  shacl:class <https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Asweger>;
+  shacl:description "De relatie geeft aan dat een onderdeel of collectie behoort bij, deel van of lid van een (andere) groep of collectie is."@nl;
+  shacl:name "Hoort bij"@nl;
+  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/aswegersite/ontwerpdocument/DEVnl> "De range van Hoort bij moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Asweger> zijn."];
+  <https://data.vlaanderen.be/ns/shacl#rule> "" .
+
 <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#WeegcomputerShape/95ff0e8100aa6d15ab3e80aca3d420eb272d5256> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#Weegcomputer%3Amodelnaam";
   shacl:description "Modelnaam van het toestel volgens de fabrikant."@nl;
   shacl:minCount 1;
@@ -5130,10 +5166,17 @@
 
 <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#WeegcomputerShape/eef3aa764ce7a367564c223be90c380bc3898a27> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#Weegcomputer%3ABevestiging";
   shacl:class <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#IndoorKast>;
-  shacl:description "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Deze relatie heeft geen richting."@nl;
+  shacl:description "Deze relatie geeft aan dat twee onderdelen direct fysiek op elkaar bevestigd zijn. Dit kan zowel aan de buitenkant als aan de binnenkant zijn zoals bv. een camera aan een paal of een laagspanningsbord in een kast. Daarnaast omvat deze relatie ook situaties waarin onderdelen niet direct, maar wel structureel of functioneel met elkaar verbonden zijn op een manier die bevestiging impliceert, bv. een trap die eindigt net onder een voetgangersbrug zonder fysieke bevestiging. Deze relatie heeft geen richting."@nl;
   shacl:name "Bevestiging"@nl;
   shacl:path <https://wegenenverkeer.data.dev-vlaanderen.be/doc/implementatiemodel/aswegersite/#Bevestiging>;
   <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/aswegersite/ontwerpdocument/DEVnl> "De range van Bevestiging moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#IndoorKast> zijn."], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/aswegersite/ontwerpdocument/DEVnl> "De range van Bevestiging moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#IndoorKast> zijn."];
+  <https://data.vlaanderen.be/ns/shacl#rule> "" .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#WeegcomputerShape/f7248aceb7f88bc80137f911d7a37032f76cf426> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#Weegcomputer%3AHoort%20bij";
+  shacl:description "De relatie geeft aan dat een onderdeel of collectie behoort bij, deel van of lid van een (andere) groep of collectie is."@nl;
+  shacl:name "Hoort bij"@nl;
+  shacl:nodekind "sh:BlankNodeOrIRI";
+  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/aswegersite/ontwerpdocument/DEVnl> "De verwachte waarde voor Hoort bij is een rdfs:Resource (URI of blank node)"];
   <https://data.vlaanderen.be/ns/shacl#rule> "" .
 
 <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#WeegcomputerShape/ffd3cebcb17008b9e8df339087160bd0693a2629> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#Weegcomputer%3Aserienummer";
@@ -5179,10 +5222,11 @@
   <https://data.vlaanderen.be/ns/shacl#rule> "" .
 
 <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#WeegplaatShape/8f120cad8fcd990b3b239beab82e34601f02f57e> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#Weegplaat%3AHoort%20bij";
-  shacl:class <https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Aswegersite>;
+  shacl:class <https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Aswegersite>,
+    <https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Asweger>;
   shacl:description "De relatie geeft aan dat een onderdeel of collectie behoort bij, deel van of lid van een (andere) groep of collectie is."@nl;
   shacl:name "Hoort bij"@nl;
-  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/aswegersite/ontwerpdocument/DEVnl> "De range van Hoort bij moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Aswegersite> zijn."];
+  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/aswegersite/ontwerpdocument/DEVnl> "De range van Hoort bij moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Aswegersite> zijn."], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/aswegersite/ontwerpdocument/DEVnl> "De range van Hoort bij moet van het type <https://wegenenverkeer.data.dev-vlaanderen.be/ns/installatie#Asweger> zijn."];
   <https://data.vlaanderen.be/ns/shacl#rule> "" .
 
 <https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#WeegplaatShape/a9acafaa9d0953d6ab47a4465bc480365a1f40bc> rdfs:seeAlso "https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/aswegersite/ontwerpdocument/DEV#Weegplaat%3Amateriaal";
@@ -5213,5 +5257,5 @@
   shacl:description "De relatie geeft aan dat een onderdeel of collectie behoort bij, deel van of lid van een (andere) groep of collectie is."@nl;
   shacl:name "Hoort bij"@nl;
   shacl:nodekind "sh:BlankNodeOrIRI";
-  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/aswegersite/ontwerpdocument/DEVnl> "De verwachte waarde voor Hoort bij is een rdfs:Resource (URI of blank node)"];
+  <https://data.vlaanderen.be/ns/shacl#message> [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/aswegersite/ontwerpdocument/DEVnl> "De verwachte waarde voor Hoort bij is een rdfs:Resource (URI of blank node)"], [<https://wegenenverkeer.data.dev-vlaanderen.be//doc/implementatiemodel/aswegersite/ontwerpdocument/DEVnl> "De verwachte waarde voor Hoort bij is een rdfs:Resource (URI of blank node)"];
   <https://data.vlaanderen.be/ns/shacl#rule> "" .

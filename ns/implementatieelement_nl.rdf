@@ -2036,26 +2036,26 @@
             <rdfs:label xml:lang="nl">Pipe container type</rdfs:label>
             <rdfs:label xml:lang="nl">Datakabel materiaal</rdfs:label>
             <rdfs:label xml:lang="nl">Telecommunications subthema</rdfs:label>
-            <rdfs:label xml:lang="nl">Corrosiebelastingscategorie</rdfs:label>
-            <rdfs:label xml:lang="nl">Schoorhoek</rdfs:label>
-            <rdfs:label xml:lang="nl">Duurzaamheidsklasse van hout</rdfs:label>
-            <rdfs:label xml:lang="nl">Walsmethode</rdfs:label>
-            <rdfs:label xml:lang="nl">Krimpvoegvulling</rdfs:label>
             <rdfs:label xml:lang="nl">Toegangsprocedure toegangstijden</rdfs:label>
             <rdfs:label xml:lang="nl">Betonomgevingsklasse</rdfs:label>
-            <rdfs:label xml:lang="nl">Constructiestaalsoort</rdfs:label>
-            <rdfs:label xml:lang="nl">Betonsterkteklasse</rdfs:label>
+            <rdfs:label xml:lang="nl">Corrosiebelastingscategorie</rdfs:label>
+            <rdfs:label xml:lang="nl">Krimpvoegvulling</rdfs:label>
             <rdfs:label xml:lang="nl">Toegankelijkheid</rdfs:label>
             <rdfs:label xml:lang="nl">Mimetype</rdfs:label>
             <rdfs:label xml:lang="nl">Gebruiksdomein</rdfs:label>
+            <rdfs:label xml:lang="nl">Schoorhoek</rdfs:label>
+            <rdfs:label xml:lang="nl">Duurzaamheidsklasse van hout</rdfs:label>
+            <rdfs:label xml:lang="nl">Walsmethode</rdfs:label>
+            <rdfs:label xml:lang="nl">Betonsterkteklasse</rdfs:label>
             <rdfs:label xml:lang="nl">Toeslagmiddel beton</rdfs:label>
             <rdfs:label xml:lang="nl">Provincie</rdfs:label>
             <rdfs:label xml:lang="nl">Gemeente</rdfs:label>
             <rdfs:label xml:lang="nl">Kwaliteitsklasse van hout</rdfs:label>
-            <rdfs:label xml:lang="nl">Algemeen faalmodus type</rdfs:label>
-            <rdfs:label xml:lang="nl">Sterkteklasse van hout</rdfs:label>
             <rdfs:label xml:lang="nl">Betonmilieuklasse</rdfs:label>
             <rdfs:label xml:lang="nl">Bijlagetype toegangsprocedure</rdfs:label>
+            <rdfs:label xml:lang="nl">Algemeen faalmodus type</rdfs:label>
+            <rdfs:label xml:lang="nl">Staalsoort</rdfs:label>
+            <rdfs:label xml:lang="nl">Sterkteklasse van hout</rdfs:label>
           </rdfs:Class>
         </rdfs:seeAlso>
         <rdfs:seeAlso>
@@ -2724,6 +2724,12 @@
     <rdfs:domain rdf:resource="https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcBetonspecificaties"/>
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
   </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcBetonspecificaties.isCementMetPolypropyleenvezels">
+    <rdfs:isDefinedBy rdf:resource="https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement"/>
+    <rdfs:comment xml:lang="nl">Geeft aan of in het cement Polypropyleenvezels (PP) zijn verwerkt.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcBetonspecificaties"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+  </owl:DatatypeProperty>
   <owl:DatatypeProperty rdf:about="https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcBetonspecificaties.isColloidaalbeton">
     <rdfs:isDefinedBy rdf:resource="https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement"/>
     <rdfs:comment xml:lang="nl">Geeft aan of het beton zich niet ontmengt onder of in water.</rdfs:comment>
@@ -2770,10 +2776,11 @@
   <owl:ObjectProperty rdf:about="https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcConstructiestaalspecificaties.staalsoort">
     <rdfs:isDefinedBy rdf:resource="https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement"/>
     <rdfs:comment xml:lang="nl">Staalkwaliteit die wordt gebruikt volgens Europese normen.</rdfs:comment>
+    <ns0:usageNote xml:lang="nl">Klasse uit gebruik sinds versie 2.18.0-RC1</ns0:usageNote>
     <rdfs:domain>
       <owl:Class rdf:about="https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcConstructiestaalspecificaties">
         <rdfs:isDefinedBy rdf:resource="https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement"/>
-        <rdfs:comment xml:lang="nl">Complex datatype om de eigenschappen van constructiestaal te bundelen.</rdfs:comment>
+        <rdfs:comment xml:lang="nl">Complex datatype om de eigenschappen van staal te bundelen.</rdfs:comment>
       </owl:Class>
     </rdfs:domain>
     <rdfs:range rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
@@ -2781,6 +2788,7 @@
   <owl:ObjectProperty rdf:about="https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcConstructiestaalspecificaties.walsmethode">
     <rdfs:isDefinedBy rdf:resource="https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement"/>
     <rdfs:comment xml:lang="nl">Op welke manier het staal gewalst is.</rdfs:comment>
+    <ns0:usageNote xml:lang="nl">Klasse uit gebruik sinds versie 2.18.0-RC1</ns0:usageNote>
     <rdfs:domain rdf:resource="https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#DtcConstructiestaalspecificaties"/>
     <rdfs:range rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
   </owl:ObjectProperty>

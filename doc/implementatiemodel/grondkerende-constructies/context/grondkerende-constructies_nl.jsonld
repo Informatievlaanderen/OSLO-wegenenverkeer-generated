@@ -485,16 +485,6 @@
     },
     "ConstructieElement": "https://wegenenverkeer.data.vlaanderen.be/ns/abstracten#ConstructieElement",
     "ConstructiefObject": "https://wegenenverkeer.data.vlaanderen.be/ns/abstracten#ConstructiefObject",
-    "Constructiestaalsoort": "http://www.w3.org/2004/02/skos/core#Concept",
-    "Constructiestaalspecificaties": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#DtcConstructiestaalspecificaties",
-    "Constructiestaalspecificaties.staalsoort": {
-      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#DtcConstructiestaalspecificaties.staalsoort",
-      "@type": "@id"
-    },
-    "Constructiestaalspecificaties.walsmethode": {
-      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#DtcConstructiestaalspecificaties.walsmethode",
-      "@type": "@id"
-    },
     "DamplankAbstracte": "https://wegenenverkeer.data.vlaanderen.be/ns/abstracten#DamplankAbstracte",
     "DamplankAbstracte.bevestiging": {
       "@container": "@set",
@@ -1265,8 +1255,16 @@
       "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/onderdeel#Ladder.materiaalLadder",
       "@type": "@id"
     },
+    "Ladder.materiaalVerankering": {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/onderdeel#Ladder.materiaalVerankering",
+      "@type": "@id"
+    },
     "Ladder.technischeFiche": {
       "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/onderdeel#Ladder.technischeFiche",
+      "@type": "@id"
+    },
+    "Ladder.typeBevestigingLadder": {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/onderdeel#Ladder.typeBevestiging",
       "@type": "@id"
     },
     "Ladder.typeOpstelling": {
@@ -1279,6 +1277,7 @@
     },
     "Leuning": "https://wegenenverkeer.data.vlaanderen.be/ns/installatie#Leuning",
     "Leuning.afwerkingstype": {
+      "@container": "@set",
       "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/installatie#Leuning.afwerkingstype",
       "@type": "@id"
     },
@@ -1299,6 +1298,10 @@
       "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/installatie#Leuning.materiaal",
       "@type": "@id"
     },
+    "Leuning.materiaalUitvoering": {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/installatie#Leuning.materiaalUitvoering",
+      "@type": "@id"
+    },
     "Leuning.professioneelGebruik": {
       "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/installatie#Leuning.professioneelGebruik",
       "@type": "http://www.w3.org/2001/XMLSchema#boolean"
@@ -1315,7 +1318,18 @@
     "LigtOp": "https://wegenenverkeer.data.vlaanderen.be/ns/onderdeel#LigtOp",
     "Literal": "http://www.w3.org/2000/01/rdf-schema#Literal",
     "MateriaalBolder": "http://www.w3.org/2004/02/skos/core#Concept",
+    "MateriaalEnAfwerking": "https://wegenenverkeer.data.vlaanderen.be/ns/installatie#DtcMateriaalEnAfwerking",
+    "MateriaalEnAfwerking.afwerkingstypeLeuning": {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/installatie#DtcMateriaalEnAfwerking.afwerkingstypeLeuning",
+      "@type": "@id"
+    },
+    "MateriaalEnAfwerking.materiaalLeuning": {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/installatie#DtcMateriaalEnAfwerking.materiaalLeuning",
+      "@type": "@id"
+    },
     "MateriaalLadder": "http://www.w3.org/2004/02/skos/core#Concept",
+    "MateriaalLeuning": "http://www.w3.org/2004/02/skos/core#Concept",
+    "MateriaalRandafwerking": "http://www.w3.org/2004/02/skos/core#Concept",
     "MateriaalSoorten": "http://www.w3.org/2004/02/skos/core#Concept",
     "MateriaalStenen": "http://www.w3.org/2004/02/skos/core#Concept",
     "MateriaalTussenschotBerlinerwand": "http://www.w3.org/2004/02/skos/core#Concept",
@@ -1383,12 +1397,29 @@
       "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#DtcProductidentificatiecode.productidentificatiecode",
       "@type": "http://www.w3.org/2001/XMLSchema#string"
     },
-    "Randprofiel": "https://wegenenverkeer.data.vlaanderen.be/ns/installatie#Randprofiel",
-    "Randprofiel.bevestiging": {
+    "Randafwerking": "https://wegenenverkeer.data.vlaanderen.be/ns/installatie#Randafwerking",
+    "Randafwerking.bevestiging": {
       "@container": "@set",
       "@id": "https://wegenenverkeer.data.vlaanderen.be/doc/implementatiemodel/grondkerende-constructies/#Bevestiging",
       "@type": "@id"
     },
+    "Randafwerking.lopendeMeter": {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/installatie#Randafwerking.lopendeMeter",
+      "@type": "@id"
+    },
+    "Randafwerking.materiaalRandafwerking": {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/installatie#Randafwerking.materiaal",
+      "@type": "@id"
+    },
+    "Randafwerking.typeRandafwerking": {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/installatie#Randafwerking.type",
+      "@type": "@id"
+    },
+    "Randafwerking.uitvoeringRandafwerking": {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/installatie#Randafwerking.uitvoering",
+      "@type": "@id"
+    },
+    "Randprofiel": "https://wegenenverkeer.data.vlaanderen.be/ns/installatie#Randprofiel",
     "Randprofiel.lopendeMeter": {
       "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/installatie#Randprofiel.lopendeMeter",
       "@type": "@id"
@@ -1514,6 +1545,16 @@
     "Spuitbeton.hoortBij": {
       "@container": "@set",
       "@id": "https://wegenenverkeer.data.vlaanderen.be/doc/implementatiemodel/grondkerende-constructies/#Hoort bij",
+      "@type": "@id"
+    },
+    "Staalsoort": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Staalspecificaties": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#DtcConstructiestaalspecificaties",
+    "Staalspecificaties.staalsoort": {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#DtcConstructiestaalspecificaties.staalsoort",
+      "@type": "@id"
+    },
+    "Staalspecificaties.walsmethode": {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#DtcConstructiestaalspecificaties.walsmethode",
       "@type": "@id"
     },
     "StalenBuispaal": "https://wegenenverkeer.data.vlaanderen.be/ns/onderdeel#StalenBuispaal",
@@ -1658,12 +1699,15 @@
     },
     "ToeslagmiddelBeton": "http://www.w3.org/2004/02/skos/core#Concept",
     "TypeBevestigingBolder": "http://www.w3.org/2004/02/skos/core#Concept",
+    "TypeBevestingLadder": "http://www.w3.org/2004/02/skos/core#Concept",
     "TypeBolder": "http://www.w3.org/2004/02/skos/core#Concept",
     "TypeGrondanker": "http://www.w3.org/2004/02/skos/core#Concept",
     "TypeMetselvoeg": "http://www.w3.org/2004/02/skos/core#Concept",
+    "TypeRandafwerking": "http://www.w3.org/2004/02/skos/core#Concept",
     "TypeSchachtVanDeHeipaal": "http://www.w3.org/2004/02/skos/core#Concept",
     "TypeSchanskorf": "http://www.w3.org/2004/02/skos/core#Concept",
     "TypeVerankeringDekzerkprofiel": "http://www.w3.org/2004/02/skos/core#Concept",
+    "UitvoeringRandafwerking": "http://www.w3.org/2004/02/skos/core#Concept",
     "Uitvoeringsmethode": "http://www.w3.org/2004/02/skos/core#Concept",
     "UitvoeringsmethodeBekisting": "http://www.w3.org/2004/02/skos/core#Concept",
     "UitvoeringswijzeBoorpaal": "http://www.w3.org/2004/02/skos/core#Concept",

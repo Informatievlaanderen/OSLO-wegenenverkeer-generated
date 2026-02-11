@@ -2,6 +2,27 @@
   "@context": {
     "AanhorighedenBrug": "https://wegenenverkeer.data.vlaanderen.be/ns/abstracten#AanhorighedenBrug",
     "AanhorighedenKoker": "https://wegenenverkeer.data.vlaanderen.be/ns/abstracten#AanhorigheidKoker",
+    "AbstracteAanvullendeGeometrie": "https://wegenenverkeer.data.vlaanderen.be/ns/abstracten#AbstracteAanvullendeGeometrie",
+    "AbstracteAanvullendeGeometrie.assetId": {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/abstracten#AbstracteAanvullendeGeometrie.assetId",
+      "@type": "@id"
+    },
+    "AbstracteAanvullendeGeometrie.bijlage": {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/abstracten#AbstracteAanvullendeGeometrie.bijlage",
+      "@type": "@id"
+    },
+    "AbstracteAanvullendeGeometrie.naam": {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/abstracten#AbstracteAanvullendeGeometrie.naam",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "AbstracteAanvullendeGeometrie.notitie": {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/abstracten#AbstracteAanvullendeGeometrie.notitie",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "AbstracteAanvullendeGeometrie.typeUri": {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/abstracten#AbstracteAanvullendeGeometrie.typeURI",
+      "@type": "@id"
+    },
     "Adres": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#DtcAdres",
     "Adres.bus": {
       "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#DtcAdres.bus",
@@ -243,6 +264,7 @@
     "Betonomgevingsklasse": "http://www.w3.org/2004/02/skos/core#Concept",
     "Betonspecificaties": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#DtcBetonspecificaties",
     "Betonspecificaties.betondekking": {
+      "@container": "@set",
       "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#DtcBetonspecificaties.betondekking",
       "@type": "@id"
     },
@@ -462,6 +484,15 @@
       "@id": "https://wegenenverkeer.data.vlaanderen.be/doc/implementatiemodel/kasten-cabines-behuizing/#Bevestiging",
       "@type": "@id"
     },
+    "ElektrischeKeuring": "https://wegenenverkeer.data.vlaanderen.be/ns/onderdeel#ElektrischeKeuring",
+    "ElektrischeKeuring.geldigTot": {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/onderdeel#ElektrischeKeuring.geldigTot",
+      "@type": "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "ElektrischeKeuring.resultaat": {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/onderdeel#ElektrischeKeuring.resultaat",
+      "@type": "@id"
+    },
     "Fundering": "https://wegenenverkeer.data.vlaanderen.be/ns/abstracten#Fundering",
     "Fundering.aanzetpeil": {
       "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/abstracten#Fundering.aanzetpeil",
@@ -526,11 +557,17 @@
       "@type": "@id"
     },
     "HandbedieningType": "http://www.w3.org/2004/02/skos/core#Concept",
+    "HeeftKeuring": "https://wegenenverkeer.data.vlaanderen.be/ns/onderdeel#HeeftKeuring",
     "HeeftNetwerktoegang": "https://wegenenverkeer.data.vlaanderen.be/ns/onderdeel#HeeftNetwerktoegang",
     "HoortBij": "https://wegenenverkeer.data.vlaanderen.be/ns/onderdeel#HoortBij",
     "HsCabine": "https://wegenenverkeer.data.vlaanderen.be/ns/onderdeel#HSCabine",
     "HsCabine.elektrischSchema": {
       "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/onderdeel#HSCabine.elektrischSchema",
+      "@type": "@id"
+    },
+    "HsCabine.heeftKeuring": {
+      "@container": "@set",
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/doc/implementatiemodel/kasten-cabines-behuizing/#Heeft keuring",
       "@type": "@id"
     },
     "HsCabine.isKopcabine": {
@@ -666,6 +703,12 @@
       "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/proefenmeting#Keuring.verslag",
       "@type": "@id"
     },
+    "Keuringobject": "https://wegenenverkeer.data.vlaanderen.be/ns/abstracten#KeuringObject",
+    "Keuringobject.keuringsdatum": {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/abstracten#KeuringObject.keuringsdatum",
+      "@type": "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "Keuringsresultaat": "http://www.w3.org/2004/02/skos/core#Concept",
     "KeuzelijstMateriaalStraatkap": "http://www.w3.org/2004/02/skos/core#Concept",
     "KeuzelijstNetwerklocatie": "http://www.w3.org/2004/02/skos/core#Concept",
     "KeuzelijstTypeNutsvoorziening": "http://www.w3.org/2004/02/skos/core#Concept",

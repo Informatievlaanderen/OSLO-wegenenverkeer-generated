@@ -44,15 +44,15 @@ skos:Concept a rdfs:Class;
     "Verkeerslicht masker"@nl,
     "PT regelaarmodule merk"@nl,
     "verkeerslicht merk"@nl,
+    "VRI detector typeweggebruiker"@nl,
+    "seinlantaarn modelnaam"@nl,
+    "Lantaarn vormgeving"@nl,
+    "VR-module met firmware modelnaam"@nl,
     "seinlantaarn merk"@nl,
     "PT regelaarmodule modelnaam"@nl,
     "Verlichtingstoestel inclinatiehoek"@nl,
     "Verlichtingstoestel modelnaam"@nl,
     "Verlichtingstoestel merk"@nl,
-    "VRI detector typeweggebruiker"@nl,
-    "seinlantaarn modelnaam"@nl,
-    "Lantaarn vormgeving"@nl,
-    "VR-module met firmware modelnaam"@nl,
     "WV-besturingsconnector"@nl,
     "Verlichtingstoestel verlicht gebied."@nl,
     "Verfraaiing buitenkast"@nl,
@@ -612,12 +612,14 @@ skos:Concept a rdfs:Class;
   rdfs:range skos:Concept .
 
 <https://wegenenverkeer.data.vlaanderen.be/ns/abstracten#Buitenkast.keuringsfrequentie> a owl:ObjectProperty;
+  <http://purl.org/vocab/vann/usageNote> "Attribuut uit gebruik sinds versie 2.18.1"@nl;
   rdfs:comment "Frequentie (in jaar) waarmee de kast moet onderworpen worden aan een periodieke keuring door een externe dienst voor technische controle."@nl;
   rdfs:domain <https://wegenenverkeer.data.vlaanderen.be/ns/abstracten#Buitenkast>;
   rdfs:isDefinedBy <https://wegenenverkeer.data.vlaanderen.be/ns/abstracten>;
   rdfs:range <https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInJaar> .
 
 <https://wegenenverkeer.data.vlaanderen.be/ns/abstracten#Buitenkast.laatsteKeuringsdatum> a owl:DatatypeProperty;
+  <http://purl.org/vocab/vann/usageNote> "Attribuut uit gebruik sinds versie 2.18.1"@nl;
   rdfs:comment "Deze datum geeft aan wanneer de laatste keuring plaatsvond en kan gebruikt worden om te bepalen wanneer een volgende keuring nodig is."@nl;
   rdfs:domain <https://wegenenverkeer.data.vlaanderen.be/ns/abstracten#Buitenkast>;
   rdfs:isDefinedBy <https://wegenenverkeer.data.vlaanderen.be/ns/abstracten>;
@@ -1386,6 +1388,12 @@ skos:Concept a rdfs:Class;
   rdfs:domain <https://wegenenverkeer.data.vlaanderen.be/ns/abstracten#Kast>;
   rdfs:isDefinedBy <https://wegenenverkeer.data.vlaanderen.be/ns/abstracten>;
   rdfs:range skos:Concept .
+
+<https://wegenenverkeer.data.vlaanderen.be/ns/abstracten#KeuringObject.keuringsdatum> a owl:DatatypeProperty;
+  rdfs:comment "De datum waarop het asset laatst is gekeurd."@nl;
+  rdfs:domain <https://wegenenverkeer.data.vlaanderen.be/ns/abstracten#KeuringObject>;
+  rdfs:isDefinedBy <https://wegenenverkeer.data.vlaanderen.be/ns/abstracten>;
+  rdfs:range xsd:date .
 
 <https://wegenenverkeer.data.vlaanderen.be/ns/abstracten#KlassiekeFundering.funderingshoogte> a owl:ObjectProperty;
   rdfs:comment "De afstand tussen het laagste punt van de onderkant en hoogste punt van de bovenkant van de fundering."@nl;
@@ -2376,6 +2384,10 @@ skos:Concept a rdfs:Class;
 
 <https://wegenenverkeer.data.vlaanderen.be/ns/abstracten#KabelAardingSamenstelling> a owl:Class;
   rdfs:comment "Abstracte voor eigenschappen van verschillende types kabel gebruikt voor aardingen"@nl;
+  rdfs:isDefinedBy <https://wegenenverkeer.data.vlaanderen.be/ns/abstracten> .
+
+<https://wegenenverkeer.data.vlaanderen.be/ns/abstracten#KeuringObject> a owl:Class;
+  rdfs:comment "Bundeling van de gemeenschappelijke eigenschappen en relaties."@nl;
   rdfs:isDefinedBy <https://wegenenverkeer.data.vlaanderen.be/ns/abstracten> .
 
 <https://wegenenverkeer.data.vlaanderen.be/ns/abstracten#LaagBouwklasse> a owl:Class;

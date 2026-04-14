@@ -1522,10 +1522,10 @@
   "license": "https://data.vlaanderen.be/id/licentie/modellicentie-gratis-hergebruik/v1.0",
   "issued": "TODO",
   "navigation": {
-    "prev": "/doc/vocabularium/wegenenverkeer/abstracten/ontwerpdocument/2.18.0"
+    "prev": "/doc/vocabularium/wegenenverkeer/abstracten/ontwerpdocument/2.18.1"
   },
   "publication-state": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard",
-  "publication-date": "11-02-2026",
+  "publication-date": "15-04-2026",
   "classes": [
     {
       "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/abstracten#AOWSType",
@@ -3739,7 +3739,7 @@
         "nl": "De hoek waarin het fysiek bord gepositioneerd is ten opzichte van een vooropgestelde as (het ware noorden). De hoek wordt gemeten in graden ten opzichte van het noorden in wijzerzin."
       },
       "usage": {
-        "nl": "In graden ten opzichte van het noorden in wijzerzin."
+        "nl": "Attribuut uit gebruik sinds versie 2.19.0 "
       },
       "domain": [
         "https://wegenenverkeer.data.vlaanderen.be/ns/abstracten#Verkeersbord"
@@ -7019,7 +7019,7 @@
         "nl": "Deze datum geeft aan wanneer de laatste keuring plaatsvond en kan gebruikt worden om te bepalen wanneer een volgende keuring nodig is."
       },
       "usage": {
-        "nl": "Attribuut uit gebruik sinds versie 2.18.1"
+        "nl": "Attribuut uit gebruik sinds versie 2.19.0 "
       },
       "domain": [
         "https://wegenenverkeer.data.vlaanderen.be/ns/abstracten#Buitenkast"
@@ -7036,7 +7036,7 @@
         "nl": "Frequentie (in jaar) waarmee de kast moet onderworpen worden aan een periodieke keuring door een externe dienst voor technische controle."
       },
       "usage": {
-        "nl": "Attribuut uit gebruik sinds versie 2.18.1"
+        "nl": "Attribuut uit gebruik sinds versie 2.19.0 "
       },
       "domain": [
         "https://wegenenverkeer.data.vlaanderen.be/ns/abstracten#Buitenkast"
@@ -7153,6 +7153,9 @@
       "definition": {
         "nl": "De hoogte van de buitenzijde van een buis in millimeter. Bij cirkelvormige buizen is dit de buitendiameter."
       },
+      "usage": {
+        "nl": "Voor cirkelvormige buizen met dunwandig profiel wordt deze waarde niet afzonderlijk ingevuld."
+      },
       "domain": [
         "https://wegenenverkeer.data.vlaanderen.be/ns/abstracten#Buis"
       ],
@@ -7166,6 +7169,9 @@
       "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "definition": {
         "nl": "De hoogte van de binnenzijde van de buis in millimeter. Bij cirkelvormige buizen is dit de binnendiameter."
+      },
+      "usage": {
+        "nl": "Voor cirkelvormige buizen met dunwandig profiel wordt deze waarde niet afzonderlijk ingevuld."
       },
       "domain": [
         "https://wegenenverkeer.data.vlaanderen.be/ns/abstracten#Buis"
@@ -7214,20 +7220,6 @@
       ],
       "range": [
         "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMeter"
-      ],
-      "generalization": []
-    },
-    {
-      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/abstracten#Buis.breedteBuitenzijde",
-      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
-      "definition": {
-        "nl": "De breedte van de buitenzijde van de buis in millimeter. Bij cirkelvormige buizen is dit de buitendiameter."
-      },
-      "domain": [
-        "https://wegenenverkeer.data.vlaanderen.be/ns/abstracten#Buis"
-      ],
-      "range": [
-        "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMillimeter"
       ],
       "generalization": []
     },
@@ -8225,7 +8217,15 @@
       "generalization": []
     }
   ],
-  "externalproperties": [],
+  "externalproperties": [
+    {
+      "name": {
+        "nl": "breedte buitenzijde"
+      },
+      "@id": "Voor cirkelvormige buizen met dunwandig profiel wordt deze waarde niet afzonderlijk ingevuld.",
+      "@type": "rdf:Property"
+    }
+  ],
   "@context": {
     "vlaanderen": "http://data.vlaanderen.be/ns/",
     "owl": "http://www.w3.org/2002/07/owl#",

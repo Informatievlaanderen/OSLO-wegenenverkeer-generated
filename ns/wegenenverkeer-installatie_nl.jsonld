@@ -1522,10 +1522,10 @@
   "license": "https://data.vlaanderen.be/id/licentie/modellicentie-gratis-hergebruik/v1.0",
   "issued": "TODO",
   "navigation": {
-    "prev": "/doc/vocabularium/wegenenverkeer/installatie/ontwerpdocument/2.18.0"
+    "prev": "/doc/vocabularium/wegenenverkeer/installatie/ontwerpdocument/2.18.1"
   },
   "publication-state": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard",
-  "publication-date": "11-02-2026",
+  "publication-date": "15-04-2026",
   "classes": [
     {
       "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/installatie#ASTRIDInstallatie",
@@ -1556,6 +1556,19 @@
       "parents": [
         "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#AIMNaamObject",
         "https://wegenenverkeer.data.vlaanderen.be/ns/abstracten#AanvaarbeschermingGeleidewerk"
+      ]
+    },
+    {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/installatie#AanzichtVerkeersbordopstelling",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
+      "definition": {
+        "nl": "Een aanzicht van een verkeersbordopstelling is de verzameling van één of meerdere verkeersborden en hun bijbehorende ondersteunende elementen,zoals palen en eventuele onderborden, zoals deze zichtbaar zijn vanuit een specifieke kijkhoek of positie in de verkeerssituatie. Het aanzicht biedt inzicht in de ruimtelijke indeling, plaatsing en zichtbaarheid van de verkeersborden ten opzichte van de weggebruikers."
+      },
+      "usage": {
+        "nl": "Geometrie van AanzichtVerkeersbordopstelling heeft betrekking op de kaart voorstelling in de verkeersbordenapplicatie en heeft niets te maken met de fysieke positie."
+      },
+      "parents": [
+        "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#AIMNaamObject"
       ]
     },
     {
@@ -2311,7 +2324,7 @@
         "nl": "Groepering om alle soorten markeringen te groeperen."
       },
       "parents": [
-        "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#AIMObject"
+        "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#NaampadObject"
       ]
     },
     {
@@ -2475,7 +2488,7 @@
       "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/installatie#InspectieputRiolering",
       "@type": "http://www.w3.org/2002/07/owl#Class",
       "definition": {
-        "nl": "Dient om de aanwezige riolering te kunnen inspecteren, reinigen of onderhouden."
+        "nl": "Dient om de aanwezige riolering te kunnen inspecteren,reinigen of onderhouden."
       },
       "parents": [
         "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#AIMObject",
@@ -3348,6 +3361,16 @@
       ]
     },
     {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/installatie#VRIBuiteninstallatie",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
+      "definition": {
+        "nl": "Een groepstype dat alle onderdelen van een verkeersregelinstallatie omvat die zich buiten de kast bevinden (zoals steunen, verlichtingstoestellen, lussen, ). Dit kan meerdere kruispunten overkoepelen."
+      },
+      "parents": [
+        "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#NaampadObject"
+      ]
+    },
+    {
       "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/installatie#VakwerkElement",
       "@type": "http://www.w3.org/2002/07/owl#Class",
       "definition": {
@@ -3568,11 +3591,8 @@
       "definition": {
         "nl": "Gedeelte van het wegplatform dat buiten de rijbanen ligt. Een wegberm kan sloten en bijzonder ingerichte onderdelen bevatten."
       },
-      "usage": {
-        "nl": "Klasse uit gebruik sinds versie 2.11.0 "
-      },
       "parents": [
-        "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#AIMObject",
+        "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#NaampadObject",
         "https://wegenenverkeer.data.vlaanderen.be/ns/abstracten#TerreinDeel"
       ]
     },
@@ -3693,6 +3713,34 @@
     },
     {
       "name": {
+        "nl": "Wegberm type"
+      },
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
+      "@type": "rdfs:Class"
+    },
+    {
+      "name": {
+        "nl": "Type wand"
+      },
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
+      "@type": "rdfs:Class"
+    },
+    {
+      "name": {
+        "nl": "Zijden type"
+      },
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
+      "@type": "rdfs:Class"
+    },
+    {
+      "name": {
+        "nl": "Type balk"
+      },
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
+      "@type": "rdfs:Class"
+    },
+    {
+      "name": {
         "nl": "Type vakwerk-element"
       },
       "@id": "http://www.w3.org/2004/02/skos/core#Concept",
@@ -3736,27 +3784,6 @@
     {
       "name": {
         "nl": "Secundaire combiwand"
-      },
-      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
-      "@type": "rdfs:Class"
-    },
-    {
-      "name": {
-        "nl": "Type wand"
-      },
-      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
-      "@type": "rdfs:Class"
-    },
-    {
-      "name": {
-        "nl": "Zijden type"
-      },
-      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
-      "@type": "rdfs:Class"
-    },
-    {
-      "name": {
-        "nl": "Type balk"
       },
       "@id": "http://www.w3.org/2004/02/skos/core#Concept",
       "@type": "rdfs:Class"
@@ -3854,6 +3881,34 @@
     },
     {
       "name": {
+        "nl": "type verbinding"
+      },
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
+      "@type": "rdfs:Class"
+    },
+    {
+      "name": {
+        "nl": "type doorsnede"
+      },
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
+      "@type": "rdfs:Class"
+    },
+    {
+      "name": {
+        "nl": "Type trekker"
+      },
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
+      "@type": "rdfs:Class"
+    },
+    {
+      "name": {
+        "nl": "Vast tegengewicht materiaal"
+      },
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
+      "@type": "rdfs:Class"
+    },
+    {
+      "name": {
         "nl": "materiaal randafwerking"
       },
       "@id": "http://www.w3.org/2004/02/skos/core#Concept",
@@ -3882,27 +3937,6 @@
     },
     {
       "name": {
-        "nl": "type doorsnede"
-      },
-      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
-      "@type": "rdfs:Class"
-    },
-    {
-      "name": {
-        "nl": "Type trekker"
-      },
-      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
-      "@type": "rdfs:Class"
-    },
-    {
-      "name": {
-        "nl": "Vast tegengewicht materiaal"
-      },
-      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
-      "@type": "rdfs:Class"
-    },
-    {
-      "name": {
         "nl": "Regelbaar tegengewicht materiaal"
       },
       "@id": "http://www.w3.org/2004/02/skos/core#Concept",
@@ -3924,6 +3958,20 @@
     },
     {
       "name": {
+        "nl": "Materiaal aanslagprofiel"
+      },
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
+      "@type": "rdfs:Class"
+    },
+    {
+      "name": {
+        "nl": "Type nivelleringssysteem"
+      },
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
+      "@type": "rdfs:Class"
+    },
+    {
+      "name": {
         "nl": "Type landhoofd"
       },
       "@id": "http://www.w3.org/2004/02/skos/core#Concept",
@@ -3939,20 +3987,6 @@
     {
       "name": {
         "nl": "Kerende karakter van een sluis"
-      },
-      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
-      "@type": "rdfs:Class"
-    },
-    {
-      "name": {
-        "nl": "Materiaal aanslagprofiel"
-      },
-      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
-      "@type": "rdfs:Class"
-    },
-    {
-      "name": {
-        "nl": "Type nivelleringssysteem"
       },
       "@id": "http://www.w3.org/2004/02/skos/core#Concept",
       "@type": "rdfs:Class"
@@ -4057,6 +4091,13 @@
     },
     {
       "name": {
+        "nl": "Type van aardingsinstallatie"
+      },
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
+      "@type": "rdfs:Class"
+    },
+    {
+      "name": {
         "nl": "Aardingsinstallatie aardingsnet"
       },
       "@id": "http://www.w3.org/2004/02/skos/core#Concept",
@@ -4065,13 +4106,6 @@
     {
       "name": {
         "nl": "Aardingsinstallatie aardingsstelsel"
-      },
-      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
-      "@type": "rdfs:Class"
-    },
-    {
-      "name": {
-        "nl": "Type van aardingsinstallatie"
       },
       "@id": "http://www.w3.org/2004/02/skos/core#Concept",
       "@type": "rdfs:Class"
@@ -4127,13 +4161,6 @@
     },
     {
       "name": {
-        "nl": "Radioheruitzendinstallatie merk"
-      },
-      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
-      "@type": "rdfs:Class"
-    },
-    {
-      "name": {
         "nl": "Materiaal ventilatiekanaal"
       },
       "@id": "http://www.w3.org/2004/02/skos/core#Concept",
@@ -4149,6 +4176,13 @@
     {
       "name": {
         "nl": "Radioheruitzendinstallatie modelnaam"
+      },
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
+      "@type": "rdfs:Class"
+    },
+    {
+      "name": {
+        "nl": "Radioheruitzendinstallatie merk"
       },
       "@id": "http://www.w3.org/2004/02/skos/core#Concept",
       "@type": "rdfs:Class"
@@ -4198,13 +4232,6 @@
     {
       "name": {
         "nl": "Wegberm BIO"
-      },
-      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
-      "@type": "rdfs:Class"
-    },
-    {
-      "name": {
-        "nl": "Wegberm type"
       },
       "@id": "http://www.w3.org/2004/02/skos/core#Concept",
       "@type": "rdfs:Class"
@@ -4357,9 +4384,6 @@
       "definition": {
         "nl": "Het type van wegberm."
       },
-      "usage": {
-        "nl": "Klasse uit gebruik sinds versie 2.11.0 "
-      },
       "domain": [
         "https://wegenenverkeer.data.vlaanderen.be/ns/installatie#Wegberm"
       ],
@@ -4375,7 +4399,7 @@
         "nl": "De bijzonder ingerichte onderdelen van de wegberm."
       },
       "usage": {
-        "nl": "Klasse uit gebruik sinds versie 2.11.0 "
+        "nl": "Attribuut uit gebruik sinds versie 2.11.0 "
       },
       "domain": [
         "https://wegenenverkeer.data.vlaanderen.be/ns/installatie#Wegberm"
@@ -5163,6 +5187,34 @@
       "generalization": []
     },
     {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/installatie#Stuw.waterdiepte",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "definition": {
+        "nl": "De verticale afstand tussen het maatgevend wateroppervlak (opwaarts) en het laagste punt van het vloer of drempelniveau."
+      },
+      "domain": [
+        "https://wegenenverkeer.data.vlaanderen.be/ns/installatie#Stuw"
+      ],
+      "range": [
+        "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMeter"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/installatie#Stuw.verval",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "definition": {
+        "nl": "Verticale afstand tussen gemiddeld opwaarts en gemiddeld afwaarts waterpeil."
+      },
+      "domain": [
+        "https://wegenenverkeer.data.vlaanderen.be/ns/installatie#Stuw"
+      ],
+      "range": [
+        "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMeter"
+      ],
+      "generalization": []
+    },
+    {
       "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/installatie#Stuw.maximaalStuwPeil",
       "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "definition": {
@@ -5279,6 +5331,20 @@
       "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "definition": {
         "nl": "De verticale vrije ruimte tussen het wateroppervlak en het laagste punt van de bovenliggende constructie, zoals bruggen, balken of andere obstakels."
+      },
+      "domain": [
+        "https://wegenenverkeer.data.vlaanderen.be/ns/installatie#Sluis"
+      ],
+      "range": [
+        "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMeter"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/installatie#Sluis.verval",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "definition": {
+        "nl": "Verticale afstand tussen gemiddeld opwaarts en gemiddeld afwaarts waterpeil."
       },
       "domain": [
         "https://wegenenverkeer.data.vlaanderen.be/ns/installatie#Sluis"
@@ -5553,7 +5619,7 @@
       "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/installatie#Randafwerking.uitvoering",
       "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "definition": {
-        "nl": "De verschillende types randafwerking."
+        "nl": "De verschillende mogelijke uitvoeringen van randafwerking."
       },
       "domain": [
         "https://wegenenverkeer.data.vlaanderen.be/ns/installatie#Randafwerking"
@@ -5847,6 +5913,34 @@
       "generalization": []
     },
     {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/installatie#PompGroep.pompcapaciteit",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "definition": {
+        "nl": "Het volume vloeistof dat de pomp per tijdseenheid verplaatst bij het nominale werkpunt, doorgaans uitgedrukt in kubieke meter per uur."
+      },
+      "domain": [
+        "https://wegenenverkeer.data.vlaanderen.be/ns/installatie#PompGroep"
+      ],
+      "range": [
+        "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInKubiekeMeterPerUur"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/installatie#PompGroep.opvoerhoogte",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "definition": {
+        "nl": "De verticale afstand tussen het vloeistofniveau aan de zuigzijde en het hoogste punt waar de vloeistof naartoe moet worden gepompt. Dit is de druk die de pomp moet leveren om de gewenste pompcapaciteit te bereiken, uitgedrukt in meter."
+      },
+      "domain": [
+        "https://wegenenverkeer.data.vlaanderen.be/ns/installatie#PompGroep"
+      ],
+      "range": [
+        "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMeter"
+      ],
+      "generalization": []
+    },
+    {
       "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/installatie#PompGroep.modelnaam",
       "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "definition": {
@@ -5899,6 +5993,20 @@
       ],
       "range": [
         "http://www.w3.org/2001/XMLSchema#boolean"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/installatie#Pijler.typeVerbinding",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "definition": {
+        "nl": "De verschillende types verbindingen tussen (kelder)landhoofd, (kelder)pijler met brugdek."
+      },
+      "domain": [
+        "https://wegenenverkeer.data.vlaanderen.be/ns/installatie#Pijler"
+      ],
+      "range": [
+        "http://www.w3.org/2004/02/skos/core#Concept"
       ],
       "generalization": []
     },
@@ -6820,6 +6928,20 @@
       "generalization": []
     },
     {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/installatie#Landhoofd.typeVerbinding",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "definition": {
+        "nl": "De verschillende types verbindingen tussen (kelder)landhoofd, (kelder)pijler met brugdek."
+      },
+      "domain": [
+        "https://wegenenverkeer.data.vlaanderen.be/ns/installatie#Landhoofd"
+      ],
+      "range": [
+        "http://www.w3.org/2004/02/skos/core#Concept"
+      ],
+      "generalization": []
+    },
+    {
       "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/installatie#Landhoofd.typeLandhoofd",
       "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "definition": {
@@ -7386,6 +7508,20 @@
       "generalization": []
     },
     {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/installatie#Kelderpijler.typeVerbinding",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "definition": {
+        "nl": "De verschillende types verbindingen tussen (kelder)landhoofd, (kelder)pijler met brugdek."
+      },
+      "domain": [
+        "https://wegenenverkeer.data.vlaanderen.be/ns/installatie#Kelderpijler"
+      ],
+      "range": [
+        "http://www.w3.org/2004/02/skos/core#Concept"
+      ],
+      "generalization": []
+    },
+    {
       "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/installatie#Kelderpijler.inOfOpDeRandVanDeWaterweg",
       "@type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
       "definition": {
@@ -7410,6 +7546,20 @@
       ],
       "range": [
         "http://www.w3.org/2001/XMLSchema#boolean"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/installatie#Kelderlandhoofd.typeVerbinding",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "definition": {
+        "nl": "De verschillende types verbindingen tussen (kelder)landhoofd, (kelder)pijler met brugdek."
+      },
+      "domain": [
+        "https://wegenenverkeer.data.vlaanderen.be/ns/installatie#Kelderlandhoofd"
+      ],
+      "range": [
+        "http://www.w3.org/2004/02/skos/core#Concept"
       ],
       "generalization": []
     },
@@ -7502,6 +7652,9 @@
       "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "definition": {
         "nl": "Verschil in richting tussen inkomende en uitgaande rioolbuis."
+      },
+      "usage": {
+        "nl": "Attribuut uit gebruik sinds versie 2.19.0 "
       },
       "domain": [
         "https://wegenenverkeer.data.vlaanderen.be/ns/installatie#InspectieputRiolering"
@@ -9836,6 +9989,37 @@
       ],
       "range": [
         "http://www.w3.org/2004/02/skos/core#Concept"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/installatie#AanzichtVerkeersbordopstelling.hoek",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "definition": {
+        "nl": "De hoek waarin het fysiek bord gepositioneerd is ten opzichte van een vooropgestelde as."
+      },
+      "usage": {
+        "nl": "hoek"
+      },
+      "domain": [
+        "https://wegenenverkeer.data.vlaanderen.be/ns/installatie#AanzichtVerkeersbordopstelling"
+      ],
+      "range": [
+        "http://www.w3.org/2001/XMLSchema#decimal"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/installatie#AanzichtVerkeersbordopstelling.foto",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "definition": {
+        "nl": "Een foto van de opstelling zoals die te zien is op het openbaar domein."
+      },
+      "domain": [
+        "https://wegenenverkeer.data.vlaanderen.be/ns/installatie#AanzichtVerkeersbordopstelling"
+      ],
+      "range": [
+        "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#DtcDocument"
       ],
       "generalization": []
     },

@@ -2,20 +2,20 @@
   "metadata": {
     "title": "Signalisatie Vlaanderen",
     "uri": "http://fixme.com",
-    "issued": "26/11/2025",
+    "issued": "29-04-2026",
     "filename": "signalisatievlaanderen",
     "navigation": {
       "dummy": 0,
       "prev": "",
-      "self": "https://wegenenverkeer.data.vlaanderen.be//doc/applicatieprofiel/signalisatievlaanderen/ontwerpdocument/1.0.0"
+      "self": "https://wegenenverkeer.data.vlaanderen.be//doc/applicatieprofiel/signalisatievlaanderen/ontwerpdocument/1.1.0"
     },
     "license": "https://data.vlaanderen.be/id/licentie/modellicentie-gratis-hergebruik/v1.0",
     "documenttype": "ap",
     "documentconfig": {},
     "status": "https://data.vlaanderen.be/doc/concept/StandaardStatus/ErkendeStandaard",
     "statuslabel": "Onbekend",
-    "repositoryurl": "https://github.com/Informatievlaanderen/OSLOthema-wegenenverkeer/tree/07c807fe5d3ca893e73f0deef0d22f10d214c1b3",
-    "changelogurl": "https://github.com/Informatievlaanderen/OSLOthema-wegenenverkeer/blob/07c807fe5d3ca893e73f0deef0d22f10d214c1b3/CHANGELOG",
+    "repositoryurl": "https://github.com/Informatievlaanderen/OSLOthema-wegenenverkeer/tree/42ad7c10d5fd38413c43ac829dba81139e9f58c3",
+    "changelogurl": "https://github.com/Informatievlaanderen/OSLOthema-wegenenverkeer/blob/42ad7c10d5fd38413c43ac829dba81139e9f58c3/CHANGELOG",
     "feedbackurl": "",
     "standaardregisterurl": "https://data.vlaanderen.be/standaarden/",
     "dependencies": [],
@@ -2448,14 +2448,14 @@
       ],
       "properties": [
         {
-          "uri": "http://www.w3.org/ns/adms#status",
+          "uri": "https://data.vlaanderen.be/id/conceptscheme/Verkeerstekenontwerpstatus",
           "name": "status",
           "sort": "status",
           "label": {
             "nl": "status"
           },
           "description": {
-            "nl": "TODO"
+            "nl": "Status van het verkeersteken ontwerp."
           },
           "usage": {},
           "domain": [
@@ -3441,6 +3441,41 @@
           ],
           "range": [
             {
+              "range_label": "Verkeersbord",
+              "range_uri": "https://wegenenverkeer.data.vlaanderen.be/ns/abstracten#Verkeersbord"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Verkeersbord",
+              "range_puri": "https://wegenenverkeer.data.vlaanderen.be/ns/abstracten#Verkeersbord",
+              "range_label": {
+                "nl": "Verkeersbord"
+              }
+            }
+          ],
+          "cardinality": "",
+          "codelist_uri": ""
+        },
+        {
+          "uri": "https://wegenenverkeer.data.vlaanderen.be/doc/implementatiemodel/signalisatie-vlaanderen/#Realiseert",
+          "name": "realiseert",
+          "sort": "Realiseert",
+          "label": {
+            "nl": "Realiseert"
+          },
+          "description": {
+            "nl": "Verwijst naar een extern element in een extern vocabularium."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "Verkeersteken",
+              "uri": "https://data.vlaanderen.be/ns/mobiliteit#Verkeersteken"
+            }
+          ],
+          "range": [
+            {
               "range_label": "Markering",
               "range_uri": "https://wegenenverkeer.data.vlaanderen.be/ns/abstracten#Markering"
             }
@@ -3476,20 +3511,20 @@
           ],
           "range": [
             {
-              "range_label": "Verkeersbord",
-              "range_uri": "https://wegenenverkeer.data.vlaanderen.be/ns/abstracten#Verkeersbord"
+              "range_label": "GroepMarkering",
+              "range_uri": "https://wegenenverkeer.data.vlaanderen.be/ns/installatie#GroepMarkering"
             }
           ],
           "scopedrange": [
             {
-              "range_uri": "#Verkeersbord",
-              "range_puri": "https://wegenenverkeer.data.vlaanderen.be/ns/abstracten#Verkeersbord",
+              "range_uri": "#Groepering alle soorten markering",
+              "range_puri": "https://wegenenverkeer.data.vlaanderen.be/ns/installatie#GroepMarkering",
               "range_label": {
-                "nl": "Verkeersbord"
+                "nl": "Groepering alle soorten markering"
               }
             }
           ],
-          "cardinality": "",
+          "cardinality": "0..1",
           "codelist_uri": ""
         },
         {
@@ -5047,6 +5082,41 @@
           ],
           "range": [
             {
+              "range_label": "GroepMarkering",
+              "range_uri": "https://wegenenverkeer.data.vlaanderen.be/ns/installatie#GroepMarkering"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Groepering alle soorten markering",
+              "range_puri": "https://wegenenverkeer.data.vlaanderen.be/ns/installatie#GroepMarkering",
+              "range_label": {
+                "nl": "Groepering alle soorten markering"
+              }
+            }
+          ],
+          "cardinality": "",
+          "codelist_uri": ""
+        },
+        {
+          "uri": "https://wegenenverkeer.data.vlaanderen.be/doc/implementatiemodel/signalisatie-vlaanderen/#Hoort bij",
+          "name": "hoort bij",
+          "sort": "Hoort bij",
+          "label": {
+            "nl": "Hoort bij"
+          },
+          "description": {
+            "nl": "De relatie geeft aan dat een onderdeel of collectie behoort bij, deel van of lid van een (andere) groep of collectie is."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "DwarseMarkeringToegang",
+              "uri": "https://wegenenverkeer.data.vlaanderen.be/ns/abstracten#DwarseMarkeringToegang"
+            }
+          ],
+          "range": [
+            {
               "range_label": "GroepDwarseMarkeringEnFiguratie",
               "range_uri": "https://wegenenverkeer.data.vlaanderen.be/ns/installatie#GroepDwarseMarkeringEnFiguratie"
             }
@@ -5093,6 +5163,41 @@
         }
       ],
       "properties": [
+        {
+          "uri": "https://wegenenverkeer.data.vlaanderen.be/doc/implementatiemodel/signalisatie-vlaanderen/#Hoort bij",
+          "name": "hoort bij",
+          "sort": "Hoort bij",
+          "label": {
+            "nl": "Hoort bij"
+          },
+          "description": {
+            "nl": "De relatie geeft aan dat een onderdeel of collectie behoort bij, deel van of lid van een (andere) groep of collectie is."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "FiguratieMarkeringToegang",
+              "uri": "https://wegenenverkeer.data.vlaanderen.be/ns/abstracten#FiguratieMarkeringToegang"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "GroepMarkering",
+              "range_uri": "https://wegenenverkeer.data.vlaanderen.be/ns/installatie#GroepMarkering"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Groepering alle soorten markering",
+              "range_puri": "https://wegenenverkeer.data.vlaanderen.be/ns/installatie#GroepMarkering",
+              "range_label": {
+                "nl": "Groepering alle soorten markering"
+              }
+            }
+          ],
+          "cardinality": "",
+          "codelist_uri": ""
+        },
         {
           "uri": "https://wegenenverkeer.data.vlaanderen.be/doc/implementatiemodel/signalisatie-vlaanderen/#Hoort bij",
           "name": "hoort bij",
@@ -5505,7 +5610,7 @@
             "nl": "geometrie"
           },
           "description": {
-            "nl": "TODO"
+            "nl": "De geometrie van het objecttype."
           },
           "usage": {},
           "domain": [
@@ -6607,6 +6712,204 @@
           ],
           "cardinality": "1",
           "codelist_uri": ""
+        },
+        {
+          "uri": "https://wegenenverkeer.data.vlaanderen.be/ns/installatie#GroepDwarseMarkeringEnFiguratie.geometrie",
+          "name": "geometrie",
+          "sort": "geometrie",
+          "label": {
+            "nl": "geometrie"
+          },
+          "description": {
+            "nl": "De geometrie van het objecttype."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "GroepDwarseMarkeringEnFiguratie",
+              "uri": "https://wegenenverkeer.data.vlaanderen.be/ns/installatie#GroepDwarseMarkeringEnFiguratie"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "String",
+              "range_uri": "http://www.w3.org/2001/XMLSchema#string"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#String",
+              "range_puri": "http://www.w3.org/2001/XMLSchema#string",
+              "range_label": {
+                "nl": "String"
+              }
+            }
+          ],
+          "cardinality": "1",
+          "codelist_uri": ""
+        },
+        {
+          "uri": "https://wegenenverkeer.data.vlaanderen.be/doc/implementatiemodel/signalisatie-vlaanderen/#Hoort bij",
+          "name": "hoort bij",
+          "sort": "Hoort bij",
+          "label": {
+            "nl": "Hoort bij"
+          },
+          "description": {
+            "nl": "De relatie geeft aan dat een onderdeel of collectie behoort bij, deel van of lid van een (andere) groep of collectie is."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "GroepDwarseMarkeringEnFiguratie",
+              "uri": "https://wegenenverkeer.data.vlaanderen.be/ns/installatie#GroepDwarseMarkeringEnFiguratie"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "GroepMarkering",
+              "range_uri": "https://wegenenverkeer.data.vlaanderen.be/ns/installatie#GroepMarkering"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Groepering alle soorten markering",
+              "range_puri": "https://wegenenverkeer.data.vlaanderen.be/ns/installatie#GroepMarkering",
+              "range_label": {
+                "nl": "Groepering alle soorten markering"
+              }
+            }
+          ],
+          "cardinality": "",
+          "codelist_uri": ""
+        }
+      ]
+    },
+    {
+      "uri": "https://wegenenverkeer.data.vlaanderen.be/ns/installatie#GroepMarkering",
+      "name": "Groepering alle soorten markering",
+      "label": {
+        "nl": "Groepering alle soorten markering"
+      },
+      "sort": "Groepering alle soorten markering",
+      "description": {
+        "nl": "Groepering om alle soorten markeringen te groeperen."
+      },
+      "usage": {},
+      "parents": [
+        {
+          "label": "AIM object",
+          "name": "AIMObject",
+          "package": "OSLO-Implementatieelement",
+          "uri": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#AIMObject",
+          "scoped_uri": "#AIM object"
+        }
+      ],
+      "properties": [
+        {
+          "uri": "https://wegenenverkeer.data.vlaanderen.be/ns/installatie#GroepMarkering.totaleGroepOppervlakte",
+          "name": "totale oppervlakte groepering",
+          "sort": "totale oppervlakte groepering",
+          "label": {
+            "nl": "totale oppervlakte groepering"
+          },
+          "description": {
+            "nl": "De totale oppervlakte van de totale markering groepering."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "GroepMarkering",
+              "uri": "https://wegenenverkeer.data.vlaanderen.be/ns/installatie#GroepMarkering"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "KwantWrdInVierkanteMeter",
+              "range_uri": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInVierkanteMeter"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Kwantitatieve waarde in vierkante meter",
+              "range_puri": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInVierkanteMeter",
+              "range_label": {
+                "nl": "Kwantitatieve waarde in vierkante meter"
+              }
+            }
+          ],
+          "cardinality": "1",
+          "codelist_uri": ""
+        },
+        {
+          "uri": "https://wegenenverkeer.data.vlaanderen.be/ns/installatie#GroepMarkering.geometrie",
+          "name": "geometrie",
+          "sort": "geometrie",
+          "label": {
+            "nl": "geometrie"
+          },
+          "description": {
+            "nl": "De geometrie van het objecttype."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "GroepMarkering",
+              "uri": "https://wegenenverkeer.data.vlaanderen.be/ns/installatie#GroepMarkering"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "String",
+              "range_uri": "http://www.w3.org/2001/XMLSchema#string"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#String",
+              "range_puri": "http://www.w3.org/2001/XMLSchema#string",
+              "range_label": {
+                "nl": "String"
+              }
+            }
+          ],
+          "cardinality": "1",
+          "codelist_uri": ""
+        },
+        {
+          "uri": "https://wegenenverkeer.data.vlaanderen.be/doc/implementatiemodel/signalisatie-vlaanderen/#Hoort bij",
+          "name": "hoort bij",
+          "sort": "Hoort bij",
+          "label": {
+            "nl": "Hoort bij"
+          },
+          "description": {
+            "nl": "De relatie geeft aan dat een onderdeel of collectie behoort bij, deel van of lid van een (andere) groep of collectie is."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "GroepMarkering",
+              "uri": "https://wegenenverkeer.data.vlaanderen.be/ns/installatie#GroepMarkering"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "GroepMarkering",
+              "range_uri": "https://wegenenverkeer.data.vlaanderen.be/ns/installatie#GroepMarkering"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Groepering alle soorten markering",
+              "range_puri": "https://wegenenverkeer.data.vlaanderen.be/ns/installatie#GroepMarkering",
+              "range_label": {
+                "nl": "Groepering alle soorten markering"
+              }
+            }
+          ],
+          "cardinality": "",
+          "codelist_uri": ""
         }
       ]
     },
@@ -6884,7 +7187,7 @@
       },
       "sort": "Dwarse markering",
       "description": {
-        "nl": "Een markering dwars op de weg aangebracht om het verkeer te waarschuwen, informeren of regelen."
+        "nl": "Een markering dwars op de weg aangebracht om het verkeer te waarschuwen,informeren of regelen."
       },
       "usage": {},
       "parents": [
@@ -6968,6 +7271,43 @@
           "codelist_uri": ""
         },
         {
+          "uri": "https://wegenenverkeer.data.vlaanderen.be/ns/onderdeel#DwarseMarkering.hoek",
+          "name": "hoek",
+          "sort": "hoek",
+          "label": {
+            "nl": "hoek"
+          },
+          "description": {
+            "nl": "De hoek van de verschuinde dwarsmarkering in decimale graden."
+          },
+          "usage": {
+            "nl": "Het invullen van de hoek bepaalt dat het om een verschuinde markering gaat. Toegevoegd ikv Signalisatie Vlaanderen applicatieprofiel."
+          },
+          "domain": [
+            {
+              "EA-Name": "DwarseMarkering",
+              "uri": "https://wegenenverkeer.data.vlaanderen.be/ns/onderdeel#DwarseMarkering"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "KwantWrdInDecimaleGraden",
+              "range_uri": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInDecimaleGraden"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Kwantitatieve waarde in decimale graden",
+              "range_puri": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInDecimaleGraden",
+              "range_label": {
+                "nl": "Kwantitatieve waarde in decimale graden"
+              }
+            }
+          ],
+          "cardinality": "1",
+          "codelist_uri": ""
+        },
+        {
           "uri": "https://wegenenverkeer.data.vlaanderen.be/ns/onderdeel#DwarseMarkering.code",
           "name": "code",
           "sort": "code",
@@ -7012,7 +7352,7 @@
       },
       "sort": "Figuratiemarkering",
       "description": {
-        "nl": "Een markering als figuratie op de weg aangebracht om het verkeer te waarschuwen, informeren of regelen."
+        "nl": "Een markering als figuratie op de weg aangebracht om het verkeer te waarschuwen,informeren of regelen."
       },
       "usage": {},
       "parents": [
@@ -7124,6 +7464,43 @@
               "range_puri": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInVierkanteMeter",
               "range_label": {
                 "nl": "Kwantitatieve waarde in vierkante meter"
+              }
+            }
+          ],
+          "cardinality": "1",
+          "codelist_uri": ""
+        },
+        {
+          "uri": "https://wegenenverkeer.data.vlaanderen.be/ns/onderdeel#FiguratieMarkering.hoek",
+          "name": "hoek",
+          "sort": "hoek",
+          "label": {
+            "nl": "hoek"
+          },
+          "description": {
+            "nl": "De hoek van de verschuinde figuratiemarkering in decimale graden."
+          },
+          "usage": {
+            "nl": "Het invullen van de hoek bepaalt dat het om een verschuinde markering gaat. Toegevoegd ikv Signalisatie Vlaanderen applicatieprofiel."
+          },
+          "domain": [
+            {
+              "EA-Name": "FiguratieMarkering",
+              "uri": "https://wegenenverkeer.data.vlaanderen.be/ns/onderdeel#FiguratieMarkering"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "KwantWrdInDecimaleGraden",
+              "range_uri": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInDecimaleGraden"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Kwantitatieve waarde in decimale graden",
+              "range_puri": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInDecimaleGraden",
+              "range_label": {
+                "nl": "Kwantitatieve waarde in decimale graden"
               }
             }
           ],
@@ -7598,6 +7975,41 @@
           ],
           "cardinality": "1",
           "codelist_uri": "https://wegenenverkeer.data.vlaanderen.be/id/conceptscheme/KlOverlangseMarkeringCode"
+        },
+        {
+          "uri": "https://wegenenverkeer.data.vlaanderen.be/doc/implementatiemodel/signalisatie-vlaanderen/#Hoort bij",
+          "name": "hoort bij",
+          "sort": "Hoort bij",
+          "label": {
+            "nl": "Hoort bij"
+          },
+          "description": {
+            "nl": "De relatie geeft aan dat een onderdeel of collectie behoort bij, deel van of lid van een (andere) groep of collectie is."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "OverlangseMarkering",
+              "uri": "https://wegenenverkeer.data.vlaanderen.be/ns/onderdeel#OverlangseMarkering"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "GroepMarkering",
+              "range_uri": "https://wegenenverkeer.data.vlaanderen.be/ns/installatie#GroepMarkering"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Groepering alle soorten markering",
+              "range_puri": "https://wegenenverkeer.data.vlaanderen.be/ns/installatie#GroepMarkering",
+              "range_label": {
+                "nl": "Groepering alle soorten markering"
+              }
+            }
+          ],
+          "cardinality": "",
+          "codelist_uri": ""
         }
       ]
     },
@@ -10992,6 +11404,93 @@
       ]
     },
     {
+      "uri": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInDecimaleGraden",
+      "name": "Kwantitatieve waarde in decimale graden",
+      "label": {
+        "nl": "Kwantitatieve waarde in decimale graden"
+      },
+      "sort": "Kwantitatieve waarde in decimale graden",
+      "description": {
+        "nl": "Een kwantitatieve waarde die een getal in decimale graden uitdrukt."
+      },
+      "usage": {},
+      "parents": [],
+      "properties": [
+        {
+          "uri": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInDecimaleGraden.waarde",
+          "name": "waarde",
+          "sort": "waarde",
+          "label": {
+            "nl": "waarde"
+          },
+          "description": {
+            "nl": "Bevat een getal die bij het datatype hoort."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "KwantWrdInDecimaleGraden",
+              "uri": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInDecimaleGraden"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "Decimal",
+              "range_uri": "http://www.w3.org/2001/XMLSchema#decimal"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Decimaal getal",
+              "range_puri": "http://www.w3.org/2001/XMLSchema#decimal",
+              "range_label": {
+                "nl": "Decimaal getal"
+              }
+            }
+          ],
+          "cardinality": "1",
+          "codelist_uri": ""
+        },
+        {
+          "uri": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInDecimaleGraden.standaardEenheid",
+          "name": "standaard eenheid",
+          "sort": "standaard eenheid",
+          "label": {
+            "nl": "standaard eenheid"
+          },
+          "description": {
+            "nl": "De standaard eenheid bij dit datatype is uitgedrukt in decimale graden."
+          },
+          "usage": {
+            "nl": "\"deg\"^^cdt:ucumunit"
+          },
+          "domain": [
+            {
+              "EA-Name": "KwantWrdInDecimaleGraden",
+              "uri": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInDecimaleGraden"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "Literal",
+              "range_uri": "http://www.w3.org/2000/01/rdf-schema#Literal"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Literal",
+              "range_puri": "http://www.w3.org/2000/01/rdf-schema#Literal",
+              "range_label": {
+                "nl": "Literal"
+              }
+            }
+          ],
+          "cardinality": "1",
+          "codelist_uri": ""
+        }
+      ]
+    },
+    {
       "uri": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMeter",
       "name": "Kwantitatieve waarde in meter",
       "label": {
@@ -11649,5 +12148,5 @@
     }
   ],
   "parents": [],
-  "documentroot": "/doc/applicatieprofiel/signalisatievlaanderen/ontwerpdocument/1.0.0"
+  "documentroot": "/doc/applicatieprofiel/signalisatievlaanderen/ontwerpdocument/1.1.0"
 }

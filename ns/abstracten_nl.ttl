@@ -8,8 +8,7 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 skos:Concept a rdfs:Class;
-  rdfs:label "materiaal afdichting"@nl,
-    "materiaal bevestigingsbeugel"@nl,
+  rdfs:label "materiaal bevestigingsbeugel"@nl,
     "Markeringsproduct"@nl,
     "Markeringssysteem"@nl,
     "Vegetatieelement standplaats"@nl,
@@ -31,31 +30,32 @@ skos:Concept a rdfs:Class;
     "Kabel fabrikant"@nl,
     "Kabelmantel kleur"@nl,
     "Sensor opstelwijze"@nl,
-    "Smering type"@nl,
     "Luchtkwaliteitsopstelling merk"@nl,
     "Luchtkwaliteitsopstelling modelnaam"@nl,
     "Deur fabrikant"@nl,
     "Deur handgreeptype"@nl,
+    "Smering type"@nl,
     "LEDBord communicatieprotocol"@nl,
     "Seinlantaarn diameter"@nl,
     "iVRIBaseline"@nl,
     "Lantaarn lamptype"@nl,
-    "verkeerslicht modelnaam"@nl,
-    "Verkeerslicht masker"@nl,
-    "PT regelaarmodule merk"@nl,
     "verkeerslicht merk"@nl,
     "VRI detector typeweggebruiker"@nl,
     "seinlantaarn modelnaam"@nl,
-    "Lantaarn vormgeving"@nl,
-    "VR-module met firmware modelnaam"@nl,
-    "seinlantaarn merk"@nl,
-    "PT regelaarmodule modelnaam"@nl,
     "Verlichtingstoestel inclinatiehoek"@nl,
     "Verlichtingstoestel modelnaam"@nl,
     "Verlichtingstoestel merk"@nl,
     "WV-besturingsconnector"@nl,
     "Verlichtingstoestel verlicht gebied."@nl,
+    "verkeerslicht modelnaam"@nl,
+    "Verkeerslicht masker"@nl,
+    "PT regelaarmodule merk"@nl,
+    "Lantaarn vormgeving"@nl,
+    "VR-module met firmware modelnaam"@nl,
+    "seinlantaarn merk"@nl,
+    "PT regelaarmodule modelnaam"@nl,
     "Verfraaiing buitenkast"@nl,
+    "materiaal afdichting"@nl,
     "Staalsoort met equivalenten"@nl,
     "VR-module met firmware merk"@nl .
 
@@ -72,6 +72,7 @@ skos:Concept a rdfs:Class;
   rdfs:range xsd:string .
 
 <https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#Aangrijping> a owl:Class;
+  <http://purl.org/vocab/vann/usageNote> "Klasse uit gebruik sinds versie 2.20.0-RC1"@nl;
   rdfs:comment "Abstracte om attributen en relaties te bundelen voor aangrijping. Een aangrijping maakt de koppeling tussen tussen de actuator en de beweegbare constructive."@nl;
   rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten>;
   rdfs:subClassOf <https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#StaalsoortObject>,
@@ -1726,10 +1727,11 @@ skos:Concept a rdfs:Class;
   rdfs:range <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMeterTAW> .
 
 <https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#Ophanging> a owl:Class;
+  <http://purl.org/vocab/vann/usageNote> "Klasse uit gebruik sinds versie 2.20.0-RC1"@nl;
   rdfs:comment "Abstracte om attributen en relaties te bundelen voor ophanging. Een ophanging maakt de koppeling tussen de actuator en de vaste constructie."@nl;
   rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten>;
-  rdfs:subClassOf <https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#TechnischDocument>,
-    <https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#StaalsoortObject> .
+  rdfs:subClassOf <https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#StaalsoortObject>,
+    <https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#TechnischDocument> .
 
 <https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#PTModuleMetFirmware> a owl:Class;
   rdfs:comment "Abstracte voor de modules met firmware van het personentransportbeïnvloedingssysteem van een verkeersregelaar."@nl;
@@ -1826,6 +1828,12 @@ skos:Concept a rdfs:Class;
   rdfs:domain <https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#SchokindexVoertuigkering>;
   rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten>;
   rdfs:range skos:Concept .
+
+<https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#Seinlantaarn.aantalModules> a owl:ObjectProperty;
+  rdfs:comment "Het aantal lichtmodules waaruit de seinlantaarn bestaat."@nl;
+  rdfs:domain <https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#Seinlantaarn>;
+  rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten>;
+  rdfs:range xsd:nonNegativeInteger .
 
 <https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#Seinlantaarn.diameter> a owl:ObjectProperty;
   rdfs:comment "Diameter (in mm) van de lens van de verkeerslichten waaruit de lantaarn is samengesteld."@nl;
@@ -2127,7 +2135,7 @@ skos:Concept a rdfs:Class;
   rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten> .
 
 <https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#Verkeersbord.aanzicht> a owl:ObjectProperty;
-  <http://purl.org/vocab/vann/usageNote> "In graden ten opzichte van het noorden in wijzerzin."@nl;
+  <http://purl.org/vocab/vann/usageNote> "Attribuut uit gebruik sinds versie 2.19.0-RC2 .In graden ten opzichte van het noorden in wijzerzin."@nl;
   rdfs:comment "De hoek waarin het fysiek bord gepositioneerd is ten opzichte van een vooropgestelde as (het ware noorden). De hoek wordt gemeten in graden ten opzichte van het noorden in wijzerzin."@nl;
   rdfs:domain <https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#Verkeersbord>;
   rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten>;
@@ -2323,6 +2331,10 @@ skos:Concept a rdfs:Class;
 
 <https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#ArtikelnummerObject> a owl:Class;
   rdfs:comment "Abstracte klasse voor een artikelnummer."@nl;
+  rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten> .
+
+<https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#AsLagerCombinatie> a owl:Class;
+  rdfs:comment "Abstracte klasse om gemeenschappelijke relaties te voorzien."@nl;
   rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten> .
 
 <https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#Communicatieapparatuur> a owl:Class;
@@ -2760,11 +2772,6 @@ skos:Concept a rdfs:Class;
   rdfs:comment "Abstracte bedoeld om de verschillende soort putten onder te brengen en gemeenschappelijke eigenschappen over te dragen. De relaties worden overgedragen via de abstracte PutRelaties."@nl;
   rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten> .
 
-<https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#Seinlantaarn> a owl:Class;
-  rdfs:comment "Abstracte voor het geheel van één of meerdere verkeerslichten die boven elkaar worden opgesteld en worden bevestigd op een steun,teneinde de beweging van een weggebruiker die een bepaald traject volgt,te verhinderen of toe te laten."@nl;
-  rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten>;
-  rdfs:subClassOf <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMNaamObject> .
-
 <https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#Sensor> a owl:Class;
   rdfs:comment "Abstracte om de eigenschappen en relaties van alle sensoren te groeperen."@nl;
   rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten> .
@@ -2807,7 +2814,13 @@ skos:Concept a rdfs:Class;
   rdfs:comment "Abstracte die alle relaties van lagers verzamelt."@nl;
   rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten>;
   rdfs:subClassOf <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMNaamObject>,
-    <https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#TechnischDocument> .
+    <https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#TechnischDocument>,
+    <https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#AsLagerCombinatie> .
+
+<https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#Seinlantaarn> a owl:Class;
+  rdfs:comment "Abstracte voor het geheel van één of meerdere verkeerslichten die boven elkaar worden opgesteld en worden bevestigd op een steun,teneinde de beweging van een weggebruiker die een bepaald traject volgt,te verhinderen of toe te laten."@nl;
+  rdfs:isDefinedBy <https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten>;
+  rdfs:subClassOf <https://wegenenverkeer-test.data.vlaanderen.be/ns/implementatieelement#AIMNaamObject> .
 
 <https://wegenenverkeer-test.data.vlaanderen.be/ns/abstracten#TechnischDocument> a owl:Class;
   rdfs:comment "Abstracte met technisch document"@nl;

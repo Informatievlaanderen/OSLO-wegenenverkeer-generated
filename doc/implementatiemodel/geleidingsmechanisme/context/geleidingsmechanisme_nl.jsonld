@@ -1,6 +1,28 @@
 {
   "@context": {
     "Aangrijping": "https://wegenenverkeer.data.vlaanderen.be/ns/abstracten#Aangrijping",
+    "AfmetingBxlInCentimeter": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#DtcAfmetingBxlInCm",
+    "AfmetingBxlInCentimeter.breedte": {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#DtcAfmetingBxlInCm.breedte",
+      "@type": "@id"
+    },
+    "AfmetingBxlInCentimeter.lengte": {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#DtcAfmetingBxlInCm.lengte",
+      "@type": "@id"
+    },
+    "AfmetingBxlxhInMeter": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#DtcAfmetingBxlxhInM",
+    "AfmetingBxlxhInMeter.breedte": {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#DtcAfmetingBxlxhInM.breedte",
+      "@type": "@id"
+    },
+    "AfmetingBxlxhInMeter.hoogte": {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#DtcAfmetingBxlxhInM.hoogte",
+      "@type": "@id"
+    },
+    "AfmetingBxlxhInMeter.lengte": {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#DtcAfmetingBxlxhInM.lengte",
+      "@type": "@id"
+    },
     "AimDatabankStatus": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#AIMDBStatus",
     "AimDatabankStatus.isActief": {
       "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#AIMDBStatus.isActief",
@@ -62,6 +84,11 @@
       "@type": "@id"
     },
     "Ankerstang": "https://wegenenverkeer.data.vlaanderen.be/ns/onderdeel#Ankerstang",
+    "Ankerstang.bevestiging": {
+      "@container": "@set",
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/doc/implementatiemodel/geleidingsmechanisme/#Bevestiging",
+      "@type": "@id"
+    },
     "Ankerstang.hoortBij": {
       "@container": "@set",
       "@id": "https://wegenenverkeer.data.vlaanderen.be/doc/implementatiemodel/geleidingsmechanisme/#Hoort bij",
@@ -78,6 +105,7 @@
       "@id": "https://wegenenverkeer.data.vlaanderen.be/doc/implementatiemodel/geleidingsmechanisme/#Hoort bij",
       "@type": "@id"
     },
+    "AslagerCombinatie": "https://wegenenverkeer.data.vlaanderen.be/ns/abstracten#AsLagerCombinatie",
     "AssetVersie": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#DtcAssetVersie",
     "AssetVersie.context": {
       "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#DtcAssetVersie.context",
@@ -89,6 +117,22 @@
     },
     "AssetVersie.versienummer": {
       "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#DtcAssetVersie.versienummer",
+      "@type": "@id"
+    },
+    "Balans": "https://wegenenverkeer.data.vlaanderen.be/ns/installatie#Balans",
+    "Balans.hoortBij": {
+      "@container": "@set",
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/doc/implementatiemodel/geleidingsmechanisme/#Hoort bij",
+      "@type": "@id"
+    },
+    "Balans.isGevuldMetTegengewicht": {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/installatie#Balans.isGevuldMetTegengewicht",
+      "@type": "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "Balansarm": "https://wegenenverkeer.data.vlaanderen.be/ns/installatie#Balansarm",
+    "Balansarm.hoortBij": {
+      "@container": "@set",
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/doc/implementatiemodel/geleidingsmechanisme/#Hoort bij",
       "@type": "@id"
     },
     "Bestandsbijlage": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#DtcDocument",
@@ -113,6 +157,68 @@
       "@type": "@id"
     },
     "Bevestiging": "https://wegenenverkeer.data.vlaanderen.be/ns/onderdeel#Bevestiging",
+    "BeweegbaarDeel": "http://www.w3.org/2004/02/skos/core#Concept",
+    "BeweegbareWaterkerendeConstructie": "https://wegenenverkeer.data.vlaanderen.be/ns/installatie#BeweegbareWaterkerendeConstructie",
+    "BeweegbareWaterkerendeConstructie.afmetingenMangat": {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/installatie#BeweegbareWaterkerendeConstructie.afmetingenMangat",
+      "@type": "@id"
+    },
+    "BeweegbareWaterkerendeConstructie.basisAfmeting": {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/installatie#BeweegbareWaterkerendeConstructie.basisAfmeting",
+      "@type": "@id"
+    },
+    "BeweegbareWaterkerendeConstructie.gewicht": {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/installatie#BeweegbareWaterkerendeConstructie.gewicht",
+      "@type": "@id"
+    },
+    "BeweegbareWaterkerendeConstructie.heeftDraaischelpen": {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/installatie#BeweegbareWaterkerendeConstructie.heeftDraaischelpen",
+      "@type": "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "BeweegbareWaterkerendeConstructie.heeftHijsogen": {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/installatie#BeweegbareWaterkerendeConstructie.heeftHijsogen",
+      "@type": "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "BeweegbareWaterkerendeConstructie.heeftOpboutbareDraaischelpen": {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/installatie#BeweegbareWaterkerendeConstructie.heeftOpboutbareDraaischelpen",
+      "@type": "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "BeweegbareWaterkerendeConstructie.heeftOpboutbareHijsogen": {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/installatie#BeweegbareWaterkerendeConstructie.heeftOpboutbareHijsogen",
+      "@type": "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "BeweegbareWaterkerendeConstructie.heeftPompput": {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/installatie#BeweegbareWaterkerendeConstructie.heeftPompput",
+      "@type": "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "BeweegbareWaterkerendeConstructie.isHoogtebeperkingAanwezig": {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/installatie#BeweegbareWaterkerendeConstructie.isHoogtebeperkingAanwezig",
+      "@type": "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "BeweegbareWaterkerendeConstructie.isMangatAanwezig": {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/installatie#BeweegbareWaterkerendeConstructie.isMangatAanwezig",
+      "@type": "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "BeweegbareWaterkerendeConstructie.isNivelleerOfSpuivoorzieningAanwezig": {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/installatie#BeweegbareWaterkerendeConstructie.isNivelleerOfSpuivoorzieningAanwezig",
+      "@type": "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "BeweegbareWaterkerendeConstructie.kruinpeil": {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/installatie#BeweegbareWaterkerendeConstructie.kruinpeil",
+      "@type": "@id"
+    },
+    "BeweegbareWaterkerendeConstructie.materiaal": {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/installatie#BeweegbareWaterkerendeConstructie.materiaal",
+      "@type": "@id"
+    },
+    "BeweegbareWaterkerendeConstructie.niveauHoogtebeperking": {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/installatie#BeweegbareWaterkerendeConstructie.niveauHoogtebeperking",
+      "@type": "@id"
+    },
+    "BeweegbareWaterkerendeConstructie.typeBeweegbareconstructie": {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/installatie#BeweegbareWaterkerendeConstructie.typeBeweegbareconstructie",
+      "@type": "@id"
+    },
     "Bewegingsmechanisme": "https://wegenenverkeer.data.vlaanderen.be/ns/abstracten#Bewegingsmechanisme",
     "Bewegingsmechanisme.aantalSmeerpunten": {
       "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/abstracten#Bewegingsmechanisme.aantalSmeerpunten",
@@ -125,11 +231,6 @@
     "BewegingsvrijheidInVlakBijOplegging": "http://www.w3.org/2004/02/skos/core#Concept",
     "Boolean": "http://www.w3.org/2001/XMLSchema#boolean",
     "Bovenrolwagen": "https://wegenenverkeer.data.vlaanderen.be/ns/installatie#Bovenrolwagen",
-    "Bovenrolwagen.bevestiging": {
-      "@container": "@set",
-      "@id": "https://wegenenverkeer.data.vlaanderen.be/doc/implementatiemodel/geleidingsmechanisme/#Bevestiging",
-      "@type": "@id"
-    },
     "Bovenrolwagen.gewicht": {
       "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/installatie#Bovenrolwagen.gewicht",
       "@type": "@id"
@@ -141,6 +242,88 @@
     "Bovenrolwagen.heeftHijsogen": {
       "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/installatie#Bovenrolwagen.heeftHijsogen",
       "@type": "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "Brugdeel": "https://wegenenverkeer.data.vlaanderen.be/ns/installatie#Brugdeel",
+    "Brugdeel.aantalOverspanningen": {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/installatie#Brugdeel.aantalOverspanningen",
+      "@type": "@id"
+    },
+    "Brugdeel.graadVanBeweegbaarheid": {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/installatie#Brugdeel.graadVanBeweegbaarheid",
+      "@type": "@id"
+    },
+    "Brugdeel.graadVanStatischeBepaaldheid": {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/installatie#Brugdeel.graadVanStatischeBepaaldheid",
+      "@type": "@id"
+    },
+    "Brugdeel.heeftVoorzieningNegatieveReactie": {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/installatie#Brugdeel.heeftVoorzieningNegatieveReactie",
+      "@type": "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "Brugdeel.individueleAfstandOverspanningen": {
+      "@container": "@set",
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/installatie#Brugdeel.individueleAfstandOverspanningen",
+      "@type": "@id"
+    },
+    "Brugdeel.materiaalDragendeStructuur": {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/installatie#Brugdeel.materiaalDragendeStructuur",
+      "@type": "@id"
+    },
+    "Brugdeel.totaleBreedteBrugdeel": {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/installatie#Brugdeel.totaleBreedteBrugdeel",
+      "@type": "@id"
+    },
+    "Brugdeel.totaleLengteBrugdeel": {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/installatie#Brugdeel.totaleLengteBrugdeel",
+      "@type": "@id"
+    },
+    "Brugdeel.totaleOppervlakteBrugdeel": {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/installatie#Brugdeel.totaleOppervlakteBrugdeel",
+      "@type": "@id"
+    },
+    "Brugdeel.totaleSpankracht": {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/installatie#Brugdeel.totaleSpankracht",
+      "@type": "@id"
+    },
+    "Brugdeel.typeBeweegbaarBrugdeel": {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/installatie#Brugdeel.typeBeweegbaarBrugdeel",
+      "@type": "@id"
+    },
+    "Brugdeel.typeBrugdeel": {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/installatie#Brugdeel.typeBrugdeel",
+      "@type": "@id"
+    },
+    "Brugligger": "https://wegenenverkeer.data.vlaanderen.be/ns/installatie#Brugligger",
+    "Brugligger.aantalCellen": {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/installatie#Brugligger.aantalCellen",
+      "@type": "@id"
+    },
+    "Brugligger.bevestiging": {
+      "@container": "@set",
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/doc/implementatiemodel/geleidingsmechanisme/#Bevestiging",
+      "@type": "@id"
+    },
+    "Brugligger.detailplanBrugligger": {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/installatie#Brugligger.detailplanBrugligger",
+      "@type": "@id"
+    },
+    "Brugligger.hoortBij": {
+      "@container": "@set",
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/doc/implementatiemodel/geleidingsmechanisme/#Hoort bij",
+      "@type": "@id"
+    },
+    "Brugligger.ligtOp": {
+      "@container": "@set",
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/doc/implementatiemodel/geleidingsmechanisme/#Ligt op",
+      "@type": "@id"
+    },
+    "Brugligger.type": {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/installatie#Brugligger.type",
+      "@type": "@id"
+    },
+    "Brugligger.typeDoorsnede": {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/installatie#Brugligger.typeDoorsnede",
+      "@type": "@id"
     },
     "Buffercilinder": "https://wegenenverkeer.data.vlaanderen.be/ns/onderdeel#Buffercilinder",
     "Buffercilinder.bevestiging": {
@@ -154,11 +337,6 @@
       "@type": "@id"
     },
     "Bufferinstallatie": "https://wegenenverkeer.data.vlaanderen.be/ns/installatie#Bufferinstallatie",
-    "Bufferinstallatie.hoortBij": {
-      "@container": "@set",
-      "@id": "https://wegenenverkeer.data.vlaanderen.be/doc/implementatiemodel/geleidingsmechanisme/#Hoort bij",
-      "@type": "@id"
-    },
     "Bufferinstallatie.karakteristiekeToelaatbareBelasting": {
       "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/installatie#Bufferinstallatie.karakteristiekeToelaatbareBelasting",
       "@type": "@id"
@@ -174,6 +352,16 @@
       "@type": "@id"
     },
     "Centreermechanisme": "https://wegenenverkeer.data.vlaanderen.be/ns/installatie#Centreermechanisme",
+    "Centreerstuk": "https://wegenenverkeer.data.vlaanderen.be/ns/onderdeel#Centreerstuk",
+    "Centreerstuk.hoortBij": {
+      "@container": "@set",
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/doc/implementatiemodel/geleidingsmechanisme/#Hoort bij",
+      "@type": "@id"
+    },
+    "Centreerstuk.materiaal": {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/onderdeel#Centreerstuk.materiaal",
+      "@type": "@id"
+    },
     "Centreervork": "https://wegenenverkeer.data.vlaanderen.be/ns/onderdeel#Centreervork",
     "Centreervork.bevestiging": {
       "@container": "@set",
@@ -205,6 +393,41 @@
     },
     "ComplexDatatypeTechnischDocument.typeDocument": {
       "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#DtcTechnischDocument.typeDocument",
+      "@type": "@id"
+    },
+    "ConstructieElement": "https://wegenenverkeer.data.vlaanderen.be/ns/abstracten#ConstructieElement",
+    "ConstructieElementSluisEnStuw": "https://wegenenverkeer.data.vlaanderen.be/ns/abstracten#ConstructieElementSluisStuw",
+    "ConstructieElementSluisEnStuw.bevestiging": {
+      "@container": "@set",
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/doc/implementatiemodel/geleidingsmechanisme/#Bevestiging",
+      "@type": "@id"
+    },
+    "ConstructieElementSluisEnStuw.hoortBij": {
+      "@container": "@set",
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/doc/implementatiemodel/geleidingsmechanisme/#Hoort bij",
+      "@type": "@id"
+    },
+    "ConstructiefObject": "https://wegenenverkeer.data.vlaanderen.be/ns/abstracten#ConstructiefObject",
+    "Constructiehoofd": "https://wegenenverkeer.data.vlaanderen.be/ns/abstracten#Constructiehoofd",
+    "Constructiehoofd.diepteVanDeSponning": {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/abstracten#Constructiehoofd.diepteSponning",
+      "@type": "@id"
+    },
+    "Constructiehoofd.drempelpeil": {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/abstracten#Constructiehoofd.drempelpeil",
+      "@type": "@id"
+    },
+    "Constructiehoofd.droogzetbaarheid": {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/abstracten#Constructiehoofd.droogzetbaarheid",
+      "@type": "@id"
+    },
+    "Constructiehoofd.heeftKelder": {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/abstracten#Constructiehoofd.heeftKelder",
+      "@type": "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "Constructiehoofd.hoortBij": {
+      "@container": "@set",
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/doc/implementatiemodel/geleidingsmechanisme/#Hoort bij",
       "@type": "@id"
     },
     "Datum": "http://www.w3.org/2001/XMLSchema#date",
@@ -249,6 +472,28 @@
       "@id": "https://wegenenverkeer.data.vlaanderen.be/doc/implementatiemodel/geleidingsmechanisme/#Hoort bij",
       "@type": "@id"
     },
+    "DraagstructuurBwctwc": "http://www.w3.org/2004/02/skos/core#Concept",
+    "DraagstructuurVanEenBeweegbareEnTijdelijkeWaterkerendeConstructie": "https://wegenenverkeer.data.vlaanderen.be/ns/installatie#DraagstructuurBWCTWC",
+    "DraagstructuurVanEenBeweegbareEnTijdelijkeWaterkerendeConstructie.bevestiging": {
+      "@container": "@set",
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/doc/implementatiemodel/geleidingsmechanisme/#Bevestiging",
+      "@type": "@id"
+    },
+    "DraagstructuurVanEenBeweegbareEnTijdelijkeWaterkerendeConstructie.hoortBij": {
+      "@container": "@set",
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/doc/implementatiemodel/geleidingsmechanisme/#Hoort bij",
+      "@type": "@id"
+    },
+    "DraagstructuurVanEenBeweegbareEnTijdelijkeWaterkerendeConstructie.ligtOp": {
+      "@container": "@set",
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/doc/implementatiemodel/geleidingsmechanisme/#Ligt op",
+      "@type": "@id"
+    },
+    "DraagstructuurVanEenBeweegbareEnTijdelijkeWaterkerendeConstructie.type": {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/installatie#DraagstructuurBWCTWC.type",
+      "@type": "@id"
+    },
+    "Droogzetbaarheidtypes": "http://www.w3.org/2004/02/skos/core#Concept",
     "Drukvat": "https://wegenenverkeer.data.vlaanderen.be/ns/onderdeel#Drukvat",
     "Drukvat.hoortBij": {
       "@container": "@set",
@@ -284,15 +529,27 @@
       "@type": "@id"
     },
     "Glijmateriaal": "https://wegenenverkeer.data.vlaanderen.be/ns/onderdeel#Glijmateriaal",
+    "Glijmateriaal.bevestiging": {
+      "@container": "@set",
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/doc/implementatiemodel/geleidingsmechanisme/#Bevestiging",
+      "@type": "@id"
+    },
     "Glijmateriaal.hoortBij": {
       "@container": "@set",
       "@id": "https://wegenenverkeer.data.vlaanderen.be/doc/implementatiemodel/geleidingsmechanisme/#Hoort bij",
+      "@type": "@id"
+    },
+    "Glijmateriaal.ligtOp": {
+      "@container": "@set",
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/doc/implementatiemodel/geleidingsmechanisme/#Ligt op",
       "@type": "@id"
     },
     "Glijmateriaal.typeGlijmateriaal": {
       "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/onderdeel#Glijmateriaal.typeGlijmateriaal",
       "@type": "@id"
     },
+    "GraadVanBeweegbaarheid": "http://www.w3.org/2004/02/skos/core#Concept",
+    "GraadVanStatischeBepaaldheid": "http://www.w3.org/2004/02/skos/core#Concept",
     "Grendel": "https://wegenenverkeer.data.vlaanderen.be/ns/onderdeel#Grendel",
     "Grendel.hoortBij": {
       "@container": "@set",
@@ -304,11 +561,6 @@
       "@type": "@id"
     },
     "Grendelmechanisme": "https://wegenenverkeer.data.vlaanderen.be/ns/installatie#Grendelmechanisme",
-    "Grendelmechanisme.bevestiging": {
-      "@container": "@set",
-      "@id": "https://wegenenverkeer.data.vlaanderen.be/doc/implementatiemodel/geleidingsmechanisme/#Bevestiging",
-      "@type": "@id"
-    },
     "Halsbeugelmechanisme": "https://wegenenverkeer.data.vlaanderen.be/ns/installatie#Halsbeugelmechanisme",
     "Halsbeugelmechanisme.isRegelbaar": {
       "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/installatie#Halsbeugelmechanisme.isRegelbaar",
@@ -325,6 +577,11 @@
       "@type": "@id"
     },
     "Halsbeugelpen": "https://wegenenverkeer.data.vlaanderen.be/ns/onderdeel#Halsbeugelpen",
+    "Halsbeugelpen.bevestiging": {
+      "@container": "@set",
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/doc/implementatiemodel/geleidingsmechanisme/#Bevestiging",
+      "@type": "@id"
+    },
     "Halsbeugelpen.hoortBij": {
       "@container": "@set",
       "@id": "https://wegenenverkeer.data.vlaanderen.be/doc/implementatiemodel/geleidingsmechanisme/#Hoort bij",
@@ -336,6 +593,25 @@
       "@id": "https://wegenenverkeer.data.vlaanderen.be/doc/implementatiemodel/geleidingsmechanisme/#Hoort bij",
       "@type": "@id"
     },
+    "Hefportiek": "https://wegenenverkeer.data.vlaanderen.be/ns/installatie#Hefportiek",
+    "Hefportiek.isGevuldMetTegengewicht": {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/installatie#Hefportiek.isGevuldMetTegengewicht",
+      "@type": "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "Hefportiek.toegankelijkheid": {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/installatie#Hefportiek.toegankelijkheid",
+      "@type": "@id"
+    },
+    "Heftoren": "https://wegenenverkeer.data.vlaanderen.be/ns/installatie#Heftoren",
+    "Heftoren.isGevuldMetTegengewicht": {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/installatie#Heftoren.isGevuldMetTegengewicht",
+      "@type": "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "Heftoren.toegankelijkheid": {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/installatie#Heftoren.toegankelijkheid",
+      "@type": "@id"
+    },
+    "Hoofdtype": "http://www.w3.org/2004/02/skos/core#Concept",
     "HoortBij": "https://wegenenverkeer.data.vlaanderen.be/ns/onderdeel#HoortBij",
     "Houdriem": "https://wegenenverkeer.data.vlaanderen.be/ns/onderdeel#Houdriem",
     "Houdriem.hoortBij": {
@@ -352,6 +628,19 @@
       "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#DtcIdentificator.toegekendDoor",
       "@type": "http://www.w3.org/2001/XMLSchema#string"
     },
+    "Kelderlandhoofd": "https://wegenenverkeer.data.vlaanderen.be/ns/installatie#Kelderlandhoofd",
+    "Kelderlandhoofd.funderingsaanzetOnderDeBodemVanDeWaterweg": {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/installatie#Kelderlandhoofd.funderingsAanzetOnderDeBodemVanDeWaterweg",
+      "@type": "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "Kelderlandhoofd.inOfOpDeRandVanDeWaterweg": {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/installatie#Kelderlandhoofd.inOfOpDeRandVanDeWaterweg",
+      "@type": "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "Kelderlandhoofd.typeVerbinding": {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/installatie#Kelderlandhoofd.typeVerbinding",
+      "@type": "@id"
+    },
     "KeuzelijstTechnischDocument": "http://www.w3.org/2004/02/skos/core#Concept",
     "KwantitatieveWaardeInBar": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInBar",
     "KwantitatieveWaardeInBar.standaardEenheid": {
@@ -360,6 +649,15 @@
     },
     "KwantitatieveWaardeInBar.waarde": {
       "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInBar.waarde",
+      "@type": "@id"
+    },
+    "KwantitatieveWaardeInCentimeter": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInCentimeter",
+    "KwantitatieveWaardeInCentimeter.standaardEenheid": {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInCentimeter.standaardEenheid",
+      "@type": "http://www.w3.org/2000/01/rdf-schema#Literal"
+    },
+    "KwantitatieveWaardeInCentimeter.waarde": {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInCentimeter.waarde",
       "@type": "@id"
     },
     "KwantitatieveWaardeInKN": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInKiloNewton",
@@ -398,6 +696,24 @@
       "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMaand.waarde",
       "@type": "@id"
     },
+    "KwantitatieveWaardeInMeter": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMeter",
+    "KwantitatieveWaardeInMeter.standaardEenheid": {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMeter.standaardEenheid",
+      "@type": "http://www.w3.org/2000/01/rdf-schema#Literal"
+    },
+    "KwantitatieveWaardeInMeter.waarde": {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMeter.waarde",
+      "@type": "@id"
+    },
+    "KwantitatieveWaardeInMeterTaw": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMeterTAW",
+    "KwantitatieveWaardeInMeterTaw.standaardEenheid": {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMeterTAW.standaardEenheid",
+      "@type": "http://www.w3.org/2000/01/rdf-schema#Literal"
+    },
+    "KwantitatieveWaardeInMeterTaw.waarde": {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMeterTAW.waarde",
+      "@type": "@id"
+    },
     "KwantitatieveWaardeInMillimeter": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMillimeter",
     "KwantitatieveWaardeInMillimeter.standaardEenheid": {
       "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMillimeter.standaardEenheid",
@@ -414,6 +730,15 @@
     },
     "KwantitatieveWaardeInTon.waarde": {
       "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInTon.waarde",
+      "@type": "@id"
+    },
+    "KwantitatieveWaardeInVierkanteMeter": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInVierkanteMeter",
+    "KwantitatieveWaardeInVierkanteMeter.standaardEenheid": {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInVierkanteMeter.standaardEenheid",
+      "@type": "http://www.w3.org/2000/01/rdf-schema#Literal"
+    },
+    "KwantitatieveWaardeInVierkanteMeter.waarde": {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInVierkanteMeter.waarde",
       "@type": "@id"
     },
     "Lager": "https://wegenenverkeer.data.vlaanderen.be/ns/abstracten#Lager",
@@ -434,6 +759,11 @@
       "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/abstracten#Lager.inwendigeDiameter",
       "@type": "@id"
     },
+    "Lager.ligtOp": {
+      "@container": "@set",
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/doc/implementatiemodel/geleidingsmechanisme/#Ligt op",
+      "@type": "@id"
+    },
     "Lager.typeBeweging": {
       "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/abstracten#Lager.typeBeweging",
       "@type": "@id"
@@ -447,9 +777,31 @@
       "@type": "@id"
     },
     "Lagerblok": "https://wegenenverkeer.data.vlaanderen.be/ns/onderdeel#Lagerblok",
+    "Landhoofd": "https://wegenenverkeer.data.vlaanderen.be/ns/installatie#Landhoofd",
+    "Landhoofd.funderingsaanzetOnderDeBodemVanDeWaterweg": {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/installatie#Landhoofd.funderingsAanzetOnderDeBodemVanDeWaterweg",
+      "@type": "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "Landhoofd.inOfOpDeRandVanDeWaterweg": {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/installatie#Landhoofd.inOfOpDeRandVanDeWaterweg",
+      "@type": "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "Landhoofd.typeLandhoofd": {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/installatie#Landhoofd.typeLandhoofd",
+      "@type": "@id"
+    },
+    "Landhoofd.typeVerbinding": {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/installatie#Landhoofd.typeVerbinding",
+      "@type": "@id"
+    },
+    "LigtOp": "https://wegenenverkeer.data.vlaanderen.be/ns/onderdeel#LigtOp",
     "Literal": "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "MateriaalAanslagprofiel": "http://www.w3.org/2004/02/skos/core#Concept",
     "MateriaalBusEnRing": "http://www.w3.org/2004/02/skos/core#Concept",
+    "MateriaalBwcTwc": "http://www.w3.org/2004/02/skos/core#Concept",
+    "MateriaalCentreerstuk": "http://www.w3.org/2004/02/skos/core#Concept",
     "MateriaalDeklaag": "http://www.w3.org/2004/02/skos/core#Concept",
+    "MateriaalDragendeStructuurBrugdeel": "http://www.w3.org/2004/02/skos/core#Concept",
     "MateriaalTaatsmechanisme": "http://www.w3.org/2004/02/skos/core#Concept",
     "MateriaalTaatsschoen": "http://www.w3.org/2004/02/skos/core#Concept",
     "MerkDichting": "http://www.w3.org/2004/02/skos/core#Concept",
@@ -458,12 +810,8 @@
     "ModelnaamDichting": "http://www.w3.org/2004/02/skos/core#Concept",
     "ModelnamenVanGlijlagers": "http://www.w3.org/2004/02/skos/core#Concept",
     "NatuurlijkGetal": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "Omhult": "https://wegenenverkeer.data.vlaanderen.be/ns/onderdeel#Omhult",
     "Onderrolwagen": "https://wegenenverkeer.data.vlaanderen.be/ns/installatie#Onderrolwagen",
-    "Onderrolwagen.bevestiging": {
-      "@container": "@set",
-      "@id": "https://wegenenverkeer.data.vlaanderen.be/doc/implementatiemodel/geleidingsmechanisme/#Bevestiging",
-      "@type": "@id"
-    },
     "Onderrolwagen.gewicht": {
       "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/installatie#Onderrolwagen.gewicht",
       "@type": "@id"
@@ -504,17 +852,17 @@
     "Oplegmechanisme": "https://wegenenverkeer.data.vlaanderen.be/ns/installatie#Oplegmechanisme",
     "OverigeFunctiesOplegging": "http://www.w3.org/2004/02/skos/core#Concept",
     "Pen": "https://wegenenverkeer.data.vlaanderen.be/ns/onderdeel#Pen",
+    "Pen.bevestiging": {
+      "@container": "@set",
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/doc/implementatiemodel/geleidingsmechanisme/#Bevestiging",
+      "@type": "@id"
+    },
     "Pen.hoortBij": {
       "@container": "@set",
       "@id": "https://wegenenverkeer.data.vlaanderen.be/doc/implementatiemodel/geleidingsmechanisme/#Hoort bij",
       "@type": "@id"
     },
     "Pendel": "https://wegenenverkeer.data.vlaanderen.be/ns/onderdeel#Pendel",
-    "Pendel.bevestiging": {
-      "@container": "@set",
-      "@id": "https://wegenenverkeer.data.vlaanderen.be/doc/implementatiemodel/geleidingsmechanisme/#Bevestiging",
-      "@type": "@id"
-    },
     "Pendel.gewicht": {
       "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/onderdeel#Pendel.gewicht",
       "@type": "@id"
@@ -558,6 +906,10 @@
       "@id": "https://wegenenverkeer.data.vlaanderen.be/doc/implementatiemodel/geleidingsmechanisme/#Hoort bij",
       "@type": "@id"
     },
+    "Railconstructie.klemtype": {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/onderdeel#Railconstructie.klemtype",
+      "@type": "@id"
+    },
     "Railconstructie.typeBevestigingRail": {
       "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/onderdeel#Railconstructie.typeBevestiging",
       "@type": "@id"
@@ -587,6 +939,11 @@
       "@id": "https://wegenenverkeer.data.vlaanderen.be/doc/implementatiemodel/geleidingsmechanisme/#Hoort bij",
       "@type": "@id"
     },
+    "Rol.ligtOp": {
+      "@container": "@set",
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/doc/implementatiemodel/geleidingsmechanisme/#Ligt op",
+      "@type": "@id"
+    },
     "Rolgeleiding": "https://wegenenverkeer.data.vlaanderen.be/ns/installatie#Rolgeleiding",
     "RolwagenChassis": "https://wegenenverkeer.data.vlaanderen.be/ns/onderdeel#Rolwagenchassis",
     "RolwagenChassis.bevestiging": {
@@ -600,12 +957,28 @@
       "@type": "@id"
     },
     "Schakel": "https://wegenenverkeer.data.vlaanderen.be/ns/onderdeel#Schakel",
+    "Schakel.bevestiging": {
+      "@container": "@set",
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/doc/implementatiemodel/geleidingsmechanisme/#Bevestiging",
+      "@type": "@id"
+    },
     "Schakel.hoortBij": {
       "@container": "@set",
       "@id": "https://wegenenverkeer.data.vlaanderen.be/doc/implementatiemodel/geleidingsmechanisme/#Hoort bij",
       "@type": "@id"
     },
     "Scharnierpunt": "https://wegenenverkeer.data.vlaanderen.be/ns/installatie#Scharnierpunt",
+    "Scharnierschoen": "https://wegenenverkeer.data.vlaanderen.be/ns/onderdeel#Scharnierschoen",
+    "Scharnierschoen.hoortBij": {
+      "@container": "@set",
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/doc/implementatiemodel/geleidingsmechanisme/#Hoort bij",
+      "@type": "@id"
+    },
+    "Sluishoofd": "https://wegenenverkeer.data.vlaanderen.be/ns/installatie#Sluishoofd",
+    "Sluishoofd.typeHoofd": {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/installatie#Sluishoofd.typeHoofd",
+      "@type": "@id"
+    },
     "SmeringType": "http://www.w3.org/2004/02/skos/core#Concept",
     "Staalsoort": "http://www.w3.org/2004/02/skos/core#Concept",
     "StaalsoortMetEquivalenten": "http://www.w3.org/2004/02/skos/core#Concept",
@@ -630,6 +1003,15 @@
       "@type": "@id"
     },
     "String": "http://www.w3.org/2001/XMLSchema#string",
+    "Stuwhoofd": "https://wegenenverkeer.data.vlaanderen.be/ns/installatie#Stuwhoofd",
+    "Stuwhoofd.heeftAanslagprofiel": {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/installatie#Stuwhoofd.heeftAanslagprofiel",
+      "@type": "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "Stuwhoofd.materiaalAanslagprofiel": {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/installatie#Stuwhoofd.profielVastAanslag",
+      "@type": "@id"
+    },
     "Taatsmechanisme": "https://wegenenverkeer.data.vlaanderen.be/ns/installatie#Taatsmechanisme",
     "Taatsmechanisme.isRegelbaar": {
       "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/installatie#Taatsmechanisme.isRegelbaar",
@@ -673,6 +1055,11 @@
       "@type": "@id"
     },
     "Taatsschoen": "https://wegenenverkeer.data.vlaanderen.be/ns/onderdeel#Taatsschoen",
+    "Taatsschoen.bevestiging": {
+      "@container": "@set",
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/doc/implementatiemodel/geleidingsmechanisme/#Bevestiging",
+      "@type": "@id"
+    },
     "Taatsschoen.heeftDrukstoel": {
       "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/onderdeel#Taatsschoen.heeftDrukstoel",
       "@type": "http://www.w3.org/2001/XMLSchema#boolean"
@@ -693,6 +1080,11 @@
       "@type": "@id"
     },
     "Tegenmateriaal": "https://wegenenverkeer.data.vlaanderen.be/ns/onderdeel#Tegenmateriaal",
+    "Tegenmateriaal.bevestiging": {
+      "@container": "@set",
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/doc/implementatiemodel/geleidingsmechanisme/#Bevestiging",
+      "@type": "@id"
+    },
     "Tegenmateriaal.hoortBij": {
       "@container": "@set",
       "@id": "https://wegenenverkeer.data.vlaanderen.be/doc/implementatiemodel/geleidingsmechanisme/#Hoort bij",
@@ -703,12 +1095,8 @@
       "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#DteTekstblok.waarde",
       "@type": "http://www.w3.org/2001/XMLSchema#string"
     },
+    "Toegankelijkheid": "http://www.w3.org/2004/02/skos/core#Concept",
     "Trekker": "https://wegenenverkeer.data.vlaanderen.be/ns/installatie#Trekker",
-    "Trekker.bevestiging": {
-      "@container": "@set",
-      "@id": "https://wegenenverkeer.data.vlaanderen.be/doc/implementatiemodel/geleidingsmechanisme/#Bevestiging",
-      "@type": "@id"
-    },
     "Trekker.heeftVerendElement": {
       "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/installatie#Trekker.heeftVerendElement",
       "@type": "http://www.w3.org/2001/XMLSchema#boolean"
@@ -724,22 +1112,52 @@
     },
     "TypeAnkerplaat": "http://www.w3.org/2004/02/skos/core#Concept",
     "TypeBevestigingRail": "http://www.w3.org/2004/02/skos/core#Concept",
-    "TypeBeweging": "http://www.w3.org/2004/02/skos/core#Concept",
-    "TypeGlijmateriaal": "http://www.w3.org/2004/02/skos/core#Concept",
-    "TypeGrendel": "http://www.w3.org/2004/02/skos/core#Concept",
-    "TypeMechanisme": "http://www.w3.org/2004/02/skos/core#Concept",
-    "TypeOplegging": "http://www.w3.org/2004/02/skos/core#Concept",
-    "TypeTrekker": "http://www.w3.org/2004/02/skos/core#Concept",
-    "Uri": "http://www.w3.org/2001/XMLSchema#anyURI",
-    "Veerhuis": "https://wegenenverkeer.data.vlaanderen.be/ns/onderdeel#Veerhuis",
-    "Veerhuis.bevestiging": {
-      "@container": "@set",
-      "@id": "https://wegenenverkeer.data.vlaanderen.be/doc/implementatiemodel/geleidingsmechanisme/#Bevestiging",
+    "TypeBeweegbaarBrugdeel": "http://www.w3.org/2004/02/skos/core#Concept",
+    "TypeBeweegbareWaterkerendeConstructie": "https://wegenenverkeer.data.vlaanderen.be/ns/installatie#DtcTypeBWC",
+    "TypeBeweegbareWaterkerendeConstructie.typeConcept": {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/installatie#DtcTypeBWC.typeConcept",
       "@type": "@id"
     },
+    "TypeBeweegbareWaterkerendeConstructie.typeConstructie": {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/installatie#DtcTypeBWC.typeConstructie",
+      "@type": "@id"
+    },
+    "TypeBeweging": "http://www.w3.org/2004/02/skos/core#Concept",
+    "TypeBrugdeel": "http://www.w3.org/2004/02/skos/core#Concept",
+    "TypeBrugligger": "http://www.w3.org/2004/02/skos/core#Concept",
+    "TypeDoorsnede": "http://www.w3.org/2004/02/skos/core#Concept",
+    "TypeGlijmateriaal": "http://www.w3.org/2004/02/skos/core#Concept",
+    "TypeGrendel": "http://www.w3.org/2004/02/skos/core#Concept",
+    "TypeKlem": "http://www.w3.org/2004/02/skos/core#Concept",
+    "TypeLandhoofd": "http://www.w3.org/2004/02/skos/core#Concept",
+    "TypeMechanisme": "http://www.w3.org/2004/02/skos/core#Concept",
+    "TypeNivelleringssysteem": "http://www.w3.org/2004/02/skos/core#Concept",
+    "TypeOplegging": "http://www.w3.org/2004/02/skos/core#Concept",
+    "TypeTrekker": "http://www.w3.org/2004/02/skos/core#Concept",
+    "TypeVerbinding": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Uri": "http://www.w3.org/2001/XMLSchema#anyURI",
+    "VasteWaterbouwkundigeConstructie": "https://wegenenverkeer.data.vlaanderen.be/ns/installatie#VasteWaterbouwkundigeConstructie",
+    "VasteWaterbouwkundigeConstructie.heeftPompput": {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/installatie#VasteWaterbouwkundigeConstructie.heeftPompput",
+      "@type": "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "VasteWaterbouwkundigeConstructie.heeftWoelkamer": {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/installatie#VasteWaterbouwkundigeConstructie.heeftWoelkamer",
+      "@type": "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "VasteWaterbouwkundigeConstructie.typeNivelleringssysteem": {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/installatie#VasteWaterbouwkundigeConstructie.typeNivelleringssysteem",
+      "@type": "@id"
+    },
+    "Veerhuis": "https://wegenenverkeer.data.vlaanderen.be/ns/onderdeel#Veerhuis",
     "Veerhuis.hoortBij": {
       "@container": "@set",
       "@id": "https://wegenenverkeer.data.vlaanderen.be/doc/implementatiemodel/geleidingsmechanisme/#Hoort bij",
+      "@type": "@id"
+    },
+    "Veerhuis.omhult": {
+      "@container": "@set",
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/doc/implementatiemodel/geleidingsmechanisme/#Omhult",
       "@type": "@id"
     },
     "Verenpakket": "https://wegenenverkeer.data.vlaanderen.be/ns/onderdeel#Verenpakket",
@@ -769,6 +1187,11 @@
     "Wiel.hoortBij": {
       "@container": "@set",
       "@id": "https://wegenenverkeer.data.vlaanderen.be/doc/implementatiemodel/geleidingsmechanisme/#Hoort bij",
+      "@type": "@id"
+    },
+    "Wiel.ligtOp": {
+      "@container": "@set",
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/doc/implementatiemodel/geleidingsmechanisme/#Ligt op",
       "@type": "@id"
     }
   }

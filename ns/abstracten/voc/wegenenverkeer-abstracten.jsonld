@@ -1522,10 +1522,10 @@
   "license": "https://data.vlaanderen.be/id/licentie/modellicentie-gratis-hergebruik/v1.0",
   "issued": "TODO",
   "navigation": {
-    "prev": "/doc/vocabularium/wegenenverkeer/abstracten/ontwerpdocument/2.18.1"
+    "prev": "/doc/vocabularium/wegenenverkeer/abstracten/ontwerpdocument/2.19.0"
   },
   "publication-state": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard",
-  "publication-date": "15-04-2026",
+  "publication-date": "14-07-2026",
   "classes": [
     {
       "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/abstracten#AOWSType",
@@ -1540,6 +1540,9 @@
       "@type": "http://www.w3.org/2002/07/owl#Class",
       "definition": {
         "nl": "Abstracte om attributen en relaties te bundelen voor aangrijping. Een aangrijping maakt de koppeling tussen tussen de actuator en de beweegbare constructive."
+      },
+      "usage": {
+        "nl": "Klasse uit gebruik sinds versie 2.20.0 "
       },
       "parents": [
         "https://wegenenverkeer.data.vlaanderen.be/ns/abstracten#StaalsoortObject",
@@ -1671,6 +1674,14 @@
       "@type": "http://www.w3.org/2002/07/owl#Class",
       "definition": {
         "nl": "Abstracte klasse voor een artikelnummer."
+      },
+      "parents": []
+    },
+    {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/abstracten#AsLagerCombinatie",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
+      "definition": {
+        "nl": "Abstracte klasse om gemeenschappelijke relaties te voorzien."
       },
       "parents": []
     },
@@ -2425,7 +2436,8 @@
       },
       "parents": [
         "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#AIMNaamObject",
-        "https://wegenenverkeer.data.vlaanderen.be/ns/abstracten#TechnischDocument"
+        "https://wegenenverkeer.data.vlaanderen.be/ns/abstracten#TechnischDocument",
+        "https://wegenenverkeer.data.vlaanderen.be/ns/abstracten#AsLagerCombinatie"
       ]
     },
     {
@@ -2551,9 +2563,12 @@
       "definition": {
         "nl": "Abstracte om attributen en relaties te bundelen voor ophanging. Een ophanging maakt de koppeling tussen de actuator en de vaste constructie."
       },
+      "usage": {
+        "nl": "Klasse uit gebruik sinds versie 2.20.0 "
+      },
       "parents": [
-        "https://wegenenverkeer.data.vlaanderen.be/ns/abstracten#TechnischDocument",
-        "https://wegenenverkeer.data.vlaanderen.be/ns/abstracten#StaalsoortObject"
+        "https://wegenenverkeer.data.vlaanderen.be/ns/abstracten#StaalsoortObject",
+        "https://wegenenverkeer.data.vlaanderen.be/ns/abstracten#TechnischDocument"
       ]
     },
     {
@@ -2984,13 +2999,6 @@
   "externals": [
     {
       "name": {
-        "nl": "materiaal afdichting"
-      },
-      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
-      "@type": "rdfs:Class"
-    },
-    {
-      "name": {
         "nl": "materiaal bevestigingsbeugel"
       },
       "@id": "http://www.w3.org/2004/02/skos/core#Concept",
@@ -3314,6 +3322,13 @@
     {
       "name": {
         "nl": "Verfraaiing buitenkast"
+      },
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
+      "@type": "rdfs:Class"
+    },
+    {
+      "name": {
+        "nl": "materiaal afdichting"
       },
       "@id": "http://www.w3.org/2004/02/skos/core#Concept",
       "@type": "rdfs:Class"
@@ -4392,6 +4407,20 @@
       "generalization": []
     },
     {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/abstracten#Seinlantaarn.aantalModules",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "definition": {
+        "nl": "Het aantal lichtmodules waaruit de seinlantaarn bestaat."
+      },
+      "domain": [
+        "https://wegenenverkeer.data.vlaanderen.be/ns/abstracten#Seinlantaarn"
+      ],
+      "range": [
+        "http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+      ],
+      "generalization": []
+    },
+    {
       "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/abstracten#SchokindexVoertuigkering.schokindex",
       "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "definition": {
@@ -4648,6 +4677,9 @@
       "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "definition": {
         "nl": "Het rapport dat 5 jaarlijks wordt opgesteld met details over het meetstation."
+      },
+      "usage": {
+        "nl": "Attribuut uit gebruik sinds versie 2.20.0 "
       },
       "domain": [
         "https://wegenenverkeer.data.vlaanderen.be/ns/abstracten#MeetstationAbstract"
@@ -7224,6 +7256,23 @@
       "generalization": []
     },
     {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/abstracten#Buis.breedteBuitenzijde",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "definition": {
+        "nl": "De breedte van de buitenzijde van de buis in millimeter. Bij cirkelvormige buizen is dit de buitendiameter."
+      },
+      "usage": {
+        "nl": "Voor cirkelvormige buizen met dunwandig profiel wordt deze waarde niet afzonderlijk ingevuld."
+      },
+      "domain": [
+        "https://wegenenverkeer.data.vlaanderen.be/ns/abstracten#Buis"
+      ],
+      "range": [
+        "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMillimeter"
+      ],
+      "generalization": []
+    },
+    {
       "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/abstracten#Buis.breedteBinnenzijde",
       "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "definition": {
@@ -8217,15 +8266,7 @@
       "generalization": []
     }
   ],
-  "externalproperties": [
-    {
-      "name": {
-        "nl": "breedte buitenzijde"
-      },
-      "@id": "Voor cirkelvormige buizen met dunwandig profiel wordt deze waarde niet afzonderlijk ingevuld.",
-      "@type": "rdf:Property"
-    }
-  ],
+  "externalproperties": [],
   "@context": {
     "vlaanderen": "http://data.vlaanderen.be/ns/",
     "owl": "http://www.w3.org/2002/07/owl#",

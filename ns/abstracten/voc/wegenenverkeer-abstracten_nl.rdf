@@ -2020,7 +2020,6 @@
         <dc:issued>TODO</dc:issued>
         <rdfs:seeAlso>
           <rdfs:Class rdf:about="http://www.w3.org/2004/02/skos/core#Concept">
-            <rdfs:label xml:lang="nl">materiaal afdichting</rdfs:label>
             <rdfs:label xml:lang="nl">materiaal bevestigingsbeugel</rdfs:label>
             <rdfs:label xml:lang="nl">Markeringsproduct</rdfs:label>
             <rdfs:label xml:lang="nl">Markeringssysteem</rdfs:label>
@@ -2068,6 +2067,7 @@
             <rdfs:label xml:lang="nl">WV-besturingsconnector</rdfs:label>
             <rdfs:label xml:lang="nl">Verlichtingstoestel verlicht gebied.</rdfs:label>
             <rdfs:label xml:lang="nl">Verfraaiing buitenkast</rdfs:label>
+            <rdfs:label xml:lang="nl">materiaal afdichting</rdfs:label>
             <rdfs:label xml:lang="nl">Staalsoort met equivalenten</rdfs:label>
             <rdfs:label xml:lang="nl">VR-module met firmware merk</rdfs:label>
           </rdfs:Class>
@@ -2092,6 +2092,7 @@
   <owl:Class rdf:about="https://wegenenverkeer.data.vlaanderen.be/ns/abstracten#Aangrijping">
     <rdfs:isDefinedBy rdf:resource="https://wegenenverkeer.data.vlaanderen.be/ns/abstracten"/>
     <rdfs:comment xml:lang="nl">Abstracte om attributen en relaties te bundelen voor aangrijping. Een aangrijping maakt de koppeling tussen tussen de actuator en de beweegbare constructive.</rdfs:comment>
+    <ns0:usageNote xml:lang="nl">Klasse uit gebruik sinds versie 2.20.0 </ns0:usageNote>
     <rdfs:subClassOf>
       <owl:Class rdf:about="https://wegenenverkeer.data.vlaanderen.be/ns/abstracten#StaalsoortObject">
         <rdfs:isDefinedBy rdf:resource="https://wegenenverkeer.data.vlaanderen.be/ns/abstracten"/>
@@ -2747,6 +2748,13 @@
   <owl:ObjectProperty rdf:about="https://wegenenverkeer.data.vlaanderen.be/ns/abstracten#Buis.breedteBinnenzijde">
     <rdfs:isDefinedBy rdf:resource="https://wegenenverkeer.data.vlaanderen.be/ns/abstracten"/>
     <rdfs:comment xml:lang="nl">De breedte van de binnenzijde van de buis in millimeter. Bij cirkelvormige buizen is dit de binnendiameter.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://wegenenverkeer.data.vlaanderen.be/ns/abstracten#Buis"/>
+    <rdfs:range rdf:resource="https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMillimeter"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://wegenenverkeer.data.vlaanderen.be/ns/abstracten#Buis.breedteBuitenzijde">
+    <rdfs:isDefinedBy rdf:resource="https://wegenenverkeer.data.vlaanderen.be/ns/abstracten"/>
+    <rdfs:comment xml:lang="nl">De breedte van de buitenzijde van de buis in millimeter. Bij cirkelvormige buizen is dit de buitendiameter.</rdfs:comment>
+    <ns0:usageNote xml:lang="nl">Voor cirkelvormige buizen met dunwandig profiel wordt deze waarde niet afzonderlijk ingevuld.</ns0:usageNote>
     <rdfs:domain rdf:resource="https://wegenenverkeer.data.vlaanderen.be/ns/abstracten#Buis"/>
     <rdfs:range rdf:resource="https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMillimeter"/>
   </owl:ObjectProperty>
@@ -4031,6 +4039,12 @@
         <rdfs:comment xml:lang="nl">Abstracte die alle relaties van lagers verzamelt.</rdfs:comment>
         <rdfs:subClassOf rdf:resource="https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#AIMNaamObject"/>
         <rdfs:subClassOf rdf:resource="https://wegenenverkeer.data.vlaanderen.be/ns/abstracten#TechnischDocument"/>
+        <rdfs:subClassOf>
+          <owl:Class rdf:about="https://wegenenverkeer.data.vlaanderen.be/ns/abstracten#AsLagerCombinatie">
+            <rdfs:isDefinedBy rdf:resource="https://wegenenverkeer.data.vlaanderen.be/ns/abstracten"/>
+            <rdfs:comment xml:lang="nl">Abstracte klasse om gemeenschappelijke relaties te voorzien.</rdfs:comment>
+          </owl:Class>
+        </rdfs:subClassOf>
       </owl:Class>
     </rdfs:domain>
     <rdfs:range rdf:resource="https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMillimeter"/>
@@ -4195,6 +4209,7 @@
   <owl:ObjectProperty rdf:about="https://wegenenverkeer.data.vlaanderen.be/ns/abstracten#MeetstationAbstract.keuringsrapport">
     <rdfs:isDefinedBy rdf:resource="https://wegenenverkeer.data.vlaanderen.be/ns/abstracten"/>
     <rdfs:comment xml:lang="nl">Het rapport dat 5 jaarlijks wordt opgesteld met details over het meetstation.</rdfs:comment>
+    <ns0:usageNote xml:lang="nl">Attribuut uit gebruik sinds versie 2.20.0 </ns0:usageNote>
     <rdfs:domain rdf:resource="https://wegenenverkeer.data.vlaanderen.be/ns/abstracten#MeetstationAbstract"/>
     <rdfs:range rdf:resource="https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#DtcDocument"/>
   </owl:ObjectProperty>
@@ -4282,8 +4297,9 @@
   <owl:Class rdf:about="https://wegenenverkeer.data.vlaanderen.be/ns/abstracten#Ophanging">
     <rdfs:isDefinedBy rdf:resource="https://wegenenverkeer.data.vlaanderen.be/ns/abstracten"/>
     <rdfs:comment xml:lang="nl">Abstracte om attributen en relaties te bundelen voor ophanging. Een ophanging maakt de koppeling tussen de actuator en de vaste constructie.</rdfs:comment>
-    <rdfs:subClassOf rdf:resource="https://wegenenverkeer.data.vlaanderen.be/ns/abstracten#TechnischDocument"/>
+    <ns0:usageNote xml:lang="nl">Klasse uit gebruik sinds versie 2.20.0 </ns0:usageNote>
     <rdfs:subClassOf rdf:resource="https://wegenenverkeer.data.vlaanderen.be/ns/abstracten#StaalsoortObject"/>
+    <rdfs:subClassOf rdf:resource="https://wegenenverkeer.data.vlaanderen.be/ns/abstracten#TechnischDocument"/>
   </owl:Class>
   <owl:Class rdf:about="https://wegenenverkeer.data.vlaanderen.be/ns/abstracten#PTModuleMetFirmware">
     <rdfs:isDefinedBy rdf:resource="https://wegenenverkeer.data.vlaanderen.be/ns/abstracten"/>
@@ -4403,9 +4419,9 @@
     </rdfs:domain>
     <rdfs:range rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
   </owl:ObjectProperty>
-  <owl:ObjectProperty rdf:about="https://wegenenverkeer.data.vlaanderen.be/ns/abstracten#Seinlantaarn.diameter">
+  <owl:ObjectProperty rdf:about="https://wegenenverkeer.data.vlaanderen.be/ns/abstracten#Seinlantaarn.aantalModules">
     <rdfs:isDefinedBy rdf:resource="https://wegenenverkeer.data.vlaanderen.be/ns/abstracten"/>
-    <rdfs:comment xml:lang="nl">Diameter (in mm) van de lens van de verkeerslichten waaruit de lantaarn is samengesteld.</rdfs:comment>
+    <rdfs:comment xml:lang="nl">Het aantal lichtmodules waaruit de seinlantaarn bestaat.</rdfs:comment>
     <rdfs:domain>
       <owl:Class rdf:about="https://wegenenverkeer.data.vlaanderen.be/ns/abstracten#Seinlantaarn">
         <rdfs:isDefinedBy rdf:resource="https://wegenenverkeer.data.vlaanderen.be/ns/abstracten"/>
@@ -4413,6 +4429,12 @@
         <rdfs:subClassOf rdf:resource="https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#AIMNaamObject"/>
       </owl:Class>
     </rdfs:domain>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://wegenenverkeer.data.vlaanderen.be/ns/abstracten#Seinlantaarn.diameter">
+    <rdfs:isDefinedBy rdf:resource="https://wegenenverkeer.data.vlaanderen.be/ns/abstracten"/>
+    <rdfs:comment xml:lang="nl">Diameter (in mm) van de lens van de verkeerslichten waaruit de lantaarn is samengesteld.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://wegenenverkeer.data.vlaanderen.be/ns/abstracten#Seinlantaarn"/>
     <rdfs:range rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
   </owl:ObjectProperty>
   <owl:DatatypeProperty rdf:about="https://wegenenverkeer.data.vlaanderen.be/ns/abstracten#Seinlantaarn.heeftContrastscherm">

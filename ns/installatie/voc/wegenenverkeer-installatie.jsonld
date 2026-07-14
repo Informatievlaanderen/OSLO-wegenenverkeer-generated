@@ -1522,10 +1522,10 @@
   "license": "https://data.vlaanderen.be/id/licentie/modellicentie-gratis-hergebruik/v1.0",
   "issued": "TODO",
   "navigation": {
-    "prev": "/doc/vocabularium/wegenenverkeer/installatie/ontwerpdocument/2.18.1"
+    "prev": "/doc/vocabularium/wegenenverkeer/installatie/ontwerpdocument/2.19.0"
   },
   "publication-state": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard",
-  "publication-date": "15-04-2026",
+  "publication-date": "14-07-2026",
   "classes": [
     {
       "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/installatie#ASTRIDInstallatie",
@@ -1798,7 +1798,7 @@
       "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/installatie#Brug",
       "@type": "http://www.w3.org/2002/07/owl#Class",
       "definition": {
-        "nl": "Een beweegbare, vaste of drijvende verbinding voor het verkeer tussen twee punten, die door water of iets anders gescheiden zijn."
+        "nl": "Een beweegbare,vaste of drijvende verbinding voor het verkeer tussen twee punten,die door water of iets anders gescheiden zijn."
       },
       "parents": [
         "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#AIMNaamObject"
@@ -1898,6 +1898,26 @@
         "https://wegenenverkeer.data.vlaanderen.be/ns/abstracten#AxiaalDraagvermogen",
         "https://wegenenverkeer.data.vlaanderen.be/ns/abstracten#WaterremmendeFunctie",
         "https://wegenenverkeer.data.vlaanderen.be/ns/abstracten#Grondkeringen"
+      ]
+    },
+    {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/installatie#CoordinatiesysteemVRI",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
+      "definition": {
+        "nl": "Een groepstype dat een coordinatiesysteem voor verkeerslichten beschrijft (CVL)"
+      },
+      "parents": [
+        "https://wegenenverkeer.data.vlaanderen.be/ns/onderdeel#Software"
+      ]
+    },
+    {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/installatie#DIZV",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
+      "definition": {
+        "nl": "Een groepstype voor detectie inbreuken zwaar vervoer."
+      },
+      "parents": [
+        "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#NaampadObject"
       ]
     },
     {
@@ -2238,6 +2258,9 @@
       "definition": {
         "nl": "Een geluidswerende wandvormige constructie bestaande uit een desgevallend geluidsisolerend materiaal en/of geluidsabsorberend materiaal en voorzien van de nodige structuren om de bouwkundige stabiliteit te verzekeren."
       },
+      "usage": {
+        "nl": "De geometrie van de z-coördinaat dient overeen te stemmen met de bovenkant van de geluidwerende constructie."
+      },
       "parents": [
         "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#AIMNaamObject"
       ]
@@ -2513,6 +2536,7 @@
         "nl": "Een ruimte die een of meerdere kabels of leidingen beschermt tegen beschadiging en/of de kabels of leidingen op een gecontroleerde plaats laat hangen of liggen. De constructieve elementen die de ruimte creëeren vormen een aaneen- en afgesloten geheel dat niet meer uit elkaar kan gehaald worden. De kabels en leidingen zijn enkel nog toegankelijk door in de koker zelf rond te lopen (of te kruipen). De koker is op die toegankelijkheid voorzien."
       },
       "parents": [
+        "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#NaampadObject",
         "https://wegenenverkeer.data.vlaanderen.be/ns/abstracten#Kabelgeleiding",
         "https://wegenenverkeer.data.vlaanderen.be/ns/abstracten#ConstructiefObject"
       ]
@@ -2942,6 +2966,16 @@
       ]
     },
     {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/installatie#PTGroep",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
+      "definition": {
+        "nl": "Groep voor het groeperen van objecten van het type personentransportmodules."
+      },
+      "parents": [
+        "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#NaampadObject"
+      ]
+    },
+    {
       "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/installatie#Paalmatras",
       "@type": "http://www.w3.org/2002/07/owl#Class",
       "definition": {
@@ -3235,7 +3269,8 @@
         "nl": "Een mechanisme bestaande uit een tandheugel en een tandwiel dat wordt gebruikt om een lineaire beweging om te zetten in een roterende beweging of omgekeerd."
       },
       "parents": [
-        "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#AIMObject"
+        "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#AIMObject",
+        "https://wegenenverkeer.data.vlaanderen.be/ns/abstracten#Bewegingsmechanisme"
       ]
     },
     {
@@ -3364,7 +3399,7 @@
       "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/installatie#VRIBuiteninstallatie",
       "@type": "http://www.w3.org/2002/07/owl#Class",
       "definition": {
-        "nl": "Een groepstype dat alle onderdelen van een verkeersregelinstallatie omvat die zich buiten de kast bevinden (zoals steunen, verlichtingstoestellen, lussen, ). Dit kan meerdere kruispunten overkoepelen."
+        "nl": "Een groepstype dat alle onderdelen van een verkeersregelinstallatie omvat die zich buiten de kast bevinden (zoals steunen,verlichtingstoestellen,lussen,). Dit kan meerdere kruispunten overkoepelen."
       },
       "parents": [
         "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#NaampadObject"
@@ -3586,6 +3621,16 @@
       ]
     },
     {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/installatie#Weegsensorgroep",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
+      "definition": {
+        "nl": "Een groep om weegsensoren te groeperen binnen het thema DIZV."
+      },
+      "parents": [
+        "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#NaampadObject"
+      ]
+    },
+    {
       "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/installatie#Wegberm",
       "@type": "http://www.w3.org/2002/07/owl#Class",
       "definition": {
@@ -3713,13 +3758,6 @@
     },
     {
       "name": {
-        "nl": "Wegberm type"
-      },
-      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
-      "@type": "rdfs:Class"
-    },
-    {
-      "name": {
         "nl": "Type wand"
       },
       "@id": "http://www.w3.org/2004/02/skos/core#Concept",
@@ -3735,6 +3773,13 @@
     {
       "name": {
         "nl": "Type balk"
+      },
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
+      "@type": "rdfs:Class"
+    },
+    {
+      "name": {
+        "nl": "Wegberm type"
       },
       "@id": "http://www.w3.org/2004/02/skos/core#Concept",
       "@type": "rdfs:Class"
@@ -3783,6 +3828,13 @@
     },
     {
       "name": {
+        "nl": "Materiaal tussenschot Berlinerwand"
+      },
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
+      "@type": "rdfs:Class"
+    },
+    {
+      "name": {
         "nl": "Secundaire combiwand"
       },
       "@id": "http://www.w3.org/2004/02/skos/core#Concept",
@@ -3791,34 +3843,6 @@
     {
       "name": {
         "nl": "Type externe naspanning"
-      },
-      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
-      "@type": "rdfs:Class"
-    },
-    {
-      "name": {
-        "nl": "Materiaal tussenschot Berlinerwand"
-      },
-      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
-      "@type": "rdfs:Class"
-    },
-    {
-      "name": {
-        "nl": "Vorm leuning"
-      },
-      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
-      "@type": "rdfs:Class"
-    },
-    {
-      "name": {
-        "nl": "Type brandwerendheid"
-      },
-      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
-      "@type": "rdfs:Class"
-    },
-    {
-      "name": {
-        "nl": "Koker type fundering"
       },
       "@id": "http://www.w3.org/2004/02/skos/core#Concept",
       "@type": "rdfs:Class"
@@ -3867,6 +3891,27 @@
     },
     {
       "name": {
+        "nl": "Vorm leuning"
+      },
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
+      "@type": "rdfs:Class"
+    },
+    {
+      "name": {
+        "nl": "Type brandwerendheid"
+      },
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
+      "@type": "rdfs:Class"
+    },
+    {
+      "name": {
+        "nl": "Koker type fundering"
+      },
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
+      "@type": "rdfs:Class"
+    },
+    {
+      "name": {
         "nl": "type bevesting ladder"
       },
       "@id": "http://www.w3.org/2004/02/skos/core#Concept",
@@ -3875,6 +3920,41 @@
     {
       "name": {
         "nl": "Graad van statische bepaaldheid"
+      },
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
+      "@type": "rdfs:Class"
+    },
+    {
+      "name": {
+        "nl": "materiaal randafwerking"
+      },
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
+      "@type": "rdfs:Class"
+    },
+    {
+      "name": {
+        "nl": "Type brugdeel"
+      },
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
+      "@type": "rdfs:Class"
+    },
+    {
+      "name": {
+        "nl": "Ontwerpbelasting"
+      },
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
+      "@type": "rdfs:Class"
+    },
+    {
+      "name": {
+        "nl": "uitvoering randafwerking"
+      },
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
+      "@type": "rdfs:Class"
+    },
+    {
+      "name": {
+        "nl": "type randafwerking"
       },
       "@id": "http://www.w3.org/2004/02/skos/core#Concept",
       "@type": "rdfs:Class"
@@ -3909,34 +3989,6 @@
     },
     {
       "name": {
-        "nl": "materiaal randafwerking"
-      },
-      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
-      "@type": "rdfs:Class"
-    },
-    {
-      "name": {
-        "nl": "Type brugdeel"
-      },
-      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
-      "@type": "rdfs:Class"
-    },
-    {
-      "name": {
-        "nl": "uitvoering randafwerking"
-      },
-      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
-      "@type": "rdfs:Class"
-    },
-    {
-      "name": {
-        "nl": "type randafwerking"
-      },
-      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
-      "@type": "rdfs:Class"
-    },
-    {
-      "name": {
         "nl": "Regelbaar tegengewicht materiaal"
       },
       "@id": "http://www.w3.org/2004/02/skos/core#Concept",
@@ -3958,20 +4010,6 @@
     },
     {
       "name": {
-        "nl": "Materiaal aanslagprofiel"
-      },
-      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
-      "@type": "rdfs:Class"
-    },
-    {
-      "name": {
-        "nl": "Type nivelleringssysteem"
-      },
-      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
-      "@type": "rdfs:Class"
-    },
-    {
-      "name": {
         "nl": "Type landhoofd"
       },
       "@id": "http://www.w3.org/2004/02/skos/core#Concept",
@@ -3987,6 +4025,20 @@
     {
       "name": {
         "nl": "Kerende karakter van een sluis"
+      },
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
+      "@type": "rdfs:Class"
+    },
+    {
+      "name": {
+        "nl": "Materiaal aanslagprofiel"
+      },
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
+      "@type": "rdfs:Class"
+    },
+    {
+      "name": {
+        "nl": "Type nivelleringssysteem"
       },
       "@id": "http://www.w3.org/2004/02/skos/core#Concept",
       "@type": "rdfs:Class"
@@ -4035,13 +4087,6 @@
     },
     {
       "name": {
-        "nl": "Types geleidewerk"
-      },
-      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
-      "@type": "rdfs:Class"
-    },
-    {
-      "name": {
         "nl": "type beweging"
       },
       "@id": "http://www.w3.org/2004/02/skos/core#Concept",
@@ -4078,6 +4123,13 @@
     {
       "name": {
         "nl": "Wijze geleiding"
+      },
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
+      "@type": "rdfs:Class"
+    },
+    {
+      "name": {
+        "nl": "Types geleidewerk"
       },
       "@id": "http://www.w3.org/2004/02/skos/core#Concept",
       "@type": "rdfs:Class"
@@ -4154,6 +4206,20 @@
     },
     {
       "name": {
+        "nl": "Binnenverlichting groep verlicht gebied"
+      },
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
+      "@type": "rdfs:Class"
+    },
+    {
+      "name": {
+        "nl": "MIV eenheid type"
+      },
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
+      "@type": "rdfs:Class"
+    },
+    {
+      "name": {
         "nl": "Pompgroep modelnaam"
       },
       "@id": "http://www.w3.org/2004/02/skos/core#Concept",
@@ -4183,20 +4249,6 @@
     {
       "name": {
         "nl": "Radioheruitzendinstallatie merk"
-      },
-      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
-      "@type": "rdfs:Class"
-    },
-    {
-      "name": {
-        "nl": "Binnenverlichting groep verlicht gebied"
-      },
-      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
-      "@type": "rdfs:Class"
-    },
-    {
-      "name": {
-        "nl": "MIV eenheid type"
       },
       "@id": "http://www.w3.org/2004/02/skos/core#Concept",
       "@type": "rdfs:Class"
@@ -7410,10 +7462,41 @@
       "generalization": []
     },
     {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/installatie#Koker.oppervlakte",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "definition": {
+        "nl": "Horizontaal geprojecteerde oppervlakte van de koker, berekend als totale lengte × totale breedte. Bij variabele vormen wordt de ingetekende oppervlakte van de omschreven polygoon gebruikt."
+      },
+      "domain": [
+        "https://wegenenverkeer.data.vlaanderen.be/ns/installatie#Koker"
+      ],
+      "range": [
+        "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInVierkanteMeter"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/installatie#Koker.ontwerpbelastingConstructie",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "definition": {
+        "nl": "De belasting(en) waarvoor de constructie werd ontworpen."
+      },
+      "domain": [
+        "https://wegenenverkeer.data.vlaanderen.be/ns/installatie#Koker"
+      ],
+      "range": [
+        "http://www.w3.org/2004/02/skos/core#Concept"
+      ],
+      "generalization": []
+    },
+    {
       "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/installatie#Koker.ontwerpbelasting",
       "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "definition": {
         "nl": "De ontwerpbelasting is de maximale belasting die een constructie kan opnemen zonder te bezwijken."
+      },
+      "usage": {
+        "nl": "Attribuut uit gebruik sinds versie 2.20.0 "
       },
       "domain": [
         "https://wegenenverkeer.data.vlaanderen.be/ns/installatie#Koker"
@@ -7438,6 +7521,20 @@
       "generalization": []
     },
     {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/installatie#Koker.lengte",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "definition": {
+        "nl": "Lengte uitgedrukt in meter, gemeten van de uiterste opening/mond van de koker tot de uiterste opening/mond, gemeten over de as van de onderliggende weg in de koker."
+      },
+      "domain": [
+        "https://wegenenverkeer.data.vlaanderen.be/ns/installatie#Koker"
+      ],
+      "range": [
+        "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMeter"
+      ],
+      "generalization": []
+    },
+    {
       "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/installatie#Koker.gebruikersInDeKoker",
       "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "definition": {
@@ -7448,6 +7545,20 @@
       ],
       "range": [
         "http://www.w3.org/2004/02/skos/core#Concept"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/installatie#Koker.breedte",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "definition": {
+        "nl": "Gemiddelde breedte gemeten loodrecht op de as van de onderliggende weg in de koker, tussen de buitenzijden van de constructie (inclusief wanden), uitgedrukt in meter."
+      },
+      "domain": [
+        "https://wegenenverkeer.data.vlaanderen.be/ns/installatie#Koker"
+      ],
+      "range": [
+        "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMeter"
       ],
       "generalization": []
     },
@@ -9343,7 +9454,7 @@
       "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/installatie#Brug.totaleLengteBrug",
       "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "definition": {
-        "nl": "De lengte, uitgedrukt in meter, van uiterste brugdekvoeg tot uiterste brugdekvoeg (gemeten over de ganse lengte van de brug)."
+        "nl": "Horizontaal geprojecteerde oppervlakte van de bovenbouw. Bij constante breedte berekend als de totale lengte van de brug (gemeten volgens de bovenliggende weg) vermenigvuldigd met de totale breedte, uitgedrukt in vierkante meter. Indien de lengte of breedte variabel is, of bij niet-rechthoekige vormen, wordt de oppervlakte van de ingetekende omschreven polygoon van de constructie gebruikt. Bij beschikbaarheid van een polygoon heeft deze methode de voorkeur."
       },
       "domain": [
         "https://wegenenverkeer.data.vlaanderen.be/ns/installatie#Brug"
@@ -9357,7 +9468,7 @@
       "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/installatie#Brug.totaleBreedteBrug",
       "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "definition": {
-        "nl": "De totale breedte van de hele brug, in meter."
+        "nl": "Totale breedte van de bovenbouw, gemeten loodrecht op de lengteas van de bovenliggende weg, tussen de uiterste grens van de constructie, uitgedrukt in meter. Indien de breedte van de constructie variabel is (bv. trapeziumvormige brug, boog die uitwaaiert), wordt de gemiddelde breedte van de constructie genomen  d.w.z. de gemiddelde breedte van de dwarsprofielen gemeten loodrecht op de bovenliggende weg."
       },
       "domain": [
         "https://wegenenverkeer.data.vlaanderen.be/ns/installatie#Brug"
@@ -9368,10 +9479,27 @@
       "generalization": []
     },
     {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/installatie#Brug.ontwerpbelastingConstructie",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "definition": {
+        "nl": "De belasting(en) waarvoor de constructie werd ontworpen."
+      },
+      "domain": [
+        "https://wegenenverkeer.data.vlaanderen.be/ns/installatie#Brug"
+      ],
+      "range": [
+        "http://www.w3.org/2004/02/skos/core#Concept"
+      ],
+      "generalization": []
+    },
+    {
       "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/installatie#Brug.ontwerpbelasting",
       "@type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
       "definition": {
         "nl": "De draagkracht waarvoor de brug ontworpen is."
+      },
+      "usage": {
+        "nl": "Attribuut uit gebruik sinds versie 2.20.0 "
       },
       "domain": [
         "https://wegenenverkeer.data.vlaanderen.be/ns/installatie#Brug"

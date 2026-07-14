@@ -175,6 +175,7 @@
       "@type": "@id"
     },
     "Behuizing.risicoanalyse": {
+      "@container": "@set",
       "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/abstracten#Behuizing.risicoanalyse",
       "@type": "@id"
     },
@@ -331,6 +332,7 @@
       "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/abstracten#Controller.serienummer",
       "@type": "http://www.w3.org/2001/XMLSchema#string"
     },
+    "CoordinatiesysteemVri": "https://wegenenverkeer.data.vlaanderen.be/ns/installatie#CoordinatiesysteemVRI",
     "Corrosiebelastingscategorie": "http://www.w3.org/2004/02/skos/core#Concept",
     "Datum": "http://www.w3.org/2001/XMLSchema#date",
     "Datumtijd": "http://www.w3.org/2001/XMLSchema#dateTime",
@@ -391,6 +393,19 @@
     },
     "DetectieverwerkingseenheidMerk": "http://www.w3.org/2004/02/skos/core#Concept",
     "DetectieverwerkingseenheidModelnaam": "http://www.w3.org/2004/02/skos/core#Concept",
+    "DienstdatumVPlan": "https://wegenenverkeer.data.vlaanderen.be/ns/onderdeel#DtcDienstdatum",
+    "DienstdatumVPlan.commentaar": {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/onderdeel#DtcDienstdatum.commentaar",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "DienstdatumVPlan.indienstname": {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/onderdeel#DtcDienstdatum.indienstname",
+      "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "DienstdatumVPlan.uitdienstname": {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/onderdeel#DtcDienstdatum.uitdienstname",
+      "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
     "Draagconstructie": "https://wegenenverkeer.data.vlaanderen.be/ns/abstracten#Draagconstructie",
     "Draagconstructie.bevestiging": {
       "@container": "@set",
@@ -399,6 +414,7 @@
     },
     "DraagconstructieBeschermlaag": "http://www.w3.org/2004/02/skos/core#Concept",
     "DraagconstructieBijzonderTransport": "http://www.w3.org/2004/02/skos/core#Concept",
+    "DraagconstructieDwarsdoorsnede": "http://www.w3.org/2004/02/skos/core#Concept",
     "Drukknop": "https://wegenenverkeer.data.vlaanderen.be/ns/onderdeel#Drukknop",
     "Drukknop.bewakingstijd": {
       "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/onderdeel#Drukknop.bewakingstijd",
@@ -471,6 +487,12 @@
     },
     "GeheelGetal": "http://www.w3.org/2001/XMLSchema#integer",
     "Gemeente": "http://www.w3.org/2004/02/skos/core#Concept",
+    "HeeftVPlan": "https://wegenenverkeer.data.vlaanderen.be/ns/onderdeel#HeeftVPlan",
+    "HeeftVPlan.dienstdatum": {
+      "@container": "@set",
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/onderdeel#HeeftVPlan.dienstdatum",
+      "@type": "@id"
+    },
     "HoortBij": "https://wegenenverkeer.data.vlaanderen.be/ns/onderdeel#HoortBij",
     "IPv4Adres": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#DteIPv4Adres",
     "IPv4Adres.waarde": {
@@ -540,6 +562,11 @@
     "IoRichting": "http://www.w3.org/2004/02/skos/core#Concept",
     "IsSoftwareOnderdeelVan": "https://wegenenverkeer.data.vlaanderen.be/ns/onderdeel#IsSWOnderdeelVan",
     "ItSapp": "https://wegenenverkeer.data.vlaanderen.be/ns/onderdeel#ITSapp",
+    "ItSapp.heeftVPlan": {
+      "@container": "@set",
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/doc/implementatiemodel/verkeersregelinstallatie/#Heeft V-plan",
+      "@type": "@id"
+    },
     "ItSapp.isLokaalGehost": {
       "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/onderdeel#ITSapp.isLokaalGehost",
       "@type": "http://www.w3.org/2001/XMLSchema#boolean"
@@ -579,6 +606,11 @@
       "@type": "@id"
     },
     "Knipperlantaarn": "https://wegenenverkeer.data.vlaanderen.be/ns/onderdeel#Knipperlantaarn",
+    "Knipperlantaarn.hoortBij": {
+      "@container": "@set",
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/doc/implementatiemodel/verkeersregelinstallatie/#Hoort bij",
+      "@type": "@id"
+    },
     "Knipperlantaarn.sturing": {
       "@container": "@set",
       "@id": "https://wegenenverkeer.data.vlaanderen.be/doc/implementatiemodel/verkeersregelinstallatie/#Sturing",
@@ -735,6 +767,54 @@
     "LaagRol": "http://www.w3.org/2004/02/skos/core#Concept",
     "LantaarnLamptype": "http://www.w3.org/2004/02/skos/core#Concept",
     "LantaarnVormgeving": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Lichtmast": "https://wegenenverkeer.data.vlaanderen.be/ns/onderdeel#Lichtmast",
+    "Lichtmast.beschermendeLaag": {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/onderdeel#Lichtmast.beschermendeLaag",
+      "@type": "@id"
+    },
+    "Lichtmast.beschermlaag": {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/onderdeel#Lichtmast.beschermlaag",
+      "@type": "@id"
+    },
+    "Lichtmast.dwarsdoorsnede": {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/onderdeel#Lichtmast.dwarsdoorsnede",
+      "@type": "@id"
+    },
+    "Lichtmast.heeftAntiVandalismeBeugel": {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/onderdeel#Lichtmast.heeftAntiVandalismeBeugel",
+      "@type": "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "Lichtmast.heeftStopcontactAanwezig": {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/onderdeel#Lichtmast.heeftStopcontact",
+      "@type": "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "Lichtmast.kleur": {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/onderdeel#Lichtmast.kleur",
+      "@type": "@id"
+    },
+    "Lichtmast.leverancier": {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/onderdeel#Lichtmast.leverancier",
+      "@type": "@id"
+    },
+    "Lichtmast.masthoogte": {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/onderdeel#Lichtmast.masthoogte",
+      "@type": "@id"
+    },
+    "Lichtmast.masttype": {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/onderdeel#Lichtmast.masttype",
+      "@type": "@id"
+    },
+    "Lichtmast.normeringBotsvriendelijk": {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/onderdeel#Lichtmast.normeringBotsvriendelijk",
+      "@type": "@id"
+    },
+    "Lichtmast.specialeUitvoeringswijze": {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/onderdeel#Lichtmast.specialeUitvoeringswijze",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "LichtmastBotsnormering": "http://www.w3.org/2004/02/skos/core#Concept",
+    "LichtmastLeverancier": "http://www.w3.org/2004/02/skos/core#Concept",
+    "LichtmastType": "http://www.w3.org/2004/02/skos/core#Concept",
     "Lichtsensor": "https://wegenenverkeer.data.vlaanderen.be/ns/onderdeel#Lichtsensor",
     "Lichtsensor.merk": {
       "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/onderdeel#Lichtsensor.merk",
@@ -753,6 +833,15 @@
     "LichtsensorModelnaam": "http://www.w3.org/2004/02/skos/core#Concept",
     "LigtOp": "https://wegenenverkeer.data.vlaanderen.be/ns/onderdeel#LigtOp",
     "Literal": "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "Masthoogte": "https://wegenenverkeer.data.vlaanderen.be/ns/onderdeel#DtuLichtmastMasthoogte",
+    "Masthoogte.afwijkendeHoogte": {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/onderdeel#DtuLichtmastMasthoogte.afwijkendeHoogte",
+      "@type": "@id"
+    },
+    "Masthoogte.standaardHoogte": {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/onderdeel#DtuLichtmastMasthoogte.standaardHoogte",
+      "@type": "@id"
+    },
     "MateriaalBevestigingsbeugel": "http://www.w3.org/2004/02/skos/core#Concept",
     "MateriaalSoorten": "http://www.w3.org/2004/02/skos/core#Concept",
     "Mimetype": "http://www.w3.org/2004/02/skos/core#Concept",
@@ -900,10 +989,16 @@
       "@id": "https://wegenenverkeer.data.vlaanderen.be/doc/implementatiemodel/verkeersregelinstallatie/#Bevestiging",
       "@type": "@id"
     },
+    "PtGroep": "https://wegenenverkeer.data.vlaanderen.be/ns/installatie#PTGroep",
     "PtKarModem": "https://wegenenverkeer.data.vlaanderen.be/ns/onderdeel#PTKARModem",
     "PtKarModem.bevestiging": {
       "@container": "@set",
       "@id": "https://wegenenverkeer.data.vlaanderen.be/doc/implementatiemodel/verkeersregelinstallatie/#Bevestiging",
+      "@type": "@id"
+    },
+    "PtKarModem.hoortBij": {
+      "@container": "@set",
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/doc/implementatiemodel/verkeersregelinstallatie/#Hoort bij",
       "@type": "@id"
     },
     "PtKarModem.protocolOvVoertuig": {
@@ -912,6 +1007,11 @@
     },
     "PtKarModem.protocolRegelaar": {
       "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/onderdeel#PTKARModem.protocolRegelaar",
+      "@type": "@id"
+    },
+    "PtKarModem.sturing": {
+      "@container": "@set",
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/doc/implementatiemodel/verkeersregelinstallatie/#Sturing",
       "@type": "@id"
     },
     "PtKarModemProtocol": "http://www.w3.org/2004/02/skos/core#Concept",
@@ -927,6 +1027,11 @@
     },
     "PtRegelaar.communicatiewijze": {
       "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/onderdeel#PTRegelaar.communicatiewijze",
+      "@type": "@id"
+    },
+    "PtRegelaar.hoortBij": {
+      "@container": "@set",
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/doc/implementatiemodel/verkeersregelinstallatie/#Hoort bij",
       "@type": "@id"
     },
     "PtRegelaar.lijnnummers": {
@@ -1083,6 +1188,10 @@
       "@type": "@id"
     },
     "Seinlantaarn": "https://wegenenverkeer.data.vlaanderen.be/ns/abstracten#Seinlantaarn",
+    "Seinlantaarn.aantalModules": {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/abstracten#Seinlantaarn.aantalModules",
+      "@type": "@id"
+    },
     "Seinlantaarn.bevestiging": {
       "@container": "@set",
       "@id": "https://wegenenverkeer.data.vlaanderen.be/doc/implementatiemodel/verkeersregelinstallatie/#Bevestiging",
@@ -1366,6 +1475,11 @@
     "UpsMerk": "http://www.w3.org/2004/02/skos/core#Concept",
     "UpsModelnaam": "http://www.w3.org/2004/02/skos/core#Concept",
     "Uri": "http://www.w3.org/2001/XMLSchema#anyURI",
+    "VPlan": "https://wegenenverkeer.data.vlaanderen.be/ns/onderdeel#VPlan",
+    "VPlan.plannummer": {
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/onderdeel#VPlan.plannummer",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
     "VerfraaiingBuitenkast": "http://www.w3.org/2004/02/skos/core#Concept",
     "Verkeersdeelnemer": "http://www.w3.org/2004/02/skos/core#Concept",
     "Verkeerslicht": "https://wegenenverkeer.data.vlaanderen.be/ns/abstracten#Verkeerslicht",
@@ -1432,6 +1546,11 @@
     "Verkeersregelaar.heeftSdKaart": {
       "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/onderdeel#Verkeersregelaar.heeftSDKaart",
       "@type": "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "Verkeersregelaar.heeftVPlan": {
+      "@container": "@set",
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/doc/implementatiemodel/verkeersregelinstallatie/#Heeft V-plan",
+      "@type": "@id"
     },
     "Verkeersregelaar.ipv4Adres": {
       "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/onderdeel#Verkeersregelaar.ipAdres",
@@ -1619,6 +1738,11 @@
     "VrUitgangscontacten": "https://wegenenverkeer.data.vlaanderen.be/ns/onderdeel#VRUitgangscontacten",
     "VriBewaking": "http://www.w3.org/2004/02/skos/core#Concept",
     "VriBuiteninstallatie": "https://wegenenverkeer.data.vlaanderen.be/ns/installatie#VRIBuiteninstallatie",
+    "VriBuiteninstallatie.sturing": {
+      "@container": "@set",
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/doc/implementatiemodel/verkeersregelinstallatie/#Sturing",
+      "@type": "@id"
+    },
     "VriCommunicatieprotocol": "http://www.w3.org/2004/02/skos/core#Concept",
     "VriCommunicatieprotocolVerkeersdetectie": "http://www.w3.org/2004/02/skos/core#Concept",
     "VriDetectorTypeweggebruiker": "http://www.w3.org/2004/02/skos/core#Concept",
@@ -1655,6 +1779,11 @@
       "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/onderdeel#Wegkantkast.heeftMaaibescherming",
       "@type": "http://www.w3.org/2001/XMLSchema#boolean"
     },
+    "Wegkantkast.hoortBij": {
+      "@container": "@set",
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/doc/implementatiemodel/verkeersregelinstallatie/#Hoort bij",
+      "@type": "@id"
+    },
     "Wegkantkast.mPlan": {
       "@container": "@set",
       "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/onderdeel#Wegkantkast.mplan",
@@ -1665,6 +1794,7 @@
       "@type": "@id"
     },
     "WegkantkastType": "http://www.w3.org/2004/02/skos/core#Concept",
+    "WvMasthoogte": "http://www.w3.org/2004/02/skos/core#Concept",
     "Zender": "https://wegenenverkeer.data.vlaanderen.be/ns/onderdeel#Zender",
     "Zender.merk": {
       "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/onderdeel#Zender.merk",

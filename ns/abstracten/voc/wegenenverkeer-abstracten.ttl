@@ -8,8 +8,7 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 skos:Concept a rdfs:Class;
-  rdfs:label "materiaal afdichting"@nl,
-    "materiaal bevestigingsbeugel"@nl,
+  rdfs:label "materiaal bevestigingsbeugel"@nl,
     "Markeringsproduct"@nl,
     "Markeringssysteem"@nl,
     "Vegetatieelement standplaats"@nl,
@@ -56,6 +55,7 @@ skos:Concept a rdfs:Class;
     "WV-besturingsconnector"@nl,
     "Verlichtingstoestel verlicht gebied."@nl,
     "Verfraaiing buitenkast"@nl,
+    "materiaal afdichting"@nl,
     "Staalsoort met equivalenten"@nl,
     "VR-module met firmware merk"@nl .
 
@@ -72,6 +72,7 @@ skos:Concept a rdfs:Class;
   rdfs:range xsd:string .
 
 <https://wegenenverkeer.data.vlaanderen.be/ns/abstracten#Aangrijping> a owl:Class;
+  <http://purl.org/vocab/vann/usageNote> "Klasse uit gebruik sinds versie 2.20.0 "@nl;
   rdfs:comment "Abstracte om attributen en relaties te bundelen voor aangrijping. Een aangrijping maakt de koppeling tussen tussen de actuator en de beweegbare constructive."@nl;
   rdfs:isDefinedBy <https://wegenenverkeer.data.vlaanderen.be/ns/abstracten>;
   rdfs:subClassOf <https://wegenenverkeer.data.vlaanderen.be/ns/abstracten#StaalsoortObject>,
@@ -528,6 +529,13 @@ skos:Concept a rdfs:Class;
 
 <https://wegenenverkeer.data.vlaanderen.be/ns/abstracten#Buis.breedteBinnenzijde> a owl:ObjectProperty;
   rdfs:comment "De breedte van de binnenzijde van de buis in millimeter. Bij cirkelvormige buizen is dit de binnendiameter."@nl;
+  rdfs:domain <https://wegenenverkeer.data.vlaanderen.be/ns/abstracten#Buis>;
+  rdfs:isDefinedBy <https://wegenenverkeer.data.vlaanderen.be/ns/abstracten>;
+  rdfs:range <https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMillimeter> .
+
+<https://wegenenverkeer.data.vlaanderen.be/ns/abstracten#Buis.breedteBuitenzijde> a owl:ObjectProperty;
+  <http://purl.org/vocab/vann/usageNote> "Voor cirkelvormige buizen met dunwandig profiel wordt deze waarde niet afzonderlijk ingevuld."@nl;
+  rdfs:comment "De breedte van de buitenzijde van de buis in millimeter. Bij cirkelvormige buizen is dit de buitendiameter."@nl;
   rdfs:domain <https://wegenenverkeer.data.vlaanderen.be/ns/abstracten#Buis>;
   rdfs:isDefinedBy <https://wegenenverkeer.data.vlaanderen.be/ns/abstracten>;
   rdfs:range <https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMillimeter> .
@@ -1668,6 +1676,7 @@ skos:Concept a rdfs:Class;
   rdfs:range xsd:boolean .
 
 <https://wegenenverkeer.data.vlaanderen.be/ns/abstracten#MeetstationAbstract.keuringsrapport> a owl:ObjectProperty;
+  <http://purl.org/vocab/vann/usageNote> "Attribuut uit gebruik sinds versie 2.20.0 "@nl;
   rdfs:comment "Het rapport dat 5 jaarlijks wordt opgesteld met details over het meetstation."@nl;
   rdfs:domain <https://wegenenverkeer.data.vlaanderen.be/ns/abstracten#MeetstationAbstract>;
   rdfs:isDefinedBy <https://wegenenverkeer.data.vlaanderen.be/ns/abstracten>;
@@ -1726,10 +1735,11 @@ skos:Concept a rdfs:Class;
   rdfs:range <https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#KwantWrdInMeterTAW> .
 
 <https://wegenenverkeer.data.vlaanderen.be/ns/abstracten#Ophanging> a owl:Class;
+  <http://purl.org/vocab/vann/usageNote> "Klasse uit gebruik sinds versie 2.20.0 "@nl;
   rdfs:comment "Abstracte om attributen en relaties te bundelen voor ophanging. Een ophanging maakt de koppeling tussen de actuator en de vaste constructie."@nl;
   rdfs:isDefinedBy <https://wegenenverkeer.data.vlaanderen.be/ns/abstracten>;
-  rdfs:subClassOf <https://wegenenverkeer.data.vlaanderen.be/ns/abstracten#TechnischDocument>,
-    <https://wegenenverkeer.data.vlaanderen.be/ns/abstracten#StaalsoortObject> .
+  rdfs:subClassOf <https://wegenenverkeer.data.vlaanderen.be/ns/abstracten#StaalsoortObject>,
+    <https://wegenenverkeer.data.vlaanderen.be/ns/abstracten#TechnischDocument> .
 
 <https://wegenenverkeer.data.vlaanderen.be/ns/abstracten#PTModuleMetFirmware> a owl:Class;
   rdfs:comment "Abstracte voor de modules met firmware van het personentransportbeïnvloedingssysteem van een verkeersregelaar."@nl;
@@ -1826,6 +1836,12 @@ skos:Concept a rdfs:Class;
   rdfs:domain <https://wegenenverkeer.data.vlaanderen.be/ns/abstracten#SchokindexVoertuigkering>;
   rdfs:isDefinedBy <https://wegenenverkeer.data.vlaanderen.be/ns/abstracten>;
   rdfs:range skos:Concept .
+
+<https://wegenenverkeer.data.vlaanderen.be/ns/abstracten#Seinlantaarn.aantalModules> a owl:ObjectProperty;
+  rdfs:comment "Het aantal lichtmodules waaruit de seinlantaarn bestaat."@nl;
+  rdfs:domain <https://wegenenverkeer.data.vlaanderen.be/ns/abstracten#Seinlantaarn>;
+  rdfs:isDefinedBy <https://wegenenverkeer.data.vlaanderen.be/ns/abstracten>;
+  rdfs:range xsd:nonNegativeInteger .
 
 <https://wegenenverkeer.data.vlaanderen.be/ns/abstracten#Seinlantaarn.diameter> a owl:ObjectProperty;
   rdfs:comment "Diameter (in mm) van de lens van de verkeerslichten waaruit de lantaarn is samengesteld."@nl;
@@ -2325,6 +2341,10 @@ skos:Concept a rdfs:Class;
   rdfs:comment "Abstracte klasse voor een artikelnummer."@nl;
   rdfs:isDefinedBy <https://wegenenverkeer.data.vlaanderen.be/ns/abstracten> .
 
+<https://wegenenverkeer.data.vlaanderen.be/ns/abstracten#AsLagerCombinatie> a owl:Class;
+  rdfs:comment "Abstracte klasse om gemeenschappelijke relaties te voorzien."@nl;
+  rdfs:isDefinedBy <https://wegenenverkeer.data.vlaanderen.be/ns/abstracten> .
+
 <https://wegenenverkeer.data.vlaanderen.be/ns/abstracten#Communicatieapparatuur> a owl:Class;
   rdfs:comment "Abstracte voor alle benodigde apparatuur voor het ontvangen en verzenden van signalen."@nl;
   rdfs:isDefinedBy <https://wegenenverkeer.data.vlaanderen.be/ns/abstracten>;
@@ -2760,11 +2780,6 @@ skos:Concept a rdfs:Class;
   rdfs:comment "Abstracte bedoeld om de verschillende soort putten onder te brengen en gemeenschappelijke eigenschappen over te dragen. De relaties worden overgedragen via de abstracte PutRelaties."@nl;
   rdfs:isDefinedBy <https://wegenenverkeer.data.vlaanderen.be/ns/abstracten> .
 
-<https://wegenenverkeer.data.vlaanderen.be/ns/abstracten#Seinlantaarn> a owl:Class;
-  rdfs:comment "Abstracte voor het geheel van één of meerdere verkeerslichten die boven elkaar worden opgesteld en worden bevestigd op een steun,teneinde de beweging van een weggebruiker die een bepaald traject volgt,te verhinderen of toe te laten."@nl;
-  rdfs:isDefinedBy <https://wegenenverkeer.data.vlaanderen.be/ns/abstracten>;
-  rdfs:subClassOf <https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#AIMNaamObject> .
-
 <https://wegenenverkeer.data.vlaanderen.be/ns/abstracten#Sensor> a owl:Class;
   rdfs:comment "Abstracte om de eigenschappen en relaties van alle sensoren te groeperen."@nl;
   rdfs:isDefinedBy <https://wegenenverkeer.data.vlaanderen.be/ns/abstracten> .
@@ -2807,7 +2822,13 @@ skos:Concept a rdfs:Class;
   rdfs:comment "Abstracte die alle relaties van lagers verzamelt."@nl;
   rdfs:isDefinedBy <https://wegenenverkeer.data.vlaanderen.be/ns/abstracten>;
   rdfs:subClassOf <https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#AIMNaamObject>,
-    <https://wegenenverkeer.data.vlaanderen.be/ns/abstracten#TechnischDocument> .
+    <https://wegenenverkeer.data.vlaanderen.be/ns/abstracten#TechnischDocument>,
+    <https://wegenenverkeer.data.vlaanderen.be/ns/abstracten#AsLagerCombinatie> .
+
+<https://wegenenverkeer.data.vlaanderen.be/ns/abstracten#Seinlantaarn> a owl:Class;
+  rdfs:comment "Abstracte voor het geheel van één of meerdere verkeerslichten die boven elkaar worden opgesteld en worden bevestigd op een steun,teneinde de beweging van een weggebruiker die een bepaald traject volgt,te verhinderen of toe te laten."@nl;
+  rdfs:isDefinedBy <https://wegenenverkeer.data.vlaanderen.be/ns/abstracten>;
+  rdfs:subClassOf <https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#AIMNaamObject> .
 
 <https://wegenenverkeer.data.vlaanderen.be/ns/abstracten#TechnischDocument> a owl:Class;
   rdfs:comment "Abstracte met technisch document"@nl;

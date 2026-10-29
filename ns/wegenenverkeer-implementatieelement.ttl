@@ -17,12 +17,12 @@ skos:Concept a rdfs:Class;
     "Type badge"@nl,
     "Type sleutel"@nl,
     "Bijlage type"@nl,
-    "Electricity appurtenance type"@nl,
-    "Telecommunications appurtenance type"@nl,
     "Electricity subthema"@nl,
     "Pipe container type"@nl,
     "Datakabel materiaal"@nl,
     "Telecommunications subthema"@nl,
+    "Electricity appurtenance type"@nl,
+    "Telecommunications appurtenance type"@nl,
     "Corrosiebelastingscategorie"@nl,
     "Krimpvoegvulling"@nl,
     "Toegangsprocedure toegangstijden"@nl,
@@ -37,12 +37,15 @@ skos:Concept a rdfs:Class;
     "Toeslagmiddel beton"@nl,
     "Provincie"@nl,
     "Gemeente"@nl,
-    "Kwaliteitsklasse van hout"@nl,
     "Betonmilieuklasse"@nl,
     "Bijlagetype toegangsprocedure"@nl,
+    "Kwaliteitsklasse van hout"@nl,
     "Algemeen faalmodus type"@nl,
     "Staalsoort"@nl,
-    "Sterkteklasse van hout"@nl .
+    "Sterkteklasse van hout"@nl,
+    "Verankering SV"@nl,
+    "Ondergrond SV"@nl,
+    "VKS steuntype"@nl .
 
 schemas:ContactPoint a rdfs:Class;
   rdfs:label "Contactinfo"@nl .
@@ -121,6 +124,27 @@ schemas:OpeningHoursSpecification a rdfs:Class;
   rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement>;
   rdfs:range <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcAssetVersie> .
 
+<https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AanzichtVerkeersbordopstellingVKS.kaartvoorstelling> a owl:ObjectProperty;
+  <http://purl.org/vocab/vann/usageNote> " Gebruik deze eigenschap enkel voor aanlevering ikv Signalisatie Vlaanderen (VKS)."@nl;
+  rdfs:comment "Grafische weergave van de opstelling in ontwerp met visueel onderscheid op basis van de status van het bord nl: bestaand, gepland of te verwijderen."@nl;
+  rdfs:domain <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AanzichtVerkeersbordopstellingVKS>;
+  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement>;
+  rdfs:range <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcDocument> .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AanzichtVerkeersbordopstellingVKS.orientatiehoek> a owl:ObjectProperty;
+  <http://purl.org/vocab/vann/usageNote> " Gebruik deze eigenschap enkel voor aanlevering ikv Signalisatie Vlaanderen (VKS)."@nl;
+  rdfs:comment "De hoek van het aanzicht in radialen. Gaat tegenwijzerzin in, 0 punt is aanzicht voor wie van zuid naar noord gaat."@nl;
+  rdfs:domain <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AanzichtVerkeersbordopstellingVKS>;
+  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement>;
+  rdfs:range <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInRadialen> .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AanzichtVerkeersbordopstellingVKS.technischeVoorstelling> a owl:ObjectProperty;
+  <http://purl.org/vocab/vann/usageNote> " Gebruik deze eigenschap enkel voor aanlevering ikv Signalisatie Vlaanderen (VKS)."@nl;
+  rdfs:comment "Grafische weergave van de opstelling zoals fysiek te zien op het openbaar domein met aanduiding van opstelhoogtes en horizontale verschuivingen."@nl;
+  rdfs:domain <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AanzichtVerkeersbordopstellingVKS>;
+  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement>;
+  rdfs:range <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcDocument> .
+
 <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#ActivityComplex.netwerk> a owl:ObjectProperty;
   rdfs:comment "Geeft aan bij welk type nutsvoorzieningennet de kabelmof hoort volgens de types uit IMKL en Inspire."@nl;
   rdfs:domain <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#ActivityComplex>;
@@ -132,6 +156,12 @@ schemas:OpeningHoursSpecification a rdfs:Class;
   rdfs:domain <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#Appurtenance>;
   rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement>;
   rdfs:range <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInMeter> .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#BesluitUrlVKS.urlBesluit> a owl:ObjectProperty;
+  rdfs:comment "De URL die verwijst naar het besluit dat de plaatsing, wijziging of verwijdering van het verkeerssignalisatie-element vastlegt."@nl;
+  rdfs:domain <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#BesluitUrlVKS>;
+  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement>;
+  rdfs:range xsd:anyURI .
 
 <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#Bijlage.type> a owl:ObjectProperty;
   <http://purl.org/vocab/vann/usageNote> "Klasse uit gebruik sinds versie 2.13.0-RC2"@nl;
@@ -790,6 +820,13 @@ schemas:OpeningHoursSpecification a rdfs:Class;
   rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement>;
   rdfs:range skos:Concept .
 
+<https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcToegangsprocedureBijlage.website> a owl:ObjectProperty;
+  <http://purl.org/vocab/vann/usageNote> "http://xmlns.com/foaf/0.1/page"@nl;
+  rdfs:comment "Website URL die als bijlage bij de toegangsprocedure gevoegd kan worden"@nl;
+  rdfs:domain <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcToegangsprocedureBijlage>;
+  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement>;
+  rdfs:range xsd:anyURI .
+
 <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcToegangsprocedureToegangstijden.opmerking> a owl:ObjectProperty;
   rdfs:comment "Opmerking bij de toegangstijden van een object (bijv. kantooruren tussen 9 en 17u.)"@nl;
   rdfs:domain <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcToegangsprocedureToegangstijden>;
@@ -801,6 +838,34 @@ schemas:OpeningHoursSpecification a rdfs:Class;
   rdfs:domain <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcToegangsprocedureToegangstijden>;
   rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement>;
   rdfs:range skos:Concept .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcVariabele> a owl:Class;
+  rdfs:comment "Complex datatype die de variabele bevat."@nl;
+  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement> .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcVariabeleWaarden.codelijstwaarde> a owl:ObjectProperty;
+  rdfs:comment "Bevat een optie uit de codelijst."@nl;
+  rdfs:domain <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcVariabeleWaarden>;
+  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement>;
+  rdfs:range xsd:anyURI .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcVariabeleWaarden.datum> a owl:DatatypeProperty;
+  rdfs:comment "Bevat de waarde als datum."@nl;
+  rdfs:domain <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcVariabeleWaarden>;
+  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement>;
+  rdfs:range xsd:date .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcVariabeleWaarden.getal> a owl:ObjectProperty;
+  rdfs:comment "Bevat de waarde als getal."@nl;
+  rdfs:domain <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcVariabeleWaarden>;
+  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement>;
+  rdfs:range xsd:decimal .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcVariabeleWaarden.tekst> a owl:DatatypeProperty;
+  rdfs:comment "Bevat de waarde als tekst."@nl;
+  rdfs:domain <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcVariabeleWaarden>;
+  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement>;
+  rdfs:range xsd:string .
 
 <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DteIPv4Adres.waarde> a owl:DatatypeProperty;
   <http://purl.org/vocab/vann/usageNote> "Het formaat is een decimale notatie bv. 91.198.174.232"@nl;
@@ -846,6 +911,20 @@ schemas:OpeningHoursSpecification a rdfs:Class;
   rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement>;
   rdfs:range skos:Concept .
 
+<https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DwarseMarkeringVKS.orientatiehoek> a owl:ObjectProperty;
+  <http://purl.org/vocab/vann/usageNote> " Gebruik deze eigenschap enkel voor aanlevering ikv Signalisatie Vlaanderen (VKS)."@nl;
+  rdfs:comment "De hoek, uitgedrukt in radialen, die de oriëntatie vastlegt van de markering ten opzichte van een vooropgestelde as."@nl;
+  rdfs:domain <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DwarseMarkeringVKS>;
+  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement>;
+  rdfs:range <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInRadialen> .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DwarseMarkeringVKS.verschuiningshoek> a owl:ObjectProperty;
+  <http://purl.org/vocab/vann/usageNote> "Het invullen van de hoek bepaalt dat het om een verschuinde markering gaat.  Gebruik deze eigenschap enkel voor aanlevering ikv Signalisatie Vlaanderen (VKS)."@nl;
+  rdfs:comment "De hoek van de verschuinde dwarse markering in decimale graden."@nl;
+  rdfs:domain <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DwarseMarkeringVKS>;
+  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement>;
+  rdfs:range <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInDecimaleGraden> .
+
 <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#ElectricityAppurtenance.appurtenanceType> a owl:ObjectProperty;
   rdfs:comment "AppurtenanceType van de ElectricityAppurtenance."@nl;
   rdfs:domain <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#ElectricityAppurtenance>;
@@ -875,6 +954,20 @@ schemas:OpeningHoursSpecification a rdfs:Class;
   rdfs:domain <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#ElectricityCable>;
   rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement>;
   rdfs:range skos:Concept .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#FiguratieMarkeringVKS.orientatiehoek> a owl:ObjectProperty;
+  <http://purl.org/vocab/vann/usageNote> " Gebruik deze eigenschap enkel voor aanlevering ikv Signalisatie Vlaanderen (VKS)."@nl;
+  rdfs:comment "De hoek, uitgedrukt in radialen, die de oriëntatie vastlegt van de markering ten opzichte van een vooropgestelde as."@nl;
+  rdfs:domain <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#FiguratieMarkeringVKS>;
+  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement>;
+  rdfs:range <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInRadialen> .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#FiguratieMarkeringVKS.verschuiningshoek> a owl:ObjectProperty;
+  <http://purl.org/vocab/vann/usageNote> "Het invullen van de hoek bepaalt dat het om een verschuinde markering gaat. Gebruik deze eigenschap enkel voor aanlevering ikv Signalisatie Vlaanderen (VKS)."@nl;
+  rdfs:comment "De hoek van de verschuinde figuratiemarkering in decimale graden."@nl;
+  rdfs:domain <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#FiguratieMarkeringVKS>;
+  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement>;
+  rdfs:range <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInDecimaleGraden> .
 
 <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInAmpere.standaardEenheid> a owl:DatatypeProperty;
   <http://purl.org/vocab/vann/usageNote> "\"A\"^^cdt:ucumunit"@nl;
@@ -1444,6 +1537,18 @@ schemas:OpeningHoursSpecification a rdfs:Class;
   rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement>;
   rdfs:range xsd:decimal .
 
+<https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInRadialen.standaardEenheid> a owl:DatatypeProperty;
+  rdfs:comment "De standaard eenheid bij dit datatype is uitgedrukt in radialen."@nl;
+  rdfs:domain <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInRadialen>;
+  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement>;
+  rdfs:range rdfs:Literal .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInRadialen.waarde> a owl:ObjectProperty;
+  rdfs:comment "Bevat een getal die bij het datatype hoort."@nl;
+  rdfs:domain <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInRadialen>;
+  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement>;
+  rdfs:range xsd:decimal .
+
 <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInSeconde.standaardEenheid> a owl:DatatypeProperty;
   <http://purl.org/vocab/vann/usageNote> "\"s\"^^cdt:ucumunit"@nl;
   rdfs:comment "De standaard eenheid bij dit datatype is uitgedrukt in seconde."@nl;
@@ -1713,6 +1818,61 @@ schemas:OpeningHoursSpecification a rdfs:Class;
   rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement>;
   rdfs:range xsd:anyURI .
 
+<https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#VKSSteun.type> a owl:ObjectProperty;
+  <http://purl.org/vocab/vann/usageNote> " Gebruik deze eigenschap enkel voor aanlevering ikv Signalisatie Vlaanderen (VKS)."@nl;
+  rdfs:comment "Het type van de VKS steun."@nl;
+  rdfs:domain <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#VKSSteun>;
+  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement>;
+  rdfs:range skos:Concept .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#VerkeersbordVKS.kaartvoorstelling> a owl:ObjectProperty;
+  <http://purl.org/vocab/vann/usageNote> " Gebruik deze eigenschap enkel voor aanlevering ikv Signalisatie Vlaanderen (VKS)."@nl;
+  rdfs:comment "Grafische weergave in ontwerp met visueel onderscheid op basis van de status van het bord nl: bestaand, gepland of te verwijderen."@nl;
+  rdfs:domain <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#VerkeersbordVKS>;
+  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement>;
+  rdfs:range <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcDocument> .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#VerkeersbordopstellingVKS.gelinktWegsegment> a owl:ObjectProperty;
+  <http://purl.org/vocab/vann/usageNote> " Gebruik deze eigenschap enkel voor aanlevering ikv Signalisatie Vlaanderen (VKS)."@nl;
+  rdfs:comment "Gelinkt wegsegment waarbij de verkeersbordopstelling geplaatst is."@nl;
+  rdfs:domain <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#VerkeersbordopstellingVKS>;
+  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement>;
+  rdfs:range <https://wegenenverkeer.data.dev-vlaanderen.be/ns/onderdeel#DtcExterneReferentie> .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#VerkeersbordsteunVKS.beschermendeLaag> a owl:ObjectProperty;
+  <http://purl.org/vocab/vann/usageNote> "Gebruik deze eigenschap enkel voor aanlevering ikv Signalisatie Vlaanderen (VKS)."@nl;
+  rdfs:comment "Het type van bescherming van de constructie of steun met de corresponderende corrosieklasse."@nl;
+  rdfs:domain <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#VerkeersbordsteunVKS>;
+  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement>;
+  rdfs:range <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcBeschermendeLaag> .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#VerkeersbordsteunVKS.kleur> a owl:ObjectProperty;
+  <http://purl.org/vocab/vann/usageNote> "Gebruik deze eigenschap enkel voor aanlevering ikv Signalisatie Vlaanderen (VKS)."@nl;
+  rdfs:comment "De RAL kleur van het uitwendig zichtbare gedeelte."@nl;
+  rdfs:domain <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#VerkeersbordsteunVKS>;
+  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement>;
+  rdfs:range <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DteKleurRAL> .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#VerkeersbordsteunVKS.ondergrond> a owl:ObjectProperty;
+  <http://purl.org/vocab/vann/usageNote> "Gebruik deze eigenschap enkel voor aanlevering ikv Signalisatie Vlaanderen (VKS)."@nl;
+  rdfs:comment "De ondergrond waarin de verkeersbordsteun zich bevindt."@nl;
+  rdfs:domain <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#VerkeersbordsteunVKS>;
+  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement>;
+  rdfs:range skos:Concept .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#VerkeersbordsteunVKS.verankering> a owl:ObjectProperty;
+  <http://purl.org/vocab/vann/usageNote> "Gebruik deze eigenschap enkel voor aanlevering ikv Signalisatie Vlaanderen (VKS)."@nl;
+  rdfs:comment "De verankering die werd gebruikt bij de verkeersbordsteun die geen funderingsmassief is."@nl;
+  rdfs:domain <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#VerkeersbordsteunVKS>;
+  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement>;
+  rdfs:range skos:Concept .
+
+<http://lblod.data.gift/variables/defaultValue> a rdf:Property;
+  rdfs:label "waarde"@nl .
+
+<http://lblod.data.gift/vocabularies/variables/Variable.uri> a rdf:Property;
+  rdfs:label "uri"@nl .
+
 dc:Agent\.agentId a rdf:Property;
   rdfs:label "agent identificatie"@nl .
 
@@ -1722,30 +1882,29 @@ dc:Agent\.contactinfo a rdf:Property;
 dc:Agent\.naam a rdf:Property;
   rdfs:label "naam"@nl .
 
-schema:email a rdf:Property;
-  rdfs:label "email"@nl .
-
-schema:faxNumber a rdf:Property;
-  rdfs:label "fax"@nl .
-
-schema:hoursAvailable a rdf:Property;
-  rdfs:label "beschikbaarheid"@nl .
-
-schema:telephone a rdf:Property;
-  rdfs:label "telefoon"@nl .
-
-<http://www.w3.org/ns/locn#address> a rdf:Property;
+schemas:ContactPoint\.adres a rdf:Property;
   rdfs:label "adres"@nl .
 
-foaf:name a rdf:Property;
+schemas:ContactPoint\.beschikbaarheid a rdf:Property;
+  rdfs:label "beschikbaarheid"@nl .
+
+schemas:ContactPoint\.contactnaam a rdf:Property;
   rdfs:label "contactnaam"@nl .
 
-foaf:page a rdf:Property;
-  rdfs:label "website URL"@nl,
-    "website"@nl .
+schemas:ContactPoint\.email a rdf:Property;
+  rdfs:label "email"@nl .
+
+schemas:ContactPoint\.fax a rdf:Property;
+  rdfs:label "fax"@nl .
 
 schemas:ContactPoint\.opmerkingen a rdf:Property;
   rdfs:label "opmerkingen"@nl .
+
+schemas:ContactPoint\.telefoon a rdf:Property;
+  rdfs:label "telefoon"@nl .
+
+schemas:ContactPoint\.website a rdf:Property;
+  rdfs:label "website"@nl .
 
 schemas:closes a rdf:Property;
   rdfs:label "sluitingstijd"@nl .
@@ -1761,6 +1920,11 @@ schemas:opens a rdf:Property;
   rdfs:comment "Het gehele gebied dat door dezelfde exploitant op dezelfde locatie of op verschillende geografische locaties wordt beheerd,inclusief alle infrastructuur,apparatuur en materialen."@nl;
   rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement>;
   rdfs:subClassOf <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMNaamObject> .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#BesluitUrlVKS> a owl:Class;
+  <http://purl.org/vocab/vann/usageNote> "Implementatietype enkel voor Signalisatie Vlaanderen (VKS)."@nl;
+  rdfs:comment "Implementatie klasse voor VKS als extensie op de abstracten Verkeersbord en Markering klasse van de OTL."@nl;
+  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement> .
 
 <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#Bijlage> a owl:Class;
   <http://purl.org/vocab/vann/usageNote> "Klasse uit gebruik sinds versie 2.13.0-RC2"@nl;
@@ -1780,10 +1944,6 @@ schemas:opens a rdf:Property;
   rdfs:comment "Beschrijft een ip-adres volgens de ipv4 specificatie."@nl;
   rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement> .
 
-<https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DteKleurRAL> a owl:Class;
-  rdfs:comment "Beschrijft een kleur volgens het RAL classificatiesysteem. De waarde is een natuurlijk getal tussen 1000 en 9999."@nl;
-  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement> .
-
 <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#NaampadObject> a owl:Class;
   rdfs:comment "Abstracte als de basisklasse voor elk OTL object dat gebruik maakt van een naampad."@nl;
   rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement>;
@@ -1794,6 +1954,23 @@ schemas:opens a rdf:Property;
   rdfs:comment "Appurtenance-objecten zijn toebehoren of accessoires, dus allerlei apparaten, toestellen en dergelijke,kortom diverse soorten leidingelementen."@nl;
   rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement>;
   rdfs:subClassOf <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#Appurtenance> .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#VKSSteun> a owl:Class;
+  <http://purl.org/vocab/vann/usageNote> "Implementatietype enkel voor Signalisatie Vlaanderen (VKS)."@nl;
+  rdfs:comment "Steunen voor verkeerssignalisatie."@nl;
+  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement>;
+  rdfs:subClassOf <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMNaamObject>,
+    <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Draagconstructie> .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#VerkeersbordVKS> a owl:Class;
+  <http://purl.org/vocab/vann/usageNote> "Implementatietype enkel voor Signalisatie Vlaanderen (VKS)."@nl;
+  rdfs:comment "Implementatie klasse voor VKS als extensie op de Verkeersbord van de OTL."@nl;
+  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement> .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#VerkeersbordopstellingVKS> a owl:Class;
+  <http://purl.org/vocab/vann/usageNote> "Implementatietype enkel voor Signalisatie Vlaanderen (VKS)."@nl;
+  rdfs:comment "Implementatie klasse voor VKS als extensie op de Verkeersbordopstelling van de OTL."@nl;
+  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement> .
 
 <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcAfmetingBxhInM> a owl:Class;
   rdfs:comment "Complex datatype voor de afmeting van de breedte en hoogte in meter."@nl;
@@ -1823,10 +2000,6 @@ schemas:opens a rdf:Property;
   rdfs:comment "Complex datatype om een bereik uit te drukken met een minimium en maximum in kilogram."@nl;
   rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement> .
 
-<https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcBeschermendeLaag> a owl:Class;
-  rdfs:comment "Complex datatype voor de inventarisatie van het type beschermlaag en de corrosiebelastingscategorie."@nl;
-  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement> .
-
 <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcCameraBeeldverwerking> a owl:Class;
   rdfs:comment "Complex datatype waarmee een type beeldverwerking van een camera en het relevant configuratiebestand, bijgehouden worden."@nl;
   rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement> .
@@ -1847,6 +2020,10 @@ schemas:opens a rdf:Property;
   rdfs:comment "Complex datatype om een of meerdere technische documenten aan te koppelen aan de assets"@nl;
   rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement> .
 
+<https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DteKleurRAL> a owl:Class;
+  rdfs:comment "Beschrijft een kleur volgens het RAL classificatiesysteem. De waarde is een natuurlijk getal tussen 1000 en 9999."@nl;
+  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement> .
+
 <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtuDwarsafmetingen> a owl:Class;
   rdfs:comment "Union datatype voor de dwarsafmetingen van een object volgens zijn vorm."@nl;
   rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement> .
@@ -1855,11 +2032,21 @@ schemas:opens a rdf:Property;
   rdfs:comment "Union datatype voor de hellings- of de schoorhoek."@nl;
   rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement> .
 
+<https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DwarseMarkeringVKS> a owl:Class;
+  <http://purl.org/vocab/vann/usageNote> "Implementatietype enkel voor Signalisatie Vlaanderen (VKS)."@nl;
+  rdfs:comment "Implementatie klasse voor VKS als extensie op de DwarseMarkering van de OTL."@nl;
+  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement> .
+
 <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#ElectricityAppurtenance> a owl:Class;
   <http://purl.org/vocab/vann/usageNote> "Gebruik dit type enkel voor aanlevering voor AKELA indien geen specifieke types aanwezig zijn in OTL."@nl;
   rdfs:comment "Appurtenance-objecten zijn toebehoren of accessoires, dus allerlei apparaten, toestellen en dergelijke,kortom diverse soorten leidingelementen."@nl;
   rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement>;
   rdfs:subClassOf <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#Appurtenance> .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#FiguratieMarkeringVKS> a owl:Class;
+  <http://purl.org/vocab/vann/usageNote> "Implementatietype enkel voor Signalisatie Vlaanderen (VKS)."@nl;
+  rdfs:comment "Implementatie klasse voor VKS als extensie op de FiguratieMarkering van de OTL."@nl;
+  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement> .
 
 <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInAmpere> a owl:Class;
   rdfs:comment "Een kwantitatieve waarde die een getal in ampère uitdrukt."@nl;
@@ -2039,10 +2226,10 @@ schemas:opens a rdf:Property;
   rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement>;
   rdfs:subClassOf <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Kabel> .
 
-<https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMNaamObject> a owl:Class;
-  rdfs:comment "Abstracte als de basisklasse voor elk OTL object dat benoemd wordt met een mensleesbare identificator."@nl;
-  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement>;
-  rdfs:subClassOf <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMObject> .
+<https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AanzichtVerkeersbordopstellingVKS> a owl:Class;
+  <http://purl.org/vocab/vann/usageNote> "Implementatietype enkel voor Signalisatie Vlaanderen (VKS)."@nl;
+  rdfs:comment "Implementatie klasse voor VKS als extensie op de AanzichtVerkeersbordopstelling van de OTL."@nl;
+  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement> .
 
 <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#Appurtenance> a owl:Class;
   <http://purl.org/vocab/vann/usageNote> "Gebruik dit type enkel voor aanlevering voor AKELA indien geen specifieke types aanwezig zijn in OTL."@nl;
@@ -2056,6 +2243,10 @@ schemas:opens a rdf:Property;
 
 <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcAfmetingBxlxhInM> a owl:Class;
   rdfs:comment "Complex datatype voor de afmeting van de breedte, de lengte en hoogte in meter."@nl;
+  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement> .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcBeschermendeLaag> a owl:Class;
+  rdfs:comment "Complex datatype voor de inventarisatie van het type beschermlaag en de corrosiebelastingscategorie."@nl;
   rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement> .
 
 <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcKwaliteitscertifcaat> a owl:Class;
@@ -2075,10 +2266,6 @@ schemas:opens a rdf:Property;
   rdfs:comment "Een aansluiting of reeks aansluitingen van een nutsvoorzieningennet voor het overbrengen van elektriciteit van de ene locatie naar een andere."@nl;
   rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement>;
   rdfs:subClassOf <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Kabel> .
-
-<https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInDecimaleGraden> a owl:Class;
-  rdfs:comment "Een kwantitatieve waarde die een getal in decimale graden uitdrukt."@nl;
-  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement> .
 
 <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInMaand> a owl:Class;
   rdfs:comment "Een kwantitatieve waarde die een getal in aantal maanden uitdrukt."@nl;
@@ -2102,6 +2289,11 @@ schemas:opens a rdf:Property;
   rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement>;
   rdfs:subClassOf <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#OmhullendeInrichting>,
     <https://wegenenverkeer.data.dev-vlaanderen.be/ns/abstracten#Leiding> .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMNaamObject> a owl:Class;
+  rdfs:comment "Abstracte als de basisklasse voor elk OTL object dat benoemd wordt met een mensleesbare identificator."@nl;
+  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement>;
+  rdfs:subClassOf <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMObject> .
 
 <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMToestand> a owl:Class;
   rdfs:comment "Voegt een attribuut toe aan de subklasse dat de huidige stand in de levenscyclus van het object aangeeft."@nl;
@@ -2127,8 +2319,8 @@ schemas:opens a rdf:Property;
   rdfs:comment "Complex datatype voor een rechtspersoon."@nl;
   rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement> .
 
-<https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcToegangsprocedureBijlage> a owl:Class;
-  rdfs:comment "Complex datatype dat informatie omtrent een bijlage voor een toegangsprocedure specifieert."@nl;
+<https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcVariabeleWaarden> a owl:Class;
+  rdfs:comment "Complex datatype die de variabele waarden definieert."@nl;
   rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement> .
 
 <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DteTekstblok> a owl:Class;
@@ -2151,6 +2343,10 @@ schemas:opens a rdf:Property;
   rdfs:comment "Een kwantitatieve waarde die een getal in volt uitdrukt."@nl;
   rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement> .
 
+<https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#VerkeersbordsteunVKS> a owl:Class;
+  rdfs:comment "Implementatietype enkel voor Signalisatie Vlaanderen (VKS)."@nl;
+  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement> .
+
 <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMDBStatus> a owl:Class;
   rdfs:comment "Voegt een attribuut toe aan de subklasse dat aangeeft of de asset zichtbaar is in de databank of (zacht) verwijderd is."@nl;
   rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement> .
@@ -2161,6 +2357,18 @@ schemas:opens a rdf:Property;
 
 <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcHoutspecificaties> a owl:Class;
   rdfs:comment "Complex datatype om de eigenschappen van hout te bundelen."@nl;
+  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement> .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcToegangsprocedureBijlage> a owl:Class;
+  rdfs:comment "Complex datatype dat informatie omtrent een bijlage voor een toegangsprocedure specifieert."@nl;
+  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement> .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInDecimaleGraden> a owl:Class;
+  rdfs:comment "Een kwantitatieve waarde die een getal in decimale graden uitdrukt."@nl;
+  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement> .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInRadialen> a owl:Class;
+  rdfs:comment "Een kwantitatieve waarde dat een getal uitdrukt in radialen."@nl;
   rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement> .
 
 <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#Derdenobject> a owl:Class;
@@ -3513,17 +3721,19 @@ schemas:opens a rdf:Property;
     schemas:opens,
     schemas:dayOfWeek,
     schemas:closes,
+    schemas:ContactPoint\.website,
+    schemas:ContactPoint\.telefoon,
     schemas:ContactPoint\.opmerkingen,
-    foaf:page,
-    foaf:name,
-    <http://www.w3.org/ns/locn#address>,
-    schema:telephone,
-    schema:hoursAvailable,
-    schema:faxNumber,
-    schema:email,
+    schemas:ContactPoint\.fax,
+    schemas:ContactPoint\.email,
+    schemas:ContactPoint\.contactnaam,
+    schemas:ContactPoint\.beschikbaarheid,
+    schemas:ContactPoint\.adres,
     dc:Agent\.naam,
     dc:Agent\.contactinfo,
-    dc:Agent\.agentId;
+    dc:Agent\.agentId,
+    <http://lblod.data.gift/vocabularies/variables/Variable.uri>,
+    <http://lblod.data.gift/variables/defaultValue>;
   foaf:maker [
     a foaf:Person;
     schema:affiliation [

@@ -2050,12 +2050,12 @@
             <rdfs:label xml:lang="nl">Toeslagmiddel beton</rdfs:label>
             <rdfs:label xml:lang="nl">Provincie</rdfs:label>
             <rdfs:label xml:lang="nl">Gemeente</rdfs:label>
-            <rdfs:label xml:lang="nl">Betonmilieuklasse</rdfs:label>
-            <rdfs:label xml:lang="nl">Bijlagetype toegangsprocedure</rdfs:label>
             <rdfs:label xml:lang="nl">Kwaliteitsklasse van hout</rdfs:label>
             <rdfs:label xml:lang="nl">Algemeen faalmodus type</rdfs:label>
             <rdfs:label xml:lang="nl">Staalsoort</rdfs:label>
             <rdfs:label xml:lang="nl">Sterkteklasse van hout</rdfs:label>
+            <rdfs:label xml:lang="nl">Betonmilieuklasse</rdfs:label>
+            <rdfs:label xml:lang="nl">Bijlagetype toegangsprocedure</rdfs:label>
             <rdfs:label xml:lang="nl">Verankering SV</rdfs:label>
             <rdfs:label xml:lang="nl">Ondergrond SV</rdfs:label>
             <rdfs:label xml:lang="nl">VKS steuntype</rdfs:label>
@@ -2075,6 +2075,26 @@
           <rdfs:Class rdf:about="https://schema.org/OpeningHoursSpecification">
             <rdfs:label xml:lang="nl">Openingsurenspecificatie</rdfs:label>
           </rdfs:Class>
+        </rdfs:seeAlso>
+        <rdfs:seeAlso>
+          <rdf:Property rdf:about="https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#AIMObject.typeURI">
+            <rdfs:label xml:lang="nl">type URI</rdfs:label>
+          </rdf:Property>
+        </rdfs:seeAlso>
+        <rdfs:seeAlso>
+          <rdf:Property rdf:about="https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#AIMObject.notitie">
+            <rdfs:label xml:lang="nl">notitie</rdfs:label>
+          </rdf:Property>
+        </rdfs:seeAlso>
+        <rdfs:seeAlso>
+          <rdf:Property rdf:about="https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#AIMObject.datumOprichtingObject">
+            <rdfs:label xml:lang="nl">datum oprichting object</rdfs:label>
+          </rdf:Property>
+        </rdfs:seeAlso>
+        <rdfs:seeAlso>
+          <rdf:Property rdf:about="https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#AIMObject.assetId">
+            <rdfs:label xml:lang="nl">asset-id</rdfs:label>
+          </rdf:Property>
         </rdfs:seeAlso>
         <rdfs:seeAlso>
           <rdf:Property rdf:about="https://schema.org/opens">
@@ -2336,6 +2356,11 @@
       </owl:Class>
     </rdfs:range>
   </owl:ObjectProperty>
+  <owl:Class rdf:about="https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#BaseAttributenSV">
+    <rdfs:isDefinedBy rdf:resource="https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement"/>
+    <rdfs:comment xml:lang="nl">Abstracte basisklasse voor Signalisatie Vlaanderen die de gemeenschappelijke eigenschappen voor alle uniek geïdentificeerde objecten bundelt,maar zonder de relaties die in AIMObject aanwezig zijn.</rdfs:comment>
+    <ns0:usageNote xml:lang="nl">Implementatietype enkel voor Signalisatie Vlaanderen (VKS).</ns0:usageNote>
+  </owl:Class>
   <owl:ObjectProperty rdf:about="https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#BesluitUrlVKS.urlBesluit">
     <rdfs:isDefinedBy rdf:resource="https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement"/>
     <rdfs:comment xml:lang="nl">De URL die verwijst naar het besluit dat de plaatsing, wijziging of verwijdering van het verkeerssignalisatie-element vastlegt.</rdfs:comment>
@@ -2419,6 +2444,11 @@
         <rdfs:subClassOf rdf:resource="https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMDBStatus"/>
       </owl:Class>
     </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DirectioneleRelatiesSV">
+    <rdfs:isDefinedBy rdf:resource="https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement"/>
+    <rdfs:comment xml:lang="nl">Abstracte als bundeling van de relaties voor Signalisatie Vlaanderen.</rdfs:comment>
+    <ns0:usageNote xml:lang="nl">Implementatietype enkel voor Signalisatie Vlaanderen (VKS).</ns0:usageNote>
   </owl:Class>
   <owl:DatatypeProperty rdf:about="https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcAdres.bus">
     <rdfs:isDefinedBy rdf:resource="https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement"/>
@@ -4366,6 +4396,11 @@
     <rdfs:domain rdf:resource="https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInmAh"/>
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
   </owl:ObjectProperty>
+  <owl:Class rdf:about="https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#LinkObjectSV">
+    <rdfs:isDefinedBy rdf:resource="https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement"/>
+    <rdfs:comment xml:lang="nl">Abstracte om relaties te linken op hoog niveau.</rdfs:comment>
+    <ns0:usageNote xml:lang="nl">Implementatietype enkel voor Signalisatie Vlaanderen (VKS).</ns0:usageNote>
+  </owl:Class>
   <owl:DatatypeProperty rdf:about="https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#NaampadObject.naampad">
     <rdfs:isDefinedBy rdf:resource="https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement"/>
     <rdfs:comment xml:lang="nl">Een set van objecten (bv. collecties) die aanduiden waar het object zich bevindt in de objectenboom (EM-Infra).</rdfs:comment>

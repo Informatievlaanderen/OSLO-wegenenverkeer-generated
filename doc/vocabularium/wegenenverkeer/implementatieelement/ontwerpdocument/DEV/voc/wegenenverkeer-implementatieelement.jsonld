@@ -1525,7 +1525,7 @@
     "prev": "/doc/vocabularium/wegenenverkeer/implementatieelement/ontwerpdocument/2.20.0"
   },
   "publication-state": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard",
-  "publication-date": "21-10-2026",
+  "publication-date": "03-11-2026",
   "classes": [
     {
       "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#AIMDBStatus",
@@ -1611,6 +1611,17 @@
       ]
     },
     {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#BaseAttributenSV",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
+      "definition": {
+        "nl": "Abstracte basisklasse voor Signalisatie Vlaanderen die de gemeenschappelijke eigenschappen voor alle uniek geïdentificeerde objecten bundelt,maar zonder de relaties die in AIMObject aanwezig zijn."
+      },
+      "usage": {
+        "nl": "Implementatietype enkel voor Signalisatie Vlaanderen (VKS)."
+      },
+      "parents": []
+    },
+    {
       "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#BesluitUrlVKS",
       "@type": "http://www.w3.org/2002/07/owl#Class",
       "definition": {
@@ -1658,6 +1669,17 @@
       "parents": [
         "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#RelatieObject"
       ]
+    },
+    {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DirectioneleRelatiesSV",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
+      "definition": {
+        "nl": "Abstracte als bundeling van de relaties voor Signalisatie Vlaanderen."
+      },
+      "usage": {
+        "nl": "Implementatietype enkel voor Signalisatie Vlaanderen (VKS)."
+      },
+      "parents": []
     },
     {
       "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcAdres",
@@ -2468,6 +2490,17 @@
       "parents": []
     },
     {
+      "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#LinkObjectSV",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
+      "definition": {
+        "nl": "Abstracte om relaties te linken op hoog niveau."
+      },
+      "usage": {
+        "nl": "Implementatietype enkel voor Signalisatie Vlaanderen (VKS)."
+      },
+      "parents": []
+    },
+    {
       "@id": "https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#NaampadObject",
       "@type": "http://www.w3.org/2002/07/owl#Class",
       "definition": {
@@ -2783,20 +2816,6 @@
     },
     {
       "name": {
-        "nl": "Betonmilieuklasse"
-      },
-      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
-      "@type": "rdfs:Class"
-    },
-    {
-      "name": {
-        "nl": "Bijlagetype toegangsprocedure"
-      },
-      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
-      "@type": "rdfs:Class"
-    },
-    {
-      "name": {
         "nl": "Kwaliteitsklasse van hout"
       },
       "@id": "http://www.w3.org/2004/02/skos/core#Concept",
@@ -2819,6 +2838,20 @@
     {
       "name": {
         "nl": "Sterkteklasse van hout"
+      },
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
+      "@type": "rdfs:Class"
+    },
+    {
+      "name": {
+        "nl": "Betonmilieuklasse"
+      },
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
+      "@type": "rdfs:Class"
+    },
+    {
+      "name": {
+        "nl": "Bijlagetype toegangsprocedure"
       },
       "@id": "http://www.w3.org/2004/02/skos/core#Concept",
       "@type": "rdfs:Class"
@@ -7112,6 +7145,34 @@
     }
   ],
   "externalproperties": [
+    {
+      "name": {
+        "nl": "type URI"
+      },
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#AIMObject.typeURI",
+      "@type": "rdf:Property"
+    },
+    {
+      "name": {
+        "nl": "notitie"
+      },
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#AIMObject.notitie",
+      "@type": "rdf:Property"
+    },
+    {
+      "name": {
+        "nl": "datum oprichting object"
+      },
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#AIMObject.datumOprichtingObject",
+      "@type": "rdf:Property"
+    },
+    {
+      "name": {
+        "nl": "asset-id"
+      },
+      "@id": "https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#AIMObject.assetId",
+      "@type": "rdf:Property"
+    },
     {
       "name": {
         "nl": "openingstijd"

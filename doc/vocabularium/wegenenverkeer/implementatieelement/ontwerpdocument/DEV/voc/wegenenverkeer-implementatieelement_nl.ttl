@@ -37,12 +37,12 @@ skos:Concept a rdfs:Class;
     "Toeslagmiddel beton"@nl,
     "Provincie"@nl,
     "Gemeente"@nl,
-    "Betonmilieuklasse"@nl,
-    "Bijlagetype toegangsprocedure"@nl,
     "Kwaliteitsklasse van hout"@nl,
     "Algemeen faalmodus type"@nl,
     "Staalsoort"@nl,
     "Sterkteklasse van hout"@nl,
+    "Betonmilieuklasse"@nl,
+    "Bijlagetype toegangsprocedure"@nl,
     "Verankering SV"@nl,
     "Ondergrond SV"@nl,
     "VKS steuntype"@nl .
@@ -157,6 +157,11 @@ schemas:OpeningHoursSpecification a rdfs:Class;
   rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement>;
   rdfs:range <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#KwantWrdInMeter> .
 
+<https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#BaseAttributenSV> a owl:Class;
+  <http://purl.org/vocab/vann/usageNote> "Implementatietype enkel voor Signalisatie Vlaanderen (VKS)."@nl;
+  rdfs:comment "Abstracte basisklasse voor Signalisatie Vlaanderen die de gemeenschappelijke eigenschappen voor alle uniek geïdentificeerde objecten bundelt,maar zonder de relaties die in AIMObject aanwezig zijn."@nl;
+  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement> .
+
 <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#BesluitUrlVKS.urlBesluit> a owl:ObjectProperty;
   rdfs:comment "De URL die verwijst naar het besluit dat de plaatsing, wijziging of verwijdering van het verkeerssignalisatie-element vastlegt."@nl;
   rdfs:domain <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#BesluitUrlVKS>;
@@ -211,6 +216,11 @@ schemas:OpeningHoursSpecification a rdfs:Class;
   rdfs:comment "Een abstracte die relaties groepeert waarbij de richting semantisch gedefinieerd is."@nl;
   rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement>;
   rdfs:subClassOf <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#RelatieObject> .
+
+<https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DirectioneleRelatiesSV> a owl:Class;
+  <http://purl.org/vocab/vann/usageNote> "Implementatietype enkel voor Signalisatie Vlaanderen (VKS)."@nl;
+  rdfs:comment "Abstracte als bundeling van de relaties voor Signalisatie Vlaanderen."@nl;
+  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement> .
 
 <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcAdres.bus> a owl:DatatypeProperty;
   rdfs:comment "Een nummer dat de postbus aanduidt."@nl;
@@ -1692,6 +1702,11 @@ schemas:OpeningHoursSpecification a rdfs:Class;
   rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement>;
   rdfs:range xsd:decimal .
 
+<https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#LinkObjectSV> a owl:Class;
+  <http://purl.org/vocab/vann/usageNote> "Implementatietype enkel voor Signalisatie Vlaanderen (VKS)."@nl;
+  rdfs:comment "Abstracte om relaties te linken op hoog niveau."@nl;
+  rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement> .
+
 <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#NaampadObject.naampad> a owl:DatatypeProperty;
   <http://purl.org/vocab/vann/usageNote> "Dient consistent te zijn met de naam."@nl;
   rdfs:comment "Een set van objecten (bv. collecties) die aanduiden waar het object zich bevindt in de objectenboom (EM-Infra)."@nl;
@@ -1971,6 +1986,18 @@ schemas:opens a rdf:Property;
   <http://purl.org/vocab/vann/usageNote> "Implementatietype enkel voor Signalisatie Vlaanderen (VKS)."@nl;
   rdfs:comment "Implementatie klasse voor VKS als extensie op de Verkeersbordopstelling van de OTL."@nl;
   rdfs:isDefinedBy <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement> .
+
+<https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#AIMObject.assetId> a rdf:Property;
+  rdfs:label "asset-id"@nl .
+
+<https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#AIMObject.datumOprichtingObject> a rdf:Property;
+  rdfs:label "datum oprichting object"@nl .
+
+<https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#AIMObject.notitie> a rdf:Property;
+  rdfs:label "notitie"@nl .
+
+<https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#AIMObject.typeURI> a rdf:Property;
+  rdfs:label "type URI"@nl .
 
 <https://wegenenverkeer.data.dev-vlaanderen.be/ns/implementatieelement#DtcAfmetingBxhInM> a owl:Class;
   rdfs:comment "Complex datatype voor de afmeting van de breedte en hoogte in meter."@nl;
@@ -3718,6 +3745,10 @@ schemas:opens a rdf:Property;
     schemas:ContactPoint,
     schemas:DayOfWeek,
     schemas:OpeningHoursSpecification,
+    <https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#AIMObject.typeURI>,
+    <https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#AIMObject.notitie>,
+    <https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#AIMObject.datumOprichtingObject>,
+    <https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#AIMObject.assetId>,
     schemas:opens,
     schemas:dayOfWeek,
     schemas:closes,
